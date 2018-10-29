@@ -1,0 +1,243 @@
+<html>
+
+<head>
+    <script src="js/pixi.js"></script>
+    <script src="js/planck.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="config.js"></script>
+</head>
+
+<body>
+<script>
+    const {
+            Application,
+            Graphics,
+            Container,
+            Sprite,
+            Text,
+            loader,
+        } = PIXI,
+        TilingSprite = PIXI.extras.TilingSprite,
+        resources = loader.resources, {
+            Vec2,
+            World,
+            Edge,
+            Circle,
+        } = planck;
+
+    let TEXTURE_PATH = {
+        side: "images/TextureScorpiusRoad01SideSkin.png",
+        top: "images/TextureScorpiusRoad01TopSkin.png",
+        rider: "images/rider.png",
+    };
+    let JSON_PATH = {
+        path: "myLaya/laya/pages/Test.scene",
+    };
+
+    function physicsPos2renderPos(pp) {
+        return {
+            x: pp.x * config.meter2pixel,
+            y: config.sceneHeight - pp.y * config.meter2pixel
+        }
+    }
+
+    function renderPos2PhysicsPos(rp) {
+        return {
+            x: rp.x * config.pixel2meter,
+            y: (config.sceneHeight - rp.y) * config.pixel2meter
+        }
+    }
+
+    class Game {
+        init() {
+            this.app = new Application({
+                width: config.sceneWidth,
+                height: config.sceneHeight,
+                antialiasing: true,
+                transparent: false,
+                resolution: config.resolution,
+                backgroundColor: config.backgroundColor
+            });
+            document.body.appendChild(this.app.view);
+
+            this.world = new World({
+                gravity: Vec2(0, config.gravity)
+            });
+
+            this.world.on('begin-contact', this.onBeginContact.bind(this));
+
+            if (isPC()) {
+                window.addEventListener("mousedown", this.onMousedown.bind(this));
+            } else {
+                window.addEventListener("touchstart", this.onMousedown.bind(this));
+            }
+
+            loader
+                .add(values(TEXTURE_PATH))
+                .add(values(JSON_PATH))
+                .load(this.onLoaded.bind(this));
+        }
+
+        onMousedown() {
+            if (this.jumpCount < config.jumpMaxCount) {
+                let velocity = this.bikeBody.getLinearVelocity();
+                this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
+                this.bikeBody.applyForceToCenter(Vec2(0, config.jumpForce));
+                this.bikeSprite.rotation = angle2radius(config.bikeJumpingRotation);
+                this.jumping = true;
+                this.jumpCount += 1;
+            }
+        }
+
+        onLoaded() {
+            this.camera = new Container();
+            this.app.stage.addChild(this.camera);
+
+            this.fpsMessage = new Text("FPS:0");
+            this.app.stage.addChild(this.fpsMessage);
+            this.fpsMessage.anchor.set(0, 0);
+            this.fpsMessage.position.set(0, 0);
+
+            this.getRoadPathList().forEach(path => this.createRoad(path, TEXTURE_PATH.side, TEXTURE_PATH.top));
+
+            this.createRider(TEXTURE_PATH.rider);
+
+            this.app.ticker.add(this.gameLoop.bind(this));
+        }
+
+        onBeginContact(contact) {
+            if (contact.getFixtureA().getBody() === this.bikeBody
+                || contact.getFixtureB().getBody() === this.bikeBody) {
+                this.jumping = false;
+                this.jumpCount = 0;
+            }
+        }
+
+        getRoadPathList() {
+            let json = JSON.parse(resources[JSON_PATH.path].data);
+            return json.child.map(data =>
+                data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                    }
+                    return value;
+                })
+            );
+        }
+
+        createRoad(path, sideTexturePath, topTexturePath) {
+            path = [path[0], config.cliffBottomY]
+                .concat(path)
+                .concat([path[path.length - 2], config.cliffBottomY]);
+
+            let road = new Container();
+
+            let sideTexture = resources[sideTexturePath].texture;
+            let sideRect = getPathRect(path);
+            let side = new TilingSprite(sideTexture, sideRect.width, sideRect.height);
+            side.position.set(sideRect.x, sideRect.y);
+            road.addChild(side);
+
+
+            let topTexture = resources[topTexturePath].texture;
+            let length = path.length;
+            for (let i = 2; i < length - 4; i += 2) {
+                let sp = {
+                        x: path[i],
+                        y: path[i + 1]
+                    },
+                    ep = {
+                        x: path[i + 2],
+                        y: path[i + 3]
+                    };
+                let topWidth = calcPointDistance(sp, ep);
+                let top = new TilingSprite(topTexture, topWidth, topTexture.height);
+                top.position.set(sp.x, sp.y);
+                top.rotation = calcRadius(sp, ep);
+                road.addChild(top);
+            }
+
+            let mask = new Graphics();
+            mask.beginFill();
+            mask.drawPolygon(path);
+            mask.endFill();
+            road.mask = mask;
+
+            road.cacheAsBitmap = true;
+
+            this.camera.addChild(road);
+
+            path = path.map((value, i) => {
+                if (i % 2 === 1) {
+                    value = config.sceneHeight - value;
+                }
+                return value * config.pixel2meter;
+            });
+            let body = this.world.createBody();
+            for (let i = 0; i < length - 4; i += 2) {
+                let sp = {
+                        x: path[i],
+                        y: path[i + 1]
+                    },
+                    ep = {
+                        x: path[i + 2],
+                        y: path[i + 3]
+                    };
+                body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {
+                    density: 0,
+                    friction: 1,
+                });
+            }
+        }
+
+        createRider(texturePath) {
+            this.bikeSprite = new Sprite(resources[texturePath].texture);
+            this.bikeSprite.anchor.set(0.5, 0.5);
+            this.bikeSprite.scale.set(config.riderScale, config.riderScale);
+
+            this.bikeBody = this.world.createDynamicBody();
+            this.bikeBody.createFixture(Circle(config.bikeRadius), {
+                density: 1,
+                friction: 1,
+            });
+            this.bikeBody.setPosition(Vec2(1, 60));
+
+            this.camera.addChild(this.bikeSprite);
+            this.jumpCount = 0;
+        }
+
+        gameLoop(delta) {
+            this.world.step(delta / config.fps);
+
+            this.fpsMessage.text = `FPS:${Math.floor(delta * 60)}`;
+
+            let velocity = this.bikeBody.getLinearVelocity();
+            let pos = physicsPos2renderPos(this.bikeBody.getPosition());
+            this.bikeSprite.position.set(pos.x, pos.y);
+            if (!this.jumping) {
+                this.bikeSprite.rotation = -Math.atan(velocity.y / config.bikeVelocity);
+            }
+
+            this.camera.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
+            let y;
+            let bikeCameraY = this.bikeSprite.position.y + this.camera.position.y;
+            if (bikeCameraY < config.bikeCameraMinY) {
+                this.camera.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
+            } else if (bikeCameraY > config.bikeCameraMaxY) {
+                this.camera.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
+            }
+
+            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+        }
+
+
+    }
+
+    new Game().init();
+</script>
+</body>
+
+</html>

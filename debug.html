@@ -1,0 +1,90 @@
+<html>
+<head>
+    <script src="js/pixi.js"></script>
+    <script src="js/planck-with-testbed.js"></script>
+</head>
+<body>
+<script>
+    let {Vec2, World, Edge, Circle,} = planck;
+
+    let config = {
+        sceneHeight: 1280,
+        pixel2meter: 0.0625,
+        meter2pixel: 16,
+        bikeRadius: 0.75,
+        testbedSpeed: 1,
+        bikeVelocity: 20,
+        gravity: -50 * (500 / 350),
+        jumpForce: 2500,
+        cliffBottomY: -1000,
+    };
+    console.log("config.bikeVelocity", config.bikeVelocity);
+
+    let loadPathList = callback => {
+        PIXI.loader.add(["myLaya/laya/pages/Test.scene"]).load(() =>
+            callback(JSON.parse(PIXI.loader.resources["myLaya/laya/pages/Test.scene"].data).child.map(data => {
+                return data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                        value = config.sceneHeight - value;
+                    }
+                    value *= config.pixel2meter;
+                    return value;
+                });
+            })));
+    };
+    loadPathList(pathList => {
+        planck.testbed('Test', (testbed) => {
+            testbed.speed = config.testbedSpeed;
+
+            let world = new World({gravity: Vec2(0, config.gravity)});
+
+            let ground = world.createBody();
+            pathList.forEach(path => {
+                for (let i = 0; i < path.length - 2; i += 2) {
+                    ground.createFixture(Edge(Vec2(path[i], path[i + 1]), Vec2(path[i + 2], path[i + 3])));
+                }
+                ground.createFixture(Edge(Vec2(path[0], path[1]), Vec2(path[0], config.cliffBottomY)));
+                let lastX = path[path.length - 2];
+                let lastY = path[path.length - 1];
+                ground.createFixture(Edge(Vec2(lastX, lastY), Vec2(lastX, config.cliffBottomY)));
+            });
+
+            let bike = world.createDynamicBody();
+            bike.createFixture(Circle(config.bikeRadius), {friction: 1, density: 1});
+            bike.setPosition(Vec2(pathList[0][0] + config.bikeRadius, pathList[0][1] + config.bikeRadius));
+            console.log("xxxx");
+            console.log(Vec2(pathList[0][0] + config.bikeRadius, pathList[0][1] + config.bikeRadius))
+
+            testbed.x = -pathList[0][0];
+            testbed.y = -pathList[0][1];
+
+            testbed.keydown = function () {
+                if (testbed.activeKeys.up) {
+                    let velocity = bike.getLinearVelocity();
+                    bike.setLinearVelocity(Vec2(velocity.x, 0));
+                    bike.applyForceToCenter(Vec2(0, config.jumpForce));
+                }
+            };
+
+            testbed.step = () => {
+                let velocity = bike.getLinearVelocity();
+                if (velocity.x === 0) {
+                    testbed.speed = 0;
+                    return;
+                }
+
+                bike.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+
+                testbed.x = bike.getPosition().x
+            };
+
+            return world;
+        });
+    });
+</script>
+</body>
+</html>

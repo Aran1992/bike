@@ -1,0 +1,23 @@
+{
+  "name": "bike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aran1992/bike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aran1992/bike/issues"
+  },
+  "homepage": "https://github.com/Aran1992/bike#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
