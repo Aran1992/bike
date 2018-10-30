@@ -2,7 +2,7 @@
     sceneWidth: 720,
     sceneHeight: 1280,
     backgroundColor: 0x888888,
-    resolution: 0.75,
+    resolution: 1,
     pixel2meter: 0.0625,
     meter2pixel: 16,
     bikeRadius: 0.75,
@@ -16,6 +16,8 @@
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
+    bikeParallaxRadius: 4000,
+    bgParallaxRadius: [1000, 2000, 3000],
     // 自行车速度
     bikeVelocity: 20,
     // 重力

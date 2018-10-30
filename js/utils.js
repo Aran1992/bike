@@ -88,3 +88,9 @@ function parseRoadPathList(resource) {
 function isPC() {
     return navigator.platform === "Win32";
 }
+
+
+function parallaxMove(itemRadius, bgRadius, itemMove) {
+    let bgMove = itemMove / itemRadius * bgRadius;
+    return itemMove - bgMove;
+}

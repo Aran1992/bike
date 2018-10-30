@@ -29,6 +29,9 @@
         side: "images/TextureScorpiusRoad01SideSkin.png",
         top: "images/TextureScorpiusRoad01TopSkin.png",
         rider: "images/rider.png",
+        bg0: "images/TextureScorpiusBackground01.png",
+        bg1: "images/TextureScorpiusBackground02.png",
+        bg2: "images/TextureScorpiusBackground03.png",
     };
     let JSON_PATH = {
         path: "myLaya/laya/pages/Test.scene",
@@ -41,12 +44,12 @@
         }
     }
 
-    function renderPos2PhysicsPos(rp) {
-        return {
-            x: rp.x * config.pixel2meter,
-            y: (config.sceneHeight - rp.y) * config.pixel2meter
-        }
-    }
+    // function renderPos2PhysicsPos(rp) {
+    //     return {
+    //         x: rp.x * config.pixel2meter,
+    //         y: (config.sceneHeight - rp.y) * config.pixel2meter
+    //     }
+    // }
 
     class Game {
         init() {
@@ -71,6 +74,7 @@
             } else {
                 window.addEventListener("touchstart", this.onMousedown.bind(this));
             }
+            window.addEventListener("keydown", this.onKeydown.bind(this));
 
             loader
                 .add(values(TEXTURE_PATH))
@@ -89,19 +93,39 @@
             }
         }
 
+        onKeydown(event) {
+            switch (event.code) {
+                case "ArrowUp": {
+                    this.onMousedown();
+                    break;
+                }
+                case "Space": {
+                    if (this.gameStatus === "play") {
+                        this.gameLoopFunc = this.pause.bind(this);
+                        this.gameStatus = "pause";
+                    } else if (this.gameStatus === "pause") {
+                        this.gameLoopFunc = this.play.bind(this);
+                        this.gameStatus = "play";
+                    }
+                    break;
+                }
+            }
+        }
+
         onLoaded() {
             this.camera = new Container();
             this.app.stage.addChild(this.camera);
 
-            this.fpsMessage = new Text("FPS:0");
-            this.app.stage.addChild(this.fpsMessage);
-            this.fpsMessage.anchor.set(0, 0);
-            this.fpsMessage.position.set(0, 0);
+            this.createBg();
 
             this.getRoadPathList().forEach(path => this.createRoad(path, TEXTURE_PATH.side, TEXTURE_PATH.top));
 
             this.createRider(TEXTURE_PATH.rider);
 
+            this.createFPSMessage();
+
+            this.gameStatus = "play";
+            this.gameLoopFunc = this.play.bind(this);
             this.app.ticker.add(this.gameLoop.bind(this));
         }
 
@@ -126,6 +150,24 @@
                     return value;
                 })
             );
+        }
+
+        createBg() {
+            this.bgs = [];
+            for (let i = 0; i < 3; i++) {
+                let bg = [];
+                let texturePath = TEXTURE_PATH[`bg${i}`];
+                let texture = resources[texturePath].texture;
+                let scale = config.sceneHeight / texture.height;
+                for (let i = 0; i < 2; i++) {
+                    let sprite = new Sprite(texture);
+                    sprite.scale.set(scale, scale);
+                    sprite.position.set(i * texture.width * scale, 0);
+                    this.camera.addChild(sprite);
+                    bg.push(sprite);
+                }
+                this.bgs.push(bg);
+            }
         }
 
         createRoad(path, sideTexturePath, topTexturePath) {
@@ -203,13 +245,25 @@
                 density: 1,
                 friction: 1,
             });
-            this.bikeBody.setPosition(Vec2(1, 60));
+            this.bikeBody.setPosition(Vec2(1, 33.125));
 
             this.camera.addChild(this.bikeSprite);
             this.jumpCount = 0;
         }
 
+        createFPSMessage() {
+            this.fpsMessage = new Text("FPS:0");
+            this.app.stage.addChild(this.fpsMessage);
+            this.fpsMessage.anchor.set(0, 0);
+            this.fpsMessage.position.set(0, 0);
+        }
+
         gameLoop(delta) {
+            this.gameLoopFunc(delta);
+        }
+
+        play(delta) {
+            let oldBikeX = this.bikeSprite.position.x;
             this.world.step(delta / config.fps);
 
             this.fpsMessage.text = `FPS:${Math.floor(delta * 60)}`;
@@ -220,6 +274,7 @@
             if (!this.jumping) {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / config.bikeVelocity);
             }
+            let bikeMoveX = this.bikeSprite.position.x - oldBikeX;
 
             this.camera.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
             let y;
@@ -230,10 +285,18 @@
                 this.camera.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
             }
 
+            this.bgs.forEach((bg, index) => {
+                let moveX = parallaxMove(config.bikeParallaxRadius, config.bgParallaxRadius[index], bikeMoveX);
+                bg.forEach(sprite => {
+                    sprite.position.x += moveX;
+                });
+            });
+
             this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
         }
 
-
+        pause() {
+        }
     }
 
     new Game().init();
