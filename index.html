@@ -15,6 +15,7 @@
             Container,
             Sprite,
             Text,
+            TextStyle,
             loader,
         } = PIXI,
         TilingSprite = PIXI.extras.TilingSprite,
@@ -118,6 +119,9 @@
 
             this.createBg();
 
+            this.gameContainer = new Container();
+            this.camera.addChild(this.gameContainer);
+
             this.getRoadPathList().forEach(path => this.createRoad(path, TEXTURE_PATH.side, TEXTURE_PATH.top));
 
             this.createRider(TEXTURE_PATH.rider);
@@ -153,9 +157,9 @@
         }
 
         createBg() {
-            this.bgs = [];
-            for (let i = 0; i < 3; i++) {
-                let bg = [];
+            for (let i = 0; i < config.bgCounts; i++) {
+                let container = new Container();
+                this.camera.addChild(container);
                 let texturePath = TEXTURE_PATH[`bg${i}`];
                 let texture = resources[texturePath].texture;
                 let scale = config.sceneHeight / texture.height;
@@ -163,10 +167,8 @@
                     let sprite = new Sprite(texture);
                     sprite.scale.set(scale, scale);
                     sprite.position.set(i * texture.width * scale, 0);
-                    this.camera.addChild(sprite);
-                    bg.push(sprite);
+                    container.addChild(sprite);
                 }
-                this.bgs.push(bg);
             }
         }
 
@@ -182,7 +184,6 @@
             let side = new TilingSprite(sideTexture, sideRect.width, sideRect.height);
             side.position.set(sideRect.x, sideRect.y);
             road.addChild(side);
-
 
             let topTexture = resources[topTexturePath].texture;
             let length = path.length;
@@ -210,7 +211,7 @@
 
             road.cacheAsBitmap = true;
 
-            this.camera.addChild(road);
+            this.gameContainer.addChild(road);
 
             path = path.map((value, i) => {
                 if (i % 2 === 1) {
@@ -247,12 +248,19 @@
             });
             this.bikeBody.setPosition(Vec2(1, 33.125));
 
-            this.camera.addChild(this.bikeSprite);
+            this.gameContainer.addChild(this.bikeSprite);
             this.jumpCount = 0;
         }
 
         createFPSMessage() {
-            this.fpsMessage = new Text("FPS:0");
+            let style = new TextStyle({
+                fontFamily: "Arial",
+                fontSize: 36,
+                fill: "white",
+                stroke: '#ff3300',
+                strokeThickness: 4,
+            });
+            this.fpsMessage = new Text("FPS:0", style);
             this.app.stage.addChild(this.fpsMessage);
             this.fpsMessage.anchor.set(0, 0);
             this.fpsMessage.position.set(0, 0);
@@ -263,36 +271,39 @@
         }
 
         play(delta) {
-            let oldBikeX = this.bikeSprite.position.x;
-            this.world.step(delta / config.fps);
-
             this.fpsMessage.text = `FPS:${Math.floor(delta * 60)}`;
 
+            this.world.step(delta / config.fps);
+
             let velocity = this.bikeBody.getLinearVelocity();
-            let pos = physicsPos2renderPos(this.bikeBody.getPosition());
-            this.bikeSprite.position.set(pos.x, pos.y);
+            let bikeRenderPos = physicsPos2renderPos(this.bikeBody.getPosition());
+            this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
+
             if (!this.jumping) {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / config.bikeVelocity);
             }
-            let bikeMoveX = this.bikeSprite.position.x - oldBikeX;
+
+            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+
+            let oldCameraX = this.camera.position.x;
+            let oldCameraY = this.camera.position.y;
 
             this.camera.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
-            let y;
-            let bikeCameraY = this.bikeSprite.position.y + this.camera.position.y;
-            if (bikeCameraY < config.bikeCameraMinY) {
+
+            let bikeY = this.camera.position.y + this.bikeSprite.position.y;
+            if (bikeY < config.bikeCameraMinY) {
                 this.camera.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
-            } else if (bikeCameraY > config.bikeCameraMaxY) {
+            } else if (bikeY > config.bikeCameraMaxY) {
                 this.camera.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
             }
 
-            this.bgs.forEach((bg, index) => {
-                let moveX = parallaxMove(config.bikeParallaxRadius, config.bgParallaxRadius[index], bikeMoveX);
-                bg.forEach(sprite => {
-                    sprite.position.x += moveX;
-                });
-            });
+            let cameraMoveX = this.camera.position.x - oldCameraX;
+            let cameraMoveY = this.camera.position.y - oldCameraY;
 
-            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+            this.camera.children.forEach((child, index) => {
+                child.position.x -= cameraMoveX * config.parallaxDepth[index];
+                child.position.y -= cameraMoveY * config.parallaxDepth[index];
+            });
         }
 
         pause() {

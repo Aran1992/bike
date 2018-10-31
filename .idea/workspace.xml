@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d5b187f-34ab-439e-ad96-7f8fe9cc487f" name="Default Changelist" comment="" />
+    <list default="true" id="2d5b187f-34ab-439e-ad96-7f8fe9cc487f" name="Default Changelist" comment="添加了视差背景">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Aran1992.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Aran1992.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myLaya/laya/pages/Test.scene" beforeDir="false" afterPath="$PROJECT_DIR$/myLaya/laya/pages/Test.scene" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,83 +21,70 @@
     <session id="-395509139">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1780" />
-          <entry key="js" value="106" />
+          <entry key="html" value="5138" />
+          <entry key="js" value="479" />
+          <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1780" />
-          <entry key="JavaScript" value="106" />
+          <entry key="HTML" value="5138" />
+          <entry key="JavaScript" value="479" />
+          <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="2" />
+          <entry key="html" value="2" />
+          <entry key="js" value="8" />
+          <entry key="png" value="27" />
+          <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="2" />
+          <entry key="HTML" value="2" />
+          <entry key="Image" value="27" />
+          <entry key="JavaScript" value="8" />
+          <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="bike" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2424">
-              <caret line="229" column="92" selection-start-line="229" selection-start-column="92" selection-end-line="229" selection-end-column="92" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" />
-                <element signature="e#886#1044#0" />
-                <element signature="e#907#1034#0" />
-                <element signature="e#1088#1248#0" />
-                <element signature="e#1109#1238#0" />
-                <element signature="e#1740#1812#0" />
-                <element signature="e#2832#3372#0" />
-                <element signature="e#3019#3338#0" />
-                <element signature="e#3116#3194#0" />
-                <element signature="e#3200#3278#0" />
-                <element signature="e#4122#4723#0" />
-                <element signature="e#4153#4263#0" />
-                <element signature="e#4294#4408#0" />
-                <element signature="e#5044#5239#0" />
-                <element signature="e#5083#5166#0" />
-                <element signature="e#5350#5835#0" />
-                <element signature="e#5381#5491#0" />
-                <element signature="e#5522#5636#0" />
-                <element signature="e#5719#5815#0" />
-                <element signature="e#6239#6323#0" />
-              </folding>
+            <state relative-caret-position="39">
+              <caret line="250" column="57" lean-forward="true" selection-start-line="250" selection-start-column="57" selection-end-line="250" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/utils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1111">
-              <caret line="87" column="13" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/images/TextureScorpiusBackground01.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="336">
+              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -103,10 +96,25 @@
       <find>var</find>
       <find>bikeTopMargin</find>
       <find>bikeCameraMaxY</find>
+      <find>new Sprite</find>
+      <find>texture</find>
+      <find>createRoad</find>
+      <find>xxx</find>
+      <find>parallaxXCoefficient</find>
+      <find>bikeParallaxRadius</find>
+      <find>createBg</find>
+      <find>this.camera</find>
+      <find>camera</find>
+      <find>cache</find>
+      <find>fpsmessage</find>
+      <find>TextStyle</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -123,14 +131,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1259" />
-    <option name="width" value="1308" />
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectView">
@@ -138,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,10 +156,21 @@
               <item name="bike" type="b2602c69:ProjectViewProjectNode" />
               <item name="bike" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bike" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bike" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bike" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bike" type="462c0819:PsiDirectoryNode" />
+              <item name="myLaya" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -158,6 +179,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Works\bike\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -181,30 +208,42 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540795678517</updated>
-      <workItem from="1540795679820" duration="11465000" />
+      <workItem from="1540795679820" duration="11647000" />
+      <workItem from="1540878879832" duration="14044000" />
+      <workItem from="1540967595323" duration="5110000" />
     </task>
+    <task id="LOCAL-00001" summary="添加了视差背景">
+      <created>1540910105445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540910105445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11465000" />
+    <option name="totallyTimeSpent" value="30801000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1259" y="0" width="1308" height="1407" extended-state="0" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496063" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49921384" visible="true" weight="0.25238854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5007862" side_tool="true" weight="0.25238854" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299293" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3294025" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3294025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -216,47 +255,70 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加了视差背景" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了视差背景" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusRoad02TopSkin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusRoad02SideSkin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusForeground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusRoad01SideSkin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusRoad01TopSkin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/rider.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="558" column="13" selection-start-line="558" selection-start-column="13" selection-end-line="558" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusBackground03.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusBackground02.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1111">
-          <caret line="87" column="13" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="1150">
+          <caret line="95" column="1" lean-forward="true" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/TextureScorpiusBackground01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pixi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="24203" column="8" selection-start-line="24203" selection-start-column="8" selection-end-line="24203" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="336">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2424">
-          <caret line="229" column="92" selection-start-line="229" selection-start-column="92" selection-end-line="229" selection-end-column="92" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="e#886#1044#0" />
-            <element signature="e#907#1034#0" />
-            <element signature="e#1088#1248#0" />
-            <element signature="e#1109#1238#0" />
-            <element signature="e#1740#1812#0" />
-            <element signature="e#2832#3372#0" />
-            <element signature="e#3019#3338#0" />
-            <element signature="e#3116#3194#0" />
-            <element signature="e#3200#3278#0" />
-            <element signature="e#4122#4723#0" />
-            <element signature="e#4153#4263#0" />
-            <element signature="e#4294#4408#0" />
-            <element signature="e#5044#5239#0" />
-            <element signature="e#5083#5166#0" />
-            <element signature="e#5350#5835#0" />
-            <element signature="e#5381#5491#0" />
-            <element signature="e#5522#5636#0" />
-            <element signature="e#5719#5815#0" />
-            <element signature="e#6239#6323#0" />
-          </folding>
+        <state relative-caret-position="39">
+          <caret line="250" column="57" lean-forward="true" selection-start-line="250" selection-start-column="57" selection-end-line="250" selection-end-column="57" />
         </state>
       </provider>
     </entry>

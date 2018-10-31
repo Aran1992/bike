@@ -16,8 +16,8 @@
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
-    bikeParallaxRadius: 4000,
-    bgParallaxRadius: [1000, 2000, 3000],
+    parallaxDepth: [0.75, 0.5, 0.25, 0],
+    bgCounts: 3,
     // 自行车速度
     bikeVelocity: 20,
     // 重力

@@ -1,7 +1,10 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Aran1992">
     <words>
+      <w>antialiasing</w>
+      <w>keydown</w>
       <w>mousedown</w>
+      <w>touchstart</w>
     </words>
   </dictionary>
 </component>
