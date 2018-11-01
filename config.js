@@ -17,6 +17,18 @@
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
     parallaxDepth: [0.75, 0.5, 0.25, 0],
+    maskHeight: 420,
+    maskColorStop: [
+        {offset: 0, opacity: 0},
+        {offset: 0.25, opacity: 0.5},
+        {offset: 0.75, opacity: 1},
+        {offset: 1, opacity: 1},
+    ],
+    edgeHeight: 20,
+    edgeColorStop: [
+        {offset: 1, opacity: 0},
+        {offset: 0, opacity: 0.75},
+    ],
     bgCounts: 3,
     // 自行车速度
     bikeVelocity: 20,

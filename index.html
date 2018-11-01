@@ -14,6 +14,7 @@
             Graphics,
             Container,
             Sprite,
+            Texture,
             Text,
             TextStyle,
             loader,
@@ -126,6 +127,8 @@
 
             this.createRider(TEXTURE_PATH.rider);
 
+            this.createBottomMask();
+
             this.createFPSMessage();
 
             this.gameStatus = "play";
@@ -203,6 +206,37 @@
                 road.addChild(top);
             }
 
+            let edgeList = [
+                {
+                    sp: {x: path[0], y: path[1]},
+                    ep: {x: path[2], y: path[3]},
+                },
+                {
+                    sp: {x: path[path.length - 4], y: path[path.length - 3]},
+                    ep: {x: path[path.length - 2], y: path[path.length - 1]},
+                },
+            ];
+            edgeList.forEach(({sp, ep}) => {
+                let edgeWidth = Math.abs(sp.y - ep.y);
+
+                let canvas = document.createElement('canvas');
+                canvas.width = `${edgeWidth}`;
+                canvas.height = `${config.edgeHeight}`;
+                let ctx = canvas.getContext('2d');
+                let gradient = ctx.createLinearGradient(0, 0, 0, config.edgeHeight);
+                config.edgeColorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, edgeWidth, config.edgeHeight);
+
+                let edgeTexture = Texture.fromCanvas(canvas);
+                let edge = new Sprite(edgeTexture);
+                edge.position.set(sp.x, sp.y);
+                console.log(edgeWidth, sp.x, sp.y, radius2angle(calcRadius(sp, ep)));
+                edge.rotation = calcRadius(sp, ep);
+                road.addChild(edge);
+
+            });
+
             let mask = new Graphics();
             mask.beginFill();
             mask.drawPolygon(path);
@@ -252,13 +286,28 @@
             this.jumpCount = 0;
         }
 
+        createBottomMask() {
+            let canvas = document.createElement('canvas');
+            canvas.width = `${config.sceneHeight}`;
+            canvas.height = `${config.maskHeight}`;
+            let ctx = canvas.getContext('2d');
+            let gradient = ctx.createLinearGradient(0, 0, 0, config.maskHeight);
+            config.maskColorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, config.sceneWidth, config.maskHeight);
+
+            let texture = Texture.fromCanvas(canvas);
+            let sprite = new Sprite(texture);
+            sprite.anchor.set(0, 1);
+            sprite.position.set(0, config.sceneHeight);
+            this.app.stage.addChild(sprite);
+        }
+
         createFPSMessage() {
             let style = new TextStyle({
-                fontFamily: "Arial",
-                fontSize: 36,
                 fill: "white",
                 stroke: '#ff3300',
-                strokeThickness: 4,
+                strokeThickness: 1,
             });
             this.fpsMessage = new Text("FPS:0", style);
             this.app.stage.addChild(this.fpsMessage);
