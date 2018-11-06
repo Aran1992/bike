@@ -36,12 +36,12 @@
         }
     }
 
-    // function renderPos2PhysicsPos(rp) {
-    //     return {
-    //         x: rp.x * config.pixel2meter,
-    //         y: (config.designHeight - rp.y) * config.pixel2meter
-    //     }
-    // }
+    function renderPos2PhysicsPos(rp) {
+        return Vec2(
+            rp.x * config.pixel2meter,
+            (config.designHeight - rp.y) * config.pixel2meter
+        );
+    }
 
     class Game {
         init() {
@@ -134,9 +134,10 @@
             this.gameContainer = new Container();
             this.camera.addChild(this.gameContainer);
 
-            this.getRoadPathList().forEach(path => this.createRoad(path, TEXTURE_PATH.side, TEXTURE_PATH.top));
+            let pathList = this.getRoadPathList();
+            pathList.forEach(path => this.createRoad(path, TEXTURE_PATH.side, TEXTURE_PATH.top));
 
-            this.createRider(TEXTURE_PATH.rider);
+            this.createRider(TEXTURE_PATH.rider, pathList);
 
             this.createBottomMask();
 
@@ -288,7 +289,7 @@
             }
         }
 
-        createRider(texturePath) {
+        createRider(texturePath, pathList) {
             this.bikeSprite = new Sprite(resources[texturePath].texture);
             this.bikeSprite.anchor.set(0.5, 0.5);
             this.bikeSprite.scale.set(config.riderScale, config.riderScale);
@@ -298,7 +299,10 @@
                 density: 1,
                 friction: 1,
             });
-            this.bikeBody.setPosition(Vec2(1, 33.125));
+            let firstPoint = renderPos2PhysicsPos({x: pathList[0][0] + config.bikeLeftMargin, y: pathList[0][1]});
+            firstPoint.x += config.bikeRadius;
+            firstPoint.y += config.bikeRadius;
+            this.bikeBody.setPosition(firstPoint);
 
             this.gameContainer.addChild(this.bikeSprite);
             this.jumpCount = 0;
