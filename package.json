@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Aran1992/bike#readme",
   "devDependencies": {
     "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "pixi.js": "^4.8.2"
   }
 }

@@ -1,6 +1,6 @@
 ﻿let config = {
-    sceneWidth: 720,
-    sceneHeight: 1280,
+    designWidth: 720,
+    designHeight: 1280,
     backgroundColor: 0x888888,
     resolution: 1,
     pixel2meter: 0.0625,
@@ -36,4 +36,17 @@
     gravity: -200,
     // 跳跃爆发力
     jumpForce: 5000,
+};
+
+let TEXTURE_PATH = {
+    side: "images/TextureScorpiusRoad01SideSkin.png",
+    top: "images/TextureScorpiusRoad01TopSkin.png",
+    rider: "images/rider.png",
+    bg0: "images/TextureScorpiusBackground01.png",
+    bg1: "images/TextureScorpiusBackground02.png",
+    bg2: "images/TextureScorpiusBackground03.png",
+};
+
+let JSON_PATH = {
+    path: "myLaya/laya/pages/Test.scene",
 };

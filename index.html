@@ -1,15 +1,16 @@
 <html>
 
 <head>
-    <script src="js/pixi.js"></script>
-    <script src="js/planck.js"></script>
+    <script src="js/pixi.min.js"></script>
+    <script src="js/planck.min.js"></script>
     <script src="js/utils.js"></script>
     <script src="config.js"></script>
 </head>
 
 <body>
 <script>
-    const {
+    const
+        {
             Application,
             Graphics,
             Container,
@@ -20,50 +21,31 @@
             loader,
         } = PIXI,
         TilingSprite = PIXI.extras.TilingSprite,
-        resources = loader.resources, {
+        resources = loader.resources,
+        {
             Vec2,
             World,
             Edge,
             Circle,
         } = planck;
 
-    let TEXTURE_PATH = {
-        side: "images/TextureScorpiusRoad01SideSkin.png",
-        top: "images/TextureScorpiusRoad01TopSkin.png",
-        rider: "images/rider.png",
-        bg0: "images/TextureScorpiusBackground01.png",
-        bg1: "images/TextureScorpiusBackground02.png",
-        bg2: "images/TextureScorpiusBackground03.png",
-    };
-    let JSON_PATH = {
-        path: "myLaya/laya/pages/Test.scene",
-    };
-
     function physicsPos2renderPos(pp) {
         return {
             x: pp.x * config.meter2pixel,
-            y: config.sceneHeight - pp.y * config.meter2pixel
+            y: config.designHeight - pp.y * config.meter2pixel
         }
     }
 
     // function renderPos2PhysicsPos(rp) {
     //     return {
     //         x: rp.x * config.pixel2meter,
-    //         y: (config.sceneHeight - rp.y) * config.pixel2meter
+    //         y: (config.designHeight - rp.y) * config.pixel2meter
     //     }
     // }
 
     class Game {
         init() {
-            this.app = new Application({
-                width: config.sceneWidth,
-                height: config.sceneHeight,
-                antialiasing: true,
-                transparent: false,
-                resolution: config.resolution,
-                backgroundColor: config.backgroundColor
-            });
-            document.body.appendChild(this.app.view);
+            this.initApp();
 
             this.world = new World({
                 gravity: Vec2(0, config.gravity)
@@ -73,15 +55,42 @@
 
             if (isPC()) {
                 window.addEventListener("mousedown", this.onMousedown.bind(this));
-            } else {
-                window.addEventListener("touchstart", this.onMousedown.bind(this));
+                window.addEventListener("keydown", this.onKeydown.bind(this));
             }
-            window.addEventListener("keydown", this.onKeydown.bind(this));
+            window.addEventListener("touchstart", this.onMousedown.bind(this));
 
             loader
                 .add(values(TEXTURE_PATH))
                 .add(values(JSON_PATH))
                 .load(this.onLoaded.bind(this));
+        }
+
+        initApp() {
+            document.body.style.margin = "0";
+
+            let resolution = window.innerHeight / config.designHeight;
+            this.canvasWidth = config.designWidth;
+            this.canvasHeight = config.designHeight;
+
+            let wwhRatio = window.innerWidth / window.innerHeight;
+            let dwhRatio = config.designWidth / config.designHeight;
+            if (wwhRatio < dwhRatio) {
+                this.canvasWidth = config.designHeight * wwhRatio;
+            }
+
+            this.app = new Application({
+                width: this.canvasWidth,
+                height: this.canvasHeight,
+                antialiasing: true,
+                transparent: false,
+                resolution: resolution,
+                backgroundColor: config.backgroundColor
+            });
+            document.body.appendChild(this.app.view);
+
+            this.app.view.style.position = "absolute";
+            this.app.view.style.left = (window.innerWidth - this.app.view.offsetWidth) / 2 + "px";
+            this.app.view.style.top = (window.innerHeight - this.app.view.offsetHeight) / 2 + "px";
         }
 
         onMousedown() {
@@ -115,8 +124,10 @@
         }
 
         onLoaded() {
+            this.createOffsetContainer();
+
             this.camera = new Container();
-            this.app.stage.addChild(this.camera);
+            this.offsetContainer.addChild(this.camera);
 
             this.createBg();
 
@@ -144,6 +155,14 @@
             }
         }
 
+        createOffsetContainer() {
+            this.offsetContainer = new Container();
+            let x = (this.canvasWidth - config.designWidth) / 2;
+            let y = (this.canvasHeight - config.designHeight) / 2;
+            this.offsetContainer.position.set(x, y);
+            this.app.stage.addChild(this.offsetContainer);
+        }
+
         getRoadPathList() {
             let json = JSON.parse(resources[JSON_PATH.path].data);
             return json.child.map(data =>
@@ -165,7 +184,7 @@
                 this.camera.addChild(container);
                 let texturePath = TEXTURE_PATH[`bg${i}`];
                 let texture = resources[texturePath].texture;
-                let scale = config.sceneHeight / texture.height;
+                let scale = config.designHeight / texture.height;
                 for (let i = 0; i < 2; i++) {
                     let sprite = new Sprite(texture);
                     sprite.scale.set(scale, scale);
@@ -231,7 +250,6 @@
                 let edgeTexture = Texture.fromCanvas(canvas);
                 let edge = new Sprite(edgeTexture);
                 edge.position.set(sp.x, sp.y);
-                console.log(edgeWidth, sp.x, sp.y, radius2angle(calcRadius(sp, ep)));
                 edge.rotation = calcRadius(sp, ep);
                 road.addChild(edge);
 
@@ -249,7 +267,7 @@
 
             path = path.map((value, i) => {
                 if (i % 2 === 1) {
-                    value = config.sceneHeight - value;
+                    value = config.designHeight - value;
                 }
                 return value * config.pixel2meter;
             });
@@ -288,18 +306,18 @@
 
         createBottomMask() {
             let canvas = document.createElement('canvas');
-            canvas.width = `${config.sceneHeight}`;
+            canvas.width = `${config.designWidth}`;
             canvas.height = `${config.maskHeight}`;
             let ctx = canvas.getContext('2d');
             let gradient = ctx.createLinearGradient(0, 0, 0, config.maskHeight);
             config.maskColorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
             ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, config.sceneWidth, config.maskHeight);
+            ctx.fillRect(0, 0, config.designWidth, config.maskHeight);
 
             let texture = Texture.fromCanvas(canvas);
             let sprite = new Sprite(texture);
             sprite.anchor.set(0, 1);
-            sprite.position.set(0, config.sceneHeight);
+            sprite.position.set(0, config.designHeight);
             this.app.stage.addChild(sprite);
         }
 
