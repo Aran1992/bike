@@ -1,12 +1,11 @@
 <html>
-
 <head>
     <script src="js/pixi.min.js"></script>
     <script src="js/planck.min.js"></script>
     <script src="js/utils.js"></script>
-    <script src="config.js"></script>
+    <script src="base-config.js"></script>
+    <script src="custom-config.js"></script>
 </head>
-
 <body>
 <script>
     const
@@ -43,44 +42,27 @@
         );
     }
 
-    class Game {
+    class App {
         init() {
-            this.initApp();
-
-            this.world = new World({
-                gravity: Vec2(0, config.gravity)
-            });
-
-            this.world.on('begin-contact', this.onBeginContact.bind(this));
-
-            if (isPC()) {
-                window.addEventListener("mousedown", this.onMousedown.bind(this));
-                window.addEventListener("keydown", this.onKeydown.bind(this));
-            }
-            window.addEventListener("touchstart", this.onMousedown.bind(this));
-
-            loader
-                .add(values(TEXTURE_PATH))
-                .add(values(JSON_PATH))
-                .load(this.onLoaded.bind(this));
-        }
-
-        initApp() {
             document.body.style.margin = "0";
 
-            let resolution = window.innerHeight / config.designHeight;
-            this.canvasWidth = config.designWidth;
-            this.canvasHeight = config.designHeight;
+            let resolution;
 
             let wwhRatio = window.innerWidth / window.innerHeight;
             let dwhRatio = config.designWidth / config.designHeight;
-            if (wwhRatio < dwhRatio) {
-                this.canvasWidth = config.designHeight * wwhRatio;
+            if (wwhRatio >= dwhRatio) {
+                resolution = window.innerHeight / config.designHeight;
+                this.appWidth = config.designWidth;
+                this.appHeight = config.designHeight;
+            } else {
+                resolution = window.innerWidth / config.designWidth;
+                this.appWidth = config.designWidth;
+                this.appHeight = config.designWidth / window.innerWidth * window.innerHeight;
             }
 
             this.app = new Application({
-                width: this.canvasWidth,
-                height: this.canvasHeight,
+                width: this.appWidth,
+                height: this.appHeight,
                 antialiasing: true,
                 transparent: false,
                 resolution: resolution,
@@ -91,23 +73,166 @@
             this.app.view.style.position = "absolute";
             this.app.view.style.left = (window.innerWidth - this.app.view.offsetWidth) / 2 + "px";
             this.app.view.style.top = (window.innerHeight - this.app.view.offsetHeight) / 2 + "px";
+
+            new StartScene().init(this);
         }
 
-        onMousedown() {
-            if (this.jumpCount < config.jumpMaxCount) {
-                let velocity = this.bikeBody.getLinearVelocity();
-                this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
-                this.bikeBody.applyForceToCenter(Vec2(0, config.jumpForce));
-                this.bikeSprite.rotation = angle2radius(config.bikeJumpingRotation);
-                this.jumping = true;
-                this.jumpCount += 1;
+        getScenesContainer() {
+            return this.app.stage;
+        }
+
+        getSceneWidth() {
+            return this.appWidth;
+        }
+
+        getSceneHeight() {
+            return this.appHeight;
+        }
+
+        addTicker(handler) {
+            this.app.ticker.add(handler);
+        }
+    }
+
+    class StartScene {
+        init(app) {
+            this.app = app;
+            this.app.startScene = this;
+
+            this.sceneContainer = new Container();
+            app.getScenesContainer().addChild(this.sceneContainer);
+
+            let textContainer = new Container();
+            textContainer.position.set(app.getSceneWidth() / 2,
+                (app.getSceneHeight() - 50 * config.mapList.length) / 2);
+            this.sceneContainer.addChild(textContainer);
+
+            let textStyle = new TextStyle({
+                fontSize: 50,
+                fill: "white",
+            });
+            config.mapList.forEach((map, i) => {
+                let text = new Text(`MAP-${i}: ${map.showName}`, textStyle);
+                text.position.set(-text.width / 2, text.height * i);
+                textContainer.addChild(text);
+                text.interactive = true;
+                text.buttonMode = true;
+                text.on("pointerdown", () => this.onClickMapText(i));
+            });
+        }
+
+        onClickMapText(mapIndex) {
+            this.sceneContainer.visible = false;
+            if (this.gameScene === undefined) {
+                this.gameScene = new GameScene();
+                this.gameScene.init(this.app);
+            }
+            this.gameScene.startGame(mapIndex);
+        }
+
+        show() {
+            this.sceneContainer.visible = true;
+        }
+    }
+
+    class GameScene {
+        init(app) {
+            this.app = app;
+            this.app.gameScene = this;
+
+            this.sceneContainer = new Container();
+            app.getScenesContainer().addChild(this.sceneContainer);
+
+            this.offsetContainer = new Container();
+            let scale = app.getSceneHeight() / config.designHeight;
+            this.offsetContainer.position.x = (app.getSceneWidth() - config.designWidth * scale) / 2;
+            this.offsetContainer.scale.set(scale, scale);
+            this.sceneContainer.addChild(this.offsetContainer);
+
+            this.camera = new Container();
+            this.offsetContainer.addChild(this.camera);
+
+            this.createBottomMask();
+
+            this.createFPSMessage();
+
+            window.addEventListener("keydown", this.onKeydown.bind(this));
+
+            this.offsetContainer.interactive = true;
+            this.offsetContainer.buttonMode = true;
+            this.offsetContainer.on("pointerdown", this.onClickGameContainer.bind(this));
+
+            this.gameStatus = "end";
+            this.gameLoopFunc = this.pause.bind(this);
+            this.app.addTicker(this.gameLoop.bind(this));
+        }
+
+        startGame(mapIndex) {
+            this.camera.removeChildren();
+
+            this.sceneContainer.visible = true;
+            this.map = config.mapList[mapIndex];
+
+            let texturePathList = values(this.map.texture)
+                .concat([config.mapPathBasePath + this.map.sceneName + ".scene", config.bikeImagePath]);
+
+            texturePathList = texturePathList.filter(path => resources[path] === undefined);
+
+            loader
+                .add(texturePathList)
+                .load(this.onLoaded.bind(this));
+        }
+
+        onLoaded() {
+            this.world = new World({gravity: Vec2(0, config.gravity)});
+
+            this.world.on('begin-contact', this.onBeginContact.bind(this));
+
+            this.createBg();
+
+            this.gameContainer = new Container();
+            this.camera.addChild(this.gameContainer);
+
+            let pathList = this.getRoadPathList();
+
+            let lastPath = getLast(pathList);
+            this.finalX = (lastPath[lastPath.length - 2] + lastPath[lastPath.length - 4]) / 2;
+            this.finalX *= config.pixel2meter;
+
+            pathList.forEach(path => this.createRoad(path, this.map.texture.side, this.map.texture.top));
+
+            this.createRider(config.bikeImagePath, pathList);
+
+            this.gameStatus = "play";
+            this.gameLoopFunc = this.play.bind(this);
+            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, 0));
+        }
+
+        onBeginContact(contact) {
+            if (contact.getFixtureA().getBody() === this.bikeBody
+                || contact.getFixtureB().getBody() === this.bikeBody) {
+                this.jumping = false;
+                this.jumpCount = 0;
+            }
+        }
+
+        onClickGameContainer() {
+            if (this.gameStatus === "play") {
+                if (this.jumpCount < config.jumpMaxCount) {
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
+                    this.bikeBody.applyForceToCenter(Vec2(0, config.jumpForce));
+                    this.bikeSprite.rotation = angle2radius(config.bikeJumpingRotation);
+                    this.jumping = true;
+                    this.jumpCount += 1;
+                }
             }
         }
 
         onKeydown(event) {
             switch (event.code) {
                 case "ArrowUp": {
-                    this.onMousedown();
+                    this.onClickGameContainer();
                     break;
                 }
                 case "Space": {
@@ -123,49 +248,8 @@
             }
         }
 
-        onLoaded() {
-            this.createOffsetContainer();
-
-            this.camera = new Container();
-            this.offsetContainer.addChild(this.camera);
-
-            this.createBg();
-
-            this.gameContainer = new Container();
-            this.camera.addChild(this.gameContainer);
-
-            let pathList = this.getRoadPathList();
-            pathList.forEach(path => this.createRoad(path, TEXTURE_PATH.side, TEXTURE_PATH.top));
-
-            this.createRider(TEXTURE_PATH.rider, pathList);
-
-            this.createBottomMask();
-
-            this.createFPSMessage();
-
-            this.gameStatus = "play";
-            this.gameLoopFunc = this.play.bind(this);
-            this.app.ticker.add(this.gameLoop.bind(this));
-        }
-
-        onBeginContact(contact) {
-            if (contact.getFixtureA().getBody() === this.bikeBody
-                || contact.getFixtureB().getBody() === this.bikeBody) {
-                this.jumping = false;
-                this.jumpCount = 0;
-            }
-        }
-
-        createOffsetContainer() {
-            this.offsetContainer = new Container();
-            let x = (this.canvasWidth - config.designWidth) / 2;
-            let y = (this.canvasHeight - config.designHeight) / 2;
-            this.offsetContainer.position.set(x, y);
-            this.app.stage.addChild(this.offsetContainer);
-        }
-
         getRoadPathList() {
-            let json = JSON.parse(resources[JSON_PATH.path].data);
+            let json = JSON.parse(resources[config.mapPathBasePath + this.map.sceneName + ".scene"].data);
             return json.child.map(data =>
                 data.props.points.split(",").map((intStr, i) => {
                     let value = parseInt(intStr);
@@ -180,10 +264,11 @@
         }
 
         createBg() {
-            for (let i = 0; i < config.bgCounts; i++) {
+            let bg = this.map.texture.bg;
+            for (let i = 0; i < bg.length; i++) {
                 let container = new Container();
                 this.camera.addChild(container);
-                let texturePath = TEXTURE_PATH[`bg${i}`];
+                let texturePath = bg[i];
                 let texture = resources[texturePath].texture;
                 let scale = config.designHeight / texture.height;
                 for (let i = 0; i < 2; i++) {
@@ -322,7 +407,7 @@
             let sprite = new Sprite(texture);
             sprite.anchor.set(0, 1);
             sprite.position.set(0, config.designHeight);
-            this.app.stage.addChild(sprite);
+            this.offsetContainer.addChild(sprite);
         }
 
         createFPSMessage() {
@@ -332,9 +417,9 @@
                 strokeThickness: 1,
             });
             this.fpsMessage = new Text("FPS:0", style);
-            this.app.stage.addChild(this.fpsMessage);
             this.fpsMessage.anchor.set(0, 0);
             this.fpsMessage.position.set(0, 0);
+            this.sceneContainer.addChild(this.fpsMessage);
         }
 
         gameLoop(delta) {
@@ -347,42 +432,157 @@
             this.world.step(delta / config.fps);
 
             let velocity = this.bikeBody.getLinearVelocity();
-            let bikeRenderPos = physicsPos2renderPos(this.bikeBody.getPosition());
+            let bikePhysicsPos = this.bikeBody.getPosition();
+
+            let bikeRenderPos = physicsPos2renderPos(bikePhysicsPos);
             this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
 
             if (!this.jumping) {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / config.bikeVelocity);
             }
 
-            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+            if (this.gameStatus === "play"
+                && (velocity.x <= 0 || bikePhysicsPos.y < config.bikeGameOverHeight)) {
+                this.endCount = this.endCount || 0;
+                this.endCount++;
+                if (this.endCount >= 7) {
+                    this.endCount = 0;
+                    this.gameStatus = "end";
 
-            let oldCameraX = this.camera.position.x;
-            let oldCameraY = this.camera.position.y;
+                    if (velocity.x <= 0) {
+                        this.bikeBody.setLinearVelocity(Vec2(0, 0));
+                        this.bikeBody.setAngularVelocity(config.bikeGameOverAngularVelocity);
+                        this.bikeBody.applyForceToCenter(Vec2(-2500, 5000));
+                    }
 
-            this.camera.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
-
-            let bikeY = this.camera.position.y + this.bikeSprite.position.y;
-            if (bikeY < config.bikeCameraMinY) {
-                this.camera.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
-            } else if (bikeY > config.bikeCameraMaxY) {
-                this.camera.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
+                    if (this.app.gameOverScene === undefined) {
+                        new GameOverScene().init(this.app);
+                    }
+                    this.app.gameOverScene.show();
+                }
             }
 
-            let cameraMoveX = this.camera.position.x - oldCameraX;
-            let cameraMoveY = this.camera.position.y - oldCameraY;
+            if (this.gameStatus === "play"
+                && bikePhysicsPos.x > this.finalX) {
+                this.gameStatus = "win";
+                if (this.app.gameOverScene === undefined) {
+                    new GameOverScene().init(this.app);
+                }
+                this.app.gameOverScene.show("Game Win");
+            }
 
-            this.camera.children.forEach((child, index) => {
-                child.position.x -= cameraMoveX * config.parallaxDepth[index];
-                child.position.y -= cameraMoveY * config.parallaxDepth[index];
-            });
+            if (this.gameStatus === "play") {
+                this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+
+                let oldCameraX = this.camera.position.x;
+                let oldCameraY = this.camera.position.y;
+
+                this.camera.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
+
+                let bikeY = this.camera.position.y + this.bikeSprite.position.y;
+                if (bikeY < config.bikeCameraMinY) {
+                    this.camera.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
+                } else if (bikeY > config.bikeCameraMaxY) {
+                    this.camera.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
+                }
+
+                let cameraMoveX = this.camera.position.x - oldCameraX;
+                let cameraMoveY = this.camera.position.y - oldCameraY;
+
+                this.camera.children.forEach((child, index) => {
+                    child.position.x -= cameraMoveX * config.parallaxDepth[index];
+                    child.position.y -= cameraMoveY * config.parallaxDepth[index];
+                });
+            }
         }
 
         pause() {
         }
+
+        clearGame() {
+            this.sceneContainer.visible = false;
+        }
+
+        restart() {
+            let pathList = this.getRoadPathList();
+            let firstPoint = renderPos2PhysicsPos({x: pathList[0][0] + config.bikeLeftMargin, y: pathList[0][1]});
+            firstPoint.x += config.bikeRadius;
+            firstPoint.y += config.bikeRadius;
+            this.bikeBody.setPosition(firstPoint);
+            this.bikeBody.setAngularVelocity(0);
+            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, 0));
+            this.world.clearForces();
+            this.gameStatus = "play";
+        }
     }
 
-    new Game().init();
+    class GameOverScene {
+        init(app) {
+            this.app = app;
+            this.app.gameOverScene = this;
+
+            this.sceneContainer = new Container();
+            this.app.getScenesContainer().addChild(this.sceneContainer);
+
+            let mask = new Graphics();
+            mask.beginFill(0x000000, 0.5);
+            mask.drawRect(0, 0, this.app.getSceneWidth(), this.app.getSceneHeight());
+            mask.endFill();
+            this.sceneContainer.addChild(mask);
+
+            let textContainer = new Container();
+            textContainer.position.set(app.getSceneWidth() / 2,
+                (app.getSceneHeight() - 50 * 2 + 80) / 2);
+            this.sceneContainer.addChild(textContainer);
+
+            let textStyle = new TextStyle({
+                fontSize: 80,
+                fill: "red",
+            });
+
+            this.gameOverText = new Text("Game Over", textStyle);
+            this.gameOverText.position.set(-this.gameOverText.width / 2, 0);
+            textContainer.addChild(this.gameOverText);
+
+            textStyle = new TextStyle({
+                fontSize: 50,
+                fill: "white",
+            });
+
+            let selectMapText = new Text("Select Map", textStyle);
+            selectMapText.position.set(-selectMapText.width / 2, 80);
+            textContainer.addChild(selectMapText);
+            selectMapText.interactive = true;
+            selectMapText.buttonMode = true;
+            selectMapText.on("pointerdown", () => this.onClickSelectMapText());
+
+            let restartText = new Text("Restart", textStyle);
+            restartText.position.set(-restartText.width / 2, 80 + 50);
+            textContainer.addChild(restartText);
+            restartText.interactive = true;
+            restartText.buttonMode = true;
+            restartText.on("pointerdown", () => this.onClickRestartText());
+        }
+
+        show(msg) {
+            this.sceneContainer.visible = true;
+            msg = msg || "Game Over";
+            this.gameOverText.text = msg;
+        }
+
+        onClickSelectMapText() {
+            this.sceneContainer.visible = false;
+            this.app.gameScene.clearGame();
+            this.app.startScene.show();
+        }
+
+        onClickRestartText() {
+            this.sceneContainer.visible = false;
+            this.app.gameScene.restart();
+        }
+    }
+
+    new App().init();
 </script>
 </body>
-
 </html>

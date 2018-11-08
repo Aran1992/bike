@@ -64,33 +64,20 @@ function values(json) {
     let arr = [];
     for (let name in json) {
         if (json.hasOwnProperty(name)) {
-            arr.push(json[name]);
+            if (json[name].length) {
+                arr = arr.concat(json[name]);
+            } else {
+                arr.push(json[name]);
+            }
         }
     }
     return arr;
-}
-
-function parseRoadPathList(resource) {
-    let json = JSON.parse(resource);
-    return json.child.map(data => {
-        return data.props.points.split(",").map((intStr, i) => {
-            let value = parseInt(intStr);
-            if (i % 2 === 0) {
-                value += data.props.x;
-            } else {
-                value += data.props.y;
-            }
-            return value;
-        });
-    });
 }
 
 function isPC() {
     return navigator.platform === "Win32";
 }
 
-
-function parallaxMove(itemRadius, bgRadius, itemMove) {
-    let bgMove = itemMove / itemRadius * bgRadius;
-    return itemMove - bgMove;
+function getLast(arr) {
+    return arr[arr.length - 1];
 }
