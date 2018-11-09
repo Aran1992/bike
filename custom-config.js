@@ -26,7 +26,9 @@ config.mapList = [
                 "images/Scorpius/TextureScorpiusBackground02.png",
                 "images/Scorpius/TextureScorpiusBackground03.png",
             ]
-        }
+        },
+        horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
+        verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
     },
     {
         // 显示给人看的名字
@@ -45,6 +47,8 @@ config.mapList = [
                 "images/Taurus/TextureTaurusBackground02.png",
                 "images/Taurus/TextureTaurusBackground03.png",
             ]
-        }
+        },
+        horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
+        verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
     },
 ];

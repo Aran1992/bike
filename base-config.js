@@ -16,7 +16,6 @@
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
-    parallaxDepth: [0.75, 0.5, 0.25, 0],
     maskHeight: 420,
     maskColorStop: [
         {offset: 0, opacity: 0},
@@ -61,6 +60,8 @@ config.mapList = [
                 "images/TextureScorpiusBackground02.png",
                 "images/TextureScorpiusBackground03.png",
             ]
-        }
+        },
+        horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
+        verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
     },
 ];

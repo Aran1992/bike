@@ -505,8 +505,8 @@
                 let cameraMoveY = this.camera.position.y - oldCameraY;
 
                 this.camera.children.forEach((child, index) => {
-                    child.position.x -= cameraMoveX * config.parallaxDepth[index];
-                    child.position.y -= cameraMoveY * config.parallaxDepth[index];
+                    child.position.x -= cameraMoveX * this.map.horizontalParallaxDepth[index];
+                    child.position.y -= cameraMoveY * this.map.verticalParallaxDepth[index];
                 });
             }
         }
