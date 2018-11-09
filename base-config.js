@@ -39,6 +39,7 @@
     mapPathBasePath: "myLaya/laya/pages/",
     bikeGameOverHeight: -15,
     bikeGameOverAngularVelocity: 1500,
+    finalFlagImagePath: "images/flag.png",
 };
 
 // 地图配置
