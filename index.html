@@ -283,7 +283,7 @@
                 let texturePath = bg[i];
                 let texture = resources[texturePath].texture;
                 let scale = config.designHeight / texture.height;
-                for (let i = 0; i < 2; i++) {
+                for (let i = 0; i < 5; i++) {
                     let sprite = new Sprite(texture);
                     sprite.scale.set(scale, scale);
                     sprite.position.set(i * texture.width * scale, 0);
