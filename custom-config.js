@@ -11,7 +11,7 @@ config.jumpForce = 5000;
 config.mapList = [
     {
         // 显示给人看的名字
-        showName: "基础场景",
+        showName: "Basic",
         // scene文件的名字
         sceneName: "Test",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -40,7 +40,7 @@ config.mapList = [
     },
     {
         // 显示给人看的名字
-        showName: "上坡场景",
+        showName: "Uphill",
         // scene文件的名字
         sceneName: "Test2",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -69,7 +69,7 @@ config.mapList = [
     },
     {
         // 显示给人看的名字
-        showName: "下坡场景",
+        showName: "Downhill",
         // scene文件的名字
         sceneName: "Test3",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -98,7 +98,7 @@ config.mapList = [
     },
     {
         // 显示给人看的名字
-        showName: "基础场景 加速度",
+        showName: "High Speed",
         // scene文件的名字
         sceneName: "Test4",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -127,7 +127,7 @@ config.mapList = [
     },
     {
         // 显示给人看的名字
-        showName: "基础场景 低重力",
+        showName: "Low Gravity",
         // scene文件的名字
         sceneName: "Test5",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
