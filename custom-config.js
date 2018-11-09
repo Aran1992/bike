@@ -31,6 +31,12 @@ config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
 		// 视差背景系数：上下
         verticalParallaxDepth: [1, 1, 0.8, 0],
+        // 自行车速度
+        bikeVelocity: 40,
+        // 重力
+        gravity: -200,
+        // 跳跃爆发力
+        jumpForce: 5000,
     },
     {
         // 显示给人看的名字
@@ -54,6 +60,12 @@ config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
 		// 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 自行车速度
+        bikeVelocity: 20,
+        // 重力
+        gravity: -200,
+        // 跳跃爆发力
+        jumpForce: 5000,
     },
     {
         // 显示给人看的名字
@@ -77,5 +89,11 @@ config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
 		// 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 自行车速度
+        bikeVelocity: 20,
+        // 重力
+        gravity: -200,
+        // 跳跃爆发力
+        jumpForce: 5000,
     },
 ];

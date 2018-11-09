@@ -188,7 +188,11 @@
         }
 
         onLoaded() {
-            this.world = new World({gravity: Vec2(0, config.gravity)});
+            this.bikeVelocity = this.map.bikeVelocity || config.bikeVelocity;
+            this.gravity = this.map.gravity || config.gravity;
+            this.jumpForce = this.map.jumpForce || config.jumpForce;
+
+            this.world = new World({gravity: Vec2(0, this.gravity)});
 
             this.world.on('begin-contact', this.onBeginContact.bind(this));
 
@@ -212,7 +216,7 @@
 
             this.gameStatus = "play";
             this.gameLoopFunc = this.play.bind(this);
-            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, 0));
+            this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
         }
 
         onBeginContact(contact) {
@@ -228,7 +232,7 @@
                 if (this.jumpCount < config.jumpMaxCount) {
                     let velocity = this.bikeBody.getLinearVelocity();
                     this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
-                    this.bikeBody.applyForceToCenter(Vec2(0, config.jumpForce));
+                    this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
                     this.bikeSprite.rotation = angle2radius(config.bikeJumpingRotation);
                     this.jumping = true;
                     this.jumpCount += 1;
@@ -453,7 +457,7 @@
             this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
 
             if (!this.jumping) {
-                this.bikeSprite.rotation = -Math.atan(velocity.y / config.bikeVelocity);
+                this.bikeSprite.rotation = -Math.atan(velocity.y / this.bikeVelocity);
             }
 
             if (this.gameStatus === "play"
@@ -487,7 +491,7 @@
             }
 
             if (this.gameStatus === "play") {
-                this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, velocity.y));
+                this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, velocity.y));
 
                 let oldCameraX = this.camera.position.x;
                 let oldCameraY = this.camera.position.y;
@@ -525,7 +529,7 @@
             firstPoint.y += config.bikeRadius;
             this.bikeBody.setPosition(firstPoint);
             this.bikeBody.setAngularVelocity(0);
-            this.bikeBody.setLinearVelocity(Vec2(config.bikeVelocity, 0));
+            this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
             this.world.clearForces();
             this.gameStatus = "play";
         }

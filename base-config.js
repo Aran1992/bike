@@ -61,7 +61,15 @@ config.mapList = [
                 "images/TextureScorpiusBackground03.png",
             ]
         },
+        // 视差背景系数：左右
         horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
+        // 视差背景系数：上下
         verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
+        // 自行车速度
+        bikeVelocity: 20,
+        // 重力
+        gravity: -200,
+        // 跳跃爆发力
+        jumpForce: 5000,
     },
 ];
