@@ -181,6 +181,7 @@
                 ]);
 
             texturePathList = texturePathList.filter(path => resources[path] === undefined);
+            texturePathList = Array.from(new Set(texturePathList));
 
             loader
                 .add(texturePathList)

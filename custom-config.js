@@ -23,8 +23,8 @@ config.mapList = [
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/Scorpius/TextureScorpiusBackground01.png",
+                "images/Scorpius/TextureScorpiusBackground01.png",
                 "images/Scorpius/TextureScorpiusBackground02.png",
-                "images/Scorpius/TextureScorpiusBackground03.png",
             ]
         },
 		// 视差背景系数：左右
