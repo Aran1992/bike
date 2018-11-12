@@ -302,7 +302,7 @@
             let sideTexture = resources[sideTexturePath].texture;
             let sideRect = getPathRect(path);
             let side = new TilingSprite(sideTexture, sideRect.width, sideRect.height);
-            side.position.set(sideRect.x, sideRect.y);
+            road.position.set(sideRect.x, sideRect.y);
             road.addChild(side);
 
             let topTexture = resources[topTexturePath].texture;
@@ -318,7 +318,7 @@
                     };
                 let topWidth = calcPointDistance(sp, ep);
                 let top = new TilingSprite(topTexture, topWidth, topTexture.height);
-                top.position.set(sp.x, sp.y);
+                top.position.set(sp.x - sideRect.x, sp.y - sideRect.y);
                 top.rotation = calcRadius(sp, ep);
                 road.addChild(top);
             }
@@ -347,15 +347,14 @@
 
                 let edgeTexture = Texture.fromCanvas(canvas);
                 let edge = new Sprite(edgeTexture);
-                edge.position.set(sp.x, sp.y);
+                edge.position.set(sp.x - sideRect.x, sp.y - sideRect.y);
                 edge.rotation = calcRadius(sp, ep);
                 road.addChild(edge);
-
             });
 
             let mask = new Graphics();
             mask.beginFill();
-            mask.drawPolygon(path);
+            mask.drawPolygon(path.map((p, i) => i % 2 === 0 ? p - sideRect.x : p - sideRect.y));
             mask.endFill();
             road.mask = mask;
 
