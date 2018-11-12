@@ -37,7 +37,7 @@ function radius2angle(radius) {
 }
 
 function getPathRect(path) {
-    let maxX = 0, minX = 0, maxY = 0, minY = 0;
+    let maxX = path[0], minX = path[0], maxY = path[1], minY = path[1];
     for (let i = 0; i < path.length - 2; i += 2) {
         let x = path[i];
         let y = path[i + 1];

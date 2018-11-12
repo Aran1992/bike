@@ -8,7 +8,6 @@
     bikeRadius: 0.75,
     riderScale: 0.24,
     testbedSpeed: 1,
-    cliffBottomY: 2000,
     fps: 60,
     bikeJumpingRotation: -30,
     jumpMaxCount: 2,

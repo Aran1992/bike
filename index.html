@@ -293,9 +293,16 @@
         }
 
         createRoad(path, sideTexturePath, topTexturePath) {
-            path = [path[0], config.cliffBottomY]
+            let maxY = path[1];
+            for (let i = 1; i < path.length; i += 2) {
+                if (path[i] > maxY) {
+                    maxY = path[i];
+                }
+            }
+            let bottomY = maxY + this.app.getSceneHeight() / 3 * 2;
+            path = [path[0], bottomY]
                 .concat(path)
-                .concat([path[path.length - 2], config.cliffBottomY]);
+                .concat([path[path.length - 2], bottomY]);
 
             let road = new Container();
 
