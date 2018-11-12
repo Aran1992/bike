@@ -463,7 +463,9 @@
             let bikeRenderPos = physicsPos2renderPos(bikePhysicsPos);
             this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
 
-            if (!this.jumping) {
+            if (this.gameStatus === "end") {
+                this.bikeSprite.rotation = this.bikeBody.getAngle();
+            } else if (!this.jumping) {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / this.bikeVelocity);
             }
 
