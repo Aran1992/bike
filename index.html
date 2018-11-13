@@ -169,6 +169,7 @@
 
         startGame(mapIndex) {
             this.camera.removeChildren();
+            this.camera.position.set(0, 0);
 
             this.sceneContainer.visible = true;
             this.map = config.mapList[mapIndex];
@@ -541,6 +542,8 @@
             this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
             this.world.clearForces();
             this.gameStatus = "play";
+            this.camera.position.set(0, 0);
+            this.camera.children.forEach(child => child.position.set(0, 0));
         }
     }
 
