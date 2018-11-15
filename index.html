@@ -28,190 +28,211 @@
             Circle,
         } = planck;
 
-    function physicsPos2renderPos(pp) {
-        return {
-            x: pp.x * config.meter2pixel,
-            y: config.designHeight - pp.y * config.meter2pixel
+    let app;
+
+    class MyApplication extends Application {
+        constructor(args) {
+            super(args);
+
+            this.scenesContainer = this.stage;
+            this.sceneWidth = args.width;
+            this.sceneHeight = args.height;
+
+            this.sceneClassTable = {
+                "StartScene": StartScene,
+                "GameScene": GameScene,
+                "GameOverScene": GameOverScene,
+            };
+            this.sceneTable = {};
+
+            this.eventTable = {};
         }
-    }
 
-    function renderPos2PhysicsPos(rp) {
-        return Vec2(
-            rp.x * config.pixel2meter,
-            (config.designHeight - rp.y) * config.pixel2meter
-        );
-    }
-
-    class App {
-        init() {
-            document.body.style.margin = "0";
-
-            let resolution;
-
-            let wwhRatio = window.innerWidth / window.innerHeight;
-            let dwhRatio = config.designWidth / config.designHeight;
-            if (wwhRatio >= dwhRatio) {
-                resolution = window.innerHeight / config.designHeight;
-                this.appWidth = config.designWidth;
-                this.appHeight = config.designHeight;
-            } else {
-                resolution = window.innerWidth / config.designWidth;
-                this.appWidth = config.designWidth;
-                this.appHeight = config.designWidth / window.innerWidth * window.innerHeight;
+        showScene(sceneName, ...args) {
+            if (this.sceneTable[sceneName] === undefined) {
+                let scene = this.sceneClassTable[sceneName];
+                this.sceneTable[sceneName] = new scene();
+                app.scenesContainer.addChild(this.sceneTable[sceneName]);
             }
-
-            this.app = new Application({
-                width: this.appWidth,
-                height: this.appHeight,
-                antialiasing: true,
-                transparent: false,
-                resolution: resolution,
-                backgroundColor: config.backgroundColor
-            });
-            document.body.appendChild(this.app.view);
-
-            this.app.view.style.position = "absolute";
-            this.app.view.style.left = (window.innerWidth - this.app.view.offsetWidth) / 2 + "px";
-            this.app.view.style.top = (window.innerHeight - this.app.view.offsetHeight) / 2 + "px";
-
-            new StartScene().init(this);
+            this.sceneTable[sceneName].show(...args);
         }
 
-        getScenesContainer() {
-            return this.app.stage;
+        hideScene(sceneName) {
+            if (this.sceneTable[sceneName]) {
+                this.sceneTable[sceneName].hide();
+            }
         }
 
-        getSceneWidth() {
-            return this.appWidth;
+        dispatchEvent(event, ...args) {
+            if (this.eventTable[event]) {
+                this.eventTable[event].forEach(handler => handler(...args));
+            }
         }
 
-        getSceneHeight() {
-            return this.appHeight;
+        registerEvent(event, handler) {
+            if (this.eventTable[event] === undefined) {
+                this.eventTable[event] = [];
+            }
+            this.eventTable[event].push(handler);
         }
 
-        addTicker(handler) {
-            this.app.ticker.add(handler);
+        unregisterEvent(event, handler) {
+            if (this.eventTable[event]) {
+                Utils.removeItemFromArray(this.eventTable[event], handler);
+            }
+        }
+
+        loadResources(resPathList, loadedCallback) {
+            resPathList = Array.from(new Set(resPathList));
+            resPathList = resPathList.filter(path => resources[path] === undefined);
+            loader.add(resPathList).load(loadedCallback);
         }
     }
 
-    class StartScene {
-        init(app) {
-            this.app = app;
-            this.app.startScene = this;
+    class Scene extends Container {
+        constructor() {
+            super();
+            this.onCreate();
+        }
 
-            this.sceneContainer = new Container();
-            app.getScenesContainer().addChild(this.sceneContainer);
+        destroy() {
+            this.onDestroy();
+            this.parent.removeChild(this);
+        }
 
+        show(...args) {
+            this.visible = true;
+            this.onShow(...args);
+        }
+
+        hide() {
+            this.visible = false;
+            this.onHide();
+        }
+
+        onCreate() {
+        }
+
+        onDestroy() {
+        }
+
+        onShow() {
+        }
+
+        onHide() {
+        }
+    }
+
+    class StartScene extends Scene {
+        onCreate() {
             let textContainer = new Container();
-            textContainer.position.set(app.getSceneWidth() / 2,
-                (app.getSceneHeight() - 50 * config.mapList.length) / 2);
-            this.sceneContainer.addChild(textContainer);
+            this.addChild(textContainer);
+            let x = app.sceneWidth / 2;
+            let textListHeight = config.startScene.mapText.fontSize * config.mapList.length;
+            let y = (app.sceneHeight - textListHeight) / 2;
+            textContainer.position.set(x, y);
 
-            let textStyle = new TextStyle({
-                fontSize: 50,
-                fill: "white",
-            });
-            config.mapList.forEach((map, i) => {
-                let text = new Text(`MAP-${i}: ${map.showName}`, textStyle);
-                text.position.set(-text.width / 2, text.height * i);
+            let textStyle = new TextStyle(config.startScene.mapText);
+            config.mapList.forEach((mapConfig, mapIndex) => {
+                let text = new Text(`MAP-${mapIndex}: ${mapConfig.showName}`, textStyle);
+                text.anchor.set(0.5, 0);
+                text.position.set(0, text.height * mapIndex);
                 textContainer.addChild(text);
                 text.interactive = true;
                 text.buttonMode = true;
-                text.on("pointerdown", () => this.onClickMapText(i));
+                text.on("pointerdown", () => this.onClickMapText(mapIndex));
             });
         }
 
         onClickMapText(mapIndex) {
-            this.sceneContainer.visible = false;
-            if (this.gameScene === undefined) {
-                this.gameScene = new GameScene();
-                this.gameScene.init(this.app);
-            }
-            this.gameScene.startGame(mapIndex);
-        }
-
-        show() {
-            this.sceneContainer.visible = true;
+            app.hideScene("StartScene");
+            app.showScene("GameScene", mapIndex);
         }
     }
 
-    class GameScene {
-        init(app) {
-            this.app = app;
-            this.app.gameScene = this;
+    class GameScene extends Scene {
+        onCreate() {
+            this.restartHandler = this.onRestart.bind(this);
+            app.registerEvent("Restart", this.restartHandler);
 
-            this.sceneContainer = new Container();
-            app.getScenesContainer().addChild(this.sceneContainer);
+            window.addEventListener("keydown", this.onKeydown.bind(this));
 
-            this.offsetContainer = new Container();
-            let scale = app.getSceneHeight() / config.designHeight;
-            this.offsetContainer.position.x = (app.getSceneWidth() - config.designWidth * scale) / 2;
-            this.offsetContainer.scale.set(scale, scale);
-            this.sceneContainer.addChild(this.offsetContainer);
+            this.gameContainer = new Container();
+            this.addChild(this.gameContainer);
+            let scale = app.sceneHeight / config.designHeight;
+            this.gameContainer.scale.set(scale, scale);
+            this.gameContainer.position.set.x = (app.sceneWidth - scale * config.designWidth) / 2;
+            this.gameContainer.interactive = true;
+            this.gameContainer.buttonMode = true;
+            this.gameContainer.on("pointerdown", this.onClickGameContainer.bind(this));
 
-            this.camera = new Container();
-            this.offsetContainer.addChild(this.camera);
+            this.cameraContainer = new Container();
+            this.gameContainer.addChild(this.cameraContainer);
 
             this.createBottomMask();
 
             this.createFPSMessage();
 
-            window.addEventListener("keydown", this.onKeydown.bind(this));
-
-            this.offsetContainer.interactive = true;
-            this.offsetContainer.buttonMode = true;
-            this.offsetContainer.on("pointerdown", this.onClickGameContainer.bind(this));
-
             this.gameStatus = "end";
             this.gameLoopFunc = this.pause.bind(this);
-            this.app.addTicker(this.gameLoop.bind(this));
+            app.ticker.add(this.gameLoop.bind(this));
         }
 
-        startGame(mapIndex) {
-            this.camera.removeChildren();
-            this.camera.position.set(0, 0);
+        onDestroy() {
+            app.unregisterEvent("Restart", this.restartHandler);
+        }
 
-            this.sceneContainer.visible = true;
-            this.map = config.mapList[mapIndex];
+        onShow(mapIndex) {
+            this.cameraContainer.removeChildren();
+            this.cameraContainer.position.set(0, 0);
 
-            let texturePathList = values(this.map.texture)
+            this.mapIndex = mapIndex;
+            this.mapConfig = config.mapList[mapIndex];
+            this.bikeVelocity = this.mapConfig.bikeVelocity || config.bikeVelocity;
+            this.gravity = this.mapConfig.gravity || config.gravity;
+            this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
+
+            let resPathList = values(this.mapConfig.texture)
                 .concat([
-                    config.mapPathBasePath + this.map.sceneName + ".scene",
+                    config.mapBasePath + this.mapConfig.sceneName + ".scene",
                     config.bikeImagePath,
                     config.finalFlagImagePath,
                 ]);
+            app.loadResources(resPathList, this.onLoaded.bind(this));
+        }
 
-            texturePathList = texturePathList.filter(path => resources[path] === undefined);
-            texturePathList = Array.from(new Set(texturePathList));
+        onHide() {
+        }
 
-            loader
-                .add(texturePathList)
-                .load(this.onLoaded.bind(this));
+        onRestart() {
+            this.onShow(this.mapIndex);
         }
 
         onLoaded() {
-            this.bikeVelocity = this.map.bikeVelocity || config.bikeVelocity;
-            this.gravity = this.map.gravity || config.gravity;
-            this.jumpForce = this.map.jumpForce || config.jumpForce;
-
             this.world = new World({gravity: Vec2(0, this.gravity)});
 
             this.world.on('begin-contact', this.onBeginContact.bind(this));
 
             this.createBg();
 
-            this.gameContainer = new Container();
-            this.camera.addChild(this.gameContainer);
+            this.closeViewContainer = new Container();
+            this.cameraContainer.addChild(this.closeViewContainer);
 
             let pathList = this.getRoadPathList();
 
-            let lastPath = getLast(pathList);
+            let lastPath = Utils.getLast(pathList);
             this.finalPoint = {
-                x: (lastPath[lastPath.length - 2] + lastPath[lastPath.length - 4]) / 2,
-                y: (lastPath[lastPath.length - 1] + lastPath[lastPath.length - 3]) / 2,
+                x: (lastPath[lastPath.length - 6] + lastPath[lastPath.length - 4]) / 2,
+                y: (lastPath[lastPath.length - 5] + lastPath[lastPath.length - 3]) / 2,
             };
 
-            pathList.forEach(path => this.createRoad(path, this.map.texture.side, this.map.texture.top));
+            pathList.forEach(path => this.closeViewContainer.addChild(new Road(
+                this.world,
+                path,
+                this.mapConfig.texture.side,
+                this.mapConfig.texture.top
+            )));
+
             this.createFinalFlag();
 
             this.createRider(config.bikeImagePath, pathList);
@@ -261,136 +282,19 @@
             }
         }
 
-        getRoadPathList() {
-            let json = JSON.parse(resources[config.mapPathBasePath + this.map.sceneName + ".scene"].data);
-            return json.child.map(data =>
-                data.props.points.split(",").map((intStr, i) => {
-                    let value = parseInt(intStr);
-                    if (i % 2 === 0) {
-                        value += data.props.x;
-                    } else {
-                        value += data.props.y;
-                    }
-                    return value;
-                })
-            );
-        }
-
         createBg() {
-            let bg = this.map.texture.bg;
-            for (let i = 0; i < bg.length; i++) {
+            this.mapConfig.texture.bg.forEach(texturePath => {
                 let container = new Container();
-                this.camera.addChild(container);
-                let texturePath = bg[i];
+                this.cameraContainer.addChild(container);
                 let texture = resources[texturePath].texture;
                 let scale = config.designHeight / texture.height;
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 2; i++) {
                     let sprite = new Sprite(texture);
+                    container.addChild(sprite);
                     sprite.scale.set(scale, scale);
                     sprite.position.set(i * texture.width * scale, 0);
-                    container.addChild(sprite);
                 }
-            }
-        }
-
-        createRoad(path, sideTexturePath, topTexturePath) {
-            let maxY = path[1];
-            for (let i = 1; i < path.length; i += 2) {
-                if (path[i] > maxY) {
-                    maxY = path[i];
-                }
-            }
-            let bottomY = maxY + this.app.getSceneHeight() / 3 * 2;
-            path = [path[0], bottomY]
-                .concat(path)
-                .concat([path[path.length - 2], bottomY]);
-
-            let road = new Container();
-
-            let sideTexture = resources[sideTexturePath].texture;
-            let sideRect = getPathRect(path);
-            let side = new TilingSprite(sideTexture, sideRect.width, sideRect.height);
-            road.position.set(sideRect.x, sideRect.y);
-            road.addChild(side);
-
-            let topTexture = resources[topTexturePath].texture;
-            let length = path.length;
-            for (let i = 2; i < length - 4; i += 2) {
-                let sp = {
-                        x: path[i],
-                        y: path[i + 1]
-                    },
-                    ep = {
-                        x: path[i + 2],
-                        y: path[i + 3]
-                    };
-                let topWidth = calcPointDistance(sp, ep);
-                let top = new TilingSprite(topTexture, topWidth, topTexture.height);
-                top.position.set(sp.x - sideRect.x, sp.y - sideRect.y);
-                top.rotation = calcRadius(sp, ep);
-                road.addChild(top);
-            }
-
-            let edgeList = [
-                {
-                    sp: {x: path[0], y: path[1]},
-                    ep: {x: path[2], y: path[3]},
-                },
-                {
-                    sp: {x: path[path.length - 4], y: path[path.length - 3]},
-                    ep: {x: path[path.length - 2], y: path[path.length - 1]},
-                },
-            ];
-            edgeList.forEach(({sp, ep}) => {
-                let edgeWidth = Math.abs(sp.y - ep.y);
-
-                let canvas = document.createElement('canvas');
-                canvas.width = `${edgeWidth}`;
-                canvas.height = `${config.edgeHeight}`;
-                let ctx = canvas.getContext('2d');
-                let gradient = ctx.createLinearGradient(0, 0, 0, config.edgeHeight);
-                config.edgeColorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, edgeWidth, config.edgeHeight);
-
-                let edgeTexture = Texture.fromCanvas(canvas);
-                let edge = new Sprite(edgeTexture);
-                edge.position.set(sp.x - sideRect.x, sp.y - sideRect.y);
-                edge.rotation = calcRadius(sp, ep);
-                road.addChild(edge);
             });
-
-            let mask = new Graphics();
-            mask.beginFill();
-            mask.drawPolygon(path.map((p, i) => i % 2 === 0 ? p - sideRect.x : p - sideRect.y));
-            mask.endFill();
-            road.mask = mask;
-
-            road.cacheAsBitmap = true;
-
-            this.gameContainer.addChild(road);
-
-            path = path.map((value, i) => {
-                if (i % 2 === 1) {
-                    value = config.designHeight - value;
-                }
-                return value * config.pixel2meter;
-            });
-            let body = this.world.createBody();
-            for (let i = 0; i < length - 4; i += 2) {
-                let sp = {
-                        x: path[i],
-                        y: path[i + 1]
-                    },
-                    ep = {
-                        x: path[i + 2],
-                        y: path[i + 3]
-                    };
-                body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {
-                    density: 0,
-                    friction: 1,
-                });
-            }
         }
 
         createFinalFlag() {
@@ -398,43 +302,36 @@
             sprite.anchor.set(0.5, 1);
             sprite.scale.set(0.5, 0.5);
             sprite.position.set(this.finalPoint.x, this.finalPoint.y);
-            this.gameContainer.addChild(sprite);
+            this.closeViewContainer.addChild(sprite);
         }
 
         createRider(texturePath, pathList) {
+            let pp = this.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
+            pp.x += config.bikeRadius;
+            pp.y += config.bikeRadius;
+
+            let rp = this.physicsPos2renderPos(pp);
+
             this.bikeSprite = new Sprite(resources[texturePath].texture);
             this.bikeSprite.anchor.set(0.5, 0.5);
             this.bikeSprite.scale.set(config.riderScale, config.riderScale);
+            this.bikeSprite.position.set(rp.x, rp.y);
 
             this.bikeBody = this.world.createDynamicBody();
-            this.bikeBody.createFixture(Circle(config.bikeRadius), {
-                density: 1,
-                friction: 1,
-            });
-            let firstPoint = renderPos2PhysicsPos({x: pathList[0][0] + config.bikeLeftMargin, y: pathList[0][1]});
-            firstPoint.x += config.bikeRadius;
-            firstPoint.y += config.bikeRadius;
-            this.bikeBody.setPosition(firstPoint);
+            this.bikeBody.createFixture(Circle(config.bikeRadius), {density: 1, friction: 1,});
+            this.bikeBody.setPosition(pp);
 
-            this.gameContainer.addChild(this.bikeSprite);
+            this.closeViewContainer.addChild(this.bikeSprite);
             this.jumpCount = 0;
         }
 
         createBottomMask() {
-            let canvas = document.createElement('canvas');
-            canvas.width = `${config.designWidth}`;
-            canvas.height = `${config.maskHeight}`;
-            let ctx = canvas.getContext('2d');
-            let gradient = ctx.createLinearGradient(0, 0, 0, config.maskHeight);
-            config.maskColorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, config.designWidth, config.maskHeight);
-
+            let canvas = Utils.createLinearGradientMask(config.designWidth, config.maskHeight, config.maskColorStop);
             let texture = Texture.fromCanvas(canvas);
             let sprite = new Sprite(texture);
             sprite.anchor.set(0, 1);
             sprite.position.set(0, config.designHeight);
-            this.offsetContainer.addChild(sprite);
+            this.gameContainer.addChild(sprite);
         }
 
         createFPSMessage() {
@@ -445,8 +342,47 @@
             });
             this.fpsMessage = new Text("FPS:0", style);
             this.fpsMessage.anchor.set(0, 0);
-            this.fpsMessage.position.set(0, 0);
-            this.sceneContainer.addChild(this.fpsMessage);
+            this.addChild(this.fpsMessage);
+        }
+
+        getRoadPathList() {
+            let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+            return json.child.map(data => {
+                let path = data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                    }
+                    return value;
+                });
+                let maxY = path[1];
+                for (let i = 1; i < path.length; i += 2) {
+                    if (path[i] > maxY) {
+                        maxY = path[i];
+                    }
+                }
+                let bottomY = maxY + app.sceneHeight / 3 * 2;
+                path = [path[0], bottomY].concat(path);
+                path = path.concat([path[path.length - 2], bottomY]);
+                return path;
+
+            });
+        }
+
+        physicsPos2renderPos(pp) {
+            return {
+                x: pp.x * config.meter2pixel,
+                y: config.designHeight - pp.y * config.meter2pixel
+            }
+        }
+
+        renderPos2PhysicsPos(rp) {
+            return Vec2(
+                rp.x * config.pixel2meter,
+                (config.designHeight - rp.y) * config.pixel2meter
+            );
         }
 
         gameLoop(delta) {
@@ -454,22 +390,36 @@
         }
 
         play(delta) {
-            this.fpsMessage.text = `FPS:${Math.floor(delta * 60)}`;
+            this.fpsMessage.text = `FPS:${Math.floor(delta * config.fps)}`;
 
             this.world.step(delta / config.fps);
 
             let velocity = this.bikeBody.getLinearVelocity();
             let bikePhysicsPos = this.bikeBody.getPosition();
 
-            let bikeRenderPos = physicsPos2renderPos(bikePhysicsPos);
-            this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
+            this.syncBikeSprite(velocity, bikePhysicsPos);
 
+            this.judgeGameLose(velocity, bikePhysicsPos);
+
+            this.judgeGameWin(bikePhysicsPos);
+
+            this.moveCamera(velocity);
+        }
+
+        pause() {
+        }
+
+        syncBikeSprite(velocity, bikePhysicsPos) {
+            let bikeRenderPos = this.physicsPos2renderPos(bikePhysicsPos);
+            this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
             if (this.gameStatus === "end") {
                 this.bikeSprite.rotation = this.bikeBody.getAngle();
             } else if (!this.jumping) {
-                this.bikeSprite.rotation = -Math.atan(velocity.y / this.bikeVelocity);
+                this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
             }
+        }
 
+        judgeGameLose(velocity, bikePhysicsPos) {
             if (this.gameStatus === "play"
                 && (velocity.x <= 0 || bikePhysicsPos.y < config.bikeGameOverHeight)) {
                 this.endCount = this.endCount || 0;
@@ -484,136 +434,224 @@
                         this.bikeBody.applyForceToCenter(Vec2(-2500, 5000));
                     }
 
-                    if (this.app.gameOverScene === undefined) {
-                        new GameOverScene().init(this.app);
-                    }
-                    this.app.gameOverScene.show();
+                    app.showScene("GameOverScene", "Game Over");
                 }
             }
+        }
 
+        judgeGameWin(bikePhysicsPos) {
             if (this.gameStatus === "play"
-                && bikePhysicsPos.x > renderPos2PhysicsPos(this.finalPoint).x) {
+                && bikePhysicsPos.x > this.renderPos2PhysicsPos(this.finalPoint).x) {
                 this.gameStatus = "win";
-                if (this.app.gameOverScene === undefined) {
-                    new GameOverScene().init(this.app);
-                }
-                this.app.gameOverScene.show("Game Win");
+                app.showScene("GameOverScene", "Game Win");
             }
+        }
 
+        moveCamera(velocity) {
             if (this.gameStatus === "play") {
                 this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, velocity.y));
 
-                let oldCameraX = this.camera.position.x;
-                let oldCameraY = this.camera.position.y;
+                let oldCameraX = this.cameraContainer.position.x;
+                let oldCameraY = this.cameraContainer.position.y;
 
-                this.camera.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
+                this.cameraContainer.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
 
-                let bikeY = this.camera.position.y + this.bikeSprite.position.y;
+                let bikeY = this.cameraContainer.position.y + this.bikeSprite.position.y;
                 if (bikeY < config.bikeCameraMinY) {
-                    this.camera.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
+                    this.cameraContainer.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
                 } else if (bikeY > config.bikeCameraMaxY) {
-                    this.camera.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
+                    this.cameraContainer.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
                 }
 
-                let cameraMoveX = this.camera.position.x - oldCameraX;
-                let cameraMoveY = this.camera.position.y - oldCameraY;
+                let cameraMoveX = this.cameraContainer.position.x - oldCameraX;
+                let cameraMoveY = this.cameraContainer.position.y - oldCameraY;
 
-                this.camera.children.forEach((child, index) => {
-                    child.position.x -= cameraMoveX * this.map.horizontalParallaxDepth[index];
-                    child.position.y -= cameraMoveY * this.map.verticalParallaxDepth[index];
+                this.cameraContainer.children.forEach((child, index) => {
+                    child.position.x -= cameraMoveX * this.mapConfig.horizontalParallaxDepth[index];
+                    child.position.y -= cameraMoveY * this.mapConfig.verticalParallaxDepth[index];
                 });
             }
         }
-
-        pause() {
-        }
-
-        clearGame() {
-            this.sceneContainer.visible = false;
-        }
-
-        restart() {
-            let pathList = this.getRoadPathList();
-            let firstPoint = renderPos2PhysicsPos({x: pathList[0][0] + config.bikeLeftMargin, y: pathList[0][1]});
-            firstPoint.x += config.bikeRadius;
-            firstPoint.y += config.bikeRadius;
-            this.bikeBody.setPosition(firstPoint);
-            this.bikeBody.setAngularVelocity(0);
-            this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
-            this.world.clearForces();
-            this.gameStatus = "play";
-            this.camera.position.set(0, 0);
-            this.camera.children.forEach(child => child.position.set(0, 0));
-        }
     }
 
-    class GameOverScene {
-        init(app) {
-            this.app = app;
-            this.app.gameOverScene = this;
 
-            this.sceneContainer = new Container();
-            this.app.getScenesContainer().addChild(this.sceneContainer);
-
-            let mask = new Graphics();
-            mask.beginFill(0x000000, 0.5);
-            mask.drawRect(0, 0, this.app.getSceneWidth(), this.app.getSceneHeight());
-            mask.endFill();
-            this.sceneContainer.addChild(mask);
+    class GameOverScene extends Scene {
+        onCreate() {
+            let mask = new Graphics()
+                .beginFill(0x000000, 0.5)
+                .drawRect(0, 0, app.sceneWidth, app.sceneHeight)
+                .endFill();
+            this.addChild(mask);
 
             let textContainer = new Container();
-            textContainer.position.set(app.getSceneWidth() / 2,
-                (app.getSceneHeight() - 50 * 2 + 80) / 2);
-            this.sceneContainer.addChild(textContainer);
+            this.addChild(textContainer);
+            let textListHeight = config.gameOverScene.msgText.fontSize + config.gameOverScene.buttonText.fontSize * 2;
+            let y = (app.sceneHeight - textListHeight) / 2;
+            textContainer.position.set(app.sceneWidth / 2, y);
 
-            let textStyle = new TextStyle({
-                fontSize: 80,
-                fill: "red",
-            });
+            let textStyle = new TextStyle(config.gameOverScene.msgText);
+            let gameOverText = new Text("Game Over", textStyle);
+            this.gameOverText = gameOverText;
+            textContainer.addChild(gameOverText);
+            gameOverText.anchor.set(0.5, 0);
+            gameOverText.position.set(0, 0);
 
-            this.gameOverText = new Text("Game Over", textStyle);
-            this.gameOverText.position.set(-this.gameOverText.width / 2, 0);
-            textContainer.addChild(this.gameOverText);
-
-            textStyle = new TextStyle({
-                fontSize: 50,
-                fill: "white",
-            });
-
+            textStyle = new TextStyle(config.gameOverScene.buttonText);
             let selectMapText = new Text("Select Map", textStyle);
-            selectMapText.position.set(-selectMapText.width / 2, 80);
             textContainer.addChild(selectMapText);
+            selectMapText.anchor.set(0.5, 0);
+            selectMapText.position.set(0, config.gameOverScene.msgText.fontSize);
             selectMapText.interactive = true;
             selectMapText.buttonMode = true;
-            selectMapText.on("pointerdown", () => this.onClickSelectMapText());
+            selectMapText.on("pointerdown", this.onClickSelectMapText.bind(this));
 
             let restartText = new Text("Restart", textStyle);
-            restartText.position.set(-restartText.width / 2, 80 + 50);
             textContainer.addChild(restartText);
+            restartText.anchor.set(0.5, 0);
+            restartText.position.set(0, config.gameOverScene.msgText.fontSize + config.gameOverScene.buttonText.fontSize);
             restartText.interactive = true;
             restartText.buttonMode = true;
-            restartText.on("pointerdown", () => this.onClickRestartText());
+            restartText.on("pointerdown", this.onClickRestartText.bind(this));
         }
 
-        show(msg) {
-            this.sceneContainer.visible = true;
-            msg = msg || "Game Over";
-            this.gameOverText.text = msg;
+        onShow(msg) {
+            this.gameOverText.text = msg || "Game Over";
         }
 
         onClickSelectMapText() {
-            this.sceneContainer.visible = false;
-            this.app.gameScene.clearGame();
-            this.app.startScene.show();
+            app.hideScene("GameOverScene");
+            app.hideScene("GameScene");
+            app.showScene("StartScene");
         }
 
         onClickRestartText() {
-            this.sceneContainer.visible = false;
-            this.app.gameScene.restart();
+            app.hideScene("GameOverScene");
+            app.dispatchEvent("Restart");
         }
     }
 
-    new App().init();
+    class Road extends Container {
+        constructor(world, path, sideTexturePath, topTexturePath) {
+            super();
+            let rect = Utils.getPathRect(path);
+            let pathInRoad = path.map((p, i) => i % 2 === 0 ? p - rect.x : p - rect.y);
+            this.createSide(sideTexturePath, rect.width, rect.height);
+            this.createTop(topTexturePath, pathInRoad);
+            this.createEdgeMask(pathInRoad);
+            this.createClipMask(pathInRoad);
+            this.cacheAsBitmap = true;
+            this.position.set(rect.x, rect.y);
+            this.createPhysicsBody(world, path);
+        }
+
+        createSide(texturePath, width, height) {
+            let texture = resources[texturePath].texture;
+            let sprite = new TilingSprite(texture, width, height);
+            this.addChild(sprite);
+        }
+
+        createTop(texturePath, path) {
+            let texture = resources[texturePath].texture;
+            for (let i = 2; i < path.length - 4; i += 2) {
+                let sp = {x: path[i], y: path[i + 1]};
+                let ep = {x: path[i + 2], y: path[i + 3]};
+                let width = Utils.calcPointDistance(sp, ep);
+                let sprite = new TilingSprite(texture, width, texture.height);
+                this.addChild(sprite);
+                sprite.position.set(sp.x, sp.y);
+                sprite.rotation = Utils.calcRadius(sp, ep);
+            }
+        }
+
+        createEdgeMask(path) {
+            let edgeList = [
+                {
+                    sp: {x: path[0], y: path[1]},
+                    ep: {x: path[2], y: path[3]},
+                },
+                {
+                    sp: {x: path[path.length - 4], y: path[path.length - 3]},
+                    ep: {x: path[path.length - 2], y: path[path.length - 1]},
+                },
+            ];
+            edgeList.forEach(({sp, ep}) => {
+                let edgeWidth = Math.abs(sp.y - ep.y);
+                let canvas = Utils.createLinearGradientMask(edgeWidth, config.edgeHeight, config.edgeColorStop);
+                let texture = Texture.fromCanvas(canvas);
+                let sprite = new Sprite(texture);
+                this.addChild(sprite);
+                sprite.position.set(sp.x, sp.y);
+                sprite.rotation = Utils.calcRadius(sp, ep);
+            });
+        }
+
+        createClipMask(path) {
+            let graphics = new Graphics();
+            graphics.beginFill();
+            graphics.drawPolygon(path);
+            graphics.endFill();
+            this.mask = graphics;
+        }
+
+        createPhysicsBody(world, path) {
+            let pathInPhysics = path.map((value, i) => {
+                if (i % 2 === 1) {
+                    value = config.designHeight - value;
+                }
+                return value * config.pixel2meter;
+            });
+
+            let body = world.createBody();
+            for (let i = 0; i < pathInPhysics.length - 4; i += 2) {
+                let sp = {
+                        x: pathInPhysics[i],
+                        y: pathInPhysics[i + 1]
+                    },
+                    ep = {
+                        x: pathInPhysics[i + 2],
+                        y: pathInPhysics[i + 3]
+                    };
+                body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {density: 0, friction: 1,});
+            }
+        }
+    }
+
+    function main() {
+        document.body.style.margin = "0";
+
+        let resolution,
+            appWidth,
+            appHeight;
+
+        let wwhRatio = window.innerWidth / window.innerHeight;
+        let dwhRatio = config.designWidth / config.designHeight;
+        if (wwhRatio >= dwhRatio) {
+            resolution = window.innerHeight / config.designHeight;
+            appWidth = config.designWidth;
+            appHeight = config.designHeight;
+        } else {
+            resolution = window.innerWidth / config.designWidth;
+            appWidth = config.designWidth;
+            appHeight = config.designWidth / window.innerWidth * window.innerHeight;
+        }
+
+        app = new MyApplication({
+            width: appWidth,
+            height: appHeight,
+            resolution: resolution,
+            antialiasing: true,
+            transparent: false,
+        });
+        document.body.appendChild(app.view);
+
+        app.view.style.position = "absolute";
+        app.view.style.left = (window.innerWidth - app.view.offsetWidth) / 2 + "px";
+        app.view.style.top = (window.innerHeight - app.view.offsetHeight) / 2 + "px";
+
+        app.showScene("StartScene");
+    }
+
+    main();
 </script>
 </body>
 </html>

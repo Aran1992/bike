@@ -1,7 +1,6 @@
 ﻿let config = {
     designWidth: 720,
     designHeight: 1280,
-    backgroundColor: 0x888888,
     resolution: 1,
     pixel2meter: 0.0625,
     meter2pixel: 16,
@@ -34,10 +33,27 @@
     // 跳跃爆发力
     jumpForce: 5000,
     bikeImagePath: "images/rider.png",
-    mapPathBasePath: "myLaya/laya/pages/",
+    mapBasePath: "myLaya/laya/pages/",
     bikeGameOverHeight: -15,
     bikeGameOverAngularVelocity: 1500,
     finalFlagImagePath: "images/flag.png",
+    startScene: {
+        mapText: {
+            fontSize: 50,
+            fill: "white"
+        },
+    },
+    gameOverScene: {
+        msgText: {
+            fontSize: 100,
+            fill: "red"
+        },
+        buttonText: {
+            fontSize: 50,
+            fill: "white"
+        },
+    },
+    backgroundCount: 5,
 };
 
 // 地图配置
