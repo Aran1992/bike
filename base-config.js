@@ -16,6 +16,8 @@
     bikeDensity: 1,
     // 自行车跳跃的时候的旋转角度 顺时针旋转是正数
     bikeJumpingRotation: -30,
+    // 金币颜色
+    coinColor: 0xF0E68C,
     jumpMaxCount: 2,
     bikeLeftMargin: 100,
     bikeTopMargin: 640,

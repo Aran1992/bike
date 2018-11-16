@@ -214,7 +214,7 @@
             this.world = new World({gravity: Vec2(0, this.gravity)});
 
             this.world.on('begin-contact', this.onBeginContact.bind(this));
-
+            this.world.on('pre-solve', this.onPreSolve.bind(this));
             this.createBg();
 
             this.closeViewContainer = new Container();
@@ -239,16 +239,44 @@
 
             this.createBike(pathList);
 
+            this.createCoins();
+
             this.gameStatus = "play";
             this.gameLoopFunc = this.play.bind(this);
-            this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
         }
 
         onBeginContact(contact) {
-            if (contact.getFixtureA().getBody() === this.bikeBody
-                || contact.getFixtureB().getBody() === this.bikeBody) {
-                this.jumping = false;
-                this.jumpCount = 0;
+            let bodyList = [
+                contact.getFixtureA().getBody(),
+                contact.getFixtureB().getBody(),
+            ];
+            let index = bodyList.indexOf(this.bikeBody);
+            if (index !== -1) {
+                bodyList.splice(index, 1);
+                let road = bodyList[0];
+                let userData = road.getUserData();
+                if (userData && userData.type === "road") {
+                    this.jumping = false;
+                    this.jumpCount = 0;
+                }
+            }
+        }
+
+        onPreSolve(contact) {
+            let bodyList = [
+                contact.getFixtureA().getBody(),
+                contact.getFixtureB().getBody(),
+            ];
+            let index = bodyList.indexOf(this.bikeBody);
+            if (index !== -1) {
+                bodyList.splice(index, 1);
+                let coinBody = bodyList[0];
+                let userData = coinBody.getUserData();
+                if (userData && userData.type === "coin") {
+                    contact.setEnabled(false);
+                    coinBody.setAwake(false);
+                    coinBody.getUserData().sprite.visible = false;
+                }
             }
         }
 
@@ -323,10 +351,24 @@
             this.bikeBody = this.world.createDynamicBody();
             this.bikeBody.createFixture(Circle(config.bikeRadius), {density: config.bikeDensity, friction: 1,});
             this.bikeBody.setPosition(pp);
+            this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
 
             this.jumpCount = 0;
             this.bikeFrameCount = Utils.keys(resources[config.bikeAtlasPath].textures).length;
             this.bikeFrame = 0;
+        }
+
+        createCoins() {
+            this.getCoinList().forEach(coin => {
+                let graphics = new Graphics();
+                this.closeViewContainer.addChild(graphics);
+                graphics.beginFill(config.coinColor).drawCircle(0, 0, coin.radius).endFill();
+                graphics.position.set(coin.x, coin.y);
+                let body = this.world.createBody();
+                body.createFixture(Circle(coin.radius * config.pixel2meter), {density: 0, friction: 1,});
+                body.setPosition(this.renderPos2PhysicsPos(coin));
+                body.setUserData({type: "coin", sprite: graphics});
+            });
         }
 
         createBottomMask() {
@@ -351,28 +393,37 @@
 
         getRoadPathList() {
             let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
-            return json.child.map(data => {
-                let path = data.props.points.split(",").map((intStr, i) => {
-                    let value = parseInt(intStr);
-                    if (i % 2 === 0) {
-                        value += data.props.x;
-                    } else {
-                        value += data.props.y;
+            return json.child
+                .filter(data => data.type === "Lines")
+                .map(data => {
+                    let path = data.props.points.split(",").map((intStr, i) => {
+                        let value = parseInt(intStr);
+                        if (i % 2 === 0) {
+                            value += data.props.x;
+                        } else {
+                            value += data.props.y;
+                        }
+                        return value;
+                    });
+                    let maxY = path[1];
+                    for (let i = 1; i < path.length; i += 2) {
+                        if (path[i] > maxY) {
+                            maxY = path[i];
+                        }
                     }
-                    return value;
-                });
-                let maxY = path[1];
-                for (let i = 1; i < path.length; i += 2) {
-                    if (path[i] > maxY) {
-                        maxY = path[i];
-                    }
-                }
-                let bottomY = maxY + app.sceneHeight / 3 * 2;
-                path = [path[0], bottomY].concat(path);
-                path = path.concat([path[path.length - 2], bottomY]);
-                return path;
+                    let bottomY = maxY + app.sceneHeight / 3 * 2;
+                    path = [path[0], bottomY].concat(path);
+                    path = path.concat([path[path.length - 2], bottomY]);
+                    return path;
 
-            });
+                });
+        }
+
+        getCoinList() {
+            let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+            return json.child
+                .filter(data => data.type === "Circle")
+                .map(data => data.props);
         }
 
         physicsPos2renderPos(pp) {
@@ -483,7 +534,6 @@
             }
         }
     }
-
 
     class GameOverScene extends Scene {
         onCreate() {
@@ -612,6 +662,7 @@
             });
 
             let body = world.createBody();
+            body.setUserData({type: "road"});
             for (let i = 0; i < pathInPhysics.length - 4; i += 2) {
                 let sp = {
                         x: pathInPhysics[i],
