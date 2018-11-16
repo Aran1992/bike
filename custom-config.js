@@ -27,9 +27,9 @@ config.mapList = [
                 "images/Taurus/TextureTaurusBackground03.png",
             ]
         },
-		// 视差背景系数：左右
+        // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-		// 视差背景系数：上下
+        // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
@@ -56,9 +56,9 @@ config.mapList = [
                 "images/Aries/TextureAriesBackground03.png",
             ]
         },
-		// 视差背景系数左右
+        // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-		// 视差背景系数：上下
+        // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
@@ -85,9 +85,9 @@ config.mapList = [
                 "images/Capricorn/TextureCapricornBackground03.png",
             ]
         },
-		// 视差背景系数左右
+        // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-		// 视差背景系数：上下
+        // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
@@ -114,9 +114,9 @@ config.mapList = [
                 "images/Scorpius/TextureScorpiusBackground03.png",
             ]
         },
-		// 视差背景系数左右
+        // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-		// 视差背景系数：上下
+        // 视差背景系数：上下
         verticalParallaxDepth: [1, 1, 0.8, 0],
         // 自行车速度（基础：20）
         bikeVelocity: 40,
@@ -143,9 +143,9 @@ config.mapList = [
                 "images/Aquarius/TextureAquariusBackground03.png",
             ]
         },
-		// 视差背景系数左右
+        // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-		// 视差背景系数：上下
+        // 视差背景系数：上下
         verticalParallaxDepth: [1, 1, 0.8, 0],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
@@ -155,3 +155,18 @@ config.mapList = [
         jumpForce: 5000,
     },
 ];
+
+// 自行车图集
+config.bikeAtlasPath = "images/tyariso_run_anim_all.png.json";
+
+// 自行车在场景中显示的尺寸是原图的多大
+config.bikeScale = 0.25;
+
+// 自行车物理半径
+config.bikeRadius = 0.734375;
+
+// 自行车密度
+config.bikeDensity = 1;
+
+// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
+config.bikeJumpingRotation = -30;

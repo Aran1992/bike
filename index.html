@@ -321,7 +321,7 @@
             this.bikeSprite.position.set(rp.x, rp.y);
 
             this.bikeBody = this.world.createDynamicBody();
-            this.bikeBody.createFixture(Circle(config.bikeRadius), {density: 1, friction: 1,});
+            this.bikeBody.createFixture(Circle(config.bikeRadius), {density: config.bikeDensity, friction: 1,});
             this.bikeBody.setPosition(pp);
 
             this.jumpCount = 0;

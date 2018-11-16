@@ -2,18 +2,29 @@
     designWidth: 720,
     designHeight: 1280,
     resolution: 1,
+    // 1像素等于多少米
     pixel2meter: 0.0625,
+    // 1米等于多少像素
     meter2pixel: 16,
-    bikeRadius: 0.734375,
+    // 自行车图集
+    bikeAtlasPath: "images/tyariso_run_anim_all.png.json",
+    // 自行车缩放比例
     bikeScale: 0.25,
-    testbedSpeed: 1,
-    fps: 60,
+    // 自行车物理半径
+    bikeRadius: 0.734375,
+    // 自行车密度
+    bikeDensity: 1,
+    // 自行车跳跃的时候的旋转角度 顺时针旋转是正数
     bikeJumpingRotation: -30,
     jumpMaxCount: 2,
     bikeLeftMargin: 100,
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
+    bikeGameOverHeight: -15,
+    bikeGameOverAngularVelocity: 1500,
+    testbedSpeed: 1,
+    fps: 60,
     maskHeight: 420,
     maskColorStop: [
         {offset: 0, opacity: 0},
@@ -32,10 +43,7 @@
     gravity: -200,
     // 跳跃爆发力
     jumpForce: 5000,
-    bikeAtlasPath: "images/tyariso_run_anim_all.png.json",
     mapBasePath: "myLaya/laya/pages/",
-    bikeGameOverHeight: -15,
-    bikeGameOverAngularVelocity: 1500,
     finalFlagImagePath: "images/flag.png",
     startScene: {
         mapText: {
@@ -53,7 +61,6 @@
             fill: "white"
         },
     },
-    backgroundCount: 5,
 };
 
 // 地图配置
