@@ -28,20 +28,6 @@ function radius2angle(radius) {
     return radius / Math.PI * 180;
 }
 
-function values(json) {
-    let arr = [];
-    for (let name in json) {
-        if (json.hasOwnProperty(name)) {
-            if (json[name].length) {
-                arr = arr.concat(json[name]);
-            } else {
-                arr.push(json[name]);
-            }
-        }
-    }
-    return arr;
-}
-
 function isPC() {
     return navigator.platform === "Win32";
 }
@@ -101,5 +87,25 @@ class Utils {
 
     static getLast(arr) {
         return arr[arr.length - 1];
+    }
+
+    static keys(json) {
+        let arr = [];
+        for (let key in json) {
+            if (json.hasOwnProperty(key)) {
+                arr.push(key);
+            }
+        }
+        return arr;
+    }
+
+    static values(json) {
+        let arr = [];
+        for (let name in json) {
+            if (json.hasOwnProperty(name)) {
+                arr.push(json[name]);
+            }
+        }
+        return arr;
     }
 }

@@ -192,10 +192,12 @@
             this.gravity = this.mapConfig.gravity || config.gravity;
             this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
 
-            let resPathList = values(this.mapConfig.texture)
+            let resPathList = this.mapConfig.texture.bg
                 .concat([
+                    this.mapConfig.texture.side,
+                    this.mapConfig.texture.top,
                     config.mapBasePath + this.mapConfig.sceneName + ".scene",
-                    config.bikeImagePath,
+                    config.bikeAtlasPath,
                     config.finalFlagImagePath,
                 ]);
             app.loadResources(resPathList, this.onLoaded.bind(this));
@@ -235,7 +237,7 @@
 
             this.createFinalFlag();
 
-            this.createRider(config.bikeImagePath, pathList);
+            this.createBike(pathList);
 
             this.gameStatus = "play";
             this.gameLoopFunc = this.play.bind(this);
@@ -305,24 +307,26 @@
             this.closeViewContainer.addChild(sprite);
         }
 
-        createRider(texturePath, pathList) {
+        createBike(pathList) {
             let pp = this.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
             pp.x += config.bikeRadius;
             pp.y += config.bikeRadius;
 
             let rp = this.physicsPos2renderPos(pp);
 
-            this.bikeSprite = new Sprite(resources[texturePath].texture);
+            this.bikeSprite = new Sprite(resources[config.bikeAtlasPath].textures["0"]);
+            this.closeViewContainer.addChild(this.bikeSprite);
             this.bikeSprite.anchor.set(0.5, 0.5);
-            this.bikeSprite.scale.set(config.riderScale, config.riderScale);
+            this.bikeSprite.scale.set(config.bikeScale, config.bikeScale);
             this.bikeSprite.position.set(rp.x, rp.y);
 
             this.bikeBody = this.world.createDynamicBody();
             this.bikeBody.createFixture(Circle(config.bikeRadius), {density: 1, friction: 1,});
             this.bikeBody.setPosition(pp);
 
-            this.closeViewContainer.addChild(this.bikeSprite);
             this.jumpCount = 0;
+            this.bikeFrameCount = Utils.keys(resources[config.bikeAtlasPath].textures).length;
+            this.bikeFrame = 0;
         }
 
         createBottomMask() {
@@ -392,7 +396,7 @@
         play(delta) {
             this.fpsMessage.text = `FPS:${Math.floor(delta * config.fps)}`;
 
-            this.world.step(delta / config.fps);
+            this.world.step(1 / config.fps);
 
             let velocity = this.bikeBody.getLinearVelocity();
             let bikePhysicsPos = this.bikeBody.getPosition();
@@ -416,6 +420,12 @@
                 this.bikeSprite.rotation = this.bikeBody.getAngle();
             } else if (!this.jumping) {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
+
+                this.bikeFrame += 1;
+                if (this.bikeFrame >= this.bikeFrameCount) {
+                    this.bikeFrame = 0;
+                }
+                this.bikeSprite.texture = resources[config.bikeAtlasPath].textures[`${this.bikeFrame}`];
             }
         }
 
