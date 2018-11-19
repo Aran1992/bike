@@ -183,6 +183,8 @@
         }
 
         onShow(mapIndex) {
+            this.isContactFatalEdge = false;
+
             this.cameraContainer.removeChildren();
             this.cameraContainer.position.set(0, 0);
 
@@ -246,18 +248,21 @@
         }
 
         onBeginContact(contact) {
-            let bodyList = [
-                contact.getFixtureA().getBody(),
-                contact.getFixtureB().getBody(),
+            let fixtureList = [
+                contact.getFixtureA(),
+                contact.getFixtureB(),
             ];
-            let index = bodyList.indexOf(this.bikeBody);
+            let index = fixtureList.map(fixture => fixture.getBody()).indexOf(this.bikeBody);
             if (index !== -1) {
-                bodyList.splice(index, 1);
-                let road = bodyList[0];
-                let userData = road.getUserData();
+                fixtureList.splice(index, 1);
+                let userData = fixtureList[0].getBody().getUserData();
                 if (userData && userData.type === "road") {
                     this.jumping = false;
                     this.jumpCount = 0;
+                    userData = fixtureList[0].getUserData();
+                    if (userData && userData.isFatal) {
+                        this.isContactFatalEdge = true;
+                    }
                 }
             }
         }
@@ -481,22 +486,16 @@
         }
 
         judgeGameLose(velocity, bikePhysicsPos) {
-            if (this.gameStatus === "play"
-                && (velocity.x <= 0 || bikePhysicsPos.y < config.bikeGameOverHeight)) {
-                this.endCount = this.endCount || 0;
-                this.endCount++;
-                if (this.endCount >= 7) {
-                    this.endCount = 0;
-                    this.gameStatus = "end";
-
-                    if (velocity.x <= 0) {
-                        this.bikeBody.setLinearVelocity(Vec2(0, 0));
-                        this.bikeBody.setAngularVelocity(config.bikeGameOverAngularVelocity);
-                        this.bikeBody.applyForceToCenter(Vec2(-2500, 5000));
-                    }
-
-                    app.showScene("GameOverScene", "Game Over");
-                }
+            if (this.gameStatus === "play" && bikePhysicsPos.y < config.bikeGameOverHeight) {
+                this.gameStatus = "end";
+                app.showScene("GameOverScene", "Game Over");
+            }
+            if (this.gameStatus === "play" && this.isContactFatalEdge) {
+                this.gameStatus = "end";
+                this.bikeBody.setLinearVelocity(Vec2(0, 0));
+                this.bikeBody.setAngularVelocity(config.bikeGameOverAngularVelocity);
+                this.bikeBody.applyForceToCenter(Vec2(-2500, 5000));
+                app.showScene("GameOverScene", "Game Over");
             }
         }
 
@@ -672,8 +671,24 @@
                         x: pathInPhysics[i + 2],
                         y: pathInPhysics[i + 3]
                     };
-                body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {density: 0, friction: 1,});
+                let fixture = body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {density: 0, friction: 1,});
+                if (this.isFatalEdge(sp, ep)) {
+                    fixture.setUserData({isFatal: true});
+                }
             }
+        }
+
+        isFatalEdge(sp, ep) {
+            let x, y;
+            if (sp.y > ep.y) {
+                y = sp.y - ep.y;
+                x = sp.x - ep.x;
+            } else {
+                y = ep.y - sp.y;
+                x = ep.x - sp.x;
+            }
+            let angle = Math.atan(y / x);
+            return config.fatalEdgeAngleRange[0] <= angle && angle <= config.fatalEdgeAngleRange[1];
         }
     }
 
