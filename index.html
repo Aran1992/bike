@@ -93,6 +93,7 @@
     class Scene extends Container {
         constructor() {
             super();
+            this.eventTable = {};
             this.onCreate();
         }
 
@@ -121,6 +122,12 @@
         }
 
         onHide() {
+        }
+
+        registerEvent(event, handler) {
+            handler = handler.bind(this);
+            this.eventTable[event] = handler;
+            app.registerEvent(event, handler);
         }
     }
 
@@ -153,8 +160,8 @@
 
     class GameScene extends Scene {
         onCreate() {
-            this.restartHandler = this.onRestart.bind(this);
-            app.registerEvent("Restart", this.restartHandler);
+            this.registerEvent("Restart", this.onRestart);
+            this.registerEvent("AteItem", this.onAteItem);
 
             window.addEventListener("keydown", this.onKeydown.bind(this));
 
@@ -236,20 +243,11 @@
                 y: (lastPath[lastPath.length - 5] + lastPath[lastPath.length - 3]) / 2,
             };
 
-            pathList.forEach(path => this.closeViewContainer.addChild(new Road(
-                this.world,
-                path,
-                this.mapConfig.texture.side,
-                this.mapConfig.texture.top
-            )));
+            this.createMap();
 
             this.createFinalFlag();
 
             this.createBike(pathList);
-
-            this.createCoins();
-
-            this.createAccGem();
 
             this.gameStatus = "play";
             this.gameLoopFunc = this.play.bind(this);
@@ -284,18 +282,10 @@
                 let userData = body.getUserData();
                 if (userData) {
                     switch (userData.type) {
-                        case "gold-coin": {
+                        case "AccGem":
+                        case "GoldCoin": {
                             if (body.isAwake()) {
-                                this.updateScoreText(this.score + 1);
-                            }
-                            contact.setEnabled(false);
-                            body.setAwake(false);
-                            body.getUserData().sprite.visible = false;
-                            break;
-                        }
-                        case "acc-gem": {
-                            if (body.isAwake()) {
-                                this.accelerateBike();
+                                app.dispatchEvent("AteItem", userData.type);
                             }
                             contact.setEnabled(false);
                             body.setAwake(false);
@@ -334,6 +324,19 @@
                         this.gameLoopFunc = this.play.bind(this);
                         this.gameStatus = "play";
                     }
+                    break;
+                }
+            }
+        }
+
+        onAteItem(type) {
+            switch (type) {
+                case "GoldCoin": {
+                    this.updateScoreText(this.score + 1);
+                    break;
+                }
+                case "AccGem": {
+                    this.accelerateBike();
                     break;
                 }
             }
@@ -385,34 +388,51 @@
             this.bikeFrame = 0;
         }
 
-        createCoins() {
-            this.getCoinList().forEach(coinConfig => {
-                let graphics = new Graphics();
-                this.closeViewContainer.addChild(graphics);
-                let color = GameUtil.hexString2Int(coinConfig.fillColor);
-                graphics.beginFill(color).drawCircle(0, 0, coinConfig.radius).endFill();
-                graphics.position.set(coinConfig.x, coinConfig.y);
-                let body = this.world.createBody();
-                body.createFixture(Circle(coinConfig.radius * config.pixel2meter), {density: 0, friction: 1,});
-                body.setPosition(GameUtil.renderPos2PhysicsPos(coinConfig));
-                body.setUserData({type: "gold-coin", sprite: graphics});
-            });
-        }
-
-        createAccGem() {
-            this.getAccGemList().forEach(gemConfig => {
-                let graphics = new Graphics();
-                this.closeViewContainer.addChild(graphics);
-                let color = GameUtil.hexString2Int(gemConfig.fillColor);
-                let path = GameUtil.pointsStr2path(gemConfig.points);
-                graphics.beginFill(color).drawPolygon(path).endFill();
-                graphics.position.set(gemConfig.x, gemConfig.y);
-                let body = this.world.createBody();
-                let vertices = GameUtil.path2vertices(path.map(p => p * config.pixel2meter));
-                body.createFixture(Polygon(vertices), {density: 0, friction: 1,});
-                body.setPosition(GameUtil.renderPos2PhysicsPos(gemConfig));
-                body.setUserData({type: "acc-gem", sprite: graphics});
-            });
+        createMap() {
+            let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+            return json.child
+                .map(data => {
+                    switch (GameUtil.getItemType(data)) {
+                        case "Road": {
+                            let path = data.props.points.split(",").map((intStr, i) => {
+                                let value = parseInt(intStr);
+                                if (i % 2 === 0) {
+                                    value += data.props.x;
+                                } else {
+                                    value += data.props.y;
+                                }
+                                return value;
+                            });
+                            let maxY = path[1];
+                            for (let i = 1; i < path.length; i += 2) {
+                                if (path[i] > maxY) {
+                                    maxY = path[i];
+                                }
+                            }
+                            let bottomY = maxY + app.sceneHeight / 3 * 2;
+                            path = [path[0], bottomY]
+                                .concat(path)
+                                .concat([path[path.length - 2], bottomY]);
+                            this.closeViewContainer.addChild(new Road(
+                                this.world,
+                                path,
+                                this.mapConfig.texture.side,
+                                this.mapConfig.texture.top
+                            ));
+                            break;
+                        }
+                        case "GoldCoin": {
+                            let item = new GoldCoin(data, this.world);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                        case "AccGem": {
+                            let item = new AccGem(data, this.world);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                    }
+                });
         }
 
         createBottomMask() {
@@ -482,20 +502,6 @@
                     return path;
 
                 });
-        }
-
-        getCoinList() {
-            let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
-            return json.child
-                .filter(data => data.label.split("//")[0] === "GoldCoin")
-                .map(data => data.props);
-        }
-
-        getAccGemList() {
-            let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
-            return json.child
-                .filter(data => data.label.split("//")[0] === "AccGem")
-                .map(data => data.props);
         }
 
         gameLoop(delta) {
@@ -781,6 +787,58 @@
             }
             return list;
         }
+
+        static getItemType(config) {
+            return config.label.split("//")[0]
+        }
+    }
+
+    class Item {
+        constructor(config, world) {
+            this.config = config;
+            this.world = world;
+            this.create();
+        }
+
+        create() {
+            switch (this.config.type) {
+                case "Circle": {
+                    this.sprite = new Graphics();
+                    let color = GameUtil.hexString2Int(this.config.props.fillColor);
+                    this.sprite.beginFill(color).drawCircle(0, 0, this.config.props.radius).endFill();
+                    this.sprite.position.set(this.config.props.x, this.config.props.y);
+
+                    let body = this.world.createBody();
+                    body.createFixture(Circle(this.config.props.radius * config.pixel2meter), {
+                        density: 0,
+                        friction: 1,
+                    });
+                    body.setPosition(GameUtil.renderPos2PhysicsPos(this.config.props));
+                    body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+                    break;
+                }
+                case "Poly": {
+                    this.sprite = new Graphics();
+                    let color = GameUtil.hexString2Int(this.config.props.fillColor);
+                    let path = GameUtil.pointsStr2path(this.config.props.points);
+                    this.sprite.beginFill(color).drawPolygon(path).endFill();
+                    this.sprite.position.set(this.config.props.x, this.config.props.y);
+
+                    let body = this.world.createBody();
+                    let vertices = GameUtil.path2vertices(path.map(p => p * config.pixel2meter));
+                    body.createFixture(Polygon(vertices), {density: 0, friction: 1,});
+                    body.setPosition(GameUtil.renderPos2PhysicsPos(this.config.props));
+                    body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+                    break;
+                }
+            }
+        }
+    }
+
+    class GoldCoin extends Item {
+    }
+
+    class AccGem extends Item {
     }
 
     function main() {
