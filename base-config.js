@@ -47,6 +47,10 @@
     jumpForce: 5000,
     mapBasePath: "myLaya/laya/pages/",
     finalFlagImagePath: "images/flag.png",
+    // 自行车吃了加速宝石之后的速度
+    bikeAccVelocity: 50,
+    // 自行车加速的帧数
+    accFrame: 300,
     startScene: {
         mapText: {
             fontSize: 50,

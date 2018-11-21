@@ -26,6 +26,7 @@
             World,
             Edge,
             Circle,
+            Polygon,
         } = planck;
 
     let app;
@@ -192,9 +193,12 @@
 
             this.mapIndex = mapIndex;
             this.mapConfig = config.mapList[mapIndex];
-            this.bikeVelocity = this.mapConfig.bikeVelocity || config.bikeVelocity;
+            this.bikeCommonVelocity = this.mapConfig.bikeVelocity || config.bikeVelocity;
+            this.bikeAccVelocity = this.mapConfig.bikeAccVelocity || config.bikeAccVelocity;
             this.gravity = this.mapConfig.gravity || config.gravity;
             this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
+
+            this.bikeAccFrame = undefined;
 
             let resPathList = this.mapConfig.texture.bg
                 .concat([
@@ -245,6 +249,8 @@
 
             this.createCoins();
 
+            this.createAccGem();
+
             this.gameStatus = "play";
             this.gameLoopFunc = this.play.bind(this);
         }
@@ -274,15 +280,29 @@
             let index = bodyList.indexOf(this.bikeBody);
             if (index !== -1) {
                 bodyList.splice(index, 1);
-                let coinBody = bodyList[0];
-                let userData = coinBody.getUserData();
-                if (userData && userData.type === "gold-coin") {
-                    if (coinBody.isAwake()) {
-                        this.updateScoreText(this.score + 1);
+                let body = bodyList[0];
+                let userData = body.getUserData();
+                if (userData) {
+                    switch (userData.type) {
+                        case "gold-coin": {
+                            if (body.isAwake()) {
+                                this.updateScoreText(this.score + 1);
+                            }
+                            contact.setEnabled(false);
+                            body.setAwake(false);
+                            body.getUserData().sprite.visible = false;
+                            break;
+                        }
+                        case "acc-gem": {
+                            if (body.isAwake()) {
+                                this.accelerateBike();
+                            }
+                            contact.setEnabled(false);
+                            body.setAwake(false);
+                            body.getUserData().sprite.visible = false;
+                            break;
+                        }
                     }
-                    contact.setEnabled(false);
-                    coinBody.setAwake(false);
-                    coinBody.getUserData().sprite.visible = false;
                 }
             }
         }
@@ -358,7 +378,7 @@
             this.bikeBody = this.world.createDynamicBody();
             this.bikeBody.createFixture(Circle(config.bikeRadius), {density: config.bikeDensity, friction: 1,});
             this.bikeBody.setPosition(pp);
-            this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, 0));
+            this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, 0));
 
             this.jumpCount = 0;
             this.bikeFrameCount = Utils.keys(resources[config.bikeAtlasPath].textures).length;
@@ -366,15 +386,32 @@
         }
 
         createCoins() {
-            this.getCoinList().forEach(coin => {
+            this.getCoinList().forEach(coinConfig => {
                 let graphics = new Graphics();
                 this.closeViewContainer.addChild(graphics);
-                graphics.beginFill(config.coinColor).drawCircle(0, 0, coin.radius).endFill();
-                graphics.position.set(coin.x, coin.y);
+                let color = GameUtil.hexString2Int(coinConfig.fillColor);
+                graphics.beginFill(color).drawCircle(0, 0, coinConfig.radius).endFill();
+                graphics.position.set(coinConfig.x, coinConfig.y);
                 let body = this.world.createBody();
-                body.createFixture(Circle(coin.radius * config.pixel2meter), {density: 0, friction: 1,});
-                body.setPosition(GameUtil.renderPos2PhysicsPos(coin));
+                body.createFixture(Circle(coinConfig.radius * config.pixel2meter), {density: 0, friction: 1,});
+                body.setPosition(GameUtil.renderPos2PhysicsPos(coinConfig));
                 body.setUserData({type: "gold-coin", sprite: graphics});
+            });
+        }
+
+        createAccGem() {
+            this.getAccGemList().forEach(gemConfig => {
+                let graphics = new Graphics();
+                this.closeViewContainer.addChild(graphics);
+                let color = GameUtil.hexString2Int(gemConfig.fillColor);
+                let path = GameUtil.pointsStr2path(gemConfig.points);
+                graphics.beginFill(color).drawPolygon(path).endFill();
+                graphics.position.set(gemConfig.x, gemConfig.y);
+                let body = this.world.createBody();
+                let vertices = GameUtil.path2vertices(path.map(p => p * config.pixel2meter));
+                body.createFixture(Polygon(vertices), {density: 0, friction: 1,});
+                body.setPosition(GameUtil.renderPos2PhysicsPos(gemConfig));
+                body.setUserData({type: "acc-gem", sprite: graphics});
             });
         }
 
@@ -415,6 +452,10 @@
             this.scoreText.text = `SCORE:${this.score}`;
         }
 
+        accelerateBike() {
+            this.bikeAccFrame = 0;
+        }
+
         getRoadPathList() {
             let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
             return json.child
@@ -446,7 +487,14 @@
         getCoinList() {
             let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
             return json.child
-                .filter(data => data.label === "GoldCoin")
+                .filter(data => data.label.split("//")[0] === "GoldCoin")
+                .map(data => data.props);
+        }
+
+        getAccGemList() {
+            let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+            return json.child
+                .filter(data => data.label.split("//")[0] === "AccGem")
                 .map(data => data.props);
         }
 
@@ -468,7 +516,9 @@
 
             this.judgeGameWin(bikePhysicsPos);
 
-            this.moveCamera(velocity);
+            this.moveCamera();
+
+            this.keepBikeMove(velocity);
         }
 
         pause() {
@@ -518,10 +568,8 @@
             }
         }
 
-        moveCamera(velocity) {
+        moveCamera() {
             if (this.gameStatus === "play") {
-                this.bikeBody.setLinearVelocity(Vec2(this.bikeVelocity, velocity.y));
-
                 let oldCameraX = this.cameraContainer.position.x;
                 let oldCameraY = this.cameraContainer.position.y;
 
@@ -541,6 +589,22 @@
                     child.position.x -= cameraMoveX * this.mapConfig.horizontalParallaxDepth[index];
                     child.position.y -= cameraMoveY * this.mapConfig.verticalParallaxDepth[index];
                 });
+            }
+        }
+
+        keepBikeMove(velocity) {
+            if (this.gameStatus === "play") {
+                if (this.bikeAccFrame !== undefined) {
+                    if (this.bikeAccFrame >= config.accFrame) {
+                        this.bikeAccFrame = undefined;
+                        this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
+                    } else {
+                        this.bikeBody.setLinearVelocity(Vec2(this.bikeAccVelocity, velocity.y));
+                        this.bikeAccFrame++;
+                    }
+                } else {
+                    this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
+                }
             }
         }
     }
@@ -700,6 +764,22 @@
                 rp.x * config.pixel2meter,
                 (config.designHeight - rp.y) * config.pixel2meter
             );
+        }
+
+        static hexString2Int(str) {
+            return parseInt(str.replace("#", ""), 16);
+        }
+
+        static pointsStr2path(str) {
+            return str.split(",").map(str => parseInt(str));
+        }
+
+        static path2vertices(path) {
+            let list = [];
+            for (let i = 0; i < path.length; i += 2) {
+                list.push(Vec2(path[i], path[i + 1]));
+            }
+            return list;
         }
     }
 

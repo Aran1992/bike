@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":30,
+    "selecteID":31,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -125,6 +125,32 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":29,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Circle",
+            "props":{"y":464.25,"x":333,"radius":12,"name":"GoldCoin//金币","lineWidth":1,"fillColor":"#ffe000"},
+            "nodeParent":1,
+            "label":"GoldCoin//金币",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":30,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Poly",
+            "props":{"y":464.25,"x":530,"points":"0,12,12,0,0,-12,-12,0","name":"AccGem//加速宝石","lineWidth":1,"fillColor":"#00ffff"},
+            "nodeParent":1,
+            "label":"AccGem//加速宝石",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":31,
             "child":[
                 ]
         }],
