@@ -171,7 +171,9 @@
 
             this.createBottomMask();
 
-            this.createFPSMessage();
+            this.createFPSText();
+
+            this.createScoreText();
 
             this.gameStatus = "end";
             this.gameLoopFunc = this.pause.bind(this);
@@ -183,6 +185,8 @@
         }
 
         onShow(mapIndex) {
+            this.updateScoreText(0);
+
             this.cameraContainer.removeChildren();
             this.cameraContainer.position.set(0, 0);
 
@@ -272,7 +276,10 @@
                 bodyList.splice(index, 1);
                 let coinBody = bodyList[0];
                 let userData = coinBody.getUserData();
-                if (userData && userData.type === "coin") {
+                if (userData && userData.type === "gold-coin") {
+                    if (coinBody.isAwake()) {
+                        this.updateScoreText(this.score + 1);
+                    }
                     contact.setEnabled(false);
                     coinBody.setAwake(false);
                     coinBody.getUserData().sprite.visible = false;
@@ -336,11 +343,11 @@
         }
 
         createBike(pathList) {
-            let pp = this.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
+            let pp = GameUtil.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
             pp.x += config.bikeRadius;
             pp.y += config.bikeRadius;
 
-            let rp = this.physicsPos2renderPos(pp);
+            let rp = GameUtil.physicsPos2renderPos(pp);
 
             this.bikeSprite = new Sprite(resources[config.bikeAtlasPath].textures["0"]);
             this.closeViewContainer.addChild(this.bikeSprite);
@@ -366,8 +373,8 @@
                 graphics.position.set(coin.x, coin.y);
                 let body = this.world.createBody();
                 body.createFixture(Circle(coin.radius * config.pixel2meter), {density: 0, friction: 1,});
-                body.setPosition(this.renderPos2PhysicsPos(coin));
-                body.setUserData({type: "coin", sprite: graphics});
+                body.setPosition(GameUtil.renderPos2PhysicsPos(coin));
+                body.setUserData({type: "gold-coin", sprite: graphics});
             });
         }
 
@@ -380,15 +387,32 @@
             this.gameContainer.addChild(sprite);
         }
 
-        createFPSMessage() {
+        createFPSText() {
             let style = new TextStyle({
                 fill: "white",
                 stroke: '#ff3300',
                 strokeThickness: 1,
             });
-            this.fpsMessage = new Text("FPS:0", style);
-            this.fpsMessage.anchor.set(0, 0);
-            this.addChild(this.fpsMessage);
+            this.fpsText = new Text("FPS:0", style);
+            this.fpsText.anchor.set(0, 0);
+            this.addChild(this.fpsText);
+        }
+
+        createScoreText() {
+            let style = new TextStyle({
+                fill: "white",
+                stroke: '#ff3300',
+                strokeThickness: 1,
+            });
+            this.scoreText = new Text("", style);
+            this.scoreText.anchor.set(1, 0);
+            this.scoreText.position.set(app.sceneWidth, 0);
+            this.addChild(this.scoreText);
+        }
+
+        updateScoreText(score) {
+            this.score = score;
+            this.scoreText.text = `SCORE:${this.score}`;
         }
 
         getRoadPathList() {
@@ -422,22 +446,8 @@
         getCoinList() {
             let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
             return json.child
-                .filter(data => data.type === "Circle")
+                .filter(data => data.label === "GoldCoin")
                 .map(data => data.props);
-        }
-
-        physicsPos2renderPos(pp) {
-            return {
-                x: pp.x * config.meter2pixel,
-                y: config.designHeight - pp.y * config.meter2pixel
-            }
-        }
-
-        renderPos2PhysicsPos(rp) {
-            return Vec2(
-                rp.x * config.pixel2meter,
-                (config.designHeight - rp.y) * config.pixel2meter
-            );
         }
 
         gameLoop(delta) {
@@ -445,7 +455,7 @@
         }
 
         play(delta) {
-            this.fpsMessage.text = `FPS:${Math.floor(delta * config.fps)}`;
+            this.fpsText.text = `FPS:${Math.floor(delta * config.fps)}`;
 
             this.world.step(1 / config.fps);
 
@@ -465,7 +475,7 @@
         }
 
         syncBikeSprite(velocity, bikePhysicsPos) {
-            let bikeRenderPos = this.physicsPos2renderPos(bikePhysicsPos);
+            let bikeRenderPos = GameUtil.physicsPos2renderPos(bikePhysicsPos);
             this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
             if (this.gameStatus === "end") {
                 this.bikeSprite.rotation = this.bikeBody.getAngle();
@@ -502,7 +512,7 @@
 
         judgeGameWin(bikePhysicsPos) {
             if (this.gameStatus === "play"
-                && bikePhysicsPos.x > this.renderPos2PhysicsPos(this.finalPoint).x) {
+                && bikePhysicsPos.x > GameUtil.renderPos2PhysicsPos(this.finalPoint).x) {
                 this.gameStatus = "win";
                 app.showScene("GameOverScene", "Game Win");
             }
@@ -674,6 +684,22 @@
                     };
                 body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {density: 0, friction: 1,});
             }
+        }
+    }
+
+    class GameUtil {
+        static physicsPos2renderPos(pp) {
+            return {
+                x: pp.x * config.meter2pixel,
+                y: config.designHeight - pp.y * config.meter2pixel
+            }
+        }
+
+        static renderPos2PhysicsPos(rp) {
+            return Vec2(
+                rp.x * config.pixel2meter,
+                (config.designHeight - rp.y) * config.pixel2meter
+            );
         }
     }
 
