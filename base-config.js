@@ -65,6 +65,7 @@
             fill: "white"
         },
     },
+    fatalEdgeAngleRange: [Math.PI / 180 * 80, Math.PI / 180 * 100],
 };
 
 // 地图配置
