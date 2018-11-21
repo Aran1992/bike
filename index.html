@@ -27,6 +27,7 @@
             Edge,
             Circle,
             Polygon,
+            Box,
         } = planck;
 
     let app;
@@ -188,10 +189,6 @@
             app.ticker.add(this.gameLoop.bind(this));
         }
 
-        onDestroy() {
-            app.unregisterEvent("Restart", this.restartHandler);
-        }
-
         onShow(mapIndex) {
             this.updateScoreText(0);
 
@@ -217,7 +214,7 @@
                     config.bikeAtlasPath,
                     config.finalFlagImagePath,
                 ]);
-            app.loadResources(resPathList, this.onLoaded.bind(this));
+            app.loadResources(resPathList, this.onLoadedBaseRes.bind(this));
         }
 
         onHide() {
@@ -227,7 +224,16 @@
             this.onShow(this.mapIndex);
         }
 
-        onLoaded() {
+        onLoadedBaseRes() {
+            let path = config.mapBasePath + this.mapConfig.sceneName + ".scene";
+            let json = JSON.parse(resources[path].data);
+            let resPathList = json.child
+                .filter(data => data.type === "Sprite")
+                .map(data => data.props.texture);
+            app.loadResources(resPathList, this.onLoadedAllRes.bind(this));
+        }
+
+        onLoadedAllRes() {
             this.world = new World({gravity: Vec2(0, this.gravity)});
 
             this.world.on('begin-contact', this.onBeginContact.bind(this));
@@ -426,16 +432,10 @@
                             ));
                             break;
                         }
-                        case "GoldCoin": {
-                            let item = new GoldCoin(data, this.world);
+                        default :
+                            let item = new Item(data, this.world);
                             this.closeViewContainer.addChild(item.sprite);
                             break;
-                        }
-                        case "AccGem": {
-                            let item = new AccGem(data, this.world);
-                            this.closeViewContainer.addChild(item.sprite);
-                            break;
-                        }
                     }
                 });
         }
@@ -846,14 +846,28 @@
                     body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
                     break;
                 }
+                case "Sprite": {
+                    let texture = resources[this.config.props.texture].texture;
+                    this.sprite = new Sprite(texture);
+                    this.sprite.position.set(this.config.props.x, this.config.props.y);
+
+                    if (this.config.props.scaleX !== undefined) {
+                        this.sprite.scale.x = this.config.props.scaleX;
+                    }
+                    if (this.config.props.scaleY !== undefined) {
+                        this.sprite.scale.y = this.config.props.scaleY;
+                    }
+
+                    let body = this.world.createBody();
+                    let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
+                    let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
+                    body.createFixture(Box(width, height), {density: 0, friction: 1,});
+                    body.setPosition(GameUtil.renderPos2PhysicsPos(this.config.props));
+                    body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+                    break;
+                }
             }
         }
-    }
-
-    class GoldCoin extends Item {
-    }
-
-    class AccGem extends Item {
     }
 
     function main() {
