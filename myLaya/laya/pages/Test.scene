@@ -127,45 +127,6 @@
             "compId":29,
             "child":[
                 ]
-        },
-        {
-            "x":15,
-            "type":"Circle",
-            "props":{"y":464.25,"x":333,"radius":12,"name":"GoldCoin//金币","lineWidth":1,"fillColor":"#ffe000"},
-            "nodeParent":1,
-            "label":"GoldCoin//金币",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":30,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Poly",
-            "props":{"y":464.25,"x":530,"points":"0,12,12,0,0,-12,-12,0","name":"AccGem//加速宝石","lineWidth":1,"fillColor":"#00ffff"},
-            "nodeParent":1,
-            "label":"AccGem//加速宝石",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":31,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "props":{"y":420,"x":730,"texture":"images/rider.png","scaleY":0.25,"scaleX":0.25,"name":"Test//测试用，就是墙而已"},
-            "nodeParent":1,
-            "label":"Test//测试用，就是墙而已",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":32,
-            "child":[
-                ]
         }],
     "animations":[
         {

@@ -20,6 +20,7 @@
             loader,
         } = PIXI,
         TilingSprite = PIXI.extras.TilingSprite,
+        AnimatedSprite = PIXI.extras.AnimatedSprite,
         resources = loader.resources,
         {
             Vec2,
@@ -204,6 +205,8 @@
             this.gravity = this.mapConfig.gravity || config.gravity;
             this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
 
+            this.birdList = [];
+
             this.bikeAccFrame = undefined;
 
             let resPathList = this.mapConfig.texture.bg
@@ -213,8 +216,12 @@
                     config.mapBasePath + this.mapConfig.sceneName + ".scene",
                     config.bikeAtlasPath,
                     config.finalFlagImagePath,
+                    config.goldCoinAniJson,
+                    config.accGemAniJson,
+                    config.fireWallAniJson,
+                    config.birdAniJson,
                 ]);
-            app.loadResources(resPathList, this.onLoadedBaseRes.bind(this));
+            app.loadResources(resPathList, this.onLoadedAllRes.bind(this));
         }
 
         onHide() {
@@ -222,15 +229,6 @@
 
         onRestart() {
             this.onShow(this.mapIndex);
-        }
-
-        onLoadedBaseRes() {
-            let path = config.mapBasePath + this.mapConfig.sceneName + ".scene";
-            let json = JSON.parse(resources[path].data);
-            let resPathList = json.child
-                .filter(data => data.type === "Sprite")
-                .map(data => data.props.texture);
-            app.loadResources(resPathList, this.onLoadedAllRes.bind(this));
         }
 
         onLoadedAllRes() {
@@ -270,13 +268,13 @@
             if (index !== -1) {
                 fixtureList.splice(index, 1);
                 let userData = fixtureList[0].getBody().getUserData();
-                if (userData && userData.type === "road") {
+                if (userData && userData.type === "Road") {
                     this.jumping = false;
                     this.jumpCount = 0;
-                    userData = fixtureList[0].getUserData();
-                    if (userData && userData.isFatal) {
-                        this.isContactFatalEdge = true;
-                    }
+                }
+                userData = fixtureList[0].getUserData();
+                if (userData && userData.isFatal) {
+                    this.isContactFatalEdge = true;
                 }
             }
         }
@@ -301,6 +299,11 @@
                             contact.setEnabled(false);
                             body.setAwake(false);
                             body.getUserData().sprite.visible = false;
+                            break;
+                        }
+                        case "BigFireWall":
+                        case "SmallFireWall": {
+                            this.isContactFatalEdge = true;
                             break;
                         }
                     }
@@ -403,7 +406,8 @@
             let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
             return json.child
                 .map(data => {
-                    switch (GameUtil.getItemType(data)) {
+                    let type = GameUtil.getItemType(data);
+                    switch (type) {
                         case "Road": {
                             let path = data.props.points.split(",").map((intStr, i) => {
                                 let value = parseInt(intStr);
@@ -432,10 +436,37 @@
                             ));
                             break;
                         }
-                        default :
+                        case "GoldCoin": {
+                            let item = new GoldCoin(data, this.world);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                        case "AccGem": {
+                            let item = new AccGem(data, this.world);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                        case "BigFireWall": {
+                            let item = new BigFireWall(data, this.world);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                        case "SmallFireWall": {
+                            let item = new SmallFireWall(data, this.world);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                        case "BlackBird": {
+                            let item = new BlackBird(data, this.world);
+                            this.birdList.push(item);
+                            this.closeViewContainer.addChild(item.sprite);
+                            break;
+                        }
+                        default : {
                             let item = new Item(data, this.world);
                             this.closeViewContainer.addChild(item.sprite);
                             break;
+                        }
                     }
                 });
         }
@@ -523,6 +554,8 @@
 
             this.syncBikeSprite(velocity, bikePhysicsPos);
 
+            this.syncBirdSprite();
+
             this.judgeGameLose(velocity, bikePhysicsPos);
 
             this.judgeGameWin(bikePhysicsPos);
@@ -530,6 +563,8 @@
             this.moveCamera();
 
             this.keepBikeMove(velocity);
+
+            this.keepBirdMove();
         }
 
         pause() {
@@ -611,6 +646,27 @@
                     this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
                 }
             }
+        }
+
+        syncBirdSprite() {
+            this.birdList.forEach(bird => {
+                let pos = GameUtil.physicsPos2renderPos(bird.body.getPosition());
+                bird.sprite.position.set(pos.x, pos.y);
+            });
+        }
+
+        keepBirdMove() {
+            this.birdList.forEach(bird => {
+                let rp = GameUtil.physicsPos2renderPos(bird.body.getPosition());
+                if (-this.cameraContainer.position.x + config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
+                    let velocity = bird.body.getLinearVelocity();
+                    bird.body.setLinearVelocity(Vec2(-20, velocity.y));
+                    if (bird.count % 36 === 0) {
+                        bird.body.applyLinearImpulse(Vec2(0, 70), bird.body.getPosition());
+                    }
+                    bird.count++;
+                }
+            });
         }
     }
 
@@ -741,7 +797,7 @@
             });
 
             let body = world.createBody();
-            body.setUserData({type: "road"});
+            body.setUserData({type: "Road"});
             for (let i = 0; i < pathInPhysics.length - 4; i += 2) {
                 let sp = {
                         x: pathInPhysics[i],
@@ -867,6 +923,106 @@
                     break;
                 }
             }
+        }
+    }
+
+    class AniItem extends Item {
+        create() {
+            this.initAni();
+            this.sprite = new AnimatedSprite(this.frames);
+            this.sprite.position.set(this.config.props.x, this.config.props.y);
+            this.sprite.scale.set(this.config.props.scaleX, this.config.props.scaleY);
+            this.sprite.animationSpeed = this.animationSpeed;
+            this.sprite.play();
+
+            let body = this.world.createBody();
+            let texture = this.frames[0];
+            let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
+            let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
+            body.createFixture(Box(width, height), {density: 0, friction: 1,});
+            let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
+            let y = this.config.props.y + texture.height / 2 * this.sprite.scale.y;
+            body.setPosition(GameUtil.renderPos2PhysicsPos({x, y}));
+            body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+        }
+    }
+
+    class GoldCoin extends AniItem {
+        initAni() {
+            let frames = [];
+            for (let i = 0; i < 12; i++) {
+                frames.push(Texture.fromFrame(`medal_${i < 10 ? "0" + i : i}.png`));
+            }
+            this.frames = frames;
+            this.animationSpeed = 0.25;
+        }
+    }
+
+    class AccGem extends AniItem {
+        initAni() {
+            let frames = [];
+            for (let i = 0; i < 12; i++) {
+                frames.push(Texture.fromFrame(`crystal_jet_${i < 10 ? "0" + i : i}.png`));
+            }
+            this.frames = frames;
+            this.animationSpeed = 0.25;
+        }
+    }
+
+    class BigFireWall extends AniItem {
+        initAni() {
+            let frames = [];
+            for (let i = 1; i <= 4; i++) {
+                frames.push(Texture.fromFrame(`firewallx4_0${i}.png`));
+            }
+            this.frames = frames;
+            this.animationSpeed = 0.25;
+        }
+    }
+
+    class SmallFireWall extends AniItem {
+        initAni() {
+            let frames = [];
+            for (let i = 1; i <= 4; i++) {
+                frames.push(Texture.fromFrame(`firewallx4B_0${i}.png`));
+            }
+            this.frames = frames;
+            this.animationSpeed = 0.25;
+        }
+    }
+
+    class BlackBird extends Item {
+        initAni() {
+            let frames = [];
+            for (let i = 1; i <= 9; i++) {
+                frames.push(Texture.fromFrame(`Bird0${i}.png`));
+            }
+            this.frames = frames;
+            this.animationSpeed = 0.25;
+        }
+
+        create() {
+            this.initAni();
+            let texture = this.frames[0];
+            this.sprite = new AnimatedSprite(this.frames);
+            this.sprite.anchor.set(0.5, 0.5);
+            this.sprite.position.set(this.config.props.x + texture.width / 2, this.config.props.y + texture.height / 2);
+            this.sprite.scale.set(this.config.props.scaleX, this.config.props.scaleY);
+            this.sprite.animationSpeed = this.animationSpeed;
+            this.sprite.play();
+
+            let body = this.world.createDynamicBody();
+            let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
+            let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
+            let fixture = body.createFixture(Box(width, height), {density: 0.25, friction: 1,});
+            fixture.setUserData({isFatal: true});
+            let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
+            let y = this.config.props.y + texture.height / 2 * this.sprite.scale.y;
+            body.setPosition(GameUtil.renderPos2PhysicsPos({x, y}));
+            body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+            body.setAwake(false);
+            this.body = body;
+            this.count = 0;
         }
     }
 
