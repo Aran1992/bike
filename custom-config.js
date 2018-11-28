@@ -160,7 +160,7 @@ config.mapList = [
 config.bikeAtlasPath = "images/tyariso_run_anim_all.png.json";
 
 // 自行车在场景中显示的尺寸是原图的多大
-config.bikeScale = 0.25;
+config.bikeScale = 0.4;
 
 // 自行车物理半径
 config.bikeRadius = 0.734375;
