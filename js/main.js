@@ -33,7 +33,8 @@ class MyApplication extends Application {
 
         this.sceneClassTable = {
             "StartScene": StartScene,
-            "GameScene": GameScene,
+            "MapGameScene": MapGameScene,
+            "EndlessGameScene": EndlessGameScene,
             "GameOverScene": GameOverScene,
         };
         this.sceneTable = {};
@@ -128,25 +129,39 @@ class StartScene extends Scene {
         let textContainer = new Container();
         this.addChild(textContainer);
         let x = app.sceneWidth / 2;
-        let textListHeight = config.startScene.mapText.fontSize * config.mapList.length;
+        let textListHeight = config.startScene.mapText.fontSize * (config.mapList.length + 1);
         let y = (app.sceneHeight - textListHeight) / 2;
         textContainer.position.set(x, y);
 
         let textStyle = new TextStyle(config.startScene.mapText);
+
+        let emText = new Text("Endless Mode", textStyle);
+        textContainer.addChild(emText);
+        emText.anchor.set(0.5, 0);
+        emText.position.set(0, 0);
+        emText.interactive = true;
+        emText.buttonMode = true;
+        emText.on("pointerdown", () => this.onClickEndlessModeText());
+
         config.mapList.forEach((mapConfig, mapIndex) => {
             let text = new Text(`MAP-${mapIndex}: ${mapConfig.showName}`, textStyle);
-            text.anchor.set(0.5, 0);
-            text.position.set(0, text.height * mapIndex);
             textContainer.addChild(text);
+            text.anchor.set(0.5, 0);
+            text.position.set(0, text.height * (mapIndex + 1));
             text.interactive = true;
             text.buttonMode = true;
             text.on("pointerdown", () => this.onClickMapText(mapIndex));
         });
     }
 
+    onClickEndlessModeText(mapIndex) {
+        app.hideScene("StartScene");
+        app.showScene("EndlessGameScene", mapIndex);
+    }
+
     onClickMapText(mapIndex) {
         app.hideScene("StartScene");
-        app.showScene("GameScene", mapIndex);
+        app.showScene("MapGameScene", mapIndex);
     }
 }
 
@@ -180,7 +195,7 @@ class GameScene extends Scene {
         app.ticker.add(this.gameLoop.bind(this));
     }
 
-    onShow(mapIndex) {
+    onShow() {
         this.updateScoreText(0);
 
         this.isContactFatalEdge = false;
@@ -188,37 +203,37 @@ class GameScene extends Scene {
         this.cameraContainer.removeChildren();
         this.cameraContainer.position.set(0, 0);
 
-        this.mapIndex = mapIndex;
-        this.mapConfig = config.mapList[mapIndex];
-        this.bikeCommonVelocity = this.mapConfig.bikeVelocity || config.bikeVelocity;
-        this.bikeAccVelocity = this.mapConfig.bikeAccVelocity || config.bikeAccVelocity;
-        this.gravity = this.mapConfig.gravity || config.gravity;
-        this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
-
         this.birdList = [];
 
         this.bikeAccFrame = undefined;
 
-        let resPathList = this.mapConfig.texture.bg
-            .concat([
-                this.mapConfig.texture.side,
-                this.mapConfig.texture.top,
-                config.mapBasePath + this.mapConfig.sceneName + ".scene",
-                config.bikeAtlasPath,
-                config.finalFlagImagePath,
-                config.goldCoinAniJson,
-                config.accGemAniJson,
-                config.fireWallAniJson,
-                config.birdAniJson,
-            ]);
-        app.loadResources(resPathList, this.onLoadedAllRes.bind(this));
+        this.initEnvironment();
+
+        app.loadResources(this.getResPathList(), this.onLoadedAllRes.bind(this));
     }
 
-    onHide() {
+    initEnvironment() {
+        this.bikeCommonVelocity = config.bikeVelocity;
+        this.bikeAccVelocity = config.bikeAccVelocity;
+        this.gravity = config.gravity;
+        this.jumpForce = config.jumpForce;
+        this.horizontalParallaxDepth = config.horizontalParallaxDepth;
+        this.verticalParallaxDepth = config.verticalParallaxDepth;
+    }
+
+    getResPathList() {
+        return [
+            config.bikeAtlasPath,
+            config.finalFlagImagePath,
+            config.goldCoinAniJson,
+            config.accGemAniJson,
+            config.fireWallAniJson,
+            config.birdAniJson,
+        ];
     }
 
     onRestart() {
-        this.onShow(this.mapIndex);
+        this.onShow();
     }
 
     onLoadedAllRes() {
@@ -226,24 +241,13 @@ class GameScene extends Scene {
 
         this.world.on('begin-contact', this.onBeginContact.bind(this));
         this.world.on('pre-solve', this.onPreSolve.bind(this));
+
         this.createBg();
 
         this.closeViewContainer = new Container();
         this.cameraContainer.addChild(this.closeViewContainer);
 
-        let pathList = this.getRoadPathList();
-
-        let lastPath = Utils.getLast(pathList);
-        this.finalPoint = {
-            x: (lastPath[lastPath.length - 6] + lastPath[lastPath.length - 4]) / 2,
-            y: (lastPath[lastPath.length - 5] + lastPath[lastPath.length - 3]) / 2,
-        };
-
-        this.createMap();
-
-        this.createFinalFlag();
-
-        this.createBike(pathList);
+        this.createGameContent();
 
         this.gameStatus = "play";
         this.gameLoopFunc = this.play.bind(this);
@@ -351,8 +355,40 @@ class GameScene extends Scene {
         }
     }
 
+    createBottomMask() {
+        let canvas = Utils.createLinearGradientMask(config.designWidth, config.maskHeight, config.maskColorStop);
+        let texture = Texture.fromCanvas(canvas);
+        let sprite = new Sprite(texture);
+        sprite.anchor.set(0, 1);
+        sprite.position.set(0, config.designHeight);
+        this.gameContainer.addChild(sprite);
+    }
+
+    createFPSText() {
+        let style = new TextStyle({
+            fill: "white",
+            stroke: '#ff3300',
+            strokeThickness: 1,
+        });
+        this.fpsText = new Text("FPS:0", style);
+        this.fpsText.anchor.set(0, 0);
+        this.addChild(this.fpsText);
+    }
+
+    createScoreText() {
+        let style = new TextStyle({
+            fill: "white",
+            stroke: '#ff3300',
+            strokeThickness: 1,
+        });
+        this.scoreText = new Text("", style);
+        this.scoreText.anchor.set(1, 0);
+        this.scoreText.position.set(app.sceneWidth, 0);
+        this.addChild(this.scoreText);
+    }
+
     createBg() {
-        this.mapConfig.texture.bg.forEach(texturePath => {
+        this.bgTextureList.forEach(texturePath => {
             let container = new Container();
             this.cameraContainer.addChild(container);
             let texture = resources[texturePath].texture;
@@ -366,19 +402,7 @@ class GameScene extends Scene {
         });
     }
 
-    createFinalFlag() {
-        let sprite = new Sprite(resources[config.finalFlagImagePath].texture);
-        sprite.anchor.set(0.5, 1);
-        sprite.scale.set(0.5, 0.5);
-        sprite.position.set(this.finalPoint.x, this.finalPoint.y);
-        this.closeViewContainer.addChild(sprite);
-    }
-
-    createBike(pathList) {
-        let pp = GameUtil.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
-        pp.x += config.bikeRadius;
-        pp.y += config.bikeRadius;
-
+    createBike(pp) {
         let rp = GameUtil.physicsPos2renderPos(pp);
 
         this.bikeSprite = new Sprite(resources[config.bikeAtlasPath].textures["0"]);
@@ -395,6 +419,226 @@ class GameScene extends Scene {
         this.jumpCount = 0;
         this.bikeFrameCount = Utils.keys(resources[config.bikeAtlasPath].textures).length;
         this.bikeFrame = 0;
+    }
+
+    gameLoop(delta) {
+        this.gameLoopFunc(delta);
+    }
+
+    play(delta) {
+        this.fpsText.text = `FPS:${Math.floor(delta * config.fps)}`;
+
+        this.world.step(1 / config.fps);
+
+        let velocity = this.bikeBody.getLinearVelocity();
+        let bikePhysicsPos = this.bikeBody.getPosition();
+
+        this.syncBikeSprite(velocity, bikePhysicsPos);
+
+        this.syncBirdSprite();
+
+        this.judgeGameLose(velocity, bikePhysicsPos);
+
+        this.judgeGameWin(bikePhysicsPos);
+
+        this.moveCamera();
+
+        this.keepBikeMove(velocity);
+
+        this.keepBirdMove();
+    }
+
+    pause() {
+    }
+
+    updateScoreText(score) {
+        this.score = score;
+        this.scoreText.text = `SCORE:${this.score}`;
+    }
+
+    accelerateBike() {
+        this.bikeAccFrame = 0;
+    }
+
+    syncBikeSprite(velocity, bikePhysicsPos) {
+        let bikeRenderPos = GameUtil.physicsPos2renderPos(bikePhysicsPos);
+        this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
+        if (this.gameStatus === "end") {
+            this.bikeSprite.rotation = this.bikeBody.getAngle();
+        } else if (!this.jumping) {
+            this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
+
+            this.bikeFrame += 1;
+            if (this.bikeFrame >= this.bikeFrameCount) {
+                this.bikeFrame = 0;
+            }
+            this.bikeSprite.texture = resources[config.bikeAtlasPath].textures[`${this.bikeFrame}`];
+        }
+    }
+
+    judgeGameLose(velocity, bikePhysicsPos) {
+        if (this.gameStatus === "play" && bikePhysicsPos.y < config.bikeGameOverHeight) {
+            this.gameStatus = "end";
+            app.showScene("GameOverScene", "Game Over");
+        }
+        if (this.gameStatus === "play" && this.isContactFatalEdge) {
+            this.gameStatus = "end";
+            this.bikeBody.setLinearVelocity(Vec2(0, 0));
+            this.bikeBody.setAngularVelocity(config.bikeGameOverAngularVelocity);
+            this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
+            app.showScene("GameOverScene", "Game Over");
+        }
+    }
+
+    judgeGameWin(bikePhysicsPos) {
+        if (this.gameStatus === "play"
+            && this.finalPoint
+            && bikePhysicsPos.x > GameUtil.renderPos2PhysicsPos(this.finalPoint).x) {
+            this.gameStatus = "win";
+            app.showScene("GameOverScene", "Game Win");
+        }
+    }
+
+    moveCamera() {
+        if (this.gameStatus === "play") {
+            let oldCameraX = this.cameraContainer.position.x;
+            let oldCameraY = this.cameraContainer.position.y;
+
+            this.cameraContainer.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
+
+            let bikeY = this.cameraContainer.position.y + this.bikeSprite.position.y;
+            if (bikeY < config.bikeCameraMinY) {
+                this.cameraContainer.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
+            } else if (bikeY > config.bikeCameraMaxY) {
+                this.cameraContainer.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
+            }
+
+            let cameraMoveX = this.cameraContainer.position.x - oldCameraX;
+            let cameraMoveY = this.cameraContainer.position.y - oldCameraY;
+
+            this.cameraContainer.children.forEach((child, index) => {
+                child.position.x -= cameraMoveX * this.horizontalParallaxDepth[index];
+                child.position.y -= cameraMoveY * this.verticalParallaxDepth[index];
+            });
+        }
+    }
+
+    keepBikeMove(velocity) {
+        if (this.gameStatus === "play") {
+            if (this.bikeAccFrame !== undefined) {
+                if (this.bikeAccFrame >= config.accFrame) {
+                    this.bikeAccFrame = undefined;
+                    this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
+                } else {
+                    this.bikeBody.setLinearVelocity(Vec2(this.bikeAccVelocity, velocity.y));
+                    this.bikeAccFrame++;
+                }
+            } else {
+                this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
+            }
+        }
+    }
+
+    syncBirdSprite() {
+        this.birdList.forEach(bird => {
+            let pos = GameUtil.physicsPos2renderPos(bird.body.getPosition());
+            bird.sprite.position.set(pos.x, pos.y);
+        });
+    }
+
+    keepBirdMove() {
+        this.birdList.forEach(bird => {
+            let rp = GameUtil.physicsPos2renderPos(bird.body.getPosition());
+            if (-this.cameraContainer.position.x + config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
+                let velocity = bird.body.getLinearVelocity();
+                bird.body.setLinearVelocity(Vec2(-20, velocity.y));
+                let gravity = -6.25 * this.gravity;
+                if (bird.body.getPosition().y < bird.baseY) {
+                    bird.body.applyForceToCenter(Vec2(0, gravity * 5));
+                } else {
+                    bird.body.applyForceToCenter(Vec2(0, gravity * 0.75));
+                }
+            }
+        });
+    }
+}
+
+class MapGameScene extends GameScene {
+    onShow(mapIndex) {
+        this.mapIndex = mapIndex;
+        this.mapConfig = config.mapList[mapIndex];
+        super.onShow();
+    }
+
+    initEnvironment() {
+        this.bikeCommonVelocity = this.mapConfig.bikeVelocity || config.bikeVelocity;
+        this.bikeAccVelocity = this.mapConfig.bikeAccVelocity || config.bikeAccVelocity;
+        this.gravity = this.mapConfig.gravity || config.gravity;
+        this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
+        this.bgTextureList = this.mapConfig.texture.bg;
+        this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
+        this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
+    }
+
+    getResPathList() {
+        return super.getResPathList()
+            .concat(this.mapConfig.texture.bg)
+            .concat([
+                this.mapConfig.texture.side,
+                this.mapConfig.texture.top,
+                config.mapBasePath + this.mapConfig.sceneName + ".scene",
+            ]);
+    }
+
+    onRestart() {
+        this.onShow(this.mapIndex);
+    }
+
+    createGameContent() {
+        let pathList = this.getRoadPathList();
+
+        let lastPath = Utils.getLast(pathList);
+        this.finalPoint = {
+            x: (lastPath[lastPath.length - 6] + lastPath[lastPath.length - 4]) / 2,
+            y: (lastPath[lastPath.length - 5] + lastPath[lastPath.length - 3]) / 2,
+        };
+
+        this.createMap();
+
+        this.createFinalFlag();
+
+        let pp = GameUtil.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
+        pp.x += config.bikeRadius;
+        pp.y += config.bikeRadius;
+        this.createBike(pp);
+    }
+
+    getRoadPathList() {
+        let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+        return json.child
+            .filter(data => data.type === "Lines")
+            .map(data => {
+                let path = data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                    }
+                    return value;
+                });
+                let maxY = path[1];
+                for (let i = 1; i < path.length; i += 2) {
+                    if (path[i] > maxY) {
+                        maxY = path[i];
+                    }
+                }
+                let bottomY = maxY + app.sceneHeight / 3 * 2;
+                path = [path[0], bottomY].concat(path);
+                path = path.concat([path[path.length - 2], bottomY]);
+                return path;
+
+            });
     }
 
     createMap() {
@@ -466,204 +710,34 @@ class GameScene extends Scene {
             });
     }
 
-    createBottomMask() {
-        let canvas = Utils.createLinearGradientMask(config.designWidth, config.maskHeight, config.maskColorStop);
-        let texture = Texture.fromCanvas(canvas);
-        let sprite = new Sprite(texture);
-        sprite.anchor.set(0, 1);
-        sprite.position.set(0, config.designHeight);
-        this.gameContainer.addChild(sprite);
+    createFinalFlag() {
+        let sprite = new Sprite(resources[config.finalFlagImagePath].texture);
+        sprite.anchor.set(0.5, 1);
+        sprite.scale.set(0.5, 0.5);
+        sprite.position.set(this.finalPoint.x, this.finalPoint.y);
+        this.closeViewContainer.addChild(sprite);
+    }
+}
+
+class EndlessGameScene extends GameScene {
+    initEnvironment() {
+        super.initEnvironment();
+        this.bgTextureList = config.endlessMode.texture.bg;
     }
 
-    createFPSText() {
-        let style = new TextStyle({
-            fill: "white",
-            stroke: '#ff3300',
-            strokeThickness: 1,
-        });
-        this.fpsText = new Text("FPS:0", style);
-        this.fpsText.anchor.set(0, 0);
-        this.addChild(this.fpsText);
+    getResPathList() {
+        let emConfig = config.endlessMode;
+        return super.getResPathList()
+            .concat(emConfig.texture.bg)
+            .concat([
+                emConfig.texture.side,
+                emConfig.texture.top,
+            ])
+            .concat(emConfig.roadSectionList.map(section => `${emConfig.baseScenePath}${section.sceneName}.scene`));
     }
 
-    createScoreText() {
-        let style = new TextStyle({
-            fill: "white",
-            stroke: '#ff3300',
-            strokeThickness: 1,
-        });
-        this.scoreText = new Text("", style);
-        this.scoreText.anchor.set(1, 0);
-        this.scoreText.position.set(app.sceneWidth, 0);
-        this.addChild(this.scoreText);
-    }
-
-    updateScoreText(score) {
-        this.score = score;
-        this.scoreText.text = `SCORE:${this.score}`;
-    }
-
-    accelerateBike() {
-        this.bikeAccFrame = 0;
-    }
-
-    getRoadPathList() {
-        let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
-        return json.child
-            .filter(data => data.type === "Lines")
-            .map(data => {
-                let path = data.props.points.split(",").map((intStr, i) => {
-                    let value = parseInt(intStr);
-                    if (i % 2 === 0) {
-                        value += data.props.x;
-                    } else {
-                        value += data.props.y;
-                    }
-                    return value;
-                });
-                let maxY = path[1];
-                for (let i = 1; i < path.length; i += 2) {
-                    if (path[i] > maxY) {
-                        maxY = path[i];
-                    }
-                }
-                let bottomY = maxY + app.sceneHeight / 3 * 2;
-                path = [path[0], bottomY].concat(path);
-                path = path.concat([path[path.length - 2], bottomY]);
-                return path;
-
-            });
-    }
-
-    gameLoop(delta) {
-        this.gameLoopFunc(delta);
-    }
-
-    play(delta) {
-        this.fpsText.text = `FPS:${Math.floor(delta * config.fps)}`;
-
-        this.world.step(1 / config.fps);
-
-        let velocity = this.bikeBody.getLinearVelocity();
-        let bikePhysicsPos = this.bikeBody.getPosition();
-
-        this.syncBikeSprite(velocity, bikePhysicsPos);
-
-        this.syncBirdSprite();
-
-        this.judgeGameLose(velocity, bikePhysicsPos);
-
-        this.judgeGameWin(bikePhysicsPos);
-
-        this.moveCamera();
-
-        this.keepBikeMove(velocity);
-
-        this.keepBirdMove();
-    }
-
-    pause() {
-    }
-
-    syncBikeSprite(velocity, bikePhysicsPos) {
-        let bikeRenderPos = GameUtil.physicsPos2renderPos(bikePhysicsPos);
-        this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
-        if (this.gameStatus === "end") {
-            this.bikeSprite.rotation = this.bikeBody.getAngle();
-        } else if (!this.jumping) {
-            this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
-
-            this.bikeFrame += 1;
-            if (this.bikeFrame >= this.bikeFrameCount) {
-                this.bikeFrame = 0;
-            }
-            this.bikeSprite.texture = resources[config.bikeAtlasPath].textures[`${this.bikeFrame}`];
-        }
-    }
-
-    judgeGameLose(velocity, bikePhysicsPos) {
-        if (this.gameStatus === "play" && bikePhysicsPos.y < config.bikeGameOverHeight) {
-            this.gameStatus = "end";
-            app.showScene("GameOverScene", "Game Over");
-        }
-        if (this.gameStatus === "play" && this.isContactFatalEdge) {
-            this.gameStatus = "end";
-            this.bikeBody.setLinearVelocity(Vec2(0, 0));
-            this.bikeBody.setAngularVelocity(config.bikeGameOverAngularVelocity);
-            this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
-            app.showScene("GameOverScene", "Game Over");
-        }
-    }
-
-    judgeGameWin(bikePhysicsPos) {
-        if (this.gameStatus === "play"
-            && bikePhysicsPos.x > GameUtil.renderPos2PhysicsPos(this.finalPoint).x) {
-            this.gameStatus = "win";
-            app.showScene("GameOverScene", "Game Win");
-        }
-    }
-
-    moveCamera() {
-        if (this.gameStatus === "play") {
-            let oldCameraX = this.cameraContainer.position.x;
-            let oldCameraY = this.cameraContainer.position.y;
-
-            this.cameraContainer.position.x = config.bikeLeftMargin - this.bikeSprite.position.x;
-
-            let bikeY = this.cameraContainer.position.y + this.bikeSprite.position.y;
-            if (bikeY < config.bikeCameraMinY) {
-                this.cameraContainer.position.y = config.bikeCameraMinY - this.bikeSprite.position.y;
-            } else if (bikeY > config.bikeCameraMaxY) {
-                this.cameraContainer.position.y = config.bikeCameraMaxY - this.bikeSprite.position.y;
-            }
-
-            let cameraMoveX = this.cameraContainer.position.x - oldCameraX;
-            let cameraMoveY = this.cameraContainer.position.y - oldCameraY;
-
-            this.cameraContainer.children.forEach((child, index) => {
-                child.position.x -= cameraMoveX * this.mapConfig.horizontalParallaxDepth[index];
-                child.position.y -= cameraMoveY * this.mapConfig.verticalParallaxDepth[index];
-            });
-        }
-    }
-
-    keepBikeMove(velocity) {
-        if (this.gameStatus === "play") {
-            if (this.bikeAccFrame !== undefined) {
-                if (this.bikeAccFrame >= config.accFrame) {
-                    this.bikeAccFrame = undefined;
-                    this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
-                } else {
-                    this.bikeBody.setLinearVelocity(Vec2(this.bikeAccVelocity, velocity.y));
-                    this.bikeAccFrame++;
-                }
-            } else {
-                this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
-            }
-        }
-    }
-
-    syncBirdSprite() {
-        this.birdList.forEach(bird => {
-            let pos = GameUtil.physicsPos2renderPos(bird.body.getPosition());
-            bird.sprite.position.set(pos.x, pos.y);
-        });
-    }
-
-    keepBirdMove() {
-        this.birdList.forEach(bird => {
-            let rp = GameUtil.physicsPos2renderPos(bird.body.getPosition());
-            if (-this.cameraContainer.position.x + config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
-                let velocity = bird.body.getLinearVelocity();
-                bird.body.setLinearVelocity(Vec2(-20, velocity.y));
-                let gravity = -6.25 * this.gravity;
-                if (bird.body.getPosition().y < bird.baseY) {
-                    bird.body.applyForceToCenter(Vec2(0, gravity * 5));
-                } else {
-                    bird.body.applyForceToCenter(Vec2(0, gravity * 0.75));
-                }
-            }
-        });
+    createGameContent() {
+        this.createBike(GameUtil.renderPos2PhysicsPos({x: 360, y: 640}));
     }
 }
 
@@ -707,12 +781,14 @@ class GameOverScene extends Scene {
     }
 
     onShow(msg) {
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.gameOverText.text = msg || "Game Over";
     }
 
     onClickSelectMapText() {
         app.hideScene("GameOverScene");
-        app.hideScene("GameScene");
+        app.hideScene("MapGameScene");
+        app.hideScene("EndlessGameScene");
         app.showScene("StartScene");
     }
 

@@ -43,7 +43,7 @@
     gravity: -200,
     // 跳跃爆发力
     jumpForce: 5000,
-    mapBasePath: "myLaya/laya/pages/",
+    mapBasePath: "myLaya/laya/pages/Map/",
     finalFlagImagePath: "images/flag.png",
     // 自行车吃了加速宝石之后的速度
     bikeAccVelocity: 50,
@@ -70,6 +70,10 @@
     accGemAniJson: "images/crystal-jet-animation.json",
     fireWallAniJson: "images/firewall-animation.json",
     birdAniJson: "images/bird-animation.json",
+    // 视差背景系数：左右
+    horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
+    // 视差背景系数：上下
+    verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
 };
 
 // 地图配置
@@ -104,3 +108,26 @@ config.mapList = [
         jumpForce: 5000,
     },
 ];
+
+config.endlessMode = {
+    // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+    texture: {
+        // 侧边
+        side: "images/Taurus/TextureTaurusRoad01SideSkin.png",
+        // 底部
+        top: "images/Taurus/TextureTaurusRoad01TopSkin.png",
+        // 背景 有多少层背景就配置多少张
+        bg: [
+            "images/Taurus/TextureTaurusBackground01.png",
+            "images/Taurus/TextureTaurusBackground02.png",
+            "images/Taurus/TextureTaurusBackground03.png",
+        ]
+    },
+    baseScenePath: "myLaya/laya/pages/RoadSection/",
+    roadSectionList: [
+        {
+            // scene文件的名字
+            sceneName: "Test",
+        }
+    ]
+};
