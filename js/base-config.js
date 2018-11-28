@@ -128,6 +128,10 @@ config.endlessMode = {
         {
             // scene文件的名字
             sceneName: "Test",
-        }
+        },
+        {
+            // scene文件的名字
+            sceneName: "Test2",
+        },
     ]
 };

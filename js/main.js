@@ -239,8 +239,8 @@ class GameScene extends Scene {
     onLoadedAllRes() {
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
-        this.world.on('begin-contact', this.onBeginContact.bind(this));
-        this.world.on('pre-solve', this.onPreSolve.bind(this));
+        this.world.on("begin-contact", this.onBeginContact.bind(this));
+        this.world.on("pre-solve", this.onPreSolve.bind(this));
 
         this.createBg();
 
@@ -367,7 +367,7 @@ class GameScene extends Scene {
     createFPSText() {
         let style = new TextStyle({
             fill: "white",
-            stroke: '#ff3300',
+            stroke: "#ff3300",
             strokeThickness: 1,
         });
         this.fpsText = new Text("FPS:0", style);
@@ -378,7 +378,7 @@ class GameScene extends Scene {
     createScoreText() {
         let style = new TextStyle({
             fill: "white",
-            stroke: '#ff3300',
+            stroke: "#ff3300",
             strokeThickness: 1,
         });
         this.scoreText = new Text("", style);
@@ -402,8 +402,69 @@ class GameScene extends Scene {
         });
     }
 
+    createPart(data) {
+        let type = GameUtils.getItemType(data);
+        switch (type) {
+            case "Road": {
+                let path = data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                    }
+                    return value;
+                });
+                let maxY = path[1];
+                for (let i = 1; i < path.length; i += 2) {
+                    if (path[i] > maxY) {
+                        maxY = path[i];
+                    }
+                }
+                let bottomY = maxY + app.sceneHeight / 3 * 2;
+                path = [path[0], bottomY]
+                    .concat(path)
+                    .concat([path[path.length - 2], bottomY]);
+                let road = new Road(this.world, path, this.sideTexture, this.topTexture,);
+                this.closeViewContainer.addChild(road.sprite);
+                break;
+            }
+            case "GoldCoin": {
+                let item = new GoldCoin(data, this.world);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+            case "AccGem": {
+                let item = new AccGem(data, this.world);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+            case "BigFireWall": {
+                let item = new BigFireWall(data, this.world);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+            case "SmallFireWall": {
+                let item = new SmallFireWall(data, this.world);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+            case "BlackBird": {
+                let item = new BlackBird(data, this.world);
+                this.birdList.push(item);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+            default : {
+                let item = new Item(data, this.world);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+        }
+    }
+
     createBike(pp) {
-        let rp = GameUtil.physicsPos2renderPos(pp);
+        let rp = GameUtils.physicsPos2renderPos(pp);
 
         this.bikeSprite = new Sprite(resources[config.bikeAtlasPath].textures["0"]);
         this.closeViewContainer.addChild(this.bikeSprite);
@@ -443,6 +504,12 @@ class GameScene extends Scene {
 
         this.moveCamera();
 
+        this.cleanPartOutOfView();
+
+        if (this.dynamicCreateRoad) {
+            this.dynamicCreateRoad();
+        }
+
         this.keepBikeMove(velocity);
 
         this.keepBirdMove();
@@ -461,7 +528,7 @@ class GameScene extends Scene {
     }
 
     syncBikeSprite(velocity, bikePhysicsPos) {
-        let bikeRenderPos = GameUtil.physicsPos2renderPos(bikePhysicsPos);
+        let bikeRenderPos = GameUtils.physicsPos2renderPos(bikePhysicsPos);
         this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
         if (this.gameStatus === "end") {
             this.bikeSprite.rotation = this.bikeBody.getAngle();
@@ -493,7 +560,7 @@ class GameScene extends Scene {
     judgeGameWin(bikePhysicsPos) {
         if (this.gameStatus === "play"
             && this.finalPoint
-            && bikePhysicsPos.x > GameUtil.renderPos2PhysicsPos(this.finalPoint).x) {
+            && bikePhysicsPos.x > GameUtils.renderPos2PhysicsPos(this.finalPoint).x) {
             this.gameStatus = "win";
             app.showScene("GameOverScene", "Game Win");
         }
@@ -523,6 +590,14 @@ class GameScene extends Scene {
         }
     }
 
+    cleanPartOutOfView() {
+        this.closeViewContainer.children.forEach(child => {
+            if (child.part && child.part.getRightBorderX() < -this.cameraContainer.position.x) {
+                child.part.destroy();
+            }
+        });
+    }
+
     keepBikeMove(velocity) {
         if (this.gameStatus === "play") {
             if (this.bikeAccFrame !== undefined) {
@@ -541,14 +616,14 @@ class GameScene extends Scene {
 
     syncBirdSprite() {
         this.birdList.forEach(bird => {
-            let pos = GameUtil.physicsPos2renderPos(bird.body.getPosition());
+            let pos = GameUtils.physicsPos2renderPos(bird.body.getPosition());
             bird.sprite.position.set(pos.x, pos.y);
         });
     }
 
     keepBirdMove() {
         this.birdList.forEach(bird => {
-            let rp = GameUtil.physicsPos2renderPos(bird.body.getPosition());
+            let rp = GameUtils.physicsPos2renderPos(bird.body.getPosition());
             if (-this.cameraContainer.position.x + config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 let velocity = bird.body.getLinearVelocity();
                 bird.body.setLinearVelocity(Vec2(-20, velocity.y));
@@ -578,6 +653,9 @@ class MapGameScene extends GameScene {
         this.bgTextureList = this.mapConfig.texture.bg;
         this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
         this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
+
+        this.sideTexture = this.mapConfig.texture.side;
+        this.topTexture = this.mapConfig.texture.top;
     }
 
     getResPathList() {
@@ -607,7 +685,7 @@ class MapGameScene extends GameScene {
 
         this.createFinalFlag();
 
-        let pp = GameUtil.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
+        let pp = GameUtils.renderPos2PhysicsPos({x: pathList[0][2] + config.bikeLeftMargin, y: pathList[0][3]});
         pp.x += config.bikeRadius;
         pp.y += config.bikeRadius;
         this.createBike(pp);
@@ -643,71 +721,7 @@ class MapGameScene extends GameScene {
 
     createMap() {
         let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
-        return json.child
-            .map(data => {
-                let type = GameUtil.getItemType(data);
-                switch (type) {
-                    case "Road": {
-                        let path = data.props.points.split(",").map((intStr, i) => {
-                            let value = parseInt(intStr);
-                            if (i % 2 === 0) {
-                                value += data.props.x;
-                            } else {
-                                value += data.props.y;
-                            }
-                            return value;
-                        });
-                        let maxY = path[1];
-                        for (let i = 1; i < path.length; i += 2) {
-                            if (path[i] > maxY) {
-                                maxY = path[i];
-                            }
-                        }
-                        let bottomY = maxY + app.sceneHeight / 3 * 2;
-                        path = [path[0], bottomY]
-                            .concat(path)
-                            .concat([path[path.length - 2], bottomY]);
-                        this.closeViewContainer.addChild(new Road(
-                            this.world,
-                            path,
-                            this.mapConfig.texture.side,
-                            this.mapConfig.texture.top
-                        ));
-                        break;
-                    }
-                    case "GoldCoin": {
-                        let item = new GoldCoin(data, this.world);
-                        this.closeViewContainer.addChild(item.sprite);
-                        break;
-                    }
-                    case "AccGem": {
-                        let item = new AccGem(data, this.world);
-                        this.closeViewContainer.addChild(item.sprite);
-                        break;
-                    }
-                    case "BigFireWall": {
-                        let item = new BigFireWall(data, this.world);
-                        this.closeViewContainer.addChild(item.sprite);
-                        break;
-                    }
-                    case "SmallFireWall": {
-                        let item = new SmallFireWall(data, this.world);
-                        this.closeViewContainer.addChild(item.sprite);
-                        break;
-                    }
-                    case "BlackBird": {
-                        let item = new BlackBird(data, this.world);
-                        this.birdList.push(item);
-                        this.closeViewContainer.addChild(item.sprite);
-                        break;
-                    }
-                    default : {
-                        let item = new Item(data, this.world);
-                        this.closeViewContainer.addChild(item.sprite);
-                        break;
-                    }
-                }
-            });
+        json.child.forEach(data => this.createPart(data));
     }
 
     createFinalFlag() {
@@ -723,6 +737,8 @@ class EndlessGameScene extends GameScene {
     initEnvironment() {
         super.initEnvironment();
         this.bgTextureList = config.endlessMode.texture.bg;
+        this.sideTexture = config.endlessMode.texture.side;
+        this.topTexture = config.endlessMode.texture.top;
     }
 
     getResPathList() {
@@ -737,7 +753,53 @@ class EndlessGameScene extends GameScene {
     }
 
     createGameContent() {
-        this.createBike(GameUtil.renderPos2PhysicsPos({x: 360, y: 640}));
+        let emConfig = config.endlessMode;
+        let list = emConfig.roadSectionList.map(section => JSON.parse(resources[`${emConfig.baseScenePath}${section.sceneName}.scene`].data));
+        this.partList = [];
+        while (list.length !== 0) {
+            let index = Math.floor(Math.random() * list.length);
+            let item = list.splice(index, 1)[0];
+            this.partList.push(item);
+        }
+        this.mapWidth = 0;
+        this.offsetX = config.designWidth / 2;
+        this.offsetY = config.designHeight / 2;
+        while (this.mapWidth < config.designWidth && this.partList.length !== 0) {
+            let item = this.partList.pop();
+            this.createRoadSection(item, this.offsetX, this.offsetY);
+            this.mapWidth += item.props.width;
+            this.offsetX += item.props.width;
+            this.offsetY += item.props.height;
+        }
+        this.createBike(GameUtils.renderPos2PhysicsPos({x: config.designWidth / 2, y: config.designHeight / 2}));
+    }
+
+    createRoadSection(json, offsetX, offsetY) {
+        json.child.forEach(data => {
+            data.props.x += offsetX;
+            data.props.y += offsetY;
+            this.createPart(data);
+        });
+    }
+
+    dynamicCreateRoad() {
+        if (this.mapWidth <= -this.cameraContainer.x + config.designWidth) {
+            if (this.partList.length === 0) {
+                this.partList = [];
+                let emConfig = config.endlessMode;
+                let list = emConfig.roadSectionList.map(section => JSON.parse(resources[`${emConfig.baseScenePath}${section.sceneName}.scene`].data));
+                while (list.length !== 0) {
+                    let index = Math.floor(Math.random() * list.length);
+                    let item = list.splice(index, 1)[0];
+                    this.partList.push(item);
+                }
+            }
+            let item = this.partList.pop();
+            this.createRoadSection(item, this.offsetX, this.offsetY);
+            this.mapWidth += item.props.width;
+            this.offsetX += item.props.width;
+            this.offsetY += item.props.height;
+        }
     }
 }
 
@@ -798,24 +860,63 @@ class GameOverScene extends Scene {
     }
 }
 
-class Road extends Container {
+class GameUtils {
+    static physicsPos2renderPos(pp) {
+        return {
+            x: pp.x * config.meter2pixel,
+            y: config.designHeight - pp.y * config.meter2pixel
+        };
+    }
+
+    static renderPos2PhysicsPos(rp) {
+        return Vec2(
+            rp.x * config.pixel2meter,
+            (config.designHeight - rp.y) * config.pixel2meter
+        );
+    }
+
+    static hexString2Int(str) {
+        return parseInt(str.replace("#", ""), 16);
+    }
+
+    static pointsStr2path(str) {
+        return str.split(",").map(str => parseInt(str));
+    }
+
+    static path2vertices(path) {
+        let list = [];
+        for (let i = 0; i < path.length; i += 2) {
+            list.push(Vec2(path[i], path[i + 1]));
+        }
+        return list;
+    }
+
+    static getItemType(config) {
+        return config.label.split("//")[0];
+    }
+}
+
+class Road {
     constructor(world, path, sideTexturePath, topTexturePath) {
-        super();
+        this.world = world;
+        this.sprite = new Container();
+        this.sprite.part = this;
         let rect = Utils.getPathRect(path);
+        this.rect = rect;
         let pathInRoad = path.map((p, i) => i % 2 === 0 ? p - rect.x : p - rect.y);
         this.createSide(sideTexturePath, rect.width, rect.height);
         this.createTop(topTexturePath, pathInRoad);
         this.createEdgeMask(pathInRoad);
         this.createClipMask(pathInRoad);
-        this.cacheAsBitmap = true;
-        this.position.set(rect.x, rect.y);
+        this.sprite.cacheAsBitmap = true;
+        this.sprite.position.set(rect.x, rect.y);
         this.createPhysicsBody(world, path);
     }
 
     createSide(texturePath, width, height) {
         let texture = resources[texturePath].texture;
         let sprite = new TilingSprite(texture, width, height);
-        this.addChild(sprite);
+        this.sprite.addChild(sprite);
     }
 
     createTop(texturePath, path) {
@@ -825,7 +926,7 @@ class Road extends Container {
             let ep = {x: path[i + 2], y: path[i + 3]};
             let width = Utils.calcPointDistance(sp, ep);
             let sprite = new TilingSprite(texture, width, texture.height);
-            this.addChild(sprite);
+            this.sprite.addChild(sprite);
             sprite.position.set(sp.x, sp.y);
             sprite.rotation = Utils.calcRadius(sp, ep);
         }
@@ -847,7 +948,7 @@ class Road extends Container {
             let canvas = Utils.createLinearGradientMask(edgeWidth, config.edgeHeight, config.edgeColorStop);
             let texture = Texture.fromCanvas(canvas);
             let sprite = new Sprite(texture);
-            this.addChild(sprite);
+            this.sprite.addChild(sprite);
             sprite.position.set(sp.x, sp.y);
             sprite.rotation = Utils.calcRadius(sp, ep);
         });
@@ -858,7 +959,7 @@ class Road extends Container {
         graphics.beginFill();
         graphics.drawPolygon(path);
         graphics.endFill();
-        this.mask = graphics;
+        this.sprite.mask = graphics;
     }
 
     createPhysicsBody(world, path) {
@@ -870,6 +971,7 @@ class Road extends Container {
         });
 
         let body = world.createBody();
+        this.body = body;
         body.setUserData({type: "Road"});
         for (let i = 0; i < pathInPhysics.length - 4; i += 2) {
             let sp = {
@@ -899,41 +1001,14 @@ class Road extends Container {
         let angle = Math.atan(y / x);
         return config.fatalEdgeAngleRange[0] <= angle && angle <= config.fatalEdgeAngleRange[1];
     }
-}
 
-class GameUtil {
-    static physicsPos2renderPos(pp) {
-        return {
-            x: pp.x * config.meter2pixel,
-            y: config.designHeight - pp.y * config.meter2pixel
-        }
+    getRightBorderX() {
+        return this.rect.x + this.rect.width;
     }
 
-    static renderPos2PhysicsPos(rp) {
-        return Vec2(
-            rp.x * config.pixel2meter,
-            (config.designHeight - rp.y) * config.pixel2meter
-        );
-    }
-
-    static hexString2Int(str) {
-        return parseInt(str.replace("#", ""), 16);
-    }
-
-    static pointsStr2path(str) {
-        return str.split(",").map(str => parseInt(str));
-    }
-
-    static path2vertices(path) {
-        let list = [];
-        for (let i = 0; i < path.length; i += 2) {
-            list.push(Vec2(path[i], path[i + 1]));
-        }
-        return list;
-    }
-
-    static getItemType(config) {
-        return config.label.split("//")[0]
+    destroy() {
+        this.world.destroyBody(this.body);
+        this.sprite.parent.removeChild(this.sprite);
     }
 }
 
@@ -942,37 +1017,40 @@ class Item {
         this.config = config;
         this.world = world;
         this.create();
+        this.sprite.part = this;
     }
 
     create() {
         switch (this.config.type) {
             case "Circle": {
                 this.sprite = new Graphics();
-                let color = GameUtil.hexString2Int(this.config.props.fillColor);
+                let color = GameUtils.hexString2Int(this.config.props.fillColor);
                 this.sprite.beginFill(color).drawCircle(0, 0, this.config.props.radius).endFill();
                 this.sprite.position.set(this.config.props.x, this.config.props.y);
 
                 let body = this.world.createBody();
+                this.body = body;
                 body.createFixture(Circle(this.config.props.radius * config.pixel2meter), {
                     density: 0,
                     friction: 1,
                 });
-                body.setPosition(GameUtil.renderPos2PhysicsPos(this.config.props));
-                body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+                body.setPosition(GameUtils.renderPos2PhysicsPos(this.config.props));
+                body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
                 break;
             }
             case "Poly": {
                 this.sprite = new Graphics();
-                let color = GameUtil.hexString2Int(this.config.props.fillColor);
-                let path = GameUtil.pointsStr2path(this.config.props.points);
+                let color = GameUtils.hexString2Int(this.config.props.fillColor);
+                let path = GameUtils.pointsStr2path(this.config.props.points);
                 this.sprite.beginFill(color).drawPolygon(path).endFill();
                 this.sprite.position.set(this.config.props.x, this.config.props.y);
 
                 let body = this.world.createBody();
-                let vertices = GameUtil.path2vertices(path.map(p => p * config.pixel2meter));
+                this.body = body;
+                let vertices = GameUtils.path2vertices(path.map(p => p * config.pixel2meter));
                 body.createFixture(Polygon(vertices), {density: 0, friction: 1,});
-                body.setPosition(GameUtil.renderPos2PhysicsPos(this.config.props));
-                body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+                body.setPosition(GameUtils.renderPos2PhysicsPos(this.config.props));
+                body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
                 break;
             }
             case "Sprite": {
@@ -988,14 +1066,24 @@ class Item {
                 }
 
                 let body = this.world.createBody();
+                this.body = body;
                 let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
                 let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
                 body.createFixture(Box(width, height), {density: 0, friction: 1,});
-                body.setPosition(GameUtil.renderPos2PhysicsPos(this.config.props));
-                body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+                body.setPosition(GameUtils.renderPos2PhysicsPos(this.config.props));
+                body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
                 break;
             }
         }
+    }
+
+    getRightBorderX() {
+        return this.sprite.position.x - (this.sprite.anchor.x * this.sprite.width) + this.sprite.width;
+    }
+
+    destroy() {
+        this.world.destroyBody(this.body);
+        this.sprite.parent.removeChild(this.sprite);
     }
 }
 
@@ -1009,14 +1097,15 @@ class AniItem extends Item {
         this.sprite.play();
 
         let body = this.world.createBody();
+        this.body = body;
         let texture = this.frames[0];
         let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
         let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
         body.createFixture(Box(width, height), {density: 0, friction: 1,});
         let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
         let y = this.config.props.y + texture.height / 2 * this.sprite.scale.y;
-        body.setPosition(GameUtil.renderPos2PhysicsPos({x, y}));
-        body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+        body.setPosition(GameUtils.renderPos2PhysicsPos({x, y}));
+        body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
     }
 }
 
@@ -1085,15 +1174,16 @@ class BlackBird extends Item {
         this.sprite.play();
 
         let body = this.world.createDynamicBody();
+        this.body = body;
         let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
         let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
         let fixture = body.createFixture(Box(width, height), {density: 1, friction: 1,});
         fixture.setUserData({isFatal: true});
         let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
         let y = this.config.props.y + texture.height / 2 * this.sprite.scale.y;
-        let pp = GameUtil.renderPos2PhysicsPos({x, y});
+        let pp = GameUtils.renderPos2PhysicsPos({x, y});
         body.setPosition(pp);
-        body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
+        body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
         body.setAwake(false);
         this.body = body;
         this.baseY = pp.y;
