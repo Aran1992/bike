@@ -5,7 +5,7 @@ config.bikeVelocity = 20;
 config.gravity = -200;
 
 // 跳跃爆发力（基础：5000）
-config.jumpForce = 5000;
+config.jumpForce = 12800;
 
 // 地图配置
 config.mapList = [
@@ -36,7 +36,7 @@ config.mapList = [
         // 重力（基础：-200）
         gravity: -200,
         // 跳跃爆发力（基础：5000）
-        jumpForce: 5000,
+        jumpForce: 12800,
     },
     {
         // 显示给人看的名字
@@ -65,7 +65,7 @@ config.mapList = [
         // 重力（基础：-200）
         gravity: -200,
         // 跳跃爆发力（基础：5000）
-        jumpForce: 5000,
+        jumpForce: 12800,
     },
     {
         // 显示给人看的名字
@@ -94,7 +94,7 @@ config.mapList = [
         // 重力（基础：-200）
         gravity: -200,
         // 跳跃爆发力（基础：5000）
-        jumpForce: 5000,
+        jumpForce: 12800,
     },
     {
         // 显示给人看的名字
@@ -123,7 +123,7 @@ config.mapList = [
         // 重力（基础：-200）
         gravity: -200,
         // 跳跃爆发力（基础：5000）
-        jumpForce: 5000,
+        jumpForce: 12800,
     },
     {
         // 显示给人看的名字
@@ -152,7 +152,7 @@ config.mapList = [
         // 重力（基础：-200）
         gravity: -50,
         // 跳跃爆发力（基础：5000）
-        jumpForce: 5000,
+        jumpForce: 12800,
     },
 ];
 
@@ -160,10 +160,10 @@ config.mapList = [
 config.bikeAtlasPath = "images/tyariso_run_anim_all.png.json";
 
 // 自行车在场景中显示的尺寸是原图的多大
-config.bikeScale = 0.25;
+config.bikeScale = 0.4;
 
 // 自行车物理半径
-config.bikeRadius = 0.734375;
+config.bikeRadius = 1.175;
 
 // 自行车密度
 config.bikeDensity = 1;

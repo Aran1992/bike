@@ -22,7 +22,7 @@
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
     bikeGameOverHeight: -15,
-    bikeGameOverAngularVelocity: 1500,
+    bikeGameOverAngularVelocity: 50,
     testbedSpeed: 1,
     fps: 60,
     maskHeight: 420,

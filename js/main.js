@@ -270,6 +270,9 @@ class GameScene extends Scene {
     }
 
     onPreSolve(contact) {
+        if (this.gameStatus === "end") {
+            return contact.setEnabled(false);
+        }
         let bodyList = [
             contact.getFixtureA().getBody(),
             contact.getFixtureB().getBody(),
@@ -298,6 +301,8 @@ class GameScene extends Scene {
                     }
                 }
             }
+        } else if (bodyList.find(b => b.getUserData() && b.getUserData().type === "BlackBird")) {
+            contact.setEnabled(false);
         }
     }
 
@@ -585,7 +590,7 @@ class GameScene extends Scene {
             this.gameStatus = "end";
             this.bikeBody.setLinearVelocity(Vec2(0, 0));
             this.bikeBody.setAngularVelocity(config.bikeGameOverAngularVelocity);
-            this.bikeBody.applyForceToCenter(Vec2(-2500, 5000));
+            this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
             app.showScene("GameOverScene", "Game Over");
         }
     }
@@ -651,10 +656,12 @@ class GameScene extends Scene {
             if (-this.cameraContainer.position.x + config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 let velocity = bird.body.getLinearVelocity();
                 bird.body.setLinearVelocity(Vec2(-20, velocity.y));
-                if (bird.count % 36 === 0) {
-                    bird.body.applyLinearImpulse(Vec2(0, 70), bird.body.getPosition());
+                let gravity = -6.25 * this.gravity;
+                if (bird.body.getPosition().y < bird.baseY) {
+                    bird.body.applyForceToCenter(Vec2(0, gravity * 5));
+                } else {
+                    bird.body.applyForceToCenter(Vec2(0, gravity * 0.75));
                 }
-                bird.count++;
             }
         });
     }
@@ -1004,15 +1011,16 @@ class BlackBird extends Item {
         let body = this.world.createDynamicBody();
         let width = texture.width / 2 * this.sprite.scale.x * config.pixel2meter;
         let height = texture.height / 2 * this.sprite.scale.y * config.pixel2meter;
-        let fixture = body.createFixture(Box(width, height), {density: 0.25, friction: 1,});
+        let fixture = body.createFixture(Box(width, height), {density: 1, friction: 1,});
         fixture.setUserData({isFatal: true});
         let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
         let y = this.config.props.y + texture.height / 2 * this.sprite.scale.y;
-        body.setPosition(GameUtil.renderPos2PhysicsPos({x, y}));
+        let pp = GameUtil.renderPos2PhysicsPos({x, y});
+        body.setPosition(pp);
         body.setUserData({type: GameUtil.getItemType(this.config), sprite: this.sprite});
         body.setAwake(false);
         this.body = body;
-        this.count = 0;
+        this.baseY = pp.y;
     }
 }
 
