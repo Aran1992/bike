@@ -129,39 +129,41 @@ class StartScene extends Scene {
         let textContainer = new Container();
         this.addChild(textContainer);
         let x = app.sceneWidth / 2;
-        let textListHeight = config.startScene.mapText.fontSize * (config.mapList.length + 1);
+        let textListHeight = config.startScene.mapText.fontSize * (config.mapList.length + config.endlessMode.sceneList.length);
         let y = (app.sceneHeight - textListHeight) / 2;
         textContainer.position.set(x, y);
 
-        let textStyle = new TextStyle(config.startScene.mapText);
+        let textStyle = new TextStyle(config.startScene.endlessText);
+        config.endlessMode.sceneList.forEach((section, index) => {
+            let text = new Text(`Endless-${index}:${section.showName}`, textStyle);
+            textContainer.addChild(text);
+            text.anchor.set(0.5, 0);
+            text.position.set(0, text.height * index);
+            text.interactive = true;
+            text.buttonMode = true;
+            text.on("pointerdown", () => this.onClickEndlessModeText(index));
+        });
 
-        let emText = new Text("Endless Mode", textStyle);
-        textContainer.addChild(emText);
-        emText.anchor.set(0.5, 0);
-        emText.position.set(0, 0);
-        emText.interactive = true;
-        emText.buttonMode = true;
-        emText.on("pointerdown", () => this.onClickEndlessModeText());
-
+        textStyle = new TextStyle(config.startScene.mapText);
         config.mapList.forEach((mapConfig, mapIndex) => {
             let text = new Text(`MAP-${mapIndex}: ${mapConfig.showName}`, textStyle);
             textContainer.addChild(text);
             text.anchor.set(0.5, 0);
-            text.position.set(0, text.height * (mapIndex + 1));
+            text.position.set(0, text.height * (mapIndex + config.endlessMode.sceneList.length));
             text.interactive = true;
             text.buttonMode = true;
             text.on("pointerdown", () => this.onClickMapText(mapIndex));
         });
     }
 
-    onClickEndlessModeText(mapIndex) {
+    onClickEndlessModeText(index) {
         app.hideScene("StartScene");
-        app.showScene("EndlessGameScene", mapIndex);
+        app.showScene("EndlessGameScene", index);
     }
 
-    onClickMapText(mapIndex) {
+    onClickMapText(index) {
         app.hideScene("StartScene");
-        app.showScene("MapGameScene", mapIndex);
+        app.showScene("MapGameScene", index);
     }
 }
 
@@ -212,15 +214,6 @@ class GameScene extends Scene {
         app.loadResources(this.getResPathList(), this.onLoadedAllRes.bind(this));
     }
 
-    initEnvironment() {
-        this.bikeCommonVelocity = config.bikeVelocity;
-        this.bikeAccVelocity = config.bikeAccVelocity;
-        this.gravity = config.gravity;
-        this.jumpForce = config.jumpForce;
-        this.horizontalParallaxDepth = config.horizontalParallaxDepth;
-        this.verticalParallaxDepth = config.verticalParallaxDepth;
-    }
-
     getResPathList() {
         return [
             config.bikeAtlasPath,
@@ -247,7 +240,7 @@ class GameScene extends Scene {
         this.closeViewContainer = new Container();
         this.cameraContainer.addChild(this.closeViewContainer);
 
-        this.createGameContent();
+        this.initGameContent();
 
         this.gameStatus = "play";
         this.gameLoopFunc = this.play.bind(this);
@@ -651,11 +644,10 @@ class MapGameScene extends GameScene {
         this.gravity = this.mapConfig.gravity || config.gravity;
         this.jumpForce = this.mapConfig.jumpForce || config.jumpForce;
         this.bgTextureList = this.mapConfig.texture.bg;
-        this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
-        this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
-
         this.sideTexture = this.mapConfig.texture.side;
         this.topTexture = this.mapConfig.texture.top;
+        this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
+        this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
     }
 
     getResPathList() {
@@ -664,7 +656,7 @@ class MapGameScene extends GameScene {
             .concat([
                 this.mapConfig.texture.side,
                 this.mapConfig.texture.top,
-                config.mapBasePath + this.mapConfig.sceneName + ".scene",
+                config.mapBasePath + this.mapConfig.scenePath + ".scene",
             ]);
     }
 
@@ -672,7 +664,7 @@ class MapGameScene extends GameScene {
         this.onShow(this.mapIndex);
     }
 
-    createGameContent() {
+    initGameContent() {
         let pathList = this.getRoadPathList();
 
         let lastPath = Utils.getLast(pathList);
@@ -692,7 +684,7 @@ class MapGameScene extends GameScene {
     }
 
     getRoadPathList() {
-        let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+        let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
         return json.child
             .filter(data => data.type === "Lines")
             .map(data => {
@@ -720,7 +712,7 @@ class MapGameScene extends GameScene {
     }
 
     createMap() {
-        let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.sceneName + ".scene"].data);
+        let json = JSON.parse(resources[config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
         json.child.forEach(data => this.createPart(data));
     }
 
@@ -734,44 +726,69 @@ class MapGameScene extends GameScene {
 }
 
 class EndlessGameScene extends GameScene {
+    onShow(sceneIndex) {
+        this.sceneIndex = sceneIndex;
+        this.sceneConfig = config.endlessMode.sceneList[sceneIndex];
+        super.onShow();
+    }
+
     initEnvironment() {
-        super.initEnvironment();
-        this.bgTextureList = config.endlessMode.texture.bg;
-        this.sideTexture = config.endlessMode.texture.side;
-        this.topTexture = config.endlessMode.texture.top;
+        this.bikeCommonVelocity = this.sceneConfig.bikeVelocity || config.bikeVelocity;
+        this.bikeAccVelocity = this.sceneConfig.bikeAccVelocity || config.bikeAccVelocity;
+        this.gravity = this.sceneConfig.gravity || config.gravity;
+        this.jumpForce = this.sceneConfig.jumpForce || config.jumpForce;
+        this.bgTextureList = this.sceneConfig.texture.bg;
+        this.sideTexture = this.sceneConfig.texture.side;
+        this.topTexture = this.sceneConfig.texture.top;
+        this.horizontalParallaxDepth = this.sceneConfig.horizontalParallaxDepth;
+        this.verticalParallaxDepth = this.sceneConfig.verticalParallaxDepth;
     }
 
     getResPathList() {
-        let emConfig = config.endlessMode;
         return super.getResPathList()
-            .concat(emConfig.texture.bg)
+            .concat(this.sceneConfig.texture.bg)
             .concat([
-                emConfig.texture.side,
-                emConfig.texture.top,
+                this.sceneConfig.texture.side,
+                this.sceneConfig.texture.top,
             ])
-            .concat(emConfig.roadSectionList.map(section => `${emConfig.baseScenePath}${section.sceneName}.scene`));
+            .concat(this.sceneConfig.roadSectionList.reduce((list, diff) =>
+                list.concat(diff.map(section =>
+                    `${config.endlessMode.baseScenePath}${section.scenePath}.scene`)), []));
     }
 
-    createGameContent() {
-        let emConfig = config.endlessMode;
-        let list = emConfig.roadSectionList.map(section => JSON.parse(resources[`${emConfig.baseScenePath}${section.sceneName}.scene`].data));
+    onRestart() {
+        this.onShow(this.sceneIndex);
+    }
+
+    initGameContent() {
+        this.diffIndex = 0;
+        let roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
+            JSON.parse(resources[`${config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+
         this.partList = [];
-        while (list.length !== 0) {
-            let index = Math.floor(Math.random() * list.length);
-            let item = list.splice(index, 1)[0];
+        while (roadSectionList.length !== 0) {
+            let index = Math.floor(Math.random() * roadSectionList.length);
+            let item = roadSectionList.splice(index, 1)[0];
             this.partList.push(item);
         }
-        this.mapWidth = 0;
-        this.offsetX = config.designWidth / 2;
+
+        this.createPart({
+            label: "Road",
+            props: {
+                points: [0, config.designHeight / 2, config.designWidth, config.designHeight / 2].join(","),
+                x: 0,
+                y: 0,
+            }
+        });
+
+        this.mapWidth = config.designWidth;
+        this.offsetX = config.designWidth;
         this.offsetY = config.designHeight / 2;
-        while (this.mapWidth < config.designWidth && this.partList.length !== 0) {
-            let item = this.partList.pop();
-            this.createRoadSection(item, this.offsetX, this.offsetY);
-            this.mapWidth += item.props.width;
-            this.offsetX += item.props.width;
-            this.offsetY += item.props.height;
-        }
-        this.createBike(GameUtils.renderPos2PhysicsPos({x: config.designWidth / 2, y: config.designHeight / 2}));
+
+        this.createBike(GameUtils.renderPos2PhysicsPos({
+            x: config.designWidth / 2,
+            y: config.designHeight / 2 - config.bikeRadius * config.meter2pixel
+        }));
     }
 
     createRoadSection(json, offsetX, offsetY) {
@@ -785,9 +802,12 @@ class EndlessGameScene extends GameScene {
     dynamicCreateRoad() {
         if (this.mapWidth <= -this.cameraContainer.x + config.designWidth) {
             if (this.partList.length === 0) {
+                if (this.sceneConfig.roadSectionList[this.diffIndex + 1]) {
+                    this.diffIndex++;
+                }
+                let list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
+                    JSON.parse(resources[`${config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
                 this.partList = [];
-                let emConfig = config.endlessMode;
-                let list = emConfig.roadSectionList.map(section => JSON.parse(resources[`${emConfig.baseScenePath}${section.sceneName}.scene`].data));
                 while (list.length !== 0) {
                     let index = Math.floor(Math.random() * list.length);
                     let item = list.splice(index, 1)[0];
