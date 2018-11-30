@@ -1,26 +1,30 @@
 {
-  "name": "bike",
+  "name": "bike-ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aran1992/bike.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Aran1992/bike/issues"
-  },
-  "homepage": "https://github.com/Aran1992/bike#readme",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "http-server": "^0.11.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "pixi.js": "^4.8.2"
+    "pixi.js": "^4.8.2",
+    "planck-js": "^0.3.0-rc.2"
   }
 }

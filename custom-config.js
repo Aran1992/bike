@@ -1,14 +1,16 @@
-﻿// 自行车速度（基础：20）
-config.bikeVelocity = 20;
+import Config from "./src/config/base-config";
+
+// 自行车速度（基础：20）
+Config.bikeVelocity = 20;
 
 // 重力（基础：-200）
-config.gravity = -200;
+Config.gravity = -200;
 
 // 跳跃爆发力（基础：5000）
-config.jumpForce = 12800;
+Config.jumpForce = 12800;
 
 // 地图配置
-config.mapList = [
+Config.mapList = [
     {
         // 显示给人看的名字
         showName: "Basic",
@@ -157,22 +159,22 @@ config.mapList = [
 ];
 
 // 自行车图集
-config.bikeAtlasPath = "images/tyariso_run_anim_all.png.json";
+Config.bikeAtlasPath = "images/tyariso_run_anim_all.png.json";
 
 // 自行车在场景中显示的尺寸是原图的多大
-config.bikeScale = 0.4;
+Config.bikeScale = 0.4;
 
 // 自行车物理半径
-config.bikeRadius = 1.175;
+Config.bikeRadius = 1.175;
 
 // 自行车密度
-config.bikeDensity = 1;
+Config.bikeDensity = 1;
 
 // 自行车跳跃的时候的旋转角度 顺时针旋转是正数
-config.bikeJumpingRotation = -30;
+Config.bikeJumpingRotation = -30;
 
 // 无尽模式配置
-config.endlessMode.sceneList = [
+Config.endlessMode.sceneList = [
     {
         // 显示给人看的名字
         showName: "Test",
@@ -223,3 +225,5 @@ config.endlessMode.sceneList = [
         ]
     },
 ];
+
+export default Config;

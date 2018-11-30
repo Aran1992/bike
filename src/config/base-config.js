@@ -1,4 +1,4 @@
-﻿let config = {
+let Config = {
     designWidth: 720,
     designHeight: 1280,
     resolution: 1,
@@ -81,7 +81,7 @@
 };
 
 // 地图配置
-config.mapList = [
+Config.mapList = [
     {
         // 显示给人看的名字
         showName: "Test",
@@ -113,11 +113,11 @@ config.mapList = [
     },
 ];
 
-config.endlessMode = {
+Config.endlessMode = {
     baseScenePath: "myLaya/laya/pages/RoadSection/",
 };
 
-config.endlessMode.sceneList = [
+Config.endlessMode.sceneList = [
     {
         // 显示给人看的名字
         showName: "Test",
@@ -168,3 +168,5 @@ config.endlessMode.sceneList = [
         ]
     },
 ];
+
+export default Config;

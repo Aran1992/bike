@@ -1,51 +1,20 @@
-class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-}
-
-function flattenPoints(points) {
-    let arr = [];
-    points.forEach(point => arr.push(point.x, point.y));
-    return arr;
-}
-
-function antiFlattenPoints(coordinates) {
-    let arr = [];
-    let len = coordinates.length / 2;
-    for (let i = 0; i < len; i++) {
-        arr.push(new Point(coordinates[i * 2], coordinates[i * 2 + 1]));
-    }
-    return arr;
-}
-
-function angle2radius(angle) {
-    return angle / 180 * Math.PI;
-}
-
-function radius2angle(radius) {
-    return radius / Math.PI * 180;
-}
-
-function isPC() {
-    return navigator.platform === "Win32";
-}
-
-class Utils {
-    static removeItemFromArray(arr, item) {
-        let index = arr.indexOf(item);
-        while (index !== -1) {
-            arr.splice(index, 1);
-            index = arr.indexOf(item);
+export default class Utils {
+    static removeItemFromArray(array, item) {
+        let index = array.findIndex(item_ => item === item_);
+        if (index !== -1) {
+            array.splice(index, 1);
         }
     }
 
+    static angle2radius(angle) {
+        return angle / 180 * Math.PI;
+    }
+
     static createLinearGradientMask(width, height, colorStop) {
-        let canvas = document.createElement('canvas');
+        let canvas = document.createElement("canvas");
         canvas.width = `${width}`;
         canvas.height = `${height}`;
-        let ctx = canvas.getContext('2d');
+        let ctx = canvas.getContext("2d");
         let gradient = ctx.createLinearGradient(0, 0, 0, height);
         colorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
         ctx.fillStyle = gradient;
