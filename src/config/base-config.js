@@ -21,7 +21,6 @@ let Config = {
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
-    bikeGameOverHeight: -15,
     bikeGameOverAngularVelocity: 50,
     testbedSpeed: 1,
     fps: 60,
@@ -80,6 +79,7 @@ let Config = {
     verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
     // 背景的Y轴位置
     bgY: [0, 280, 560],
+    bikeGameOverOffsetHeight: 10,
 };
 
 // 地图配置
@@ -172,5 +172,7 @@ Config.endlessMode.sceneList = [
         ]
     },
 ];
+
+// Config.debug = true;
 
 export default Config;

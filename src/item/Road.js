@@ -2,9 +2,32 @@ import Config from "../config";
 import {Container, Graphics, resources, Sprite, Texture, TilingSprite} from "../libs/pixi-wrapper";
 import {Edge, Vec2} from "../libs/planck-wrapper";
 import Utils from "../mgr/Utils";
+import {App} from "../main";
 
 export default class Road {
     constructor(world, path, sideTexturePath, topTexturePath) {
+        this.lowestTopY = path.reduce((max, y, i) => {
+            if (i % 2 === 1) {
+                if (max === undefined) {
+                    return y;
+                } else {
+                    return y > max ? y : max;
+                }
+            }
+            return max;
+        }, path[1]);
+
+        let maxY = path[1];
+        for (let i = 1; i < path.length; i += 2) {
+            if (path[i] > maxY) {
+                maxY = path[i];
+            }
+        }
+        let bottomY = maxY + App.sceneHeight / 3 * 2;
+        path = [path[0], bottomY]
+            .concat(path)
+            .concat([path[path.length - 2], bottomY]);
+
         this.world = world;
         this.sprite = new Container();
         this.sprite.part = this;
@@ -111,6 +134,22 @@ export default class Road {
 
     getRightBorderX() {
         return this.rect.x + this.rect.width;
+    }
+
+    getLeftBorderX() {
+        return this.rect.x;
+    }
+
+    getBottomBorderX() {
+        return this.rect.y + this.rect.height;
+    }
+
+    getTopBorderY() {
+        return this.rect.y;
+    }
+
+    getLowestTopY() {
+        return this.lowestTopY;
     }
 
     destroy() {

@@ -5,7 +5,7 @@ import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
-import {Container, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {Container, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
 
 import Road from "../item/Road";
 import Item from "../item/Item";
@@ -26,10 +26,16 @@ export default class GameScene extends Scene {
         this.addChild(this.gameContainer);
         let scale = App.sceneHeight / Config.designHeight;
         this.gameContainer.scale.set(scale, scale);
-        this.gameContainer.position.set.x = (App.sceneWidth - scale * Config.designWidth) / 2;
+        this.gameContainer.x = (App.sceneWidth - scale * Config.designWidth) / 2;
         this.gameContainer.interactive = true;
         this.gameContainer.buttonMode = true;
         this.gameContainer.on("pointerdown", this.onClickGameContainer.bind(this));
+
+        if (Config.debug) {
+            let scale = 0.5;
+            this.gameContainer.scale.set(scale, scale);
+            this.gameContainer.position.set(this.gameContainer.x + Config.designWidth * scale / 2, Config.designHeight * scale / 2);
+        }
 
         this.cameraContainer = new Container();
         this.gameContainer.addChild(this.cameraContainer);
@@ -54,6 +60,7 @@ export default class GameScene extends Scene {
         this.cameraContainer.position.set(0, 0);
 
         this.birdList = [];
+        this.roadList = [];
 
         this.bikeAccFrame = undefined;
 
@@ -87,6 +94,17 @@ export default class GameScene extends Scene {
 
         this.closeViewContainer = new Container();
         this.cameraContainer.addChild(this.closeViewContainer);
+
+        if (Config.debug) {
+            let graphics = new Graphics();
+            this.cameraContainer.addChild(graphics);
+            graphics.lineStyle(10, 0xffd900, 1);
+            graphics.moveTo(0, 0);
+            graphics.lineTo(Config.designWidth, 0);
+            graphics.lineTo(Config.designWidth, Config.designHeight);
+            graphics.lineTo(0, Config.designHeight);
+            graphics.lineTo(0, 0);
+        }
 
         this.initGameContent();
 
@@ -258,17 +276,8 @@ export default class GameScene extends Scene {
                     }
                     return value;
                 });
-                let maxY = path[1];
-                for (let i = 1; i < path.length; i += 2) {
-                    if (path[i] > maxY) {
-                        maxY = path[i];
-                    }
-                }
-                let bottomY = maxY + App.sceneHeight / 3 * 2;
-                path = [path[0], bottomY]
-                    .concat(path)
-                    .concat([path[path.length - 2], bottomY]);
                 let road = new Road(this.world, path, this.sideTexture, this.topTexture,);
+                this.roadList.push(road);
                 this.closeViewContainer.addChild(road.sprite);
                 break;
             }
@@ -347,7 +356,7 @@ export default class GameScene extends Scene {
 
         this.moveCamera();
 
-        this.moveBg();
+        this.scrollBg();
 
         this.cleanPartOutOfView();
 
@@ -389,9 +398,12 @@ export default class GameScene extends Scene {
     }
 
     judgeGameLose(velocity, bikePhysicsPos) {
-        if (this.gameStatus === "play" && bikePhysicsPos.y < Config.bikeGameOverHeight) {
-            this.gameStatus = "end";
-            App.showScene("GameOverScene", "Game Over");
+        if (this.gameStatus === "play") {
+            let lowestRoadTopY = this.findLowestRoadTopY();
+            if (bikePhysicsPos.y < GameUtils.renderY2PhysicsY(lowestRoadTopY) - Config.bikeGameOverOffsetHeight) {
+                this.gameStatus = "end";
+                App.showScene("GameOverScene", "Game Over");
+            }
         }
         if (this.gameStatus === "play" && this.isContactFatalEdge) {
             this.gameStatus = "end";
@@ -413,32 +425,60 @@ export default class GameScene extends Scene {
 
     moveCamera() {
         if (this.gameStatus === "play") {
-            let oldCameraX = this.cameraContainer.position.x;
-            let oldCameraY = this.cameraContainer.position.y;
+            let oldCameraX = this.cameraContainer.x;
+            let oldCameraY = this.cameraContainer.y;
 
-            this.cameraContainer.position.x = Config.bikeLeftMargin - this.bikeSprite.position.x;
+            this.cameraContainer.x = Config.bikeLeftMargin - this.bikeSprite.x;
 
-            let bikeY = this.cameraContainer.position.y + this.bikeSprite.position.y;
+            let bikeY = this.cameraContainer.y + this.bikeSprite.y;
             if (bikeY < Config.bikeCameraMinY) {
-                this.cameraContainer.position.y = Config.bikeCameraMinY - this.bikeSprite.position.y;
+                this.cameraContainer.y = Config.bikeCameraMinY - this.bikeSprite.y;
             } else if (bikeY > Config.bikeCameraMaxY) {
-                this.cameraContainer.position.y = Config.bikeCameraMaxY - this.bikeSprite.position.y;
+                this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeSprite.y;
             }
 
-            let cameraMoveX = this.cameraContainer.position.x - oldCameraX;
-            let cameraMoveY = this.cameraContainer.position.y - oldCameraY;
+            let cameraMoveX = this.cameraContainer.x - oldCameraX;
+            let cameraMoveY = this.cameraContainer.y - oldCameraY;
 
             this.cameraContainer.children.forEach((child, index) => {
-                child.position.x -= cameraMoveX * this.horizontalParallaxDepth[index];
-                child.position.y -= cameraMoveY * this.verticalParallaxDepth[index];
+                let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
+                let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
+                child.position.x -= cameraMoveX * hpd;
+                child.position.y -= cameraMoveY * vpd;
             });
         }
     }
 
-    moveBg() {
+    findLowestRoadTopY() {
+        let list = this.roadList;
+        let viewLeft = -this.cameraContainer.x;
+        let viewRight = -this.cameraContainer.x + Config.designWidth;
+        let lowestRoadTopY;
+        for (let i = 0; i < list.length; i++) {
+            let item = list[i];
+            if (item.getRightBorderX() > viewLeft) {
+                lowestRoadTopY = item.getLowestTopY();
+                for (; i < list.length; i++) {
+                    item = list[i];
+                    if (item.getLeftBorderX() >= viewRight) {
+                        break;
+                    } else {
+                        let y = item.getLowestTopY();
+                        if (y > lowestRoadTopY) {
+                            lowestRoadTopY = y;
+                        }
+                    }
+                }
+                break;
+            }
+        }
+        return lowestRoadTopY;
+    }
+
+    scrollBg() {
         this.bgList.forEach(item => {
             if (item.container.x + item.before.x + item.before.width < -this.cameraContainer.x) {
-                item.before.position.x = item.after.x + item.after.width;
+                item.before.x = item.after.x + item.after.width;
                 let temp = item.before;
                 item.before = item.after;
                 item.after = temp;
@@ -448,8 +488,13 @@ export default class GameScene extends Scene {
 
     cleanPartOutOfView() {
         this.closeViewContainer.children.forEach(child => {
-            if (child.part && child.part.getRightBorderX() < -this.cameraContainer.position.x) {
+            if (child.part && child.part.getRightBorderX() < -this.cameraContainer.x) {
                 child.part.destroy();
+                if (child.part instanceof Road) {
+                    Utils.removeItemFromArray(this.roadList, child.part);
+                } else if (child.part instanceof BlackBird) {
+                    Utils.removeItemFromArray(this.birdList, child.part);
+                }
             }
         });
     }
@@ -480,7 +525,7 @@ export default class GameScene extends Scene {
     keepBirdMove() {
         this.birdList.forEach(bird => {
             let rp = GameUtils.physicsPos2renderPos(bird.body.getPosition());
-            if (-this.cameraContainer.position.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
+            if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 let velocity = bird.body.getLinearVelocity();
                 bird.body.setLinearVelocity(Vec2(-20, velocity.y));
                 let gravity = -6.25 * this.gravity;

@@ -16,6 +16,10 @@ export default class GameUtils {
         );
     }
 
+    static renderY2PhysicsY(ry) {
+        return (Config.designHeight - ry) * Config.pixel2meter;
+    }
+
     static hexString2Int(str) {
         return parseInt(str.replace("#", ""), 16);
     }
@@ -34,5 +38,27 @@ export default class GameUtils {
 
     static getItemType(config) {
         return config.label.split("//")[0];
+    }
+
+    static sortSceneChildrenByX(children) {
+        children.sort((a, b) => {
+            let ax = GameUtils.getSceneChildX(a);
+            let bx = GameUtils.getSceneChildX(b);
+            if (ax < bx) {
+                return true;
+            } else if (ax > bx) {
+                return false;
+            } else {
+                return a.compId < b.compId;
+            }
+        });
+    }
+
+    static getSceneChildX(child) {
+        if (GameUtils.getItemType(child) === "Road") {
+            return child.props.points.split(",")[0] + child.props.x;
+        } else {
+            return child.props.x;
+        }
     }
 }

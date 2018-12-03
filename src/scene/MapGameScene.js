@@ -88,6 +88,7 @@ export default class MapGameScene extends GameScene {
 
     createMap() {
         let json = JSON.parse(resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
+        GameUtils.sortSceneChildrenByX(json.child);
         json.child.forEach(data => this.createPart(data));
     }
 
