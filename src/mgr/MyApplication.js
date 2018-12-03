@@ -37,6 +37,13 @@ export default class MyApplication extends Application {
         }
     }
 
+    destroyScene(sceneName) {
+        if (this.sceneTable[sceneName]) {
+            this.sceneTable[sceneName].destroy();
+            this.sceneTable[sceneName] = undefined;
+        }
+    }
+
     loadResources(resPathList, onLoadedCallback) {
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined);

@@ -27,8 +27,10 @@ export default class Scene extends Container {
     }
 
     onDestroy() {
-        for (let event of this.eventTable) {
-            EventMgr.unregisterEvent(event, this.eventTable[event]);
+        for (let event in this.eventTable) {
+            if (this.eventTable.hasOwnProperty(event)) {
+                EventMgr.unregisterEvent(event, this.eventTable[event]);
+            }
         }
         this.eventTable = undefined;
     }

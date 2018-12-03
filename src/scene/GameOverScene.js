@@ -50,8 +50,8 @@ export default class GameOverScene extends Scene {
 
     static onClickSelectMapText() {
         App.hideScene("GameOverScene");
-        App.hideScene("MapGameScene");
-        App.hideScene("EndlessGameScene");
+        App.destroyScene("MapGameScene");
+        App.destroyScene("EndlessGameScene");
         App.showScene("StartScene");
     }
 
