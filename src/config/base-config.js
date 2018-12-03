@@ -78,6 +78,8 @@ let Config = {
     horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
     // 视差背景系数：上下
     verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
+    // 背景的Y轴位置
+    bgY: [0, 280, 560],
 };
 
 // 地图配置
@@ -100,6 +102,8 @@ Config.mapList = [
                 "images/TextureScorpiusBackground03.png",
             ]
         },
+        // 背景的Y轴位置
+        bgY: [0, 280, 560],
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.75, 0.5, 0.25, 0],
         // 视差背景系数：上下

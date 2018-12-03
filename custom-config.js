@@ -226,4 +226,20 @@ Config.endlessMode.sceneList = [
     },
 ];
 
+// 背景的Y轴位置
+Config.bgY = [0, 280, 560];
+
+// 底下的黑色蒙版的总高度
+Config.maskHeight = 420;
+
+// 底下黑色蒙版的渐变系数
+// offset指定一个点 opacity指定这个点的透明度 相邻的两个点之间会进行渐变
+// offset越大就是越底部，1就是最底部，0就是最顶部
+Config.maskColorStop = [
+    {offset: 0, opacity: 0},
+    {offset: 0.25, opacity: 0.5},
+    {offset: 0.75, opacity: 1},
+    {offset: 1, opacity: 1},
+];
+
 export default Config;

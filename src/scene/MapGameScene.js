@@ -22,6 +22,7 @@ export default class MapGameScene extends GameScene {
         this.topTexture = this.mapConfig.texture.top;
         this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
         this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
+        this.bgY = this.mapConfig.bgY || Config.bgY;
     }
 
     getResPathList() {

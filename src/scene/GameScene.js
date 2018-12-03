@@ -229,17 +229,19 @@ export default class GameScene extends Scene {
     }
 
     createBg() {
-        this.bgTextureList.forEach(texturePath => {
+        this.bgList = [];
+        this.bgTextureList.forEach((texturePath, bgIndex) => {
             let container = new Container();
             this.cameraContainer.addChild(container);
             let texture = resources[texturePath].texture;
-            let scale = Config.designHeight / texture.height;
+            let bg = {container};
             for (let i = 0; i < 2; i++) {
                 let sprite = new Sprite(texture);
                 container.addChild(sprite);
-                sprite.scale.set(scale, scale);
-                sprite.position.set(i * texture.width * scale, 0);
+                sprite.position.set(i * texture.width, this.bgY[bgIndex]);
+                bg[i === 0 ? "before" : "after"] = sprite;
             }
+            this.bgList.push(bg);
         });
     }
 
@@ -345,6 +347,8 @@ export default class GameScene extends Scene {
 
         this.moveCamera();
 
+        this.moveBg();
+
         this.cleanPartOutOfView();
 
         if (this.dynamicCreateRoad) {
@@ -429,6 +433,17 @@ export default class GameScene extends Scene {
                 child.position.y -= cameraMoveY * this.verticalParallaxDepth[index];
             });
         }
+    }
+
+    moveBg() {
+        this.bgList.forEach(item => {
+            if (item.container.x + item.before.x + item.before.width < -this.cameraContainer.x) {
+                item.before.position.x = item.after.x + item.after.width;
+                let temp = item.before;
+                item.before = item.after;
+                item.after = temp;
+            }
+        });
     }
 
     cleanPartOutOfView() {

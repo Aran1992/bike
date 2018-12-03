@@ -20,6 +20,7 @@ export default class EndlessGameScene extends GameScene {
         this.topTexture = this.sceneConfig.texture.top;
         this.horizontalParallaxDepth = this.sceneConfig.horizontalParallaxDepth;
         this.verticalParallaxDepth = this.sceneConfig.verticalParallaxDepth;
+        this.bgY = this.sceneConfig.bgY || Config.bgY;
     }
 
     getResPathList() {
