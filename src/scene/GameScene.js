@@ -35,7 +35,8 @@ export default class GameScene extends Scene {
         if (RunOption.debug) {
             let scale = 0.5;
             this.gameContainer.scale.set(scale, scale);
-            this.gameContainer.position.set(this.gameContainer.x + Config.designWidth * scale / 2, Config.designHeight * scale / 2);
+            this.gameContainer.position.set(this.gameContainer.x + Config.designWidth * (1 - scale) / 2,
+                Config.designHeight * (1 - scale) / 2);
         }
 
         this.cameraContainer = new Container();
@@ -172,13 +173,15 @@ export default class GameScene extends Scene {
 
     onClickGameContainer() {
         if (this.gameStatus === "play") {
-            if (this.jumpCount < Config.jumpMaxCount) {
+            if (this.jumpCount < Config.jumpCommonMaxCount
+                || this.jumpExtraCountdown > 0) {
                 let velocity = this.bikeBody.getLinearVelocity();
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
                 this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
                 this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                 this.jumping = true;
                 this.jumpCount += 1;
+                this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
             }
         }
     }
@@ -378,6 +381,8 @@ export default class GameScene extends Scene {
         this.keepBikeMove(velocity);
 
         this.keepBirdMove();
+
+        this.jumpExtraCountdown -= 1;
     }
 
     pause() {
