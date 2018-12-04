@@ -80,6 +80,8 @@ let Config = {
     // 背景的Y轴位置
     bgY: [0, 280, 560],
     bikeGameOverOffsetHeight: 10,
+    // 最上层背景的补边高度
+    bgOffsetHeight: 360,
 };
 
 // 地图配置
@@ -172,7 +174,5 @@ Config.endlessMode.sceneList = [
         ]
     },
 ];
-
-// Config.debug = true;
 
 export default Config;

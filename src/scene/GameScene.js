@@ -1,4 +1,5 @@
 import Config from "../config";
+import RunOption from "../../run-option";
 import {App} from "../main";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
@@ -31,7 +32,7 @@ export default class GameScene extends Scene {
         this.gameContainer.buttonMode = true;
         this.gameContainer.on("pointerdown", this.onClickGameContainer.bind(this));
 
-        if (Config.debug) {
+        if (RunOption.debug) {
             let scale = 0.5;
             this.gameContainer.scale.set(scale, scale);
             this.gameContainer.position.set(this.gameContainer.x + Config.designWidth * scale / 2, Config.designHeight * scale / 2);
@@ -95,7 +96,7 @@ export default class GameScene extends Scene {
         this.closeViewContainer = new Container();
         this.cameraContainer.addChild(this.closeViewContainer);
 
-        if (Config.debug) {
+        if (RunOption.debug) {
             let graphics = new Graphics();
             this.cameraContainer.addChild(graphics);
             graphics.lineStyle(10, 0xffd900, 1);
@@ -252,12 +253,21 @@ export default class GameScene extends Scene {
             let container = new Container();
             this.cameraContainer.addChild(container);
             let texture = resources[texturePath].texture;
+            let color = Utils.getTexturePointColor(texture, texture.width - 1, texture.height - 1);
             let bg = {container};
             for (let i = 0; i < 2; i++) {
                 let sprite = new Sprite(texture);
                 container.addChild(sprite);
                 sprite.position.set(i * texture.width, this.bgY[bgIndex]);
                 bg[i === 0 ? "before" : "after"] = sprite;
+                if (bgIndex === this.bgTextureList.length - 1) {
+                    let graphics = new Graphics();
+                    graphics.beginFill(color);
+                    graphics.drawRect(0, 0, texture.width, Config.bgOffsetHeight);
+                    graphics.endFill();
+                    sprite.addChild(graphics);
+                    graphics.position.set(0, texture.height);
+                }
             }
             this.bgList.push(bg);
         });
@@ -318,7 +328,8 @@ export default class GameScene extends Scene {
     createBike(pp) {
         let rp = GameUtils.physicsPos2renderPos(pp);
 
-        this.bikeSprite = new Sprite(resources[Config.bikeAtlasPath].textures["0"]);
+        let texture = resources[Config.bikeAtlasPath].textures["0"];
+        this.bikeSprite = new Sprite(texture);
         this.closeViewContainer.addChild(this.bikeSprite);
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
