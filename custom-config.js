@@ -236,4 +236,7 @@ Config.maskColorStop = [
     {offset: 1, opacity: 1},
 ];
 
+// 为1就是调试模式 为0就是正常模式 提交的时候记得关掉哦
+Config.debug = 0;
+
 export default Config;
