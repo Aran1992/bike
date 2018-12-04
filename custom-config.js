@@ -205,15 +205,15 @@ Config.endlessMode.sceneList = [
             [
                 {
                     // scene文件的路径
-                    scenePath: "Test/0/Test1",
+                    scenePath: "Test/0/Test4",
                 },
                 {
                     // scene文件的路径
-                    scenePath: "Test/0/Test2",
+                    scenePath: "Test/0/Test4",
                 },
                 {
                     // scene文件的路径
-                    scenePath: "Test/0/Test3",
+                    scenePath: "Test/0/Test4",
                 },
             ],
         ]
@@ -237,7 +237,7 @@ Config.maskColorStop = [
 ];
 
 // 自行车普通跳跃的次数
-Config.jumpCommonMaxCount = 2;
+Config.jumpCommonMaxCount = 99;
 // 自行车每次额外跳跃距离上次跳跃的帧数限制
 // 比如说第一个数配置20，第二个数配置18，
 // 想要进行额外跳跃的话，那么在第二次跳跃之后，要在20帧之内进行，不然就错过时机了
