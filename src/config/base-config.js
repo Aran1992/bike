@@ -24,7 +24,7 @@ let Config = {
     // 如果想要再继续额外跳跃的话，那么在这次之后的18帧之内进行，不然就错过时机了
     // 还想继续额外跳跃的话，如果没有配置第三项的话，就没办法跳跃了
     bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
-    bikeLeftMargin: 100,
+    bikeLeftMargin: 200,
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
@@ -89,6 +89,10 @@ let Config = {
     bikeGameOverOffsetHeight: 10,
     // 最上层背景的补边高度
     bgOffsetHeight: 360,
+    // 是否开启镜头自动调距功能
+    enableCameraAutoZoom: 1,
+    // 镜头自动调整缩放系数
+    cameraAutoZoomCoefficient: 0.5,
 };
 
 // 地图配置

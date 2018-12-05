@@ -245,4 +245,10 @@ Config.jumpCommonMaxCount = 99;
 // 还想继续额外跳跃的话，如果没有配置第三项的话，就没办法跳跃了
 Config.bikeJumpExtraCountdown = [20, 18, 16, 14, 12, 10];
 
+
+// 是否开启镜头自动调距功能
+Config.enableCameraAutoZoom = 1;
+// 镜头自动调整缩放系数
+Config.cameraAutoZoomCoefficient = 0.5;
+
 export default Config;

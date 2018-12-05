@@ -40,7 +40,13 @@ export default class GameScene extends Scene {
         }
 
         this.cameraContainer = new Container();
-        this.gameContainer.addChild(this.cameraContainer);
+        if (Config.enableCameraAutoZoom) {
+            this.autoZoomContainer = new Container();
+            this.gameContainer.addChild(this.autoZoomContainer);
+            this.autoZoomContainer.addChild(this.cameraContainer);
+        } else {
+            this.gameContainer.addChild(this.cameraContainer);
+        }
 
         this.createBottomMask();
 
@@ -383,6 +389,10 @@ export default class GameScene extends Scene {
         this.keepBirdMove();
 
         this.jumpExtraCountdown -= 1;
+
+        if (Config.enableCameraAutoZoom) {
+            this.autoZoomCamera();
+        }
     }
 
     pause() {
@@ -560,5 +570,27 @@ export default class GameScene extends Scene {
 
     initEnvironment() {
 
+    }
+
+    autoZoomCamera() {
+        if (this.gameStatus === "play") {
+            let baseX = Config.bikeLeftMargin;
+            let baseY = Config.designHeight / 2;
+            let stepScale = 0.01;
+            let some = 100;
+            let vx = this.bikeBody.getLinearVelocity().x;
+            let targetScale = this.bikeAccVelocity / vx;
+            targetScale = Math.floor((1 + (targetScale - 1) * Config.cameraAutoZoomCoefficient) * some) / some;
+            let curScale = Math.floor(this.autoZoomContainer.scale.x * some) / some;
+            let diff = targetScale - curScale;
+            if (diff === 0) {
+                stepScale = 0;
+            } else if (diff < 0) {
+                stepScale = -stepScale;
+            }
+            let scale = curScale + stepScale;
+            this.autoZoomContainer.scale.set(scale, scale);
+            this.autoZoomContainer.position.set(baseX - baseX * scale, baseY - baseY * scale);
+        }
     }
 }
