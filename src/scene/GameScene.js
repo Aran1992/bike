@@ -72,6 +72,11 @@ export default class GameScene extends Scene {
 
         this.bikeAccFrame = undefined;
 
+        if (Config.enableCameraAutoZoom) {
+            this.autoZoomContainer.scale.set(1, 1);
+            this.autoZoomContainer.position.set(0, 0);
+        }
+
         this.initEnvironment();
 
         App.loadResources(this.getResPathList(), this.onLoadedAllRes.bind(this));
@@ -576,19 +581,25 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play") {
             let baseX = Config.bikeLeftMargin;
             let baseY = Config.designHeight / 2;
-            let stepScale = 0.01;
-            let some = 100;
+            let stepScale = Config.cameraAutoZoomScaleSpeed;
             let vx = this.bikeBody.getLinearVelocity().x;
-            let targetScale = this.bikeAccVelocity / vx;
-            targetScale = Math.floor((1 + (targetScale - 1) * Config.cameraAutoZoomCoefficient) * some) / some;
-            let curScale = Math.floor(this.autoZoomContainer.scale.x * some) / some;
+            let targetScale = vx === this.bikeCommonVelocity ? Config.cameraAutoZoomCommonScale : 1;
+            let curScale = this.autoZoomContainer.scale.x;
             let diff = targetScale - curScale;
-            if (diff === 0) {
-                stepScale = 0;
-            } else if (diff < 0) {
-                stepScale = -stepScale;
+            let scale;
+            if (diff < 0) {
+                scale = curScale - stepScale;
+                if (scale < targetScale) {
+                    scale = targetScale;
+                }
+            } else if (diff === 0) {
+                scale = curScale;
+            } else {
+                scale = curScale + stepScale;
+                if (scale > targetScale) {
+                    scale = targetScale;
+                }
             }
-            let scale = curScale + stepScale;
             this.autoZoomContainer.scale.set(scale, scale);
             this.autoZoomContainer.position.set(baseX - baseX * scale, baseY - baseY * scale);
         }

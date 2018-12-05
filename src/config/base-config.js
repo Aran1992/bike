@@ -24,7 +24,7 @@ let Config = {
     // 如果想要再继续额外跳跃的话，那么在这次之后的18帧之内进行，不然就错过时机了
     // 还想继续额外跳跃的话，如果没有配置第三项的话，就没办法跳跃了
     bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
-    bikeLeftMargin: 200,
+    bikeLeftMargin: 150,
     bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
@@ -185,5 +185,12 @@ Config.endlessMode.sceneList = [
         ]
     },
 ];
+
+// 是否开启镜头自动调距功能
+Config.enableCameraAutoZoom = 1;
+// 普通状态下镜头的缩放倍数
+Config.cameraAutoZoomCommonScale = 2;
+// 镜头缩放的速度 每帧变化的缩放大小
+Config.cameraAutoZoomScaleSpeed = 0.01;
 
 export default Config;
