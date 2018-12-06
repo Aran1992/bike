@@ -47,18 +47,18 @@ export default class GameUtils {
             let ax = GameUtils.getSceneChildX(a);
             let bx = GameUtils.getSceneChildX(b);
             if (ax < bx) {
-                return true;
+                return -1;
             } else if (ax > bx) {
-                return false;
+                return 1;
             } else {
-                return a.compId < b.compId;
+                return a.compId - b.compId;
             }
         });
     }
 
     static getSceneChildX(child) {
         if (GameUtils.getItemType(child) === "Road") {
-            return child.props.points.split(",")[0] + child.props.x;
+            return parseInt(child.props.points.split(",")[0]) + child.props.x;
         } else {
             return child.props.x;
         }
