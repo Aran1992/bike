@@ -1,7 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const webpack = require("webpack");
-const config = require("../webpack.config");
 
 function copy_(src, dist, exceptList) {
     if (exceptList && exceptList.some(file => file === src)) {
@@ -23,12 +21,13 @@ function copy(src, dist, exceptList) {
     copy_(src, dist, exceptList);
 }
 
-webpack(config, () => {
-    [
-        "images",
-        "myLaya/laya/pages",
-        "index.html",
-        "dist/bundle.js",
-        "run-option.js",
-    ].forEach(file => copy(file, `publish/${file}`));
-});
+copy("images", "publish-wx/images");
+copy("myLaya/laya/pages", "publish-wx/myLaya/laya/pages");
+copy("src", "publish-wx/src", ["src/main.js"]);
+copy("custom-config.js", "publish-wx/custom-config.js");
+copy("run-option.js", "publish-wx/run-option.js");
+copy("wx/game.js", "publish-wx/game.js");
+copy("wx/game.json", "publish-wx/game.json");
+copy("wx/project.config.json", "publish-wx/project.config.json");
+
+console.log("published");

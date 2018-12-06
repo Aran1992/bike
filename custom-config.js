@@ -246,7 +246,7 @@ Config.jumpCommonMaxCount = 99;
 Config.bikeJumpExtraCountdown = [20, 18, 16, 14, 12, 10];
 
 // 是否开启镜头自动调距功能
-Config.enableCameraAutoZoom = 1;
+Config.enableCameraAutoZoom = 0;
 // 普通状态下镜头的缩放倍数
 Config.cameraAutoZoomCommonScale = 2;
 // 镜头缩放的速度 每帧变化的缩放大小
