@@ -1,5 +1,7 @@
 import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
+import Utils from "./Utils";
+import {resources} from "../libs/pixi-wrapper";
 
 export default class GameUtils {
     static physicsPos2renderPos(pp) {
@@ -60,5 +62,9 @@ export default class GameUtils {
         } else {
             return child.props.x;
         }
+    }
+
+    static getFrames(jsonPath) {
+        return Utils.values(resources[jsonPath].data.animations)[0].map(texturePath => resources[jsonPath].textures[texturePath]);
     }
 }

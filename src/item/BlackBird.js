@@ -1,16 +1,12 @@
 import Config from "../config";
 import Item from "./Item";
 import GameUtils from "../mgr/GameUtils";
-import {AnimatedSprite, Texture} from "../libs/pixi-wrapper";
+import {AnimatedSprite} from "../libs/pixi-wrapper";
 import {Box} from "../libs/planck-wrapper";
 
 export default class BlackBird extends Item {
     initAni() {
-        let frames = [];
-        for (let i = 1; i <= 9; i++) {
-            frames.push(Texture.fromFrame(`Bird0${i}.png`));
-        }
-        this.frames = frames;
+        this.frames = GameUtils.getFrames(Config.birdAniJson);
         this.animationSpeed = 0.25;
     }
 
