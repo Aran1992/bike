@@ -113,7 +113,7 @@ export default class GameScene extends Scene {
 
         if (RunOption.debug) {
             let graphics = new Graphics();
-            this.cameraContainer.addChild(graphics);
+            this.gameContainer.addChild(graphics);
             graphics.lineStyle(10, 0xffd900, 1);
             graphics.moveTo(0, 0);
             graphics.lineTo(Config.designWidth, 0);
@@ -291,10 +291,12 @@ export default class GameScene extends Scene {
             let texture = resources[texturePath].texture;
             let color = Utils.getTexturePointColor(texture, texture.width - 1, texture.height - 1);
             let bg = {container};
+            let scale = this.bgScale[bgIndex];
             for (let i = 0; i < 2; i++) {
                 let sprite = new Sprite(texture);
                 container.addChild(sprite);
-                sprite.position.set(i * texture.width, this.bgY[bgIndex]);
+                sprite.scale.set(scale, scale);
+                sprite.position.set(i * texture.width * scale, this.bgY[bgIndex]);
                 bg[i === 0 ? "before" : "after"] = sprite;
                 if (bgIndex === this.bgTextureList.length - 1) {
                     let graphics = new Graphics();
@@ -493,7 +495,7 @@ export default class GameScene extends Scene {
             let cameraMoveX = this.cameraContainer.x - oldCameraX;
             let cameraMoveY = this.cameraContainer.y - oldCameraY;
 
-            this.cameraContainer.children.forEach((child, index) => {
+            this.bgList.map(item => item.container).forEach((child, index) => {
                 let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
                 let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
                 child.position.x -= cameraMoveX * hpd;
@@ -529,9 +531,9 @@ export default class GameScene extends Scene {
     }
 
     scrollBg() {
-        this.bgList.forEach(item => {
-            if (item.container.x + item.before.x + item.before.width < -this.cameraContainer.x) {
-                item.before.x = item.after.x + item.after.width;
+        this.bgList.forEach((item, index) => {
+            if (item.container.x + item.before.x + item.before.width * this.bgScale[index] < -this.cameraContainer.x) {
+                item.before.x = item.after.x + item.after.width * this.bgScale[index];
                 let temp = item.before;
                 item.before = item.after;
                 item.after = temp;

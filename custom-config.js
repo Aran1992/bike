@@ -33,6 +33,8 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-200）
@@ -205,6 +207,8 @@ Config.endlessMode.sceneList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-200）

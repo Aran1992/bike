@@ -109,6 +109,7 @@ let Config = {
         startLevel: "sound/stagekettei.mp3",
         throughFlag: "sound/SoundBGM202.mp3",
     },
+    defaultBgScale: [1, 1, 1,]
 };
 
 // 地图配置

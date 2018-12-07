@@ -24,6 +24,7 @@ export default class MapGameScene extends GameScene {
         this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
         this.bgY = this.mapConfig.bgY || Config.bgY;
         this.bgmPath = this.mapConfig.bgmPath || Config.defaultBgmPath;
+        this.bgScale = this.mapConfig.bgScale || Config.defaultBgScale;
     }
 
     getResPathList() {
