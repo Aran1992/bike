@@ -6,7 +6,7 @@ Config.bikeVelocity = 20;
 // 重力（基础：-200）
 Config.gravity = -200;
 
-// 跳跃爆发力（基础：5000）
+// 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
 // 地图配置
@@ -39,7 +39,7 @@ Config.mapList = [
         bikeVelocity: 20,
         // 重力（基础：-200）
         gravity: -200,
-        // 跳跃爆发力（基础：5000）
+        // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM102.mp3",
@@ -66,11 +66,13 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-200）
         gravity: -200,
-        // 跳跃爆发力（基础：5000）
+        // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM103.mp3",
@@ -97,11 +99,15 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+		// 背景的Y轴位置
+		bgY: [0, 120, 180],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-200）
         gravity: -200,
-        // 跳跃爆发力（基础：5000）
+        // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
@@ -128,11 +134,13 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 1, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 40,
         // 重力（基础：-200）
         gravity: -200,
-        // 跳跃爆发力（基础：5000）
+        // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
@@ -158,12 +166,14 @@ Config.mapList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 1, 0.8, 0],
+        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-200）
         gravity: -50,
-        // 跳跃爆发力（基础：5000）
+        // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
@@ -207,13 +217,15 @@ Config.endlessMode.sceneList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+		// 背景的Y轴位置
+		bgY: [0, 0, 380],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-200）
         gravity: -200,
-        // 跳跃爆发力（基础：5000）
+        // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM101.mp3",
@@ -237,7 +249,7 @@ Config.endlessMode.sceneList = [
 ];
 
 // 背景的Y轴位置
-Config.bgY = [0, 280, 560];
+Config.bgY = [0, 0, 180];
 
 // 底下的黑色蒙版的总高度
 Config.maskHeight = 420;
@@ -253,7 +265,7 @@ Config.maskColorStop = [
 ];
 
 // 自行车普通跳跃的次数
-Config.jumpCommonMaxCount = 99;
+Config.jumpCommonMaxCount = 222;
 // 自行车每次额外跳跃距离上次跳跃的帧数限制
 // 比如说第一个数配置20，第二个数配置18，
 // 想要进行额外跳跃的话，那么在第二次跳跃之后，要在20帧之内进行，不然就错过时机了
