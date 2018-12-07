@@ -495,14 +495,32 @@ export default class GameScene extends Scene {
             let cameraMoveX = this.cameraContainer.x - oldCameraX;
             let cameraMoveY = this.cameraContainer.y - oldCameraY;
 
-            this.bgList.map(item => item.container).forEach((child, index) => {
-                let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
-                let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
-                child.position.x -= cameraMoveX * hpd;
-                child.position.y -= cameraMoveY * vpd;
-            });
+            let index = this.bgList.length - 1;
+            let bg = this.bgList[index];
+            let bgY = this.bgY[index];
+            let scale = this.bgScale[index];
+            let bgOriginHeight = bg.before.height + (bg.before.children[0] ? bg.before.children[0].height : 0);
+            let bgHeight = bgY + bgOriginHeight * scale;
+            let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
+            if (bg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y) {
+                this.bgList.forEach((bg, index) => {
+                    let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
+                    bg.container.position.x -= cameraMoveX * hpd;
+                    bg.container.position.y -= cameraMoveY;
+                });
+            } else {
+                this.bgList.forEach((bg, index) => {
+                    let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
+                    let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
+                    bg.container.position.x -= cameraMoveX * hpd;
+                    bg.container.position.y -= cameraMoveY * vpd;
+                });
+            }
         }
     }
+
+    // 添加一个保护机制 到了边界就完全卡住
+    // danshi
 
     findLowestRoadTopY() {
         let list = this.roadList;
