@@ -99,8 +99,8 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
-		// 背景的Y轴位置
-		bgY: [0, 120, 180],
+        // 背景的Y轴位置
+        bgY: [0, 120, 180],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -217,8 +217,8 @@ Config.endlessMode.sceneList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
-		// 背景的Y轴位置
-		bgY: [0, 0, 380],
+        // 背景的Y轴位置
+        bgY: [0, 0, 380],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -279,5 +279,8 @@ Config.enableCameraAutoZoom = 0;
 Config.cameraAutoZoomCommonScale = 2;
 // 镜头缩放的速度 每帧变化的缩放大小
 Config.cameraAutoZoomScaleSpeed = 0.01;
+
+// 最上层背景的补边高度
+Config.bgOffsetHeight = 360;
 
 export default Config;
