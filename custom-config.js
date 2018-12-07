@@ -33,7 +33,7 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
-    // 背景的Y轴位置
+        // 背景的Y轴位置
         bgY: [0, 120, 180],
         // 背景缩放系数
         bgScale: [1, 1, 1],
@@ -236,7 +236,7 @@ Config.endlessMode.sceneList = [
                 {
                     // scene文件的路径
                     scenePath: "Test/0/Test1",
-				},
+                },
                 {
                     // scene文件的路径
                     scenePath: "Test/0/Test2",
@@ -264,7 +264,9 @@ Config.endlessMode.sceneList = [
                 {
                     // scene文件的路径
                     scenePath: "Test/0/Test14",
-                },				
+                },
+            ],
+            [
                 {
                     // scene文件的路径
                     scenePath: "Test/1/Test",
