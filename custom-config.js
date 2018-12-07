@@ -168,7 +168,7 @@ Config.mapList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 1, 0.8, 0],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -269,13 +269,121 @@ Config.endlessMode.sceneList = [
             [
                 {
                     // scene文件的路径
-                    scenePath: "Test/1/Test",
+                    scenePath: "Test/1/Test1",
                 },
                 {
                     // scene文件的路径
                     scenePath: "Test/1/Test2",
                 },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test13",
+                },
             ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test12",
+                },
+			],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test14",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-12",
+                },
+			],
         ]
     },
 ];
@@ -313,7 +421,7 @@ Config.cameraAutoZoomCommonScale = 2;
 Config.cameraAutoZoomScaleSpeed = 0.01;
 
 // 最上层背景的补边高度
-Config.bgOffsetHeight = 360;
+Config.bgOffsetHeight = 380;
 // 最上层背景在镜头内的最小高度
 Config.bgMinHeightInView = 1000;
 
