@@ -502,7 +502,8 @@ export default class GameScene extends Scene {
             let bgOriginHeight = bg.before.height + (bg.before.children[0] ? bg.before.children[0].height : 0);
             let bgHeight = bgY + bgOriginHeight * scale;
             let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
-            if (bg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y) {
+            if (bg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y
+                || bg.container.y - vpd * cameraMoveY > -this.cameraContainer.y) {
                 this.bgList.forEach((bg, index) => {
                     let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
                     bg.container.position.x -= cameraMoveX * hpd;
@@ -518,9 +519,6 @@ export default class GameScene extends Scene {
             }
         }
     }
-
-    // 添加一个保护机制 到了边界就完全卡住
-    // danshi
 
     findLowestRoadTopY() {
         let list = this.roadList;
