@@ -33,6 +33,8 @@ Config.mapList = [
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
+    // 背景的Y轴位置
+        bgY: [0, 120, 180],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -218,7 +220,7 @@ Config.endlessMode.sceneList = [
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0.8, 0],
         // 背景的Y轴位置
-        bgY: [0, 0, 380],
+        bgY: [0, 120, 180],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -233,7 +235,15 @@ Config.endlessMode.sceneList = [
             [
                 {
                     // scene文件的路径
-                    scenePath: "Test/0/Test4",
+                    scenePath: "Test/0/Test1",
+				},
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test3",
                 },
                 {
                     // scene文件的路径
@@ -241,7 +251,27 @@ Config.endlessMode.sceneList = [
                 },
                 {
                     // scene文件的路径
-                    scenePath: "Test/0/Test4",
+                    scenePath: "Test/0/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test14",
+                },				
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test2",
                 },
             ],
         ]
@@ -265,7 +295,7 @@ Config.maskColorStop = [
 ];
 
 // 自行车普通跳跃的次数
-Config.jumpCommonMaxCount = 222;
+Config.jumpCommonMaxCount = 2;
 // 自行车每次额外跳跃距离上次跳跃的帧数限制
 // 比如说第一个数配置20，第二个数配置18，
 // 想要进行额外跳跃的话，那么在第二次跳跃之后，要在20帧之内进行，不然就错过时机了

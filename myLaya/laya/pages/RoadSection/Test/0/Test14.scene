@@ -87,20 +87,6 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite,AccGem//加速宝石",
-            "props":{"y":-109,"x":71,"texture":"images/crystal_jet_00.png","scaleY":0.5,"scaleX":0.5,"name":"AccGem//加速宝石"},
-            "nodeParent":1,
-            "label":"AccGem//加速宝石",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":105,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
             "searchKey":"Sprite,GoldCoin//金币",
             "props":{"y":-109,"x":497.75,"texture":"images/medal.png","scaleY":0.25,"scaleX":0.25,"name":"GoldCoin//金币"},
             "nodeParent":1,
