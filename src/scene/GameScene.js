@@ -303,7 +303,7 @@ export default class GameScene extends Scene {
                 if (bgIndex === this.bgTextureList.length - 1) {
                     let graphics = new Graphics();
                     graphics.beginFill(color);
-                    graphics.drawRect(0, 0, texture.width, Config.designHeight);
+                    graphics.drawRect(0, 0, texture.width, Config.bgOffsetHeight);
                     graphics.endFill();
                     sprite.addChild(graphics);
                     graphics.position.set(0, texture.height);
