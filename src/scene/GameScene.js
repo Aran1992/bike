@@ -124,6 +124,8 @@ export default class GameScene extends Scene {
 
         this.initGameContent();
 
+        this.adjustInitCameraBg();
+
         this.gameStatus = "play";
         this.gameLoopFunc = this.play.bind(this);
 
@@ -653,5 +655,21 @@ export default class GameScene extends Scene {
             this.autoZoomContainer.scale.set(scale, scale);
             this.autoZoomContainer.position.set(baseX - baseX * scale, baseY - baseY * scale);
         }
+    }
+
+    adjustInitCameraBg() {
+        this.cameraContainer.x = Config.bikeLeftMargin - this.bikeSprite.x;
+
+        let bikeY = this.cameraContainer.y + this.bikeSprite.y;
+        if (bikeY < Config.bikeCameraMinY) {
+            this.cameraContainer.y = Config.bikeCameraMinY - this.bikeSprite.y;
+        } else if (bikeY > Config.bikeCameraMaxY) {
+            this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeSprite.y;
+        }
+
+        this.bgList.forEach((bg) => {
+            bg.container.position.x = -this.cameraContainer.y;
+            bg.container.position.y = -this.cameraContainer.y;
+        });
     }
 }
