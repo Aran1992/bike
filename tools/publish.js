@@ -23,9 +23,27 @@ function copy(src, dist, exceptList) {
     copy_(src, dist, exceptList);
 }
 
+function deleteall(path) {
+    let files = [];
+    if (fs.existsSync(path)) {
+        files = fs.readdirSync(path);
+        files.forEach(file => {
+            let curPath = path + "/" + file;
+            if (fs.statSync(curPath).isDirectory()) {
+                deleteall(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+}
+
 webpack(config, () => {
+    deleteall("./publish");
     [
         "images",
+        "sound",
         "myLaya/laya/pages",
         "index.html",
         "dist/bundle.js",

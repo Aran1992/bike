@@ -2,6 +2,7 @@ import Config from "../config";
 import {App} from "../main";
 import Scene from "./Scene";
 import {Container, Text, TextStyle} from "../libs/pixi-wrapper";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class StartScene extends Scene {
     onCreate() {
@@ -33,6 +34,10 @@ export default class StartScene extends Scene {
             text.buttonMode = true;
             text.on("pointerdown", () => StartScene.onClickMapText(index));
         });
+    }
+
+    onShow() {
+        MusicMgr.playBGM(Config.mainBgmPath);
     }
 
     static onClickEndlessModeText(index) {

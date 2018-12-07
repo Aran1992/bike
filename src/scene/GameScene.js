@@ -4,6 +4,7 @@ import {App} from "../main";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
+import MusicMgr from "../mgr/MusicMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
 import {Container, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
@@ -83,14 +84,16 @@ export default class GameScene extends Scene {
     }
 
     getResPathList() {
-        return [
+        let soundPathList = Utils.values(Config.soundPath);
+        return soundPathList.concat([
             Config.bikeAtlasPath,
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
             Config.accGemAniJson,
             Config.fireWallAniJson,
             Config.birdAniJson,
-        ];
+            Config.defaultBgmPath,
+        ]);
     }
 
     onRestart() {
@@ -123,6 +126,13 @@ export default class GameScene extends Scene {
 
         this.gameStatus = "play";
         this.gameLoopFunc = this.play.bind(this);
+
+        MusicMgr.pauseBGM();
+        MusicMgr.playSound(Config.soundPath.startLevel, () => {
+            if (this.gameStatus !== "end") {
+                MusicMgr.playBGM(this.bgmPath);
+            }
+        });
     }
 
     onBeginContact(contact) {
@@ -193,6 +203,16 @@ export default class GameScene extends Scene {
                 this.jumping = true;
                 this.jumpCount += 1;
                 this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
+                switch (this.jumpCount) {
+                    case 1:
+                        MusicMgr.playSound(Config.soundPath.firstJump);
+                        break;
+                    case 2:
+                        MusicMgr.playSound(Config.soundPath.secondJump);
+                        break;
+                    default:
+                        MusicMgr.playSound(Config.soundPath.extraJump);
+                }
             }
         }
     }
@@ -220,10 +240,12 @@ export default class GameScene extends Scene {
         switch (type) {
             case "GoldCoin": {
                 this.updateScoreText(this.score + 1);
+                MusicMgr.playSound(Config.soundPath.eatGoldCoin);
                 break;
             }
             case "AccGem": {
                 this.accelerateBike();
+                MusicMgr.playSound(Config.soundPath.eatAccGem);
                 break;
             }
         }
@@ -557,6 +579,10 @@ export default class GameScene extends Scene {
         this.birdList.forEach(bird => {
             let rp = GameUtils.physicsPos2renderPos(bird.body.getPosition());
             if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
+                if (!bird.showed) {
+                    MusicMgr.playSound(Config.soundPath.birdAppear);
+                }
+                bird.showed = true;
                 let velocity = bird.body.getLinearVelocity();
                 bird.body.setLinearVelocity(Vec2(-20, velocity.y));
                 let gravity = -6.25 * this.gravity;

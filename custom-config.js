@@ -39,6 +39,8 @@ Config.mapList = [
         gravity: -200,
         // 跳跃爆发力（基础：5000）
         jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM102.mp3",
     },
     {
         // 显示给人看的名字
@@ -68,6 +70,8 @@ Config.mapList = [
         gravity: -200,
         // 跳跃爆发力（基础：5000）
         jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM103.mp3",
     },
     {
         // 显示给人看的名字
@@ -97,6 +101,8 @@ Config.mapList = [
         gravity: -200,
         // 跳跃爆发力（基础：5000）
         jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM105.mp3",
     },
     {
         // 显示给人看的名字
@@ -126,6 +132,8 @@ Config.mapList = [
         gravity: -200,
         // 跳跃爆发力（基础：5000）
         jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM105.mp3",
     },
     {
         // 显示给人看的名字
@@ -155,6 +163,8 @@ Config.mapList = [
         gravity: -50,
         // 跳跃爆发力（基础：5000）
         jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/bgm1.mp3",
     },
 ];
 
@@ -201,6 +211,8 @@ Config.endlessMode.sceneList = [
         gravity: -200,
         // 跳跃爆发力（基础：5000）
         jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM101.mp3",
         roadSectionList: [
             [
                 {

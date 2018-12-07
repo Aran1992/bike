@@ -3,6 +3,7 @@ import {App} from "../main";
 import EventMgr from "../mgr/EventMgr";
 import Scene from "./Scene";
 import {Container, Graphics, Text, TextStyle} from "../libs/pixi-wrapper";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class GameOverScene extends Scene {
     onCreate() {
@@ -46,6 +47,12 @@ export default class GameOverScene extends Scene {
     onShow(msg) {
         this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.gameOverText.text = msg || "Game Over";
+        if (msg === "Game Over") {
+            MusicMgr.playSound(Config.soundPath.die);
+        } else {
+            MusicMgr.pauseBGM();
+            MusicMgr.playSound(Config.soundPath.throughFlag);
+        }
     }
 
     static onClickSelectMapText() {

@@ -21,6 +21,7 @@ export default class EndlessGameScene extends GameScene {
         this.horizontalParallaxDepth = this.sceneConfig.horizontalParallaxDepth;
         this.verticalParallaxDepth = this.sceneConfig.verticalParallaxDepth;
         this.bgY = this.sceneConfig.bgY || Config.bgY;
+        this.bgmPath = this.sceneConfig.bgmPath || Config.defaultBgmPath;
     }
 
     getResPathList() {
@@ -29,6 +30,7 @@ export default class EndlessGameScene extends GameScene {
             .concat([
                 this.sceneConfig.texture.side,
                 this.sceneConfig.texture.top,
+                this.sceneConfig.bgmPath,
             ])
             .concat(this.sceneConfig.roadSectionList.reduce((list, diff) =>
                 list.concat(diff.map(section =>
