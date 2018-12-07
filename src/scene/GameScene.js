@@ -307,7 +307,7 @@ export default class GameScene extends Scene {
                     graphics.endFill();
                     sprite.addChild(graphics);
                     graphics.position.set(0, texture.height);
-                } else if (bgIndex === 0) {
+                } else {
                     let graphics = new Graphics();
                     graphics.beginFill(color);
                     graphics.drawRect(0, 0, texture.width, Config.designHeight);
@@ -511,7 +511,8 @@ export default class GameScene extends Scene {
             let bgOriginHeight = lastBg.before.height + (lastBg.before.children[0] ? lastBg.before.children[0].height : 0);
             let bgHeight = bgY + bgOriginHeight * scale;
             let vpd = this.verticalParallaxDepth[lastIndex] === undefined ? 1 : this.verticalParallaxDepth[lastIndex];
-            if (lastBg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y) {
+            if (lastBg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y
+                || lastBg.container.y + Config.bgMinHeightInView - vpd * cameraMoveY > Config.designHeight - this.cameraContainer.y) {
                 this.bgList.forEach((bg, index) => {
                     let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
                     bg.container.position.x -= cameraMoveX * hpd;

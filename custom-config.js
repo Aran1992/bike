@@ -282,5 +282,7 @@ Config.cameraAutoZoomScaleSpeed = 0.01;
 
 // 最上层背景的补边高度
 Config.bgOffsetHeight = 360;
+// 最上层背景在镜头内的最小高度
+Config.bgMinHeightInView = 1000;
 
 export default Config;
