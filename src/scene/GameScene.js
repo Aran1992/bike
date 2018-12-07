@@ -301,7 +301,14 @@ export default class GameScene extends Scene {
                 if (bgIndex === this.bgTextureList.length - 1) {
                     let graphics = new Graphics();
                     graphics.beginFill(color);
-                    graphics.drawRect(0, 0, texture.width, Config.bgOffsetHeight);
+                    graphics.drawRect(0, 0, texture.width, Config.designHeight);
+                    graphics.endFill();
+                    sprite.addChild(graphics);
+                    graphics.position.set(0, texture.height);
+                } else if (bgIndex === 0) {
+                    let graphics = new Graphics();
+                    graphics.beginFill(color);
+                    graphics.drawRect(0, 0, texture.width, Config.designHeight);
                     graphics.endFill();
                     sprite.addChild(graphics);
                     graphics.position.set(0, texture.height);
@@ -495,15 +502,14 @@ export default class GameScene extends Scene {
             let cameraMoveX = this.cameraContainer.x - oldCameraX;
             let cameraMoveY = this.cameraContainer.y - oldCameraY;
 
-            let index = this.bgList.length - 1;
-            let bg = this.bgList[index];
-            let bgY = this.bgY[index];
-            let scale = this.bgScale[index];
-            let bgOriginHeight = bg.before.height + (bg.before.children[0] ? bg.before.children[0].height : 0);
+            let lastIndex = this.bgList.length - 1;
+            let lastBg = this.bgList[lastIndex];
+            let bgY = this.bgY[lastIndex];
+            let scale = this.bgScale[lastIndex];
+            let bgOriginHeight = lastBg.before.height + (lastBg.before.children[0] ? lastBg.before.children[0].height : 0);
             let bgHeight = bgY + bgOriginHeight * scale;
-            let vpd = this.verticalParallaxDepth[index] === undefined ? 1 : this.verticalParallaxDepth[index];
-            if (bg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y
-                || bg.container.y - vpd * cameraMoveY > -this.cameraContainer.y) {
+            let vpd = this.verticalParallaxDepth[lastIndex] === undefined ? 1 : this.verticalParallaxDepth[lastIndex];
+            if (lastBg.container.y + bgHeight - vpd * cameraMoveY < Config.designHeight - this.cameraContainer.y) {
                 this.bgList.forEach((bg, index) => {
                     let hpd = this.horizontalParallaxDepth[index] === undefined ? 1 : this.horizontalParallaxDepth[index];
                     bg.container.position.x -= cameraMoveX * hpd;
