@@ -454,6 +454,11 @@ export default class GameScene extends Scene {
         this.jumpCount = 0;
         this.bikeFrameCount = Utils.keys(resources[Config.bikeAtlasPath].textures).length;
         this.bikeFrame = 0;
+
+        this.bikeAccSprite = new Sprite();
+        this.bikeAccSprite.visible = false;
+        this.closeViewContainer.addChild(this.bikeAccSprite);
+        this.bikeAccSprite.anchor.set(0.5, 1);
     }
 
     gameLoop(delta) {
@@ -513,7 +518,7 @@ export default class GameScene extends Scene {
     }
 
     accelerateBike() {
-        this.bikeAccFrame = 0;
+        this.bikeAccFrame = Config.accFrame;
     }
 
     syncBikeSprite(velocity, bikePhysicsPos) {
@@ -521,14 +526,28 @@ export default class GameScene extends Scene {
         this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
         if (this.gameStatus === "end") {
             this.bikeSprite.rotation = this.bikeBody.getAngle();
-        } else if (!this.jumping) {
-            this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
-
-            this.bikeFrame += 1;
-            if (this.bikeFrame >= this.bikeFrameCount) {
-                this.bikeFrame = 0;
+            this.bikeAccSprite.visible = false;
+        } else {
+            if (this.bikeAccFrame !== undefined) {
+                this.bikeAccSprite.visible = true;
+                if (this.bikeAccFrame <= 5 * Config.fps) {
+                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeAccFrame / Config.fps)}.png`];
+                    this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
+                } else {
+                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures["speed-up.png"];
+                    this.bikeAccSprite.position.set(this.bikeSprite.x + 32, this.bikeSprite.y - this.bikeSprite.height / 2);
+                }
+            } else {
+                this.bikeAccSprite.visible = false;
             }
-            this.bikeSprite.texture = resources[Config.bikeAtlasPath].textures[`${this.bikeFrame}`];
+            if (!this.jumping) {
+                this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
+                this.bikeFrame += 1;
+                if (this.bikeFrame >= this.bikeFrameCount) {
+                    this.bikeFrame = 0;
+                }
+                this.bikeSprite.texture = resources[Config.bikeAtlasPath].textures[`${this.bikeFrame}`];
+            }
         }
     }
 
@@ -653,12 +672,12 @@ export default class GameScene extends Scene {
     keepBikeMove(velocity) {
         if (this.gameStatus === "play") {
             if (this.bikeAccFrame !== undefined) {
-                if (this.bikeAccFrame >= Config.accFrame) {
+                if (this.bikeAccFrame === 0) {
                     this.bikeAccFrame = undefined;
                     this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
                 } else {
                     this.bikeBody.setLinearVelocity(Vec2(this.bikeAccVelocity, velocity.y));
-                    this.bikeAccFrame++;
+                    this.bikeAccFrame--;
                 }
             } else {
                 this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));

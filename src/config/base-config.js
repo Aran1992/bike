@@ -54,7 +54,7 @@ let Config = {
     // 自行车吃了加速宝石之后的速度
     bikeAccVelocity: 50,
     // 自行车加速的帧数
-    accFrame: 300,
+    accFrame: 420,
     startScene: {
         endlessText: {
             fontSize: 50,
