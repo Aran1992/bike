@@ -210,4 +210,12 @@ Config.cameraAutoZoomCommonScale = 2;
 // 镜头缩放的速度 每帧变化的缩放大小
 Config.cameraAutoZoomScaleSpeed = 0.01;
 
+Config.imagePath = {
+    bikeParticle: "images/particles/bike.png"
+};
+
+Config.emitterPath = {
+    bike: "images/particles/bike.json"
+};
+
 export default Config;

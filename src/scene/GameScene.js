@@ -7,7 +7,7 @@ import EventMgr from "../mgr/EventMgr";
 import MusicMgr from "../mgr/MusicMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
-import {Container, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {Container, Emitter, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
 
 import Road from "../item/Road";
 import Item from "../item/Item";
@@ -84,8 +84,7 @@ export default class GameScene extends Scene {
     }
 
     getResPathList() {
-        let soundPathList = Utils.values(Config.soundPath);
-        return soundPathList.concat([
+        return [
             Config.bikeAtlasPath,
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
@@ -93,10 +92,17 @@ export default class GameScene extends Scene {
             Config.fireWallAniJson,
             Config.birdAniJson,
             Config.defaultBgmPath,
-        ]);
+        ]
+            .concat(Utils.values(Config.soundPath))
+            .concat(Utils.values(Config.emitterPath))
+            .concat(Utils.values(Config.imagePath));
     }
 
     onRestart() {
+        if (this.emitter) {
+            this.emitter.destroy();
+            this.emitter = undefined;
+        }
         this.onShow();
     }
 
@@ -110,6 +116,13 @@ export default class GameScene extends Scene {
 
         this.closeViewContainer = new Container();
         this.cameraContainer.addChild(this.closeViewContainer);
+
+        this.emitter = new Emitter(
+            this.cameraContainer,
+            [Texture.fromImage(Config.imagePath.bikeParticle)],
+            resources[Config.emitterPath.bike].data
+        );
+        this.emitter.emit = false;
 
         if (RunOption.debug) {
             let graphics = new Graphics();
@@ -211,9 +224,11 @@ export default class GameScene extends Scene {
                         break;
                     case 2:
                         MusicMgr.playSound(Config.soundPath.secondJump);
+                        this.emitter.playOnce();
                         break;
                     default:
                         MusicMgr.playSound(Config.soundPath.extraJump);
+                        this.emitter.playOnce();
                 }
             }
         }
@@ -430,6 +445,11 @@ export default class GameScene extends Scene {
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomCamera();
+        }
+
+        if (this.bikeSprite) {
+            this.emitter.updateOwnerPos(this.bikeSprite.x, this.bikeSprite.y);
+            this.emitter.update(delta / 60);
         }
     }
 
