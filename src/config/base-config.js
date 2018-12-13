@@ -218,4 +218,8 @@ Config.emitterPath = {
     bike: "images/particles/bike.json"
 };
 
+Config.startImagePath = {
+    ui: "images/ui.json"
+};
+
 export default Config;

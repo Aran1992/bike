@@ -20,6 +20,7 @@ import BlackBird from "../item/BlackBird";
 export default class GameScene extends Scene {
     onCreate() {
         this.registerEvent("Restart", this.onRestart);
+        this.registerEvent("Continue", this.onContinue);
         this.registerEvent("AteItem", this.onAteItem);
 
         window.addEventListener("keydown", this.onKeydown.bind(this));
@@ -51,17 +52,79 @@ export default class GameScene extends Scene {
 
         this.createBottomMask();
 
-        this.createFPSText();
+        // this.createFPSText();
 
-        this.createScoreText();
+        this.createPauseButton();
+        this.createDistancePanel();
+        this.createDiamondPanel();
+        this.createCoinPanel();
+        // this.createItemPanel();
 
         this.gameStatus = "end";
         this.gameLoopFunc = this.pause.bind(this);
         App.ticker.add(this.gameLoop.bind(this));
     }
 
+    createPauseButton() {
+        let sprite = new Sprite(resources[Config.startImagePath.ui].textures["button-pause.png"]);
+        sprite.buttonMode = true;
+        sprite.interactive = true;
+        sprite.on("pointerdown", this.onClickPauseButton.bind(this));
+        this.addChild(sprite);
+        this.pauseButton = sprite;
+    }
+
+    onClickPauseButton() {
+        if (this.gameStatus === "play") {
+            this.gameLoopFunc = this.pause.bind(this);
+            this.gameStatus = "pause";
+            App.showScene("PauseScene");
+        } else if (this.gameStatus === "pause") {
+            this.gameLoopFunc = this.play.bind(this);
+            this.gameStatus = "play";
+            App.hideScene("PauseScene");
+        }
+    }
+
+    createIconNumPanel(x, y, iconName) {
+        let panel = new Sprite(resources[Config.startImagePath.ui].textures["bottom-num.png"]);
+        this.addChild(panel);
+        panel.position.set(x, y);
+
+        let icon = new Sprite(resources[Config.startImagePath.ui].textures[iconName]);
+        panel.addChild(icon);
+        icon.anchor.set(0, 0.5);
+        icon.scale.set(0.5, 0.5);
+        icon.position.set(0, panel.height / 2);
+
+        let text = new Text("123456789");
+        panel.addChild(text);
+        text.anchor.set(0, 0.5);
+        text.position.set(icon.width, panel.height / 2);
+
+        return {panel, icon, text};
+    }
+
+    createDistancePanel() {
+        let {panel, text} = this.createIconNumPanel(this.pauseButton.width, 0, "text-m.png");
+        this.distancePanel = panel;
+        this.distanceText = text;
+    }
+
+    createDiamondPanel() {
+        let {panel, text} = this.createIconNumPanel(this.distancePanel.x + this.distancePanel.width, 0, "icon-diamond.png");
+        this.diamondPanel = panel;
+        this.diamondeText = text;
+    }
+
+    createCoinPanel() {
+        let {panel, text} = this.createIconNumPanel(this.diamondPanel.x + this.diamondPanel.width, 0, "icon-coin.png");
+        this.coinPanel = panel;
+        this.coinText = text;
+    }
+
     onShow() {
-        this.updateScoreText(0);
+        this.updateCoinText(0);
 
         this.isContactFatalEdge = false;
 
@@ -104,6 +167,10 @@ export default class GameScene extends Scene {
             this.emitter = undefined;
         }
         this.onShow();
+    }
+
+    onContinue() {
+        this.onClickPauseButton();
     }
 
     onLoadedAllRes() {
@@ -241,13 +308,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "Space": {
-                if (this.gameStatus === "play") {
-                    this.gameLoopFunc = this.pause.bind(this);
-                    this.gameStatus = "pause";
-                } else if (this.gameStatus === "pause") {
-                    this.gameLoopFunc = this.play.bind(this);
-                    this.gameStatus = "play";
-                }
+                this.onClickPauseButton();
                 break;
             }
         }
@@ -256,7 +317,7 @@ export default class GameScene extends Scene {
     onAteItem(type) {
         switch (type) {
             case "GoldCoin": {
-                this.updateScoreText(this.score + 1);
+                this.updateCoinText(this.coin + 1);
                 MusicMgr.playSound(Config.soundPath.eatGoldCoin);
                 break;
             }
@@ -286,18 +347,6 @@ export default class GameScene extends Scene {
         this.fpsText = new Text("FPS:0", style);
         this.fpsText.anchor.set(0, 0);
         this.addChild(this.fpsText);
-    }
-
-    createScoreText() {
-        let style = new TextStyle({
-            fill: "white",
-            stroke: "#ff3300",
-            strokeThickness: 1,
-        });
-        this.scoreText = new Text("", style);
-        this.scoreText.anchor.set(1, 0);
-        this.scoreText.position.set(App.sceneWidth, 0);
-        this.addChild(this.scoreText);
     }
 
     createBg() {
@@ -412,7 +461,9 @@ export default class GameScene extends Scene {
     }
 
     play(delta) {
-        this.fpsText.text = `FPS:${Math.floor(delta * Config.fps)}`;
+        if (this.fpsText) {
+            this.fpsText.text = `FPS:${Math.floor(delta * Config.fps)}`;
+        }
 
         this.world.step(1 / Config.fps);
 
@@ -456,9 +507,9 @@ export default class GameScene extends Scene {
     pause() {
     }
 
-    updateScoreText(score) {
-        this.score = score;
-        this.scoreText.text = `SCORE:${this.score}`;
+    updateCoinText(score) {
+        this.coin = score;
+        this.coinText.text = this.coin;
     }
 
     accelerateBike() {

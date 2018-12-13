@@ -3,6 +3,7 @@ import StartScene from "../scene/StartScene";
 import MapGameScene from "../scene/MapGameScene";
 import EndlessGameScene from "../scene/EndlessGameScene";
 import GameOverScene from "../scene/GameOverScene";
+import PauseScene from "../scene/PauseScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -17,6 +18,7 @@ export default class MyApplication extends Application {
             "MapGameScene": MapGameScene,
             "EndlessGameScene": EndlessGameScene,
             "GameOverScene": GameOverScene,
+            "PauseScene": PauseScene,
         };
 
         this.sceneTable = {};
