@@ -91,23 +91,25 @@ export default class GameScene extends Scene {
         let panel = new Sprite(resources[Config.startImagePath.ui].textures["bottom-num.png"]);
         this.addChild(panel);
         panel.position.set(x, y);
+        let icon;
+        if (iconName) {
+            icon = new Sprite(resources[Config.startImagePath.ui].textures[iconName]);
+            panel.addChild(icon);
+            icon.anchor.set(0, 0.5);
+            icon.scale.set(0.5, 0.5);
+            icon.position.set(0, panel.height / 2);
+        }
 
-        let icon = new Sprite(resources[Config.startImagePath.ui].textures[iconName]);
-        panel.addChild(icon);
-        icon.anchor.set(0, 0.5);
-        icon.scale.set(0.5, 0.5);
-        icon.position.set(0, panel.height / 2);
-
-        let text = new Text("123456789");
+        let text = new Text("0");
         panel.addChild(text);
         text.anchor.set(0, 0.5);
-        text.position.set(icon.width, panel.height / 2);
+        text.position.set(icon ? icon.width : 0, panel.height / 2);
 
         return {panel, icon, text};
     }
 
     createDistancePanel() {
-        let {panel, text} = this.createIconNumPanel(this.pauseButton.width, 0, "text-m.png");
+        let {panel, text} = this.createIconNumPanel(this.pauseButton.width, 0);
         this.distancePanel = panel;
         this.distanceText = text;
     }
@@ -125,6 +127,7 @@ export default class GameScene extends Scene {
     }
 
     onShow() {
+        this.distance = 0;
         this.updateCoinText(0);
 
         this.isContactFatalEdge = false;
@@ -136,6 +139,8 @@ export default class GameScene extends Scene {
         this.roadList = [];
 
         this.bikeAccFrame = undefined;
+
+        this.portableItemButtonList.forEach(button => button.removeChildren());
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomContainer.scale.set(1, 1);
@@ -481,6 +486,8 @@ export default class GameScene extends Scene {
             this.fpsText.text = `FPS:${Math.floor(delta * Config.fps)}`;
         }
 
+        let oldX = this.bikeBody.getPosition().x;
+
         this.world.step(1 / Config.fps);
 
         let velocity = this.bikeBody.getLinearVelocity();
@@ -517,6 +524,12 @@ export default class GameScene extends Scene {
         if (this.bikeSprite) {
             this.emitter.updateOwnerPos(this.bikeSprite.x, this.bikeSprite.y);
             this.emitter.update(delta / 60);
+        }
+
+        if (this.gameStatus === "play") {
+            let newX = this.bikeBody.getPosition().x;
+            this.distance += newX - oldX;
+            this.distanceText.text = Math.floor(this.distance) + "m";
         }
     }
 
