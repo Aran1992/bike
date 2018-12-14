@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":45,
+    "selecteID":193,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -195,6 +195,19 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":44,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "props":{"y":394.5,"x":324,"texture":"images/item-acc.png","scaleY":0.75,"scaleX":0.75,"name":"ItemAccGem//携带加速宝石"},
+            "nodeParent":1,
+            "label":"ItemAccGem//携带加速宝石",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":193,
             "child":[
                 ]
         },
@@ -1017,6 +1030,7 @@
             "props":{"y":103,"x":1011,"texture":"images/medal.png","scaleY":0.25,"scaleX":0.25,"name":"GoldCoin//金币"},
             "nodeParent":1,
             "label":"GoldCoin//金币",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,

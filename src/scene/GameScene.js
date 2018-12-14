@@ -60,6 +60,8 @@ export default class GameScene extends Scene {
         this.createCoinPanel();
         // this.createItemPanel();
 
+        this.createPortableItem();
+
         this.gameStatus = "end";
         this.gameLoopFunc = this.pause.bind(this);
         App.ticker.add(this.gameLoop.bind(this));
@@ -253,6 +255,7 @@ export default class GameScene extends Scene {
             if (userData) {
                 switch (userData.type) {
                     case "AccGem":
+                    case "ItemAccGem":
                     case "GoldCoin": {
                         if (body.isAwake()) {
                             EventMgr.dispatchEvent("AteItem", userData.type);
@@ -323,6 +326,11 @@ export default class GameScene extends Scene {
             }
             case "AccGem": {
                 this.accelerateBike();
+                MusicMgr.playSound(Config.soundPath.eatAccGem);
+                break;
+            }
+            case "ItemAccGem": {
+                this.showPortableItem();
                 MusicMgr.playSound(Config.soundPath.eatAccGem);
                 break;
             }
@@ -425,6 +433,11 @@ export default class GameScene extends Scene {
             case "BlackBird": {
                 let item = new BlackBird(data, this.world);
                 this.birdList.push(item);
+                this.closeViewContainer.addChild(item.sprite);
+                break;
+            }
+            case "ItemAccGem": {
+                let item = new Item(data, this.world);
                 this.closeViewContainer.addChild(item.sprite);
                 break;
             }
@@ -761,6 +774,41 @@ export default class GameScene extends Scene {
         this.bgList.forEach((bg) => {
             bg.container.position.x = -this.cameraContainer.y;
             bg.container.position.y = -this.cameraContainer.y;
+        });
+    }
+
+    createPortableItem() {
+        this.portableItemButtonList = [];
+        for (let i = 0; i < 2; i++) {
+            let sprite = new Sprite(resources[Config.startImagePath.ui].textures["bottom-item.png"]);
+            this.addChild(sprite);
+            sprite.anchor.set(0.5, 0.5);
+            let [x, y] = Config.portableItemButtonPosList[i];
+            sprite.position.set(x, App.sceneHeight - y);
+            sprite.buttonMode = true;
+            sprite.interactive = true;
+            sprite.on("pointerdown", () => this.onClickPortableItem(i));
+            this.portableItemButtonList.push(sprite);
+        }
+    }
+
+    onClickPortableItem(i) {
+        let button = this.portableItemButtonList[i];
+        if (button.children.length !== 0) {
+            this.accelerateBike();
+            button.removeChildren();
+        }
+    }
+
+    showPortableItem() {
+        this.portableItemButtonList.some(button => {
+            if (button.children.length === 0) {
+                let sprite = new Sprite(resources[Config.imagePath.itemAccGem].texture);
+                button.addChild(sprite);
+                sprite.anchor.set(0.5, 0.5);
+                sprite.position.set(0, 0);
+                return true;
+            }
         });
     }
 }

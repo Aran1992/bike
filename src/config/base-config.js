@@ -211,7 +211,8 @@ Config.cameraAutoZoomCommonScale = 2;
 Config.cameraAutoZoomScaleSpeed = 0.01;
 
 Config.imagePath = {
-    bikeParticle: "images/particles/bike.png"
+    bikeParticle: "images/particles/bike.png",
+    itemAccGem: "images/item-acc.png",
 };
 
 Config.emitterPath = {

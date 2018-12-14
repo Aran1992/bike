@@ -309,7 +309,7 @@ Config.endlessMode.sceneList = [
                     // scene文件的路径
                     scenePath: "Test/2/Test12",
                 },
-			],
+            ],
             [
                 {
                     // scene文件的路径
@@ -383,7 +383,7 @@ Config.endlessMode.sceneList = [
                     // scene文件的路径
                     scenePath: "Test/3/Test2-12",
                 },
-			],
+            ],
         ]
     },
 ];
@@ -424,5 +424,11 @@ Config.cameraAutoZoomScaleSpeed = 0.01;
 Config.bgOffsetHeight = 380;
 // 最上层背景在镜头内的最小高度
 Config.bgMinHeightInView = 1000;
+
+// 可携带物品按钮的位置列表
+Config.portableItemButtonPosList = [
+    [100, 200],
+    [100, 100],
+];
 
 export default Config;
