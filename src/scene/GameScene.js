@@ -334,7 +334,6 @@ export default class GameScene extends Scene {
             }
             case "ItemAccGem": {
                 this.showPortableItem();
-                MusicMgr.playSound(Config.soundPath.eatAccGem);
                 break;
             }
         }

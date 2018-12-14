@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
+    "archiver": "^3.0.0",
     "babel-loader": "^8.0.4",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",

@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const webpack = require("webpack");
-const config = require("../webpack.config");
+const config = require("../webpack-fb.config");
+const archiver = require("archiver");
 
 function copy_(src, dist, exceptList) {
     if (exceptList && exceptList.some(file => file === src)) {
@@ -39,14 +40,49 @@ function deleteall(path) {
     }
 }
 
-config.mode = "production";
 webpack(config, () => {
-    deleteall("./publish");
+    deleteall("./publish-fb");
     [
         "images",
         "sound",
         "myLaya/laya/pages",
-        "index.html",
         "dist/bundle.js",
-    ].forEach(file => copy(file, `publish/${file}`));
+        "fbapp-config.json",
+    ].forEach(file => copy(file, `publish-fb/${file}`));
+    copy("index-fb.html", "publish-fb/index.html");
+
+    let output = fs.createWriteStream(__dirname + "/publish-fb.zip");
+
+    let archive = archiver("zip", {
+        zlib: {level: 9} // Sets the compression level.
+    });
+
+    output.on("close", function () {
+        console.log(archive.pointer() + " total bytes");
+        console.log("archiver has been finalized and the output file descriptor has closed.");
+    });
+
+    output.on("end", function () {
+        console.log("Data has been drained");
+    });
+
+    archive.on("warning", function (err) {
+        if (err.code === "ENOENT") {
+            // log warning
+        } else {
+            // throw error
+            throw err;
+        }
+    });
+
+    archive.on("error", function (err) {
+        throw err;
+    });
+
+    archive.pipe(output);
+
+    // append files from a sub-directory, putting its contents at the root of archive
+    archive.directory("publish-fb/", false);
+
+    archive.finalize();
 });

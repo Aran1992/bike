@@ -8,6 +8,9 @@ class MusicMgr_ {
 
     playBGM(path) {
         this.bgmAudio.src = path;
+        this.bgmAudio.onload = () => {
+            this.bgmAudio.play();
+        };
     }
 
     pauseBGM() {
