@@ -100,7 +100,7 @@ export default class GameScene extends Scene {
             icon.position.set(0, panel.height / 2);
         }
 
-        let text = new Text("0");
+        let text = new Text("0", new TextStyle({fill: "white"}));
         panel.addChild(text);
         text.anchor.set(0, 0.5);
         text.position.set(icon ? icon.width : 0, panel.height / 2);
