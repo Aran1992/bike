@@ -9,6 +9,8 @@ export default class MyApplication extends Application {
     constructor(args) {
         super(args);
 
+        window.App = this;
+
         this.scenesContainer = this.stage;
         this.sceneWidth = args.width;
         this.sceneHeight = args.height;

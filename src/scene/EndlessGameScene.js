@@ -31,7 +31,6 @@ export default class EndlessGameScene extends GameScene {
             .concat([
                 this.sceneConfig.texture.side,
                 this.sceneConfig.texture.top,
-                this.sceneConfig.bgmPath,
             ])
             .concat(this.sceneConfig.roadSectionList.reduce((list, diff) =>
                 list.concat(diff.map(section =>

@@ -20,7 +20,7 @@ if (wwhRatio >= dwhRatio) {
     appHeight = Config.designWidth / window.innerWidth * window.innerHeight;
 }
 
-export const App = new MyApplication({
+const App = new MyApplication({
     width: appWidth,
     height: appHeight,
     resolution: resolution,

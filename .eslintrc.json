@@ -34,6 +34,7 @@
   "globals": {
     "App": true,
     "canvas": false,
-    "wx": false
+    "wx": false,
+    "FBInstant": false
   }
 }

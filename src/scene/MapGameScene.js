@@ -1,5 +1,4 @@
 import Config from "../config";
-import {App} from "../main";
 import GameScene from "./GameScene";
 import {resources, Sprite} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
@@ -33,7 +32,6 @@ export default class MapGameScene extends GameScene {
             .concat([
                 this.mapConfig.texture.side,
                 this.mapConfig.texture.top,
-                this.mapConfig.bgmPath,
                 Config.mapBasePath + this.mapConfig.scenePath + ".scene",
             ]);
     }

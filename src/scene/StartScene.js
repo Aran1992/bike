@@ -1,5 +1,4 @@
 import Config from "../config";
-import {App} from "../main";
 import Scene from "./Scene";
 import {Container, Text, TextStyle} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";

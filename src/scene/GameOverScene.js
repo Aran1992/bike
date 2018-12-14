@@ -1,5 +1,4 @@
 import Config from "../config";
-import {App} from "../main";
 import EventMgr from "../mgr/EventMgr";
 import Scene from "./Scene";
 import {Graphics, resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";

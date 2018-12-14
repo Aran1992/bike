@@ -2,7 +2,6 @@ import Config from "../config";
 import {Container, Graphics, resources, Sprite, Texture, TilingSprite} from "../libs/pixi-wrapper";
 import {Edge, Vec2} from "../libs/planck-wrapper";
 import Utils from "../mgr/Utils";
-import {App} from "../main";
 
 export default class Road {
     constructor(world, path, sideTexturePath, topTexturePath) {

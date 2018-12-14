@@ -1,6 +1,5 @@
 import Config from "../config";
 import RunOption from "../../run-option";
-import {App} from "../main";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
@@ -156,7 +155,6 @@ export default class GameScene extends Scene {
             Config.accGemAniJson,
             Config.fireWallAniJson,
             Config.birdAniJson,
-            Config.defaultBgmPath,
         ]
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.emitterPath))
