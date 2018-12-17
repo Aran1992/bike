@@ -303,8 +303,8 @@ export default class GameScene extends Scene {
                         MusicMgr.playSound(Config.soundPath.extraJump);
                         this.emitter.playOnce();
                 }
-                if (Config.bikeJumpingAnimation[this.jumpCount]) {
-                    this.jumpingAnimationFrames = GameUtils.getFrames(Config.bikeJumpingAnimation[this.jumpCount]);
+                if (Config.bikeJumpingAnimation[`${this.jumpCount}`]) {
+                    this.jumpingAnimationFrames = GameUtils.getFrames(Config.bikeJumpingAnimation[`${this.jumpCount}`]);
                     this.jumpingAnimationIndex = 0;
                 } else {
                     this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
