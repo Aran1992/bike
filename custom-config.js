@@ -432,6 +432,7 @@ Config.portableItemButtonPosList = [
 ];
 
 Config.bikeJumpingAnimation = {
+<<<<<<< HEAD
     "2": "images/tyariso_run_anim_all.png3.json",
     "3": "images/tyariso_run_anim_all.png4.json",
     "4": "images/tyariso_run_anim_all.png5.json",
@@ -439,6 +440,9 @@ Config.bikeJumpingAnimation = {
     "6": "images/tyariso_run_anim_all.png4.json",
     "7": "images/tyariso_run_anim_all.png5.json",
     "8": "images/tyariso_run_anim_all.png2.json",
+=======
+    "2": "images/bird-animation.json",
+>>>>>>> 1c27dd626319ecfdbb41312629c66a19680fd6ec
 };
 
 export default Config;
