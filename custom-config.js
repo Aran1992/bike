@@ -432,7 +432,10 @@ Config.portableItemButtonPosList = [
 ];
 
 Config.bikeJumpingAnimation = {
-    "2": "images/bird-animation.json",
+    "2": {
+        atlasPath: "images/bird-animation.json",
+        interval: 5
+    },
 };
 
 export default Config;

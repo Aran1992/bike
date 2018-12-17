@@ -164,7 +164,7 @@ export default class GameScene extends Scene {
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
-            .concat(Utils.values(Config.bikeJumpingAnimation));
+            .concat(Utils.values(Config.bikeJumpingAnimation).map(item => item.atlasPath));
     }
 
     onRestart() {
@@ -304,8 +304,9 @@ export default class GameScene extends Scene {
                         this.emitter.playOnce();
                 }
                 if (Config.bikeJumpingAnimation[`${this.jumpCount}`]) {
-                    this.jumpingAnimationFrames = GameUtils.getFrames(Config.bikeJumpingAnimation[`${this.jumpCount}`]);
+                    this.jumpingAnimationFrames = GameUtils.getFrames(Config.bikeJumpingAnimation[`${this.jumpCount}`].atlasPath);
                     this.jumpingAnimationIndex = 0;
+                    this.jumpingAnimationInterval = Config.bikeJumpingAnimation[`${this.jumpCount}`].interval;
                 } else {
                     this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                     this.jumpingAnimationFrames = undefined;
@@ -573,10 +574,13 @@ export default class GameScene extends Scene {
             }
             if (this.jumping) {
                 if (this.jumpingAnimationFrames) {
-                    if (this.jumpingAnimationFrames[this.jumpingAnimationIndex + 1]) {
-                        this.jumpingAnimationIndex++;
+                    this.jumpingAnimationIndex++;
+                    let frameIndex = Math.floor(this.jumpingAnimationIndex / this.jumpingAnimationInterval);
+                    let frame = this.jumpingAnimationFrames[frameIndex];
+                    if (frame === undefined) {
+                        frame = this.jumpingAnimationFrames[this.jumpingAnimationFrames.length - 1];
                     }
-                    this.bikeSprite.texture = this.jumpingAnimationFrames[`${this.jumpingAnimationIndex}`];
+                    this.bikeSprite.texture = frame;
                 }
             } else {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
