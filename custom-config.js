@@ -432,7 +432,13 @@ Config.portableItemButtonPosList = [
 ];
 
 Config.bikeJumpingAnimation = {
-    "2": "tyariso_run_anim_all.png.json",
+    "2": "images/tyariso_run_anim_all.png3.json",
+    "3": "images/tyariso_run_anim_all.png4.json",
+    "4": "images/tyariso_run_anim_all.png5.json",
+    "5": "images/tyariso_run_anim_all.png3.json",
+    "6": "images/tyariso_run_anim_all.png4.json",
+    "7": "images/tyariso_run_anim_all.png5.json",
+    "8": "images/tyariso_run_anim_all.png2.json",
 };
 
 export default Config;
