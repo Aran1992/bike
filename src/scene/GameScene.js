@@ -303,10 +303,20 @@ export default class GameScene extends Scene {
                         MusicMgr.playSound(Config.soundPath.extraJump);
                         this.emitter.playOnce();
                 }
-                if (Config.bikeJumpingAnimation[`${this.jumpCount}`]) {
-                    this.jumpingAnimationFrames = GameUtils.getFrames(Config.bikeJumpingAnimation[`${this.jumpCount}`].atlasPath);
+                let jumpAnimation = Config.bikeJumpingAnimation[this.jumpCount];
+                if (jumpAnimation === undefined) {
+                    let lastKey;
+                    for (let count in Config.bikeJumpingAnimation) {
+                        lastKey = count;
+                    }
+                    if (lastKey && this.jumpCount > lastKey) {
+                        jumpAnimation = Config.bikeJumpingAnimation[lastKey];
+                    }
+                }
+                if (jumpAnimation) {
+                    this.jumpingAnimationFrames = GameUtils.getFrames(jumpAnimation.atlasPath);
                     this.jumpingAnimationIndex = 0;
-                    this.jumpingAnimationInterval = Config.bikeJumpingAnimation[`${this.jumpCount}`].interval;
+                    this.jumpingAnimationInterval = jumpAnimation.interval;
                 } else {
                     this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                     this.jumpingAnimationFrames = undefined;
