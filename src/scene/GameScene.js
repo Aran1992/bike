@@ -163,7 +163,8 @@ export default class GameScene extends Scene {
         ]
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.emitterPath))
-            .concat(Utils.values(Config.imagePath));
+            .concat(Utils.values(Config.imagePath))
+            .concat(Utils.values(Config.bikeJumpingAnimation));
     }
 
     onRestart() {
@@ -287,9 +288,8 @@ export default class GameScene extends Scene {
                 let velocity = this.bikeBody.getLinearVelocity();
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
                 this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
-                this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                 this.jumping = true;
-                this.jumpCount += 1;
+                this.jumpCount++;
                 this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
                 switch (this.jumpCount) {
                     case 1:
@@ -302,6 +302,14 @@ export default class GameScene extends Scene {
                     default:
                         MusicMgr.playSound(Config.soundPath.extraJump);
                         this.emitter.playOnce();
+                }
+                if (Config.bikeJumpingAnimation[this.jumpCount]) {
+                    this.jumpingAnimationFrames = GameUtils.getFrames(Config.bikeJumpingAnimation[this.jumpCount]);
+                    this.jumpingAnimationIndex = 0;
+                } else {
+                    this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
+                    this.jumpingAnimationFrames = undefined;
+                    this.jumpingAnimationIndex = undefined;
                 }
             }
         }
@@ -563,9 +571,16 @@ export default class GameScene extends Scene {
             } else {
                 this.bikeAccSprite.visible = false;
             }
-            if (!this.jumping) {
+            if (this.jumping) {
+                if (this.jumpingAnimationFrames) {
+                    if (this.jumpingAnimationFrames[this.jumpingAnimationIndex + 1]) {
+                        this.jumpingAnimationIndex++;
+                    }
+                    this.bikeSprite.texture = this.jumpingAnimationFrames[`${this.jumpingAnimationIndex}`];
+                }
+            } else {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
-                this.bikeFrame += 1;
+                this.bikeFrame++;
                 if (this.bikeFrame >= this.bikeFrameCount) {
                     this.bikeFrame = 0;
                 }
