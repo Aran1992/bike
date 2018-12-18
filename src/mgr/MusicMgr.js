@@ -1,4 +1,5 @@
 import Config from "../config";
+
 class MusicMgr_ {
     constructor() {
         this.bgmAudio = document.createElement("audio");
@@ -8,13 +9,12 @@ class MusicMgr_ {
     }
 
     playBGM(path) {
-        if (Config.closeBGM) {
-            return;
+        if (Config.openBGM) {
+            this.bgmAudio.src = path;
+            this.bgmAudio.onload = () => {
+                this.bgmAudio.play();
+            };
         }
-        this.bgmAudio.src = path;
-        this.bgmAudio.onload = () => {
-            this.bgmAudio.play();
-        };
     }
 
     pauseBGM() {
@@ -22,14 +22,13 @@ class MusicMgr_ {
     }
 
     playSound(path, callback) {
-        if (Config.closeSound) {
-            return;
-        }
-        let audio = document.createElement("audio");
-        audio.autoplay = true;
-        audio.src = path;
-        if (callback) {
-            audio.addEventListener("ended", () => callback());
+        if (Config.openSound) {
+            let audio = document.createElement("audio");
+            audio.autoplay = true;
+            audio.src = path;
+            if (callback) {
+                audio.addEventListener("ended", () => callback());
+            }
         }
     }
 }

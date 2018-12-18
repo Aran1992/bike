@@ -438,9 +438,9 @@ Config.bikeJumpingAnimation = {
     },
 };
 
-// 关闭背景音乐
-Config.closeBGM = 0;
-// 关闭音效
-Config.closeSound = 0;
+// 播放背景音乐
+Config.openBGM = 1;
+// 播放音效
+Config.openSound = 1;
 
 export default Config;
