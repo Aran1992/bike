@@ -31,8 +31,12 @@ export default class MyApplication extends Application {
             let sceneClass = this.sceneNameClassMap[sceneName];
             this.sceneTable[sceneName] = new sceneClass();
             this.scenesContainer.addChild(this.sceneTable[sceneName]);
+            this.sceneTable[sceneName].create(() => {
+                this.sceneTable[sceneName].show(...args);
+            });
+        } else {
+            this.sceneTable[sceneName].show(...args);
         }
-        this.sceneTable[sceneName].show(...args);
     }
 
     hideScene(sceneName) {

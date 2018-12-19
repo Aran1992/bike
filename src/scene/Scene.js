@@ -1,11 +1,20 @@
 import {Container} from "../libs/pixi-wrapper";
 import EventMgr from "../mgr/EventMgr";
+import SceneHelper from "../mgr/SceneHelper";
 
 export default class Scene extends Container {
-    constructor() {
-        super();
+    create(createCallback) {
         this.eventTable = {};
-        this.onCreate();
+        this.createCallback = createCallback;
+
+        if (this.__proto__.constructor.sceneFilePath) {
+            this.sceneFilePath = this.__proto__.constructor.sceneFilePath;
+            this.loadResources();
+        } else {
+            this.onCreate();
+            this.createCallback();
+            this.createCallback = undefined;
+        }
     }
 
     destroy() {
@@ -21,6 +30,21 @@ export default class Scene extends Container {
     hide() {
         this.visible = false;
         this.onHide();
+    }
+
+    loadResources() {
+        App.loadResources([this.sceneFilePath], this.onLoadedSceneFile.bind(this));
+    }
+
+    onLoadedSceneFile() {
+        SceneHelper.loadSceneRes(this.sceneFilePath, this.onLoadedAllRes.bind(this));
+    }
+
+    onLoadedAllRes() {
+        SceneHelper.createScene(this.sceneFilePath, this);
+        this.onCreate();
+        this.createCallback();
+        this.createCallback = undefined;
     }
 
     onCreate() {
@@ -50,5 +74,11 @@ export default class Scene extends Container {
     unregisterEvent(event) {
         EventMgr.unregisterEvent(event, this.eventTable[event]);
         this.eventTable[event] = undefined;
+    }
+
+    onClick(button, handler) {
+        button.buttonMode = true;
+        button.interactive = true;
+        button.on("pointerup", handler);
     }
 }

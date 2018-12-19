@@ -29,7 +29,7 @@ FBInstant.initializeAsync()
                     width: appWidth,
                     height: appHeight,
                     resolution: resolution,
-                    antialiasing: true,
+                    antialias: true,
                     transparent: false,
                 });
                 document.body.appendChild(App.view);

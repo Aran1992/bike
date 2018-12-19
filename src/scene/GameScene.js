@@ -25,7 +25,7 @@ export default class GameScene extends Scene {
         window.addEventListener("keydown", this.onKeydown.bind(this));
 
         this.gameContainer = new Container();
-        this.addChild(this.gameContainer);
+        this.addChildAt(this.gameContainer, 0);
         let scale = App.sceneHeight / Config.designHeight;
         this.gameContainer.scale.set(scale, scale);
         this.gameContainer.x = (App.sceneWidth - scale * Config.designWidth) / 2;
@@ -53,26 +53,13 @@ export default class GameScene extends Scene {
 
         // this.createFPSText();
 
-        this.createPauseButton();
-        this.createDistancePanel();
-        this.createDiamondPanel();
-        this.createCoinPanel();
-        // this.createItemPanel();
-
-        this.createPortableItem();
+        this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
+        this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
+        this.portableItemButtonList.forEach((button, i) => this.onClick(button, () => this.onClickPortableItem(i)));
 
         this.gameStatus = "end";
         this.gameLoopFunc = this.pause.bind(this);
         App.ticker.add(this.gameLoop.bind(this));
-    }
-
-    createPauseButton() {
-        let sprite = new Sprite(resources[Config.startImagePath.ui].textures["button-pause.png"]);
-        sprite.buttonMode = true;
-        sprite.interactive = true;
-        sprite.on("pointerdown", this.onClickPauseButton.bind(this));
-        this.addChild(sprite);
-        this.pauseButton = sprite;
     }
 
     onClickPauseButton() {
@@ -85,45 +72,6 @@ export default class GameScene extends Scene {
             this.gameStatus = "play";
             App.hideScene("PauseScene");
         }
-    }
-
-    createIconNumPanel(x, y, iconName) {
-        let panel = new Sprite(resources[Config.startImagePath.ui].textures["bottom-num.png"]);
-        this.addChild(panel);
-        panel.position.set(x, y);
-        let icon;
-        if (iconName) {
-            icon = new Sprite(resources[Config.startImagePath.ui].textures[iconName]);
-            panel.addChild(icon);
-            icon.anchor.set(0, 0.5);
-            icon.scale.set(0.5, 0.5);
-            icon.position.set(0, panel.height / 2);
-        }
-
-        let text = new Text("0", new TextStyle({fill: "white"}));
-        panel.addChild(text);
-        text.anchor.set(0, 0.5);
-        text.position.set(icon ? icon.width : 0, panel.height / 2);
-
-        return {panel, icon, text};
-    }
-
-    createDistancePanel() {
-        let {panel, text} = this.createIconNumPanel(this.pauseButton.width, 0);
-        this.distancePanel = panel;
-        this.distanceText = text;
-    }
-
-    createDiamondPanel() {
-        let {panel, text} = this.createIconNumPanel(this.distancePanel.x + this.distancePanel.width, 0, "icon-diamond.png");
-        this.diamondPanel = panel;
-        this.diamondeText = text;
-    }
-
-    createCoinPanel() {
-        let {panel, text} = this.createIconNumPanel(this.diamondPanel.x + this.diamondPanel.width, 0, "icon-coin.png");
-        this.coinPanel = panel;
-        this.coinText = text;
     }
 
     onShow() {
@@ -149,7 +97,7 @@ export default class GameScene extends Scene {
 
         this.initEnvironment();
 
-        App.loadResources(this.getResPathList(), this.onLoadedAllRes.bind(this));
+        App.loadResources(this.getResPathList(), this.onLoadedGameRes.bind(this));
     }
 
     getResPathList() {
@@ -179,7 +127,7 @@ export default class GameScene extends Scene {
         this.onClickPauseButton();
     }
 
-    onLoadedAllRes() {
+    onLoadedGameRes() {
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
         this.world.on("begin-contact", this.onBeginContact.bind(this));
@@ -547,7 +495,7 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play") {
             let newX = this.bikeBody.getPosition().x;
             this.distance += newX - oldX;
-            this.distanceText.text = Math.floor(this.distance) + "m";
+            this.ui.distanceText.text = Math.floor(this.distance) + "m";
         }
     }
 
@@ -556,7 +504,7 @@ export default class GameScene extends Scene {
 
     updateCoinText(score) {
         this.coin = score;
-        this.coinText.text = this.coin;
+        this.ui.coinText.text = this.coin;
     }
 
     accelerateBike() {
@@ -816,21 +764,6 @@ export default class GameScene extends Scene {
         });
     }
 
-    createPortableItem() {
-        this.portableItemButtonList = [];
-        for (let i = 0; i < 2; i++) {
-            let sprite = new Sprite(resources[Config.startImagePath.ui].textures["bottom-item.png"]);
-            this.addChild(sprite);
-            sprite.anchor.set(0.5, 0.5);
-            let [x, y] = Config.portableItemButtonPosList[i];
-            sprite.position.set(x, App.sceneHeight - y);
-            sprite.buttonMode = true;
-            sprite.interactive = true;
-            sprite.on("pointerdown", () => this.onClickPortableItem(i));
-            this.portableItemButtonList.push(sprite);
-        }
-    }
-
     onClickPortableItem(i) {
         let button = this.portableItemButtonList[i];
         if (button.children.length !== 0) {
@@ -845,9 +778,11 @@ export default class GameScene extends Scene {
                 let sprite = new Sprite(resources[Config.imagePath.itemAccGem].texture);
                 button.addChild(sprite);
                 sprite.anchor.set(0.5, 0.5);
-                sprite.position.set(0, 0);
+                sprite.position.set(button.width / 2, button.height / 2);
                 return true;
             }
         });
     }
 }
+
+GameScene.sceneFilePath = "myLaya/laya/pages/View/GameScene.scene";

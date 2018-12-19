@@ -3,6 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const config = require("../webpack-fb.config");
 const archiver = require("archiver");
+const child_process = require("child_process");
 
 function copy_(src, dist, exceptList) {
     if (exceptList && exceptList.some(file => file === src)) {
@@ -24,14 +25,14 @@ function copy(src, dist, exceptList) {
     copy_(src, dist, exceptList);
 }
 
-function deleteall(path) {
+function deleteAll(path) {
     let files = [];
     if (fs.existsSync(path)) {
         files = fs.readdirSync(path);
         files.forEach(file => {
             let curPath = path + "/" + file;
             if (fs.statSync(curPath).isDirectory()) {
-                deleteall(curPath);
+                deleteAll(curPath);
             } else {
                 fs.unlinkSync(curPath);
             }
@@ -41,7 +42,8 @@ function deleteall(path) {
 }
 
 webpack(config, () => {
-    deleteall("./publish-fb");
+    deleteAll("./publish-fb");
+
     [
         "images",
         "sound",
@@ -51,7 +53,9 @@ webpack(config, () => {
     ].forEach(file => copy(file, `publish-fb/${file}`));
     copy("index-fb.html", "publish-fb/index.html");
 
-    let output = fs.createWriteStream(__dirname + "/publish-fb.zip");
+    let filePath = "publish-fb.zip";
+
+    let output = fs.createWriteStream(filePath);
 
     let archive = archiver("zip", {
         zlib: {level: 9} // Sets the compression level.
@@ -85,4 +89,16 @@ webpack(config, () => {
     archive.directory("publish-fb/", false);
 
     archive.finalize();
+
+    let appID = "371465643397666";
+    let accessToken = "EAAYsfZAxiFmMBAAZBaXXjVZC7u7GNZBWwiZClM5Ozipk5O2PZAmYmNZCZADSSRBZCGr80Jq13KAZAmKJcmNUWLVXgR4xB2FQC1AUjx0gZBRBy3qcyu7nUnqXAFq5DnwB05MaDUVL84KZBZBgzg5AWcZCUVS7sZCoCit4ZC46ZCeMlrqpdYUphulG6KfByybqv";
+    let cmd = `curl -X POST https://graph-video.facebook.com/${appID}/assets -F "access_token=${accessToken}" -F "type=BUNDLE" -F "asset=@./${filePath}" -F "comment=Graph_API_upload"`;
+    child_process.exec(cmd, (err, stdout, stderr) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    });
 });
