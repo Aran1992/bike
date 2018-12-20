@@ -3,8 +3,8 @@ import Config from "./src/config/base-config";
 // 自行车速度（基础：20）
 Config.bikeVelocity = 20;
 
-// 重力（基础：-200）
-Config.gravity = -200;
+// 重力（基础：-175）
+Config.gravity = -175;
 
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
@@ -39,8 +39,8 @@ Config.mapList = [
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
-        // 重力（基础：-200）
-        gravity: -200,
+        // 重力（基础：-175）
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -72,8 +72,8 @@ Config.mapList = [
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
-        // 重力（基础：-200）
-        gravity: -200,
+        // 重力（基础：-175）
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -107,8 +107,8 @@ Config.mapList = [
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
-        // 重力（基础：-200）
-        gravity: -200,
+        // 重力（基础：-175）
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -140,8 +140,8 @@ Config.mapList = [
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 40,
-        // 重力（基础：-200）
-        gravity: -200,
+        // 重力（基础：-175）
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -173,7 +173,7 @@ Config.mapList = [
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
-        // 重力（基础：-200）
+        // 重力（基础：-175）
         gravity: -50,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
@@ -225,8 +225,8 @@ Config.endlessMode.sceneList = [
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
-        // 重力（基础：-200）
-        gravity: -200,
+        // 重力（基础：-175）
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -416,9 +416,9 @@ Config.bikeJumpExtraCountdown = [20, 18, 16, 14, 12, 10];
 // 是否开启镜头自动调距功能
 Config.enableCameraAutoZoom = 0;
 // 普通状态下镜头的缩放倍数
-Config.cameraAutoZoomCommonScale = 2;
+Config.cameraAutoZoomCommonScale = 1.5;
 // 镜头缩放的速度 每帧变化的缩放大小
-Config.cameraAutoZoomScaleSpeed = 0.01;
+Config.cameraAutoZoomScaleSpeed = 0.02;
 
 // 最上层背景的补边高度
 Config.bgOffsetHeight = 380;
@@ -433,7 +433,31 @@ Config.portableItemButtonPosList = [
 
 Config.bikeJumpingAnimation = {
     "2": {
-        atlasPath: "images/bird-animation.json",
+        atlasPath: "images/tyariso_run_anim_all.png3.json",
+        interval: 5
+    },
+    "3": {
+        atlasPath: "images/tyariso_run_anim_all.png4.json",
+        interval: 5
+    },
+    "4": {
+        atlasPath: "images/tyariso_run_anim_all.png5.json",
+        interval: 5
+    },
+    "5": {
+        atlasPath: "images/tyariso_run_anim_all.png3.json",
+        interval: 5
+    },
+    "6": {
+        atlasPath: "images/tyariso_run_anim_all.png4.json",
+        interval: 5
+    },
+    "7": {			
+        atlasPath: "images/tyariso_run_anim_all.png5.json",
+        interval: 5
+    },
+    "8": {
+        atlasPath: "images/tyariso_run_anim_all.png2.json",
         interval: 5
     },
 };

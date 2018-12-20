@@ -2,7 +2,7 @@
 
 "bike.png":
 {
-	"frame": {"x":407,"y":445,"w":81,"h":115},
+	"frame": {"x":408,"y":445,"w":81,"h":115},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":407,"y":445,"w":81,"h":115},
