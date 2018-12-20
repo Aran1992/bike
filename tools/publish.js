@@ -46,6 +46,7 @@ webpack(config, () => {
         "images",
         "sound",
         "myLaya/laya/pages",
+        "myLaya/laya/assets/images",
         "index.html",
         "dist/bundle.js",
     ].forEach(file => copy(file, `publish/${file}`));
