@@ -201,7 +201,7 @@ Config.bikeJumpingRotation = -30;
 Config.endlessMode.sceneList = [
     {
         // 显示给人看的名字
-        showName: "Test",
+        showName: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -230,7 +230,749 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM101.mp3",
+        bgmPath: "sound/SoundBGM102.mp3",
+        roadSectionList: [
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test14",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test13",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test12",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test14",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-12",
+                },
+            ],
+        ]
+    },
+    {
+        // 显示给人看的名字
+        showName: "Test2",
+        // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+        texture: {
+            // 侧边
+            side: "images/Aries/TextureAriesRoad01SideSkin.png",
+            // 底部
+            top: "images/Aries/TextureAriesRoad01TopSkin.png",
+            // 背景 有多少层背景就配置多少张
+            bg: [
+                "images/Aries/TextureAriesBackground01.png",
+                "images/Aries/TextureAriesBackground02.png",
+                "images/Aries/TextureAriesBackground03.png",
+            ]
+        },
+        // 视差背景系数左右
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        // 视差背景系数：上下
+        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
+        // 自行车速度（基础：20）
+        bikeVelocity: 20,
+        // 重力（基础：-175）
+        gravity: -175,
+        // 跳跃爆发力（基础：12800）
+        jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM103.mp3",
+        roadSectionList: [
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test14",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test13",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test12",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test14",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-12",
+                },
+            ],
+        ]
+    },
+    {
+        // 显示给人看的名字
+        showName: "Test3",
+        // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+        texture: {
+            // 侧边
+            side: "images/Capricorn/TextureCapricornRoad01SideSkin.png",
+            // 底部
+            top: "images/Capricorn/TextureCapricornRoad01TopSkin.png",
+            // 背景 有多少层背景就配置多少张
+            bg: [
+                "images/Capricorn/TextureCapricornBackground01.png",
+                "images/Capricorn/TextureCapricornBackground02.png",
+                "images/Capricorn/TextureCapricornBackground03.png",
+            ]
+        },
+        // 视差背景系数左右
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        // 视差背景系数：上下
+        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        // 背景的Y轴位置
+        bgY: [0, 120, 180],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
+        // 自行车速度（基础：20）
+        bikeVelocity: 20,
+        // 重力（基础：-175）
+        gravity: -175,
+        // 跳跃爆发力（基础：12800）
+        jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM105.mp3",
+        roadSectionList: [
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test14",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test13",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test12",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test14",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-12",
+                },
+            ],
+        ]
+    },
+    {
+        // 显示给人看的名字
+        showName: "Test4",
+        // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+        texture: {
+            // 侧边
+            side: "images/Scorpius/TextureScorpiusRoad01SideSkin.png",
+            // 底部
+            top: "images/Scorpius/TextureScorpiusRoad01TopSkin.png",
+            // 背景 有多少层背景就配置多少张
+            bg: [
+                "images/Scorpius/TextureScorpiusBackground01.png",
+                "images/Scorpius/TextureScorpiusBackground02.png",
+                "images/Scorpius/TextureScorpiusBackground03.png",
+            ]
+        },
+        // 视差背景系数左右
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        // 视差背景系数：上下
+        verticalParallaxDepth: [1, 1, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
+        // 自行车速度（基础：20）
+        bikeVelocity: 20,
+        // 重力（基础：-175）
+        gravity: -175,
+        // 跳跃爆发力（基础：12800）
+        jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/SoundBGM105.mp3",
+        roadSectionList: [
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/0/Test14",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/1/Test13",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/2/Test12",
+                },
+            ],
+            [
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test4",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test14",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-3",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-12",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test1-13",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-1",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-2",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-11",
+                },
+                {
+                    // scene文件的路径
+                    scenePath: "Test/3/Test2-12",
+                },
+            ],
+        ]
+    },
+    {
+        // 显示给人看的名字
+        showName: "Test5",
+        // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+        texture: {
+            // 侧边
+            side: "images/Aquarius/TextureAquariusRoad01SideSkin.png",
+            // 底部
+            top: "images/Aquarius/TextureAquariusRoad01TopSkin.png",
+            // 背景 有多少层背景就配置多少张
+            bg: [
+                "images/Aquarius/TextureAquariusBackground01.png",
+                "images/Aquarius/TextureAquariusBackground02.png",
+                "images/Aquarius/TextureAquariusBackground03.png",
+            ]
+        },
+        // 视差背景系数左右
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        // 视差背景系数：上下
+        verticalParallaxDepth: [1, 1, 0.8, 0],
+        // 背景缩放系数
+        bgScale: [1, 1, 1],
+        // 自行车速度（基础：20）
+        bikeVelocity: 20,
+        // 重力（基础：-175）
+        gravity: -175,
+        // 跳跃爆发力（基础：12800）
+        jumpForce: 12800,
+        // BGM路径
+        bgmPath: "sound/bgm1.mp3",
         roadSectionList: [
             [
                 {
