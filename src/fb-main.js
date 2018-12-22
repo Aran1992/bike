@@ -39,7 +39,7 @@ FBInstant.initializeAsync()
                 App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
 
                 App.loadResources(Utils.values(Config.startImagePath), () => {
-                    App.showScene("StartScene");
+                    App.showScene("MainScene");
                 });
             });
     });

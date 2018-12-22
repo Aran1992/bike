@@ -1,9 +1,10 @@
 import {Application, loader, resources} from "../libs/pixi-wrapper";
-import StartScene from "../scene/StartScene";
 import MapGameScene from "../scene/MapGameScene";
 import EndlessGameScene from "../scene/EndlessGameScene";
 import GameOverScene from "../scene/GameOverScene";
 import PauseScene from "../scene/PauseScene";
+import MainScene from "../scene/MainScene";
+import ShopScene from "../scene/ShopScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -16,11 +17,12 @@ export default class MyApplication extends Application {
         this.sceneHeight = args.height;
 
         this.sceneNameClassMap = {
-            "StartScene": StartScene,
+            "MainScene": MainScene,
             "MapGameScene": MapGameScene,
             "EndlessGameScene": EndlessGameScene,
             "GameOverScene": GameOverScene,
             "PauseScene": PauseScene,
+            "ShopScene": ShopScene,
         };
 
         this.sceneTable = {};

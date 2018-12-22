@@ -4,6 +4,7 @@ import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
 import MusicMgr from "../mgr/MusicMgr";
+import DataMgr from "../mgr/DataMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
 import {Container, Emitter, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
@@ -76,6 +77,7 @@ export default class GameScene extends Scene {
 
     onShow() {
         this.distance = 0;
+        this.ui.diamondText.text = 0;
         this.updateCoinText(0);
 
         this.isContactFatalEdge = false;
@@ -555,16 +557,14 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play") {
             let lowestRoadTopY = this.findLowestRoadTopY();
             if (bikePhysicsPos.y < GameUtils.renderY2PhysicsY(lowestRoadTopY) - Config.bikeGameOverOffsetHeight) {
-                this.gameStatus = "end";
-                App.showScene("GameOverScene", "Game Over");
+                this.gameOver();
             }
         }
         if (this.gameStatus === "play" && this.isContactFatalEdge) {
-            this.gameStatus = "end";
             this.bikeBody.setLinearVelocity(Vec2(0, 0));
             this.bikeBody.setAngularVelocity(Config.bikeGameOverAngularVelocity);
             this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
-            App.showScene("GameOverScene", "Game Over");
+            this.gameOver();
         }
     }
 
@@ -572,8 +572,7 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play"
             && this.finalPoint
             && bikePhysicsPos.x > GameUtils.renderPos2PhysicsPos(this.finalPoint).x) {
-            this.gameStatus = "win";
-            App.showScene("GameOverScene", "Game Win");
+            this.gameOver("win", "Game Win");
         }
     }
 
@@ -782,6 +781,15 @@ export default class GameScene extends Scene {
                 return true;
             }
         });
+    }
+
+    gameOver(status = "end", message = "Game Over") {
+        this.gameStatus = status;
+        App.showScene("GameOverScene", message);
+        let coin = DataMgr.get(DataMgr.coin, 0) + this.coin;
+        DataMgr.set(DataMgr.coin, coin);
+        let distance = DataMgr.get(DataMgr.distance, 0) + this.distance;
+        DataMgr.set(DataMgr.distance, distance);
     }
 }
 

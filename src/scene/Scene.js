@@ -33,7 +33,11 @@ export default class Scene extends Container {
     }
 
     loadResources() {
-        App.loadResources([this.sceneFilePath], this.onLoadedSceneFile.bind(this));
+        let resPathList = [this.sceneFilePath];
+        if (this.__proto__.constructor.resPathList) {
+            resPathList = resPathList.concat(this.__proto__.constructor.resPathList);
+        }
+        App.loadResources(resPathList, this.onLoadedSceneFile.bind(this));
     }
 
     onLoadedSceneFile() {
@@ -79,6 +83,6 @@ export default class Scene extends Container {
     onClick(button, handler) {
         button.buttonMode = true;
         button.interactive = true;
-        button.on("pointerup", handler);
+        button.on("pointerup", (event) => handler(button, event));
     }
 }

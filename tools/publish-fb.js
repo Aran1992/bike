@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const config = require("../webpack-fb.config");
 const archiver = require("archiver");
-const child_process = require("child_process");
+// const child_process = require("child_process");
 
 function copy_(src, dist, exceptList) {
     if (exceptList && exceptList.some(file => file === src)) {
@@ -90,15 +90,17 @@ webpack(config, () => {
 
     archive.finalize();
 
-    let appID = "371465643397666";
-    let accessToken = "EAAYsfZAxiFmMBAAZBaXXjVZC7u7GNZBWwiZClM5Ozipk5O2PZAmYmNZCZADSSRBZCGr80Jq13KAZAmKJcmNUWLVXgR4xB2FQC1AUjx0gZBRBy3qcyu7nUnqXAFq5DnwB05MaDUVL84KZBZBgzg5AWcZCUVS7sZCoCit4ZC46ZCeMlrqpdYUphulG6KfByybqv";
-    let cmd = `curl -X POST https://graph-video.facebook.com/${appID}/assets -F "access_token=${accessToken}" -F "type=BUNDLE" -F "asset=@./${filePath}" -F "comment=Graph_API_upload"`;
-    child_process.exec(cmd, (err, stdout, stderr) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.log(`stderr: ${stderr}`);
-    });
+    // let appID = "371465643397666";
+    // let accessToken = "EAAYsfZAxiFmMBAAZBaXXjVZC7u7GNZBWwiZClM5Ozipk5O2PZAmYmNZCZADSSRBZCGr80Jq13KAZAmKJcmNUWLVXgR4xB2FQC1AUjx0gZBRBy3qcyu7nUnqXAFq5DnwB05MaDUVL84KZBZBgzg5AWcZCUVS7sZCoCit4ZC46ZCeMlrqpdYUphulG6KfByybqv";
+    // let cmd = `curl -X POST https://graph-video.facebook.com/${appID}/assets -F "access_token=${accessToken}" -F "type=BUNDLE" -F "asset=@./${filePath}" -F "comment=Graph_API_upload"`;
+    // child_process.exec(cmd, (err, stdout, stderr) => {
+    //     if (err) {
+    //         console.log(err);
+    //         return;
+    //     }
+    //     console.log(`stdout: ${stdout}`);
+    //     console.log(`stderr: ${stderr}`);
+    // });
+
+    deleteAll("./publish-fb");
 });

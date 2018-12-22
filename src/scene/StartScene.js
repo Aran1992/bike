@@ -18,9 +18,7 @@ export default class StartScene extends Scene {
             textContainer.addChild(text);
             text.anchor.set(0.5, 0);
             text.position.set(0, text.height * index);
-            text.interactive = true;
-            text.buttonMode = true;
-            text.on("pointerdown", () => StartScene.onClickEndlessModeText(index));
+            this.onClick(text, () => StartScene.onClickEndlessModeText(index));
         });
 
         textStyle = new TextStyle(Config.startScene.mapText);
@@ -29,9 +27,7 @@ export default class StartScene extends Scene {
             textContainer.addChild(text);
             text.anchor.set(0.5, 0);
             text.position.set(0, text.height * (index + Config.endlessMode.sceneList.length));
-            text.interactive = true;
-            text.buttonMode = true;
-            text.on("pointerdown", () => StartScene.onClickMapText(index));
+            this.onClick(text, () => StartScene.onClickMapText(index));
         });
     }
 

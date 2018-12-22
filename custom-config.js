@@ -27,7 +27,9 @@ Config.mapList = [
                 "images/Taurus/TextureTaurusBackground01.png",
                 "images/Taurus/TextureTaurusBackground02.png",
                 "images/Taurus/TextureTaurusBackground03.png",
-            ]
+            ],
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage01Taurus.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -62,7 +64,9 @@ Config.mapList = [
                 "images/Aries/TextureAriesBackground01.png",
                 "images/Aries/TextureAriesBackground02.png",
                 "images/Aries/TextureAriesBackground03.png",
-            ]
+            ],
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage05Aries.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -95,7 +99,9 @@ Config.mapList = [
                 "images/Capricorn/TextureCapricornBackground01.png",
                 "images/Capricorn/TextureCapricornBackground02.png",
                 "images/Capricorn/TextureCapricornBackground03.png",
-            ]
+            ],
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage09Capriconus.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -130,7 +136,9 @@ Config.mapList = [
                 "images/Scorpius/TextureScorpiusBackground01.png",
                 "images/Scorpius/TextureScorpiusBackground02.png",
                 "images/Scorpius/TextureScorpiusBackground03.png",
-            ]
+            ],
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage04Scorpius.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -163,7 +171,9 @@ Config.mapList = [
                 "images/Aquarius/TextureAquariusBackground01.png",
                 "images/Aquarius/TextureAquariusBackground02.png",
                 "images/Aquarius/TextureAquariusBackground03.png",
-            ]
+            ],
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage03Aquarius.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -213,7 +223,11 @@ Config.endlessMode.sceneList = [
                 "images/Taurus/TextureTaurusBackground01.png",
                 "images/Taurus/TextureTaurusBackground02.png",
                 "images/Taurus/TextureTaurusBackground03.png",
-            ]
+            ],
+            // 商店显示的封面图
+            shopCover: "myLaya/laya/assets/images/TextureDX2_TaurusBackground-1.png",
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage01Taurus.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -400,7 +414,11 @@ Config.endlessMode.sceneList = [
                 "images/Aries/TextureAriesBackground01.png",
                 "images/Aries/TextureAriesBackground02.png",
                 "images/Aries/TextureAriesBackground03.png",
-            ]
+            ],
+            // 商店显示的封面图
+            shopCover: "myLaya/laya/assets/images/TextureDX2_AriesBackground-1.png",
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage05Aries.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -585,7 +603,11 @@ Config.endlessMode.sceneList = [
                 "images/Capricorn/TextureCapricornBackground01.png",
                 "images/Capricorn/TextureCapricornBackground02.png",
                 "images/Capricorn/TextureCapricornBackground03.png",
-            ]
+            ],
+            // 商店显示的封面图
+            shopCover: "myLaya/laya/assets/images/TextureDX2_CapricornBackground-1.png",
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage09Capriconus.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -772,7 +794,11 @@ Config.endlessMode.sceneList = [
                 "images/Scorpius/TextureScorpiusBackground01.png",
                 "images/Scorpius/TextureScorpiusBackground02.png",
                 "images/Scorpius/TextureScorpiusBackground03.png",
-            ]
+            ],
+            // 商店显示的封面图
+            shopCover: "myLaya/laya/assets/images/TextureDX2_ScorpiusBackground-1.png",
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage04Scorpius.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -957,7 +983,11 @@ Config.endlessMode.sceneList = [
                 "images/Aquarius/TextureAquariusBackground01.png",
                 "images/Aquarius/TextureAquariusBackground02.png",
                 "images/Aquarius/TextureAquariusBackground03.png",
-            ]
+            ],
+            // 商店显示的封面图
+            shopCover: "myLaya/laya/assets/images/TextureDX2_AquariusBackground-1.png",
+            // 主页封面图
+            mainCover: "myLaya/laya/assets/images/MainMenuItemStage03Aquarius.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -1194,7 +1224,7 @@ Config.bikeJumpingAnimation = {
         atlasPath: "images/tyariso_run_anim_all.png4.json",
         interval: 5
     },
-    "7": {			
+    "7": {
         atlasPath: "images/tyariso_run_anim_all.png5.json",
         interval: 5
     },

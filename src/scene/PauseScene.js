@@ -10,17 +10,9 @@ export default class PauseScene extends Scene {
             .endFill();
         this.addChildAt(mask, 0);
 
-        this.ui.continueButton.buttonMode = true;
-        this.ui.continueButton.interactive = true;
-        this.ui.continueButton.on("pointerdown", PauseScene.onClickContinueButton.bind(this));
-
-        this.ui.mainButton.buttonMode = true;
-        this.ui.mainButton.interactive = true;
-        this.ui.mainButton.on("pointerdown", PauseScene.onClickMainButton.bind(this));
-
-        this.ui.restartButton.buttonMode = true;
-        this.ui.restartButton.interactive = true;
-        this.ui.restartButton.on("pointerdown", PauseScene.onClickRestartButton.bind(this));
+        this.onClick(this.ui.continueButton, PauseScene.onClickContinueButton);
+        this.onClick(this.ui.mainButton, PauseScene.onClickMainButton);
+        this.onClick(this.ui.restartButton, PauseScene.onClickRestartButton);
     }
 
     onShow() {
@@ -36,7 +28,7 @@ export default class PauseScene extends Scene {
         App.hideScene("PauseScene");
         App.destroyScene("MapGameScene");
         App.destroyScene("EndlessGameScene");
-        App.showScene("StartScene");
+        App.showScene("MainScene");
     }
 
     static onClickRestartButton() {

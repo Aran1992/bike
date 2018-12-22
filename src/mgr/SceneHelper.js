@@ -87,33 +87,55 @@ function createPanel(child, parent) {
 
 function createImage(child, parent) {
     let data = child.props;
+    let path = `myLaya/laya/assets/${data.skin}`;
+    let texture = resources[path].texture;
+    let width = getValue(data.width, texture.width);
+    let height = getValue(data.height, texture.height);
+    let scaleX = getValue(data.scaleX, 1);
+    let scaleY = getValue(data.scaleY, 1);
+    let x = getValue(data.x, 0);
+    let y = getValue(data.y, 0);
 
-    let texture = resources[`myLaya/laya/assets/${data.skin}`].texture;
+    if (data.left !== undefined && data.right !== undefined) {
+        x = data.left;
+        width = parent.mywidth - data.left - data.right;
+    } else if (data.left !== undefined) {
+        x = data.left;
+    } else if (data.right !== undefined) {
+        x = parent.mywidth - data.right - width * scaleX;
+    } else if (data.centerX !== undefined) {
+        x = parent.mywidth / 2 + data.centerX - width * scaleX / 2;
+    }
 
-    let baseInfo = getImageBaseInfo(child, parent,
-        {width: texture.width, height: texture.height});
+    if (data.top !== undefined && data.bottom !== undefined) {
+        y = data.top;
+        height = parent.myheight - data.top - data.bottom;
+    } else if (data.top !== undefined) {
+        y = data.top;
+    } else if (data.bottom !== undefined) {
+        y = parent.myheight - data.bottom - height * scaleY;
+    } else if (data.centerY !== undefined) {
+        y = parent.myheight / 2 + data.centerY - height * scaleY / 2;
+    }
 
-    let sprite = new Sprite(texture);
+    let container = new Container();
 
-    sprite.width = baseInfo.width;
-    sprite.height = baseInfo.height;
-    sprite.mywidth = baseInfo.width;
-    sprite.myheight = baseInfo.height;
+    let sprite = new Sprite();
+    sprite.texture = texture;
+    sprite.width = width;
+    sprite.height = height;
 
-    sprite.x = baseInfo.x;
-    sprite.y = baseInfo.y;
+    container.addChild(sprite);
 
-    sprite.anchor.set(baseInfo.anchorX, baseInfo.anchorY);
+    container.mywidth = width;
+    container.myheight = height;
+    container.scale.set(scaleX, scaleY);
+    container.position.set(x, y);
+    container.rotation = getValue(data.rotation, 0) / 180 * Math.PI;
+    container.alpha = getValue(data.alpha, 1);
+    container.visible = getValue(data.visible, true);
 
-    sprite.scale.set(baseInfo.scaleX, baseInfo.scaleY);
-
-    sprite.rotation = baseInfo.rotation;
-
-    sprite.alpha = baseInfo.alpha;
-
-    sprite.visible = baseInfo.visible;
-
-    return sprite;
+    return container;
 }
 
 function createLabel(child, parent) {

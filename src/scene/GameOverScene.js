@@ -12,13 +12,8 @@ export default class GameOverScene extends Scene {
             .endFill();
         this.addChildAt(mask, 0);
 
-        this.ui.mainButton.buttonMode = true;
-        this.ui.mainButton.interactive = true;
-        this.ui.mainButton.on("pointerdown", GameOverScene.onClickMainButton.bind(this));
-
-        this.ui.restartButton.buttonMode = true;
-        this.ui.restartButton.interactive = true;
-        this.ui.restartButton.on("pointerdown", GameOverScene.onClickRestartButton.bind(this));
+        this.onClick(this.ui.mainButton, GameOverScene.onClickMainButton);
+        this.onClick(this.ui.restartButton, GameOverScene.onClickRestartButton);
     }
 
     onShow(msg) {
@@ -36,7 +31,7 @@ export default class GameOverScene extends Scene {
         App.hideScene("GameOverScene");
         App.destroyScene("MapGameScene");
         App.destroyScene("EndlessGameScene");
-        App.showScene("StartScene");
+        App.showScene("MainScene");
     }
 
     static onClickRestartButton() {
