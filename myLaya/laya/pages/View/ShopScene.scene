@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":39,
+    "selecteID":24,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -89,14 +89,13 @@
             "props":{"top":0,"skin":"images/bottom-num.png","right":12},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":4,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/icon-coin.png","scaleY":0.7,"scaleX":0.7,"left":5,"centerY":0},
@@ -110,7 +109,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,coinText",
                     "props":{"var":"coinText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":0},
@@ -128,16 +126,17 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,tab",
-            "props":{"width":512,"var":"tab","top":120,"height":79,"centerX":0},
+            "props":{"width":700,"var":"tab","top":141,"height":79,"centerX":0},
             "nodeParent":1,
             "label":"tab",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":24,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,radio",
                     "props":{"width":75,"var":"radio","top":0,"left":0,"height":79},
@@ -150,6 +149,7 @@
                     "compId":13,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,common",
                             "props":{"var":"common","top":0,"skin":"images/20131203_モードセレクト-1.png","left":0},
@@ -163,6 +163,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selected",
                             "props":{"visible":false,"var":"selected","top":0,"skin":"images/20131203_モードセレクト-2.png","left":0},
@@ -177,6 +178,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,label",
                             "props":{"var":"label","text":"Present","fontSize":20,"color":"#ffffff","centerY":0,"centerX":-1},
@@ -191,6 +193,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel",
                     "props":{"y":10,"width":75,"top":0,"left":100,"height":79},
@@ -203,6 +206,7 @@
                     "compId":27,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":0,"skin":"images/20131203_モードセレクト-1.png","left":0},
@@ -216,6 +220,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"visible":false,"top":0,"skin":"images/20131203_モードセレクト-2.png","left":0},
@@ -230,6 +235,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"Money","fontSize":20,"color":"#ffffff","centerY":0,"centerX":0},
@@ -244,6 +250,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel",
                     "props":{"y":20,"width":75,"top":0,"left":200,"height":79},
@@ -256,6 +263,7 @@
                     "compId":31,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":0,"skin":"images/20131203_モードセレクト-1.png","left":0},
@@ -269,6 +277,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"visible":false,"top":0,"skin":"images/20131203_モードセレクト-2.png","left":0},
@@ -283,6 +292,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"Item","fontSize":20,"color":"#ffffff","centerY":0,"centerX":0},
@@ -297,6 +307,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel",
                     "props":{"y":30,"width":75,"top":0,"left":300,"height":79},
@@ -309,6 +320,7 @@
                     "compId":35,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"visible":false,"top":0,"skin":"images/20131203_モードセレクト-1.png","left":0},
@@ -323,6 +335,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":0,"skin":"images/20131203_モードセレクト-2.png","left":0},
@@ -336,6 +349,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"Map","fontSize":20,"color":"#ffffff","centerY":0,"centerX":0},
@@ -354,7 +368,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,list",
-            "props":{"width":512,"var":"list","top":220,"centerX":0,"bottom":60},
+            "props":{"width":700,"var":"list","top":220,"centerX":0,"bottom":60},
             "nodeParent":1,
             "label":"list",
             "isOpen":false,
@@ -366,7 +380,7 @@
                 {
                     "type":"Panel",
                     "searchKey":"Panel,item",
-                    "props":{"width":512,"var":"item","top":0,"left":0,"height":140},
+                    "props":{"width":700,"var":"item","top":0,"left":0,"height":168},
                     "nodeParent":25,
                     "label":"item",
                     "isOpen":true,
@@ -378,7 +392,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,item_",
-                            "props":{"y":-336,"x":268,"width":512,"var":"item_","top":0,"skin":"images/TextureDX2_AquariusBackground-1.png","height":128,"centerX":0},
+                            "props":{"width":700,"var":"item_","top":-2,"skin":"images/TextureDX2_AquariusBackground-1.png","height":174,"centerX":0},
                             "nodeParent":26,
                             "label":"item_",
                             "isOpen":true,
@@ -390,10 +404,10 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image,commonImage",
-                                    "props":{"width":145,"var":"commonImage","skin":"images/ボタンセット-5.png","right":0,"height":38,"bottom":0},
+                                    "props":{"width":150,"var":"commonImage","skin":"images/ボタンセット-5.png","right":0,"height":50,"bottom":5},
                                     "nodeParent":15,
                                     "label":"commonImage",
-                                    "isOpen":false,
+                                    "isOpen":true,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
@@ -417,10 +431,10 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image,unlockButton",
-                                    "props":{"width":145,"visible":false,"var":"unlockButton","skin":"images/ボタンセット-6.png","right":0,"height":38,"bottom":0},
+                                    "props":{"width":150,"visible":false,"var":"unlockButton","skin":"images/ボタンセット-6.png","right":0,"height":50,"bottom":5},
                                     "nodeParent":15,
                                     "label":"unlockButton",
-                                    "isOpen":false,
+                                    "isOpen":true,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
@@ -458,10 +472,10 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image,selectedImage",
-                                    "props":{"width":145,"var":"selectedImage","skin":"images/ボタンセット-7.png","right":0,"height":38,"bottom":0},
+                                    "props":{"width":150,"var":"selectedImage","skin":"images/ボタンセット-7.png","right":0,"height":50,"bottom":5},
                                     "nodeParent":15,
                                     "label":"selectedImage",
-                                    "isOpen":false,
+                                    "isOpen":true,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
