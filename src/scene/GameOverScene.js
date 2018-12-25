@@ -17,7 +17,7 @@ export default class GameOverScene extends Scene {
         this.onClick(this.ui.rebornButton, GameOverScene.onClickRebornButton);
     }
 
-    onShow(msg) {
+    onShow(msg, rebornEnable) {
         this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.ui.gameOverText.text = msg || "Game Over";
         if (msg === "Game Over") {
@@ -26,6 +26,7 @@ export default class GameOverScene extends Scene {
             MusicMgr.pauseBGM();
             MusicMgr.playSound(Config.soundPath.throughFlag);
         }
+        this.ui.rebornButton.visible = !!rebornEnable;
     }
 
     static onClickMainButton() {

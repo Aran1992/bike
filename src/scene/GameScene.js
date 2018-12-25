@@ -836,9 +836,9 @@ export default class GameScene extends Scene {
         });
     }
 
-    gameOver(status = "end", message = "Game Over") {
+    gameOver(status = "end", message = "Game Over", rebornEnable = false) {
         this.gameStatus = status;
-        App.showScene("GameOverScene", message);
+        App.showScene("GameOverScene", message, rebornEnable);
         let coin = DataMgr.get(DataMgr.coin, 0) + this.coin;
         DataMgr.set(DataMgr.coin, coin);
         let distance = DataMgr.get(DataMgr.distance, 0) + this.distance;
@@ -850,7 +850,7 @@ export default class GameScene extends Scene {
         let pos = this.bikeBody.getPosition();
         this.dragBackPos = {x: pos.x, y: pos.y};
         if (!this.isDirectReborn) {
-            this.gameOver();
+            this.gameOver(undefined, undefined, true);
             this.gameLoopFunc = this.pause.bind(this);
         }
     }
