@@ -67,41 +67,4 @@ export default class GameUtils {
     static getFrames(jsonPath) {
         return Utils.values(resources[jsonPath].data.animations)[0].map(texturePath => resources[jsonPath].textures[texturePath]);
     }
-
-    // static createScene(sceneData) {
-    //     let sceneContainer = new Container();
-    //     sceneData.child.forEach(child => {
-    //         let data = child.props;
-    //         switch (child.type) {
-    //             case "Panel": {
-    //                 let anchorX = 0.5,
-    //                     anchorY = 0.5,
-    //                     scaleX = 1,
-    //                     scaleY = 1,
-    //                     x = 0,
-    //                     y = 0,
-    //                     width = 100,
-    //                     height = 100;
-    //                 let container = new Container();
-    //                 container.x = x;
-    //                 container.y = y;
-    //                 container.width = width;
-    //                 container.height = height;
-    //                 let mask = new Graphics();
-    //                 mask.beginFill();
-    //                 mask.drawRect(0, 0, width, height);
-    //                 mask.endFill();
-    //                 container.mask = mask;
-    //                 break;
-    //             }
-    //             case "Sprite": {
-    //                 break;
-    //             }
-    //             case "Text": {
-    //                 break;
-    //             }
-    //         }
-    //     });
-    //     return sceneContainer;
-    // }
 }

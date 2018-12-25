@@ -10,6 +10,10 @@ export default class Utils {
         return angle / 180 * Math.PI;
     }
 
+    static radius2angle(radius) {
+        return radius / Math.PI * 180;
+    }
+
     static createLinearGradientMask(width, height, colorStop) {
         let canvas = document.createElement("canvas");
         canvas.width = `${width}`;
@@ -51,7 +55,21 @@ export default class Utils {
     }
 
     static calcRadius(sp, ep) {
-        return Math.atan((ep.y - sp.y) / (ep.x - sp.x));
+        let x = ep.x - sp.x;
+        let y = ep.y - sp.y;
+        if (x > 0) {
+            return Math.atan(y / x);
+        } else if (x < 0) {
+            return Math.atan(y / x) + Math.PI;
+        } else if (x === 0) {
+            if (y > 0) {
+                return Math.PI / 2;
+            } else if (y < 0) {
+                return Math.PI / 2 * 3;
+            } else {
+                return 0;
+            }
+        }
     }
 
     static getLast(arr) {
@@ -78,6 +96,16 @@ export default class Utils {
         return arr;
     }
 
+    static entryCount(json) {
+        let count = 0;
+        for (let key in json) {
+            if (json.hasOwnProperty(key)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     static getTexturePointColor(texture, x, y) {
         let canvas = document.createElement("canvas");
         canvas.width = `${texture.width}`;
@@ -87,4 +115,22 @@ export default class Utils {
         let data = ctx.getImageData(x, y, 1, 1).data;
         return data[0] * 256 * 256 + data[1] * 256 + data[2];
     }
+
+    static isPointInRect(point, rect) {
+        return point.x >= rect.x
+            && point.x <= rect.x + rect.width
+            && point.y >= rect.y
+            && point.y <= rect.y + rect.height;
+    }
+
+    static successive(src, dst, delta) {
+        if ((src < dst && src + delta > dst)
+            || (src > dst && src + delta < dst)
+            || src === dst) {
+            return {value: dst, final: true};
+        } else {
+            return {value: src + delta, final: false};
+        }
+    }
 }
+

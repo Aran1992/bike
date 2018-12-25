@@ -14,6 +14,7 @@ export default class GameOverScene extends Scene {
 
         this.onClick(this.ui.mainButton, GameOverScene.onClickMainButton);
         this.onClick(this.ui.restartButton, GameOverScene.onClickRestartButton);
+        this.onClick(this.ui.rebornButton, GameOverScene.onClickRebornButton);
     }
 
     onShow(msg) {
@@ -37,6 +38,11 @@ export default class GameOverScene extends Scene {
     static onClickRestartButton() {
         App.hideScene("GameOverScene");
         EventMgr.dispatchEvent("Restart");
+    }
+
+    static onClickRebornButton() {
+        App.hideScene("GameOverScene");
+        EventMgr.dispatchEvent("Reborn");
     }
 }
 

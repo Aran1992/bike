@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":2,
+    "selectedBox":14,
+    "selecteID":15,
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
     "label":"Scene",
@@ -71,6 +71,32 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":13,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":20,"var":"rebornButton","skin":"images/button-restart.png","centerY":100,"centerX":0},
+            "nodeParent":1,
+            "label":"rebornButton",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":14,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"text":"Reborn","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
+                    "nodeParent":14,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":15,
                     "child":[
                         ]
                 }]

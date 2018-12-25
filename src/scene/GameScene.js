@@ -20,6 +20,7 @@ import BlackBird from "../item/BlackBird";
 export default class GameScene extends Scene {
     onCreate() {
         this.registerEvent("Restart", this.onRestart);
+        this.registerEvent("Reborn", this.onReborn);
         this.registerEvent("Continue", this.onContinue);
         this.registerEvent("AteItem", this.onAteItem);
 
@@ -33,6 +34,9 @@ export default class GameScene extends Scene {
         this.gameContainer.interactive = true;
         this.gameContainer.buttonMode = true;
         this.gameContainer.on("pointerdown", this.onClickGameContainer.bind(this));
+        this.gameContainer.on("pointermove", this.onPointerMove.bind(this));
+        this.gameContainer.on("pointerup", this.onPointerUp.bind(this));
+        this.gameContainer.on("pointerupoutside", this.onPointerUp.bind(this));
 
         if (RunOption.debug) {
             let scale = 0.5;
@@ -55,6 +59,8 @@ export default class GameScene extends Scene {
         // this.createFPSText();
 
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
+        this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
+        this.ui.confirmButton.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
         this.portableItemButtonList.forEach((button, i) => this.onClick(button, () => this.onClickPortableItem(i)));
 
@@ -87,8 +93,6 @@ export default class GameScene extends Scene {
 
         this.birdList = [];
         this.roadList = [];
-
-        this.bikeAccFrame = undefined;
 
         this.portableItemButtonList.forEach(button => button.removeChildren());
 
@@ -123,6 +127,15 @@ export default class GameScene extends Scene {
             this.emitter = undefined;
         }
         this.onShow();
+    }
+
+    onReborn() {
+        this.startDragBikeBack = true;
+        this.bikeBubbleSprite.visible = true;
+        this.bikeBody.setStatic();
+        this.bikeBody.setAngle(0);
+        this.bikeSprite.rotation = 0;
+        this.gameLoopFunc = this.play.bind(this);
     }
 
     onContinue() {
@@ -231,9 +244,12 @@ export default class GameScene extends Scene {
         }
     }
 
-    onClickGameContainer() {
+    onClickGameContainer(event) {
         if (this.gameStatus === "play") {
-            if (this.jumpCount < Config.jumpCommonMaxCount
+            if (this.startFloat) {
+                this.startFloat = false;
+                this.bikeBubbleSprite.visible = false;
+            } else if (this.jumpCount < Config.jumpCommonMaxCount
                 || this.jumpExtraCountdown > 0) {
                 let velocity = this.bikeBody.getLinearVelocity();
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
@@ -273,6 +289,8 @@ export default class GameScene extends Scene {
                     this.jumpingAnimationIndex = undefined;
                 }
             }
+        } else if (this.gameStatus === "end" && this.startAdjustBikeHeight) {
+            this.startY = event.data.global.y;
         }
     }
 
@@ -423,26 +441,42 @@ export default class GameScene extends Scene {
     createBike(pp) {
         let rp = GameUtils.physicsPos2renderPos(pp);
 
-        let texture = resources[Config.bikeAtlasPath].textures["0"];
-        this.bikeSprite = new Sprite(texture);
+        this.bikeSprite = new Sprite();
         this.closeViewContainer.addChild(this.bikeSprite);
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
         this.bikeSprite.position.set(rp.x, rp.y);
+
+        this.bikeBubbleSprite = new Sprite(resources[Config.imagePath.bubble].texture);
+        this.bikeSprite.addChild(this.bikeBubbleSprite);
+        this.bikeBubbleSprite.anchor.set(0.5, 0.5);
+        this.bikeBubbleSprite.scale.set(1 / Config.bikeScale, 1 / Config.bikeScale);
+        this.bikeBubbleSprite.visible = false;
 
         this.bikeBody = this.world.createDynamicBody();
         this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: Config.bikeDensity, friction: 1,});
         this.bikeBody.setPosition(pp);
         this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, 0));
 
+        this.resetBikeStatus();
+    }
+
+    resetBikeStatus() {
+        this.bikeSprite.texture = resources[Config.bikeAtlasPath].textures["0"];
+
         this.jumpCount = 0;
+        this.jumping = false;
+
+        this.isContactFatalEdge = false;
+
         this.bikeFrameCount = Utils.keys(resources[Config.bikeAtlasPath].textures).length;
         this.bikeFrame = 0;
 
         this.bikeAccSprite = new Sprite();
-        this.bikeAccSprite.visible = false;
         this.closeViewContainer.addChild(this.bikeAccSprite);
         this.bikeAccSprite.anchor.set(0.5, 1);
+        this.bikeAccSprite.visible = false;
+        this.bikeAccFrame = undefined;
     }
 
     gameLoop(delta) {
@@ -499,6 +533,12 @@ export default class GameScene extends Scene {
             this.distance += newX - oldX;
             this.ui.distanceText.text = Math.floor(this.distance) + "m";
         }
+
+        if (this.startDragBikeBack) {
+            this.dragBikeBack();
+        } else {
+            this.checkBikeIsOutOfView();
+        }
     }
 
     pause() {
@@ -520,7 +560,11 @@ export default class GameScene extends Scene {
             this.bikeSprite.rotation = this.bikeBody.getAngle();
             this.bikeAccSprite.visible = false;
         } else {
-            if (this.bikeAccFrame !== undefined) {
+            if (this.startFloat) {
+                this.bikeAccSprite.visible = true;
+                this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeFloatFrame / Config.fps)}.png`];
+                this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
+            } else if (this.bikeAccFrame !== undefined) {
                 this.bikeAccSprite.visible = true;
                 if (this.bikeAccFrame <= 5 * Config.fps) {
                     this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeAccFrame / Config.fps)}.png`];
@@ -557,14 +601,14 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play") {
             let lowestRoadTopY = this.findLowestRoadTopY();
             if (bikePhysicsPos.y < GameUtils.renderY2PhysicsY(lowestRoadTopY) - Config.bikeGameOverOffsetHeight) {
-                this.gameOver();
+                this.onDead();
             }
         }
         if (this.gameStatus === "play" && this.isContactFatalEdge) {
             this.bikeBody.setLinearVelocity(Vec2(0, 0));
             this.bikeBody.setAngularVelocity(Config.bikeGameOverAngularVelocity);
             this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
-            this.gameOver();
+            this.onDead();
         }
     }
 
@@ -670,7 +714,16 @@ export default class GameScene extends Scene {
 
     keepBikeMove(velocity) {
         if (this.gameStatus === "play") {
-            if (this.bikeAccFrame !== undefined) {
+            if (this.startFloat) {
+                if (this.bikeFloatFrame === 0) {
+                    this.startFloat = false;
+                    this.bikeBubbleSprite.visible = false;
+                } else {
+                    this.bikeFloatFrame--;
+                }
+                this.bikeBody.applyForceToCenter(Vec2(0, -this.gravity * this.bikeBody.getMass()));
+                this.bikeBody.setLinearVelocity(Vec2(Config.rebornFloatVelocity, 0));
+            } else if (this.bikeAccFrame !== undefined) {
                 if (this.bikeAccFrame === 0) {
                     this.bikeAccFrame = undefined;
                     this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
@@ -790,6 +843,84 @@ export default class GameScene extends Scene {
         DataMgr.set(DataMgr.coin, coin);
         let distance = DataMgr.get(DataMgr.distance, 0) + this.distance;
         DataMgr.set(DataMgr.distance, distance);
+    }
+
+    onDead() {
+        this.gameStatus = "end";
+        let pos = this.bikeBody.getPosition();
+        this.dragBackPos = {x: pos.x, y: pos.y};
+        if (!this.isDirectReborn) {
+            this.gameOver();
+            this.gameLoopFunc = this.pause.bind(this);
+        }
+    }
+
+    checkBikeIsOutOfView() {
+        if (this.gameStatus === "end") {
+            if (this.isDirectReborn && !this.isInView(this.bikeSprite.position)) {
+                this.onReborn();
+            }
+        }
+    }
+
+    dragBikeBack() {
+        let velocity = Config.rebornDragVelocity;
+        let targetPos = this.dragBackPos;
+        let curPos = this.bikeBody.getPosition();
+        let radius = Utils.calcRadius(curPos, targetPos);
+        let moveX = velocity * Math.cos(radius);
+        let moveY = velocity * Math.sin(radius);
+        let {value: x, final: fx} = Utils.successive(curPos.x, targetPos.x, moveX);
+        let {value: y, final: fy} = Utils.successive(curPos.y, targetPos.y, moveY);
+        let newPos = Vec2(x, y);
+        this.bikeBody.setPosition(newPos);
+        if (fx && fy) {
+            this.onDragBackEnded();
+        }
+    }
+
+    onDragBackEnded() {
+        this.startDragBikeBack = false;
+        this.startAdjustBikeHeight = true;
+        this.ui.confirmButton.visible = true;
+    }
+
+    onPointerMove(event) {
+        if (this.startAdjustBikeHeight && this.startY !== undefined) {
+            let moveY = event.data.global.y - this.startY;
+            this.startY = event.data.global.y;
+            let curPos = this.bikeBody.getPosition();
+            let newY = this.bikeSprite.position.y + moveY;
+            if (this.isInView({x: -this.cameraContainer.x, y: newY})) {
+                this.bikeBody.setPosition(Vec2(curPos.x, curPos.y + -moveY * Config.pixel2meter));
+            }
+        }
+    }
+
+    onPointerUp() {
+        if (this.startAdjustBikeHeight && this.startY !== undefined) {
+            this.startY = undefined;
+        }
+    }
+
+    isInView(point) {
+        let rect = {
+            x: -this.cameraContainer.x,
+            y: -this.cameraContainer.y,
+            width: Config.designWidth,
+            height: Config.designHeight
+        };
+        return Utils.isPointInRect(point, rect);
+    }
+
+    onClickConfirmButton() {
+        this.ui.confirmButton.visible = false;
+        this.startAdjustBikeHeight = false;
+        this.gameStatus = "play";
+        this.bikeBody.setDynamic();
+        this.resetBikeStatus();
+        this.startFloat = true;
+        this.bikeFloatFrame = Config.rebornFloatFrame;
     }
 }
 
