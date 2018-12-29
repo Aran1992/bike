@@ -1426,4 +1426,7 @@ Config.bikeList = [
     }
 ];
 
+// 抽奖重置时间间隔（单位：秒）
+Config.freeDrawInterval = 8 * 60 * 60;
+
 export default Config;

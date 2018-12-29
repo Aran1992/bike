@@ -25,6 +25,8 @@ export default class DrawScene extends Scene {
         this.bikeSprite.position.set(307, 100);
         this.bikeDetailSprite = new Sprite();
         this.bikeSprite.addChild(this.bikeDetailSprite);
+        this.onTick();
+        this.timer = setInterval(this.onTick.bind(this), 1000);
     }
 
     onShow() {
@@ -42,13 +44,6 @@ export default class DrawScene extends Scene {
     }
 
     onClickDrawButton() {
-        let index = Utils.randomWithWeight(Config.bikeList.map(item => item.weight));
-        this.id = Config.bikeList[index].id;
-        let list = DataMgr.get(DataMgr.ownedBikeList, []);
-        if (list.indexOf(this.id) === -1) {
-            list.push(this.id);
-            DataMgr.set(DataMgr.ownedBikeList, list);
-        }
         this.startAnimation();
         App.showMask();
     }
@@ -78,6 +73,17 @@ export default class DrawScene extends Scene {
 
     onAnimationEnded() {
         App.hideMask();
+
+        let index = Utils.randomWithWeight(Config.bikeList.map(item => item.weight));
+        this.id = Config.bikeList[index].id;
+        let list = DataMgr.get(DataMgr.ownedBikeList, []);
+        if (list.indexOf(this.id) === -1) {
+            list.push(this.id);
+            DataMgr.set(DataMgr.ownedBikeList, list);
+        }
+        let nextTime = (new Date()).getTime() + Config.freeDrawInterval * 1000;
+        DataMgr.set(DataMgr.nextFreeDrawTime, nextTime);
+
         this.ballImage.visible = false;
         this.ui.detailPanel.visible = true;
         let config = Config.bikeList.find(item => item.id === this.id);
@@ -98,7 +104,20 @@ export default class DrawScene extends Scene {
         this.ui.detailPanel.visible = false;
         this.bikeSprite.stop();
     }
+
+    onTick() {
+        let cur = new Date();
+        let freeTime = DataMgr.get(DataMgr.nextFreeDrawTime);
+        if (cur >= freeTime) {
+            this.ui.drawButton.interactive = true;
+            this.ui.drawTimeText.text = "Free";
+        } else {
+            this.ui.drawButton.interactive = false;
+            this.ui.drawTimeText.text = Utils.getCDTimeString(freeTime - cur);
+        }
+    }
 }
+
 
 DrawScene.sceneFilePath = "myLaya/laya/pages/View/DrawScene.scene";
 DrawScene.resPathList = [Config.bikeAtlasPath].concat(Utils.values(Config.bikeList).map(obj => obj.imagePath));

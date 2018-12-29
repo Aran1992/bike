@@ -66,7 +66,6 @@ export default class BikeScene extends Scene {
         App.showScene("MainScene");
     }
 
-
     onClickDrawButton() {
         App.hideScene("BikeScene");
         App.showScene("DrawScene");

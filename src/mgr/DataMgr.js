@@ -33,12 +33,16 @@ DataMgr.totalScore = "totalScore";
 DataMgr.currentMapScene = "currentMapScene";
 DataMgr.selectedBike = "selectedBike";
 DataMgr.ownedBikeList = "ownedBikeList";
+DataMgr.nextFreeDrawTime = "nextFreeDrawTime";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);
 }
 if (DataMgr.get(DataMgr.selectedBike) === undefined) {
     DataMgr.set(DataMgr.selectedBike, 0);
+}
+if (DataMgr.get(DataMgr.nextFreeDrawTime) === undefined) {
+    DataMgr.set(DataMgr.nextFreeDrawTime, (new Date()).getTime());
 }
 
 DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.endlessMode.sceneList.length));

@@ -145,5 +145,15 @@ export default class Utils {
         }
         return -1;
     }
+
+    static getCDTimeString(time) {
+        let format = (value) => value < 10 ? `0${value}` : `${value}`;
+        time = Math.ceil(time / 1000);
+        let second = time % 60;
+        time = (time - second) / 60;
+        let min = time % 60;
+        let hour = (time - min) / 60;
+        return `${format(hour)}:${format(min)}:${format(second)}`;
+    }
 }
 
