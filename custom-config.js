@@ -1252,7 +1252,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 0,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-1.png",
+        imagePath: "images/bike/bike1.png",
         // 缩放倍数
         scale: [0.001, 0.001],
         // 图片的锚点
@@ -1268,7 +1268,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 1,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-1.png",
+        imagePath: "images/bike/bike1.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
@@ -1284,7 +1284,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 2,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-2.png",
+        imagePath: "images/bike/bike2.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
@@ -1300,7 +1300,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 3,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-3.png",
+        imagePath: "images/bike/bike3.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
@@ -1316,7 +1316,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 4,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-4.png",
+        imagePath: "images/bike/bike4.png",
         // 缩放倍数
         scale: [0.4, 0.4],
         // 图片的锚点
@@ -1332,7 +1332,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 5,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-5.png",
+        imagePath: "images/bike/bike5.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
@@ -1348,7 +1348,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 6,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-6.png",
+        imagePath: "images/bike/bike6.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
@@ -1364,7 +1364,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 7,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-7.png",
+        imagePath: "images/bike/bike7.png",
         // 缩放倍数
         scale: [0.4, 0.4],
         // 图片的锚点
@@ -1380,7 +1380,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 8,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/萌えチャリキャラスプライト-1.png",
+        imagePath: "images/bike/bike50.png",
         // 缩放倍数
         scale: [0.35, 0.35],
         // 图片的锚点
@@ -1396,7 +1396,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 10,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/萌えチャリキャラスプライト-3.png",
+        imagePath: "images/bike/bike53.png",
         // 缩放倍数
         scale: [0.35, 0.35],
         // 图片的锚点
