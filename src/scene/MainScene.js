@@ -2,6 +2,7 @@ import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import {resources} from "../libs/pixi-wrapper";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -9,14 +10,14 @@ export default class MainScene extends Scene {
             this.ui.systemButton,
             this.ui.homeButton,
             this.ui.rankButton,
-            this.ui.drawButton,
-            this.ui.bikeButton,
         ].forEach(button => this.onClick(button, this.onClickCloseFuncButton.bind(this)));
 
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
         this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
         this.onClick(this.ui.shopButton, this.onClickShopButton.bind(this));
+        this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
+        this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
     }
 
     onShow() {
@@ -27,6 +28,8 @@ export default class MainScene extends Scene {
         this.ui.costCoinText.text = 0;
 
         this.onClickEndlessModeButton();
+
+        MusicMgr.playBGM(Config.mainBgmPath);
     }
 
     onClickCloseFuncButton() {
@@ -62,6 +65,16 @@ export default class MainScene extends Scene {
     onClickShopButton() {
         App.hideScene("MainScene");
         App.showScene("ShopScene");
+    }
+
+    onClickDrawButton() {
+        App.hideScene("MainScene");
+        App.showScene("DrawScene");
+    }
+
+    onClickBikeButton() {
+        App.hideScene("MainScene");
+        App.showScene("BikeScene");
     }
 }
 

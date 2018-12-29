@@ -1,4 +1,5 @@
 let Config = {
+    initScene: "MainScene",
     designWidth: 720,
     designHeight: 1280,
     resolution: 1,

@@ -14,4 +14,6 @@ export const TilingSprite = PIXI.extras.TilingSprite;
 export const AnimatedSprite = PIXI.extras.AnimatedSprite;
 export const Text = PIXI.Text;
 export const TextStyle = PIXI.TextStyle;
+export const NineSlicePlane = PIXI.mesh.NineSlicePlane;
 export const Emitter = particles.Emitter;
+export const Rectangle = PIXI.Rectangle;

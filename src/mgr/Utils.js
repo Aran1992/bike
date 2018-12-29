@@ -132,5 +132,18 @@ export default class Utils {
             return {value: src + delta, final: false};
         }
     }
+
+    static randomWithWeight(weights) {
+        let total = weights.reduce((sum, value) => sum + value, 0);
+        let value = total * Math.random();
+        let i = 0, sum = 0;
+        for (; i < weights.length; i++) {
+            sum += weights[i];
+            if (sum > value) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
 

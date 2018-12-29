@@ -1,4 +1,4 @@
-import {Container, Graphics, Sprite, Text} from "../libs/pixi-wrapper";
+import {Container, Graphics, NineSlicePlane, Sprite, Text} from "../libs/pixi-wrapper";
 
 export default class List {
     constructor({root, initItemFunc, updateItemFunc, count}) {
@@ -14,23 +14,31 @@ export default class List {
         this.initItem = initItemFunc;
         this.updateItem = updateItemFunc;
         this.count = count;
+        this.countPerLine = Math.ceil(this.root.mywidth / this.item.mywidth);
         this.update();
     }
 
-    calcStartAndEndIndex(offset, itemLength, viewLength) {
-        let start = Math.floor(offset / itemLength);
-        let end = Math.floor((offset + viewLength) / itemLength);
-        if (start < 0) {
-            start = 0;
+    calcStartAndEnd(offset, itemLength, viewLength) {
+        let startLine = Math.floor(offset / itemLength);
+        let endLine = Math.floor((offset + viewLength) / itemLength);
+        if (startLine < 0) {
+            startLine = 0;
         }
-        if (end > this.count - 1) {
+        let maxLine = Math.ceil(this.count / this.countPerLine);
+        if (endLine > maxLine - 1) {
+            endLine = maxLine - 1;
+        }
+        let start = startLine * this.countPerLine;
+        let end = (endLine + 1) * this.countPerLine - 1;
+        if (end >= this.count) {
             end = this.count - 1;
         }
-        return {start, end};
+        return {startLine, endLine, start, end};
     }
 
     update() {
-        let {start, end} = this.calcStartAndEndIndex(-this.container.y, this.item.myheight, this.root.myheight);
+        let {start, end} = this.calcStartAndEnd(-this.container.y, this.item.myheight, this.root.myheight);
+        console.log(start, end);
         for (let index in this.itemTable) {
             if (this.itemTable.hasOwnProperty(index)) {
                 if (index < start || index > end) {
@@ -44,7 +52,8 @@ export default class List {
             if (this.itemTable[index] === undefined) {
                 let item = this.getItem();
                 this.itemTable[index] = item;
-                item.position.set(0, index * this.item.myheight);
+                let column = index % this.countPerLine, row = Math.floor(index / this.countPerLine);
+                item.position.set(column * this.item.mywidth, row * this.item.myheight);
                 item.visible = true;
                 this.updateItem(item, index);
             }
@@ -100,6 +109,8 @@ export default class List {
             return this.copyText(displayObject);
         } else if (displayObject instanceof Sprite) {
             return this.copySprite(displayObject);
+        } else if (displayObject instanceof NineSlicePlane) {
+            return this.copyNineSlicePlane(displayObject);
         } else if (displayObject instanceof Container) {
             return this.copyContainer(displayObject);
         }
@@ -116,6 +127,8 @@ export default class List {
         dst.visible = src.visible;
         dst.x = src.x;
         dst.y = src.y;
+        dst.mywidth = src.mywidth;
+        dst.myheight = src.myheight;
         return dst;
     }
 
@@ -131,6 +144,8 @@ export default class List {
         dst.visible = src.visible;
         dst.x = src.x;
         dst.y = src.y;
+        dst.mywidth = src.mywidth;
+        dst.myheight = src.myheight;
         return dst;
     }
 
@@ -145,6 +160,24 @@ export default class List {
         dst.visible = src.visible;
         dst.x = src.x;
         dst.y = src.y;
+        dst.mywidth = src.mywidth;
+        dst.myheight = src.myheight;
+        return dst;
+    }
+
+    copyNineSlicePlane(src) {
+        let dst = new NineSlicePlane(src.texture, src.leftWidth, src.topHeight, src.rightWidth, src.bottomHeight);
+        dst.alpha = src.alpha;
+        dst.buttonMode = src.buttonMode;
+        dst.interactive = src.interactive;
+        dst.rotation = src.rotation;
+        dst.visible = src.visible;
+        dst.x = src.x;
+        dst.y = src.y;
+        dst.width = src.width;
+        dst.height = src.height;
+        dst.mywidth = src.mywidth;
+        dst.myheight = src.myheight;
         return dst;
     }
 

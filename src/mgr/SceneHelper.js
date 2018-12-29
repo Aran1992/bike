@@ -1,4 +1,4 @@
-import {Container, resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
+import {Container, NineSlicePlane, resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -87,6 +87,20 @@ function createPanel(child, parent) {
 
 function createImage(child, parent) {
     let data = child.props;
+    let sprite;
+    if (data.sizeGrid) {
+        sprite = createScale9Image(child, parent);
+    } else {
+        sprite = createCommonImage(child, parent);
+    }
+    sprite.rotation = getValue(data.rotation, 0) / 180 * Math.PI;
+    sprite.alpha = getValue(data.alpha, 1);
+    sprite.visible = getValue(data.visible, true);
+    return sprite;
+}
+
+function createCommonImage(child, parent) {
+    let data = child.props;
     let path = `myLaya/laya/assets/${data.skin}`;
     let texture = resources[path].texture;
     let width = getValue(data.width, texture.width);
@@ -131,11 +145,50 @@ function createImage(child, parent) {
     container.myheight = height;
     container.scale.set(scaleX, scaleY);
     container.position.set(x, y);
-    container.rotation = getValue(data.rotation, 0) / 180 * Math.PI;
-    container.alpha = getValue(data.alpha, 1);
-    container.visible = getValue(data.visible, true);
 
     return container;
+}
+
+function createScale9Image(child, parent) {
+    let data = child.props;
+    let path = `myLaya/laya/assets/${data.skin}`;
+    let texture = resources[path].texture;
+    let [top, right, bottom, left] = data.sizeGrid.split(",").map(str => parseInt(str));
+    let sprite = new NineSlicePlane(texture, left, top, right, bottom);
+    let width = getValue(data.width, texture.width);
+    let height = getValue(data.height, texture.height);
+    let x = getValue(data.x, 0);
+    let y = getValue(data.y, 0);
+
+    if (data.left !== undefined && data.right !== undefined) {
+        x = data.left;
+        width = parent.mywidth - data.left - data.right;
+    } else if (data.left !== undefined) {
+        x = data.left;
+    } else if (data.right !== undefined) {
+        x = parent.mywidth - data.right - width;
+    } else if (data.centerX !== undefined) {
+        x = parent.mywidth / 2 + data.centerX - width / 2;
+    }
+
+    if (data.top !== undefined && data.bottom !== undefined) {
+        y = data.top;
+        height = parent.myheight - data.top - data.bottom;
+    } else if (data.top !== undefined) {
+        y = data.top;
+    } else if (data.bottom !== undefined) {
+        y = parent.myheight - data.bottom - height;
+    } else if (data.centerY !== undefined) {
+        y = parent.myheight / 2 + data.centerY - height / 2;
+    }
+
+    sprite.width = width;
+    sprite.height = height;
+    sprite.mywidth = width;
+    sprite.myheight = height;
+    sprite.x = x;
+    sprite.y = y;
+    return sprite;
 }
 
 function createLabel(child, parent) {
@@ -207,55 +260,6 @@ function createLabel(child, parent) {
     text.visible = visible;
 
     return text;
-}
-
-function getImageBaseInfo(child, parent, defaultInfo) {
-    let data = child.props;
-
-    let x = getValue(data.x, 0);
-    let y = getValue(data.y, 0);
-
-    let width = getValue(data.width, defaultInfo.width);
-    let height = getValue(data.height, defaultInfo.height);
-
-    let scaleX = getValue(data.scaleX, 1);
-    let scaleY = getValue(data.scaleY, 1);
-
-    let rotation = getValue(data.rotation, 0) / 180 * Math.PI;
-
-    let alpha = getValue(data.alpha, 1);
-
-    let visible = getValue(data.visible, true);
-
-    if (data.left !== undefined && data.right !== undefined) {
-        x = data.left;
-        width = parent.mywidth - data.left - data.right;
-    } else if (data.left !== undefined) {
-        x = data.left;
-    } else if (data.right !== undefined) {
-        x = parent.mywidth - data.right - width * scaleX;
-    } else if (data.centerX !== undefined) {
-        x = parent.mywidth / 2 + data.centerX - width * scaleX / 2;
-    }
-
-    if (data.top !== undefined && data.bottom !== undefined) {
-        y = data.top;
-        height = parent.myheight - data.top - data.bottom;
-    } else if (data.top !== undefined) {
-        y = data.top;
-    } else if (data.bottom !== undefined) {
-        y = parent.myheight - data.bottom - height * scaleY;
-    } else if (data.centerY !== undefined) {
-        y = parent.myheight / 2 + data.centerY - height * scaleY / 2;
-    }
-
-    return {
-        x, y,
-        width, height,
-        anchorX: 0, anchorY: 0,
-        scaleX, scaleY,
-        rotation, alpha, visible
-    };
 }
 
 function getPanelBaseInfo(child, parent, defaultInfo) {

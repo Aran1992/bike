@@ -1,10 +1,12 @@
-import {Application, loader, resources} from "../libs/pixi-wrapper";
+import {Application, Container, loader, Rectangle, resources} from "../libs/pixi-wrapper";
 import MapGameScene from "../scene/MapGameScene";
 import EndlessGameScene from "../scene/EndlessGameScene";
 import GameOverScene from "../scene/GameOverScene";
 import PauseScene from "../scene/PauseScene";
 import MainScene from "../scene/MainScene";
 import ShopScene from "../scene/ShopScene";
+import DrawScene from "../scene/DrawScene";
+import BikeScene from "../scene/BikeScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -12,9 +14,17 @@ export default class MyApplication extends Application {
 
         window.App = this;
 
-        this.scenesContainer = this.stage;
         this.sceneWidth = args.width;
         this.sceneHeight = args.height;
+
+        this.scenesContainer = new Container();
+        this.stage.addChild(this.scenesContainer);
+
+        this.mask = new Container();
+        this.stage.addChild(this.mask);
+        this.mask.interactive = true;
+        this.mask.hitArea = new Rectangle(0, 0, this.sceneWidth, this.sceneHeight);
+        this.mask.visible = false;
 
         this.sceneNameClassMap = {
             "MainScene": MainScene,
@@ -23,6 +33,8 @@ export default class MyApplication extends Application {
             "GameOverScene": GameOverScene,
             "PauseScene": PauseScene,
             "ShopScene": ShopScene,
+            "DrawScene": DrawScene,
+            "BikeScene": BikeScene,
         };
 
         this.sceneTable = {};
@@ -58,5 +70,13 @@ export default class MyApplication extends Application {
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined);
         loader.add(resPathList).load(onLoadedCallback);
+    }
+
+    showMask() {
+        this.mask.visible = true;
+    }
+
+    hideMask() {
+        this.mask.visible = false;
     }
 }
