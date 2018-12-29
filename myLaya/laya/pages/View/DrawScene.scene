@@ -1,10 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":15,
-    "selecteID":28,
+    "selectedBox":1,
+    "selecteID":9,
+    "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
+    "maxID":31,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -15,6 +17,7 @@
         {
             "x":15,
             "type":"Image",
+            "searchKey":"Image",
             "props":{"top":0,"skin":"images/しまむらガチャラフ-2.png","right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
@@ -70,7 +73,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,diamondText",
-                    "props":{"var":"diamondText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":0},
+                    "props":{"var":"diamondText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":-1},
                     "nodeParent":4,
                     "label":"diamondText",
                     "isDirectory":false,
@@ -84,7 +87,8 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"skin":"images/ガチャ.png","scaleY":2,"scaleX":2,"centerY":-15,"centerX":0},
+            "searchKey":"Image",
+            "props":{"width":307,"skin":"images/ガチャ.png","scaleY":2,"scaleX":2,"height":437,"centerY":-12,"centerX":-1},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -96,7 +100,8 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "props":{"var":"ballImage","skin":"images/ガチャカプセル.png","centerY":186,"centerX":-79},
+                    "searchKey":"Image,ballImage",
+                    "props":{"width":67,"var":"ballImage","skin":"images/ガチャカプセル.png","height":68,"centerY":165,"centerX":-72},
                     "nodeParent":8,
                     "label":"ballImage",
                     "isDirectory":false,
@@ -111,16 +116,17 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,bikeButton",
-            "props":{"var":"bikeButton","skin":"images/ボタンセット-1.png","left":35,"bottom":35},
+            "props":{"var":"bikeButton","skin":"images/ボタンセット-1.png","left":79,"bottom":51},
             "nodeParent":1,
             "label":"bikeButton",
-            "isOpen":null,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":9,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"y":0,"x":0,"text":"Bke","fontSize":20,"color":"#ffffff","centerY":29,"centerX":0},
@@ -137,6 +143,7 @@
         {
             "x":15,
             "type":"Image",
+            "searchKey":"Image,drawButton",
             "props":{"x":215,"var":"drawButton","skin":"images/ボタンセット-5.png","centerX":0,"bottom":55},
             "nodeParent":1,
             "label":"drawButton",
@@ -164,7 +171,7 @@
         {
             "x":15,
             "type":"Label",
-            "searchKey":"Label",
+            "searchKey":"Label,drawTimeText",
             "props":{"var":"drawTimeText","text":"00:00 Free","fontSize":35,"color":"#ffffff","centerX":0,"bottom":15},
             "nodeParent":1,
             "label":"drawTimeText",
@@ -178,6 +185,7 @@
         {
             "x":15,
             "type":"Panel",
+            "searchKey":"Panel,detailPanel",
             "props":{"var":"detailPanel","top":0,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"detailPanel",
@@ -190,6 +198,7 @@
                 {
                     "x":30,
                     "type":"Image",
+                    "searchKey":"Image",
                     "props":{"y":490,"x":53,"width":614,"skin":"images/ショップ-1(1).png","sizeGrid":"50,50,50,50","height":300,"centerY":0,"centerX":0},
                     "nodeParent":30,
                     "label":"Image",
@@ -202,6 +211,7 @@
                         {
                             "x":45,
                             "type":"Image",
+                            "searchKey":"Image,closeDetailButton",
                             "props":{"var":"closeDetailButton","top":-39,"skin":"images/ButtonClose_Gray.png","right":-39},
                             "nodeParent":15,
                             "label":"closeDetailButton",
@@ -215,7 +225,7 @@
                         {
                             "x":45,
                             "type":"Label",
-                            "searchKey":"Label,diamondText",
+                            "searchKey":"Label,bikeDsc",
                             "props":{"width":550,"var":"bikeDsc","text":"12345678901234567890","height":100,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":25,"align":"center"},
                             "nodeParent":15,
                             "label":"bikeDsc",

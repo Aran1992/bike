@@ -1252,15 +1252,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 0,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-1.png",
+        imagePath: "images/bike/bike1.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.001, 0.001],
         // 图片的锚点
         anchor: [0.5, 0.5],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=0 bike",
+        dsc: "NO.1 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1268,15 +1268,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 1,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-2.png",
+        imagePath: "images/bike/bike1.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.63, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=1 bike",
+        dsc: "NO.2 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1284,15 +1284,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 2,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-3.png",
+        imagePath: "images/bike/bike2.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.63, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=2 bike",
+        dsc: "NO.3 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1300,15 +1300,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 3,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-4.png",
+        imagePath: "images/bike/bike3.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.52, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=3 bike",
+        dsc: "NO.4 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1316,15 +1316,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 4,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-5.png",
+        imagePath: "images/bike/bike4.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.4, 0.4],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.62, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=4 bike",
+        dsc: "NO.5 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1332,15 +1332,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 5,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-6.png",
+        imagePath: "images/bike/bike5.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.63, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=5 bike",
+        dsc: "NO.6 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1348,15 +1348,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 6,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/DXチャリスプライト0214-7.png",
+        imagePath: "images/bike/bike6.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.63, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=6 bike",
+        dsc: "NO.7 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1364,15 +1364,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 7,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/萌えチャリキャラスプライト-1.png",
+        imagePath: "images/bike/bike7.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.4, 0.4],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.63, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=7 bike",
+        dsc: "NO.8 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1380,31 +1380,15 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 8,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/萌えチャリキャラスプライト-2.png",
+        imagePath: "images/bike/bike51.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.35, 0.35],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.71, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=8 bike",
-        // 随机的权重
-        weight: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 9,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/萌えチャリキャラスプライト-3.png",
-        // 缩放倍数
-        scale: [0.25, 0.25],
-        // 图片的锚点
-        anchor: [0.5, 0.5],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "id=9 bike",
+        dsc: "NO.9 bike",
         // 随机的权重
         weight: 1,
     },
@@ -1412,18 +1396,18 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 10,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/萌えチャリキャラスプライト-4.png",
+        imagePath: "images/bike/bike53.png",
         // 缩放倍数
-        scale: [0.25, 0.25],
+        scale: [0.35, 0.35],
         // 图片的锚点
-        anchor: [0.5, 0.5],
+        anchor: [0.71, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "id=10 bike",
+        dsc: "NO.10 bike",
         // 随机的权重
         weight: 1,
-    }
+    },
 ];
 
 // 抽奖重置时间间隔（单位：秒）
