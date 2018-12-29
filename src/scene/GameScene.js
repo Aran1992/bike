@@ -621,7 +621,7 @@ export default class GameScene extends Scene {
     }
 
     moveCamera() {
-        if (this.gameStatus === "play") {
+        if (this.gameStatus === "play" || this.startAdjustBikeHeight) {
             let oldCameraX = this.cameraContainer.x;
             let oldCameraY = this.cameraContainer.y;
 
@@ -891,7 +891,13 @@ export default class GameScene extends Scene {
             this.startY = event.data.global.y;
             let curPos = this.bikeBody.getPosition();
             let newY = this.bikeSprite.position.y + moveY;
-            if (this.isInView({x: -this.cameraContainer.x, y: newY})) {
+            let rect = {
+                x: -this.cameraContainer.x,
+                y: GameUtils.physicsPos2renderPos(this.dragBackPos).y - Config.designHeight,
+                width: Config.designWidth,
+                height: Config.designHeight
+            };
+            if (Utils.isPointInRect({x: -this.cameraContainer.x, y: newY}, rect)) {
                 this.bikeBody.setPosition(Vec2(curPos.x, curPos.y + -moveY * Config.pixel2meter));
             }
         }
