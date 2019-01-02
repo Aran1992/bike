@@ -88,6 +88,13 @@ export default class GameScene extends Scene {
 
         this.isContactFatalEdge = false;
 
+        this.dragBackPos = undefined;
+        this.startDragBikeBack = undefined;
+        this.startAdjustBikeHeight = undefined;
+        this.startY = undefined;
+        this.startFloat = undefined;
+        this.bikeFloatFrame = undefined;
+
         this.cameraContainer.removeChildren();
         this.cameraContainer.position.set(0, 0);
 
