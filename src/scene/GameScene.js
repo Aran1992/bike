@@ -513,6 +513,10 @@ export default class GameScene extends Scene {
             this.dynamicCreateRoad();
         }
 
+        if (this.showDistance) {
+            this.showDistance();
+        }
+
         this.keepBikeMove(velocity);
 
         this.keepBirdMove();

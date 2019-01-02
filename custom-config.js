@@ -245,6 +245,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM102.mp3",
+        // 里程提示（单位米）
+        distanceNotice: [10, 100, 1000],
+        // 每个难度的长度（单位像素）
+        roadSectionLengthList: [1000, 1000, 1000, 1000],
         roadSectionList: [
             [
                 {
@@ -434,6 +438,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM103.mp3",
+        // 里程提示（单位米）
+        distanceNotice: [10, 100, 1000],
+        // 每个难度的长度（单位像素）
+        roadSectionLengthList: [1000, 1000, 1000, 1000],
         roadSectionList: [
             [
                 {
@@ -625,6 +633,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
+        // 里程提示（单位米）
+        distanceNotice: [10, 100, 1000],
+        // 每个难度的长度（单位像素）
+        roadSectionLengthList: [1000, 1000, 1000, 1000],
         roadSectionList: [
             [
                 {
@@ -814,6 +826,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
+        // 里程提示（单位米）
+        distanceNotice: [10, 100, 1000],
+        // 每个难度的长度（单位像素）
+        roadSectionLengthList: [1000, 1000, 1000, 1000],
         roadSectionList: [
             [
                 {
@@ -1003,6 +1019,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 里程提示（单位米）
+        distanceNotice: [10, 100, 1000],
+        // 每个难度的长度（单位像素）
+        roadSectionLengthList: [1000, 1000, 1000, 1000],
         roadSectionList: [
             [
                 {

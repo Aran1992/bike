@@ -7,6 +7,9 @@ export default class EndlessGameScene extends GameScene {
     onShow(sceneIndex) {
         this.sceneIndex = sceneIndex;
         this.sceneConfig = Config.endlessMode.sceneList[sceneIndex];
+        this.nextDistanceIndex = 0;
+        let config = this.sceneConfig.distanceNotice;
+        this.nextNoticeDistance = config && config[this.nextDistanceIndex];
         super.onShow();
     }
 
@@ -43,18 +46,6 @@ export default class EndlessGameScene extends GameScene {
     }
 
     initGameContent() {
-        this.diffIndex = 0;
-        let roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
-
-        this.partList = [];
-        while (roadSectionList.length !== 0) {
-            let index = Math.floor(Math.random() * roadSectionList.length);
-            let item = roadSectionList.splice(index, 1)[0];
-            GameUtils.sortSceneChildrenByX(item.child);
-            this.partList.push(item);
-        }
-
         this.createPart({
             label: "Road",
             props: {
@@ -72,6 +63,25 @@ export default class EndlessGameScene extends GameScene {
             x: Config.designWidth / 2,
             y: Config.designHeight / 2 - Config.bikeRadius * Config.meter2pixel
         }));
+
+        this.diffIndex = 0;
+        let roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
+            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+
+        this.partList = [];
+        let sumLength = 0;
+        let config = this.sceneConfig.roadSectionLengthList[this.diffIndex];
+        while (config > sumLength) {
+            if (roadSectionList.length === 0) {
+                roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
+                    JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+            }
+            let index = Math.floor(Math.random() * roadSectionList.length);
+            let item = roadSectionList.splice(index, 1)[0];
+            GameUtils.sortSceneChildrenByX(item.child);
+            this.partList.push(item);
+            sumLength += item.props.width;
+        }
     }
 
     createRoadSection(json, offsetX, offsetY) {
@@ -91,10 +101,17 @@ export default class EndlessGameScene extends GameScene {
                 let list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
                     JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
                 this.partList = [];
-                while (list.length !== 0) {
+                let config = this.sceneConfig.roadSectionLengthList[this.diffIndex];
+                let sumLength = 0;
+                while (config > sumLength) {
+                    if (list.length === 0) {
+                        list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
+                            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+                    }
                     let index = Math.floor(Math.random() * list.length);
                     let item = list.splice(index, 1)[0];
                     this.partList.push(item);
+                    sumLength += item.props.width;
                 }
             }
             let item = this.partList.pop();
@@ -102,6 +119,14 @@ export default class EndlessGameScene extends GameScene {
             this.mapWidth += item.props.width;
             this.offsetX += item.props.width;
             this.offsetY += item.props.height;
+        }
+    }
+
+    showDistance() {
+        if (this.distance > this.nextNoticeDistance) {
+            App.showNotice(`You have ridden ${this.nextNoticeDistance} meters`);
+            this.nextDistanceIndex++;
+            this.nextNoticeDistance = this.sceneConfig.distanceNotice[this.nextDistanceIndex];
         }
     }
 }
