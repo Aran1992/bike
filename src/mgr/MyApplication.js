@@ -1,3 +1,4 @@
+import Config from "../config";
 import {Application, Container, Graphics, loader, Rectangle, resources, Text, TextStyle} from "../libs/pixi-wrapper";
 import MapGameScene from "../scene/MapGameScene";
 import EndlessGameScene from "../scene/EndlessGameScene";
@@ -83,28 +84,29 @@ export default class MyApplication extends Application {
     showNotice(notice) {
         let container = new Container();
 
-        let margin = 10;
+        let margin = Config.notice.margin;
 
         let text = new Text(notice, new TextStyle({
-            fill: "white",
-            fontSize: 50,
+            fill: Config.notice.fill,
+            fontSize: Config.notice.fontSize,
         }));
         text.position.set(margin / 2, margin / 2);
 
         let mask = new Graphics();
-        mask.beginFill(0x000000, 0.5);
+        mask.beginFill(Config.notice.backgroundColor, Config.notice.backgroundAlpha);
         mask.drawRect(0, 0, text.width + margin, text.height + margin);
         mask.endFill();
 
         container.addChild(mask);
         container.addChild(text);
 
-        container.position.set(this.sceneWidth / 2 - text.width / 2, 320);
+        container.position.set(this.sceneWidth / 2 - text.width / 2, Config.notice.positionY);
         this.stage.addChild(container);
 
         setTimeout(() => {
+            let reduce = 1000 / 60 / Config.notice.fadeDuration;
             let handler = () => {
-                container.alpha -= 0.1;
+                container.alpha -= reduce;
                 if (container.alpha < 0) {
                     container.destroy();
                 } else {
@@ -112,6 +114,6 @@ export default class MyApplication extends Application {
                 }
             };
             handler();
-        }, 1000);
+        }, Config.notice.duration);
     }
 }

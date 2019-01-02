@@ -1433,4 +1433,24 @@ Config.bikeList = [
 // 抽奖重置时间间隔（单位：秒）
 Config.freeDrawInterval = 8 * 60 * 60;
 
+// 提示相关配置
+Config.notice = {
+    // 字体颜色
+    fill: "white",
+    // 字体大小
+    fontSize: 50,
+    // 背景比字体大多少像素
+    margin: 10,
+    // 背景颜色
+    backgroundColor: 0x000000,
+    // 背景透明度(0就是完全透明，1就是完全不透明)
+    backgroundAlpha: 0.5,
+    // 提示距离顶部多少像素
+    positionY: 320,
+    // 提示持续的时间（毫秒）
+    duration: 2000,
+    // 消失动画的持续时间（毫秒）
+    fadeDuration: 250
+};
+
 export default Config;
