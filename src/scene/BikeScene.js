@@ -45,7 +45,7 @@ export default class BikeScene extends Scene {
         if (config.imagePath) {
             sprite.texture = resources[config.imagePath].texture;
             sprite.anchor.set(...config.anchor);
-            sprite.position.set(...config.scale);
+            sprite.position.set(...config.position);
             sprite.scale.set(...config.scale);
         } else {
             sprite.texture = undefined;

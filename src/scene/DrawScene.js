@@ -92,7 +92,7 @@ export default class DrawScene extends Scene {
         if (config.imagePath) {
             bdSprite.texture = resources[config.imagePath].texture;
             bdSprite.anchor.set(...config.anchor);
-            bdSprite.position.set(...config.scale);
+            bdSprite.position.set(...config.position);
             bdSprite.scale.set(...config.scale);
         } else {
             bdSprite.texture = undefined;
