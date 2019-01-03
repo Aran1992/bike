@@ -3,6 +3,7 @@ import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import {resources} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
+import BikeSprite from "../item/BikeSprite";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -18,6 +19,8 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.shopButton, this.onClickShopButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
+
+        this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
     }
 
     onShow() {
@@ -30,10 +33,28 @@ export default class MainScene extends Scene {
         this.onClickEndlessModeButton();
 
         MusicMgr.playBGM(Config.mainBgmPath);
+
+        this.bikeSprite.setBikeID(DataMgr.get(DataMgr.selectedBike, 0));
+        this.bikeSprite.setPosition(-this.bikeSprite.getWidth() / 2, 0);
+        this.bikeSprite.play();
+        this.onUpdate();
+    }
+
+    onHide() {
+        this.bikeSprite.stop();
+        cancelAnimationFrame(this.animationFrame);
+    }
+
+    onUpdate() {
+        let x = this.bikeSprite.getPositionX() + Config.mainScene.bikeSprite.velocityX;
+        this.bikeSprite.setPositionX(x);
+        if (this.bikeSprite.getLeftBorderX() >= App.sceneWidth) {
+            this.bikeSprite.setPositionX(-this.bikeSprite.getWidth() / 2);
+        }
+        this.animationFrame = requestAnimationFrame(this.onUpdate.bind(this));
     }
 
     onClickCloseFuncButton() {
-        // todo 显示信息界面
     }
 
     onClickMapModeButton() {
@@ -80,4 +101,5 @@ export default class MainScene extends Scene {
 
 MainScene.sceneFilePath = "myLaya/laya/pages/View/MainScene.scene";
 MainScene.resPathList = Config.mapList.map(scene => scene.texture.mainCover)
-    .concat(Config.endlessMode.sceneList.map(scene => scene.texture.mainCover));
+    .concat(Config.endlessMode.sceneList.map(scene => scene.texture.mainCover))
+    .concat(BikeSprite.resPathList);

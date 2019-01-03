@@ -4,6 +4,7 @@ import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
 import {AnimatedSprite, Rectangle, resources, Sprite} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
+import BikeSprite from "../item/BikeSprite";
 
 export default class DrawScene extends Scene {
     onCreate() {
@@ -18,13 +19,8 @@ export default class DrawScene extends Scene {
         this.ballImage.anchor.set(0.5, 0.5);
         this.ballImage.position.set(this.ui.ballImage.mywidth / 2, this.ui.ballImage.myheight / 2);
         this.ballImage.visible = false;
-        let frames = GameUtils.getFrames(Config.bikeAtlasPath);
-        this.bikeSprite = new AnimatedSprite(frames);
-        this.ui.detailPanel.children[0].addChild(this.bikeSprite);
-        this.bikeSprite.anchor.set(0.5, 0.5);
-        this.bikeSprite.position.set(307, 100);
-        this.bikeDetailSprite = new Sprite();
-        this.bikeSprite.addChild(this.bikeDetailSprite);
+        this.bikeSprite = new BikeSprite(this.ui.detailPanel.children[0]);
+        this.bikeSprite.setPosition(307, 100);
         this.onTick();
         this.timer = setInterval(this.onTick.bind(this), 1000);
     }
@@ -86,17 +82,9 @@ export default class DrawScene extends Scene {
 
         this.ballImage.visible = false;
         this.ui.detailPanel.visible = true;
+        this.bikeSprite.setBikeID(this.id);
         let config = Config.bikeList.find(item => item.id === this.id);
         this.ui.bikeDsc.text = config.dsc;
-        let bdSprite = this.bikeDetailSprite;
-        if (config.imagePath) {
-            bdSprite.texture = resources[config.imagePath].texture;
-            bdSprite.anchor.set(...config.anchor);
-            bdSprite.position.set(...config.position);
-            bdSprite.scale.set(...config.scale);
-        } else {
-            bdSprite.texture = undefined;
-        }
         this.bikeSprite.play();
     }
 
@@ -118,6 +106,5 @@ export default class DrawScene extends Scene {
     }
 }
 
-
 DrawScene.sceneFilePath = "myLaya/laya/pages/View/DrawScene.scene";
-DrawScene.resPathList = [Config.bikeAtlasPath].concat(Utils.values(Config.bikeList).map(obj => obj.imagePath));
+DrawScene.resPathList = BikeSprite.resPathList;

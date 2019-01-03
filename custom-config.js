@@ -1274,7 +1274,7 @@ Config.bikeList = [
         // 覆盖其上的图片路径
         imagePath: "images/bike/bike1.png",
         // 缩放倍数
-        scale: [0.001, 0.001],
+        scale: [0, 0],
         // 图片的锚点
         anchor: [0.5, 0.5],
         // 图片在自行车内的位置 (0,0)就是在中心点
@@ -1431,7 +1431,7 @@ Config.bikeList = [
 ];
 
 // 抽奖重置时间间隔（单位：秒）
-Config.freeDrawInterval = 8 * 60 * 60;
+Config.freeDrawInterval = 0;
 
 // 提示相关配置
 Config.notice = {
@@ -1451,6 +1451,15 @@ Config.notice = {
     duration: 2000,
     // 消失动画的持续时间（毫秒）
     fadeDuration: 250
+};
+
+// 主界面相关配置
+Config.mainScene = {
+    // 自行车相关配置
+    bikeSprite: {
+        // 在X轴上移动的速度
+        velocityX: 2,
+    }
 };
 
 export default Config;
