@@ -462,6 +462,17 @@ export default class GameScene extends Scene {
         this.bikeDecorateSprite.scale.set(...config.scale);
         this.bikeDecorateSprite.position.set(...config.position);
 
+        if (config.velocityPercent) {
+            this.bikeCommonVelocity *= config.velocityPercent;
+            this.bikeAccVelocity *= config.velocityPercent;
+        }
+        let density;
+        if (config.densityPercent) {
+            density = Config.bikeDensity * config.densityPercent;
+        } else {
+            density = Config.bikeDensity;
+        }
+
         this.bikeBubbleSprite = new Sprite(resources[Config.imagePath.bubble].texture);
         this.bikeSprite.addChild(this.bikeBubbleSprite);
         this.bikeBubbleSprite.anchor.set(0.5, 0.5);
@@ -469,7 +480,7 @@ export default class GameScene extends Scene {
         this.bikeBubbleSprite.visible = false;
 
         this.bikeBody = this.world.createDynamicBody();
-        this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: Config.bikeDensity, friction: 1,});
+        this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1,});
         this.bikeBody.setPosition(pp);
         this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, 0));
 
