@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":10,
-    "selecteID":48,
+    "selectedBox":1,
+    "selecteID":49,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -30,19 +30,33 @@
         },
         {
             "x":15,
+            "type":"Panel",
+            "searchKey":"Panel",
+            "props":{"var":"bikeSpritePanel","bottom":275},
+            "nodeParent":1,
+            "label":"bikeSpritePanel",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":49,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"skin":"images/ショップ-2.png","right":0,"left":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":0,"x":13,"top":0,"skin":"images/bottom-num.png","centerX":-240},
@@ -55,7 +69,6 @@
                     "compId":2,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/ツアーマップ書き出し-1.png","scaleY":0.4,"scaleX":0.4,"left":10,"centerY":0},
@@ -68,7 +81,6 @@
                             "compId":13,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"Metre","fontSize":30,"color":"#000000","centerY":0,"centerX":0},
@@ -83,7 +95,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,distanceText",
                             "props":{"y":11,"var":"distanceText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":0},
@@ -98,7 +109,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":0,"x":253,"top":0,"skin":"images/bottom-num.png","centerX":0},
@@ -111,7 +121,6 @@
                     "compId":3,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-diamond.png","scaleY":0.65,"scaleX":0.65,"left":5,"centerY":0},
@@ -125,7 +134,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
                             "props":{"var":"diamondText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":0},
@@ -140,7 +148,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":0,"x":493,"top":0,"skin":"images/bottom-num.png","centerX":240},
@@ -180,7 +187,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":60,"x":13,"top":60,"skin":"images/bottom-num.png","centerX":-240},
@@ -193,7 +199,6 @@
                     "compId":10,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/ツアーマップ書き出し-1.png","scaleY":0.4,"scaleX":0.4,"left":10,"centerY":0},
@@ -206,7 +211,6 @@
                             "compId":11,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"Mark","fontSize":30,"color":"#000000","centerY":0,"centerX":0},
@@ -221,7 +225,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
                             "props":{"var":"totalScoreText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":0},
@@ -272,14 +275,13 @@
             "props":{"var":"costCoinPanel","skin":"images/bottom-num.png","centerY":225,"centerX":0},
             "nodeParent":1,
             "label":"costCoinPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/icon-coin.png","scaleY":0.7,"scaleX":0.7,"left":5,"centerY":0},
@@ -293,7 +295,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,costCoinText",
                     "props":{"var":"costCoinText","text":"123456","left":60,"fontSize":30,"color":"#ffffff","centerY":0},
@@ -314,14 +315,13 @@
             "props":{"width":80,"left":20,"height":540,"bottom":280},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,shopButton",
                     "props":{"var":"shopButton","top":-1,"skin":"images/ButtonShop.png","left":0},
@@ -334,7 +334,6 @@
                     "compId":22,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"Shop","fontSize":20,"color":"#ffffff","centerY":29,"centerX":0},
@@ -349,7 +348,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,systemButton",
                     "props":{"x":0,"var":"systemButton","top":90,"skin":"images/ButtonSetting_Green.png","left":0},
@@ -362,7 +360,6 @@
                     "compId":23,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"System","fontSize":20,"color":"#ffffff","centerY":29,"centerX":0},
@@ -377,7 +374,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,homeButton",
                     "props":{"x":0,"var":"homeButton","top":180,"skin":"images/ButtonSocial_Blue.png","left":0},
@@ -390,7 +386,6 @@
                     "compId":24,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"Home","fontSize":20,"color":"#ffffff","centerY":29,"centerX":0},
@@ -405,7 +400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rankButton",
                     "props":{"x":0,"var":"rankButton","top":270,"skin":"images/ButtonRanking_Orange.png","left":0},
@@ -418,7 +412,6 @@
                     "compId":25,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"Rank","fontSize":20,"color":"#ffffff","centerY":29,"centerX":0},
@@ -433,7 +426,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,drawButton",
                     "props":{"x":0,"var":"drawButton","top":360,"skin":"images/ボタンセット-3.png","left":0},
@@ -460,7 +452,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"var":"bikeButton","top":450,"skin":"images/ボタンセット-1.png","left":0},
@@ -494,14 +485,13 @@
             "props":{"width":720,"skin":"images/ショップ-1.png","right":0,"left":0,"height":288,"bottom":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
                     "props":{"width":320,"var":"endlessModeButton","skin":"images/しまむらガチャラフ-1.png","height":235,"centerX":-175,"bottom":10},
@@ -514,7 +504,6 @@
                     "compId":29,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"Endless","fontSize":70,"color":"#ffffff","centerY":-5,"centerX":0},
@@ -529,7 +518,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"width":320,"var":"mapModeButton","skin":"images/しまむらガチャラフ-1.png","height":235,"centerX":175,"bottom":10},
@@ -542,7 +530,6 @@
                     "compId":30,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"Match","fontSize":70,"color":"#ffffff","centerY":-5,"centerX":0},

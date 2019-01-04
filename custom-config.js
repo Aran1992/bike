@@ -1274,7 +1274,7 @@ Config.bikeList = [
         // 覆盖其上的图片路径
         imagePath: "",
         // 缩放倍数
-        scale: [0.001, 0.001],
+        scale: [0, 0],
         // 图片的锚点
         anchor: [0.5, 0.5],
         // 图片在自行车内的位置 (0,0)就是在中心点
@@ -1283,6 +1283,10 @@ Config.bikeList = [
         dsc: "NO.1 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1.5,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1.5,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1299,6 +1303,10 @@ Config.bikeList = [
         dsc: "NO.2 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1315,6 +1323,10 @@ Config.bikeList = [
         dsc: "NO.3 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1331,6 +1343,10 @@ Config.bikeList = [
         dsc: "NO.4 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1347,6 +1363,10 @@ Config.bikeList = [
         dsc: "NO.5 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1363,6 +1383,10 @@ Config.bikeList = [
         dsc: "NO.6 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1379,6 +1403,10 @@ Config.bikeList = [
         dsc: "NO.7 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1395,6 +1423,10 @@ Config.bikeList = [
         dsc: "NO.8 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1411,6 +1443,10 @@ Config.bikeList = [
         dsc: "NO.9 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -1427,6 +1463,10 @@ Config.bikeList = [
         dsc: "NO.10 bike",
         // 随机的权重
         weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）
+        densityPercent: 1,
     },
 ];
 
@@ -1451,6 +1491,15 @@ Config.notice = {
     duration: 2000,
     // 消失动画的持续时间（毫秒）
     fadeDuration: 250
+};
+
+// 主界面相关配置
+Config.mainScene = {
+    // 自行车相关配置
+    bikeSprite: {
+        // 在X轴上移动的速度
+        velocityX: 2,
+    }
 };
 
 export default Config;

@@ -1,10 +1,9 @@
 import Config from "../config";
 import Scene from "./Scene";
 import List from "../ui/List";
-import {AnimatedSprite, resources, Sprite} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
-import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
+import BikeSprite from "../item/BikeSprite";
 
 export default class BikeScene extends Scene {
     onCreate() {
@@ -28,28 +27,15 @@ export default class BikeScene extends Scene {
         item.fightMaskImage = item.itemRoot.children[0];
         item.selectedImage = item.itemRoot.children[1];
         item.lostMaskImage = item.itemRoot.children[2];
-        let frames = GameUtils.getFrames(Config.bikeAtlasPath);
-        item.bikeSprite = new AnimatedSprite(frames);
-        item.itemRoot.addChildAt(item.bikeSprite, 2);
-        item.bikeSprite.anchor.set(0.5, 0.5);
-        item.bikeSprite.position.set(item.itemRoot.mywidth / 2, item.itemRoot.myheight / 2 + 20);
-        item.bikeDetailSprite = new Sprite();
-        item.bikeSprite.addChild(item.bikeDetailSprite);
+        item.bikeSprite = new BikeSprite(item.itemRoot, 2);
+        item.bikeSprite.setPosition(item.itemRoot.mywidth / 2, item.itemRoot.myheight / 2 + 20);
         this.onClick(item, this.onClickItem.bind(this));
     }
 
     updateItem(item, index) {
         item.index = index;
         let config = Config.bikeList[index];
-        let sprite = item.bikeDetailSprite;
-        if (config.imagePath) {
-            sprite.texture = resources[config.imagePath].texture;
-            sprite.anchor.set(...config.anchor);
-            sprite.position.set(...config.position);
-            sprite.scale.set(...config.scale);
-        } else {
-            sprite.texture = undefined;
-        }
+        item.bikeSprite.setBikeID(config.id);
         if (this.selectedIndex === index) {
             item.bikeSprite.play();
             item.selectedImage.visible = true;
@@ -93,4 +79,4 @@ export default class BikeScene extends Scene {
 }
 
 BikeScene.sceneFilePath = "myLaya/laya/pages/View/BikeScene.scene";
-BikeScene.resPathList = [Config.bikeAtlasPath].concat(Utils.values(Config.bikeList).map(obj => obj.imagePath));
+BikeScene.resPathList = BikeSprite.resPathList;

@@ -38,7 +38,6 @@ export default class List {
 
     update() {
         let {start, end} = this.calcStartAndEnd(-this.container.y, this.item.myheight, this.root.myheight);
-        console.log(start, end);
         for (let index in this.itemTable) {
             if (this.itemTable.hasOwnProperty(index)) {
                 if (index < start || index > end) {
