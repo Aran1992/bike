@@ -172,7 +172,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,confirmButton",
-            "props":{"var":"confirmButton","skin":"images/ロゴのってる-3.png","centerX":0,"bottom":200},
+            "props":{"var":"confirmButton","skin":"images/button-start.png","centerX":0,"bottom":200},
             "nodeParent":1,
             "label":"confirmButton",
             "isDirectory":false,
