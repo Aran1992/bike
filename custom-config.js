@@ -1272,7 +1272,7 @@ Config.bikeList = [
         // 自行车ID 必须要和别的自行车不一样
         id: 0,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/bike1.png",
+        imagePath: "",
         // 缩放倍数
         scale: [0.001, 0.001],
         // 图片的锚点
