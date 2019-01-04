@@ -245,10 +245,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM102.mp3",
-        // 里程提示（单位米）
-        distanceNotice: [10, 100, 1000],
-        // 每个难度的长度（单位像素）
-        roadSectionLengthList: [1000, 1000, 1000, 1000],
+        // 里程提示（单位米）（10秒大约走200米）
+        distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
+        // 每个难度的长度（单位像素）（1米=16像素）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）
+        roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
                 {
@@ -438,10 +438,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM103.mp3",
-        // 里程提示（单位米）
-        distanceNotice: [10, 100, 1000],
-        // 每个难度的长度（单位像素）
-        roadSectionLengthList: [1000, 1000, 1000, 1000],
+        // 里程提示（单位米）（10秒大约走200米）
+        distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
+        // 每个难度的长度（单位像素）（1米=16像素）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）
+        roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
                 {
@@ -633,10 +633,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
-        // 里程提示（单位米）
-        distanceNotice: [10, 100, 1000],
-        // 每个难度的长度（单位像素）
-        roadSectionLengthList: [1000, 1000, 1000, 1000],
+        // 里程提示（单位米）（10秒大约走200米）
+        distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
+        // 每个难度的长度（单位像素）（1米=16像素）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）
+        roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
                 {
@@ -826,10 +826,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
-        // 里程提示（单位米）
-        distanceNotice: [10, 100, 1000],
-        // 每个难度的长度（单位像素）
-        roadSectionLengthList: [1000, 1000, 1000, 1000],
+        // 里程提示（单位米）（10秒大约走200米）
+        distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
+        // 每个难度的长度（单位像素）（1米=16像素）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）
+        roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
                 {
@@ -1019,10 +1019,10 @@ Config.endlessMode.sceneList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 里程提示（单位米）
-        distanceNotice: [10, 100, 1000],
-        // 每个难度的长度（单位像素）
-        roadSectionLengthList: [1000, 1000, 1000, 1000],
+        // 里程提示（单位米）（10秒大约走200米）
+        distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
+        // 每个难度的长度（单位像素）（1米=16像素）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）
+        roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
                 {
@@ -1430,8 +1430,8 @@ Config.bikeList = [
     },
 ];
 
-// 抽奖重置时间间隔（单位：秒）
-Config.freeDrawInterval = 0;
+// 抽奖重置时间间隔（单位：秒）（可用乘法计算）
+Config.freeDrawInterval = 1 * 1 * 3;
 
 // 提示相关配置
 Config.notice = {
@@ -1446,7 +1446,7 @@ Config.notice = {
     // 背景透明度(0就是完全透明，1就是完全不透明)
     backgroundAlpha: 0.5,
     // 提示距离顶部多少像素
-    positionY: 320,
+    positionY: 100,
     // 提示持续的时间（毫秒）
     duration: 2000,
     // 消失动画的持续时间（毫秒）
