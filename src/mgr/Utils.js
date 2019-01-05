@@ -155,5 +155,10 @@ export default class Utils {
         let hour = (time - min) / 60;
         return `${format(hour)}:${format(min)}:${format(second)}`;
     }
+
+    static isIOS() {
+        return !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
+
 }
 

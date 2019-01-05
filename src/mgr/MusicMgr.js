@@ -1,4 +1,5 @@
 import Config from "../config";
+import Utils from "./Utils";
 
 class MusicMgr_ {
     constructor() {
@@ -9,7 +10,7 @@ class MusicMgr_ {
     }
 
     playBGM(path) {
-        if (Config.openBGM) {
+        if (Config.openBGM && !Utils.isIOS()) {
             this.bgmAudio.src = path;
             this.bgmAudio.onload = () => {
                 this.bgmAudio.play();
@@ -22,7 +23,7 @@ class MusicMgr_ {
     }
 
     playSound(path, callback) {
-        if (Config.openSound) {
+        if (Config.openSound && !Utils.isIOS()) {
             let audio = document.createElement("audio");
             audio.autoplay = true;
             audio.src = path;
