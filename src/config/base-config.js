@@ -1,4 +1,7 @@
 let Config = {
+    listResistance: 2,
+    buttonClickScale: 1.2,
+    buttonClickOffset: 2,
     initScene: "MainScene",
     designWidth: 720,
     designHeight: 1280,

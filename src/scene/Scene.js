@@ -1,6 +1,8 @@
 import {Container} from "../libs/pixi-wrapper";
 import EventMgr from "../mgr/EventMgr";
 import SceneHelper from "../mgr/SceneHelper";
+import Utils from "../mgr/Utils";
+import Config from "../config";
 
 export default class Scene extends Container {
     create(createCallback) {
@@ -83,6 +85,24 @@ export default class Scene extends Container {
     onClick(button, handler) {
         button.buttonMode = true;
         button.interactive = true;
-        button.on("pointerup", (event) => handler(button, event));
+        button.on("pointerdown", (event) => {
+            button.clickPoint = {x: event.data.global.x, y: event.data.global.y};
+        });
+        button.on("pointerup", (event) => {
+            if (button.clickPoint && Utils.isPointInRect(
+                {x: event.data.global.x, y: event.data.global.y},
+                {
+                    x: button.clickPoint.x - Config.buttonClickOffset,
+                    y: button.clickPoint.y - Config.buttonClickOffset,
+                    width: Config.buttonClickOffset * 2,
+                    height: Config.buttonClickOffset * 2,
+                })) {
+                handler(button, event);
+            }
+            button.clickPoint = undefined;
+        });
+        button.on("pointerupoutside", () => {
+            button.clickPoint = undefined;
+        });
     }
 }

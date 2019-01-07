@@ -48,6 +48,7 @@ webpack(config, () => {
         "images",
         "sound",
         "myLaya/laya/pages",
+        "myLaya/laya/assets/images",
         "dist/bundle.js",
         "fbapp-config.json",
     ].forEach(file => copy(file, `publish-fb/${file}`));
@@ -102,5 +103,5 @@ webpack(config, () => {
     //     console.log(`stderr: ${stderr}`);
     // });
 
-    deleteAll("./publish-fb");
+    // deleteAll("./publish-fb");
 });

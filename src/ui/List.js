@@ -1,4 +1,6 @@
-import {Container, Graphics, NineSlicePlane, Sprite, Text} from "../libs/pixi-wrapper";
+import {Container, Graphics, Rectangle} from "../libs/pixi-wrapper";
+import UIHelper from "./UIHelper";
+import Config from "../config";
 
 export default class List {
     constructor({root, initItemFunc, updateItemFunc, count}) {
@@ -6,7 +8,7 @@ export default class List {
         this.cacheItemList = [];
         this.root = root;
         this.createMask();
-        // this.bindListener();
+        this.bindListener();
         this.item = root.children[0];
         this.item.visible = false;
         this.container = new Container();
@@ -15,6 +17,12 @@ export default class List {
         this.updateItem = updateItemFunc;
         this.count = count;
         this.countPerLine = Math.ceil(this.root.mywidth / this.item.mywidth);
+        this.maxY = 0;
+        this.minY = this.root.myheight - Math.ceil(this.count / this.countPerLine) * this.item.myheight;
+        if (this.minY > this.maxY) {
+            this.minY = 0;
+        }
+        this.root.hitArea = new Rectangle(0, 0, this.root.mywidth, this.root.myheight);
         this.update();
     }
 
@@ -70,7 +78,7 @@ export default class List {
     getItem() {
         let item = this.cacheItemList.pop();
         if (item === undefined) {
-            item = this.clone(this.item);
+            item = UIHelper.clone(this.item);
             this.container.addChild(item);
             this.initItem(item);
         }
@@ -80,104 +88,50 @@ export default class List {
     onTouchStart(event) {
         this.touching = true;
         this.lastY = event.data.global.y;
+        cancelAnimationFrame(this.recoverAnimationID);
     }
 
     onTouchMove(event) {
         if (this.touching) {
             let moveY = event.data.global.y - this.lastY;
             this.lastY = event.data.global.y;
-            this.container.y += moveY;
+            let newY = this.container.y + moveY;
+            if (newY > this.maxY || newY < this.minY) {
+                newY = this.container.y + moveY / Config.listResistance;
+            }
+            this.container.y = newY;
             this.update();
         }
     }
 
     onTouchEnd() {
         this.touching = false;
-    }
-
-    clone(displayObject) {
-        let displayObject_ = this.copy(displayObject);
-        displayObject.children.forEach(child => {
-            displayObject_.addChild(this.clone(child));
-        });
-        return displayObject_;
-    }
-
-    copy(displayObject) {
-        if (displayObject instanceof Text) {
-            return this.copyText(displayObject);
-        } else if (displayObject instanceof Sprite) {
-            return this.copySprite(displayObject);
-        } else if (displayObject instanceof NineSlicePlane) {
-            return this.copyNineSlicePlane(displayObject);
-        } else if (displayObject instanceof Container) {
-            return this.copyContainer(displayObject);
+        if (this.container.y > this.maxY || this.container.y < this.minY) {
+            let totalTime = 250;
+            let lastTime = (new Date()).getTime();
+            let totalMove = (this.container.y > this.maxY ? this.maxY : this.minY) - this.container.y;
+            let handler = () => {
+                let curTime = (new Date()).getTime();
+                if (this.container.y > this.minY) {
+                    this.container.y += (curTime - lastTime) / totalTime * totalMove;
+                    if (this.container.y <= this.maxY) {
+                        this.container.y = this.maxY;
+                    } else {
+                        this.recoverAnimationID = requestAnimationFrame(handler);
+                    }
+                } else if (this.container.y < this.maxY) {
+                    this.container.y += (curTime - lastTime) / totalTime * totalMove;
+                    if (this.container.y >= this.minY) {
+                        this.container.y = this.minY;
+                    } else {
+                        this.recoverAnimationID = requestAnimationFrame(handler);
+                    }
+                }
+                this.update();
+                lastTime = curTime;
+            };
+            handler();
         }
-    }
-
-    copyContainer(src) {
-        let dst = new Container();
-        dst.alpha = src.alpha;
-        dst.buttonMode = src.buttonMode;
-        dst.hitArea = src.hitArea;
-        dst.interactive = src.interactive;
-        dst.rotation = src.rotation;
-        dst.scale.set(src.scale.x, src.scale.y);
-        dst.visible = src.visible;
-        dst.x = src.x;
-        dst.y = src.y;
-        dst.mywidth = src.mywidth;
-        dst.myheight = src.myheight;
-        return dst;
-    }
-
-    copySprite(src) {
-        let dst = new Sprite();
-        dst.alpha = src.alpha;
-        dst.anchor.set(src.anchor.x, src.anchor.y);
-        dst.buttonMode = src.buttonMode;
-        dst.interactive = src.interactive;
-        dst.rotation = src.rotation;
-        dst.scale.set(src.scale.x, src.scale.y);
-        dst.texture = src.texture;
-        dst.visible = src.visible;
-        dst.x = src.x;
-        dst.y = src.y;
-        dst.mywidth = src.mywidth;
-        dst.myheight = src.myheight;
-        return dst;
-    }
-
-    copyText(src) {
-        let dst = new Text(src.text, src.style);
-        dst.alpha = src.alpha;
-        dst.anchor.set(src.anchor.x, src.anchor.y);
-        dst.buttonMode = src.buttonMode;
-        dst.interactive = src.interactive;
-        dst.rotation = src.rotation;
-        dst.scale.set(src.scale.x, src.scale.y);
-        dst.visible = src.visible;
-        dst.x = src.x;
-        dst.y = src.y;
-        dst.mywidth = src.mywidth;
-        dst.myheight = src.myheight;
-        return dst;
-    }
-
-    copyNineSlicePlane(src) {
-        let dst = new NineSlicePlane(src.texture, src.leftWidth, src.topHeight, src.rightWidth, src.bottomHeight);
-        dst.alpha = src.alpha;
-        dst.buttonMode = src.buttonMode;
-        dst.interactive = src.interactive;
-        dst.rotation = src.rotation;
-        dst.visible = src.visible;
-        dst.x = src.x;
-        dst.y = src.y;
-        dst.width = src.width;
-        dst.height = src.height;
-        dst.mywidth = src.mywidth;
-        dst.myheight = src.myheight;
-        return dst;
     }
 
     createMask() {
