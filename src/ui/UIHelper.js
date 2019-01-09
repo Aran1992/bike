@@ -1,4 +1,6 @@
 import {Container, NineSlicePlane, Sprite, Text} from "../libs/pixi-wrapper";
+import Config from "../config";
+import Utils from "../mgr/Utils";
 
 export default class UIHelper {
     static clone(displayObject) {
@@ -84,5 +86,66 @@ export default class UIHelper {
         dst.mywidth = src.mywidth;
         dst.myheight = src.myheight;
         return dst;
+    }
+
+    static onClick(button, handler, noScale) {
+        button.buttonMode = true;
+        button.interactive = true;
+        button.on("pointerdown", (event) => {
+            button.clickPoint = {x: event.data.global.x, y: event.data.global.y};
+            if (!noScale) {
+                button.originScaleX = button.scale.x;
+                button.originScaleY = button.scale.y;
+                button.scale.set(button.originScaleX * Config.buttonClickScale, button.originScaleY * Config.buttonClickScale);
+                let {moveX, moveY} = UIHelper.calcButtonMove(button);
+                let x = button.x - moveX;
+                let y = button.y - moveY;
+                button.position.set(x, y);
+            }
+        });
+        button.on("pointerup", (event) => {
+            if (button.clickPoint) {
+                if (!noScale) {
+                    button.scale.set(button.originScaleX, button.originScaleY);
+                    let {moveX, moveY} = UIHelper.calcButtonMove(button);
+                    let x = button.x + moveX;
+                    let y = button.y + moveY;
+                    button.position.set(x, y);
+                }
+                if (Utils.isPointInRect(
+                    {x: event.data.global.x, y: event.data.global.y},
+                    {
+                        x: button.clickPoint.x - Config.buttonClickOffset,
+                        y: button.clickPoint.y - Config.buttonClickOffset,
+                        width: Config.buttonClickOffset * 2,
+                        height: Config.buttonClickOffset * 2,
+                    })) {
+                    handler(button, event);
+                }
+                button.clickPoint = undefined;
+            }
+        });
+        button.on("pointerupoutside", () => {
+            if (button.clickPoint) {
+                button.clickPoint = undefined;
+                if (!noScale) {
+                    button.scale.set(button.originScaleX, button.originScaleY);
+                    let {moveX, moveY} = UIHelper.calcButtonMove(button);
+                    let x = button.x + moveX;
+                    let y = button.y + moveY;
+                    button.position.set(x, y);
+                }
+            }
+        });
+    }
+
+    static calcButtonMove(button) {
+        let oldwidth = button.mywidth * button.originScaleX;
+        let oldheight = button.myheight * button.originScaleY;
+        let newwidth = oldwidth * Config.buttonClickScale;
+        let newheight = oldheight * Config.buttonClickScale;
+        let moveX = (newwidth - oldwidth) / 2;
+        let moveY = (newheight - oldheight) / 2;
+        return {moveX: moveX, moveY: moveY};
     }
 }

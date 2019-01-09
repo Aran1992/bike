@@ -34,6 +34,8 @@ DataMgr.currentMapScene = "currentMapScene";
 DataMgr.selectedBike = "selectedBike";
 DataMgr.ownedBikeList = "ownedBikeList";
 DataMgr.nextFreeDrawTime = "nextFreeDrawTime";
+DataMgr.hasBuyPresentIDList = "hasBuyPresentIDList";
+DataMgr.unlockAllBike = "unlockAllBike";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);

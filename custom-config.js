@@ -1502,4 +1502,115 @@ Config.mainScene = {
     }
 };
 
+// 商店游戏币配置
+Config.moneyList = [
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 345,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 30,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 0,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 0,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum01.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 132,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 12,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 0,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 0,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum02.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 63,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 6,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 0,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 0,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum03.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 10,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 1,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 0,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 0,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum04.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 0,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 34500,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 300,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum05.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 0,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 13200,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 120,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum06.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 0,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 6300,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 60,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum07.png"
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        getDiamond: 0,
+        // 消耗的货币数量（金币物品此项设置为零或者去掉）
+        costMoney: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        getCoin: 1000,
+        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
+        costDiamond: 10,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum08.png"
+    },
+];
+
+// 商店礼包配置
+// 礼包ID已经对应上功能了，不要更改ID和描述的对应关系，但是可以修改礼包的顺序
+Config.presentList = [
+    {
+        // 礼包ID
+        id: 1,
+        // 礼包描述
+        dsc: "Unlock All Bike",
+        // 购买所需货币
+        costMoney: 0,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum01.png",
+    }
+];
+
+// 按钮按下去之后的缩放倍数
+Config.buttonClickScale = 1.2;
+// 按钮点击下去之后进行滑动的话 超过多少算是点击无效的范围
+Config.buttonClickOffset= 10;
+
 export default Config;
