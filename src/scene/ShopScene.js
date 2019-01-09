@@ -116,6 +116,22 @@ export default class ShopScene extends Scene {
                 break;
             }
         }
+
+        let config = Config.presentList.find(item => item.id === button.id);
+
+        if (config.getDiamond) {
+            let diamond = DataMgr.get(DataMgr.diamond, 0);
+            diamond += config.getDiamond;
+            DataMgr.set(DataMgr.diamond, diamond);
+            this.ui.diamondText.text = diamond;
+        }
+
+        if (config.getCoin) {
+            let coin = DataMgr.get(DataMgr.coin, 0);
+            coin += config.getCoin;
+            DataMgr.set(DataMgr.coin, coin);
+            this.ui.coinText.text = coin;
+        }
     }
 
     initMoneyPanel() {

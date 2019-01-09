@@ -1640,6 +1640,32 @@ Config.presentList = [
         costMoney: 200,
         imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum02.png",
     },
+    {
+        // 礼包ID
+        id: 3,
+        // 礼包描述
+        dsc: "1 Money = 50 Diamond + 5000 Gold Coins",
+        // 购买所需货币
+        costMoney: 1,
+        // 购买礼包获得的钻石数量
+        getDiamond: 50,
+        // 购买礼包获得金币数量
+        getCoin: 5000,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum03.png",
+    },
+    {
+        // 礼包ID
+        id: 4,
+        // 礼包描述
+        dsc: "6 Money = 150 Diamond + 15000 Gold Coins",
+        // 购买所需货币
+        costMoney: 6,
+        // 购买礼包获得的钻石数量
+        getDiamond: 150,
+        // 购买礼包获得金币数量
+        getCoin: 15000,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum04.png",
+    },
 ];
 
 // 按钮按下去之后的缩放倍数
