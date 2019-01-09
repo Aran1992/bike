@@ -210,6 +210,11 @@ Config.bikeJumpingRotation = -30;
 // 无尽模式配置
 Config.endlessMode.sceneList = [
     {
+        id: 0,
+        // 免费解锁所需总距离
+        unlockDistance: 0,
+        // 花费解锁所需钻石
+        unlockCostDiamond: 0,
         // 显示给人看的名字
         showName: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -405,6 +410,11 @@ Config.endlessMode.sceneList = [
         ]
     },
     {
+        id: 1,
+        // 免费解锁所需总距离
+        unlockDistance: 12000,
+        // 花费解锁所需钻石
+        unlockCostDiamond: 10,
         // 显示给人看的名字
         showName: "Test2",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -598,6 +608,11 @@ Config.endlessMode.sceneList = [
         ]
     },
     {
+        id: 2,
+        // 免费解锁所需总距离
+        unlockDistance: 36000,
+        // 花费解锁所需钻石
+        unlockCostDiamond: 50,
         // 显示给人看的名字
         showName: "Test3",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -793,6 +808,11 @@ Config.endlessMode.sceneList = [
         ]
     },
     {
+        id: 3,
+        // 免费解锁所需总距离
+        unlockDistance: 72000,
+        // 花费解锁所需钻石
+        unlockCostDiamond: 100,
         // 显示给人看的名字
         showName: "Test4",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -986,6 +1006,11 @@ Config.endlessMode.sceneList = [
         ]
     },
     {
+        id: 4,
+        // 免费解锁所需总距离
+        unlockDistance: 144000,
+        // 花费解锁所需钻石
+        unlockCostDiamond: 150,
         // 显示给人看的名字
         showName: "Test5",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -1603,14 +1628,23 @@ Config.presentList = [
         // 礼包描述
         dsc: "Unlock All Bike",
         // 购买所需货币
-        costMoney: 0,
+        costMoney: 50,
         imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum01.png",
-    }
+    },
+    {
+        // 礼包ID
+        id: 2,
+        // 礼包描述
+        dsc: "Unlock All Endless Scene",
+        // 购买所需货币
+        costMoney: 200,
+        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum02.png",
+    },
 ];
 
 // 按钮按下去之后的缩放倍数
 Config.buttonClickScale = 1.2;
 // 按钮点击下去之后进行滑动的话 超过多少算是点击无效的范围
-Config.buttonClickOffset= 10;
+Config.buttonClickOffset = 10;
 
 export default Config;

@@ -36,6 +36,8 @@ DataMgr.ownedBikeList = "ownedBikeList";
 DataMgr.nextFreeDrawTime = "nextFreeDrawTime";
 DataMgr.hasBuyPresentIDList = "hasBuyPresentIDList";
 DataMgr.unlockAllBike = "unlockAllBike";
+DataMgr.unlockAllEndlessScene = "unlockAllEndlessScene";
+DataMgr.unlockEndlessSceneIDList = "unlockEndlessSceneIDList";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);

@@ -8,7 +8,7 @@ import Radio from "../ui/Radio";
 export default class ShopScene extends Scene {
     onCreate() {
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
-        this.selectedMapIndex = DataMgr.get(DataMgr.selectedEndlessScene, 0);
+        this.selectedMapID = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         this.panelList = [
             {
                 panel: this.ui.presentPanel,
@@ -111,6 +111,10 @@ export default class ShopScene extends Scene {
                 DataMgr.set(DataMgr.unlockAllBike, true);
                 break;
             }
+            case 2: {
+                DataMgr.set(DataMgr.unlockAllEndlessScene, true);
+                break;
+            }
         }
     }
 
@@ -197,21 +201,66 @@ export default class ShopScene extends Scene {
         this.onClick(item, this.onClickMapItem.bind(this), true);
         item.backgroundImage = item.children[0].children[0];
         item.commonImage = item.children[0].children[1];
+        item.unlockButton = item.children[0].children[2];
+        this.onClick(item.unlockButton, this.onClickUnlockButton.bind(this));
+        item.unlockCostText = item.unlockButton.children[2];
         item.selectedImage = item.children[0].children[3];
+        item.lockedImage = item.children[0].children[4];
+        item.unlockConditionText = item.children[0].children[5];
     }
 
     updateMapItem(item, index) {
-        item.index = index;
-        let path = Config.endlessMode.sceneList[index].texture.shopCover;
+        let config = Config.endlessMode.sceneList[index];
+        let path = config.texture.shopCover;
         item.backgroundImage.texture = resources[path].texture;
-        item.commonImage.visible = index !== this.selectedMapIndex;
-        item.selectedImage.visible = index === this.selectedMapIndex;
+        if (this.isEndlessSceneLocked(config.id)) {
+            item.commonImage.visible = false;
+            item.selectedImage.visible = false;
+            item.lockedImage.visible = true;
+            item.unlockButton.visible = true;
+            item.unlockCostText.text = config.unlockCostDiamond;
+            item.unlockConditionText.visible = true;
+            item.unlockConditionText.text = `Total distance reached ${config.unlockDistance}m`;
+            item.interactive = false;
+            item.unlockButton.id = config.id;
+        } else {
+            item.commonImage.visible = config.id !== this.selectedMapID;
+            item.selectedImage.visible = config.id === this.selectedMapID;
+            item.lockedImage.visible = false;
+            item.unlockButton.visible = false;
+            item.unlockConditionText.visible = false;
+            item.interactive = true;
+            item.id = config.id;
+        }
     }
 
     onClickMapItem(item) {
-        this.selectedMapIndex = item.index;
-        DataMgr.set(DataMgr.selectedEndlessScene, this.selectedMapIndex);
+        this.selectedMapID = item.id;
+        DataMgr.set(DataMgr.selectedEndlessScene, this.selectedMapID);
         this.mapList.refresh();
+    }
+
+    onClickUnlockButton(button) {
+        let config = Config.endlessMode.sceneList.find(item => item.id === button.id);
+        let diamond = DataMgr.get(DataMgr.diamond, 0);
+        if (diamond >= config.unlockCostDiamond) {
+            diamond -= config.unlockCostDiamond;
+            DataMgr.set(DataMgr.diamond, diamond);
+            this.ui.diamondText.text = diamond;
+            let list = DataMgr.get(DataMgr.unlockEndlessSceneIDList, []);
+            list.push(config.id);
+            DataMgr.set(DataMgr.unlockEndlessSceneIDList, list);
+            this.mapList.refresh();
+        } else {
+            App.showNotice("Diamond is not enough!");
+        }
+    }
+
+    isEndlessSceneLocked(id) {
+        return DataMgr.get(DataMgr.unlockAllEndlessScene, false) === false
+            && DataMgr.get(DataMgr.unlockEndlessSceneIDList, []).indexOf(id) === -1
+            && DataMgr.get(DataMgr.distance, 0)
+            < Config.endlessMode.sceneList.find(item => item.id === id).unlockDistance;
     }
 }
 
