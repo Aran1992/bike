@@ -19,17 +19,17 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Taurus/TextureTaurusRoad01SideSkin.png",
+            side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
             // 底部
-            top: "images/Taurus/TextureTaurusRoad01TopSkin.png",
+            top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Taurus/TextureTaurusBackground01.png",
-                "images/Taurus/TextureTaurusBackground02.png",
-                "images/Taurus/TextureTaurusBackground03.png",
+                "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
+                "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
+                "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
             ],
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage01Taurus.png",
+            mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -56,17 +56,17 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Aries/TextureAriesRoad01SideSkin.png",
+            side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
             // 底部
-            top: "images/Aries/TextureAriesRoad01TopSkin.png",
+            top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Aries/TextureAriesBackground01.png",
-                "images/Aries/TextureAriesBackground02.png",
-                "images/Aries/TextureAriesBackground03.png",
+                "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
+                "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
+                "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
             ],
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage05Aries.png",
+            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -91,17 +91,17 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Capricorn/TextureCapricornRoad01SideSkin.png",
+            side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
             // 底部
-            top: "images/Capricorn/TextureCapricornRoad01TopSkin.png",
+            top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Capricorn/TextureCapricornBackground01.png",
-                "images/Capricorn/TextureCapricornBackground02.png",
-                "images/Capricorn/TextureCapricornBackground03.png",
+                "images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
+                "images/map/DX2_Capricorn/TextureDX2_CapricornBackground02.png",
+                "images/map/DX2_Capricorn/TextureDX2_CapricornBackground03.png",
             ],
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage09Capriconus.png",
+            mainCover: "images/map/DX2_Capricorn/TextureDX2_CapricornMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -128,17 +128,17 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Scorpius/TextureScorpiusRoad01SideSkin.png",
+            side: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01SideSkin.png",
             // 底部
-            top: "images/Scorpius/TextureScorpiusRoad01TopSkin.png",
+            top: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Scorpius/TextureScorpiusBackground01.png",
-                "images/Scorpius/TextureScorpiusBackground02.png",
-                "images/Scorpius/TextureScorpiusBackground03.png",
+                "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground01.png",
+                "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground02.png",
+                "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground03.png",
             ],
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage04Scorpius.png",
+            mainCover: "images/map/DX2_Scorpius/TextureDX2_ScorpiusMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -163,17 +163,17 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Aquarius/TextureAquariusRoad01SideSkin.png",
+            side: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01SideSkin.png",
             // 底部
-            top: "images/Aquarius/TextureAquariusRoad01TopSkin.png",
+            top: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Aquarius/TextureAquariusBackground01.png",
-                "images/Aquarius/TextureAquariusBackground02.png",
-                "images/Aquarius/TextureAquariusBackground03.png",
+                "images/map/DX2_Aquarius/TextureDX2_AquariusBackground01.png",
+                "images/map/DX2_Aquarius/TextureDX2_AquariusBackground02.png",
+                "images/map/DX2_Aquarius/TextureDX2_AquariusBackground03.png",
             ],
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage03Aquarius.png",
+            mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -220,19 +220,19 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Taurus/TextureTaurusRoad01SideSkin.png",
+            side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
             // 底部
-            top: "images/Taurus/TextureTaurusRoad01TopSkin.png",
+            top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Taurus/TextureTaurusBackground01.png",
-                "images/Taurus/TextureTaurusBackground02.png",
-                "images/Taurus/TextureTaurusBackground03.png",
+                "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
+                "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
+                "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
             ],
             // 商店显示的封面图
-            shopCover: "myLaya/laya/assets/images/TextureDX2_TaurusBackground-1.png",
+            shopCover: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage01Taurus.png",
+            mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -420,19 +420,19 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Aries/TextureAriesRoad01SideSkin.png",
+            side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
             // 底部
-            top: "images/Aries/TextureAriesRoad01TopSkin.png",
+            top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Aries/TextureAriesBackground01.png",
-                "images/Aries/TextureAriesBackground02.png",
-                "images/Aries/TextureAriesBackground03.png",
+                "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
+                "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
+                "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
             ],
             // 商店显示的封面图
-            shopCover: "myLaya/laya/assets/images/TextureDX2_AriesBackground-1.png",
+            shopCover: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage05Aries.png",
+            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -618,19 +618,19 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Capricorn/TextureCapricornRoad01SideSkin.png",
+            side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
             // 底部
-            top: "images/Capricorn/TextureCapricornRoad01TopSkin.png",
+            top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Capricorn/TextureCapricornBackground01.png",
-                "images/Capricorn/TextureCapricornBackground02.png",
-                "images/Capricorn/TextureCapricornBackground03.png",
+                "images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
+                "images/map/DX2_Capricorn/TextureDX2_CapricornBackground02.png",
+                "images/map/DX2_Capricorn/TextureDX2_CapricornBackground03.png",
             ],
             // 商店显示的封面图
-            shopCover: "myLaya/laya/assets/images/TextureDX2_CapricornBackground-1.png",
+            shopCover: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage09Capriconus.png",
+            mainCover: "images/map/DX2_Capricorn/TextureDX2_CapricornMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -818,19 +818,19 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Scorpius/TextureScorpiusRoad01SideSkin.png",
+            side: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01SideSkin.png",
             // 底部
-            top: "images/Scorpius/TextureScorpiusRoad01TopSkin.png",
+            top: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Scorpius/TextureScorpiusBackground01.png",
-                "images/Scorpius/TextureScorpiusBackground02.png",
-                "images/Scorpius/TextureScorpiusBackground03.png",
+                "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground01.png",
+                "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground02.png",
+                "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground03.png",
             ],
             // 商店显示的封面图
-            shopCover: "myLaya/laya/assets/images/TextureDX2_ScorpiusBackground-1.png",
+            shopCover: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage04Scorpius.png",
+            mainCover: "images/map/DX2_Scorpius/TextureDX2_ScorpiusMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -1016,19 +1016,19 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/Aquarius/TextureAquariusRoad01SideSkin.png",
+            side: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01SideSkin.png",
             // 底部
-            top: "images/Aquarius/TextureAquariusRoad01TopSkin.png",
+            top: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/Aquarius/TextureAquariusBackground01.png",
-                "images/Aquarius/TextureAquariusBackground02.png",
-                "images/Aquarius/TextureAquariusBackground03.png",
+                "images/map/DX2_Aquarius/TextureDX2_AquariusBackground01.png",
+                "images/map/DX2_Aquarius/TextureDX2_AquariusBackground02.png",
+                "images/map/DX2_Aquarius/TextureDX2_AquariusBackground03.png",
             ],
             // 商店显示的封面图
-            shopCover: "myLaya/laya/assets/images/TextureDX2_AquariusBackground-1.png",
+            shopCover: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             // 主页封面图
-            mainCover: "myLaya/laya/assets/images/MainMenuItemStage03Aquarius.png",
+            mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
         },
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -2104,7 +2104,7 @@ Config.presentList = [
         // 礼包ID
         id: 3,
         // 礼包描述
-        dsc: "1 Money = 50 Diamond + 5000 Gold Coins",
+        dsc: "1 Money \n= 50 Diamond + 5000 Gold Coins",
         // 购买所需货币
         costMoney: 1,
         // 购买礼包获得的钻石数量
@@ -2117,7 +2117,7 @@ Config.presentList = [
         // 礼包ID
         id: 4,
         // 礼包描述
-        dsc: "6 Money = 150 Diamond + 15000 Gold Coins",
+        dsc: "6 Money \n= 150 Diamond + 15000 Gold Coins",
         // 购买所需货币
         costMoney: 6,
         // 购买礼包获得的钻石数量
