@@ -34,9 +34,9 @@ Config.mapList = [
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 120, 180],
+        bgY: [0, 256, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -71,7 +71,9 @@ Config.mapList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 0.95, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 128, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -106,9 +108,9 @@ Config.mapList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 120, 180],
+        bgY: [0, 256, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -143,7 +145,9 @@ Config.mapList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 1, 0.8, 0],
+        verticalParallaxDepth: [1, 1, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 0, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -178,9 +182,11 @@ Config.mapList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 1, 0.8, 0],
+        verticalParallaxDepth: [1, 1, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 0, 256],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [1, 1.7, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
@@ -237,9 +243,9 @@ Config.endlessMode.sceneList = [
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 120, 180],
+        bgY: [0, 256, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -437,7 +443,9 @@ Config.endlessMode.sceneList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 0.95, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 128, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -635,9 +643,9 @@ Config.endlessMode.sceneList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.9, 0.8, 0],
+        verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 120, 180],
+        bgY: [0, 256, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -835,7 +843,9 @@ Config.endlessMode.sceneList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 1, 0.8, 0],
+        verticalParallaxDepth: [1, 1, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 0, 256],
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
@@ -1033,9 +1043,11 @@ Config.endlessMode.sceneList = [
         // 视差背景系数左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 1, 0.8, 0],
+        verticalParallaxDepth: [1, 1, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 0, 256],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [1, 1.7, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
@@ -1205,8 +1217,8 @@ Config.endlessMode.sceneList = [
     },
 ];
 
-// 背景的Y轴位置
-Config.bgY = [0, 0, 180];
+// 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
+Config.bgY = [0, 0, 256];
 
 // 底下的黑色蒙版的总高度
 Config.maskHeight = 420;
@@ -1311,7 +1323,7 @@ Config.bikeList = [
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
+        densityPercent: 0.01,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
