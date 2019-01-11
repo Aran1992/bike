@@ -2133,4 +2133,37 @@ Config.buttonClickScale = 0.9;
 // 按钮点击下去之后进行滑动的话 超过多少算是点击无效的范围
 Config.buttonClickOffset = 10;
 
+// 道具/npc/地形相关配置
+Config.item = {
+    // 小火墙
+    smallFireWall: {
+        // 实际区域宽度
+        bodyWidth: 88,
+        // 实际区域高度
+        bodyHeight: 672,
+        // 实际区域X轴偏移
+        bodyOffsetX: 20,
+        // 实际区域Y轴偏移
+        bodyOffsetY: 40,
+    },
+    // 大火墙
+    bigFireWall: {
+        // 实际区域宽度
+        bodyWidth: 88,
+        // 实际区域高度
+        bodyHeight: 1192,
+        // 实际区域X轴偏移
+        bodyOffsetX: 20,
+        // 实际区域Y轴偏移
+        bodyOffsetY: 40,
+    },
+    // 小鸟
+    bird: {
+        // 实际区域宽度
+        bodyWidth: 64,
+        // 实际区域高度
+        bodyHeight: 40,
+    },
+};
+
 export default Config;

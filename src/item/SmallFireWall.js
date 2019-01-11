@@ -1,5 +1,6 @@
 import AniItem from "./AniItem";
 import {Texture} from "../libs/pixi-wrapper";
+import Config from "../config";
 
 export default class SmallFireWall extends AniItem {
     initAni() {
@@ -9,5 +10,9 @@ export default class SmallFireWall extends AniItem {
         }
         this.frames = frames;
         this.animationSpeed = 0.25;
+        this.bodyWidth = Config.item.smallFireWall.bodyWidth;
+        this.bodyHeight = Config.item.smallFireWall.bodyHeight;
+        this.bodyOffsetX = Config.item.smallFireWall.bodyOffsetX;
+        this.bodyOffsetY = Config.item.smallFireWall.bodyOffsetY;
     }
 }

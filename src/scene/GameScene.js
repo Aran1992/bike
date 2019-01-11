@@ -784,7 +784,7 @@ export default class GameScene extends Scene {
                 bird.showed = true;
                 let velocity = bird.body.getLinearVelocity();
                 bird.body.setLinearVelocity(Vec2(-20, velocity.y));
-                let gravity = -6.25 * this.gravity;
+                let gravity = -2.5 * this.gravity;
                 if (bird.body.getPosition().y < bird.baseY) {
                     bird.body.applyForceToCenter(Vec2(0, gravity * 5));
                 } else {

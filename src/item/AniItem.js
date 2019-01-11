@@ -16,11 +16,14 @@ export default class AniItem extends Item {
         let body = this.world.createBody();
         this.body = body;
         let texture = this.frames[0];
-        let width = texture.width / 2 * this.sprite.scale.x * Config.pixel2meter;
-        let height = texture.height / 2 * this.sprite.scale.y * Config.pixel2meter;
-        body.createFixture(Box(width, height), {density: 0, friction: 1,});
-        let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
-        let y = this.config.props.y + texture.height / 2 * this.sprite.scale.y;
+        let halfWidth = (this.bodyWidth !== undefined ? this.bodyWidth : texture.width) / 2 * this.sprite.scale.x;
+        let halfHeight = (this.bodyHeight !== undefined ? this.bodyHeight : texture.height) / 2 * this.sprite.scale.y;
+        body.createFixture(Box(halfWidth * Config.pixel2meter, halfHeight * Config.pixel2meter),
+            {density: 0, friction: 1,});
+        let offsetX = this.bodyOffsetX || 0;
+        let offsetY = this.bodyOffsetY || 0;
+        let x = this.config.props.x + offsetX * this.sprite.scale.x + halfWidth;
+        let y = this.config.props.y + offsetY * this.sprite.scale.y + halfHeight;
         body.setPosition(GameUtils.renderPos2PhysicsPos({x, y}));
         body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
     }

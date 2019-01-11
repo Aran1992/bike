@@ -22,8 +22,8 @@ export default class BlackBird extends Item {
 
         let body = this.world.createDynamicBody();
         this.body = body;
-        let width = texture.width / 2 * this.sprite.scale.x * Config.pixel2meter;
-        let height = texture.height / 2 * this.sprite.scale.y * Config.pixel2meter;
+        let width = Config.item.bird.bodyWidth / 2 * this.sprite.scale.x * Config.pixel2meter;
+        let height = Config.item.bird.bodyHeight / 2 * this.sprite.scale.y * Config.pixel2meter;
         let fixture = body.createFixture(Box(width, height), {density: 1, friction: 1,});
         fixture.setUserData({isFatal: true});
         let x = this.config.props.x + texture.width / 2 * this.sprite.scale.x;
