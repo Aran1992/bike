@@ -1,4 +1,5 @@
 let Config = {
+    roadFatalMinLength: 0.5,
     listResistance: 2,
     initScene: "MainScene",
     designWidth: 720,

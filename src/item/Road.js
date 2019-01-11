@@ -111,9 +111,22 @@ export default class Road {
                     x: pathInPhysics[i + 2],
                     y: pathInPhysics[i + 3]
                 };
-            let fixture = body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), {density: 0, friction: 1,});
+            let fd = {density: 0, friction: 1,};
             if (Road.isFatalEdge(sp, ep)) {
-                fixture.setUserData({isFatal: true});
+                let roadLength = Utils.calcPointDistance(sp, ep);
+                if (roadLength <= Config.roadFatalMinLength) {
+                    body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), fd);
+                } else {
+                    let radians = Utils.calcRadius(ep, sp);
+                    let mp = {
+                        x: ep.x + Math.cos(radians) * Config.roadFatalMinLength,
+                        y: ep.y + Math.sin(radians) * Config.roadFatalMinLength,
+                    };
+                    body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(mp.x, mp.y)), fd).setUserData({isFatal: true});
+                    body.createFixture(Edge(Vec2(mp.x, mp.y), Vec2(ep.x, ep.y)), fd);
+                }
+            } else {
+                body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), fd);
             }
         }
     }
