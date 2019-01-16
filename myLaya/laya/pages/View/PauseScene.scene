@@ -3,8 +3,10 @@
     "type":"Scene",
     "selectedBox":1,
     "selecteID":4,
+    "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
+    "maxID":10,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -15,7 +17,8 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"y":449,"x":180,"skin":"images/text-pause.png","centerY":-150,"centerX":0},
+            "searchKey":"Image",
+            "props":{"skin":"images/text-pause.png","centerY":-280,"centerX":0},
             "nodeParent":1,
             "label":"Image",
             "isDirectory":false,
@@ -28,77 +31,47 @@
         {
             "x":15,
             "type":"Image",
-            "props":{"var":"continueButton","skin":"images/button-continue.png","centerY":0,"centerX":0},
+            "searchKey":"Image,continueButton",
+            "props":{"var":"continueButton","skin":"images/button-continue.png","scaleY":0.9,"scaleX":0.9,"centerY":0,"centerX":0},
             "nodeParent":1,
             "label":"continueButton",
-            "isOpen":false,
-            "isDirectory":true,
+            "isOpen":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":8,
             "child":[
-                {
-                    "type":"Label",
-                    "props":{"text":"Continue","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
-                    "nodeParent":8,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":9,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":751,"x":141,"var":"mainButton","skin":"images/button-main.png","centerY":150,"centerX":-180},
+            "searchKey":"Image,mainButton",
+            "props":{"var":"mainButton","skin":"images/button-main.png","scaleY":1.5,"scaleX":1.5,"centerY":100,"centerX":-180},
             "nodeParent":1,
             "label":"mainButton",
-            "isOpen":false,
-            "isDirectory":true,
+            "isOpen":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":3,
             "child":[
-                {
-                    "type":"Label",
-                    "props":{"text":"Main","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
-                    "nodeParent":3,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":5,
-                    "child":[
-                        ]
-                }]
+                ]
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":751,"x":501,"var":"restartButton","skin":"images/button-restart.png","centerY":150,"centerX":180},
+            "searchKey":"Image,restartButton",
+            "props":{"var":"restartButton","skin":"images/button-restart.png","scaleY":1.5,"scaleX":1.5,"centerY":100,"centerX":180},
             "nodeParent":1,
             "label":"restartButton",
-            "isOpen":false,
-            "isDirectory":true,
+            "isOpen":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":4,
             "child":[
-                {
-                    "type":"Label",
-                    "props":{"text":"Restart","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
-                    "nodeParent":4,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":6,
-                    "child":[
-                        ]
-                }]
+                ]
         }],
     "animations":[
         {
