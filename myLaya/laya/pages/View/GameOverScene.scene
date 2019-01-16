@@ -1,10 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":14,
-    "selecteID":15,
+    "selectedBox":16,
+    "selecteID":14,
+    "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
+    "maxID":31,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -14,89 +16,216 @@
     "child":[
         {
             "x":15,
-            "type":"Label",
-            "props":{"var":"gameOverText","text":"Game Over","fontSize":100,"color":"#ff0000","centerY":-100,"centerX":0},
-            "nodeParent":1,
-            "label":"gameOverText",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Image",
-            "props":{"var":"mainButton","skin":"images/button-main.png","centerY":100,"centerX":-180},
+            "searchKey":"Image",
+            "props":{"skin":"images/bg-9.png","centerY":0,"centerX":0},
             "nodeParent":1,
-            "label":"mainButton",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8,
-            "child":[
-                {
-                    "type":"Label",
-                    "props":{"text":"Main","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
-                    "nodeParent":8,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":11,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":10,"var":"restartButton","skin":"images/button-restart.png","centerY":100,"centerX":180},
-            "nodeParent":1,
-            "label":"restartButton",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":10,
-            "child":[
-                {
-                    "type":"Label",
-                    "props":{"text":"Restart","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
-                    "nodeParent":10,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":13,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":20,"var":"rebornButton","skin":"images/button-restart.png","centerY":100,"centerX":0},
-            "nodeParent":1,
-            "label":"rebornButton",
+            "label":"Image",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":14,
+            "compId":16,
             "child":[
                 {
                     "x":30,
                     "type":"Label",
-                    "props":{"text":"Reborn","fontSize":50,"color":"#ffffff","centerX":0,"bottom":-25},
-                    "nodeParent":14,
-                    "label":"Label",
+                    "searchKey":"Label,gameOverText",
+                    "props":{"var":"gameOverText","text":"Game Over","fontSize":100,"color":"#ff0000","centerY":-1000,"centerX":0},
+                    "nodeParent":16,
+                    "label":"gameOverText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":15,
+                    "compId":2,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,mainButton",
+                    "props":{"var":"mainButton","skin":"images/button-main.png","scaleY":1.5,"scaleX":1.5,"centerX":-180,"bottom":50},
+                    "nodeParent":16,
+                    "label":"mainButton",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,restartButton",
+                    "props":{"var":"restartButton","skin":"images/button-restart.png","scaleY":1.5,"scaleX":1.5,"centerX":180,"bottom":50},
+                    "nodeParent":16,
+                    "label":"restartButton",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":10,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,rebornButton",
+                    "props":{"var":"rebornButton","skin":"images/button-1.png","centerY":295,"centerX":160},
+                    "nodeParent":16,
+                    "label":"rebornButton",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":14,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"text":"Free","fontSize":50,"color":"#ffffff","centerY":-30,"centerX":0},
+                            "nodeParent":14,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":15,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"x":0,"text":"Reborn","fontSize":50,"color":"#ffffff","centerY":30,"centerX":0},
+                            "nodeParent":14,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":23,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,rebornButton2",
+                    "props":{"var":"rebornButton2","skin":"images/button-2.png","centerY":295,"centerX":-160},
+                    "nodeParent":16,
+                    "label":"rebornButton2",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":24,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"text":"Diamond","fontSize":50,"color":"#ffffff","centerY":-30,"centerX":0},
+                            "nodeParent":24,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":25,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"x":0,"text":"Reborn","fontSize":50,"color":"#ffffff","centerY":30,"centerX":0},
+                            "nodeParent":24,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":26,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":50,"x":6,"width":678,"skin":"images/bg-10.png","height":89},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":18,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/COUNT.png","centerY":-2,"centerX":0},
+                            "nodeParent":18,
+                            "label":"Image",
+                            "isOpen":false,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":20,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/bg-11.png","centerY":-325,"centerX":-4},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":28,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/bg-11.png","centerY":-115,"centerX":-4},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":29,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/bg-11.png","centerY":95,"centerX":-4},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":30,
                     "child":[
                         ]
                 }]
