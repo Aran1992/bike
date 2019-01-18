@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":34,
+    "selecteID":38,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":35,
+    "maxID":39,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -239,12 +239,68 @@
             "props":{"var":"confirmButton","skin":"images/button-start.png","centerX":0,"bottom":200},
             "nodeParent":1,
             "label":"confirmButton",
-            "isDirectory":false,
+            "isOpen":false,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
+            "hasChild":true,
             "compId":15,
             "child":[
-                ]
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":0,"x":0,"skin":"images/english/START.png","centerY":0,"centerX":0},
+                    "nodeParent":15,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":35,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,matchRacetrack",
+            "props":{"skin":"images/racetrack.png","right":20,"name":"matchRacetrack","bottom":20},
+            "nodeParent":1,
+            "label":"matchRacetrack",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":36,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,racetrack-player",
+                    "props":{"x":50,"skin":"images/racetrack-player.png","name":"racetrack-player","bottom":50},
+                    "nodeParent":36,
+                    "label":"racetrack-player",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":37,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,racetrack-player",
+                    "props":{"x":100,"skin":"images/racetrack-npc.png","name":"racetrack-player","bottom":50},
+                    "nodeParent":36,
+                    "label":"racetrack-player",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":38,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {
