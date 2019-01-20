@@ -19,6 +19,8 @@ import BlackBird from "../item/BlackBird";
 
 export default class GameScene extends Scene {
     onCreate() {
+        this.initContactHandleTable();
+
         this.registerEvent("Restart", this.onRestart);
         this.registerEvent("Reborn", this.onReborn);
         this.registerEvent("Continue", this.onContinue);
@@ -82,6 +84,8 @@ export default class GameScene extends Scene {
     }
 
     onShow() {
+        clearTimeout(this.deadCompleteTimer);
+
         this.distance = 0;
         this.ui.diamondText.text = 0;
         this.updateCoinText(0);
@@ -133,6 +137,7 @@ export default class GameScene extends Scene {
             this.emitter.destroy();
             this.emitter = undefined;
         }
+        this.enemyList.forEach(enemy => enemy.destroy());
         this.onShow();
     }
 
@@ -193,62 +198,134 @@ export default class GameScene extends Scene {
         });
     }
 
-    onBeginContact(contact) {
-        let fixtureList = [
-            contact.getFixtureA(),
-            contact.getFixtureB(),
-        ];
-        let index = fixtureList.map(fixture => fixture.getBody()).indexOf(this.bikeBody);
-        if (index !== -1) {
-            fixtureList.splice(index, 1);
-            let userData = fixtureList[0].getBody().getUserData();
-            if (userData && userData.type === "Road") {
-                this.jumping = false;
-                this.jumpCount = 0;
+    initContactHandleTable() {
+        this.chtable = {
+            player: {
+                is: (fixture) => {
+                    return fixture.getBody() === this.bikeBody;
+                },
+                preSolve: (contact, anotherFixture,) => {
+                    if (this.gameStatus === "end") {
+                        return contact.setEnabled(false);
+                    }
+                    if (this.chtable.enemy.is(anotherFixture)) {
+                        contact.setEnabled(false);
+                    } else if (this.chtable.item.is(anotherFixture)) {
+                        contact.setEnabled(false);
+                        let body = anotherFixture.getBody();
+                        if (body.isAwake()) {
+                            EventMgr.dispatchEvent("AteItem", body.getUserData().type);
+                            body.setAwake(false);
+                            body.getUserData().sprite.visible = false;
+                        }
+                    }
+                },
+                beginContact(contact, anotherFixture,) {
+                    if (this.chtable.road.is(anotherFixture)) {
+                        this.jumping = false;
+                        this.jumpCount = 0;
+                    }
+                    if (this.chtable.obstacle.is(anotherFixture)) {
+                        this.isContactFatalEdge = true;
+                    } else {
+                        let ud = anotherFixture.getUserData();
+                        if (ud && ud.isFatal) {
+                            this.isContactFatalEdge = true;
+                        }
+                    }
+                },
+            },
+            enemy: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    if (ud) {
+                        return this.enemyList.find(enemy => enemy === ud);
+                    }
+                },
+                preSolve: (contact, anotherFixture, selfFixture) => {
+                    selfFixture.getBody().getUserData().onPreSolve(contact, anotherFixture, selfFixture);
+                },
+                beginContact(contact, anotherFixture, selfFixture) {
+                    selfFixture.getBody().getUserData().onBeginContact(contact, anotherFixture, selfFixture);
+                }
+            },
+            npc: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    if (ud) {
+                        return ud.type === "BlackBird";
+                    }
+                },
+                preSolve: (contact, anotherFixture,) => {
+                    if (!this.chtable.player.is(anotherFixture)
+                        && !this.chtable.enemy.is(anotherFixture)) {
+                        contact.setEnabled(false);
+                    }
+                },
+            },
+            road: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    if (ud) {
+                        return ud.type === "Road";
+                    }
+                },
+            },
+            item: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    if (ud) {
+                        return ["AccGem", "ItemAccGem", "GoldCoin",].find(type => type === ud.type);
+                    }
+                },
+            },
+            obstacle: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    if (ud) {
+                        return ["BigFireWall", "SmallFireWall"].find(type => type === ud.type);
+                    }
+                }
             }
-            userData = fixtureList[0].getUserData();
-            if (userData && userData.isFatal) {
-                this.isContactFatalEdge = true;
+        };
+    }
+
+    onPreSolve(contact) {
+        let fa = contact.getFixtureA();
+        let fb = contact.getFixtureB();
+        for (let type in this.chtable) {
+            if (this.chtable.hasOwnProperty(type)) {
+                let item = this.chtable[type];
+                if (item.preSolve) {
+                    if (item.is(fa)) {
+                        this.callByScene(item.preSolve, contact, fb, fa);
+                    } else if (item.is(fb)) {
+                        this.callByScene(item.preSolve, contact, fa, fb);
+                    }
+                }
             }
         }
     }
 
-    onPreSolve(contact) {
-        if (this.gameStatus === "end") {
-            return contact.setEnabled(false);
-        }
-        let bodyList = [
-            contact.getFixtureA().getBody(),
-            contact.getFixtureB().getBody(),
-        ];
-        let index = bodyList.indexOf(this.bikeBody);
-        if (index !== -1) {
-            bodyList.splice(index, 1);
-            let body = bodyList[0];
-            let userData = body.getUserData();
-            if (userData) {
-                switch (userData.type) {
-                    case "AccGem":
-                    case "ItemAccGem":
-                    case "GoldCoin": {
-                        if (body.isAwake()) {
-                            EventMgr.dispatchEvent("AteItem", userData.type);
-                        }
-                        contact.setEnabled(false);
-                        body.setAwake(false);
-                        body.getUserData().sprite.visible = false;
-                        break;
-                    }
-                    case "BigFireWall":
-                    case "SmallFireWall": {
-                        this.isContactFatalEdge = true;
-                        break;
+    onBeginContact(contact) {
+        let fa = contact.getFixtureA();
+        let fb = contact.getFixtureB();
+        for (let type in this.chtable) {
+            if (this.chtable.hasOwnProperty(type)) {
+                let item = this.chtable[type];
+                if (item.beginContact) {
+                    if (item.is(fa)) {
+                        this.callByScene(item.beginContact, contact, fb, fa);
+                    } else if (item.is(fb)) {
+                        this.callByScene(item.beginContact, contact, fa, fb);
                     }
                 }
             }
-        } else if (bodyList.find(b => b.getUserData() && b.getUserData().type === "BlackBird")) {
-            contact.setEnabled(false);
         }
+    }
+
+    callByScene(handle, ...args) {
+        handle.bind(this)(...args);
     }
 
     onClickGameContainer(event) {
@@ -525,6 +602,10 @@ export default class GameScene extends Scene {
 
         this.syncBirdSprite();
 
+        if (this.syncEnemySprite) {
+            this.syncEnemySprite();
+        }
+
         this.judgeGameLose(velocity, bikePhysicsPos);
 
         this.judgeGameWin(bikePhysicsPos);
@@ -533,19 +614,19 @@ export default class GameScene extends Scene {
 
         this.scrollBg();
 
-        this.cleanPartOutOfView();
-
         if (this.dynamicCreateRoad) {
+            this.cleanPartOutOfView();
             this.dynamicCreateRoad();
-        }
-
-        if (this.showDistance) {
             this.showDistance();
         }
 
         this.keepBikeMove(velocity);
 
         this.keepBirdMove();
+
+        if (this.keepEnemyMove) {
+            this.keepEnemyMove();
+        }
 
         this.jumpExtraCountdown -= 1;
 
@@ -566,8 +647,6 @@ export default class GameScene extends Scene {
 
         if (this.startDragBikeBack) {
             this.dragBikeBack();
-        } else {
-            this.checkBikeIsOutOfView();
         }
     }
 
@@ -629,7 +708,7 @@ export default class GameScene extends Scene {
 
     judgeGameLose(velocity, bikePhysicsPos) {
         if (this.gameStatus === "play") {
-            let lowestRoadTopY = this.findLowestRoadTopY();
+            let lowestRoadTopY = this.findLowestRoadTopY(-this.cameraContainer.x);
             if (bikePhysicsPos.y < GameUtils.renderY2PhysicsY(lowestRoadTopY) - Config.bikeGameOverOffsetHeight) {
                 this.onDead();
             }
@@ -692,10 +771,9 @@ export default class GameScene extends Scene {
         }
     }
 
-    findLowestRoadTopY() {
+    findLowestRoadTopY(viewLeft) {
         let list = this.roadList;
-        let viewLeft = -this.cameraContainer.x;
-        let viewRight = -this.cameraContainer.x + Config.designWidth;
+        let viewRight = viewLeft + Config.designWidth;
         let lowestRoadTopY;
         for (let i = 0; i < list.length; i++) {
             let item = list[i];
@@ -718,6 +796,22 @@ export default class GameScene extends Scene {
         return lowestRoadTopY;
     }
 
+    findAdjustHeight(viewLeft) {
+        let list = this.roadList;
+        for (let i = 0; i < list.length; i++) {
+            let item = list[i];
+            if (item.getRightBorderX() > viewLeft) {
+                if (item.getLeftBorderX() <= viewLeft) {
+                    let pos = item.getTopPosInTargetX();
+                    return pos;
+                } else {
+                    let pos = item.getLeftTopPoint();
+                    return pos;
+                }
+            }
+        }
+    }
+
     scrollBg() {
         this.bgList.forEach((item, index) => {
             if (item.container.x + item.before.x + item.before.width * this.bgScale[index] < -this.cameraContainer.x) {
@@ -725,19 +819,6 @@ export default class GameScene extends Scene {
                 let temp = item.before;
                 item.before = item.after;
                 item.after = temp;
-            }
-        });
-    }
-
-    cleanPartOutOfView() {
-        this.closeViewContainer.children.forEach(child => {
-            if (child.part && child.part.getRightBorderX() < -this.cameraContainer.x) {
-                child.part.destroy();
-                if (child.part instanceof Road) {
-                    Utils.removeItemFromArray(this.roadList, child.part);
-                } else if (child.part instanceof BlackBird) {
-                    Utils.removeItemFromArray(this.birdList, child.part);
-                }
             }
         });
     }
@@ -879,17 +960,11 @@ export default class GameScene extends Scene {
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
         this.dragBackPos = {x: pos.x, y: pos.y};
-        if (!this.isDirectReborn) {
+        if (this.isDirectReborn) {
+            this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
+        } else {
             this.gameOver(undefined, undefined, true);
             this.gameLoopFunc = this.pause.bind(this);
-        }
-    }
-
-    checkBikeIsOutOfView() {
-        if (this.gameStatus === "end") {
-            if (this.isDirectReborn && !this.isInView(this.bikeSprite.position)) {
-                this.onReborn();
-            }
         }
     }
 
@@ -937,16 +1012,6 @@ export default class GameScene extends Scene {
         if (this.startAdjustBikeHeight && this.startY !== undefined) {
             this.startY = undefined;
         }
-    }
-
-    isInView(point) {
-        let rect = {
-            x: -this.cameraContainer.x,
-            y: -this.cameraContainer.y,
-            width: Config.designWidth,
-            height: Config.designHeight
-        };
-        return Utils.isPointInRect(point, rect);
     }
 
     onClickConfirmButton() {

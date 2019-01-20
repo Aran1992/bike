@@ -5,6 +5,11 @@ import Utils from "../mgr/Utils";
 
 export default class Road {
     constructor(world, path, sideTexturePath, topTexturePath) {
+        this.originPath = [];
+        for (let i = 0; i < path.length; i++) {
+            this.originPath.push(path[i]);
+        }
+        this.leftTopPoint = {x: path[0], y: path[1]};
         this.lowestTopY = path.reduce((max, y, i) => {
             if (i % 2 === 1) {
                 if (max === undefined) {
@@ -162,6 +167,25 @@ export default class Road {
 
     getLowestTopY() {
         return this.lowestTopY;
+    }
+
+    getLeftTopPoint() {
+        return this.leftTopPoint;
+    }
+
+    getTopPosInTargetX(x) {
+        let path = this.originPath;
+        for (let i = 0; i < path.length - 4; i += 2) {
+            let sp = {x: path[i], y: path[i + 1]};
+            let ep = {x: path[i + 2], y: path[i + 3]};
+            if (x >= sp.x && x < ep.x) {
+                let radius = Utils.calcRadius(sp, ep);
+                return {
+                    x: sp.x + (x - sp.x),
+                    y: sp.y + (x - sp.x) * Math.tan(radius),
+                };
+            }
+        }
     }
 
     destroy() {

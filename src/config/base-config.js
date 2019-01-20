@@ -227,4 +227,16 @@ Config.startImagePath = {
     ui: "images/ui.json"
 };
 
+Config.bike = {
+    scale: 0.4,
+    radius: 1.175,
+    density: 1,
+    deadCompleteTime: 500,
+    adjustHeightVelocity: 0.25,
+};
+
+Config.enemy = {
+    count: 3,
+};
+
 export default Config;

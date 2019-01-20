@@ -2,6 +2,9 @@ import Config from "../config";
 import GameScene from "./GameScene";
 import {resources} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
+import Road from "../item/Road";
+import Utils from "../mgr/Utils";
+import BlackBird from "../item/BlackBird";
 
 export default class EndlessGameScene extends GameScene {
     onShow(sceneIndex) {
@@ -63,6 +66,8 @@ export default class EndlessGameScene extends GameScene {
             x: Config.designWidth / 2,
             y: Config.designHeight / 2 - Config.bikeRadius * Config.meter2pixel
         }));
+
+        this.enemyList = [];
 
         this.diffIndex = 0;
         let roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
@@ -128,6 +133,19 @@ export default class EndlessGameScene extends GameScene {
             this.nextDistanceIndex++;
             this.nextNoticeDistance = this.sceneConfig.distanceNotice[this.nextDistanceIndex];
         }
+    }
+
+    cleanPartOutOfView() {
+        this.closeViewContainer.children.forEach(child => {
+            if (child.part && child.part.getRightBorderX() < -this.cameraContainer.x) {
+                child.part.destroy();
+                if (child.part instanceof Road) {
+                    Utils.removeItemFromArray(this.roadList, child.part);
+                } else if (child.part instanceof BlackBird) {
+                    Utils.removeItemFromArray(this.birdList, child.part);
+                }
+            }
+        });
     }
 }
 

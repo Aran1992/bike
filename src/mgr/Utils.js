@@ -160,5 +160,9 @@ export default class Utils {
         return !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     }
 
+    static randomChoose(list) {
+        let i = Math.floor(Math.random() * list.length);
+        return list[i];
+    }
 }
 
