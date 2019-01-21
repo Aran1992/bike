@@ -164,5 +164,9 @@ export default class Utils {
         let i = Math.floor(Math.random() * list.length);
         return list[i];
     }
+
+    static randomInRange(min, max) {
+        return min + (max - min) * Math.random();
+    }
 }
 

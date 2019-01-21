@@ -802,11 +802,9 @@ export default class GameScene extends Scene {
             let item = list[i];
             if (item.getRightBorderX() > viewLeft) {
                 if (item.getLeftBorderX() <= viewLeft) {
-                    let pos = item.getTopPosInTargetX();
-                    return pos;
+                    return item.getTopPosInTargetX(viewLeft);
                 } else {
-                    let pos = item.getLeftTopPoint();
-                    return pos;
+                    return item.getLeftTopPoint();
                 }
             }
         }

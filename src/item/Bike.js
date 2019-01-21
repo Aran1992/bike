@@ -209,6 +209,7 @@ export default class Bike {
             this.startDragBikeBack = false;
             this.startAdjustHeight = true;
             let rp = this.gameScene.findAdjustHeight(this.bikeSprite.x);
+            rp.y += Utils.randomInRange(...Config.bikeAdjustHeightOffset);
             let pos = GameUtils.renderPos2PhysicsPos(rp);
             this.floatTargetPosX = pos.x;
             this.adjustHeight = pos.y + Config.bike.radius;

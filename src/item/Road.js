@@ -170,12 +170,12 @@ export default class Road {
     }
 
     getLeftTopPoint() {
-        return this.leftTopPoint;
+        return {x: this.leftTopPoint.x, y: this.leftTopPoint.y};
     }
 
     getTopPosInTargetX(x) {
         let path = this.originPath;
-        for (let i = 0; i < path.length - 4; i += 2) {
+        for (let i = 0; i <= path.length - 4; i += 2) {
             let sp = {x: path[i], y: path[i + 1]};
             let ep = {x: path[i + 2], y: path[i + 3]};
             if (x >= sp.x && x < ep.x) {
