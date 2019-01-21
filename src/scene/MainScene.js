@@ -76,8 +76,7 @@ export default class MainScene extends Scene {
     onClickStartButton() {
         if (this.mode === "Map") {
             App.hideScene("MainScene");
-            // App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
-            App.showScene("MapGameScene", 0);
+            App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
         } else if (this.mode === "Endless") {
             App.hideScene("MainScene");
             App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));

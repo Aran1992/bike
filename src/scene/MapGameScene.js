@@ -5,6 +5,7 @@ import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
 import RunOption from "../../run-option";
+import DataMgr from "../mgr/DataMgr";
 
 export default class MapGameScene extends GameScene {
     onShow(mapIndex) {
@@ -134,5 +135,17 @@ export default class MapGameScene extends GameScene {
 
     keepEnemyMove() {
         this.enemyList.forEach(enemy => enemy.afterUpdate());
+    }
+
+    gameOver(status = "end", message = "Game Over", rebornEnable = false) {
+        super.gameOver(status, message, rebornEnable);
+        let id = Math.floor(Math.random() * Config.mapList.length);
+        if (id === DataMgr.get(DataMgr.currentMapScene)) {
+            id = id + 1;
+            if (Config.mapList[id] === undefined) {
+                id = 0;
+            }
+        }
+        DataMgr.set(DataMgr.currentMapScene, id);
     }
 }

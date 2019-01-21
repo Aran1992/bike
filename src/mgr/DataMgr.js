@@ -48,7 +48,7 @@ if (DataMgr.get(DataMgr.selectedBike) === undefined) {
 if (DataMgr.get(DataMgr.nextFreeDrawTime) === undefined) {
     DataMgr.set(DataMgr.nextFreeDrawTime, (new Date()).getTime());
 }
-
-DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.endlessMode.sceneList.length));
-
+if (DataMgr.get(DataMgr.currentMapScene) === undefined) {
+    DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.mapList.length));
+}
 export default DataMgr;
