@@ -66,7 +66,7 @@ export default class MapGameScene extends GameScene {
     createEnemy(pp) {
         this.enemyList = [];
         if (!RunOption.removeAllEnemy) {
-            let frames = GameUtils.getFrames(Config.bikeAtlasPath);
+            let frames = GameUtils.getFrames(Config.bikeAtlasPath, "enemy");
             let list = JSON.parse(JSON.stringify(Config.bikeList));
             for (let i = 0; i < Config.enemy.count; i++) {
                 let id = Utils.randomChoose(list).id;

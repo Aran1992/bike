@@ -565,15 +565,14 @@ export default class GameScene extends Scene {
     }
 
     resetBikeStatus() {
-        this.bikeSprite.texture = resources[Config.bikeAtlasPath].textures["0"];
-
         this.jumpCount = 0;
         this.jumping = false;
 
         this.isContactFatalEdge = false;
 
-        this.bikeFrameCount = Utils.keys(resources[Config.bikeAtlasPath].textures).length;
+        this.bikeFrames = GameUtils.getFrames(Config.bikeAtlasPath, "bike");
         this.bikeFrame = 0;
+        this.bikeSprite.texture = this.bikeFrames[this.bikeFrame];
 
         this.bikeAccSprite = new Sprite();
         this.closeViewContainer.addChild(this.bikeAccSprite);
@@ -698,10 +697,10 @@ export default class GameScene extends Scene {
             } else {
                 this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
                 this.bikeFrame++;
-                if (this.bikeFrame >= this.bikeFrameCount) {
+                if (this.bikeFrame >= this.bikeFrames.length) {
                     this.bikeFrame = 0;
                 }
-                this.bikeSprite.texture = resources[Config.bikeAtlasPath].textures[`${this.bikeFrame}`];
+                this.bikeSprite.texture = this.bikeFrames[this.bikeFrame];
             }
         }
     }

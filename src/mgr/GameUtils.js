@@ -64,7 +64,10 @@ export default class GameUtils {
         }
     }
 
-    static getFrames(jsonPath) {
-        return Utils.values(resources[jsonPath].data.animations)[0].map(texturePath => resources[jsonPath].textures[texturePath]);
+    static getFrames(jsonPath, animationName) {
+        if (animationName === undefined) {
+            animationName = Utils.keys(resources[jsonPath].data.animations)[0];
+        }
+        return resources[jsonPath].data.animations[animationName].map(texturePath => resources[jsonPath].textures[texturePath]);
     }
 }
