@@ -215,14 +215,15 @@ export default class ShopScene extends Scene {
 
     initMapItem(item) {
         this.onClick(item, this.onClickMapItem.bind(this), true);
-        item.backgroundImage = item.children[0].children[0];
-        item.commonImage = item.children[0].children[1];
-        item.unlockButton = item.children[0].children[2];
+        item.backgroundImage = item.children[0].children[1].children[0];
+        item.commonImage = item.children[0].children[2];
+        item.unlockButton = item.children[0].children[3];
         this.onClick(item.unlockButton, this.onClickUnlockButton.bind(this));
         item.unlockCostText = item.unlockButton.children[2];
-        item.selectedImage = item.children[0].children[3];
-        item.lockedImage = item.children[0].children[4];
-        item.unlockConditionText = item.children[0].children[5];
+        item.selectedImage = item.children[0].children[4];
+        item.lockedImage = item.children[0].children[5];
+        item.unlockCondition = item.children[0].children[6];
+        item.unlockConditionText = item.children[0].children[6].children[1];
     }
 
     updateMapItem(item, index) {
@@ -235,7 +236,7 @@ export default class ShopScene extends Scene {
             item.lockedImage.visible = true;
             item.unlockButton.visible = true;
             item.unlockCostText.text = config.unlockCostDiamond;
-            item.unlockConditionText.visible = true;
+            item.unlockCondition.visible = true;
             item.unlockConditionText.text = `Total distance reached ${config.unlockDistance}m`;
             item.interactive = false;
             item.unlockButton.id = config.id;
@@ -244,7 +245,7 @@ export default class ShopScene extends Scene {
             item.selectedImage.visible = config.id === this.selectedMapID;
             item.lockedImage.visible = false;
             item.unlockButton.visible = false;
-            item.unlockConditionText.visible = false;
+            item.unlockCondition.visible = false;
             item.interactive = true;
             item.id = config.id;
         }
