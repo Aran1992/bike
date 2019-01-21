@@ -237,7 +237,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test7",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test2",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -274,7 +274,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test8",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test3",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -311,7 +311,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test9",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test4",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -336,7 +336,7 @@ Config.mapList = [
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        bikeVelocity: 40,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -348,7 +348,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test10",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test5",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -375,7 +375,7 @@ Config.mapList = [
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
-        gravity: -175,
+        gravity: -50,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -422,7 +422,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test12",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test2",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
