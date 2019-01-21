@@ -18,6 +18,7 @@ export default class Bike {
 
         this.commonVelocity = this.config.commonVelocity;
         this.accVelocity = this.config.accVelocity;
+        this.jumpForce = this.config.jumpForce;
 
         this.frames = config.frames;
         this.frameIndex = 0;
@@ -68,6 +69,11 @@ export default class Bike {
             this.accVelocity *= config.velocityPercent;
         }
         this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, 0));
+
+        let sd = {};
+        sd.shape = Circle(Config.bike.radius * 2);
+        sd.isSensor = true;
+        this.aiSensor = this.bikeBody.createFixture(sd);
     }
 
     destroy() {
@@ -82,34 +88,44 @@ export default class Bike {
         this.bikeSprite.position.set(rp);
     }
 
-    onPreSolve(contact, anotherFixture,) {
+    onPreSolve(contact, anotherFixture, selfFixture) {
         if (this.isDead) {
             return contact.setEnabled(false);
         }
-        if (this.gameScene.chtable.player.is(anotherFixture)
-            || this.gameScene.chtable.enemy.is(anotherFixture)) {
-            contact.setEnabled(false);
-        } else if (this.gameScene.chtable.item.is(anotherFixture)) {
-            contact.setEnabled(false);
-            let body = anotherFixture.getBody();
-            if (body.isAwake()) {
-                body.setAwake(false);
-                body.getUserData().sprite.visible = false;
+        if (selfFixture !== this.aiSensor) {
+            if (this.gameScene.chtable.player.is(anotherFixture)
+                || this.gameScene.chtable.enemy.is(anotherFixture)) {
+                contact.setEnabled(false);
+            } else if (this.gameScene.chtable.item.is(anotherFixture)) {
+                contact.setEnabled(false);
+                let body = anotherFixture.getBody();
+                if (body.isAwake()) {
+                    body.setAwake(false);
+                    body.getUserData().sprite.visible = false;
+                }
             }
         }
     }
 
-    onBeginContact(contact, anotherFixture,) {
-        if (this.gameScene.chtable.road.is(anotherFixture)) {
-            this.jumping = false;
-            this.jumpCount = 0;
-        }
-        if (this.gameScene.chtable.obstacle.is(anotherFixture)) {
-            this.isContactFatalEdge = true;
-        } else {
+    onBeginContact(contact, anotherFixture, selfFixture) {
+        if (selfFixture === this.aiSensor) {
             let ud = anotherFixture.getUserData();
-            if (ud && ud.isFatal) {
+            if ((ud && (ud.isFatal || ud.isCliff))
+                || this.gameScene.chtable.obstacle.is(anotherFixture)) {
+                this.isGoToJump = true;
+            }
+        } else {
+            if (this.gameScene.chtable.road.is(anotherFixture)) {
+                this.jumping = false;
+                this.jumpCount = 0;
+            }
+            if (this.gameScene.chtable.obstacle.is(anotherFixture)) {
                 this.isContactFatalEdge = true;
+            } else {
+                let ud = anotherFixture.getUserData();
+                if (ud && ud.isFatal) {
+                    this.isContactFatalEdge = true;
+                }
             }
         }
     }
@@ -124,7 +140,7 @@ export default class Bike {
         let rp = GameUtils.physicsPos2renderPos(pp);
         this.bikeSprite.x = rp.x;
         this.bikeSprite.y = rp.y;
-        if (!this.isDead) {
+        if (!this.isDead && !this.jumping) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
         }
@@ -180,6 +196,11 @@ export default class Bike {
         if (this.isDead === false) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+        }
+
+        if (this.isDead === false && this.isGoToJump) {
+            this.jump();
+            this.isGoToJump = false;
         }
     }
 
@@ -254,6 +275,19 @@ export default class Bike {
         } else {
             this.bikeBody.applyForceToCenter(Vec2(0, -this.gameScene.gravity * this.bikeBody.getMass()));
             this.bikeBody.setLinearVelocity(Vec2(Config.rebornFloatVelocity, 0));
+        }
+    }
+
+    jump() {
+        if (this.jumpCount < Config.jumpCommonMaxCount
+            || this.jumpExtraCountdown > 0) {
+            let velocity = this.bikeBody.getLinearVelocity();
+            this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
+            this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
+            this.jumping = true;
+            this.jumpCount++;
+            this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
+            this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
         }
     }
 }

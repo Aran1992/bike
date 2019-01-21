@@ -77,6 +77,7 @@ export default class MapGameScene extends GameScene {
                 let enemy = new Enemy(this, this.closeViewContainer, this.world, id, {
                     commonVelocity: this.bikeCommonVelocity,
                     accVelocity: this.bikeAccVelocity,
+                    jumpForce: this.jumpForce,
                     frames: frames,
                 });
                 enemy.setPhysicalPosition(pp);

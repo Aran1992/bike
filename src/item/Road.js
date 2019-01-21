@@ -107,7 +107,7 @@ export default class Road {
         let body = world.createBody();
         this.body = body;
         body.setUserData({type: "Road"});
-        for (let i = 0; i < pathInPhysics.length - 4; i += 2) {
+        for (let i = 0; i <= pathInPhysics.length - 4; i += 2) {
             let sp = {
                     x: pathInPhysics[i],
                     y: pathInPhysics[i + 1]
@@ -117,7 +117,9 @@ export default class Road {
                     y: pathInPhysics[i + 3]
                 };
             let fd = {density: 0, friction: 1,};
-            if (Road.isFatalEdge(sp, ep)) {
+            if (i === pathInPhysics.length - 4) {
+                body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), fd).setUserData({isCliff: true});
+            } else if (Road.isFatalEdge(sp, ep)) {
                 let roadLength = Utils.calcPointDistance(sp, ep);
                 if (roadLength <= Config.roadFatalMinLength) {
                     body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), fd);
