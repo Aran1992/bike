@@ -59,6 +59,7 @@ export default class MainScene extends Scene {
 
     onClickMapModeButton() {
         this.ui.costCoinPanel.visible = true;
+        this.ui.costCoinText.text = Config.rankMode.costCoin;
         this.mode = "Map";
         let index = DataMgr.get(DataMgr.currentMapScene);
         let path = Config.mapList[index].texture.mainCover;
@@ -75,8 +76,16 @@ export default class MainScene extends Scene {
 
     onClickStartButton() {
         if (this.mode === "Map") {
-            App.hideScene("MainScene");
-            App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+            let coin = DataMgr.get(DataMgr.coin, 0);
+            let costCoin = Config.rankMode.costCoin;
+            if (coin >= costCoin) {
+                DataMgr.set(DataMgr.coin, coin - costCoin);
+                App.hideScene("MainScene");
+                App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+            } else {
+                App.showNotice("Gold Coin is not enough!");
+
+            }
         } else if (this.mode === "Endless") {
             App.hideScene("MainScene");
             App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));

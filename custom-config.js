@@ -3851,4 +3851,10 @@ Config.rankScore = [
     50,
 ];
 
+// 排行模式相关配置
+Config.rankMode = {
+    // 入场消费金币
+    costCoin: 500,
+};
+
 export default Config;
