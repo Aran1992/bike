@@ -2983,6 +2983,12 @@ Config.bikeList = [
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
+        // 结算积分倍率（不填的话默认就是1）
+        scorePercent: 1,
+        // 结算金币倍率（不填的话默认就是1）
+        coinPercent: 1,
+        // 结算里程倍率（不填的话默认就是1）
+        distancePercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
