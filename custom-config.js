@@ -3837,4 +3837,12 @@ Config.item = {
     },
 };
 
+// 排行榜分数（按照1/2/3/4名往下配置）
+Config.rankScore = [
+    1000,
+    500,
+    200,
+    50,
+];
+
 export default Config;

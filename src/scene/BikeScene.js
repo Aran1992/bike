@@ -2,7 +2,6 @@ import Config from "../config";
 import Scene from "./Scene";
 import List from "../ui/List";
 import DataMgr from "../mgr/DataMgr";
-import Utils from "../mgr/Utils";
 import BikeSprite from "../item/BikeSprite";
 
 export default class BikeScene extends Scene {
