@@ -7,6 +7,12 @@ import Utils from "../mgr/Utils";
 import BlackBird from "../item/BlackBird";
 
 export default class EndlessGameScene extends GameScene {
+    onCreate() {
+        super.onCreate();
+        this.ui.pauseButton.visible = true;
+        this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
+    }
+
     onShow(sceneIndex) {
         this.sceneIndex = sceneIndex;
         this.sceneConfig = Config.endlessMode.sceneList[sceneIndex];
@@ -146,6 +152,10 @@ export default class EndlessGameScene extends GameScene {
                 }
             }
         });
+    }
+
+    gameOver() {
+        App.showScene("GameOverScene");
     }
 }
 

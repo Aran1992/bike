@@ -80,7 +80,9 @@ export default class List {
         if (item === undefined) {
             item = UIHelper.clone(this.item);
             this.container.addChild(item);
-            this.initItem(item);
+            if (this.initItem) {
+                this.initItem(item);
+            }
         }
         return item;
     }

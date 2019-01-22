@@ -8,6 +8,12 @@ import RunOption from "../../run-option";
 import DataMgr from "../mgr/DataMgr";
 
 export default class MapGameScene extends GameScene {
+    onCreate() {
+        super.onCreate();
+        this.ui.surrenderButton.visible = true;
+        this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
+    }
+
     onShow(mapIndex) {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
@@ -137,8 +143,9 @@ export default class MapGameScene extends GameScene {
         this.enemyList.forEach(enemy => enemy.afterUpdate());
     }
 
-    gameOver(status = "end", message = "Game Over", rebornEnable = false) {
-        super.gameOver(status, message, rebornEnable);
+    gameWin(rank) {
+        this.gameStatus = "win";
+
         let id = Math.floor(Math.random() * Config.mapList.length);
         if (id === DataMgr.get(DataMgr.currentMapScene)) {
             id = id + 1;
@@ -147,5 +154,35 @@ export default class MapGameScene extends GameScene {
             }
         }
         DataMgr.set(DataMgr.currentMapScene, id);
+
+        this.settle();
+
+        if (rank === undefined) {
+            rank = this.enemyList.reduce((count, enemy) => {
+                if (enemy.completeGame) {
+                    return count + 1;
+                } else {
+                    return count;
+                }
+            }, 0);
+        }
+
+        App.showScene("GameResultScene", {
+            rank: rank,
+            distance: this.distance,
+            coin: this.coin
+        });
+    }
+
+    onClickSurrenderButton() {
+        App.showScene("TipScene", {
+            tip: `You only get the last prize after surrender,
+are you sure?`,
+            confirmCallback: () => {
+                this.gameWin(Config.enemy.count);
+            },
+            cancelCallback: () => {
+            },
+        });
     }
 }

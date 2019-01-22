@@ -60,7 +60,8 @@ export default class GameScene extends Scene {
 
         // this.createFPSText();
 
-        this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
+        this.ui.pauseButton.visible = false;
+        this.ui.surrenderButton.visible = false;
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
         this.ui.confirmButton.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
@@ -724,7 +725,7 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play"
             && this.finalPoint
             && bikePhysicsPos.x > GameUtils.renderPos2PhysicsPos(this.finalPoint).x) {
-            this.gameOver("win", "Game Win");
+            this.gameWin();
         }
     }
 
@@ -944,15 +945,6 @@ export default class GameScene extends Scene {
         });
     }
 
-    gameOver(status = "end", message = "Game Over", rebornEnable = false) {
-        this.gameStatus = status;
-        App.showScene("GameOverScene", message, rebornEnable);
-        let coin = DataMgr.get(DataMgr.coin, 0) + this.coin;
-        DataMgr.set(DataMgr.coin, coin);
-        let distance = DataMgr.get(DataMgr.distance, 0) + this.distance;
-        DataMgr.set(DataMgr.distance, distance);
-    }
-
     onDead() {
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
@@ -960,7 +952,7 @@ export default class GameScene extends Scene {
         if (this.isDirectReborn) {
             this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
         } else {
-            this.gameOver(undefined, undefined, true);
+            this.gameOver();
             this.gameLoopFunc = this.pause.bind(this);
         }
     }
@@ -1019,6 +1011,15 @@ export default class GameScene extends Scene {
         this.resetBikeStatus();
         this.startFloat = true;
         this.bikeFloatFrame = Config.rebornFloatFrame;
+    }
+
+    settle() {
+        let id = DataMgr.get(DataMgr.selectedBike, 0);
+        let config = Config.bikeList.find(bike => bike.id === id);
+        let coin = DataMgr.get(DataMgr.coin, 0) + this.coin * (config.coinPercent || 1);
+        DataMgr.set(DataMgr.coin, coin);
+        let distance = DataMgr.get(DataMgr.distance, 0) + this.distance * (config.distancePercent || 1);
+        DataMgr.set(DataMgr.distance, distance);
     }
 }
 

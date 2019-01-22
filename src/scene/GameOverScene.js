@@ -17,26 +17,20 @@ export default class GameOverScene extends Scene {
         this.onClick(this.ui.rebornButton, GameOverScene.onClickRebornButton);
     }
 
-    onShow(msg, rebornEnable) {
+    onShow() {
         this.parent.setChildIndex(this, this.parent.children.length - 1);
-        this.ui.gameOverText.text = msg || "Game Over";
-        if (msg === "Game Over") {
-            MusicMgr.playSound(Config.soundPath.die);
-        } else {
-            MusicMgr.pauseBGM();
-            MusicMgr.playSound(Config.soundPath.throughFlag);
-        }
-        this.ui.rebornButton.visible = !!rebornEnable;
+        MusicMgr.playSound(Config.soundPath.die);
     }
 
     static onClickMainButton() {
+        App.getScene("EndlessGameScene").settle();
         App.hideScene("GameOverScene");
-        App.destroyScene("MapGameScene");
         App.destroyScene("EndlessGameScene");
         App.showScene("MainScene");
     }
 
     static onClickRestartButton() {
+        App.getScene("EndlessGameScene").settle();
         App.hideScene("GameOverScene");
         EventMgr.dispatchEvent("Restart");
     }

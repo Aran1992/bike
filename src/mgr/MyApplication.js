@@ -8,6 +8,8 @@ import MainScene from "../scene/MainScene";
 import ShopScene from "../scene/ShopScene";
 import DrawScene from "../scene/DrawScene";
 import BikeScene from "../scene/BikeScene";
+import TipScene from "../scene/TipScene";
+import GameResultScene from "../scene/GameResultScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -36,6 +38,8 @@ export default class MyApplication extends Application {
             "ShopScene": ShopScene,
             "DrawScene": DrawScene,
             "BikeScene": BikeScene,
+            "TipScene": TipScene,
+            "GameResultScene": GameResultScene,
         };
 
         this.sceneTable = {};
@@ -58,6 +62,10 @@ export default class MyApplication extends Application {
         if (this.sceneTable[sceneName]) {
             this.sceneTable[sceneName].hide();
         }
+    }
+
+    getScene(sceneName) {
+        return this.sceneTable[sceneName];
     }
 
     destroyScene(sceneName) {
