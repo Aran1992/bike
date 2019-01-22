@@ -15,6 +15,8 @@ export default class TipScene extends Scene {
     }
 
     onShow(args) {
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
+
         this.ui.tipText.text = args.tip;
         this.args = args;
     }
