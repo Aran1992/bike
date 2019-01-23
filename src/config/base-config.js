@@ -229,8 +229,6 @@ Config.startImagePath = {
 };
 
 Config.bike = {
-    scale: 0.4,
-    radius: 1.175,
     density: 1,
     deadCompleteTime: 500,
     adjustHeightVelocity: 0.25,
@@ -238,6 +236,10 @@ Config.bike = {
 
 Config.enemy = {
     count: 3,
+};
+
+Config.sceneItemImagePath = {
+    groundStab: "images/ground_stab.json"
 };
 
 export default Config;

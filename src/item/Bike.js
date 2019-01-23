@@ -45,7 +45,7 @@ export default class Bike {
         this.bikeSprite = this.parent.addChild(new Sprite());
         this.bikeSprite.texture = this.frames[this.frameIndex];
         this.bikeSprite.anchor.set(0.5, 0.5);
-        this.bikeSprite.scale.set(Config.bike.scale, Config.bike.scale);
+        this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
 
         let decorateSprite = this.bikeSprite.addChild(new Sprite());
         let config = Config.bikeList.find(bike => bike.id === this.id);
@@ -61,8 +61,8 @@ export default class Bike {
         this.bikeBubbleSprite.visible = false;
 
         this.bikeBody = this.world.createDynamicBody();
-        let density = Config.bike.density * (config.densityPercent || 1);
-        this.bikeBody.createFixture(Circle(Config.bike.radius), {density: density, friction: 1});
+        let density = Config.bikeDensity * (config.densityPercent || 1);
+        this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1});
         this.bikeBody.setUserData(this);
         if (config.velocityPercent) {
             this.commonVelocity *= config.velocityPercent;
@@ -71,7 +71,7 @@ export default class Bike {
         this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, 0));
 
         let sd = {};
-        sd.shape = Circle(Config.bike.radius * 2);
+        sd.shape = Circle(Config.bikeRadius * 2);
         sd.isSensor = true;
         this.aiSensor = this.bikeBody.createFixture(sd);
     }
@@ -233,7 +233,7 @@ export default class Bike {
             rp.y += Utils.randomInRange(...Config.bikeAdjustHeightOffset);
             let pos = GameUtils.renderPos2PhysicsPos(rp);
             this.floatTargetPosX = pos.x;
-            this.adjustHeight = pos.y + Config.bike.radius;
+            this.adjustHeight = pos.y + Config.bikeRadius;
         }
     }
 
