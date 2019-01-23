@@ -16,6 +16,7 @@ import AccGem from "../item/AccGem";
 import SmallFireWall from "../item/SmallFireWall";
 import BigFireWall from "../item/BigFireWall";
 import BlackBird from "../item/BlackBird";
+import GroundStab from "../item/GroundStab";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -105,6 +106,7 @@ export default class GameScene extends Scene {
 
         this.birdList = [];
         this.roadList = [];
+        this.itemList = [];
 
         this.portableItemButtonList.forEach(button => button.removeChildren());
 
@@ -128,6 +130,7 @@ export default class GameScene extends Scene {
             Config.birdAniJson,
         ]
             .concat(Utils.values(Config.soundPath))
+            .concat(Utils.values(Config.sceneItemImagePath))
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
             .concat(Utils.values(Config.bikeJumpingAnimation).map(item => item.atlasPath));
@@ -139,6 +142,7 @@ export default class GameScene extends Scene {
             this.emitter = undefined;
         }
         this.enemyList.forEach(enemy => enemy.destroy());
+        this.itemList.forEach(item => item.destroy && item.destroy());
         this.onShow();
     }
 
@@ -515,6 +519,11 @@ export default class GameScene extends Scene {
                 this.closeViewContainer.addChild(item.sprite);
                 break;
             }
+            case "GroundStab": {
+                let item = new GroundStab(this.closeViewContainer, this.world, data);
+                this.itemList.push(item);
+                break;
+            }
             default : {
                 let item = new Item(data, this.world);
                 this.closeViewContainer.addChild(item.sprite);
@@ -601,6 +610,8 @@ export default class GameScene extends Scene {
         this.syncBikeSprite(velocity, bikePhysicsPos);
 
         this.syncBirdSprite();
+
+        this.itemList.forEach(item => item.update && item.update());
 
         if (this.syncEnemySprite) {
             this.syncEnemySprite();

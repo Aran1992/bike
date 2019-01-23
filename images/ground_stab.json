@@ -1,0 +1,123 @@
+{
+  "frames": {
+    "needlex4.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "needlex4_01.png": {
+      "frame": {
+        "x": 0,
+        "y": 96,
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "needlex4_02.png": {
+      "frame": {
+        "x": 0,
+        "y": 192,
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "needlex4_03.png": {
+      "frame": {
+        "x": 0,
+        "y": 288,
+        "w": 64,
+        "h": 96
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 96
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "animations": {
+    "needlex4": [
+      "needlex4_01.png",
+      "needlex4_02.png",
+      "needlex4.png",
+      "needlex4_03.png",
+      "needlex4.png",
+      "needlex4_02.png",
+      "needlex4_01.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "ground_stab.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 64,
+      "h": 384
+    },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:9302bed47c8b4f8df89b190eb0f52fd8:74153a76010e2bb9cccf49e97be4eaf5:a5406e73bdffaacac4dd776db02571e2$"
+  }
+}
