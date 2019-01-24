@@ -98,11 +98,6 @@ export default class Bike {
                 contact.setEnabled(false);
             } else if (this.gameScene.chtable.item.is(anotherFixture)) {
                 contact.setEnabled(false);
-                let body = anotherFixture.getBody();
-                if (body.isAwake()) {
-                    body.setAwake(false);
-                    body.getUserData().sprite.visible = false;
-                }
             }
         }
     }

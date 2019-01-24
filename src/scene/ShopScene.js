@@ -215,21 +215,30 @@ export default class ShopScene extends Scene {
 
     initMapItem(item) {
         this.onClick(item, this.onClickMapItem.bind(this), true);
-        item.backgroundImage = item.children[0].children[1].children[0];
-        item.commonImage = item.children[0].children[2];
-        item.unlockButton = item.children[0].children[3];
+        item.root = item.children[0];
+        item.backgroundImage = item.root.children[1].children[0];
+        item.commonImage = item.root.children[2];
+        item.unlockButton = item.root.children[3];
         this.onClick(item.unlockButton, this.onClickUnlockButton.bind(this));
         item.unlockCostText = item.unlockButton.children[2];
-        item.selectedImage = item.children[0].children[4];
-        item.lockedImage = item.children[0].children[5];
-        item.unlockCondition = item.children[0].children[6];
-        item.unlockConditionText = item.children[0].children[6].children[1];
+        item.selectedImage = item.root.children[4];
+        item.lockedImage = item.root.children[5];
+        item.unlockCondition = item.root.children[6];
+        item.unlockConditionText = item.unlockCondition.children[0];
+        item.mapDescription = item.root.children[7];
+        item.mapDescriptionText = item.mapDescription.children[0];
     }
 
     updateMapItem(item, index) {
         let config = Config.endlessMode.sceneList[index];
         let path = config.texture.shopCover;
         item.backgroundImage.texture = resources[path].texture;
+        if (config.dsc && config.dsc.length !== 0) {
+            item.mapDescription.visible = true;
+            item.mapDescriptionText.text = config.dsc;
+        } else {
+            item.mapDescription.visible = false;
+        }
         if (this.isEndlessSceneLocked(config.id)) {
             item.commonImage.visible = false;
             item.selectedImage.visible = false;

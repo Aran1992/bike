@@ -672,7 +672,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "这是一个地图的啦，哈哈哈"
     },
     {
         id: 1,

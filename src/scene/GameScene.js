@@ -108,7 +108,7 @@ export default class GameScene extends Scene {
         this.roadList = [];
         this.itemList = [];
 
-        this.portableItemButtonList.forEach(button => button.removeChildren());
+        this.portableItemButtonList.forEach(button => button.children.length === 2 && button.removeChildAt(1));
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomContainer.scale.set(1, 1);
@@ -218,10 +218,10 @@ export default class GameScene extends Scene {
                     } else if (this.chtable.item.is(anotherFixture)) {
                         contact.setEnabled(false);
                         let body = anotherFixture.getBody();
-                        if (body.isAwake()) {
+                        let ud = body.getUserData();
+                        if (ud.sprite.visible) {
+                            ud.sprite.visible = false;
                             EventMgr.dispatchEvent("AteItem", body.getUserData().type);
-                            body.setAwake(false);
-                            body.getUserData().sprite.visible = false;
                         }
                     }
                 },
@@ -938,15 +938,15 @@ export default class GameScene extends Scene {
 
     onClickPortableItem(i) {
         let button = this.portableItemButtonList[i];
-        if (button.children.length !== 0) {
+        if (button.children.length === 2) {
             this.accelerateBike();
-            button.removeChildren();
+            button.removeChildAt(1);
         }
     }
 
     showPortableItem() {
         this.portableItemButtonList.some(button => {
-            if (button.children.length === 0) {
+            if (button.children.length === 1) {
                 let sprite = new Sprite(resources[Config.imagePath.itemAccGem].texture);
                 button.addChild(sprite);
                 sprite.anchor.set(0.5, 0.5);
