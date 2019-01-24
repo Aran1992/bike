@@ -11,6 +11,7 @@ import BikeScene from "../scene/BikeScene";
 import TipScene from "../scene/TipScene";
 import GameResultScene from "../scene/GameResultScene";
 import SystemScene from "../scene/SystemScene";
+import UIHelper from "../ui/UIHelper";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -26,9 +27,9 @@ export default class MyApplication extends Application {
 
         this.mask = new Container();
         this.stage.addChild(this.mask);
-        this.mask.interactive = true;
         this.mask.hitArea = new Rectangle(0, 0, this.sceneWidth, this.sceneHeight);
         this.mask.visible = false;
+        UIHelper.onClick(this.mask, () => this.clickMaskCallback && this.clickMaskCallback(), true);
 
         this.sceneNameClassMap = {
             "MainScene": MainScene,
@@ -83,8 +84,9 @@ export default class MyApplication extends Application {
         loader.add(resPathList).load(onLoadedCallback);
     }
 
-    showMask() {
+    showMask(clickMaskCallback) {
         this.mask.visible = true;
+        this.clickMaskCallback = clickMaskCallback;
     }
 
     hideMask() {

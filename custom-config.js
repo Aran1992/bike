@@ -3863,4 +3863,7 @@ Config.rankMode = {
     costCoin: 500,
 };
 
+// 钻石扭蛋花费
+Config.diamondDrawCost = 10;
+
 export default Config;

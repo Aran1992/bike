@@ -2,8 +2,7 @@ import Config from "../config";
 import Scene from "./Scene";
 import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
-import {AnimatedSprite, Rectangle, resources, Sprite} from "../libs/pixi-wrapper";
-import GameUtils from "../mgr/GameUtils";
+import {Rectangle} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
 
 export default class DrawScene extends Scene {
@@ -27,6 +26,7 @@ export default class DrawScene extends Scene {
 
     onShow() {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.costDiamondText.text = Config.diamondDrawCost;
     }
 
     onClickReturnButton() {
@@ -40,18 +40,30 @@ export default class DrawScene extends Scene {
     }
 
     onClickDrawButton() {
-        this.startAnimation();
-        App.showMask();
+        if (this.ui.costDiamondPanel.visible) {
+            let diamond = DataMgr.get(DataMgr.diamond, 0);
+            if (diamond >= Config.diamondDrawCost) {
+                diamond -= Config.diamondDrawCost;
+                DataMgr.set(DataMgr.diamond, diamond);
+                this.ui.diamondText.text = diamond;
+                this.startAnimation();
+            } else {
+                App.showNotice("Diamond is not enough!");
+            }
+        } else {
+            this.startAnimation();
+        }
     }
 
     startAnimation() {
+        App.showMask(this.onAnimationEnded.bind(this));
         this.ballImage.visible = true;
         this.ballImage.scale.set(0, 0);
         this.ballImage.rotation = 0;
         this.animationFrame = 0;
         this.totalAnimationFrame = 180;
         this.totalRotation = Math.PI * 2 * 6;
-        requestAnimationFrame(this.onAnimation.bind(this));
+        this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
     }
 
     onAnimation() {
@@ -63,12 +75,14 @@ export default class DrawScene extends Scene {
         if (this.animationFrame === this.totalAnimationFrame) {
             setTimeout(this.onAnimationEnded.bind(this), 500);
         } else {
-            requestAnimationFrame(this.onAnimation.bind(this));
+            this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
         }
     }
 
     onAnimationEnded() {
         App.hideMask();
+
+        cancelAnimationFrame(this.animationID);
 
         let index = Utils.randomWithWeight(Config.bikeList.map(item => item.weight));
         this.id = Config.bikeList[index].id;
@@ -97,11 +111,11 @@ export default class DrawScene extends Scene {
         let cur = new Date();
         let freeTime = DataMgr.get(DataMgr.nextFreeDrawTime);
         if (cur >= freeTime) {
-            this.ui.drawButton.interactive = true;
             this.ui.drawTimeText.text = "Free";
+            this.ui.costDiamondPanel.visible = false;
         } else {
-            this.ui.drawButton.interactive = false;
             this.ui.drawTimeText.text = Utils.getCDTimeString(freeTime - cur);
+            this.ui.costDiamondPanel.visible = true;
         }
     }
 }

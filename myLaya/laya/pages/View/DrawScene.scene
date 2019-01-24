@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":11,
+    "selecteID":13,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -35,13 +35,14 @@
             "props":{"y":5,"x":253,"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -54,6 +55,7 @@
                     "compId":32,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":5,"skin":"images/icon-diamond.png","scaleY":1.7,"scaleX":1.7,"centerY":2},
@@ -66,9 +68,11 @@
                             "compId":33,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,diamondText",
                     "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -183,7 +187,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,drawTimeText",
-            "props":{"var":"drawTimeText","text":"00:00 Free","fontSize":35,"color":"#ffffff","centerX":-1,"bottom":16},
+            "props":{"var":"drawTimeText","text":"00:00 Free","fontSize":35,"color":"#ffffff","centerX":0,"bottom":140},
             "nodeParent":1,
             "label":"drawTimeText",
             "isDirectory":false,
@@ -191,7 +195,52 @@
             "hasChild":false,
             "compId":13,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "searchKey":"Panel,detailPanel",
+            "props":{"width":120,"var":"costDiamondPanel","height":40,"centerX":0,"bottom":10},
+            "nodeParent":1,
+            "label":"costDiamondPanel",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":39,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/icon-diamond.png","scaleY":1,"scaleX":1,"left":10,"centerY":0},
+                    "nodeParent":39,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":37,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,unlockCostText",
+                    "props":{"var":"costDiamondText","text":"9999","left":50,"fontSize":25,"color":"#ffffff","centerY":0},
+                    "nodeParent":39,
+                    "label":"costDiamondText",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":38,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -200,14 +249,13 @@
             "props":{"var":"detailPanel","top":-1,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"detailPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":30,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":614,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":378,"centerY":-6,"centerX":0},
@@ -220,7 +268,6 @@
                     "compId":15,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,closeDetailButton",
                             "props":{"var":"closeDetailButton","top":-39,"skin":"images/ButtonClose_Gray.png","right":-39},
@@ -234,7 +281,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,bikeDsc",
                             "props":{"width":550,"var":"bikeDsc","text":"12345678901234567890","height":100,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":25,"align":"center"},
@@ -248,7 +294,8 @@
                                 ]
                         }],
                     "$HIDDEN":false
-                }]
+                }],
+            "$HIDDEN":true
         }],
     "animations":[
         {
