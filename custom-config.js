@@ -674,7 +674,7 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "这是一个地图的啦，哈哈哈"
+        dsc: "Map1"
     },
     {
         id: 1,
@@ -874,7 +874,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map2"
     },
     {
         id: 2,
@@ -1074,7 +1076,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map3"
     },
     {
         id: 3,
@@ -1274,7 +1278,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map4"
     },
     {
         id: 4,
@@ -1474,7 +1480,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map5"
     },
     {
         id: 5,
@@ -1674,7 +1682,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map6"
     },
     {
         id: 6,
@@ -1874,7 +1884,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map7"
     },
     {
         id: 7,
@@ -2074,7 +2086,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map8"
     },
     {
         id: 8,
@@ -2274,7 +2288,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map9"
     },
     {
         id: 9,
@@ -2474,7 +2490,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map10"
     },
     {
         id: 10,
@@ -2674,7 +2692,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map11"
     },
     {
         id: 11,
@@ -2874,7 +2894,9 @@ Config.endlessMode.sceneList = [
                     scenePath: "Test/3/Test2-12",
                 },
             ],
-        ]
+        ],
+        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
+        dsc: "Map12"
     },
 ];
 
@@ -3630,7 +3652,7 @@ Config.bikeList = [
 ];
 
 // 抽奖重置时间间隔（单位：秒）（可用乘法计算）
-Config.freeDrawInterval = 1 * 1 * 3;
+Config.freeDrawInterval = 8 * 60 * 60;
 
 // 提示相关配置
 Config.notice = {
@@ -3860,11 +3882,11 @@ Config.rankScore = [
 // 排行模式相关配置
 Config.rankMode = {
     // 入场消费金币
-    costCoin: 500,
+    costCoin: 1000,
 };
 
 // 钻石扭蛋花费
-Config.diamondDrawCost = 10;
+Config.diamondDrawCost = 50;
 // 钻石复活花费
 Config.diamondRebornCost = 10;
 
