@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":66,
-    "selecteID":63,
+    "selectedBox":77,
+    "selecteID":62,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -101,7 +101,7 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "searchKey":"Image",
+                            "searchKey":"Image,bgmButton",
                             "props":{"var":"bgmButton","skin":"images/bg_setting_btnglay.png","right":30,"centerY":0},
                             "nodeParent":69,
                             "label":"bgmButton",
@@ -129,7 +129,7 @@
                                 {
                                     "x":60,
                                     "type":"Image",
-                                    "searchKey":"Image",
+                                    "searchKey":"Image,bgmOnImage",
                                     "props":{"var":"bgmOnImage","skin":"images/bg_setting_btnyellow.png","centerY":0,"centerX":0},
                                     "nodeParent":66,
                                     "label":"bgmOnImage",
@@ -177,7 +177,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/se_icon_se-1.png","sizeGrid":"50,50,50,50","left":30,"centerY":0},
+                            "props":{"skin":"images/se_icon_se-1.png","left":30,"centerY":0},
                             "nodeParent":77,
                             "label":"Image",
                             "isOpen":true,
@@ -206,7 +206,7 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "searchKey":"Image",
+                            "searchKey":"Image,soundButton",
                             "props":{"var":"soundButton","skin":"images/bg_setting_btnglay.png","right":30,"centerY":0},
                             "nodeParent":77,
                             "label":"soundButton",
@@ -234,7 +234,7 @@
                                 {
                                     "x":60,
                                     "type":"Image",
-                                    "searchKey":"Image",
+                                    "searchKey":"Image,soundOnImage",
                                     "props":{"var":"soundOnImage","skin":"images/bg_setting_btnyellow.png","centerY":0,"centerX":0},
                                     "nodeParent":82,
                                     "label":"soundOnImage",
