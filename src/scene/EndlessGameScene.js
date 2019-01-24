@@ -19,6 +19,7 @@ export default class EndlessGameScene extends GameScene {
         this.nextDistanceIndex = 0;
         let config = this.sceneConfig.distanceNotice;
         this.nextNoticeDistance = config && config[this.nextDistanceIndex];
+        this.diamondReborn = false;
         super.onShow();
     }
 
@@ -134,7 +135,7 @@ export default class EndlessGameScene extends GameScene {
     }
 
     showDistance() {
-        if (this.distance > this.nextNoticeDistance) {
+        if (this.distance >= this.nextNoticeDistance) {
             App.showNotice(`You have ridden ${this.nextNoticeDistance} meters`);
             this.nextDistanceIndex++;
             this.nextNoticeDistance = this.sceneConfig.distanceNotice[this.nextDistanceIndex];
@@ -155,7 +156,12 @@ export default class EndlessGameScene extends GameScene {
     }
 
     gameOver() {
-        App.showScene("GameOverScene");
+        App.showScene("GameOverScene", {
+            distance: Math.floor(this.distance),
+            coin: this.coin,
+            diamondReborn: this.diamondReborn
+        });
+        this.diamondReborn = true;
     }
 }
 

@@ -1,8 +1,9 @@
-import Config from "../config";
 import EventMgr from "../mgr/EventMgr";
 import Scene from "./Scene";
 import {Graphics} from "../libs/pixi-wrapper";
-import MusicMgr from "../mgr/MusicMgr";
+import DataMgr from "../mgr/DataMgr";
+import List from "../ui/List";
+import Config from "../config";
 
 export default class GameOverScene extends Scene {
     onCreate() {
@@ -15,11 +16,72 @@ export default class GameOverScene extends Scene {
         this.onClick(this.ui.mainButton, GameOverScene.onClickMainButton);
         this.onClick(this.ui.restartButton, GameOverScene.onClickRestartButton);
         this.onClick(this.ui.rebornButton, GameOverScene.onClickRebornButton);
+        this.onClick(this.ui.diamondRebornButton, GameOverScene.onClickDiamondRebornButton);
+
+        this.ui.diamondRebornCostText.text = Config.diamondRebornCost;
     }
 
-    onShow() {
+    onShow(args) {
         this.parent.setChildIndex(this, this.parent.children.length - 1);
-        MusicMgr.playSound(Config.soundPath.die);
+
+        this.args = args;
+        let id = DataMgr.get(DataMgr.selectedBike, 0);
+        this.bikeConfig = Config.bikeList.find(bike => bike.id === id);
+
+        let record = DataMgr.get(DataMgr.distanceRecord, 0);
+        let finalDistance = Math.floor(args.distance * (this.bikeConfig.distancePercent || 1));
+        if (finalDistance === record) {
+            this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
+            this.ui.beyondText.text = "Leveling with the highest record";
+        } else if (finalDistance > record) {
+            this.ui.recordText.text = `{{YourselfName}} New Record: ${finalDistance}m`;
+            this.ui.beyondText.text = "";
+            DataMgr.set(DataMgr.distanceRecord, finalDistance);
+        } else {
+            this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
+            this.ui.beyondText.text = `${record - finalDistance} meters more to go beyond yourself`;
+        }
+
+        if (this.resultList) {
+            this.resultList.refresh();
+        } else {
+            this.resultList = new List({
+                root: this.ui.resultList,
+                updateItemFunc: this.updateResultItem.bind(this),
+                count: 2,
+            });
+        }
+
+        this.ui.diamondRebornButton.visible = false;
+        this.ui.rebornButton.visible = false;
+        if (this.args.diamondReborn) {
+            this.ui.diamondRebornButton.visible = true;
+        } else {
+            this.ui.rebornButton.visible = true;
+        }
+    }
+
+    updateResultItem(item, index) {
+        let name = "";
+        let originValue = 0;
+        let multiple = 0;
+        switch (index) {
+            case 0: {
+                name = "Distance";
+                originValue = Math.floor(this.args.distance);
+                multiple = this.bikeConfig.distancePercent || 1;
+                break;
+            }
+            case 1: {
+                name = "Coin";
+                originValue = this.args.coin;
+                multiple = this.bikeConfig.coinPercent || 1;
+                break;
+            }
+        }
+        item.children[0].text = `${name}\t${originValue}`;
+        item.children[1].text = `*${multiple}->`;
+        item.children[2].text = `${name}\t${Math.floor(originValue * multiple)}`;
     }
 
     static onClickMainButton() {
@@ -38,6 +100,18 @@ export default class GameOverScene extends Scene {
     static onClickRebornButton() {
         App.hideScene("GameOverScene");
         EventMgr.dispatchEvent("Reborn");
+    }
+
+    static onClickDiamondRebornButton() {
+        let diamond = DataMgr.get(DataMgr.diamond, 0);
+        if (diamond >= Config.diamondRebornCost) {
+            diamond -= Config.diamondRebornCost;
+            DataMgr.set(DataMgr.diamond, diamond);
+            App.hideScene("GameOverScene");
+            EventMgr.dispatchEvent("Reborn");
+        } else {
+            App.showNotice("Diamond is not enough!");
+        }
     }
 }
 

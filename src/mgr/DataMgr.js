@@ -40,6 +40,7 @@ DataMgr.unlockAllEndlessScene = "unlockAllEndlessScene";
 DataMgr.unlockEndlessSceneIDList = "unlockEndlessSceneIDList";
 DataMgr.bgmOn = "bgmOn";
 DataMgr.soundOn = "soundOn";
+DataMgr.distanceRecord = "distanceRecord";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);

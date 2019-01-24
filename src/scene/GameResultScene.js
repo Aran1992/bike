@@ -85,7 +85,7 @@ export default class GameResultScene extends Scene {
         }
         item.children[0].text = `${name}\t${originValue}`;
         item.children[1].text = `*${multiple}->`;
-        item.children[2].text = `${name}\t${originValue * multiple}`;
+        item.children[2].text = `${name}\t${Math.floor(originValue * multiple)}`;
     }
 
     updateRankItem(item, index) {

@@ -169,7 +169,7 @@ export default class MapGameScene extends GameScene {
 
         App.showScene("GameResultScene", {
             rank: rank,
-            distance: this.distance,
+            distance: Math.floor(this.distance),
             coin: this.coin
         });
     }

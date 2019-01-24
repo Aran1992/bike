@@ -3887,5 +3887,7 @@ Config.rankMode = {
 
 // 钻石扭蛋花费
 Config.diamondDrawCost = 50;
+// 钻石复活花费
+Config.diamondRebornCost = 10;
 
 export default Config;
