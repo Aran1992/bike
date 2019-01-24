@@ -10,6 +10,7 @@ import DrawScene from "../scene/DrawScene";
 import BikeScene from "../scene/BikeScene";
 import TipScene from "../scene/TipScene";
 import GameResultScene from "../scene/GameResultScene";
+import SystemScene from "../scene/SystemScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -40,6 +41,7 @@ export default class MyApplication extends Application {
             "BikeScene": BikeScene,
             "TipScene": TipScene,
             "GameResultScene": GameResultScene,
+            "SystemScene": SystemScene,
         };
 
         this.sceneTable = {};

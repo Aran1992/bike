@@ -8,7 +8,6 @@ import BikeSprite from "../item/BikeSprite";
 export default class MainScene extends Scene {
     onCreate() {
         [
-            this.ui.systemButton,
             this.ui.homeButton,
             this.ui.rankButton,
         ].forEach(button => this.onClick(button, this.onClickCloseFuncButton.bind(this)));
@@ -19,6 +18,7 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.shopButton, this.onClickShopButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
+        this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
     }
@@ -106,6 +106,11 @@ export default class MainScene extends Scene {
     onClickBikeButton() {
         App.hideScene("MainScene");
         App.showScene("BikeScene");
+    }
+
+    onClickSystemButton() {
+        App.hideScene("MainScene");
+        App.showScene("SystemScene");
     }
 }
 
