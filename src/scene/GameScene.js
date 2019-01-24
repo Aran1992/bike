@@ -957,6 +957,7 @@ export default class GameScene extends Scene {
     }
 
     onDead() {
+        MusicMgr.playSound(Config.soundPath.die);
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
         this.dragBackPos = {x: pos.x, y: pos.y};
@@ -1029,7 +1030,7 @@ export default class GameScene extends Scene {
         let config = Config.bikeList.find(bike => bike.id === id);
         let coin = DataMgr.get(DataMgr.coin, 0) + this.coin * (config.coinPercent || 1);
         DataMgr.set(DataMgr.coin, coin);
-        let distance = DataMgr.get(DataMgr.distance, 0) + this.distance * (config.distancePercent || 1);
+        let distance = DataMgr.get(DataMgr.distance, 0) + Math.floor(this.distance) * (config.distancePercent || 1);
         DataMgr.set(DataMgr.distance, distance);
     }
 }

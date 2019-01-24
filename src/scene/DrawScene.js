@@ -22,11 +22,11 @@ export default class DrawScene extends Scene {
         this.bikeSprite.setPosition(307, 100);
         this.onTick();
         this.timer = setInterval(this.onTick.bind(this), 1000);
+        this.ui.costDiamondText.text = Config.diamondDrawCost;
     }
 
     onShow() {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
-        this.ui.costDiamondText.text = Config.diamondDrawCost;
     }
 
     onClickReturnButton() {
