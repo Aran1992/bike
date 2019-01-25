@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":37,
+    "selecteID":41,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -62,13 +62,14 @@
                     "props":{"y":10,"x":75,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"left":75},
                     "nodeParent":31,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":4,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -81,6 +82,7 @@
                             "compId":20,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":7,"skin":"images/icon-metre.png","scaleY":0.9,"scaleX":0.9,"centerY":0},
@@ -96,6 +98,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,distanceText",
                             "props":{"var":"distanceText","text":"0","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -249,33 +252,6 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,confirmButton",
-            "props":{"var":"confirmButton","skin":"images/button-start.png","centerX":0,"bottom":200},
-            "nodeParent":1,
-            "label":"confirmButton",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":15,
-            "child":[
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":0,"x":0,"skin":"images/english/START.png","centerY":0,"centerX":0},
-                    "nodeParent":15,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":35,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
             "searchKey":"Image,matchRacetrack",
             "props":{"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
             "nodeParent":1,
@@ -316,6 +292,62 @@
                     "child":[
                         ],
                     "$HIDDEN":false
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"width":614,"var":"rebornPanel","skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":300,"centerX":0,"bottom":100},
+            "nodeParent":1,
+            "label":"rebornPanel",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":41,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,distanceText",
+                    "props":{"top":75,"text":"Sliding to Adjust Resurrection Position","fontSize":30,"color":"#ffffff","centerX":0},
+                    "nodeParent":41,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":48,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,confirmButton",
+                    "props":{"x":147,"var":"confirmButton","skin":"images/button-start.png","centerX":0,"bottom":75},
+                    "nodeParent":41,
+                    "label":"confirmButton",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":15,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"x":0,"skin":"images/english/START.png","centerY":0,"centerX":0},
+                            "nodeParent":15,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":35,
+                            "child":[
+                                ]
+                        }]
                 }]
         }],
     "animations":[

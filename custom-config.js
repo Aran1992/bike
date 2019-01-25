@@ -3008,6 +3008,8 @@ Config.bikeList = [
         coinPercent: 1,
         // 结算里程倍率（不填的话默认就是1）
         distancePercent: 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
+        bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
     },
     {
         // 自行车ID 必须要和别的自行车不一样

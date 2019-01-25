@@ -64,7 +64,7 @@ export default class GameScene extends Scene {
         this.ui.pauseButton.visible = false;
         this.ui.surrenderButton.visible = false;
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
-        this.ui.confirmButton.visible = false;
+        this.ui.rebornPanel.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
         this.portableItemButtonList.forEach((button, i) => this.onClick(button, () => this.onClickPortableItem(i)));
 
@@ -347,7 +347,7 @@ export default class GameScene extends Scene {
                 this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
                 this.jumping = true;
                 this.jumpCount++;
-                this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
+                this.jumpExtraCountdown = this.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
                 switch (this.jumpCount) {
                     case 1:
                         MusicMgr.playSound(Config.soundPath.firstJump);
@@ -572,6 +572,8 @@ export default class GameScene extends Scene {
         this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1,});
         this.bikeBody.setPosition(pp);
         this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, 0));
+
+        this.bikeJumpExtraCountdown = config.bikeJumpExtraCountdown || Config.bikeJumpExtraCountdown;
 
         this.resetBikeStatus();
     }
@@ -984,7 +986,7 @@ export default class GameScene extends Scene {
     onDragBackEnded() {
         this.startDragBikeBack = false;
         this.startAdjustBikeHeight = true;
-        this.ui.confirmButton.visible = true;
+        this.ui.rebornPanel.visible = true;
     }
 
     onPointerMove(event) {
@@ -1012,7 +1014,7 @@ export default class GameScene extends Scene {
     }
 
     onClickConfirmButton() {
-        this.ui.confirmButton.visible = false;
+        this.ui.rebornPanel.visible = false;
         this.startAdjustBikeHeight = false;
         this.gameStatus = "play";
         this.bikeBody.setDynamic();
