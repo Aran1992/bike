@@ -32,8 +32,11 @@ export default class MainScene extends Scene {
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
         this.ui.costCoinText.text = 0;
 
-        this.refreshMapMode();
-        this.refreshEndlessMode();
+        if (this.mode === "Map") {
+            this.onClickMapModeButton();
+        } else {
+            this.onClickEndlessModeButton();
+        }
 
         MusicMgr.playBGM(Config.mainBgmPath);
 
