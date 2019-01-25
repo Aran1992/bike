@@ -1,6 +1,8 @@
 {
     "x":0,
     "type":"Scene",
+    "selectedBox":1,
+    "selecteID":37,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -275,7 +277,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,matchRacetrack",
-            "props":{"skin":"images/racetrack.png","right":20,"name":"matchRacetrack","bottom":-200},
+            "props":{"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
             "nodeParent":1,
             "label":"matchRacetrack",
             "isOpen":true,
@@ -288,7 +290,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,racetrack-player",
-                    "props":{"x":50,"skin":"images/racetrack-player.png","name":"racetrack-player","bottom":50},
+                    "props":{"skin":"images/racetrack-player.png","name":"racetrack-player","left":30,"bottom":50},
                     "nodeParent":36,
                     "label":"racetrack-player",
                     "isDirectory":false,
@@ -296,7 +298,8 @@
                     "hasChild":false,
                     "compId":37,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -311,7 +314,8 @@
                     "hasChild":false,
                     "compId":38,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 }]
         }],
     "animations":[

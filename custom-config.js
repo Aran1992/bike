@@ -3890,4 +3890,13 @@ Config.diamondDrawCost = 50;
 // 钻石复活花费
 Config.diamondRebornCost = 10;
 
+// 实时赛道的初始点位置
+Config.racetrack = {
+    startX: 30,
+    startY: 80,
+    playerYInterval: 5,
+    totalLength: 420,
+};
+
+
 export default Config;

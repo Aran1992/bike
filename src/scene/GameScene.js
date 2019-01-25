@@ -71,6 +71,8 @@ export default class GameScene extends Scene {
         this.gameStatus = "end";
         this.gameLoopFunc = this.pause.bind(this);
         App.ticker.add(this.gameLoop.bind(this));
+
+        this.ui.matchRacetrack.visible = false;
     }
 
     onClickPauseButton() {

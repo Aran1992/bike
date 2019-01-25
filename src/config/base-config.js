@@ -218,6 +218,8 @@ Config.imagePath = {
     bikeParticle: "images/particles/bike.png",
     itemAccGem: "images/item-acc.png",
     bubble: "images/bubble.png",
+    racetrackPlayer: "myLaya/laya/assets/images/racetrack-player.png",
+    racetrackEnemy: "myLaya/laya/assets/images/racetrack-npc.png",
 };
 
 Config.emitterPath = {

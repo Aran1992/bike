@@ -12,6 +12,7 @@ export default class MapGameScene extends GameScene {
         super.onCreate();
         this.ui.surrenderButton.visible = true;
         this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
+        this.ui.matchRacetrack.visible = true;
     }
 
     onShow(mapIndex) {
@@ -68,6 +69,7 @@ export default class MapGameScene extends GameScene {
         pp.y += Config.bikeRadius;
         this.createBike(pp);
         this.createEnemy(pp);
+        this.createRacetrackPlayer();
     }
 
     createEnemy(pp) {
@@ -184,5 +186,46 @@ are you sure?`,
             cancelCallback: () => {
             },
         });
+    }
+
+    createRacetrackPlayer() {
+        for (let i = this.ui.matchRacetrack.children.length - 1; i >= 1; i--) {
+            this.ui.matchRacetrack.removeChildAt(i);
+        }
+
+        this.racetrackPlayer = this.ui.matchRacetrack.addChild(new Sprite(resources[Config.imagePath.racetrackPlayer].texture));
+        this.racetrackPlayer.anchor.set(0.5, 0);
+        this.racetrackPlayer.position.set(Config.racetrack.startX, Config.racetrack.startY);
+
+        this.racetrackEnemies = this.enemyList.map((enemy, index) => {
+            let image = this.ui.matchRacetrack.addChildAt(new Sprite(resources[Config.imagePath.racetrackEnemy].texture), 1);
+            image.anchor.set(0.5, 0);
+            image.position.set(Config.racetrack.startX, Config.racetrack.startY - (index + 1) * Config.racetrack.playerYInterval);
+            console.log(Config.racetrack.startY - (index + 1) * Config.racetrack.playerYInterval);
+            return image;
+        });
+
+        this.bikeStartX = this.bikeBody.getPosition().x;
+        this.totalDistance = (this.finalPoint.x - this.bikeSprite.x) * Config.pixel2meter;
+    }
+
+    updateRacetrackPlayer() {
+        this.racetrackPlayer.x = this.calcRacetrackPlayerPositionX(this.bikeBody);
+        this.racetrackEnemies.forEach((image, index) => {
+            image.x = this.calcRacetrackPlayerPositionX(this.enemyList[index].bikeBody);
+        });
+    }
+
+    calcRacetrackPlayerPositionX(body) {
+        let distance = body.getPosition().x - this.bikeStartX;
+        if (distance > this.totalDistance) {
+            distance = this.totalDistance;
+        }
+        return (distance / this.totalDistance) * Config.racetrack.totalLength + Config.racetrack.startX;
+    }
+
+    play() {
+        super.play();
+        this.updateRacetrackPlayer();
     }
 }
