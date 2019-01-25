@@ -3898,5 +3898,8 @@ Config.racetrack = {
     totalLength: 420,
 };
 
+// 敌人自行车和玩家接触时的透明度
+Config.enemy.contactPlayerAlpha = 0.25;
+
 
 export default Config;

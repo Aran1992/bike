@@ -42,7 +42,7 @@ export default class Bike {
     }
 
     onCreate() {
-        this.bikeSprite = this.parent.addChild(new Sprite());
+        this.bikeSprite = this.parent.addChildAt(new Sprite(), 0);
         this.bikeSprite.texture = this.frames[this.frameIndex];
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
@@ -138,6 +138,11 @@ export default class Bike {
         if (!this.isDead && !this.jumping) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
+        }
+        if (Utils.calcPointDistance(this.bikeBody.getPosition(), this.gameScene.bikeBody.getPosition()) < Config.bikeRadius * 2) {
+            this.bikeSprite.alpha = Config.bike.contactPlayerAlpha;
+        } else {
+            this.bikeSprite.alpha = 1;
         }
     }
 

@@ -238,6 +238,7 @@ Config.bike = {
 
 Config.enemy = {
     count: 3,
+    contactPlayerAlpha: 0.5
 };
 
 Config.sceneItemImagePath = {
