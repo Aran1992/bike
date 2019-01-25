@@ -166,6 +166,7 @@ export default class Bike {
 
         if (this.startReborn) {
             this.startDragBikeBack = true;
+            this.rebornDragVelocity = Utils.calcPointDistance(this.bikeBody.getPosition(), this.dragBackPos) / Config.rebornDragDuration / Config.fps;
             this.bikeBubbleSprite.visible = true;
             this.bikeBody.setStatic();
             this.bikeBody.setAngle(0);
@@ -216,7 +217,7 @@ export default class Bike {
     }
 
     dragBikeBack() {
-        let velocity = Config.rebornDragVelocity;
+        let velocity = this.rebornDragVelocity;
         let targetPos = this.dragBackPos;
         let curPos = this.bikeBody.getPosition();
         let radius = Utils.calcRadius(curPos, targetPos);

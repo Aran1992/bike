@@ -2974,8 +2974,8 @@ Config.bikeJumpingAnimation = {
     },
 };
 
-// 复活拉回的速度
-Config.rebornDragVelocity = 0.25;
+// 复活拉回的时间（单位秒）
+Config.rebornDragDuration = 0.5;
 // 复活气泡漂浮时间
 Config.rebornFloatFrame = 300;
 // 复活气泡漂浮速度
