@@ -2995,9 +2995,9 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.1  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      small",
+        dsc: "【 NO.1  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
         // 随机的权重
-        weight: 2,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -3011,26 +3011,6 @@ Config.bikeList = [
     },
     {
         // 自行车ID 必须要和别的自行车不一样
-        id: 5,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike5.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.63, 0.7],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.2  bike 】 \n  Speed  1.2 \n  Jump    1 \n  Size      small",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
         id: 1,
         // 覆盖其上的图片路径
         imagePath: "images/bike/bike1.png",
@@ -3041,53 +3021,13 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.3  bike 】 \n  Speed  1 \n  Jump    1.5 \n  Size      middle",
+        dsc: "【 NO.2  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 0.9,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 2,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike2.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.63, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.4  bike 】 \n  Speed  1.4 \n  Jump    1 \n  Size      small",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.4,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 3,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike3.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.52, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.5  bike 】 \n  Speed  2 \n  Jump    0.8 \n  Size      big",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 2,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1.2,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3101,13 +3041,113 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.6  bike 】 \n  Speed  1 \n  Jump    1.8 \n  Size      middle",
+        dsc: "【 NO.3  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
+        // 随机的权重
+        weight: 2,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 11,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike11.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.6, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.4  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
+        // 随机的权重
+        weight: 2,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 13,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike13.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [1, 0.5],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.5  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
+        // 随机的权重
+        weight: 2,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 15,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike15.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.5, 0.8],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.6  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
+        // 随机的权重
+        weight: 2,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 2,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike2.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.63, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.7  bike 】 \n  Speed  100% \n  Jump    150% \n  Size      small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 0.8,
+        densityPercent: 0.9,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 5,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike5.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.63, 0.7],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.8  bike 】 \n  Speed  100% \n  Jump    150% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 0.9,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3121,7 +3161,127 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.7  bike 】 \n  Speed  0.8 \n  Jump    1.8 \n  Size      small",
+        dsc: "【 NO.9  bike 】 \n  Speed  100% \n  Jump    150% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 0.9,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 20,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike20.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.5, 0.6],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.10  bike 】 \n  Speed  140% \n  Jump      90% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.4,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 8,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike8.png",
+        // 缩放倍数
+        scale: [0.45, 0.45],
+        // 图片的锚点
+        anchor: [0.5, 0.5],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.11  bike 】 \n  Speed  140% \n  Jump      90% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.4,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 41,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike41.png",
+        // 缩放倍数
+        scale: [0.4, 0.4],
+        // 图片的锚点
+        anchor: [0.45, 0.68],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.12  bike 】 \n  Speed  140% \n  Jump      90% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.4,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 21,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike21.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.5, 0.86],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.13  bike 】 \n  Speed    80% \n  Jump    180% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 0.8,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 22,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike22.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.48, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.14  bike 】 \n  Speed    80% \n  Jump    180% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 0.8,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 23,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike23.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.77, 0.7],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.15  bike 】 \n  Speed    80% \n  Jump    180% \n  Size      small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3141,431 +3301,11 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.8  bike 】 \n  Speed  1.6 \n  Jump    0.9 \n  Size      middle",
+        dsc: "【 NO.16  bike 】 \n  Speed    80% \n  Jump    100% \n  Size      small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1.1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 53,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike53.png",
-        // 缩放倍数
-        scale: [0.35, 0.35],
-        // 图片的锚点
-        anchor: [0.71, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.9  bike 】 \n  Speed  0.9 \n  Jump    1.5 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 0.9,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 0.9,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 51,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike51.png",
-        // 缩放倍数
-        scale: [0.35, 0.35],
-        // 图片的锚点
-        anchor: [0.71, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.10  bike 】 \n  Speed  1.6 \n  Jump    0.9 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1.1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 8,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike8.png",
-        // 缩放倍数
-        scale: [0.45, 0.45],
-        // 图片的锚点
-        anchor: [0.5, 0.5],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 9,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike9.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.45, 0.35],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 10,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike10.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.71, 0.65],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 11,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike11.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.6, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 12,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike12.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.71, 0.6],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 13,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike13.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [1, 0.5],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 14,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike14.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [1.05, 1.08],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 15,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike15.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.5, 0.8],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 16,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike16.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.59, 0.71],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 17,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike17.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.69, 0.8],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 18,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike18.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.5, 0.6],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 19,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike19.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.5, 1.25],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 20,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike20.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.5, 0.6],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 21,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike21.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.5, 0.86],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 22,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike22.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.48, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 23,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike23.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.77, 0.7],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 24,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike24.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.55, 0.3],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 25,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike25.png",
-        // 缩放倍数
-        scale: [0.5, 0.5],
-        // 图片的锚点
-        anchor: [0.6, 0.73],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
-    },
-    {
-        // 自行车ID 必须要和别的自行车不一样
-        id: 41,
-        // 覆盖其上的图片路径
-        imagePath: "images/bike/bike41.png",
-        // 缩放倍数
-        scale: [0.4, 0.4],
-        // 图片的锚点
-        anchor: [0.45, 0.68],
-        // 图片在自行车内的位置 (0,0)就是在中心点
-        position: [0, 0],
-        // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
-        // 随机的权重
-        weight: 1,
-        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
+        velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
     },
@@ -3581,11 +3321,11 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
+        dsc: "【 NO.17  bike 】 \n  Speed    80% \n  Jump    100% \n  Size      small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
+        velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
     },
@@ -3601,19 +3341,19 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
+        dsc: "【 NO.18  bike 】 \n  Speed    80% \n  Jump    100% \n  Size      middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
+        velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
-        id: 52,
+        id: 51,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/bike52.png",
+        imagePath: "images/bike/bike51.png",
         // 缩放倍数
         scale: [0.35, 0.35],
         // 图片的锚点
@@ -3621,13 +3361,33 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
+        dsc: "【 NO.19  bike 】 \n  Speed  120% \n  Jump    180% \n  Size      middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
+        velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1,
+        densityPercent: 0.8,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 53,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike53.png",
+        // 缩放倍数
+        scale: [0.35, 0.35],
+        // 图片的锚点
+        anchor: [0.71, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.20  bike 】 \n  Speed  120% \n  Jump    180% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 0.8,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3641,13 +3401,253 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.  bike 】 \n  Speed  1 \n  Jump    1 \n  Size      middle",
+        dsc: "【 NO.21  bike 】 \n  Speed  120% \n  Jump    180% \n  Size      middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1,
+        velocityPercent: 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 0.8,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 10,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike10.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.71, 0.65],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.22  bike 】 \n  Speed  120% \n  Jump      80% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 19,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike19.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.5, 1.25],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.23  bike 】 \n  Speed  120% \n  Jump      80% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 12,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike12.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.71, 0.6],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.24  bike 】 \n  Speed  120% \n  Jump      80% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 9,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike9.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.45, 0.35],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.25  bike 】 \n  Speed  160% \n  Jump    100% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.6,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 24,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike24.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.55, 0.3],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.26  bike 】 \n  Speed  160% \n  Jump    100% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.6,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 18,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike18.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.5, 0.6],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.27  bike 】 \n  Speed  160% \n  Jump    100% \n  Size      middle",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.6,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 14,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike14.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [1.05, 1.08],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.28  bike 】 \n  Speed  160% \n  Jump      80% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.6,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 16,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike16.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.59, 0.71],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.29  bike 】 \n  Speed  160% \n  Jump      80% \n  Size      big",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.6,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 17,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike17.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.69, 0.8],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.30  bike 】 \n  Speed  160% \n  Jump      80% \n  Size      small",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 1.6,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 3,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike3.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.52, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.31  bike 】 \n  Speed  200% \n  Jump      80% \n  Size      big",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 52,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike52.png",
+        // 缩放倍数
+        scale: [0.35, 0.35],
+        // 图片的锚点
+        anchor: [0.71, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.31  bike 】 \n  Speed  200% \n  Jump      80% \n  Size      big",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
+    },
+    {
+        // 自行车ID 必须要和别的自行车不一样
+        id: 25,
+        // 覆盖其上的图片路径
+        imagePath: "images/bike/bike25.png",
+        // 缩放倍数
+        scale: [0.5, 0.5],
+        // 图片的锚点
+        anchor: [0.6, 0.73],
+        // 图片在自行车内的位置 (0,0)就是在中心点
+        position: [0, 0],
+        // 自行车的描述
+        dsc: "【 NO.31  bike 】 \n  Speed  200% \n  Jump      80% \n  Size      big",
+        // 随机的权重
+        weight: 1,
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
+        velocityPercent: 2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        densityPercent: 1.2,
     },
 ];
 
