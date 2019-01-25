@@ -21,6 +21,8 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
+
+        this.onClickEndlessModeButton();
     }
 
     onShow() {
@@ -30,7 +32,8 @@ export default class MainScene extends Scene {
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
         this.ui.costCoinText.text = 0;
 
-        this.onClickEndlessModeButton();
+        this.refreshMapMode();
+        this.refreshEndlessMode();
 
         MusicMgr.playBGM(Config.mainBgmPath);
 
@@ -61,6 +64,10 @@ export default class MainScene extends Scene {
         this.ui.costCoinPanel.visible = true;
         this.ui.costCoinText.text = Config.rankMode.costCoin;
         this.mode = "Map";
+        this.refreshMapMode();
+    }
+
+    refreshMapMode() {
         let index = DataMgr.get(DataMgr.currentMapScene);
         let path = Config.mapList[index].texture.mainCover;
         this.ui.sceneImage.children[0].texture = resources[path].texture;
@@ -69,6 +76,10 @@ export default class MainScene extends Scene {
     onClickEndlessModeButton() {
         this.ui.costCoinPanel.visible = false;
         this.mode = "Endless";
+        this.refreshEndlessMode();
+    }
+
+    refreshEndlessMode() {
         let index = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         let path = Config.endlessMode.sceneList[index].texture.mainCover;
         this.ui.sceneImage.children[0].texture = resources[path].texture;
