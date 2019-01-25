@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":21,
-    "selecteID":22,
+    "selectedBox":1,
+    "selecteID":53,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -152,14 +152,13 @@
             "props":{"width":586,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","height":299,"centerX":0,"bottom":22},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,drawButton",
                     "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"left":13,"height":101,"bottom":29},
@@ -172,7 +171,6 @@
                     "compId":22,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":3},
@@ -187,7 +185,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,bikeDscText",
                     "props":{"var":"bikeDscText","text":"12345678901234567890","fontSize":50,"color":"#ffffff","centerY":0,"centerX":0},
@@ -206,7 +203,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,selectBikeButton",
-            "props":{"width":150,"var":"selectBikeButton","top":29,"skin":"images/button-enabled-scene.png","right":53,"height":70},
+            "props":{"width":200,"var":"selectBikeButton","top":29,"skin":"images/button-enabled-scene.png","sizeGrid":"0,50,0,50","right":56,"height":70},
             "nodeParent":1,
             "label":"selectBikeButton",
             "isOpen":true,
@@ -235,7 +232,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,unlockBikeImage",
-            "props":{"width":150,"visible":false,"var":"unlockBikeImage","top":29,"skin":"images/button-disabled-scene.png","right":53,"height":70},
+            "props":{"width":200,"visible":false,"var":"unlockBikeImage","top":29,"skin":"images/button-disabled-scene.png","sizeGrid":"0,50,0,50","right":56,"height":70},
             "nodeParent":1,
             "label":"unlockBikeImage",
             "isOpen":true,
