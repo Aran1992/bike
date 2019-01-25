@@ -49,6 +49,7 @@ export default class GameOverScene extends Scene {
                 root: this.ui.resultList,
                 updateItemFunc: this.updateResultItem.bind(this),
                 count: 2,
+                isStatic: true,
             });
         }
 

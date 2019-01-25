@@ -3,12 +3,14 @@ import UIHelper from "./UIHelper";
 import Config from "../config";
 
 export default class List {
-    constructor({root, initItemFunc, updateItemFunc, count}) {
+    constructor({root, initItemFunc, updateItemFunc, count, isStatic}) {
         this.itemTable = {};
         this.cacheItemList = [];
         this.root = root;
         this.createMask();
-        this.bindListener();
+        if (!isStatic) {
+            this.bindListener();
+        }
         this.item = root.children[0];
         this.item.visible = false;
         this.container = new Container();

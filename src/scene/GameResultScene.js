@@ -37,6 +37,7 @@ export default class GameResultScene extends Scene {
                 root: this.ui.resultList,
                 updateItemFunc: this.updateResultItem.bind(this),
                 count: 3,
+                isStatic: true,
             });
         } else {
             this.resultList.refresh();
@@ -47,6 +48,7 @@ export default class GameResultScene extends Scene {
                 root: this.ui.rankList,
                 updateItemFunc: this.updateRankItem.bind(this),
                 count: Config.enemy.count + 1,
+                isStatic: true,
             });
         } else {
             this.rankList.refresh();

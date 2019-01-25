@@ -201,7 +201,6 @@ are you sure?`,
             let image = this.ui.matchRacetrack.addChildAt(new Sprite(resources[Config.imagePath.racetrackEnemy].texture), 1);
             image.anchor.set(0.5, 0);
             image.position.set(Config.racetrack.startX, Config.racetrack.startY - (index + 1) * Config.racetrack.playerYInterval);
-            console.log(Config.racetrack.startY - (index + 1) * Config.racetrack.playerYInterval);
             return image;
         });
 
