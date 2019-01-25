@@ -552,8 +552,8 @@ export default class GameScene extends Scene {
         this.bikeDecorateSprite.position.set(...config.position);
 
         if (config.velocityPercent) {
-            this.bikeCommonVelocity *= config.velocityPercent;
-            this.bikeAccVelocity *= config.velocityPercent;
+            this.playerCommonVelocity = this.bikeCommonVelocity * config.velocityPercent;
+            this.playerAccVelocity = this.bikeAccVelocity * config.velocityPercent;
         }
         let density;
         if (config.densityPercent) {
@@ -571,7 +571,7 @@ export default class GameScene extends Scene {
         this.bikeBody = this.world.createDynamicBody();
         this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1,});
         this.bikeBody.setPosition(pp);
-        this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, 0));
+        this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, 0));
 
         this.resetBikeStatus();
     }
@@ -848,13 +848,13 @@ export default class GameScene extends Scene {
             } else if (this.bikeAccFrame !== undefined) {
                 if (this.bikeAccFrame === 0) {
                     this.bikeAccFrame = undefined;
-                    this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
+                    this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, velocity.y));
                 } else {
-                    this.bikeBody.setLinearVelocity(Vec2(this.bikeAccVelocity, velocity.y));
+                    this.bikeBody.setLinearVelocity(Vec2(this.playerAccVelocity, velocity.y));
                     this.bikeAccFrame--;
                 }
             } else {
-                this.bikeBody.setLinearVelocity(Vec2(this.bikeCommonVelocity, velocity.y));
+                this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, velocity.y));
             }
         }
     }
@@ -900,7 +900,7 @@ export default class GameScene extends Scene {
             let baseY = Config.designHeight / 2;
             let stepScale = Config.cameraAutoZoomScaleSpeed;
             let vx = this.bikeBody.getLinearVelocity().x;
-            let targetScale = vx === this.bikeCommonVelocity ? Config.cameraAutoZoomCommonScale : 1;
+            let targetScale = vx === this.playerCommonVelocity ? Config.cameraAutoZoomCommonScale : 1;
             let curScale = this.autoZoomContainer.scale.x;
             let diff = targetScale - curScale;
             let scale;
