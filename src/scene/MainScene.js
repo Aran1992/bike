@@ -81,7 +81,6 @@ export default class MainScene extends Scene {
         this.mode = "Endless";
         this.refreshEndlessMode();
     }
-
     refreshEndlessMode() {
         let index = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         let path = Config.endlessMode.sceneList[index].texture.mainCover;

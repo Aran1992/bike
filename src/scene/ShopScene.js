@@ -39,6 +39,7 @@ export default class ShopScene extends Scene {
     onShow() {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
+        this.onClickRadio(this.radio.selectedIndex);
     }
 
     onClickReturnButton() {
