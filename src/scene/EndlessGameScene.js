@@ -9,6 +9,7 @@ import BlackBird from "../item/BlackBird";
 export default class EndlessGameScene extends GameScene {
     onCreate() {
         super.onCreate();
+        this.registerEvent("Continue", this.onContinue);
         this.ui.pauseButton.visible = true;
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
@@ -169,6 +170,22 @@ export default class EndlessGameScene extends GameScene {
             this.gameOver();
             this.gameLoopFunc = this.pause.bind(this);
         }, Config.bike.deadCompleteTime);
+    }
+
+    onClickPauseButton() {
+        if (this.gameStatus === "play") {
+            this.gameLoopFunc = this.pause.bind(this);
+            this.gameStatus = "pause";
+            App.showScene("PauseScene");
+        } else if (this.gameStatus === "pause") {
+            this.gameLoopFunc = this.play.bind(this);
+            this.gameStatus = "play";
+            App.hideScene("PauseScene");
+        }
+    }
+
+    onContinue() {
+        this.onClickPauseButton();
     }
 }
 

@@ -24,7 +24,6 @@ export default class GameScene extends Scene {
 
         this.registerEvent("Restart", this.onRestart);
         this.registerEvent("Reborn", this.onReborn);
-        this.registerEvent("Continue", this.onContinue);
         this.registerEvent("AteItem", this.onAteItem);
 
         window.addEventListener("keydown", this.onKeydown.bind(this));
@@ -73,18 +72,6 @@ export default class GameScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
 
         this.ui.matchRacetrack.visible = false;
-    }
-
-    onClickPauseButton() {
-        if (this.gameStatus === "play") {
-            this.gameLoopFunc = this.pause.bind(this);
-            this.gameStatus = "pause";
-            App.showScene("PauseScene");
-        } else if (this.gameStatus === "pause") {
-            this.gameLoopFunc = this.play.bind(this);
-            this.gameStatus = "play";
-            App.hideScene("PauseScene");
-        }
     }
 
     onShow() {
@@ -156,10 +143,6 @@ export default class GameScene extends Scene {
         this.bikeBody.setAngle(0);
         this.bikeSprite.rotation = 0;
         this.gameLoopFunc = this.play.bind(this);
-    }
-
-    onContinue() {
-        this.onClickPauseButton();
     }
 
     onLoadedGameRes() {
@@ -388,10 +371,6 @@ export default class GameScene extends Scene {
         switch (event.code) {
             case "ArrowUp": {
                 this.onClickGameContainer();
-                break;
-            }
-            case "Space": {
-                this.onClickPauseButton();
                 break;
             }
         }

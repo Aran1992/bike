@@ -25,15 +25,35 @@ export default class PauseScene extends Scene {
     }
 
     static onClickMainButton() {
-        App.hideScene("PauseScene");
-        App.destroyScene("MapGameScene");
-        App.destroyScene("EndlessGameScene");
-        App.showScene("MainScene");
+        App.showScene("TipScene", {
+            tip: `Are you sure you want to quit the game? 
+The current game data will be saved
+automatically after exit.`,
+            confirmCallback: () => {
+                App.getScene("EndlessGameScene").settle();
+                App.hideScene("PauseScene");
+                App.destroyScene("MapGameScene");
+                App.destroyScene("EndlessGameScene");
+                App.showScene("MainScene");
+            },
+            cancelCallback: () => {
+            }
+        });
     }
 
     static onClickRestartButton() {
-        App.hideScene("PauseScene");
-        EventMgr.dispatchEvent("Restart");
+        App.showScene("TipScene", {
+            tip: `Are you sure to restart the game? 
+The current game data will be saved
+automatically after exit.`,
+            confirmCallback: () => {
+                App.getScene("EndlessGameScene").settle();
+                App.hideScene("PauseScene");
+                EventMgr.dispatchEvent("Restart");
+            },
+            cancelCallback: () => {
+            }
+        });
     }
 }
 
