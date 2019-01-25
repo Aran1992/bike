@@ -10,8 +10,12 @@ class MusicMgr_ {
         this.soundList = [];
     }
 
-    playBGM(path) {
+    playBGM(path, reset) {
         if (!Utils.isIOS()) {
+            if (path === this.bgmPath && !reset) {
+                return;
+            }
+            this.bgmPath = path;
             this.bgmAudio.src = path;
             this.bgmAudio.muted = !DataMgr.get(DataMgr.bgmOn, true);
             this.bgmAudio.onload = () => {

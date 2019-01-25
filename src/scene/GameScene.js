@@ -200,9 +200,7 @@ export default class GameScene extends Scene {
 
         MusicMgr.pauseBGM();
         MusicMgr.playSound(Config.soundPath.startLevel, () => {
-            if (this.gameStatus !== "end") {
-                MusicMgr.playBGM(this.bgmPath);
-            }
+            MusicMgr.playBGM(this.bgmPath);
         });
     }
 
