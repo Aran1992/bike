@@ -67,7 +67,7 @@ export default class BikeScene extends Scene {
     }
 
     hasOwnedBike(id) {
-        return DataMgr.get(DataMgr.ownedBikeList, []).indexOf(id) !== -1;
+        return DataMgr.get(DataMgr.unlockAllBike, false) || DataMgr.get(DataMgr.ownedBikeList, []).indexOf(id) !== -1;
     }
 
     onClickSelectedBikeButton() {
