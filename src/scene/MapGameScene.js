@@ -34,7 +34,6 @@ export default class MapGameScene extends GameScene {
         this.bgY = this.mapConfig.bgY || Config.bgY;
         this.bgmPath = this.mapConfig.bgmPath || Config.defaultBgmPath;
         this.bgScale = this.mapConfig.bgScale || Config.defaultBgScale;
-        this.isDirectReborn = true;
     }
 
     getResPathList() {
@@ -226,5 +225,10 @@ are you sure?`,
     play() {
         super.play();
         this.updateRacetrackPlayer();
+    }
+
+    onDead() {
+        super.onDead();
+        this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
     }
 }

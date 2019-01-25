@@ -36,7 +36,6 @@ export default class EndlessGameScene extends GameScene {
         this.bgY = this.sceneConfig.bgY || Config.bgY;
         this.bgmPath = this.sceneConfig.bgmPath || Config.defaultBgmPath;
         this.bgScale = this.sceneConfig.bgScale || Config.defaultBgScale;
-        this.isDirectReborn = false;
     }
 
     getResPathList() {
@@ -162,6 +161,14 @@ export default class EndlessGameScene extends GameScene {
             diamondReborn: this.diamondReborn
         });
         this.diamondReborn = true;
+    }
+
+    onDead() {
+        super.onDead();
+        this.deadCompleteTimer = setTimeout(() => {
+            this.gameOver();
+            this.gameLoopFunc = this.pause.bind(this);
+        }, Config.bike.deadCompleteTime);
     }
 }
 

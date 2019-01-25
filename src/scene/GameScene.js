@@ -963,12 +963,6 @@ export default class GameScene extends Scene {
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
         this.dragBackPos = {x: pos.x, y: pos.y};
-        if (this.isDirectReborn) {
-            this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
-        } else {
-            this.gameOver();
-            this.gameLoopFunc = this.pause.bind(this);
-        }
     }
 
     dragBikeBack() {
