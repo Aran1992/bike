@@ -2,8 +2,8 @@ import Config from "../config";
 
 class DataMgr_ {
     constructor() {
-        if (localStorage.data) {
-            this.dataTable = JSON.parse(localStorage.data);
+        if (localStorage[window.location.href]) {
+            this.dataTable = JSON.parse(localStorage[window.location.href]);
         } else {
             this.dataTable = {};
         }
@@ -11,7 +11,7 @@ class DataMgr_ {
 
     set(key, value) {
         this.dataTable[key] = value;
-        localStorage.data = JSON.stringify(this.dataTable);
+        localStorage[window.location.href] = JSON.stringify(this.dataTable);
     }
 
     get(key, defaultValue) {
