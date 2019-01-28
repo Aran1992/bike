@@ -140,7 +140,7 @@ export default class Bike {
             this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
         }
         if (Utils.calcPointDistance(this.bikeBody.getPosition(), this.gameScene.bikeBody.getPosition()) < Config.bikeRadius * 2) {
-            this.bikeSprite.alpha = Config.bike.contactPlayerAlpha;
+            this.bikeSprite.alpha = Config.enemy.contactPlayerAlpha;
         } else {
             this.bikeSprite.alpha = 1;
         }
