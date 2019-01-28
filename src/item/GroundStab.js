@@ -43,13 +43,15 @@ export default class GroundStab {
             }
             let width = this.sprite.texture.width * this.sprite.scale.x * Config.pixel2meter;
             let height = this.sprite.texture.height * this.sprite.scale.y * Config.pixel2meter;
-            let shape = Polygon([
-                Vec2(-width / 2, 0),
-                Vec2(width / 2, 0),
-                Vec2(0, height),
-            ]);
-            this.fixture = this.body.createFixture(shape);
-            this.fixture.setUserData({isFatal: true});
+            if (width !== 0 && height !== 0) {
+                let shape = Polygon([
+                    Vec2(-width / 2, 0),
+                    Vec2(width / 2, 0),
+                    Vec2(0, height),
+                ]);
+                this.fixture = this.body.createFixture(shape);
+                this.fixture.setUserData({isFatal: true});
+            }
         }
     }
 }

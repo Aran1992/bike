@@ -62,29 +62,27 @@
     },
     "needlex4_03.png": {
       "frame": {
-        "x": 137,
+        "x": 0,
         "y": 0,
-        "w": 59,
-        "h": 97
+        "w": 0,
+        "h": 0
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 59,
-        "h": 97
+        "w": 0,
+        "h": 0
       },
       "sourceSize": {
-        "w": 59,
-        "h": 97
+        "w": 0,
+        "h": 0
       }
     }
   },
   "animations": {
     "needlex4": [
-      "needlex4_01.png",
-      "needlex4_02.png",
       "needlex4_03.png"
     ]
   },
