@@ -98,6 +98,9 @@ export default class Bike {
                 contact.setEnabled(false);
             } else if (this.gameScene.chtable.item.is(anotherFixture)) {
                 contact.setEnabled(false);
+            } else if (this.gameScene.chtable.npc.is(anotherFixture)) {
+                contact.setEnabled(false);
+                this.isContactFatalEdge = true;
             }
         }
     }

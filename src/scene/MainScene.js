@@ -94,8 +94,8 @@ export default class MainScene extends Scene {
             if (coin >= costCoin) {
                 DataMgr.set(DataMgr.coin, coin - costCoin);
                 App.hideScene("MainScene");
-                App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
-                // App.showScene("MapGameScene", 0);
+                // App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+                App.showScene("MapGameScene", 0);
             } else {
                 App.showNotice("Gold Coin is not enough!");
 

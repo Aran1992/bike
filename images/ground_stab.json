@@ -4,96 +4,80 @@
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 64,
-        "h": 96
+        "w": 54,
+        "h": 97
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 64,
-        "h": 96
+        "w": 54,
+        "h": 97
       },
       "sourceSize": {
-        "w": 64,
-        "h": 96
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.5
+        "w": 54,
+        "h": 97
       }
     },
     "needlex4_01.png": {
       "frame": {
-        "x": 0,
-        "y": 96,
-        "w": 64,
-        "h": 96
+        "x": 54,
+        "y": 0,
+        "w": 36,
+        "h": 58
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 64,
-        "h": 96
+        "w": 36,
+        "h": 58
       },
       "sourceSize": {
-        "w": 64,
-        "h": 96
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.5
+        "w": 36,
+        "h": 58
       }
     },
     "needlex4_02.png": {
       "frame": {
-        "x": 0,
-        "y": 192,
-        "w": 64,
-        "h": 96
+        "x": 90,
+        "y": 0,
+        "w": 47,
+        "h": 77
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 64,
-        "h": 96
+        "w": 47,
+        "h": 77
       },
       "sourceSize": {
-        "w": 64,
-        "h": 96
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.5
+        "w": 47,
+        "h": 77
       }
     },
     "needlex4_03.png": {
       "frame": {
-        "x": 0,
-        "y": 288,
-        "w": 64,
-        "h": 96
+        "x": 137,
+        "y": 0,
+        "w": 59,
+        "h": 97
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 64,
-        "h": 96
+        "w": 59,
+        "h": 97
       },
       "sourceSize": {
-        "w": 64,
-        "h": 96
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.5
+        "w": 59,
+        "h": 97
       }
     }
   },
@@ -101,11 +85,7 @@
     "needlex4": [
       "needlex4_01.png",
       "needlex4_02.png",
-      "needlex4.png",
-      "needlex4_03.png",
-      "needlex4.png",
-      "needlex4_02.png",
-      "needlex4_01.png"
+      "needlex4_03.png"
     ]
   },
   "meta": {
@@ -114,10 +94,10 @@
     "image": "ground_stab.png",
     "format": "RGBA8888",
     "size": {
-      "w": 64,
-      "h": 384
+      "w": 196,
+      "h": 97
     },
     "scale": "1",
-    "smartupdate": "$TexturePacker:SmartUpdate:9302bed47c8b4f8df89b190eb0f52fd8:74153a76010e2bb9cccf49e97be4eaf5:a5406e73bdffaacac4dd776db02571e2$"
+    "smartupdate": "$TexturePacker:SmartUpdate:e7b87af40499e7a22d4cbcba339f7ad2:792e9f75d51b6f63b96a9d3451f6878f:a5406e73bdffaacac4dd776db02571e2$"
   }
 }

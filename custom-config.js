@@ -3864,12 +3864,10 @@ Config.item = {
     },
     // 地刺
     groundStab: {
-        // 实际区域宽度
-        bodyWidth: 50,
-        // 实际区域高度
-        bodyHeight: 70,
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.5,
+        animationSpeed: 0.25,
+        // 静止状态动画是第几帧（从0开始）
+        staticFrame: 2,
     }
 };
 

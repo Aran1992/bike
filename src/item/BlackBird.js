@@ -34,5 +34,9 @@ export default class BlackBird extends Item {
         body.setAwake(false);
         this.body = body;
         this.baseY = pp.y;
+
+        if (GameUtils.isItemType(this.config, "UpDown")) {
+            this.upDown = true;
+        }
     }
 }

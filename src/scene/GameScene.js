@@ -207,6 +207,9 @@ export default class GameScene extends Scene {
                             ud.sprite.visible = false;
                             EventMgr.dispatchEvent("AteItem", body.getUserData().type);
                         }
+                    }else if (this.chtable.npc.is(anotherFixture)) {
+                        contact.setEnabled(false);
+                        this.isContactFatalEdge = true;
                     }
                 },
                 beginContact(contact, anotherFixture,) {
@@ -852,10 +855,13 @@ export default class GameScene extends Scene {
             if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 if (!bird.showed) {
                     MusicMgr.playSound(Config.soundPath.birdAppear);
+                    bird.showed = true;
+                    bird.body.setAwake(true);
                 }
-                bird.showed = true;
-                let velocity = bird.body.getLinearVelocity();
-                bird.body.setLinearVelocity(Vec2(-20, velocity.y));
+                if (!bird.upDown) {
+                    let velocity = bird.body.getLinearVelocity();
+                    bird.body.setLinearVelocity(Vec2(-20, velocity.y));
+                }
                 let gravity = -2.5 * this.gravity;
                 if (bird.body.getPosition().y < bird.baseY) {
                     bird.body.applyForceToCenter(Vec2(0, gravity * 5));

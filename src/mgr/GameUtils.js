@@ -42,6 +42,10 @@ export default class GameUtils {
         return config.label.split("//")[0];
     }
 
+    static isItemType(config,type) {
+        return config.label.split("//").indexOf(type)!==-1;
+    }
+
     static sortSceneChildrenByX(children) {
         children.sort((a, b) => {
             let ax = GameUtils.getSceneChildX(a);
