@@ -15,7 +15,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Basic",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -52,7 +52,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Uphill",
         // scene文件的路径
-        scenePath: "Test2",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -89,7 +89,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Downhill",
         // scene文件的路径
-        scenePath: "Test3",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -126,7 +126,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "High Speed",
         // scene文件的路径
-        scenePath: "Test4",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -163,7 +163,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Low Gravity",
         // scene文件的路径
-        scenePath: "Test5",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -200,7 +200,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test6",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -237,7 +237,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test7",
         // scene文件的路径
-        scenePath: "Test2",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -274,7 +274,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test8",
         // scene文件的路径
-        scenePath: "Test3",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -311,7 +311,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test9",
         // scene文件的路径
-        scenePath: "Test4",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -348,7 +348,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test10",
         // scene文件的路径
-        scenePath: "Test5",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -385,7 +385,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test11",
         // scene文件的路径
-        scenePath: "Test",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -422,7 +422,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test12",
         // scene文件的路径
-        scenePath: "Test2",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -3898,8 +3898,8 @@ Config.racetrack = {
     totalLength: 420,
 };
 
-// 敌人自行车和玩家接触时的透明度
-Config.enemy.contactPlayerAlpha = 0.25;
+// 敌人自行车和玩家接触时的透明度（0完全透明 ~ 1完全不透明）
+Config.enemy.contactPlayerAlpha = 0.6;
 
 
 export default Config;
