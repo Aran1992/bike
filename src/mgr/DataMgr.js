@@ -41,10 +41,18 @@ DataMgr.unlockEndlessSceneIDList = "unlockEndlessSceneIDList";
 DataMgr.bgmOn = "bgmOn";
 DataMgr.soundOn = "soundOn";
 DataMgr.distanceRecord = "distanceRecord";
+DataMgr.bikeLevelMap = "bikeLevelMap";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);
 }
+let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
+DataMgr.get(DataMgr.ownedBikeList, []).forEach(id => {
+    if (bikeLevelMap[id] === undefined) {
+        bikeLevelMap[id] = 0;
+    }
+});
+DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
 if (DataMgr.get(DataMgr.selectedBike) === undefined) {
     DataMgr.set(DataMgr.selectedBike, 0);
 }

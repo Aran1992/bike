@@ -3002,12 +3002,12 @@ Config.bikeList = [
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
-        // 结算积分倍率（不填的话默认就是1）
-        scorePercent: 1,
-        // 结算金币倍率（不填的话默认就是1）
-        coinPercent: 1,
-        // 结算里程倍率（不填的话默认就是1）
-        distancePercent: 1,
+        // 结算积分倍率（不填的话就使用默认值）
+        scorePercent: [1, 2, 3, 4, 5, 6, 7],
+        // 结算金币倍率（不填的话就使用默认值）
+        coinPercent: [1, 2, 3, 4, 5, 6, 7],
+        // 结算里程倍率（不填的话就使用默认值）
+        distancePercent: [1, 2, 3, 4, 5, 6, 7],
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
     },
@@ -3684,6 +3684,13 @@ Config.mainScene = {
         velocityX: 2,
     }
 };
+// 扭蛋界面相关配置
+Config.drawScene = {
+    // 自行车相关配置
+    bikeSprite: {
+        y: 100,
+    }
+};
 
 // 商店游戏币配置
 Config.moneyList = [
@@ -3901,5 +3908,12 @@ Config.racetrack = {
 // 敌人自行车和玩家接触时的透明度（0完全透明 ~ 1完全不透明）
 Config.enemy.contactPlayerAlpha = 0.6;
 
+
+// 默认结算积分倍率
+Config.bike.scorePercent = [1, 2, 3, 4, 5, 6, 7];
+// 默认结算金币倍率
+Config.bike.coinPercent = [1, 2, 3, 4, 5, 6, 7];
+// 默认结算里程倍率
+Config.bike.distancePercent = [1, 2, 3, 4, 5, 6, 7];
 
 export default Config;

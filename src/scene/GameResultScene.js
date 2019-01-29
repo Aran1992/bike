@@ -4,6 +4,7 @@ import List from "../ui/List";
 import Config from "../config";
 import MusicMgr from "../mgr/MusicMgr";
 import {Graphics} from "../libs/pixi-wrapper";
+import GameUtils from "../mgr/GameUtils";
 
 export default class GameResultScene extends Scene {
     onCreate() {
@@ -23,11 +24,9 @@ export default class GameResultScene extends Scene {
         MusicMgr.playSound(Config.soundPath.throughFlag);
 
         this.args = args;
-        let id = DataMgr.get(DataMgr.selectedBike, 0);
-        this.bikeConfig = Config.bikeList.find(bike => bike.id === id);
 
         let playerName = "{{YourselfName}}";
-        let thisGameScore = Config.rankScore[this.args.rank] * (this.bikeConfig.scorePercent || 1);
+        let thisGameScore = Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent");
         let totalScore = DataMgr.get(DataMgr.totalScore, 0) + thisGameScore;
         DataMgr.set(DataMgr.totalScore, totalScore);
         this.ui.totalScoreText.text = `${playerName} current total score: ${totalScore}`;
@@ -69,19 +68,19 @@ export default class GameResultScene extends Scene {
             case 0: {
                 name = "Score";
                 originValue = Config.rankScore[this.args.rank];
-                multiple = this.bikeConfig.scorePercent || 1;
+                multiple = GameUtils.getBikeConfig("scorePercent");
                 break;
             }
             case 1: {
                 name = "Distance";
                 originValue = Math.floor(this.args.distance);
-                multiple = this.bikeConfig.distancePercent || 1;
+                multiple = GameUtils.getBikeConfig("distancePercent");
                 break;
             }
             case 2: {
                 name = "Coin";
                 originValue = this.args.coin;
-                multiple = this.bikeConfig.coinPercent || 1;
+                multiple = GameUtils.getBikeConfig("coinPercent");
                 break;
             }
         }

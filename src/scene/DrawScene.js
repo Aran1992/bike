@@ -4,6 +4,7 @@ import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
 import {Rectangle} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
+import GameUtils from "../mgr/GameUtils";
 
 export default class DrawScene extends Scene {
     onCreate() {
@@ -18,8 +19,9 @@ export default class DrawScene extends Scene {
         this.ballImage.anchor.set(0.5, 0.5);
         this.ballImage.position.set(this.ui.ballImage.mywidth / 2, this.ui.ballImage.myheight / 2);
         this.ballImage.visible = false;
-        this.bikeSprite = new BikeSprite(this.ui.detailPanel.children[0]);
-        this.bikeSprite.setPosition(307, 100);
+        let detailPanel = this.ui.detailPanel.children[0];
+        this.bikeSprite = new BikeSprite(detailPanel);
+        this.bikeSprite.setPosition(detailPanel.mywidth / 2, Config.drawScene.bikeSprite.y);
         this.onTick();
         this.timer = setInterval(this.onTick.bind(this), 1000);
         this.ui.costDiamondText.text = Config.diamondDrawCost;
@@ -86,19 +88,39 @@ export default class DrawScene extends Scene {
 
         let index = Utils.randomWithWeight(Config.bikeList.map(item => item.weight));
         this.id = Config.bikeList[index].id;
+
         let list = DataMgr.get(DataMgr.ownedBikeList, []);
+        let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
+        this.ui.unlockIcon.visible = false;
+        this.ui.levelUpIcon.visible = false;
+        let config = Config.bikeList.find(item => item.id === this.id);
+        let highestLevel = false;
         if (list.indexOf(this.id) === -1) {
             list.push(this.id);
             DataMgr.set(DataMgr.ownedBikeList, list);
+            bikeLevelMap [this.id] = 0;
+            this.ui.unlockIcon.visible = true;
+        } else {
+            if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[this.id]] === undefined) {
+                highestLevel = true;
+            } else {
+                bikeLevelMap[this.id]++;
+                this.ui.levelUpIcon.visible = true;
+            }
         }
+        DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
         let nextTime = (new Date()).getTime() + Config.freeDrawInterval * 1000;
         DataMgr.set(DataMgr.nextFreeDrawTime, nextTime);
 
         this.ballImage.visible = false;
         this.ui.detailPanel.visible = true;
         this.bikeSprite.setBikeID(this.id);
-        let config = Config.bikeList.find(item => item.id === this.id);
-        this.ui.bikeDsc.text = config.dsc;
+        let level = DataMgr.get(DataMgr.bikeLevelMap, {})[this.id];
+        this.ui.bikeDsc.text = config.dsc + "\n"
+            + `LV ${level} ${highestLevel ? "Highest Level" : ""}
+Gold Coin ${GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100}%
+Distance ${GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100}%
+Score ${GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100}%`;
         this.bikeSprite.play();
     }
 

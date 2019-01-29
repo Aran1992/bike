@@ -4,6 +4,7 @@ import {Graphics} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
 import List from "../ui/List";
 import Config from "../config";
+import GameUtils from "../mgr/GameUtils";
 
 export default class GameOverScene extends Scene {
     onCreate() {
@@ -25,11 +26,9 @@ export default class GameOverScene extends Scene {
         this.parent.setChildIndex(this, this.parent.children.length - 1);
 
         this.args = args;
-        let id = DataMgr.get(DataMgr.selectedBike, 0);
-        this.bikeConfig = Config.bikeList.find(bike => bike.id === id);
 
         let record = DataMgr.get(DataMgr.distanceRecord, 0);
-        let finalDistance = Math.floor(args.distance * (this.bikeConfig.distancePercent || 1));
+        let finalDistance = Math.floor(args.distance * GameUtils.getBikeConfig("distancePercent"));
         if (finalDistance === record) {
             this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
             this.ui.beyondText.text = "Leveling with the highest record";
@@ -70,13 +69,13 @@ export default class GameOverScene extends Scene {
             case 0: {
                 name = "Distance";
                 originValue = Math.floor(this.args.distance);
-                multiple = this.bikeConfig.distancePercent || 1;
+                multiple = GameUtils.getBikeConfig("distancePercent");
                 break;
             }
             case 1: {
                 name = "Coin";
                 originValue = this.args.coin;
-                multiple = this.bikeConfig.coinPercent || 1;
+                multiple = GameUtils.getBikeConfig("coinPercent");
                 break;
             }
         }

@@ -97,22 +97,6 @@
                                         {
                                             "x":75,
                                             "type":"Image",
-                                            "searchKey":"Image,fightMaskImage",
-                                            "props":{"var":"fightMaskImage","top":0,"skin":"images/fightMask.png","left":0,"alpha":0.5},
-                                            "nodeParent":20,
-                                            "label":"fightMaskImage",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":58,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        },
-                                        {
-                                            "x":75,
-                                            "type":"Image",
                                             "searchKey":"Image,selectedImage",
                                             "props":{"var":"selectedImage","skin":"images/bg-selected-bike.png","centerY":0,"centerX":0},
                                             "nodeParent":20,
@@ -140,6 +124,22 @@
                                             "child":[
                                                 ],
                                             "$HIDDEN":false
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image,fightMaskImage",
+                                            "props":{"y":0,"x":0,"var":"fightMaskImage","top":0,"skin":"images/fightMask.png","left":0,"alpha":0.5},
+                                            "nodeParent":20,
+                                            "label":"fightMaskImage",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":58,
+                                            "child":[
+                                                ],
+                                            "$HIDDEN":false
                                         }]
                                 }]
                         }]
@@ -152,13 +152,14 @@
             "props":{"width":586,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","height":299,"centerX":0,"bottom":22},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,drawButton",
                     "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"left":13,"height":101,"bottom":29},
@@ -171,6 +172,7 @@
                     "compId":22,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":3},
@@ -185,9 +187,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,bikeDscText",
-                    "props":{"var":"bikeDscText","text":"12345678901234567890","fontSize":50,"color":"#ffffff","centerY":0,"centerX":0},
+                    "props":{"var":"bikeDscText","top":20,"text":"12345678901234567890","left":125,"fontSize":30,"color":"#ffffff"},
                     "nodeParent":21,
                     "label":"bikeDscText",
                     "isDirectory":false,

@@ -23,9 +23,9 @@ export default class BikeScene extends Scene {
 
     initItem(item) {
         item.itemRoot = item.children[0];
-        item.fightMaskImage = item.itemRoot.children[0];
-        item.selectedImage = item.itemRoot.children[1];
-        item.lostMaskImage = item.itemRoot.children[2];
+        item.selectedImage = item.itemRoot.children[0];
+        item.lostMaskImage = item.itemRoot.children[1];
+        item.fightMaskImage = item.itemRoot.children[2];
         item.bikeSprite = new BikeSprite(item.itemRoot, 2);
         item.bikeSprite.setPosition(item.itemRoot.mywidth / 2, item.itemRoot.myheight / 2 + 20);
         this.onClick(item, this.onClickItem.bind(this));
@@ -57,10 +57,26 @@ export default class BikeScene extends Scene {
     }
 
     onClickItem(item) {
+        let get = (config, name, key, level) => {
+            let list = config[key] || Config.bike[key];
+            let curValue = list[level];
+            let nextValue = list[level + 1];
+            return `${name} ${curValue * 100}%` + (nextValue !== undefined ? ` -> ${nextValue * 100}%` : "");
+        };
         this.selectedIndex = item.index;
         this.list.refresh();
         let config = Config.bikeList[item.index];
-        this.ui.bikeDscText.text = config.dsc;
+        let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
+        let isHighestLevel = (config.coinPercent || Config.bike.coinPercent)[level + 1] === undefined;
+        let dsc = config.dsc;
+        if (this.hasOwnedBike(config.id)) {
+            dsc += "\n" + `LV ${level} ${isHighestLevel ? "Highest Level" : `-> ${level + 1}`}`
+                + "\n" + get(config, "Gold Coin", "coinPercent", level)
+                + "\n" + get(config, "Distance", "distancePercent", level)
+                + "\n" + get(config, "Score", "scorePercent", level);
+        }
+        this.ui.bikeDscText.text = dsc;
+
         let hasOwned = this.hasOwnedBike(config.id);
         this.ui.selectBikeButton.visible = hasOwned && DataMgr.get(DataMgr.selectedBike, 0) !== config.id;
         this.ui.unlockBikeImage.visible = !hasOwned;

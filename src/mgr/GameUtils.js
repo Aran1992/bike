@@ -2,6 +2,7 @@ import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
 import Utils from "./Utils";
 import {resources} from "../libs/pixi-wrapper";
+import DataMgr from "./DataMgr";
 
 export default class GameUtils {
     static physicsPos2renderPos(pp) {
@@ -42,8 +43,8 @@ export default class GameUtils {
         return config.label.split("//")[0];
     }
 
-    static isItemType(config,type) {
-        return config.label.split("//").indexOf(type)!==-1;
+    static isItemType(config, type) {
+        return config.label.split("//").indexOf(type) !== -1;
     }
 
     static sortSceneChildrenByX(children) {
@@ -73,5 +74,16 @@ export default class GameUtils {
             animationName = Utils.keys(resources[jsonPath].data.animations)[0];
         }
         return resources[jsonPath].data.animations[animationName].map(texturePath => resources[jsonPath].textures[texturePath]);
+    }
+
+    static getBikeConfig(key, id, level,) {
+        if (id === undefined) {
+            id = DataMgr.get(DataMgr.selectedBike, 0);
+        }
+        if (level === undefined) {
+            level = DataMgr.get(DataMgr.bikeLevelMap, {})[id];
+        }
+        let config = Config.bikeList.find(bike => bike.id === id);
+        return (config[key] || Config.bike[key])[level];
     }
 }
