@@ -841,19 +841,21 @@ export default class GameScene extends Scene {
 
     syncBirdSprite() {
         this.birdList.forEach(bird => {
-            let pos = GameUtils.physicsPos2renderPos(bird.body.getPosition());
-            bird.sprite.position.set(pos.x, pos.y);
+            if (bird.body) {
+                let pos = GameUtils.physicsPos2renderPos(bird.body.getPosition());
+                bird.sprite.position.set(pos.x, pos.y);
+            }
         });
     }
 
     keepBirdMove() {
         this.birdList.forEach(bird => {
-            let rp = GameUtils.physicsPos2renderPos(bird.body.getPosition());
+            let rp = bird.sprite.position;
             if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 if (!bird.showed) {
                     MusicMgr.playSound(Config.soundPath.birdAppear);
                     bird.showed = true;
-                    bird.body.setAwake(true);
+                    bird.createBody();
                 }
                 if (!bird.upDown) {
                     let velocity = bird.body.getLinearVelocity();

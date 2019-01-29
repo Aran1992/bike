@@ -20,8 +20,14 @@ export default class BlackBird extends Item {
         this.sprite.animationSpeed = this.animationSpeed;
         this.sprite.play();
 
+        if (GameUtils.isItemType(this.config, "UpDown")) {
+            this.upDown = true;
+        }
+    }
+
+    createBody() {
+        let texture = this.frames[0];
         let body = this.world.createDynamicBody();
-        this.body = body;
         let width = Config.item.bird.bodyWidth / 2 * this.sprite.scale.x * Config.pixel2meter;
         let height = Config.item.bird.bodyHeight / 2 * this.sprite.scale.y * Config.pixel2meter;
         let fixture = body.createFixture(Box(width, height), {density: 1, friction: 1,});
@@ -31,12 +37,7 @@ export default class BlackBird extends Item {
         let pp = GameUtils.renderPos2PhysicsPos({x, y});
         body.setPosition(pp);
         body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
-        body.setAwake(false);
         this.body = body;
         this.baseY = pp.y;
-
-        if (GameUtils.isItemType(this.config, "UpDown")) {
-            this.upDown = true;
-        }
     }
 }
