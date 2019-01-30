@@ -116,7 +116,6 @@ export default class DrawScene extends Scene {
         this.ui.detailPanel.visible = true;
         this.bikeSprite.setBikeID(this.id);
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[this.id];
-        console.log(level);
         this.ui.bikeDsc.text = config.dsc + "\n"
             + `LV ${level + 1} ${highestLevel ? "Highest Level" : ""}
 Gold Coin ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%

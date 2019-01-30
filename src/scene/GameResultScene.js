@@ -26,7 +26,7 @@ export default class GameResultScene extends Scene {
         this.args = args;
 
         let playerName = "{{YourselfName}}";
-        let thisGameScore = Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent");
+        let thisGameScore = Math.floor(Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent"));
         let totalScore = DataMgr.get(DataMgr.totalScore, 0) + thisGameScore;
         DataMgr.set(DataMgr.totalScore, totalScore);
         this.ui.totalScoreText.text = `${playerName} current total score: ${totalScore}`;
