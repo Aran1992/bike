@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":20,
-    "selecteID":61,
+    "selectedBox":21,
+    "selecteID":51,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -46,7 +46,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":614,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":1144,"centerY":62,"centerX":0},
+            "props":{"width":614,"top":126,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","centerX":0,"bottom":10},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -157,64 +157,64 @@
                                         }]
                                 }]
                         }]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":586,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","height":299,"centerX":0,"bottom":22},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":21,
-            "child":[
+                },
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,drawButton",
-                    "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"left":13,"height":101,"bottom":29},
-                    "nodeParent":21,
-                    "label":"drawButton",
+                    "searchKey":"Image",
+                    "props":{"x":14,"width":586,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","height":299,"centerX":0,"bottom":15},
+                    "nodeParent":15,
+                    "label":"Image",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":22,
+                    "compId":21,
                     "child":[
                         {
                             "x":45,
                             "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"y":0,"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":3},
-                            "nodeParent":22,
-                            "label":"Image",
+                            "searchKey":"Image,drawButton",
+                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"left":13,"height":101,"bottom":29},
+                            "nodeParent":21,
+                            "label":"drawButton",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":22,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"y":0,"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":3},
+                                    "nodeParent":22,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":60,
+                                    "child":[
+                                        ]
+                                }]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label,bikeDscText",
+                            "props":{"var":"bikeDscText","top":20,"text":"12345678901234567890","left":125,"fontSize":30,"font":"monospace","color":"#ffffff"},
+                            "nodeParent":21,
+                            "label":"bikeDscText",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":60,
+                            "compId":51,
                             "child":[
                                 ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "searchKey":"Label,bikeDscText",
-                    "props":{"var":"bikeDscText","top":20,"text":"12345678901234567890","left":125,"fontSize":30,"color":"#ffffff"},
-                    "nodeParent":21,
-                    "label":"bikeDscText",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":51,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                }]
         },
         {
             "x":15,

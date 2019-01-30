@@ -46,7 +46,7 @@ export default class BikeScene extends Scene {
         item.lostMaskImage.visible = !this.hasOwnedBike(config.id);
         item.fightMaskImage.visible = DataMgr.get(DataMgr.selectedBike, 0) === config.id;
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
-        item.levelText.text = level !== undefined ? (level + 1) : "";
+        item.levelText.text = level !== undefined ? `LV${level + 1}` : "";
     }
 
     onClickReturnButton() {
@@ -73,10 +73,10 @@ export default class BikeScene extends Scene {
                 let nextValue = list[level + 1];
                 return `${name} ${Math.floor(curValue * 100)}%` + (nextValue !== undefined ? ` -> ${Math.floor(nextValue * 100)}%` : "");
             };
-            dsc += "\n" + `LV ${level + 1} ${isHighestLevel ? "Highest Level" : `-> ${level + 1}`}`
+            dsc += "\n" + `LV ${level + 1} ${isHighestLevel ? "Highest Level" : `-> ${level + 2}`}`
                 + "\n" + get(config, "Gold Coin", "coinPercent", level)
-                + "\n" + get(config, "Distance", "distancePercent", level)
-                + "\n" + get(config, "Score", "scorePercent", level);
+                + "\n" + get(config, "Distance ", "distancePercent", level)
+                + "\n" + get(config, "Score    ", "scorePercent", level);
         } else {
             let get = (config, name, key, level) => {
                 let list = config[key] || Config.bike[key];
@@ -86,8 +86,8 @@ export default class BikeScene extends Scene {
             level = 0;
             dsc += "\n" + `LV ${level + 1}`
                 + "\n" + get(config, "Gold Coin", "coinPercent", level)
-                + "\n" + get(config, "Distance", "distancePercent", level)
-                + "\n" + get(config, "Score", "scorePercent", level);
+                + "\n" + get(config, "Distance ", "distancePercent", level)
+                + "\n" + get(config, "Score    ", "scorePercent", level);
         }
         this.ui.bikeDscText.text = dsc;
 

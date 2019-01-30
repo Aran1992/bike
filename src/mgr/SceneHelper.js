@@ -197,6 +197,7 @@ function createLabel(child, parent) {
     let textContent = getValue(data.text, "");
     let fill = getValue(data.color, "black");
     let fontSize = getValue(data.fontSize, 10);
+    let fontFamily = getValue(data.font);
 
     let x = getValue(data.x, 0);
     let y = getValue(data.y, 0);
@@ -241,10 +242,14 @@ function createLabel(child, parent) {
         y = parent.myheight / 2 + data.centerY;
     }
 
-    let text = new Text(textContent, new TextStyle({
+    let textStyle = {
         fill: fill,
         fontSize: fontSize,
-    }));
+    };
+    if (fontFamily) {
+        textStyle.fontFamily = fontFamily;
+    }
+    let text = new Text(textContent, new TextStyle(textStyle));
 
     text.anchor.set(anchorX, anchorY);
 

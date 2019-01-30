@@ -314,7 +314,7 @@
                             "x":45,
                             "type":"Label",
                             "searchKey":"Label,bikeDsc",
-                            "props":{"width":550,"var":"bikeDsc","top":180,"text":"12345678901234567890","fontSize":30,"color":"#ffffff","centerX":0,"align":"center"},
+                            "props":{"width":550,"var":"bikeDsc","top":180,"text":"12345678901234567890","fontSize":30,"font":"monospace","color":"#ffffff","centerX":0,"align":"center"},
                             "nodeParent":15,
                             "label":"bikeDsc",
                             "isDirectory":false,

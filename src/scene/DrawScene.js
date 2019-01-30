@@ -119,8 +119,8 @@ export default class DrawScene extends Scene {
         this.ui.bikeDsc.text = config.dsc + "\n"
             + `LV ${level + 1} ${highestLevel ? "Highest Level" : ""}
 Gold Coin ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%
-Distance ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
-Score ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;
+Distance  ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
+Score     ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;
         this.bikeSprite.play();
     }
 
