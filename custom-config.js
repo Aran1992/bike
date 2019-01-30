@@ -151,7 +151,7 @@ Config.mapList = [
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
-        bikeVelocity: 40,
+        bikeVelocity: 20,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -190,7 +190,7 @@ Config.mapList = [
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
-        gravity: -50,
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -336,7 +336,7 @@ Config.mapList = [
         // 背景缩放系数
         bgScale: [1, 1, 1],
         // 自行车速度（基础：20）
-        bikeVelocity: 40,
+        bikeVelocity: 20,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -375,7 +375,7 @@ Config.mapList = [
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
-        gravity: -50,
+        gravity: -175,
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
@@ -3002,7 +3002,7 @@ Jump      100%
 HighJump  normal
 Size      small`,
         // 随机的权重
-        weight: 1114,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -3532,7 +3532,6 @@ Speed     120%
 Jump      180%
 HighJump  hard
 Size      middle`,
-        dsc: "【 NO.20  bike 】 \n  Speed  120% \n  Jump    180% \n  Size      middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3749,7 +3748,6 @@ Speed     160%
 Jump       80%
 HighJump  normal
 Size      small`,
-        dsc: "【 NO.28  bike 】 \n  Speed  160% \n  Jump      80% \n  Size      small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
