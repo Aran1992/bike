@@ -2995,7 +2995,10 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: "【 NO.1  bike 】 \n  Speed  100% \n  Jump    100% \n  Size      small",
+        dsc: `【 NO.1  bike 】
+Speed 100%
+Jump  100%
+Size  small`,
         // 随机的权重
         weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
