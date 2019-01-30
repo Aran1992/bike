@@ -89,19 +89,19 @@ export default class DrawScene extends Scene {
         let index = Utils.randomWithWeight(Config.bikeList.map(item => item.weight));
         this.id = Config.bikeList[index].id;
 
-        let list = DataMgr.get(DataMgr.ownedBikeList, []);
+        let ownedBikeList = DataMgr.get(DataMgr.ownedBikeList, []);
         let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
         this.ui.unlockIcon.visible = false;
         this.ui.levelUpIcon.visible = false;
         let config = Config.bikeList.find(item => item.id === this.id);
         let highestLevel = false;
-        if (list.indexOf(this.id) === -1) {
-            list.push(this.id);
-            DataMgr.set(DataMgr.ownedBikeList, list);
-            bikeLevelMap [this.id] = 0;
+        if (ownedBikeList.indexOf(this.id) === -1) {
+            ownedBikeList.push(this.id);
+            DataMgr.set(DataMgr.ownedBikeList, ownedBikeList);
+            bikeLevelMap[this.id] = 0;
             this.ui.unlockIcon.visible = true;
         } else {
-            if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[this.id]] === undefined) {
+            if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[this.id] + 1] === undefined) {
                 highestLevel = true;
             } else {
                 bikeLevelMap[this.id]++;
@@ -116,11 +116,12 @@ export default class DrawScene extends Scene {
         this.ui.detailPanel.visible = true;
         this.bikeSprite.setBikeID(this.id);
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[this.id];
+        console.log(level);
         this.ui.bikeDsc.text = config.dsc + "\n"
-            + `LV ${level} ${highestLevel ? "Highest Level" : ""}
-Gold Coin ${GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100}%
-Distance ${GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100}%
-Score ${GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100}%`;
+            + `LV ${level + 1} ${highestLevel ? "Highest Level" : ""}
+Gold Coin ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%
+Distance ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
+Score ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;
         this.bikeSprite.play();
     }
 

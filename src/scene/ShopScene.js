@@ -110,6 +110,18 @@ export default class ShopScene extends Scene {
         switch (button.id) {
             case 1: {
                 DataMgr.set(DataMgr.unlockAllBike, true);
+                let ownedBikeList = DataMgr.get(DataMgr.ownedBikeList, []);
+                let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
+                Config.bikeList.forEach(config => {
+                    if (ownedBikeList.indexOf(config.id) === -1) {
+                        ownedBikeList.push(config.id);
+                        bikeLevelMap[config.id] = 0;
+                    } else {
+                        bikeLevelMap[config.id]++;
+                    }
+                });
+                DataMgr.set(DataMgr.ownedBikeList, ownedBikeList);
+                DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
                 break;
             }
             case 2: {
