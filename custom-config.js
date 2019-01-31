@@ -3570,13 +3570,13 @@ Size      middle`,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
-        id: 10,
+        id: 19,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/bike10.png",
+        imagePath: "images/bike/bike19.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.71, 0.65],
+        anchor: [0.5, 1.25],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
@@ -3597,13 +3597,13 @@ Size      small`,
     },
     {
         // 自行车ID 必须要和别的自行车不一样
-        id: 19,
+        id: 10,
         // 覆盖其上的图片路径
-        imagePath: "images/bike/bike19.png",
+        imagePath: "images/bike/bike10.png",
         // 缩放倍数
         scale: [0.5, 0.5],
         // 图片的锚点
-        anchor: [0.5, 1.25],
+        anchor: [0.71, 0.65],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
