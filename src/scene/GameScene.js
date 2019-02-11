@@ -17,6 +17,7 @@ import SmallFireWall from "../item/SmallFireWall";
 import BigFireWall from "../item/BigFireWall";
 import BlackBird from "../item/BlackBird";
 import GroundStab from "../item/GroundStab";
+import UpDownPlatform from "../item/UpDownPlatform";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -106,7 +107,7 @@ export default class GameScene extends Scene {
 
         this.initEnvironment();
 
-        App.loadResources(this.getResPathList(), this.onLoadedGameRes.bind(this));
+        App.loadResources(this.getResPathList(), this.onLoadedBaseRes.bind(this));
     }
 
     getResPathList() {
@@ -213,7 +214,8 @@ export default class GameScene extends Scene {
                     }
                 },
                 beginContact(contact, anotherFixture,) {
-                    if (this.chtable.road.is(anotherFixture)) {
+                    let ud = anotherFixture.getUserData();
+                    if (this.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
                         this.jumping = false;
                         this.jumpCount = 0;
                     }
@@ -501,6 +503,12 @@ export default class GameScene extends Scene {
             }
             case "GroundStab": {
                 let item = new GroundStab(this.closeViewContainer, this.world, data);
+                this.itemList.push(item);
+                break;
+            }
+            // todo 弄一个比较智能的创建方式
+            case "UpDownPlatform": {
+                let item = new UpDownPlatform(this.closeViewContainer, this.world, data);
                 this.itemList.push(item);
                 break;
             }

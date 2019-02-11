@@ -168,5 +168,13 @@ export default class Utils {
     static randomInRange(min, max) {
         return min + (max - min) * Math.random();
     }
+
+    static copyProps(src, dst) {
+        for (let key in dst) {
+            if (dst.hasOwnProperty(key)) {
+                src[key] = dst[key];
+            }
+        }
+    }
 }
 

@@ -113,14 +113,14 @@ export default class Bike {
                 this.isGoToJump = true;
             }
         } else {
-            if (this.gameScene.chtable.road.is(anotherFixture)) {
+            let ud = anotherFixture.getUserData();
+            if (this.gameScene.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
                 this.jumping = false;
                 this.jumpCount = 0;
             }
             if (this.gameScene.chtable.obstacle.is(anotherFixture)) {
                 this.isContactFatalEdge = true;
             } else {
-                let ud = anotherFixture.getUserData();
                 if (ud && ud.isFatal) {
                     this.isContactFatalEdge = true;
                 }

@@ -5,6 +5,7 @@ import GameUtils from "../mgr/GameUtils";
 import Road from "../item/Road";
 import Utils from "../mgr/Utils";
 import BlackBird from "../item/BlackBird";
+import SceneHelper from "../mgr/SceneHelper";
 
 export default class EndlessGameScene extends GameScene {
     onCreate() {
@@ -40,15 +41,20 @@ export default class EndlessGameScene extends GameScene {
     }
 
     getResPathList() {
+        this.sceneFilePathList = this.sceneConfig.roadSectionList.reduce((list, diff) =>
+            list.concat(diff.map(section =>
+                `${Config.endlessMode.baseScenePath}${section.scenePath}.scene`)), []);
         return super.getResPathList()
             .concat(this.sceneConfig.texture.bg)
             .concat([
                 this.sceneConfig.texture.side,
                 this.sceneConfig.texture.top,
             ])
-            .concat(this.sceneConfig.roadSectionList.reduce((list, diff) =>
-                list.concat(diff.map(section =>
-                    `${Config.endlessMode.baseScenePath}${section.scenePath}.scene`)), []));
+            .concat(this.sceneFilePathList);
+    }
+
+    onLoadedBaseRes() {
+        SceneHelper.loadSceneRes(this.sceneFilePathList, this.onLoadedGameRes.bind(this));
     }
 
     onRestart() {

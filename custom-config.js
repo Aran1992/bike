@@ -3878,6 +3878,22 @@ Config.item = {
         animationSpeed: 0.25,
         // 静止状态动画是第几帧（从0开始）
         staticFrame: 2,
+    },
+    // 上下移动平台
+    upDownPlatform: {
+        // 配置列表（对应ID的配置）
+        table: {
+            1: {
+                // 开始是否朝上运动
+                isStartUp: true,
+                // 运动速度
+                velocity: 32,
+                // 运动范围的顶部距离初始位置的偏移
+                topOffset: 100,
+                // 运动范围的底部距离初始位置的偏移
+                bottomOffset: 100,
+            }
+        }
     }
 };
 

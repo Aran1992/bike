@@ -8,16 +8,21 @@ function getValue(value, defaultValue) {
     }
 }
 
-function loadSceneRes(path, callback) {
+function loadSceneRes(pathList, callback) {
     let resPathList = [];
-    let sceneData = JSON.parse(resources[path].data);
+    if (typeof (pathList) === "string") {
+        pathList = [pathList];
+    }
     let handle = item => {
         if (item.props.skin) {
             resPathList.push(`myLaya/laya/assets/${item.props.skin}`);
         }
         item.child.forEach(item => handle(item));
     };
-    handle(sceneData);
+    pathList.forEach(path => {
+        let sceneData = JSON.parse(resources[path].data);
+        handle(sceneData);
+    });
     App.loadResources(resPathList, callback);
 }
 

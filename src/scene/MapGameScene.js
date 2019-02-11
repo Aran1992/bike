@@ -6,6 +6,7 @@ import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
 import RunOption from "../../run-option";
 import DataMgr from "../mgr/DataMgr";
+import SceneHelper from "../mgr/SceneHelper";
 
 export default class MapGameScene extends GameScene {
     onCreate() {
@@ -44,6 +45,10 @@ export default class MapGameScene extends GameScene {
                 this.mapConfig.texture.top,
                 Config.mapBasePath + this.mapConfig.scenePath + ".scene",
             ]);
+    }
+
+    onLoadedBaseRes() {
+        SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene", this.onLoadedGameRes.bind(this));
     }
 
     onRestart() {

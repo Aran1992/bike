@@ -242,7 +242,7 @@ Config.enemy = {
 };
 
 Config.sceneItemImagePath = {
-    groundStab: "images/ground_stab.json"
+    groundStab: "images/ground_stab.json",
 };
 
 export default Config;

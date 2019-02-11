@@ -47,6 +47,13 @@ export default class GameUtils {
         return config.label.split("//").indexOf(type) !== -1;
     }
 
+    static getItemProp(config, prop) {
+        let propStr = config.label.split("//").find(str => str.startsWith(prop));
+        if (propStr) {
+            return propStr.split(":")[1];
+        }
+    }
+
     static sortSceneChildrenByX(children) {
         children.sort((a, b) => {
             let ax = GameUtils.getSceneChildX(a);
