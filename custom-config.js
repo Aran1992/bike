@@ -63,6 +63,10 @@ Config.mapList = [
             side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
@@ -100,6 +104,10 @@ Config.mapList = [
             side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
@@ -137,6 +145,10 @@ Config.mapList = [
             side: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground01.png",
@@ -174,6 +186,10 @@ Config.mapList = [
             side: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Aquarius/TextureDX2_AquariusBackground01.png",
@@ -211,6 +227,10 @@ Config.mapList = [
             side: "images/map/DX2_Cancer/TextureDX2_CancerRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Cancer/TextureDX2_CancerRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Cancer/TextureDX2_CancerRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Cancer/TextureDX2_CancerRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Cancer/TextureDX2_CancerBackground01.png",
@@ -248,6 +268,10 @@ Config.mapList = [
             side: "images/map/DX2_Gemini/TextureDX2_GeminiRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Gemini/TextureDX2_GeminiRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Gemini/TextureDX2_GeminiRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Gemini/TextureDX2_GeminiRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Gemini/TextureDX2_GeminiBackground01.png",
@@ -285,6 +309,10 @@ Config.mapList = [
             side: "images/map/DX2_Leo/TextureDX2_LeoRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Leo/TextureDX2_LeoRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Leo/TextureDX2_LeoRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Leo/TextureDX2_LeoRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Leo/TextureDX2_LeoBackground01.png",
@@ -322,6 +350,10 @@ Config.mapList = [
             side: "images/map/DX2_Libra/TextureDX2_LibraRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Libra/TextureDX2_LibraRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Libra/TextureDX2_LibraRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Libra/TextureDX2_LibraRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Libra/TextureDX2_LibraBackground01.png",
@@ -359,6 +391,10 @@ Config.mapList = [
             side: "images/map/DX2_Pisces/TextureDX2_PiscesRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Pisces/TextureDX2_PiscesRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Pisces/TextureDX2_PiscesRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Pisces/TextureDX2_PiscesRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Pisces/TextureDX2_PiscesBackground01.png",
@@ -396,6 +432,10 @@ Config.mapList = [
             side: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground01.png",
@@ -433,6 +473,10 @@ Config.mapList = [
             side: "images/map/DX2_Virgo/TextureDX2_VirgoRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Virgo/TextureDX2_VirgoRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Virgo/TextureDX2_VirgoRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Virgo/TextureDX2_VirgoRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Virgo/TextureDX2_VirgoBackground01.png",
@@ -492,6 +536,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
@@ -694,6 +742,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
@@ -896,6 +948,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
@@ -1098,6 +1154,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground01.png",
@@ -1300,6 +1360,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Aquarius/TextureDX2_AquariusBackground01.png",
@@ -1502,6 +1566,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Cancer/TextureDX2_CancerRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Cancer/TextureDX2_CancerRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Cancer/TextureDX2_CancerRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Cancer/TextureDX2_CancerRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Cancer/TextureDX2_CancerBackground01.png",
@@ -1704,6 +1772,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Gemini/TextureDX2_GeminiRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Gemini/TextureDX2_GeminiRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Gemini/TextureDX2_GeminiRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Gemini/TextureDX2_GeminiRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Gemini/TextureDX2_GeminiBackground01.png",
@@ -1906,6 +1978,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Leo/TextureDX2_LeoRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Leo/TextureDX2_LeoRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Leo/TextureDX2_LeoRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Leo/TextureDX2_LeoRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Leo/TextureDX2_LeoBackground01.png",
@@ -2108,6 +2184,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Libra/TextureDX2_LibraRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Libra/TextureDX2_LibraRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Libra/TextureDX2_LibraRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Libra/TextureDX2_LibraRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Libra/TextureDX2_LibraBackground01.png",
@@ -2310,6 +2390,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Pisces/TextureDX2_PiscesRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Pisces/TextureDX2_PiscesRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Pisces/TextureDX2_PiscesRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Pisces/TextureDX2_PiscesRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Pisces/TextureDX2_PiscesBackground01.png",
@@ -2512,6 +2596,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Sagittarius/TextureDX2_SagittariusRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground01.png",
@@ -2714,6 +2802,10 @@ Config.endlessMode.sceneList = [
             side: "images/map/DX2_Virgo/TextureDX2_VirgoRoad01SideSkin.png",
             // 底部
             top: "images/map/DX2_Virgo/TextureDX2_VirgoRoad01TopSkin.png",
+            // 侧边
+            side2: "images/map/DX2_Virgo/TextureDX2_VirgoRoad02SideSkin.png",
+            // 底部
+            top2: "images/map/DX2_Virgo/TextureDX2_VirgoRoad02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/DX2_Virgo/TextureDX2_VirgoBackground01.png",
@@ -2999,7 +3091,7 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.1  bike 】
 Speed     100%
 Jump      100%
@@ -3044,7 +3136,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.2  bike 】
 Speed     100%
 Jump      100%
@@ -3071,7 +3163,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.3  bike 】
 Speed     100%
 Jump      100%
@@ -3098,7 +3190,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.4  bike 】
 Speed     100%
 Jump      100%
@@ -3125,7 +3217,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.5  bike 】
 Speed     100%
 Jump      100%
@@ -3152,7 +3244,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.6  bike 】
 Speed     100%
 Jump      100%
@@ -3179,7 +3271,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-		dsc:
+		dsc: 
 `【 NO.7  bike 】
 Speed     100%
 Jump      150%
@@ -3233,7 +3325,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.9  bike 】
 Speed     100%
 Jump      150%
@@ -3260,7 +3352,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.10  bike 】
 Speed     140%
 Jump       90%
@@ -3287,7 +3379,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.11  bike 】
 Speed     140%
 Jump       90%
@@ -3314,7 +3406,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.12  bike 】
 Speed     140%
 Jump       90%
@@ -3341,7 +3433,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.13  bike 】
 Speed      80%
 Jump      180%
@@ -3368,7 +3460,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.14  bike 】
 Speed      80%
 Jump      180%
@@ -3395,7 +3487,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.15  bike 】
 Speed      80%
 Jump      180%
@@ -3422,7 +3514,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.16  bike 】
 Speed      80%
 Jump      100%
@@ -3449,7 +3541,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.17  bike 】
 Speed      80%
 Jump      100%
@@ -3476,7 +3568,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.18  bike 】
 Speed      80%
 Jump      100%
@@ -3503,7 +3595,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.19  bike 】
 Speed     120%
 Jump      180%
@@ -3530,7 +3622,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.20  bike 】
 Speed     120%
 Jump      180%
@@ -3557,7 +3649,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.21  bike 】
 Speed     120%
 Jump      180%
@@ -3584,7 +3676,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.22  bike 】
 Speed     120%
 Jump       80%
@@ -3611,7 +3703,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.23  bike 】
 Speed     120%
 Jump       80%
@@ -3638,7 +3730,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.24  bike 】
 Speed     120%
 Jump       80%
@@ -3665,7 +3757,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.25  bike 】
 Speed     160%
 Jump      100%
@@ -3692,7 +3784,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.26  bike 】
 Speed     160%
 Jump      100%
@@ -3719,7 +3811,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.27  bike 】
 Speed     160%
 Jump      100%
@@ -3746,7 +3838,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.28  bike 】
 Speed     160%
 Jump       80%
@@ -3773,7 +3865,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.29  bike 】
 Speed     160%
 Jump       80%
@@ -3800,7 +3892,7 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.30  bike 】
 Speed     160%
 Jump       80%
@@ -3827,7 +3919,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.31  bike 】
 Speed     200%
 Jump       80%
@@ -3854,7 +3946,7 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.32  bike 】
 Speed     200%
 Jump       80%
@@ -3881,7 +3973,7 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
+        dsc: 
 `【 NO.33  bike 】
 Speed     200%
 Jump       80%
@@ -4145,85 +4237,105 @@ Config.item = {
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
                 bottomOffset: 0,
             },
-            53: {
-                // 开始是否朝上运动（true是开始向上；false是开始向下）
-                isStartUp: true,
-                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 30,
-                // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 100,
-                // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 100,
-            },
             430: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 130,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 100,
+                topOffset: 25,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 100,
+                bottomOffset: 0,
             },
             431: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 130,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 90,
+                topOffset: 20,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 110,
+                bottomOffset: 5,
             },
             432: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 130,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 80,
+                topOffset: 15,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 120,
+                bottomOffset: 10,
             },
-            530: {
+            433: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 30,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 100,
+                topOffset: 10,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 100,
+                bottomOffset: 15,
             },
-            540: {
+            434: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 40,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 100,
+                topOffset: 5,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 100,
+                bottomOffset: 20,
             },
-            550: {
+            435: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
-                isStartUp: true,
+                isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 100,
+                topOffset: 0,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 100,
+                bottomOffset: 25,
             },
-            900: {
+            436: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
-                isStartUp: true,
+                isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 0,
+                velocity: 5,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
-                topOffset: 100,
+                topOffset: 5,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
-                bottomOffset: 100,
+                bottomOffset: 20,
+            },
+            437: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: false,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 5,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 10,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 15,
+            },
+            438: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: false,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 5,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 15,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 10,
+            },
+            439: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: false,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 5,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 20,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 5,
             },
             1010: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
