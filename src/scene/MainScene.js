@@ -87,15 +87,15 @@ export default class MainScene extends Scene {
         this.ui.sceneImage.children[0].texture = resources[path].texture;
     }
 
-    onClickStartButton() {
+onClickStartButton() {
         if (this.mode === "Map") {
             let coin = DataMgr.get(DataMgr.coin, 0);
             let costCoin = Config.rankMode.costCoin;
             if (coin >= costCoin) {
                 DataMgr.set(DataMgr.coin, coin - costCoin);
                 App.hideScene("MainScene");
-                // App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
-                App.showScene("MapGameScene", 0);
+                App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+                //App.showScene("MapGameScene", 0);
             } else {
                 App.showNotice("Gold Coin is not enough!");
 
