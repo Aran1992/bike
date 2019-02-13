@@ -32,7 +32,7 @@ export default class Utils {
 
     static getPathRect(path) {
         let maxX = path[0], minX = path[0], maxY = path[1], minY = path[1];
-        for (let i = 0; i < path.length - 2; i += 2) {
+        for (let i = 0; i < path.length - 1; i += 2) {
             let x = path[i];
             let y = path[i + 1];
             if (x > maxX) {

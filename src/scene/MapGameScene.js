@@ -30,6 +30,8 @@ export default class MapGameScene extends GameScene {
         this.bgTextureList = this.mapConfig.texture.bg;
         this.sideTexture = this.mapConfig.texture.side;
         this.topTexture = this.mapConfig.texture.top;
+        this.sideTexture2 = this.mapConfig.texture.side2;
+        this.topTexture2 = this.mapConfig.texture.top2;
         this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
         this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
         this.bgY = this.mapConfig.bgY || Config.bgY;
@@ -43,6 +45,8 @@ export default class MapGameScene extends GameScene {
             .concat([
                 this.mapConfig.texture.side,
                 this.mapConfig.texture.top,
+                this.mapConfig.texture.side2,
+                this.mapConfig.texture.top2,
                 Config.mapBasePath + this.mapConfig.scenePath + ".scene",
             ]);
     }
@@ -102,7 +106,7 @@ export default class MapGameScene extends GameScene {
     getRoadPathList() {
         let json = JSON.parse(resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
         return json.child
-            .filter(data => data.type === "Lines")
+            .filter(data => data.label.split("//").find(str => str === "Road"))
             .map(data => {
                 let path = data.props.points.split(",").map((intStr, i) => {
                     let value = parseInt(intStr);

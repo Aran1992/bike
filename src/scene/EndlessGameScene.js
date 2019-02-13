@@ -33,6 +33,8 @@ export default class EndlessGameScene extends GameScene {
         this.bgTextureList = this.sceneConfig.texture.bg;
         this.sideTexture = this.sceneConfig.texture.side;
         this.topTexture = this.sceneConfig.texture.top;
+        this.sideTexture2 = this.sceneConfig.texture.side2;
+        this.topTexture2 = this.sceneConfig.texture.top2;
         this.horizontalParallaxDepth = this.sceneConfig.horizontalParallaxDepth;
         this.verticalParallaxDepth = this.sceneConfig.verticalParallaxDepth;
         this.bgY = this.sceneConfig.bgY || Config.bgY;
@@ -49,6 +51,8 @@ export default class EndlessGameScene extends GameScene {
             .concat([
                 this.sceneConfig.texture.side,
                 this.sceneConfig.texture.top,
+                this.sceneConfig.texture.side2,
+                this.sceneConfig.texture.top2,
             ])
             .concat(this.sceneFilePathList);
     }

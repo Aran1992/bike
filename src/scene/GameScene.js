@@ -18,6 +18,7 @@ import BigFireWall from "../item/BigFireWall";
 import BlackBird from "../item/BlackBird";
 import GroundStab from "../item/GroundStab";
 import UpDownPlatform from "../item/UpDownPlatform";
+import Road2 from "../item/Road2";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -211,6 +212,10 @@ export default class GameScene extends Scene {
                     } else if (this.chtable.npc.is(anotherFixture)) {
                         contact.setEnabled(false);
                         this.isContactFatalEdge = true;
+                    } else if (this.chtable.road2.is(anotherFixture)) {
+                        if (this.bikeBody.getLinearVelocity().y > 0) {
+                            contact.setEnabled(false);
+                        }
                     }
                 },
                 beginContact(contact, anotherFixture,) {
@@ -259,6 +264,14 @@ export default class GameScene extends Scene {
                     let ud = fixture.getBody().getUserData();
                     if (ud) {
                         return ud.type === "Road";
+                    }
+                },
+            },
+            road2: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    if (ud) {
+                        return ud.type === "Road2";
                     }
                 },
             },
@@ -468,6 +481,19 @@ export default class GameScene extends Scene {
                 let road = new Road(this.world, path, this.sideTexture, this.topTexture,);
                 this.roadList.push(road);
                 this.closeViewContainer.addChild(road.sprite);
+                break;
+            }
+            case "Road2": {
+                let path = data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                    }
+                    return value;
+                });
+                new Road2(this.closeViewContainer, this.world, path, this.sideTexture2, this.topTexture2);
                 break;
             }
             case "GoldCoin": {

@@ -42,7 +42,8 @@ export default class Bike {
     }
 
     onCreate() {
-        this.bikeSprite = this.parent.addChildAt(new Sprite(), 0);
+        // todo 另外创建一个后面的层来放置 进行层级控制
+        this.bikeSprite = this.parent.addChildAt(new Sprite(), 1);
         this.bikeSprite.texture = this.frames[this.frameIndex];
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
@@ -101,6 +102,10 @@ export default class Bike {
             } else if (this.gameScene.chtable.npc.is(anotherFixture)) {
                 contact.setEnabled(false);
                 this.isContactFatalEdge = true;
+            } else if (this.gameScene.chtable.road2.is(anotherFixture)) {
+                if (this.bikeBody.getLinearVelocity().y > 0) {
+                    contact.setEnabled(false);
+                }
             }
         }
     }

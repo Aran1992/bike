@@ -11,13 +11,17 @@ export default class UpDownPlatform {
 
         this.config = {
             imagePath: `myLaya/laya/assets/${config.props.skin}`,
-            scaleX: config.props.scaleX,
-            scaleY: config.props.scaleY,
+            scaleX: config.props.scaleX === undefined ? 1 : config.props.scaleX,
+            scaleY: config.props.scaleY === undefined ? 1 : config.props.scaleY,
             x: config.props.x,
             y: config.props.y,
         };
         let id = GameUtils.getItemProp(config, "ID");
-        Utils.copyProps(this.config, Config.item.upDownPlatform.table[id]);
+        let props = Config.item.upDownPlatform.table[id];
+        if (props === undefined) {
+            App.showNotice(`ID为${id}的上下移动平台没有进行配置`);
+        }
+        Utils.copyProps(this.config, props);
         this.config.velocity *= Config.pixel2meter;
 
         this.sprite = undefined;
