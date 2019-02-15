@@ -176,5 +176,15 @@ export default class Utils {
             }
         }
     }
-}
 
+    static getDistanceFromPointToLine(p, lp1, lp2) {
+        if (lp1.x > lp2.x) {
+            let temp = lp1;
+            lp1 = lp2;
+            lp2 = temp;
+        }
+        let angle = Math.atan((lp2.y - lp1.y) / (lp2.x - lp1.x));
+        let height = p.y - lp1.y - Math.tan(angle) * (p.x - lp1.x);
+        return Math.cos(angle) * height;
+    }
+}

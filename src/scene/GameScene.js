@@ -215,7 +215,8 @@ export default class GameScene extends Scene {
                         contact.setEnabled(false);
                         this.isContactFatalEdge = true;
                     } else if (this.chtable.road2.is(anotherFixture)) {
-                        if (this.bikeBody.getLinearVelocity().y > 0) {
+                        let {p1, p2} = anotherFixture.getUserData();
+                        if (Utils.getDistanceFromPointToLine(this.bikeBody.getPosition(), p1, p2) < Config.bikeRadius - Config.pixel2meter) {
                             contact.setEnabled(false);
                         }
                     }
