@@ -91,7 +91,7 @@ export default class MapGameScene extends GameScene {
                 list.splice(index, 1);
                 // let id = DataMgr.get(DataMgr.selectedBike, 0);
                 // let id = 3;
-                let enemy = new Enemy(this, this.closeViewContainer, this.world, id, {
+                let enemy = new Enemy(this, this.bikeContainer, this.world, id, {
                     commonVelocity: this.bikeCommonVelocity,
                     accVelocity: this.bikeAccVelocity,
                     jumpForce: this.jumpForce,
@@ -142,7 +142,7 @@ export default class MapGameScene extends GameScene {
         sprite.anchor.set(0.5, 1);
         sprite.scale.set(0.5, 0.5);
         sprite.position.set(this.finalPoint.x, this.finalPoint.y);
-        this.closeViewContainer.addChild(sprite);
+        this.underBikeContianer.addChild(sprite);
     }
 
     syncEnemySprite() {

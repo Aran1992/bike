@@ -27,8 +27,7 @@ export default class Road2 {
     }
 
     onCreate() {
-        // todo 另外创建一个后面的层来放置 进行层级控制
-        this.container = this.parent.addChildAt(new Container(), 0);
+        this.container = this.parent.addChild(new Container(), 0);
 
         let rect = Utils.getPathRect(this.config.path);
 

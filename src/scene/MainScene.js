@@ -4,6 +4,7 @@ import Config from "../config";
 import {resources} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
+import RunOption from "../../run-option";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -81,24 +82,27 @@ export default class MainScene extends Scene {
         this.mode = "Endless";
         this.refreshEndlessMode();
     }
+
     refreshEndlessMode() {
         let index = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         let path = Config.endlessMode.sceneList[index].texture.mainCover;
         this.ui.sceneImage.children[0].texture = resources[path].texture;
     }
 
-onClickStartButton() {
+    onClickStartButton() {
         if (this.mode === "Map") {
             let coin = DataMgr.get(DataMgr.coin, 0);
             let costCoin = Config.rankMode.costCoin;
             if (coin >= costCoin) {
                 DataMgr.set(DataMgr.coin, coin - costCoin);
                 App.hideScene("MainScene");
-                App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
-                //App.showScene("MapGameScene", 0);
+                if (RunOption.fixedMapID === undefined || RunOption.fixedMapID === -1) {
+                    App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+                } else {
+                    App.showScene("MapGameScene", RunOption.fixedMapID);
+                }
             } else {
                 App.showNotice("Gold Coin is not enough!");
-
             }
         } else if (this.mode === "Endless") {
             App.hideScene("MainScene");

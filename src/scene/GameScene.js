@@ -155,8 +155,9 @@ export default class GameScene extends Scene {
 
         this.createBg();
 
-        this.closeViewContainer = new Container();
-        this.cameraContainer.addChild(this.closeViewContainer);
+        this.closeViewContainer = this.cameraContainer.addChild(new Container());
+        this.underBikeContianer = this.closeViewContainer.addChild(new Container());
+        this.bikeContainer = this.closeViewContainer.addChild(new Container());
 
         this.emitter = new Emitter(
             this.cameraContainer,
@@ -480,7 +481,7 @@ export default class GameScene extends Scene {
                 });
                 let road = new Road(this.world, path, this.sideTexture, this.topTexture,);
                 this.roadList.push(road);
-                this.closeViewContainer.addChild(road.sprite);
+                this.underBikeContianer.addChild(road.sprite);
                 break;
             }
             case "Road2": {
@@ -493,54 +494,54 @@ export default class GameScene extends Scene {
                     }
                     return value;
                 });
-                new Road2(this.closeViewContainer, this.world, path, this.sideTexture2, this.topTexture2);
+                new Road2(this.underBikeContianer, this.world, path, this.sideTexture2, this.topTexture2);
                 break;
             }
             case "GoldCoin": {
                 let item = new GoldCoin(data, this.world);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "AccGem": {
                 let item = new AccGem(data, this.world);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "BigFireWall": {
                 let item = new BigFireWall(data, this.world);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "SmallFireWall": {
                 let item = new SmallFireWall(data, this.world);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "BlackBird": {
                 let item = new BlackBird(data, this.world);
                 this.birdList.push(item);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "ItemAccGem": {
                 let item = new Item(data, this.world);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "GroundStab": {
-                let item = new GroundStab(this.closeViewContainer, this.world, data);
+                let item = new GroundStab(this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
                 break;
             }
             // todo 弄一个比较智能的创建方式
             case "UpDownPlatform": {
-                let item = new UpDownPlatform(this.closeViewContainer, this.world, data);
+                let item = new UpDownPlatform(this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
                 break;
             }
             default : {
                 let item = new Item(data, this.world);
-                this.closeViewContainer.addChild(item.sprite);
+                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
         }
@@ -550,7 +551,7 @@ export default class GameScene extends Scene {
         let rp = GameUtils.physicsPos2renderPos(pp);
 
         this.bikeSprite = new Sprite();
-        this.closeViewContainer.addChild(this.bikeSprite);
+        this.bikeContainer.addChild(this.bikeSprite);
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
         this.bikeSprite.position.set(rp.x, rp.y);
@@ -600,8 +601,7 @@ export default class GameScene extends Scene {
         this.bikeFrame = 0;
         this.bikeSprite.texture = this.bikeFrames[this.bikeFrame];
 
-        this.bikeAccSprite = new Sprite();
-        this.closeViewContainer.addChild(this.bikeAccSprite);
+        this.bikeAccSprite = this.underBikeContianer.addChild(new Sprite());
         this.bikeAccSprite.anchor.set(0.5, 1);
         this.bikeAccSprite.visible = false;
         this.bikeAccFrame = undefined;

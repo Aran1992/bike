@@ -42,8 +42,7 @@ export default class Bike {
     }
 
     onCreate() {
-        // todo 另外创建一个后面的层来放置 进行层级控制
-        this.bikeSprite = this.parent.addChildAt(new Sprite(), 1);
+        this.bikeSprite = this.parent.addChildAt(new Sprite(), 0);
         this.bikeSprite.texture = this.frames[this.frameIndex];
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);

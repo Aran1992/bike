@@ -153,7 +153,7 @@ export default class EndlessGameScene extends GameScene {
     }
 
     cleanPartOutOfView() {
-        this.closeViewContainer.children.forEach(child => {
+        this.underBikeContianer.children.forEach(child => {
             if (child.part && child.part.getRightBorderX() < -this.cameraContainer.x) {
                 child.part.destroy();
                 if (child.part instanceof Road) {
