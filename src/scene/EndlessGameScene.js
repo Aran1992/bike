@@ -100,7 +100,6 @@ export default class EndlessGameScene extends GameScene {
             }
             let index = Math.floor(Math.random() * roadSectionList.length);
             let item = roadSectionList.splice(index, 1)[0];
-            GameUtils.sortSceneChildrenByX(item.child);
             this.partList.push(item);
             sumLength += item.props.width;
         }
@@ -198,4 +197,3 @@ export default class EndlessGameScene extends GameScene {
         this.onClickPauseButton();
     }
 }
-

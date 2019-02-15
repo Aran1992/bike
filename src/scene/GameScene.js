@@ -156,6 +156,7 @@ export default class GameScene extends Scene {
         this.createBg();
 
         this.closeViewContainer = this.cameraContainer.addChild(new Container());
+        this.road2Container = this.closeViewContainer.addChild(new Container());
         this.underBikeContianer = this.closeViewContainer.addChild(new Container());
         this.bikeContainer = this.closeViewContainer.addChild(new Container());
 
@@ -494,7 +495,7 @@ export default class GameScene extends Scene {
                     }
                     return value;
                 });
-                new Road2(this.underBikeContianer, this.world, path, this.sideTexture2, this.topTexture2);
+                new Road2(this.road2Container, this.world, path, this.sideTexture2, this.topTexture2);
                 break;
             }
             case "GoldCoin": {

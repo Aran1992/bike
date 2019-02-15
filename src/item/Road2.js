@@ -27,7 +27,7 @@ export default class Road2 {
     }
 
     onCreate() {
-        this.container = this.parent.addChild(new Container(), 0);
+        this.container = this.parent.addChild(new Container());
 
         let rect = Utils.getPathRect(this.config.path);
 
@@ -85,10 +85,8 @@ export default class Road2 {
             return value * Config.pixel2meter;
         });
         for (let i = 0; i < path.length - 2; i += 2) {
-            this.body.createFixture(Edge(
-                Vec2(path[i], path[i + 1]),
-                Vec2(path[i + 2], path[i + 3])
-            )).setUserData({resetJumpStatus: true});
+            this.body.createFixture(Edge(Vec2(path[i], path[i + 1]), Vec2(path[i + 2], path[i + 3])),
+                {density: 0, friction: 1,}).setUserData({resetJumpStatus: true});
         }
     }
 }

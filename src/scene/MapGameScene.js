@@ -127,13 +127,11 @@ export default class MapGameScene extends GameScene {
                 path = [path[0], bottomY].concat(path);
                 path = path.concat([path[path.length - 2], bottomY]);
                 return path;
-
             });
     }
 
     createMap() {
         let json = JSON.parse(resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
-        GameUtils.sortSceneChildrenByX(json.child);
         json.child.forEach(data => this.createPart(data));
     }
 
