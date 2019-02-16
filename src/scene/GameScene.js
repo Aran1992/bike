@@ -19,6 +19,7 @@ import BlackBird from "../item/BlackBird";
 import GroundStab from "../item/GroundStab";
 import UpDownPlatform from "../item/UpDownPlatform";
 import Road2 from "../item/Road2";
+import DeadLine from "../item/DeadLine";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -539,6 +540,11 @@ export default class GameScene extends Scene {
             // todo 弄一个比较智能的创建方式
             case "UpDownPlatform": {
                 let item = new UpDownPlatform(this.underBikeContianer, this.world, data);
+                this.itemList.push(item);
+                break;
+            }
+            case "DeadLine": {
+                let item = new DeadLine(this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
                 break;
             }
