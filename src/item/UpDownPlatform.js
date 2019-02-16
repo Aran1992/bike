@@ -13,6 +13,7 @@ export default class UpDownPlatform {
             imagePath: `myLaya/laya/assets/${config.props.skin}`,
             scaleX: config.props.scaleX === undefined ? 1 : config.props.scaleX,
             scaleY: config.props.scaleY === undefined ? 1 : config.props.scaleY,
+            rotation: config.props.rotation === undefined ? 0 : Utils.angle2radius(config.props.rotation),
             x: config.props.x,
             y: config.props.y,
         };
@@ -42,6 +43,7 @@ export default class UpDownPlatform {
         this.sprite.anchor.set(0.5, 0.5);
         this.sprite.scale.set(this.config.scaleX, this.config.scaleY);
         this.sprite.position.set(this.config.x, this.config.y);
+        this.sprite.rotation = this.config.rotation;
 
         this.body = this.world.createKinematicBody();
         let hw = texture.width / 2 * Config.pixel2meter * this.config.scaleX;
@@ -50,6 +52,7 @@ export default class UpDownPlatform {
         fixture.setUserData({resetJumpStatus: true});
         let pp = GameUtils.renderPos2PhysicsPos(this.sprite.position);
         this.body.setPosition(pp);
+        this.body.setAngle(-this.config.rotation);
 
         this.config.topY = this.sprite.y - this.config.topOffset;
         this.config.bottomY = this.sprite.y + this.config.bottomOffset;

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":293,
+    "selecteID":315,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":314,
+    "maxID":316,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -2372,174 +2372,6 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":92,"x":4048,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":293,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":82,"x":4127,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":294,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":72,"x":4207,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":295,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":62,"x":4287,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":296,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":52,"x":4367,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":297,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":42,"x":4447,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":298,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":32,"x":4527,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":299,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":22,"x":4607,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":300,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":12,"x":4687,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":301,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":2,"x":4767,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":302,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":-8,"x":4847,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":303,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":-18,"x":4927,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":304,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road",
             "props":{"y":-67.5,"x":5008,"points":"0,0,772,-396","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
@@ -2621,6 +2453,34 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":313,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road2",
+            "props":{"y":211,"x":4056,"points":"0,0,505,170,1000,0","name":"Road2","lineWidth":1,"lineColor":"#00ff00"},
+            "nodeParent":1,
+            "label":"Road2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":314,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,DeadLine//死亡线",
+            "props":{"y":-150.5,"x":1033,"skin":"images/FallingBlock.png","scaleY":0.5,"scaleX":0.5,"rotation":45,"name":"DeadLine//死亡线","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"DeadLine//死亡线",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":315,
             "child":[
                 ]
         }],
