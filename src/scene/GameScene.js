@@ -496,7 +496,8 @@ export default class GameScene extends Scene {
                     }
                     return value;
                 });
-                new Road2(this.road2Container, this.world, path, this.sideTexture2, this.topTexture2);
+                let road2 = new Road2(this.road2Container, this.world, path, this.sideTexture2, this.topTexture2);
+                this.roadList.push(road2);
                 break;
             }
             case "GoldCoin": {

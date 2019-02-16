@@ -31,6 +31,20 @@ export default class Road2 {
 
         let rect = Utils.getPathRect(this.config.path);
 
+        this.rigthBorderX = rect.x + rect.width;
+        this.leftBorderX = rect.x;
+        this.lowestTopY = this.config.path.reduce((max, y, i) => {
+            if (i % 2 === 1) {
+                if (max === undefined) {
+                    return y;
+                } else {
+                    return y > max ? y : max;
+                }
+            }
+            return max;
+        }, this.config.path[1]);
+        this.leftTopPoint = {x: this.config.path[0], y: this.config.path[1]};
+
         let pathInRoad = this.config.path.map((p, i) => i % 2 === 0 ? p - rect.x : p - rect.y);
 
         this.createSide(rect.width);
@@ -89,6 +103,37 @@ export default class Road2 {
             let p2 = Vec2(path[i + 2], path[i + 3]);
             this.body.createFixture(Edge(p1, p2),
                 {density: 0, friction: 1,}).setUserData({resetJumpStatus: true, p1, p2});
+        }
+    }
+
+    getRightBorderX() {
+        return this.rigthBorderX;
+    }
+
+    getLeftBorderX() {
+        return this.leftBorderX;
+    }
+
+    getLowestTopY() {
+        return this.lowestTopY;
+    }
+
+    getLeftTopPoint() {
+        return {x: this.leftTopPoint.x, y: this.leftTopPoint.y};
+    }
+
+    getTopPosInTargetX(x) {
+        let path = this.config.path;
+        for (let i = 0; i <= path.length - 4; i += 2) {
+            let sp = {x: path[i], y: path[i + 1]};
+            let ep = {x: path[i + 2], y: path[i + 3]};
+            if (x >= sp.x && x < ep.x) {
+                let radius = Utils.calcRadius(sp, ep);
+                return {
+                    x: sp.x + (x - sp.x),
+                    y: sp.y + (x - sp.x) * Math.tan(radius),
+                };
+            }
         }
     }
 }
