@@ -643,6 +643,9 @@ export default class GameScene extends Scene {
         this.bikeAccSprite.anchor.set(0.5, 1);
         this.bikeAccSprite.visible = false;
         this.bikeAccFrame = undefined;
+
+        this.isUnlimitedJump = false;
+        this.unlimitedJumpRemainFrame = -1;
     }
 
     gameLoop(delta) {
