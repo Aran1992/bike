@@ -4487,6 +4487,11 @@ Config.item = {
                 angularVelocity: 10
             }
         }
+    },
+    // 无限跳道具
+    unlimitedJumpItem: {
+        // 持续时间（单位：秒）
+        duration: 10
     }
 };
 

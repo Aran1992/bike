@@ -22,6 +22,7 @@ import Road2 from "../item/Road2";
 import DeadLine from "../item/DeadLine";
 import RollingStone from "../item/RollingStone";
 import EditorItem from "../item/EditorItem";
+import UnlimitedJumpItem from "../item/UnlimitedJumpItem";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -354,7 +355,8 @@ export default class GameScene extends Scene {
             if (this.startFloat) {
                 this.startFloat = false;
                 this.bikeBubbleSprite.visible = false;
-            } else if (this.jumpCount < Config.jumpCommonMaxCount
+            } else if (this.isUnlimitedJump
+                || this.jumpCount < Config.jumpCommonMaxCount
                 || this.jumpExtraCountdown > 0) {
                 let velocity = this.bikeBody.getLinearVelocity();
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
@@ -422,6 +424,10 @@ export default class GameScene extends Scene {
             }
             case "ItemAccGem": {
                 this.showPortableItem();
+                break;
+            }
+            case "UnlimitedJumpItem": {
+                this.unlimitedJump();
                 break;
             }
         }
@@ -566,6 +572,11 @@ export default class GameScene extends Scene {
                 this.itemList.push(item);
                 break;
             }
+            case "UnlimitedJumpItem": {
+                let item = new UnlimitedJumpItem(this, this.underBikeContianer, this.world, data);
+                this.itemList.push(item);
+                break;
+            }
             default : {
                 let item = new Item(data, this.world);
                 this.underBikeContianer.addChild(item.sprite);
@@ -682,7 +693,12 @@ export default class GameScene extends Scene {
             this.keepEnemyMove();
         }
 
-        this.jumpExtraCountdown -= 1;
+        this.jumpExtraCountdown--;
+        if (this.unlimitedJumpRemainFrame < 0) {
+            this.isUnlimitedJump = false;
+        } else {
+            this.unlimitedJumpRemainFrame--;
+        }
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomCamera();
@@ -735,6 +751,12 @@ export default class GameScene extends Scene {
                 } else {
                     this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures["speed-up.png"];
                     this.bikeAccSprite.position.set(this.bikeSprite.x + 32, this.bikeSprite.y - this.bikeSprite.height / 2);
+                }
+            } else if (this.isUnlimitedJump) {
+                this.bikeAccSprite.visible = true;
+                if (this.unlimitedJumpRemainFrame < 5 * Config.fps) {
+                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.unlimitedJumpRemainFrame / Config.fps)}.png`];
+                    this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
                 }
             } else {
                 this.bikeAccSprite.visible = false;
@@ -1081,6 +1103,11 @@ export default class GameScene extends Scene {
     resetJumpStatus() {
         this.jumping = false;
         this.jumpCount = 0;
+    }
+
+    unlimitedJump() {
+        this.isUnlimitedJump = true;
+        this.unlimitedJumpRemainFrame = Config.item.unlimitedJumpItem.duration * Config.fps;
     }
 }
 
