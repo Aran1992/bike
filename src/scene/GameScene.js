@@ -20,6 +20,8 @@ import GroundStab from "../item/GroundStab";
 import UpDownPlatform from "../item/UpDownPlatform";
 import Road2 from "../item/Road2";
 import DeadLine from "../item/DeadLine";
+import RollingStone from "../item/RollingStone";
+import EditorItem from "../item/EditorItem";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -225,8 +227,7 @@ export default class GameScene extends Scene {
                 beginContact(contact, anotherFixture,) {
                     let ud = anotherFixture.getUserData();
                     if (this.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
-                        this.jumping = false;
-                        this.jumpCount = 0;
+                        this.resetJumpStatus();
                     }
                     if (this.chtable.obstacle.is(anotherFixture)) {
                         this.isContactFatalEdge = true;
@@ -293,6 +294,18 @@ export default class GameScene extends Scene {
                     if (ud) {
                         return ["BigFireWall", "SmallFireWall"].find(type => type === ud.type);
                     }
+                }
+            },
+            editorItem: {
+                is: (fixture) => {
+                    let ud = fixture.getBody().getUserData();
+                    return ud && ud instanceof EditorItem;
+                },
+                preSolve(contact, anotherFixture, selfFixture) {
+                    selfFixture.getBody().getUserData().onPreSolve(contact, anotherFixture, selfFixture);
+                },
+                beginContact(contact, anotherFixture, selfFixture) {
+                    selfFixture.getBody().getUserData().onBeginContact(contact, anotherFixture, selfFixture);
                 }
             }
         };
@@ -539,12 +552,17 @@ export default class GameScene extends Scene {
             }
             // todo 弄一个比较智能的创建方式
             case "UpDownPlatform": {
-                let item = new UpDownPlatform(this.underBikeContianer, this.world, data);
+                let item = new UpDownPlatform(this, this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
                 break;
             }
             case "DeadLine": {
                 let item = new DeadLine(this.underBikeContianer, this.world, data);
+                this.itemList.push(item);
+                break;
+            }
+            case "RollingStone": {
+                let item = new RollingStone(this, this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
                 break;
             }
@@ -1054,6 +1072,15 @@ export default class GameScene extends Scene {
         DataMgr.set(DataMgr.coin, coin);
         let distance = DataMgr.get(DataMgr.distance, 0) + Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
         DataMgr.set(DataMgr.distance, distance);
+    }
+
+    isItemXInView(item) {
+        return item.getLeftBorderX() < -this.cameraContainer.x + Config.designWidth;
+    }
+
+    resetJumpStatus() {
+        this.jumping = false;
+        this.jumpCount = 0;
     }
 }
 

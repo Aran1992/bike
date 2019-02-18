@@ -120,8 +120,7 @@ export default class Bike {
         } else {
             let ud = anotherFixture.getUserData();
             if (this.gameScene.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
-                this.jumping = false;
-                this.jumpCount = 0;
+                this.resetJumpStatus();
             }
             if (this.gameScene.chtable.obstacle.is(anotherFixture)) {
                 this.isContactFatalEdge = true;
@@ -298,5 +297,10 @@ export default class Bike {
             this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
             this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
         }
+    }
+
+    resetJumpStatus() {
+        this.jumping = false;
+        this.jumpCount = 0;
     }
 }
