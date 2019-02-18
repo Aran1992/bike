@@ -23,6 +23,7 @@ import DeadLine from "../item/DeadLine";
 import RollingStone from "../item/RollingStone";
 import EditorItem from "../item/EditorItem";
 import UnlimitedJumpItem from "../item/UnlimitedJumpItem";
+import FireBall from "../item/FireBall";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -574,6 +575,11 @@ export default class GameScene extends Scene {
             }
             case "UnlimitedJumpItem": {
                 let item = new UnlimitedJumpItem(this, this.underBikeContianer, this.world, data);
+                this.itemList.push(item);
+                break;
+            }
+            case "FireBall": {
+                let item = new FireBall(this, this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
                 break;
             }

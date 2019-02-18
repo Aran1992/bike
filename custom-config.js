@@ -4492,7 +4492,16 @@ Config.item = {
     unlimitedJumpItem: {
         // 持续时间（单位：秒）
         duration: 10
-    }
+    },
+    // 火球
+    fireBall: {
+        table: {
+            1: {
+                // 移动速度（单位：像素, 为正的话是像右移动）
+                velocity: -10
+            }
+        }
+    },
 };
 
 // 排行榜分数（按照1/2/3/4名往下配置）

@@ -1,12 +1,13 @@
 import EditorItem from "./EditorItem";
 import Config from "../config";
-import {Box} from "../libs/planck-wrapper";
+import {Box, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
-import EventMgr from "../mgr/EventMgr";
 
-export default class UnlimitedJumpItem extends EditorItem {
+export default class FireBall extends EditorItem {
     constructor(gameMgr, parent, world, config) {
-        super("unlimitedJumpItem", gameMgr, parent, world, config);
+        super("fireBall", gameMgr, parent, world, config);
+
+        this.config.velocity *= Config.pixel2meter;
 
         this.onCreate();
     }
@@ -26,12 +27,28 @@ export default class UnlimitedJumpItem extends EditorItem {
         sd.shape = Box(hw, hh);
         sd.isSensor = true;
         this.body.createFixture(sd);
+
+        this.leftBorderX = this.sprite.x - this.sprite.texture.width * this.sprite.scale.x / 2;
+    }
+
+    update() {
+        super.update();
+
+        if (this.body.isStatic() && this.gameMgr.isItemXInView(this)) {
+            this.body.setKinematic();
+            this.body.setLinearVelocity(Vec2(this.config.velocity, 0));
+        }
     }
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            EventMgr.dispatchEvent("AteItem", "UnlimitedJumpItem");
-            this.sprite.visible = false;
+            this.gameMgr.isContactFatalEdge = true;
+        } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
+            anotherFixture.getBody().getUserData().isContactFatalEdge = true;
         }
+    }
+
+    getLeftBorderX() {
+        return this.leftBorderX;
     }
 }

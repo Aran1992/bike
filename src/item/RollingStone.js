@@ -21,7 +21,7 @@ export default class RollingStone extends EditorItem {
         this.body.setPosition(pp);
         this.body.setAngle(-this.config.rotation);
 
-        this.leftBorderX = this.sprite.x - this.sprite.texture.width * this.sprite.scale.x;
+        this.leftBorderX = this.sprite.x - this.sprite.texture.width * this.sprite.scale.x / 2;
     }
 
     update() {
