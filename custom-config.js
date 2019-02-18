@@ -3091,8 +3091,8 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.1  bike 】
+        dsc: 
+`【 NO.1  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3107,22 +3107,22 @@ Size      small`,
         bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
         // 结算金币倍率（不填的话就使用默认值）
         coinPercent: [
-            1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
-            1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
-            2
-        ],
+		1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
+		1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
+		2
+		],
         // 结算里程倍率（不填的话就使用默认值）
         distancePercent: [
-            1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
-            1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
-            2
-        ],
+		1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
+		1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
+		2
+		],
         // 结算积分倍率（不填的话就使用默认值）
         scorePercent: [
-            1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
-            1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
-            2
-        ],
+		1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
+		1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
+		2
+		],
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3136,8 +3136,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.2  bike 】
+        dsc: 
+`【 NO.2  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3163,8 +3163,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.3  bike 】
+        dsc: 
+`【 NO.3  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3190,8 +3190,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.4  bike 】
+        dsc: 
+`【 NO.4  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3217,8 +3217,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.5  bike 】
+        dsc: 
+`【 NO.5  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3244,8 +3244,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.6  bike 】
+        dsc: 
+`【 NO.6  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3271,8 +3271,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.7  bike 】
+		dsc: 
+`【 NO.7  bike 】
 Speed     100%
 Jump      150%
 HighJump  normal
@@ -3299,7 +3299,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-            `【 NO.8  bike 】
+`【 NO.8  bike 】
 Speed     100%
 Jump      150%
 HighJump  normal
@@ -3325,8 +3325,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.9  bike 】
+        dsc: 
+`【 NO.9  bike 】
 Speed     100%
 Jump      150%
 HighJump  normal
@@ -3352,8 +3352,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.10  bike 】
+        dsc: 
+`【 NO.10  bike 】
 Speed     140%
 Jump       90%
 HighJump  normal
@@ -3379,8 +3379,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.11  bike 】
+        dsc: 
+`【 NO.11  bike 】
 Speed     140%
 Jump       90%
 HighJump  normal
@@ -3406,8 +3406,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.12  bike 】
+        dsc: 
+`【 NO.12  bike 】
 Speed     140%
 Jump       90%
 HighJump  normal
@@ -3433,8 +3433,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.13  bike 】
+        dsc: 
+`【 NO.13  bike 】
 Speed      80%
 Jump      180%
 HighJump  normal
@@ -3460,8 +3460,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.14  bike 】
+        dsc: 
+`【 NO.14  bike 】
 Speed      80%
 Jump      180%
 HighJump  normal
@@ -3487,8 +3487,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.15  bike 】
+        dsc: 
+`【 NO.15  bike 】
 Speed      80%
 Jump      180%
 HighJump  normal
@@ -3514,8 +3514,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.16  bike 】
+        dsc: 
+`【 NO.16  bike 】
 Speed      80%
 Jump      100%
 HighJump  easy
@@ -3541,8 +3541,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.17  bike 】
+        dsc: 
+`【 NO.17  bike 】
 Speed      80%
 Jump      100%
 HighJump  easy
@@ -3568,8 +3568,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.18  bike 】
+        dsc: 
+`【 NO.18  bike 】
 Speed      80%
 Jump      100%
 HighJump  easy
@@ -3595,8 +3595,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.19  bike 】
+        dsc: 
+`【 NO.19  bike 】
 Speed     120%
 Jump      180%
 HighJump  hard
@@ -3622,8 +3622,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.20  bike 】
+        dsc: 
+`【 NO.20  bike 】
 Speed     120%
 Jump      180%
 HighJump  hard
@@ -3649,8 +3649,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.21  bike 】
+        dsc: 
+`【 NO.21  bike 】
 Speed     120%
 Jump      180%
 HighJump  hard
@@ -3676,8 +3676,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.22  bike 】
+        dsc: 
+`【 NO.22  bike 】
 Speed     120%
 Jump       80%
 HighJump  easy
@@ -3703,8 +3703,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.23  bike 】
+        dsc: 
+`【 NO.23  bike 】
 Speed     120%
 Jump       80%
 HighJump  easy
@@ -3730,8 +3730,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.24  bike 】
+        dsc: 
+`【 NO.24  bike 】
 Speed     120%
 Jump       80%
 HighJump  easy
@@ -3757,8 +3757,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.25  bike 】
+        dsc: 
+`【 NO.25  bike 】
 Speed     160%
 Jump      100%
 HighJump  hard
@@ -3784,8 +3784,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.26  bike 】
+        dsc: 
+`【 NO.26  bike 】
 Speed     160%
 Jump      100%
 HighJump  hard
@@ -3811,8 +3811,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.27  bike 】
+        dsc: 
+`【 NO.27  bike 】
 Speed     160%
 Jump      100%
 HighJump  hard
@@ -3838,8 +3838,8 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.28  bike 】
+        dsc: 
+`【 NO.28  bike 】
 Speed     160%
 Jump       80%
 HighJump  normal
@@ -3865,8 +3865,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.29  bike 】
+        dsc: 
+`【 NO.29  bike 】
 Speed     160%
 Jump       80%
 HighJump  normal
@@ -3892,8 +3892,8 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.30  bike 】
+        dsc: 
+`【 NO.30  bike 】
 Speed     160%
 Jump       80%
 HighJump  normal
@@ -3919,8 +3919,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.31  bike 】
+        dsc: 
+`【 NO.31  bike 】
 Speed     200%
 Jump       80%
 HighJump  hard
@@ -3946,8 +3946,8 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.32  bike 】
+        dsc: 
+`【 NO.32  bike 】
 Speed     200%
 Jump       80%
 HighJump  hard
@@ -3973,8 +3973,8 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc:
-            `【 NO.33  bike 】
+        dsc: 
+`【 NO.33  bike 】
 Speed     200%
 Jump       80%
 HighJump  hard
@@ -4341,7 +4341,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 25,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4351,7 +4351,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 20,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4361,7 +4361,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 15,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4371,7 +4371,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 10,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4381,7 +4381,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: true,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 5,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4391,7 +4391,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 0,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4401,7 +4401,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 5,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4411,7 +4411,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 10,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4421,7 +4421,7 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 15,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
@@ -4431,11 +4431,111 @@ Config.item = {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
                 isStartUp: false,
                 // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
-                velocity: 50,
+                velocity: 100,
                 // 运动范围的顶部距离初始位置的偏移（数值为像素）
                 topOffset: 20,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
                 bottomOffset: 5,
+            },
+            470: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: false,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 90,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 0,
+            },
+            471: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 80,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 10,
+            },
+            472: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 70,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 20,
+            },
+            473: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 60,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 30,
+            },
+            474: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 50,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 40,
+            },
+            475: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 40,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 50,
+            },
+            476: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 30,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 60,
+            },
+            477: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 20,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 70,
+            },
+            478: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 10,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 80,
+            },
+            479: {
+                // 开始是否朝上运动（true是开始向上；false是开始向下）
+                isStartUp: true,
+                // 运动速度（0为静止不动；数值越大速度越快；速度快还会影响玩家的物理关系，比如弹起玩家）
+                velocity: 100,
+                // 运动范围的顶部距离初始位置的偏移（数值为像素）
+                topOffset: 0,
+                // 运动范围的底部距离初始位置的偏移（数值为像素）
+                bottomOffset: 90,
             },
             910: {
                 // 开始是否朝上运动（true是开始向上；false是开始向下）
@@ -4527,22 +4627,22 @@ Config.enemy.contactPlayerAlpha = 0.6;
 
 // 默认结算金币倍率
 Config.bike.coinPercent = [
-    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
-    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
-    2
-];
+	1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
+	1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
+	2
+	];
 // 默认结算里程倍率
 Config.bike.distancePercent = [
-    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
-    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
-    2
+	1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
+	1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
+	2
 ];
 
 // 默认结算积分倍率
 Config.bike.scorePercent = [
-    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
-    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
-    2
+	1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
+	1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
+	2
 ];
 
 export default Config;
