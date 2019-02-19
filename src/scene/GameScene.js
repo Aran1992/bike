@@ -162,6 +162,14 @@ export default class GameScene extends Scene {
 
         this.closeViewContainer = this.cameraContainer.addChild(new Container());
         this.road2Container = this.closeViewContainer.addChild(new Container());
+        if (RunOption.showDeadLine) {
+            this.deadLine = this.road2Container.addChild(new Graphics());
+            this.deadLine.beginFill();
+            this.deadLine.lineStyle(4, 0xff0000, 1);
+            this.deadLine.moveTo(0, 0);
+            this.deadLine.lineTo(Config.designWidth, 0);
+            this.deadLine.endFill();
+        }
         this.underBikeContianer = this.closeViewContainer.addChild(new Container());
         this.bikeContainer = this.closeViewContainer.addChild(new Container());
 
@@ -792,8 +800,14 @@ export default class GameScene extends Scene {
     }
 
     judgeGameLose(velocity, bikePhysicsPos) {
+        let lowestRoadTopY = this.findLowestRoadTopY(-this.cameraContainer.x);
+        if (this.deadLine) {
+            this.deadLine.position.set(
+                -this.cameraContainer.x,
+                lowestRoadTopY + Config.bikeGameOverOffsetHeight * Config.meter2pixel
+            );
+        }
         if (this.gameStatus === "play") {
-            let lowestRoadTopY = this.findLowestRoadTopY(-this.cameraContainer.x);
             if (bikePhysicsPos.y < GameUtils.renderY2PhysicsY(lowestRoadTopY) - Config.bikeGameOverOffsetHeight) {
                 this.onDead();
             }
