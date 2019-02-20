@@ -4585,6 +4585,10 @@ Config.item = {
             1: {
                 // 旋转速度
                 angularVelocity: 10
+            },
+            10: {
+                // 旋转速度
+                angularVelocity: 0
             }
         }
     },
