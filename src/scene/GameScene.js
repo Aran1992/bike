@@ -24,10 +24,12 @@ import RollingStone from "../item/RollingStone";
 import EditorItem from "../item/EditorItem";
 import UnlimitedJumpItem from "../item/UnlimitedJumpItem";
 import FireBall from "../item/FireBall";
+import InstantItem from "../item/InstantItem";
 
 export default class GameScene extends Scene {
     onCreate() {
         this.initContactHandleTable();
+        this.initEffectTable();
 
         this.registerEvent("Restart", this.onRestart);
         this.registerEvent("Reborn", this.onReborn);
@@ -110,6 +112,8 @@ export default class GameScene extends Scene {
             this.autoZoomContainer.scale.set(1, 1);
             this.autoZoomContainer.position.set(0, 0);
         }
+
+        this.effectRemainFrame = {};
 
         this.initEnvironment();
 
@@ -439,6 +443,8 @@ export default class GameScene extends Scene {
                 this.unlimitedJump();
                 break;
             }
+            default:
+                this.startEffect(type);
         }
     }
 
@@ -591,6 +597,10 @@ export default class GameScene extends Scene {
                 this.itemList.push(item);
                 break;
             }
+            case "InstantItem": {
+                this.itemList.push(new InstantItem(this, this.underBikeContianer, this.world, data));
+                break;
+            }
             default : {
                 let item = new Item(data, this.world);
                 this.underBikeContianer.addChild(item.sprite);
@@ -660,6 +670,15 @@ export default class GameScene extends Scene {
 
         this.isUnlimitedJump = false;
         this.unlimitedJumpRemainFrame = -1;
+
+        for (let type in this.effectRemainFrame) {
+            if (this.effectRemainFrame.hasOwnProperty(type)) {
+                delete this.effectRemainFrame[type];
+                if (this.effectTable[type].end) {
+                    this.effectTable[type].end();
+                }
+            }
+        }
     }
 
     gameLoop(delta) {
@@ -716,6 +735,8 @@ export default class GameScene extends Scene {
         } else {
             this.unlimitedJumpRemainFrame--;
         }
+
+        this.reduceEffect();
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomCamera();
@@ -776,7 +797,21 @@ export default class GameScene extends Scene {
                     this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
                 }
             } else {
-                this.bikeAccSprite.visible = false;
+                let minRemainFrame = undefined;
+                for (let type in this.effectRemainFrame) {
+                    if (this.effectRemainFrame.hasOwnProperty(type)) {
+                        if (minRemainFrame === undefined || this.effectRemainFrame[type] < minRemainFrame) {
+                            minRemainFrame = this.effectRemainFrame[type];
+                        }
+                    }
+                }
+                if (minRemainFrame !== undefined && minRemainFrame < 5 * Config.fps) {
+                    this.bikeAccSprite.visible = true;
+                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(minRemainFrame / Config.fps)}.png`];
+                    this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
+                } else {
+                    this.bikeAccSprite.visible = false;
+                }
             }
             if (this.jumping) {
                 if (this.jumpingAnimationFrames) {
@@ -1131,6 +1166,54 @@ export default class GameScene extends Scene {
     unlimitedJump() {
         this.isUnlimitedJump = true;
         this.unlimitedJumpRemainFrame = Config.item.unlimitedJumpItem.duration * Config.fps;
+    }
+
+    startEffect(type) {
+        this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
+        if (this.effectTable[type].start) {
+            this.effectTable[type].start();
+        }
+    }
+
+    reduceEffect() {
+        for (let type in this.effectRemainFrame) {
+            if (this.effectRemainFrame.hasOwnProperty(type)) {
+                this.effectRemainFrame[type]--;
+                if (this.effectRemainFrame[type] === 0) {
+                    delete this.effectRemainFrame[type];
+                    if (this.effectTable[type].end) {
+                        this.effectTable[type].end();
+                    }
+                }
+            }
+        }
+    }
+
+    initEffectTable() {
+        this.effectTable = {
+            Decelerate: {
+                start: () => {
+                    this.originPlayerCommonVelocity = this.playerCommonVelocity;
+                    this.playerCommonVelocity *= Config.effect.Decelerate.rate;
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, velocity.y));
+                },
+                end: () => {
+                    this.playerCommonVelocity = this.originPlayerCommonVelocity;
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, velocity.y));
+                },
+            },
+            WeakenJump: {
+                start: () => {
+                    this.originJumpForce = this.jumpForce;
+                    this.jumpForce *= Config.effect.WeakenJump.rate;
+                },
+                end: () => {
+                    this.jumpForce = this.originJumpForce;
+                },
+            },
+        };
     }
 }
 

@@ -3091,7 +3091,7 @@ Config.bikeList = [
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.1  bike 】
 Speed     100%
 Jump      100%
@@ -3136,7 +3136,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.2  bike 】
 Speed     100%
 Jump      100%
@@ -3163,7 +3163,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.3  bike 】
 Speed     100%
 Jump      100%
@@ -3190,7 +3190,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.4  bike 】
 Speed     100%
 Jump      100%
@@ -3217,7 +3217,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.5  bike 】
 Speed     100%
 Jump      100%
@@ -3244,7 +3244,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.6  bike 】
 Speed     100%
 Jump      100%
@@ -3271,7 +3271,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-		dsc: 
+		dsc:
 `【 NO.7  bike 】
 Speed     100%
 Jump      150%
@@ -3325,7 +3325,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.9  bike 】
 Speed     100%
 Jump      150%
@@ -3352,7 +3352,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.10  bike 】
 Speed     140%
 Jump       90%
@@ -3379,7 +3379,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.11  bike 】
 Speed     140%
 Jump       90%
@@ -3406,7 +3406,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.12  bike 】
 Speed     140%
 Jump       90%
@@ -3433,7 +3433,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.13  bike 】
 Speed      80%
 Jump      180%
@@ -3460,7 +3460,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.14  bike 】
 Speed      80%
 Jump      180%
@@ -3487,7 +3487,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.15  bike 】
 Speed      80%
 Jump      180%
@@ -3514,7 +3514,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.16  bike 】
 Speed      80%
 Jump      100%
@@ -3541,7 +3541,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.17  bike 】
 Speed      80%
 Jump      100%
@@ -3568,7 +3568,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.18  bike 】
 Speed      80%
 Jump      100%
@@ -3595,7 +3595,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.19  bike 】
 Speed     120%
 Jump      180%
@@ -3622,7 +3622,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.20  bike 】
 Speed     120%
 Jump      180%
@@ -3649,7 +3649,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.21  bike 】
 Speed     120%
 Jump      180%
@@ -3676,7 +3676,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.22  bike 】
 Speed     120%
 Jump       80%
@@ -3703,7 +3703,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.23  bike 】
 Speed     120%
 Jump       80%
@@ -3730,7 +3730,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.24  bike 】
 Speed     120%
 Jump       80%
@@ -3757,7 +3757,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.25  bike 】
 Speed     160%
 Jump      100%
@@ -3784,7 +3784,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.26  bike 】
 Speed     160%
 Jump      100%
@@ -3811,7 +3811,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.27  bike 】
 Speed     160%
 Jump      100%
@@ -3838,7 +3838,7 @@ Size      middle`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.28  bike 】
 Speed     160%
 Jump       80%
@@ -3865,7 +3865,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.29  bike 】
 Speed     160%
 Jump       80%
@@ -3892,7 +3892,7 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.30  bike 】
 Speed     160%
 Jump       80%
@@ -3919,7 +3919,7 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.31  bike 】
 Speed     200%
 Jump       80%
@@ -3946,7 +3946,7 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.32  bike 】
 Speed     200%
 Jump       80%
@@ -3973,7 +3973,7 @@ Size      big`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-        dsc: 
+        dsc:
 `【 NO.33  bike 】
 Speed     200%
 Jump       80%
@@ -4613,6 +4613,36 @@ Config.item = {
                 velocity: 30
             }
         }
+    },
+    // 立即生效物品
+    InstantItem: {
+        table: {
+            1: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "Decelerate",
+            },
+            2: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "WeakenJump",
+            },
+        }
+    }
+};
+
+Config.effect = {
+    // 减速
+    Decelerate: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 削减之后是原来速度的多少
+        rate: 0.5,
+    },
+    // 削弱跳跃
+    WeakenJump: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 削减之后是原来跳跃力的多少
+        rate: 0.5,
     },
 };
 
