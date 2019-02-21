@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":1422,
+    "selecteID":1426,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":1558,
+    "maxID":1561,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -8337,21 +8337,6 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image,UnlimitedJumpItem//无限跳道具",
-            "props":{"y":-70,"x":747,"skin":"images/crystal_wing_00.png","scaleY":0.5,"scaleX":0.5,"name":"UnlimitedJumpItem//无限跳道具","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UnlimitedJumpItem//无限跳道具",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1424,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road",
             "props":{"y":45.5,"x":1788,"points":"-677,-38,414,-38","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
@@ -8368,7 +8353,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,FireBall//火球//ID:30",
-            "props":{"y":-24,"x":1362,"skin":"images/fire_ball.png","scaleY":0.5,"scaleX":0.5,"rotation":180,"name":"FireBall//火球//ID:30","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-144,"x":1362,"skin":"images/fire_ball.png","scaleY":0.5,"scaleX":0.5,"rotation":180,"name":"FireBall//火球//ID:30","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"FireBall//火球//ID:30",
             "isOpen":true,
@@ -8840,6 +8825,49 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1557,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,UnlimitedJumpItem//无限跳道具",
+            "props":{"y":-57,"x":704,"skin":"images/crystal_wing_00.png","scaleY":0.5,"scaleX":0.5,"name":"UnlimitedJumpItem//无限跳道具","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"UnlimitedJumpItem//无限跳道具",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1558,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,InstantItem//立即生效物品//ID:1",
+            "props":{"y":-54,"x":818,"skin":"images/Rock.png","scaleY":0.1,"scaleX":0.1,"name":"InstantItem//立即生效物品//ID:1","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"InstantItem//立即生效物品//ID:1",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1559,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,InstantItem//立即生效物品//ID:2",
+            "props":{"y":-54,"x":928,"skin":"images/Rock.png","scaleY":0.1,"scaleX":0.1,"name":"InstantItem//立即生效物品//ID:2","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"InstantItem//立即生效物品//ID:2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1560,
             "child":[
                 ]
         }],
