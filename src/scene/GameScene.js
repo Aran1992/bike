@@ -7,7 +7,7 @@ import MusicMgr from "../mgr/MusicMgr";
 import DataMgr from "../mgr/DataMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
-import {Container, Emitter, Graphics, resources, Sprite, Texture} from "../libs/pixi-wrapper";
+import {Container, Emitter, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
 
 import Road from "../item/Road";
 import Item from "../item/Item";
@@ -442,7 +442,6 @@ export default class GameScene extends Scene {
     }
 
     onAteItem(type, effect, texture) {
-        console.log("self", type);
         switch (type) {
             case "PortableItem": {
                 this.showPortableItem(effect, texture);
@@ -655,6 +654,13 @@ export default class GameScene extends Scene {
         this.bikeJumpExtraCountdown = config.bikeJumpExtraCountdown || Config.bikeJumpExtraCountdown;
 
         this.resetBikeStatus();
+
+        if (RunOption.showBikeState) {
+            this.stateText = this.bikeSprite.addChild(new Text("", new TextStyle({
+                fill: "white",
+                fontSize: 50,
+            })));
+        }
     }
 
     resetBikeStatus() {
@@ -748,6 +754,15 @@ export default class GameScene extends Scene {
 
         if (this.startDragBikeBack) {
             this.dragBikeBack();
+        }
+
+        if (RunOption.showBikeState) {
+            this.stateText.text = "";
+            for (let type in this.effectRemainFrame) {
+                if (this.effectRemainFrame.hasOwnProperty(type)) {
+                    this.stateText.text += `${type}:${this.effectRemainFrame[type]}\n`;
+                }
+            }
         }
     }
 

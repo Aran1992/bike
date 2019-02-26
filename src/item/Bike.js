@@ -1,8 +1,9 @@
-import {resources, Sprite} from "../libs/pixi-wrapper";
+import {resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
 import Config from "../config";
 import {Circle, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
+import RunOption from "../../run-option";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -80,6 +81,11 @@ export default class Bike {
         let jumpRadius = this.calcJumpRadius(this.commonVelocity, vy, this.world.getGravity().y);
         this.eatItemSensor = this.bikeBody.createFixture({shape: Circle(jumpRadius), isSensor: true});
         // todo 当跳跃力之类的东西发生变化的时候 也需要修改探测圈的范围
+
+        this.stateText = this.bikeSprite.addChild(new Text("", new TextStyle({
+            fill: "white",
+            fontSize: 50,
+        })));
     }
 
     destroy() {
@@ -229,6 +235,15 @@ export default class Bike {
         }
 
         this.reduceEffect();
+
+        if (RunOption.showBikeState) {
+            this.stateText.text = "";
+            for (let type in this.effectRemainFrame) {
+                if (this.effectRemainFrame.hasOwnProperty(type)) {
+                    this.stateText.text += `${type}:${this.effectRemainFrame[type]}\n`;
+                }
+            }
+        }
     }
 
     onDead() {
