@@ -240,7 +240,7 @@ export default class Bike {
             this.stateText.text = "";
             for (let type in this.effectRemainFrame) {
                 if (this.effectRemainFrame.hasOwnProperty(type)) {
-                    this.stateText.text += `${type}:${this.effectRemainFrame[type]}\n`;
+                    this.stateText.text += `${type}:${Math.ceil(this.effectRemainFrame[type] / Config.fps)}\n`;
                 }
             }
         }
@@ -350,10 +350,12 @@ export default class Bike {
     }
 
     startEffect(type) {
-        this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
-        if (this.effectTable[type].start) {
-            this.effectTable[type].start();
+        if (this.effectRemainFrame[type] === undefined) {
+            if (this.effectTable[type].start) {
+                this.effectTable[type].start();
+            }
         }
+        this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
     }
 
     reduceEffect() {
