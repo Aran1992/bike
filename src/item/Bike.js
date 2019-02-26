@@ -236,6 +236,7 @@ export default class Bike {
         let pos = this.bikeBody.getPosition();
         this.dragBackPos = {x: pos.x, y: pos.y};
         this.deadCompleteTimer = setTimeout(this.onDeadCompleted.bind(this), Config.bike.deadCompleteTime);
+        this.resetBikeStatus();
     }
 
     onDeadCompleted() {
@@ -329,7 +330,6 @@ export default class Bike {
                 break;
             }
             case "ItemAccGem": {
-                this.startEffect("Accelerate");
                 break;
             }
             default:
@@ -375,12 +375,15 @@ export default class Bike {
             },
             Accelerate: {
                 start: () => {
+                    console.log("start", this.commonVelocity);
                     this.originPlayerCommonVelocity = this.commonVelocity;
                     this.commonVelocity *= Config.effect.Accelerate.rate;
+                    console.log("start2", this.commonVelocity);
                     let velocity = this.bikeBody.getLinearVelocity();
                     this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
                 },
                 end: () => {
+                    console.log("end", this.commonVelocity, this.originPlayerCommonVelocity);
                     this.commonVelocity = this.originPlayerCommonVelocity;
                     let velocity = this.bikeBody.getLinearVelocity();
                     this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
@@ -404,5 +407,21 @@ export default class Bike {
         let x = vx * t;
         let y = vy * t / 2;
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    }
+
+    resetBikeStatus() {
+        this.jumpCount = 0;
+        this.jumping = false;
+
+        this.isContactFatalEdge = false;
+
+        for (let type in this.effectRemainFrame) {
+            if (this.effectRemainFrame.hasOwnProperty(type)) {
+                delete this.effectRemainFrame[type];
+                if (this.effectTable[type].end) {
+                    this.effectTable[type].end();
+                }
+            }
+        }
     }
 }

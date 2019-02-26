@@ -45,6 +45,8 @@ export default class Item {
                 break;
             }
             case "Sprite": {
+                this.isHelpful = true;
+
                 let texture = resources[this.config.props.texture].texture;
                 this.sprite = new Sprite(texture);
                 this.sprite.position.set(this.config.props.x, this.config.props.y);

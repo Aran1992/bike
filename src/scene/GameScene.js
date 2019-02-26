@@ -7,7 +7,7 @@ import MusicMgr from "../mgr/MusicMgr";
 import DataMgr from "../mgr/DataMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
-import {Container, Emitter, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {Container, Emitter, Graphics, resources, Sprite, Texture} from "../libs/pixi-wrapper";
 
 import Road from "../item/Road";
 import Item from "../item/Item";
@@ -466,16 +466,16 @@ export default class GameScene extends Scene {
         this.gameContainer.addChild(sprite);
     }
 
-    createFPSText() {
-        let style = new TextStyle({
-            fill: "white",
-            stroke: "#ff3300",
-            strokeThickness: 1,
-        });
-        this.fpsText = new Text("FPS:0", style);
-        this.fpsText.anchor.set(0, 0);
-        this.addChild(this.fpsText);
-    }
+    // createFPSText() {
+    //     let style = new TextStyle({
+    //         fill: "white",
+    //         stroke: "#ff3300",
+    //         strokeThickness: 1,
+    //     });
+    //     this.fpsText = new Text("FPS:0", style);
+    //     this.fpsText.anchor.set(0, 0);
+    //     this.addChild(this.fpsText);
+    // }
 
     createBg() {
         this.bgList = [];
@@ -637,7 +637,6 @@ export default class GameScene extends Scene {
 
         if (config.velocityPercent) {
             this.playerCommonVelocity = this.bikeCommonVelocity * config.velocityPercent;
-            this.playerAccVelocity = this.bikeAccVelocity * config.velocityPercent;
         }
         let density;
         if (config.densityPercent) {
@@ -1048,7 +1047,7 @@ export default class GameScene extends Scene {
     onClickPortableItem(i) {
         let button = this.portableItemButtonList[i];
         if (button.children.length === 2) {
-            this.accelerateBike();
+            this.startEffect("Accelerate");
             button.removeChildAt(1);
         }
     }
@@ -1183,7 +1182,7 @@ export default class GameScene extends Scene {
             Accelerate: {
                 start: () => {
                     this.originPlayerCommonVelocity = this.playerCommonVelocity;
-                    this.playerCommonVelocity *= Config.effect.Decelerate.rate;
+                    this.playerCommonVelocity *= Config.effect.Accelerate.rate;
                     let velocity = this.bikeBody.getLinearVelocity();
                     this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, velocity.y));
                 },

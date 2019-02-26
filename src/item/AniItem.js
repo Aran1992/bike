@@ -25,6 +25,7 @@ export default class AniItem extends Item {
         let x = this.config.props.x + offsetX * this.sprite.scale.x + halfWidth;
         let y = this.config.props.y + offsetY * this.sprite.scale.y + halfHeight;
         body.setPosition(GameUtils.renderPos2PhysicsPos({x, y}));
-        body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite, effect: this.effect});
+        this.type = GameUtils.getItemType(this.config);
+        body.setUserData(this);
     }
 }
