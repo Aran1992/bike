@@ -3,7 +3,7 @@ const RunOption = {
     debug: 0,
     removeAllEnemy: 0,
     // 强制排名模式地图ID，如果为-1的话就是不进行强制，ID从0开始，对应Config.mapList顺序
-    fixedMapID: -1,
+    fixedMapID: 0,
     // 是否显示死亡线（1就显示 为0就不显示）
     showDeadLine: 1,
 };

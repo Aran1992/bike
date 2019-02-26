@@ -3,12 +3,13 @@ import {Box} from "../libs/planck-wrapper";
 import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
+import Utils from "../mgr/Utils";
 
-export default class InstantItem extends EditorItem {
+export default class PortableItem extends EditorItem {
     constructor(gameMgr, parent, world, config) {
-        super("InstantItem", gameMgr, parent, world, config);
+        super("PortableItem", gameMgr, parent, world, config);
 
-        this.isHelpful = Config.effect[this.config.effect].isHelpful;
+        this.isHelpful = 1;
 
         this.onCreate();
     }
@@ -32,12 +33,20 @@ export default class InstantItem extends EditorItem {
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
             if (this.sprite.visible) {
-                EventMgr.dispatchEvent("AteItem", this.config.effect);
+                EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
                 this.sprite.visible = false;
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
-                anotherFixture.getBody().getUserData().onAteItem(this.config.effect);
+            let enemy = anotherFixture.getBody().getUserData();
+            if (enemy.selfFixture === anotherFixture) {
+                let effect = Config.effect[this.config.effect];
+                if (effect.isHelpful) {
+                    enemy.onAteItem(this.config.effect);
+                } else {
+                    let anotherList = this.gameMgr.enemyList.concat([this.gameMgr.bikeBody.getUserData()]);
+                    anotherList.splice(anotherList.indexOf(enemy), 1);
+                    Utils.randomChoose(anotherList).onAteItem(this.config.effect);
+                }
             }
         }
     }

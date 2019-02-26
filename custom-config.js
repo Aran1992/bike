@@ -4592,11 +4592,6 @@ Config.item = {
             }
         }
     },
-    // 无限跳道具
-    unlimitedJumpItem: {
-        // 持续时间（单位：秒）
-        duration: 10
-    },
     // 火球
     fireBall: {
         table: {
@@ -4626,6 +4621,19 @@ Config.item = {
                 effect: "WeakenJump",
             },
         }
+    },
+    // 可携带物品
+    PortableItem: {
+        table: {
+            1: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "Accelerate",
+            },
+            2: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "Decelerate",
+            },
+        }
     }
 };
 
@@ -4636,6 +4644,8 @@ Config.effect = {
         duration: 5,
         // 削减之后是原来速度的多少
         rate: 0.5,
+        // 是否有益
+        isHelpful: 0,
     },
     // 削弱跳跃
     WeakenJump: {
@@ -4643,6 +4653,8 @@ Config.effect = {
         duration: 5,
         // 削减之后是原来跳跃力的多少
         rate: 0.5,
+        // 是否有益
+        isHelpful: 0,
     },
     // 加速
     Accelerate: {
@@ -4650,11 +4662,15 @@ Config.effect = {
         duration: 5,
         // 强化之后是原来速度的多少
         rate: 1.5,
+        // 是否有益
+        isHelpful: 1,
     },
     // 无限跳跃
     UnlimitedJump: {
         // 持续时间（单位：秒）
         duration: 5,
+        // 是否有益
+        isHelpful: 1,
     }
 };
 

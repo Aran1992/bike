@@ -201,19 +201,6 @@
         {
             "x":15,
             "type":"Sprite",
-            "props":{"y":394.5,"x":324,"texture":"images/item-acc.png","scaleY":0.75,"scaleX":0.75,"name":"ItemAccGem//携带加速宝石"},
-            "nodeParent":1,
-            "label":"ItemAccGem//携带加速宝石",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":193,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
             "searchKey":"Sprite,GoldCoin//金币",
             "props":{"y":-177,"x":851,"texture":"images/medal.png","scaleY":0.25,"scaleX":0.25,"name":"GoldCoin//金币"},
             "nodeParent":1,

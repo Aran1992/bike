@@ -8801,21 +8801,6 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,UnlimitedJumpItem//无限跳道具",
-            "props":{"y":-57,"x":704,"width":80,"skin":"images/crystal_wing_00.png","scaleY":0.5,"scaleX":0.5,"name":"UnlimitedJumpItem//无限跳道具","height":80,"anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UnlimitedJumpItem//无限跳道具",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1558,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
             "searchKey":"Image,InstantItem//立即生效物品//ID:1",
             "props":{"y":-60,"x":1300,"skin":"images/beam_notice_03.png","name":"InstantItem//立即生效物品//ID:1","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,

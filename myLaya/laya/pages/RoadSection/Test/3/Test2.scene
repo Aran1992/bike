@@ -433,20 +433,6 @@
             "compId":99,
             "child":[
                 ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,ItemAccGem//携带加速宝石",
-            "props":{"y":-97,"x":451,"texture":"images/item-acc.png","scaleY":0.75,"scaleX":0.75,"name":"ItemAccGem//携带加速宝石"},
-            "nodeParent":1,
-            "label":"ItemAccGem//携带加速宝石",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":100,
-            "child":[
-                ]
         }],
     "animations":[
         {

@@ -22,9 +22,9 @@ import Road2 from "../item/Road2";
 import DeadLine from "../item/DeadLine";
 import RollingStone from "../item/RollingStone";
 import EditorItem from "../item/EditorItem";
-import UnlimitedJumpItem from "../item/UnlimitedJumpItem";
 import FireBall from "../item/FireBall";
 import InstantItem from "../item/InstantItem";
+import PortableItem from "../item/PortableItem";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -298,7 +298,7 @@ export default class GameScene extends Scene {
                 is: (fixture) => {
                     let ud = fixture.getBody().getUserData();
                     if (ud) {
-                        return ["AccGem", "ItemAccGem", "GoldCoin",].find(type => type === ud.type);
+                        return ["AccGem", "GoldCoin",].find(type => type === ud.type);
                     }
                 },
             },
@@ -441,15 +441,16 @@ export default class GameScene extends Scene {
         }
     }
 
-    onAteItem(type) {
+    onAteItem(type, effect, texture) {
+        console.log("self", type);
         switch (type) {
+            case "PortableItem": {
+                this.showPortableItem(effect, texture);
+                break;
+            }
             case "GoldCoin": {
                 this.updateCoinText(this.coin + 1);
                 MusicMgr.playSound(Config.soundPath.eatGoldCoin);
-                break;
-            }
-            case "ItemAccGem": {
-                this.showPortableItem();
                 break;
             }
             default:
@@ -570,11 +571,6 @@ export default class GameScene extends Scene {
                 this.underBikeContianer.addChild(item.sprite);
                 break;
             }
-            case "ItemAccGem": {
-                let item = new Item(data, this.world);
-                this.underBikeContianer.addChild(item.sprite);
-                break;
-            }
             case "GroundStab": {
                 let item = new GroundStab(this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
@@ -596,11 +592,6 @@ export default class GameScene extends Scene {
                 this.itemList.push(item);
                 break;
             }
-            case "UnlimitedJumpItem": {
-                let item = new UnlimitedJumpItem(this, this.underBikeContianer, this.world, data);
-                this.itemList.push(item);
-                break;
-            }
             case "FireBall": {
                 let item = new FireBall(this, this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
@@ -608,6 +599,10 @@ export default class GameScene extends Scene {
             }
             case "InstantItem": {
                 this.itemList.push(new InstantItem(this, this.underBikeContianer, this.world, data));
+                break;
+            }
+            case "PortableItem": {
+                this.itemList.push(new PortableItem(this, this.underBikeContianer, this.world, data));
                 break;
             }
             default : {
@@ -652,6 +647,7 @@ export default class GameScene extends Scene {
         this.bikeBubbleSprite.visible = false;
 
         this.bikeBody = this.world.createDynamicBody();
+        this.bikeBody.setUserData(this);
         this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1,});
         this.bikeBody.setPosition(pp);
         this.bikeBody.setLinearVelocity(Vec2(this.playerCommonVelocity, 0));
@@ -1047,18 +1043,27 @@ export default class GameScene extends Scene {
     onClickPortableItem(i) {
         let button = this.portableItemButtonList[i];
         if (button.children.length === 2) {
-            this.startEffect("Accelerate");
+            let effect = button.children[1].effect;
+            if (Config.effect[effect].isHelpful) {
+                this.startEffect(effect);
+            } else {
+                let enemy = Utils.randomChoose(this.enemyList);
+                if (enemy) {
+                    enemy.onAteItem(effect);
+                }
+            }
             button.removeChildAt(1);
         }
     }
 
-    showPortableItem() {
+    showPortableItem(effect, texture) {
         this.portableItemButtonList.some(button => {
             if (button.children.length === 1) {
-                let sprite = new Sprite(resources[Config.imagePath.itemAccGem].texture);
+                let sprite = new Sprite(texture);
                 button.addChild(sprite);
                 sprite.anchor.set(0.5, 0.5);
                 sprite.position.set(button.width / 2, button.height / 2);
+                sprite.effect = effect;
                 return true;
             }
         });

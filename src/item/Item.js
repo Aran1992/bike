@@ -45,8 +45,6 @@ export default class Item {
                 break;
             }
             case "Sprite": {
-                this.isHelpful = true;
-
                 let texture = resources[this.config.props.texture].texture;
                 this.sprite = new Sprite(texture);
                 this.sprite.position.set(this.config.props.x, this.config.props.y);
@@ -64,7 +62,8 @@ export default class Item {
                 let height = texture.height / 2 * this.sprite.scale.y * Config.pixel2meter;
                 body.createFixture(Box(width, height), {density: 0, friction: 1,});
                 body.setPosition(GameUtils.renderPos2PhysicsPos(this.config.props));
-                body.setUserData({type: GameUtils.getItemType(this.config), sprite: this.sprite});
+                this.type = GameUtils.getItemType(this.config);
+                body.setUserData(this);
                 break;
             }
         }

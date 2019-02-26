@@ -329,9 +329,6 @@ export default class Bike {
             case "GoldCoin": {
                 break;
             }
-            case "ItemAccGem": {
-                break;
-            }
             default:
                 this.startEffect(type);
         }
@@ -375,15 +372,12 @@ export default class Bike {
             },
             Accelerate: {
                 start: () => {
-                    console.log("start", this.commonVelocity);
                     this.originPlayerCommonVelocity = this.commonVelocity;
                     this.commonVelocity *= Config.effect.Accelerate.rate;
-                    console.log("start2", this.commonVelocity);
                     let velocity = this.bikeBody.getLinearVelocity();
                     this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
                 },
                 end: () => {
-                    console.log("end", this.commonVelocity, this.originPlayerCommonVelocity);
                     this.commonVelocity = this.originPlayerCommonVelocity;
                     let velocity = this.bikeBody.getLinearVelocity();
                     this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
