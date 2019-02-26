@@ -3092,7 +3092,7 @@ Config.bikeList = [
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.1  bike 】
+            `【 NO.1  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3107,22 +3107,22 @@ Size      small`,
         bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
         // 结算金币倍率（不填的话就使用默认值）
         coinPercent: [
-		1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
-		1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
-		2
-		],
+            1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+            1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+            2
+        ],
         // 结算里程倍率（不填的话就使用默认值）
         distancePercent: [
-		1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
-		1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
-		2
-		],
+            1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+            1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+            2
+        ],
         // 结算积分倍率（不填的话就使用默认值）
         scorePercent: [
-		1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
-		1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
-		2
-		],
+            1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+            1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+            2
+        ],
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3137,7 +3137,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.2  bike 】
+            `【 NO.2  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3164,7 +3164,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.3  bike 】
+            `【 NO.3  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3191,7 +3191,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.4  bike 】
+            `【 NO.4  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3218,7 +3218,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.5  bike 】
+            `【 NO.5  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3245,7 +3245,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.6  bike 】
+            `【 NO.6  bike 】
 Speed     100%
 Jump      100%
 HighJump  normal
@@ -3271,8 +3271,8 @@ Size      small`,
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
         // 自行车的描述
-		dsc:
-`【 NO.7  bike 】
+        dsc:
+            `【 NO.7  bike 】
 Speed     100%
 Jump      150%
 HighJump  normal
@@ -3299,7 +3299,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.8  bike 】
+            `【 NO.8  bike 】
 Speed     100%
 Jump      150%
 HighJump  normal
@@ -3326,7 +3326,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.9  bike 】
+            `【 NO.9  bike 】
 Speed     100%
 Jump      150%
 HighJump  normal
@@ -3353,7 +3353,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.10  bike 】
+            `【 NO.10  bike 】
 Speed     140%
 Jump       90%
 HighJump  normal
@@ -3380,7 +3380,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.11  bike 】
+            `【 NO.11  bike 】
 Speed     140%
 Jump       90%
 HighJump  normal
@@ -3407,7 +3407,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.12  bike 】
+            `【 NO.12  bike 】
 Speed     140%
 Jump       90%
 HighJump  normal
@@ -3434,7 +3434,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.13  bike 】
+            `【 NO.13  bike 】
 Speed      80%
 Jump      180%
 HighJump  normal
@@ -3461,7 +3461,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.14  bike 】
+            `【 NO.14  bike 】
 Speed      80%
 Jump      180%
 HighJump  normal
@@ -3488,7 +3488,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.15  bike 】
+            `【 NO.15  bike 】
 Speed      80%
 Jump      180%
 HighJump  normal
@@ -3515,7 +3515,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.16  bike 】
+            `【 NO.16  bike 】
 Speed      80%
 Jump      100%
 HighJump  easy
@@ -3542,7 +3542,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.17  bike 】
+            `【 NO.17  bike 】
 Speed      80%
 Jump      100%
 HighJump  easy
@@ -3569,7 +3569,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.18  bike 】
+            `【 NO.18  bike 】
 Speed      80%
 Jump      100%
 HighJump  easy
@@ -3596,7 +3596,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.19  bike 】
+            `【 NO.19  bike 】
 Speed     120%
 Jump      180%
 HighJump  hard
@@ -3623,7 +3623,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.20  bike 】
+            `【 NO.20  bike 】
 Speed     120%
 Jump      180%
 HighJump  hard
@@ -3650,7 +3650,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.21  bike 】
+            `【 NO.21  bike 】
 Speed     120%
 Jump      180%
 HighJump  hard
@@ -3677,7 +3677,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.22  bike 】
+            `【 NO.22  bike 】
 Speed     120%
 Jump       80%
 HighJump  easy
@@ -3704,7 +3704,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.23  bike 】
+            `【 NO.23  bike 】
 Speed     120%
 Jump       80%
 HighJump  easy
@@ -3731,7 +3731,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.24  bike 】
+            `【 NO.24  bike 】
 Speed     120%
 Jump       80%
 HighJump  easy
@@ -3758,7 +3758,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.25  bike 】
+            `【 NO.25  bike 】
 Speed     160%
 Jump      100%
 HighJump  hard
@@ -3785,7 +3785,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.26  bike 】
+            `【 NO.26  bike 】
 Speed     160%
 Jump      100%
 HighJump  hard
@@ -3812,7 +3812,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.27  bike 】
+            `【 NO.27  bike 】
 Speed     160%
 Jump      100%
 HighJump  hard
@@ -3839,7 +3839,7 @@ Size      middle`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.28  bike 】
+            `【 NO.28  bike 】
 Speed     160%
 Jump       80%
 HighJump  normal
@@ -3866,7 +3866,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.29  bike 】
+            `【 NO.29  bike 】
 Speed     160%
 Jump       80%
 HighJump  normal
@@ -3893,7 +3893,7 @@ Size      big`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.30  bike 】
+            `【 NO.30  bike 】
 Speed     160%
 Jump       80%
 HighJump  normal
@@ -3920,7 +3920,7 @@ Size      small`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.31  bike 】
+            `【 NO.31  bike 】
 Speed     200%
 Jump       80%
 HighJump  hard
@@ -3947,7 +3947,7 @@ Size      big`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.32  bike 】
+            `【 NO.32  bike 】
 Speed     200%
 Jump       80%
 HighJump  hard
@@ -3974,7 +3974,7 @@ Size      big`,
         position: [0, 0],
         // 自行车的描述
         dsc:
-`【 NO.33  bike 】
+            `【 NO.33  bike 】
 Speed     200%
 Jump       80%
 HighJump  hard
@@ -4644,6 +4644,18 @@ Config.effect = {
         // 削减之后是原来跳跃力的多少
         rate: 0.5,
     },
+    // 加速
+    Accelerate: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 强化之后是原来速度的多少
+        rate: 1.5,
+    },
+    // 无限跳跃
+    UnlimitedJump: {
+        // 持续时间（单位：秒）
+        duration: 5,
+    }
 };
 
 // 排行榜分数（按照1/2/3/4名往下配置）
@@ -4678,22 +4690,22 @@ Config.enemy.contactPlayerAlpha = 0.6;
 
 // 默认结算金币倍率
 Config.bike.coinPercent = [
-	1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
-	1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
-	2
-	];
+    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+    2
+];
 // 默认结算里程倍率
 Config.bike.distancePercent = [
-	1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
-	1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
-	2
+    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+    2
 ];
 
 // 默认结算积分倍率
 Config.bike.scorePercent = [
-	1   , 1.05, 1.1 , 1.15, 1.2 , 1.25, 1.3 , 1.35, 1.4 , 1.45,
-	1.5 , 1.55, 1.6 , 1.65, 1.7 , 1.75, 1.8 , 1.85, 1.9 , 1.95,
-	2
+    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+    2
 ];
 
 export default Config;

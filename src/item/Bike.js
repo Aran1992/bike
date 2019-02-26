@@ -38,6 +38,10 @@ export default class Bike {
 
         this.startFloat = false;
 
+        this.ateItemList = [];
+        this.effectRemainFrame = {};
+        this.initEffectTable();
+
         this.onCreate();
     }
 
@@ -98,6 +102,12 @@ export default class Bike {
                 contact.setEnabled(false);
             } else if (this.gameScene.chtable.item.is(anotherFixture)) {
                 contact.setEnabled(false);
+                let body = anotherFixture.getBody();
+                let ud = body.getUserData();
+                if (this.ateItemList.find(item => item === ud) === undefined) {
+                    this.ateItemList.push(ud);
+                    this.onAteItem(ud.effect || ud.type);
+                }
             } else if (this.gameScene.chtable.npc.is(anotherFixture)) {
                 contact.setEnabled(false);
                 this.isContactFatalEdge = true;
@@ -210,6 +220,8 @@ export default class Bike {
             this.jump();
             this.isGoToJump = false;
         }
+
+        this.reduceEffect();
     }
 
     onDead() {
@@ -302,5 +314,81 @@ export default class Bike {
     resetJumpStatus() {
         this.jumping = false;
         this.jumpCount = 0;
+    }
+
+    onAteItem(type) {
+        switch (type) {
+            case "GoldCoin": {
+                break;
+            }
+            case "ItemAccGem": {
+                this.startEffect("Accelerate");
+                break;
+            }
+            default:
+                this.startEffect(type);
+        }
+    }
+
+    startEffect(type) {
+        this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
+        if (this.effectTable[type].start) {
+            this.effectTable[type].start();
+        }
+    }
+
+    reduceEffect() {
+        for (let type in this.effectRemainFrame) {
+            if (this.effectRemainFrame.hasOwnProperty(type)) {
+                this.effectRemainFrame[type]--;
+                if (this.effectRemainFrame[type] === 0) {
+                    delete this.effectRemainFrame[type];
+                    if (this.effectTable[type].end) {
+                        this.effectTable[type].end();
+                    }
+                }
+            }
+        }
+    }
+
+    initEffectTable() {
+        this.effectTable = {
+            Decelerate: {
+                start: () => {
+                    this.originPlayerCommonVelocity = this.commonVelocity;
+                    this.commonVelocity *= Config.effect.Decelerate.rate;
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                },
+                end: () => {
+                    this.commonVelocity = this.originPlayerCommonVelocity;
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                },
+            },
+            Accelerate: {
+                start: () => {
+                    this.originPlayerCommonVelocity = this.commonVelocity;
+                    this.commonVelocity *= Config.effect.Accelerate.rate;
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                },
+                end: () => {
+                    this.commonVelocity = this.originPlayerCommonVelocity;
+                    let velocity = this.bikeBody.getLinearVelocity();
+                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                },
+            },
+            WeakenJump: {
+                start: () => {
+                    this.originJumpForce = this.jumpForce;
+                    this.jumpForce *= Config.effect.WeakenJump.rate;
+                },
+                end: () => {
+                    this.jumpForce = this.originJumpForce;
+                },
+            },
+            UnlimitedJump: {},
+        };
     }
 }

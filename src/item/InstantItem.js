@@ -32,7 +32,9 @@ export default class InstantItem extends EditorItem {
             EventMgr.dispatchEvent("AteItem", this.config.effect);
             this.sprite.visible = false;
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            // todo
+            if (anotherFixture.getBody().getUserData().aiSensor !== anotherFixture) {
+                anotherFixture.getBody().getUserData().onAteItem(this.config.effect);
+            }
         }
     }
 }

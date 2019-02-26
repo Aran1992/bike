@@ -84,13 +84,13 @@ export default class MapGameScene extends GameScene {
         this.enemyList = [];
         if (!RunOption.removeAllEnemy) {
             let frames = GameUtils.getFrames(Config.bikeAtlasPath, "enemy");
-            let list = JSON.parse(JSON.stringify(Config.bikeList));
+            // let list = JSON.parse(JSON.stringify(Config.bikeList));
             for (let i = 0; i < Config.enemy.count; i++) {
-                let id = Utils.randomChoose(list).id;
-                let index = list.findIndex(item => item.id === id);
-                list.splice(index, 1);
+                // let id = Utils.randomChoose(list).id;
+                // let index = list.findIndex(item => item.id === id);
+                // list.splice(index, 1);
                 // let id = DataMgr.get(DataMgr.selectedBike, 0);
-                // let id = 3;
+                let id = 2;
                 let enemy = new Enemy(this, this.bikeContainer, this.world, id, {
                     commonVelocity: this.bikeCommonVelocity,
                     accVelocity: this.bikeAccVelocity,

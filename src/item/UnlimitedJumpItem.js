@@ -30,8 +30,12 @@ export default class UnlimitedJumpItem extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            EventMgr.dispatchEvent("AteItem", "UnlimitedJumpItem");
+            EventMgr.dispatchEvent("AteItem", "UnlimitedJump");
             this.sprite.visible = false;
+        } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
+            if (anotherFixture.getBody().getUserData().aiSensor !== anotherFixture) {
+                anotherFixture.getBody().getUserData().onAteItem("UnlimitedJump");
+            }
         }
     }
 }
