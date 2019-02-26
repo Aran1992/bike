@@ -3070,7 +3070,7 @@ Config.bikeJumpingAnimation = {
     },
 };
 
-// 复活拉回的时间（单位秒）（正式对外用2秒，内部测试用0.5秒）
+// 复活拉回的时间（单位秒）（正式对外用1秒，内部测试用0.5秒）
 Config.rebornDragDuration = 1;
 // 复活气泡漂浮时间
 Config.rebornFloatFrame = 300;
@@ -4612,26 +4612,50 @@ Config.item = {
     // 立即生效物品
     InstantItem: {
         table: {
+			// 陷阱：减速
             1: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "Decelerate",
             },
-            2: {
+			// 陷阱：削弱跳跃
+            6: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "WeakenJump",
+            },
+			// 增益：加速
+            101: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "Accelerate",
+            },
+			// 增益：无限跳跃
+            111: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "UnlimitedJump",
             },
         }
     },
     // 可携带物品
     PortableItem: {
         table: {
+			// 害人道具：减速
             1: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "Decelerate",
+            },
+			// 害人道具：削弱跳跃
+			6: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "WeakenJump",
+            },
+			// 增益道具：加速
+            101: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "Accelerate",
             },
-            2: {
+			// 增益道具：无限跳跃
+            111: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "Decelerate",
+                effect: "UnlimitedJump",
             },
         }
     }
@@ -4644,7 +4668,7 @@ Config.effect = {
         duration: 5,
         // 削减之后是原来速度的多少
         rate: 0.5,
-        // 是否有益
+        // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
     },
     // 削弱跳跃
@@ -4653,7 +4677,7 @@ Config.effect = {
         duration: 5,
         // 削减之后是原来跳跃力的多少
         rate: 0.5,
-        // 是否有益
+        // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
     },
     // 加速
@@ -4662,14 +4686,14 @@ Config.effect = {
         duration: 5,
         // 强化之后是原来速度的多少
         rate: 1.5,
-        // 是否有益
+        // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
     },
     // 无限跳跃
     UnlimitedJump: {
         // 持续时间（单位：秒）
         duration: 5,
-        // 是否有益
+        // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
     }
 };
