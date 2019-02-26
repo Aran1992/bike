@@ -66,7 +66,7 @@ export default class Bike {
 
         this.bikeBody = this.world.createDynamicBody();
         let density = Config.bikeDensity * (config.densityPercent || 1);
-        this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1});
+        this.selfFixture = this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1});
         this.bikeBody.setUserData(this);
         if (config.velocityPercent) {
             this.commonVelocity *= config.velocityPercent;
@@ -74,10 +74,12 @@ export default class Bike {
         }
         this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, 0));
 
-        let sd = {};
-        sd.shape = Circle(Config.bikeRadius * 2);
-        sd.isSensor = true;
-        this.aiSensor = this.bikeBody.createFixture(sd);
+        this.aiSensor = this.bikeBody.createFixture({shape: Circle(Config.bikeRadius * 2), isSensor: true});
+
+        let vy = this.jumpForce / this.bikeBody.getMass() / Config.fps;
+        let jumpRadius = this.calcJumpRadius(this.commonVelocity, vy, this.world.getGravity().y);
+        this.eatItemSensor = this.bikeBody.createFixture({shape: Circle(jumpRadius), isSensor: true});
+        // todo 当跳跃力之类的东西发生变化的时候 也需要修改探测圈的范围
     }
 
     destroy() {
@@ -96,7 +98,7 @@ export default class Bike {
         if (this.isDead) {
             return contact.setEnabled(false);
         }
-        if (selfFixture !== this.aiSensor) {
+        if (selfFixture === this.selfFixture) {
             if (this.gameScene.chtable.player.is(anotherFixture)
                 || this.gameScene.chtable.enemy.is(anotherFixture)) {
                 contact.setEnabled(false);
@@ -125,6 +127,11 @@ export default class Bike {
             let ud = anotherFixture.getUserData();
             if ((ud && (ud.isFatal || ud.isCliff))
                 || this.gameScene.chtable.obstacle.is(anotherFixture)) {
+                this.isGoToJump = true;
+            }
+        } else if (selfFixture === this.eatItemSensor) {
+            let ud = anotherFixture.getBody().getUserData();
+            if ((ud && ud.isHelpful)) {
                 this.isGoToJump = true;
             }
         } else {
@@ -390,5 +397,12 @@ export default class Bike {
             },
             UnlimitedJump: {},
         };
+    }
+
+    calcJumpRadius(vx, vy, a) {
+        let t = vy / a;
+        let x = vx * t;
+        let y = vy * t / 2;
+        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
 }

@@ -15,6 +15,7 @@ export default class UnlimitedJumpItem extends EditorItem {
         super.onCreate();
 
         this.body = this.world.createBody();
+        this.isHelpful = true;
         this.body.setUserData(this);
         let pp = GameUtils.renderPos2PhysicsPos(this.sprite.position);
         this.body.setPosition(pp);
@@ -30,10 +31,12 @@ export default class UnlimitedJumpItem extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            EventMgr.dispatchEvent("AteItem", "UnlimitedJump");
-            this.sprite.visible = false;
+            if (this.sprite.visible) {
+                EventMgr.dispatchEvent("AteItem", "UnlimitedJump");
+                this.sprite.visible = false;
+            }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            if (anotherFixture.getBody().getUserData().aiSensor !== anotherFixture) {
+            if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
                 anotherFixture.getBody().getUserData().onAteItem("UnlimitedJump");
             }
         }

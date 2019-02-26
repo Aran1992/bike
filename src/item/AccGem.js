@@ -7,5 +7,6 @@ export default class AccGem extends AniItem {
         this.frames = GameUtils.getFrames(Config.accGemAniJson);
         this.animationSpeed = 0.25;
         this.effect = "Accelerate";
+        this.isHelpful = true;
     }
 }

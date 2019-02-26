@@ -29,10 +29,12 @@ export default class InstantItem extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            EventMgr.dispatchEvent("AteItem", this.config.effect);
-            this.sprite.visible = false;
+            if (this.sprite.visible) {
+                EventMgr.dispatchEvent("AteItem", this.config.effect);
+                this.sprite.visible = false;
+            }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            if (anotherFixture.getBody().getUserData().aiSensor !== anotherFixture) {
+            if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
                 anotherFixture.getBody().getUserData().onAteItem(this.config.effect);
             }
         }

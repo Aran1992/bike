@@ -44,7 +44,9 @@ export default class FireBall extends EditorItem {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
             this.gameMgr.isContactFatalEdge = true;
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            anotherFixture.getBody().getUserData().isContactFatalEdge = true;
+            if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
+                anotherFixture.getBody().getUserData().isContactFatalEdge = true;
+            }
         }
     }
 

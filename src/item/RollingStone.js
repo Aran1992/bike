@@ -48,10 +48,12 @@ export default class RollingStone extends EditorItem {
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             let enemy = anotherFixture.getBody().getUserData();
-            if (enemy.bikeSprite.y > this.sprite.y) {
-                enemy.isContactFatalEdge = true;
-            } else {
-                enemy.resetJumpStatus();
+            if (enemy.selfFixture === anotherFixture) {
+                if (enemy.bikeSprite.y > this.sprite.y) {
+                    enemy.isContactFatalEdge = true;
+                } else {
+                    enemy.resetJumpStatus();
+                }
             }
         }
     }
