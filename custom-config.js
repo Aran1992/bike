@@ -9,6 +9,12 @@ Config.gravity = -175;
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
+// 默认的道具随机权重表
+Config.defaultItemRandomTable = {
+    PowerJump: 1,
+    WeakenJump: 1,
+};
+
 // 地图配置
 Config.mapList = [
     {
@@ -51,6 +57,11 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM102.mp3",
+        // 道具随机权重表
+        itemRandomTable: {
+            PowerJump: 1,
+            WeakenJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -726,7 +737,12 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map1"
+        dsc: "Map1",
+        // 道具随机权重表
+        itemRandomTable: {
+            PowerJump: 1,
+            WeakenJump: 1,
+        },
     },
     {
         id: 1,
@@ -4644,7 +4660,7 @@ Config.item = {
             },
         }
     },
-    // 可携带物品
+    // 可携带物品 如果效果为"Random" 那么就是吃下去之后随即一个道具出来，随机概率根据每个场景自己的配置来
     PortableItem: {
         table: {
             // 害人道具：减速
@@ -4681,6 +4697,8 @@ Config.item = {
     }
 };
 
+Config.defaultItemImagePath = "myLaya/laya/assets/images/crystal_grider_09.png";
+
 Config.effect = {
     // 减速
     Decelerate: {
@@ -4690,6 +4708,7 @@ Config.effect = {
         rate: 0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
+        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     },
     // 削弱跳跃
     WeakenJump: {

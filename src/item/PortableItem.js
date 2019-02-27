@@ -4,6 +4,7 @@ import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
+import {resources} from "../libs/pixi-wrapper";
 
 export default class PortableItem extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -33,19 +34,27 @@ export default class PortableItem extends EditorItem {
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
             if (this.sprite.visible) {
-                EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
+                if (this.config.effect === "Random") {
+                    let effect = this.gameMgr.randomEffect();
+                    let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
+                    EventMgr.dispatchEvent("AteItem", "PortableItem", effect, texture);
+                } else {
+                    EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
+                }
                 this.sprite.visible = false;
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             let enemy = anotherFixture.getBody().getUserData();
             if (enemy.selfFixture === anotherFixture) {
                 let effect = Config.effect[this.config.effect];
-                if (effect.isHelpful) {
-                    enemy.onAteItem(this.config.effect);
-                } else {
-                    let anotherList = this.gameMgr.enemyList.concat([this.gameMgr.bikeBody.getUserData()]);
-                    anotherList.splice(anotherList.indexOf(enemy), 1);
-                    Utils.randomChoose(anotherList).onAteItem(this.config.effect);
+                if (effect) {
+                    if (effect.isHelpful) {
+                        enemy.onAteItem(this.config.effect);
+                    } else {
+                        let anotherList = this.gameMgr.enemyList.concat([this.gameMgr.bikeBody.getUserData()]);
+                        anotherList.splice(anotherList.indexOf(enemy), 1);
+                        Utils.randomChoose(anotherList).onAteItem(this.config.effect);
+                    }
                 }
             }
         }

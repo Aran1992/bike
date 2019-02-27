@@ -37,6 +37,7 @@ export default class MapGameScene extends GameScene {
         this.bgY = this.mapConfig.bgY || Config.bgY;
         this.bgmPath = this.mapConfig.bgmPath || Config.defaultBgmPath;
         this.bgScale = this.mapConfig.bgScale || Config.defaultBgScale;
+        this.itemRandomTable = this.mapConfig.itemRandomTable || Config.defaultItemRandomTable;
     }
 
     getResPathList() {

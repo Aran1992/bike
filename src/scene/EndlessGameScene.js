@@ -40,6 +40,7 @@ export default class EndlessGameScene extends GameScene {
         this.bgY = this.sceneConfig.bgY || Config.bgY;
         this.bgmPath = this.sceneConfig.bgmPath || Config.defaultBgmPath;
         this.bgScale = this.sceneConfig.bgScale || Config.defaultBgScale;
+        this.itemRandomTable = this.sceneConfig.itemRandomTable || Config.defaultItemRandomTable;
     }
 
     getResPathList() {

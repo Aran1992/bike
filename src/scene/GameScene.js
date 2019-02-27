@@ -123,6 +123,14 @@ export default class GameScene extends Scene {
     }
 
     getResPathList() {
+        let effectImagePath = [];
+        for (let effect in Config.effect) {
+            if (Config.effect.hasOwnProperty(effect)) {
+                if (Config.effect[effect].imagePath) {
+                    effectImagePath.push(Config.effect[effect].imagePath);
+                }
+            }
+        }
         return [
             Config.bikeAtlasPath,
             Config.finalFlagImagePath,
@@ -135,6 +143,7 @@ export default class GameScene extends Scene {
             .concat(Utils.values(Config.sceneItemImagePath))
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
+            .concat(effectImagePath)
             .concat(Utils.values(Config.bikeJumpingAnimation).map(item => item.atlasPath));
     }
 
@@ -1272,6 +1281,18 @@ export default class GameScene extends Scene {
 
     hasEffect(type) {
         return this.effectRemainFrame[type] !== undefined;
+    }
+
+    randomEffect() {
+        let weights = [];
+        let effects = [];
+        for (let effect in this.itemRandomTable) {
+            if (this.itemRandomTable.hasOwnProperty(effect)) {
+                weights.push(this.itemRandomTable[effect]);
+                effects.push(effect);
+            }
+        }
+        return effects[Utils.randomWithWeight(weights)];
     }
 }
 
