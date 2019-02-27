@@ -4622,6 +4622,16 @@ Config.item = {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "WeakenJump",
             },
+            // 陷阱：遮挡视线
+            21: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "BlockSight",
+            },
+            // 陷阱：束缚道具
+            26: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "SpiderWeb",
+            },
             // 增益：加速
             101: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
@@ -4646,6 +4656,16 @@ Config.item = {
             6: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "WeakenJump",
+            },
+            // 害人道具：遮挡视线
+            21: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "BlockSight",
+            },
+            // 害人道具：束缚道具
+            26: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "SpiderWeb",
             },
             // 增益道具：加速
             101: {
@@ -4703,7 +4723,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
     },
-    // 蜘蛛网
+    // 束缚
     SpiderWeb: {
         // 持续时间（单位：秒）
         duration: 5,
