@@ -1257,7 +1257,16 @@ export default class GameScene extends Scene {
                 end: () => {
                     this.jumpForce = this.originJumpForce;
                 },
-            }
+            },
+            PowerJump: {
+                start: () => {
+                    this.originJumpForce = this.jumpForce;
+                    this.jumpForce *= Config.effect.PowerJump.rate;
+                },
+                end: () => {
+                    this.jumpForce = this.originJumpForce;
+                },
+            },
         };
     }
 

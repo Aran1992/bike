@@ -4733,6 +4733,15 @@ Config.effect = {
         jumpForceRate: 0.2,
         // 挣脱需要点击次数
         breakTimes: 5,
+    },
+    // 强化跳跃
+    PowerJump: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 强化之后是原来跳跃力的多少
+        rate: 1.5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
     }
 };
 
