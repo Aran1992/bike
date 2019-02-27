@@ -81,6 +81,13 @@ export default class GameScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
 
         this.ui.matchRacetrack.visible = false;
+
+        this.blockSightSprite = this.gameContainer.addChild(new Graphics())
+            .beginFill(0x000000, 1)
+            .drawCircle(0, 0, Config.effect.BlockSight.radius)
+            .endFill();
+        this.blockSightSprite.position.set(App.sceneWidth / 2, App.sceneHeight / 2);
+        this.blockSightSprite.visible = false;
     }
 
     onShow() {
@@ -157,6 +164,8 @@ export default class GameScene extends Scene {
     }
 
     onLoadedGameRes() {
+        this.blockSightSprite.visible = false;
+
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
         this.world.on("begin-contact", this.onBeginContact.bind(this));
@@ -1224,6 +1233,14 @@ export default class GameScene extends Scene {
                 },
             },
             UnlimitedJump: {},
+            BlockSight: {
+                start: () => {
+                    this.blockSightSprite.visible = true;
+                },
+                end: () => {
+                    this.blockSightSprite.visible = false;
+                }
+            },
         };
     }
 }

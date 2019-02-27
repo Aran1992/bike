@@ -4612,22 +4612,22 @@ Config.item = {
     // 立即生效物品
     InstantItem: {
         table: {
-			// 陷阱：减速
+            // 陷阱：减速
             1: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "Decelerate",
             },
-			// 陷阱：削弱跳跃
+            // 陷阱：削弱跳跃
             6: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "WeakenJump",
             },
-			// 增益：加速
+            // 增益：加速
             101: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "Accelerate",
             },
-			// 增益：无限跳跃
+            // 增益：无限跳跃
             111: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "UnlimitedJump",
@@ -4637,22 +4637,22 @@ Config.item = {
     // 可携带物品
     PortableItem: {
         table: {
-			// 害人道具：减速
+            // 害人道具：减速
             1: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "Decelerate",
             },
-			// 害人道具：削弱跳跃
-			6: {
+            // 害人道具：削弱跳跃
+            6: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "WeakenJump",
             },
-			// 增益道具：加速
+            // 增益道具：加速
             101: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "Accelerate",
             },
-			// 增益道具：无限跳跃
+            // 增益道具：无限跳跃
             111: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "UnlimitedJump",
@@ -4695,6 +4695,15 @@ Config.effect = {
         duration: 5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
+    },
+    // 遮挡视线
+    BlockSight: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 0,
+        // 遮挡频幕的圆形的半径（单位：像素）
+        radius: 200,
     }
 };
 

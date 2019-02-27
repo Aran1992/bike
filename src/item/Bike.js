@@ -410,6 +410,7 @@ export default class Bike {
                 },
             },
             UnlimitedJump: {},
+            BlockSight: {}
         };
     }
 
