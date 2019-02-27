@@ -229,7 +229,7 @@ export default class Bike {
             this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
         }
 
-        if (this.isDead === false && this.isGoToJump) {
+        if (this.isDead === false && (this.isGoToJump || this.hasEffect("SpiderWeb"))) {
             this.jump();
             this.isGoToJump = false;
         }
@@ -322,7 +322,14 @@ export default class Bike {
     }
 
     jump() {
-        if (this.jumpCount < Config.jumpCommonMaxCount
+        if (this.hasEffect("SpiderWeb")) {
+            this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
+            this.spiderWebRemainBreakTimes--;
+            if (this.spiderWebRemainBreakTimes === 0) {
+                delete this.effectRemainFrame.SpiderWeb;
+                this.effectTable.SpiderWeb.end();
+            }
+        } else if (this.jumpCount < Config.jumpCommonMaxCount
             || this.jumpExtraCountdown > 0) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
@@ -350,7 +357,11 @@ export default class Bike {
     }
 
     startEffect(type) {
-        if (this.effectRemainFrame[type] === undefined) {
+        if (this.effectRemainFrame[type]) {
+            if (this.effectTable[type].cover) {
+                this.effectTable[type].cover();
+            }
+        } else {
             if (this.effectTable[type].start) {
                 this.effectTable[type].start();
             }
@@ -410,7 +421,20 @@ export default class Bike {
                 },
             },
             UnlimitedJump: {},
-            BlockSight: {}
+            BlockSight: {},
+            SpiderWeb: {
+                start: () => {
+                    this.originJumpForce = this.jumpForce;
+                    this.jumpForce *= Config.effect.SpiderWeb.jumpForceRate;
+                    this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
+                },
+                cover: () => {
+                    this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
+                },
+                end: () => {
+                    this.jumpForce = this.originJumpForce;
+                }
+            }
         };
     }
 
@@ -435,5 +459,9 @@ export default class Bike {
                 }
             }
         }
+    }
+
+    hasEffect(type) {
+        return this.effectRemainFrame[type] !== undefined;
     }
 }

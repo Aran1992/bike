@@ -395,6 +395,13 @@ export default class GameScene extends Scene {
             if (this.startFloat) {
                 this.startFloat = false;
                 this.bikeBubbleSprite.visible = false;
+            } else if (this.hasEffect("SpiderWeb")) {
+                this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
+                this.spiderWebRemainBreakTimes--;
+                if (this.spiderWebRemainBreakTimes === 0) {
+                    delete this.effectRemainFrame.SpiderWeb;
+                    this.effectTable.SpiderWeb.end();
+                }
             } else if (this.effectRemainFrame.UnlimitedJump !== undefined
                 || this.jumpCount < Config.jumpCommonMaxCount
                 || this.jumpExtraCountdown > 0) {
@@ -1173,7 +1180,11 @@ export default class GameScene extends Scene {
     }
 
     startEffect(type) {
-        if (this.effectRemainFrame[type] === undefined) {
+        if (this.effectRemainFrame[type]) {
+            if (this.effectTable[type].cover) {
+                this.effectTable[type].cover();
+            }
+        } else {
             if (this.effectTable[type].start) {
                 this.effectTable[type].start();
             }
@@ -1241,7 +1252,24 @@ export default class GameScene extends Scene {
                     this.blockSightSprite.visible = false;
                 }
             },
+            SpiderWeb: {
+                start: () => {
+                    this.originJumpForce = this.jumpForce;
+                    this.jumpForce *= Config.effect.SpiderWeb.jumpForceRate;
+                    this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
+                },
+                cover: () => {
+                    this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
+                },
+                end: () => {
+                    this.jumpForce = this.originJumpForce;
+                },
+            }
         };
+    }
+
+    hasEffect(type) {
+        return this.effectRemainFrame[type] !== undefined;
     }
 }
 

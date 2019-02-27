@@ -4704,6 +4704,17 @@ Config.effect = {
         isHelpful: 0,
         // 遮挡频幕的圆形的半径（单位：像素）
         radius: 200,
+    },
+    // 蜘蛛网
+    SpiderWeb: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 0,
+        // 削减之后是原来跳跃力的多少
+        jumpForceRate: 0.2,
+        // 挣脱需要点击次数
+        breakTimes: 5,
     }
 };
 
