@@ -4702,8 +4702,6 @@ Config.effect = {
         duration: 5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
-        // 遮挡频幕的圆形的半径（单位：像素）
-        radius: 200,
     },
     // 蜘蛛网
     SpiderWeb: {
