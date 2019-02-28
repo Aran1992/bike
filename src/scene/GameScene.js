@@ -2,7 +2,6 @@ import Config from "../config";
 import RunOption from "../../run-option";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
-import EventMgr from "../mgr/EventMgr";
 import MusicMgr from "../mgr/MusicMgr";
 import DataMgr from "../mgr/DataMgr";
 import Scene from "./Scene";
@@ -11,8 +10,6 @@ import {Container, Emitter, Graphics, resources, Sprite, Text, TextStyle, Textur
 
 import Road from "../item/Road";
 import Item from "../item/Item";
-import GoldCoin from "../item/GoldCoin";
-import AccGem from "../item/AccGem";
 import SmallFireWall from "../item/SmallFireWall";
 import BigFireWall from "../item/BigFireWall";
 import BlackBird from "../item/BlackBird";
@@ -231,14 +228,6 @@ export default class GameScene extends Scene {
                     }
                     if (this.chtable.enemy.is(anotherFixture)) {
                         contact.setEnabled(false);
-                    } else if (this.chtable.item.is(anotherFixture)) {
-                        contact.setEnabled(false);
-                        let body = anotherFixture.getBody();
-                        let ud = body.getUserData();
-                        if (ud.sprite.visible) {
-                            ud.sprite.visible = false;
-                            EventMgr.dispatchEvent("AteItem", body.getUserData().effect || body.getUserData().type);
-                        }
                     } else if (this.chtable.npc.is(anotherFixture)) {
                         contact.setEnabled(false);
                         this.isContactFatalEdge = true;
@@ -302,14 +291,6 @@ export default class GameScene extends Scene {
                     let ud = fixture.getBody().getUserData();
                     if (ud) {
                         return ud.type === "Road2";
-                    }
-                },
-            },
-            item: {
-                is: (fixture) => {
-                    let ud = fixture.getBody().getUserData();
-                    if (ud) {
-                        return ["AccGem", "GoldCoin",].find(type => type === ud.type);
                     }
                 },
             },
@@ -560,16 +541,6 @@ export default class GameScene extends Scene {
                 });
                 let road2 = new Road2(this.road2Container, this.world, path, this.sideTexture2, this.topTexture2);
                 this.roadList.push(road2);
-                break;
-            }
-            case "GoldCoin": {
-                let item = new GoldCoin(data, this.world);
-                this.underBikeContianer.addChild(item.sprite);
-                break;
-            }
-            case "AccGem": {
-                let item = new AccGem(data, this.world);
-                this.underBikeContianer.addChild(item.sprite);
                 break;
             }
             case "BigFireWall": {

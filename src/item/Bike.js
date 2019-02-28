@@ -39,7 +39,6 @@ export default class Bike {
 
         this.startFloat = false;
 
-        this.ateItemList = [];
         this.effectRemainFrame = {};
         this.initEffectTable();
 
@@ -108,14 +107,6 @@ export default class Bike {
             if (this.gameScene.chtable.player.is(anotherFixture)
                 || this.gameScene.chtable.enemy.is(anotherFixture)) {
                 contact.setEnabled(false);
-            } else if (this.gameScene.chtable.item.is(anotherFixture)) {
-                contact.setEnabled(false);
-                let body = anotherFixture.getBody();
-                let ud = body.getUserData();
-                if (this.ateItemList.find(item => item === ud) === undefined) {
-                    this.ateItemList.push(ud);
-                    this.onAteItem(ud.effect || ud.type);
-                }
             } else if (this.gameScene.chtable.npc.is(anotherFixture)) {
                 contact.setEnabled(false);
                 this.isContactFatalEdge = true;
