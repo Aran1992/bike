@@ -4633,6 +4633,11 @@ Config.item = {
     // 立即生效物品
     InstantItem: {
         table: {
+            // 金币
+            0: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "GoldCoin",
+            },
             // 陷阱：减速
             1: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
@@ -4725,6 +4730,11 @@ Config.item = {
 Config.defaultItemImagePath = "myLaya/laya/assets/images/crystal_grider_09.png";
 
 Config.effect = {
+    // 金币
+    GoldCoin: {
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 0,
+    },
     // 减速
     Decelerate: {
         // 持续时间（单位：秒）
