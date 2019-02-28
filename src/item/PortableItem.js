@@ -48,6 +48,9 @@ export default class PortableItem extends EditorItem {
             if (enemy.selfFixture === anotherFixture) {
                 let effect = Config.effect[this.config.effect];
                 if (effect) {
+                    if (effect === "Random") {
+                        effect = this.gameMgr.randomEffect();
+                    }
                     if (effect.isHelpful) {
                         enemy.onAteItem(this.config.effect);
                     } else {
