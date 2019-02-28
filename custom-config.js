@@ -11,8 +11,13 @@ Config.jumpForce = 12800;
 
 // 默认的道具随机权重表
 Config.defaultItemRandomTable = {
-    PowerJump: 1,
+    Decelerate: 1,
     WeakenJump: 1,
+    Accelerate: 1,
+    UnlimitedJump: 1,
+    BlockSight: 1,
+    SpiderWeb: 1,
+    PowerJump: 1,
 };
 
 // 地图配置
@@ -4653,10 +4658,20 @@ Config.item = {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "Accelerate",
             },
+            // 增益：强化跳跃
+            106: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "PowerJump",
+            },
             // 增益：无限跳跃
             111: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "UnlimitedJump",
+            },
+            // 随机效果（机会命运）（还需要程序支持）
+            9999: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "Random",
             },
         }
     },
@@ -4688,10 +4703,20 @@ Config.item = {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "Accelerate",
             },
+            // 增益道具：强化跳跃
+            106: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "PowerJump",
+            },
             // 增益道具：无限跳跃
             111: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "UnlimitedJump",
+            },
+            // 随机道具
+            9999: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "Random",
             },
         }
     }
@@ -4718,22 +4743,7 @@ Config.effect = {
         rate: 0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
-    },
-    // 加速
-    Accelerate: {
-        // 持续时间（单位：秒）
-        duration: 5,
-        // 强化之后是原来速度的多少
-        rate: 1.5,
-        // 是否有益（1为有益，0为陷阱/害人）
-        isHelpful: 1,
-    },
-    // 无限跳跃
-    UnlimitedJump: {
-        // 持续时间（单位：秒）
-        duration: 5,
-        // 是否有益（1为有益，0为陷阱/害人）
-        isHelpful: 1,
+        imagePath: "myLaya/laya/assets/images/crystal_frog_09.png"
     },
     // 遮挡视线
     BlockSight: {
@@ -4741,6 +4751,7 @@ Config.effect = {
         duration: 5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
+        imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png"
     },
     // 束缚
     SpiderWeb: {
@@ -4752,6 +4763,17 @@ Config.effect = {
         jumpForceRate: 0.2,
         // 挣脱需要点击次数
         breakTimes: 5,
+        imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png"
+    },
+    // 加速
+    Accelerate: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 强化之后是原来速度的多少
+        rate: 1.5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
+        imagePath: "myLaya/laya/assets/images/crystal_jet_09.png"
     },
     // 强化跳跃
     PowerJump: {
@@ -4761,6 +4783,15 @@ Config.effect = {
         rate: 1.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
+        imagePath: "myLaya/laya/assets/images/crystal_drill_09.png"
+    },
+    // 无限跳跃
+    UnlimitedJump: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
+        imagePath: "myLaya/laya/assets/images/crystal_wing_09.png"
     }
 };
 
