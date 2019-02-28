@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":1560,
+    "selecteID":1583,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":1575,
+    "maxID":1584,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -8799,90 +8799,6 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image,PortableItem//可携带物品//ID:1",
-            "props":{"y":-116.5,"x":1504,"skin":"images/crystal_grider_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"PortableItem//可携带物品//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1568,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,PortableItem//可携带物品//ID:6",
-            "props":{"y":-110,"x":1704,"skin":"images/crystal_frog_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:6","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"PortableItem//可携带物品//ID:6",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1569,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,PortableItem//可携带物品//ID:101",
-            "props":{"y":-110,"x":1904,"skin":"images/crystal_jet_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:101","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"PortableItem//可携带物品//ID:101",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1570,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,PortableItem//可携带物品//ID:111",
-            "props":{"y":-110,"x":2104,"skin":"images/crystal_wing_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:111","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"PortableItem//可携带物品//ID:111",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1571,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,PortableItem//可携带物品//ID:21",
-            "props":{"y":-110,"x":2304,"skin":"images/crystal_ninja_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:21","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"PortableItem//可携带物品//ID:21",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1572,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,PortableItem//可携带物品//ID:26",
-            "props":{"y":-110,"x":2504,"skin":"images/crystal_propeller_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:26","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"PortableItem//可携带物品//ID:26",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1573,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road//终点安全道路(一定要放在最后1位)",
             "props":{"y":3123,"x":42121,"points":"800,235,1800,235","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
@@ -8893,6 +8809,132 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1574,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:1",
+            "props":{"y":-105.5,"x":1464,"skin":"images/crystal_grider_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:1","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:1",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1575,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:6",
+            "props":{"y":-110,"x":1664,"skin":"images/crystal_frog_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:6","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:6",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1576,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:21",
+            "props":{"y":-110,"x":1864,"skin":"images/crystal_ninja_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:21","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:21",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1577,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:26",
+            "props":{"y":-110,"x":2064,"skin":"images/crystal_propeller_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:26","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:26",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1578,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:101",
+            "props":{"y":-110,"x":2264,"skin":"images/crystal_jet_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:101","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:101",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1579,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:106",
+            "props":{"y":-110,"x":2464,"skin":"images/crystal_drill_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:106","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:106",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1580,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:111",
+            "props":{"y":-110,"x":2664,"skin":"images/crystal_wing_09.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:111","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:111",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1581,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:9999",
+            "props":{"y":-26,"x":640,"skin":"images/crystal_rabbit_03.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:9999","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:9999",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1582,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,PortableItem//可携带物品//ID:9999",
+            "props":{"y":-26,"x":826,"skin":"images/crystal_rabbit_03.png","scaleY":0.5,"scaleX":0.5,"name":"PortableItem//可携带物品//ID:9999","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"PortableItem//可携带物品//ID:9999",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1583,
             "child":[
                 ]
         }],
