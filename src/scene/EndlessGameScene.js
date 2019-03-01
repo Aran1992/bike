@@ -105,9 +105,6 @@ export default class EndlessGameScene extends GameScene {
             this.partList.push(item);
             sumLength += item.props.width;
         }
-        setTimeout(() => {
-            this.onAteItem("Magnet");
-        }, 5);
     }
 
     createRoadSection(json, offsetX, offsetY) {
