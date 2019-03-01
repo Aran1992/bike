@@ -1,5 +1,16 @@
 import Config from "../config";
-import {Application, Container, Graphics, loader, Rectangle, resources, Text, TextStyle} from "../libs/pixi-wrapper";
+import {
+    AnimatedSprite,
+    Application,
+    Container,
+    Graphics,
+    loader,
+    Rectangle,
+    resources,
+    Text,
+    TextStyle,
+    Texture
+} from "../libs/pixi-wrapper";
 import MapGameScene from "../scene/MapGameScene";
 import EndlessGameScene from "../scene/EndlessGameScene";
 import GameOverScene from "../scene/GameOverScene";
@@ -30,6 +41,8 @@ export default class MyApplication extends Application {
         this.mask.hitArea = new Rectangle(0, 0, this.sceneWidth, this.sceneHeight);
         this.mask.visible = false;
         UIHelper.onClick(this.mask, () => this.clickMaskCallback && this.clickMaskCallback(), true);
+
+        this.createLoadScene();
 
         this.sceneNameClassMap = {
             "MainScene": MainScene,
@@ -81,7 +94,61 @@ export default class MyApplication extends Application {
     loadResources(resPathList, onLoadedCallback) {
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined);
-        loader.add(resPathList).load(onLoadedCallback);
+        this.loadList = resPathList.map(path => [path, false]);
+        this.loadScene.visible = true;
+        this.updateLoadText();
+        loader
+            .add(resPathList)
+            .on("progress", this.onLoadProgress.bind(this))
+            .load(() => {
+                this.onLoadEnded();
+                onLoadedCallback();
+            });
+    }
+
+    createLoadScene() {
+        this.loadScene = this.stage.addChild(new Container());
+
+        this.loadScene.addChild(
+            new Graphics()
+                .beginFill(0x000000, 0.5)
+                .drawRect(0, 0, this.sceneWidth, this.sceneHeight)
+                .endFill()
+        );
+
+        this.loadText = this.loadScene.addChild(new Text("", new TextStyle({
+            fontSize: 50,
+            fill: "white",
+            wordWrap: true,
+            wordWrapWidth: this.sceneWidth,
+        })));
+        this.loadText.anchor.set(0.5, 0);
+        this.loadText.position.set(this.sceneWidth / 2, this.sceneHeight / 2 + 50);
+
+        this.loadSprite = this.loadScene.addChild(new AnimatedSprite(Config.loadingImagePathList.map(path => Texture.fromImage(path))));
+        this.loadSprite.animationSpeed = 0.5;
+        this.loadSprite.anchor.set(0.5, 0.5);
+        this.loadSprite.position.set(this.sceneWidth / 2, this.sceneHeight / 2 - 50);
+        this.loadSprite.play();
+    }
+
+    updateLoadText() {
+        // this.loadText.text = this.loadList.map(item => {
+        //     return `${item[0]}:${item[1] ? "loaded" : "loading"}`;
+        // }).join("\n");
+        this.loadText.text = `${Math.floor(this.loadList.reduce((sum, item) => sum + (item[1] ? 1 : 0), 0) / this.loadList.length * 100)}%`;
+    }
+
+    onLoadProgress(loader, resource) {
+        let item = this.loadList.find(item => resource.url === item[0]);
+        if (item) {
+            item[1] = true;
+            this.updateLoadText();
+        }
+    }
+
+    onLoadEnded() {
+        this.loadScene.visible = false;
     }
 
     showMask(clickMaskCallback) {

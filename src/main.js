@@ -2,6 +2,10 @@ import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
 import Utils from "./mgr/Utils";
 
+if (document.body.children[0] instanceof HTMLParagraphElement) {
+    document.body.removeChild(document.body.children[0]);
+}
+
 document.body.style.margin = "0";
 
 let resolution,
