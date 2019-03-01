@@ -4766,7 +4766,7 @@ Config.effect = {
     // 束缚
     SpiderWeb: {
         // 持续时间（单位：秒）
-        duration: 5,
+        duration: -1,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 削减之后是原来跳跃力的多少

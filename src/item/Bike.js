@@ -241,7 +241,11 @@ export default class Bike {
             this.stateText.text = "";
             for (let type in this.effectRemainFrame) {
                 if (this.effectRemainFrame.hasOwnProperty(type)) {
-                    this.stateText.text += `${type}:${Math.ceil(this.effectRemainFrame[type] / Config.fps)}\n`;
+                    if (this.effectRemainFrame[type] > 0) {
+                        this.stateText.text += `${type}:${Math.ceil(this.effectRemainFrame[type] / Config.fps)}\n`;
+                    } else {
+                        this.stateText.text += `${type}\n`;
+                    }
                 }
             }
         }
