@@ -13,11 +13,11 @@ Config.jumpForce = 12800;
 Config.defaultItemRandomTable = {
     Decelerate: 1,
     WeakenJump: 1,
-    Accelerate: 1,
-    UnlimitedJump: 1,
     BlockSight: 1,
     SpiderWeb: 1,
+    Accelerate: 1,
     PowerJump: 1,
+    UnlimitedJump: 1,
 };
 
 // 地图配置
@@ -4673,6 +4673,11 @@ Config.item = {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
                 effect: "UnlimitedJump",
             },
+            // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
+            121: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                effect: "Magnet",
+            },
             // 随机效果（机会命运）（还需要程序支持）
             9999: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect
@@ -4718,6 +4723,11 @@ Config.item = {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
                 effect: "UnlimitedJump",
             },
+            // 增益道具：磁铁（只能用于无尽模式，排名竞赛用会当机）
+            121: {
+                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
+                effect: "Magnet",
+            },
             // 随机道具
             9999: {
                 // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
@@ -4735,7 +4745,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
     },
-    // 减速
+    // 减速（可做：害人减速道具、减速物件区域、减速带）
     Decelerate: {
         // 持续时间（单位：秒）
         duration: 5,
@@ -4745,7 +4755,7 @@ Config.effect = {
         isHelpful: 0,
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     },
-    // 削弱跳跃
+    // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
     WeakenJump: {
         // 持续时间（单位：秒）
         duration: 5,
@@ -4755,7 +4765,7 @@ Config.effect = {
         isHelpful: 0,
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png"
     },
-    // 遮挡视线
+    // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
     BlockSight: {
         // 持续时间（单位：秒）
         duration: 5,
@@ -4763,9 +4773,9 @@ Config.effect = {
         isHelpful: 0,
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png"
     },
-    // 束缚
+    // 束缚（可做：害人束缚道具、束缚物件区域）
     SpiderWeb: {
-        // 持续时间（单位：秒）
+        // 持续时间（单位：秒）（-1为不限时长）
         duration: -1,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
@@ -4775,7 +4785,7 @@ Config.effect = {
         breakTimes: 5,
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png"
     },
-    // 加速
+    // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
         // 持续时间（单位：秒）
         duration: 5,
@@ -4785,7 +4795,7 @@ Config.effect = {
         isHelpful: 1,
         imagePath: "myLaya/laya/assets/images/crystal_jet_09.png"
     },
-    // 强化跳跃
+    // 强化跳跃（可做：增益强化跳跃道具、强化跳跃物件区域）
     PowerJump: {
         // 持续时间（单位：秒）
         duration: 5,
@@ -4795,7 +4805,7 @@ Config.effect = {
         isHelpful: 1,
         imagePath: "myLaya/laya/assets/images/crystal_drill_09.png"
     },
-    // 无限跳跃
+    // 无限跳跃（可做：增益无限跳跃道具、无限跳跃物件区域）
     UnlimitedJump: {
         // 持续时间（单位：秒）
         duration: 5,
@@ -4803,15 +4813,15 @@ Config.effect = {
         isHelpful: 1,
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png"
     },
-    // 磁铁
+    // 磁铁（只能用于无尽模式，排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
     Magnet: {
         // 持续时间（单位：秒）
-        duration: 10,
+        duration: 0.1,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 吸取速度（单位：像素/秒）
         velocity: 1000,
-        imagePath: "myLaya/laya/assets/images/crystal_wing_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png"
     }
 };
 
