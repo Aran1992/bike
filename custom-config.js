@@ -11,10 +11,6 @@ Config.jumpForce = 12800;
 
 // 默认的道具随机权重表
 Config.defaultItemRandomTable = {
-    Decelerate: 1,
-    WeakenJump: 1,
-    BlockSight: 1,
-    SpiderWeb: 1,
     Accelerate: 1,
     PowerJump: 1,
     UnlimitedJump: 1,
@@ -62,10 +58,15 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM102.mp3",
-        // 道具随机权重表
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-            PowerJump: 1,
-            WeakenJump: 1,
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
         },
     },
     {
@@ -108,6 +109,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM103.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -149,6 +160,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -190,6 +211,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -231,6 +262,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -272,6 +313,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -313,6 +364,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -354,6 +415,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -395,6 +466,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -436,6 +517,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -477,6 +568,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
     {
         // 显示给人看的名字
@@ -518,6 +619,16 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
+        // 道具随机权重表（排名竞赛-随机道具-模块1）
+        itemRandomTable: {
+			Decelerate: 1,
+			WeakenJump: 1,
+			BlockSight: 1,
+			SpiderWeb: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+        },
     },
 ];
 
@@ -743,10 +854,12 @@ Config.endlessMode.sceneList = [
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map1",
-        // 道具随机权重表
+        // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-            PowerJump: 1,
-            WeakenJump: 1,
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
         },
     },
     {
@@ -953,7 +1066,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map2"
+        dsc: "Map2",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 2,
@@ -1159,7 +1279,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map3"
+        dsc: "Map3",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 3,
@@ -1365,7 +1492,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map4"
+        dsc: "Map4",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 4,
@@ -1571,7 +1705,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map5"
+        dsc: "Map5",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 5,
@@ -1777,7 +1918,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map6"
+        dsc: "Map6",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 6,
@@ -1983,7 +2131,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map7"
+        dsc: "Map7",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 7,
@@ -2189,7 +2344,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map8"
+        dsc: "Map8",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 8,
@@ -2395,7 +2557,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map9"
+        dsc: "Map9",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 9,
@@ -2601,7 +2770,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map10"
+        dsc: "Map10",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 10,
@@ -2807,7 +2983,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map11"
+        dsc: "Map11",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
     {
         id: 11,
@@ -3013,7 +3196,14 @@ Config.endlessMode.sceneList = [
             ],
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map12"
+        dsc: "Map12",
+        // 道具随机权重表（无尽模式-随机道具-模块1）
+        itemRandomTable: {
+			Accelerate: 1,
+			PowerJump: 1,
+			UnlimitedJump: 1,
+			Magnet: 1,
+        },
     },
 ];
 
