@@ -756,7 +756,7 @@ export default class GameScene extends Scene {
                 if (this.effectRemainFrame.hasOwnProperty(type)) {
                     if (this.effectRemainFrame[type] > 0) {
                         this.stateText.text += `${type}:${Math.ceil(this.effectRemainFrame[type] / Config.fps)}\n`;
-                    }else{
+                    } else {
                         this.stateText.text += `${type}\n`;
                     }
                 }
@@ -1054,18 +1054,20 @@ export default class GameScene extends Scene {
     }
 
     onClickPortableItem(i) {
-        let button = this.portableItemButtonList[i];
-        if (button.children.length === 2) {
-            let effect = button.children[1].effect;
-            if (Config.effect[effect].isHelpful) {
-                this.startEffect(effect);
-            } else {
-                let enemy = Utils.randomChoose(this.enemyList);
-                if (enemy) {
-                    enemy.onAteItem(effect);
+        if (this.gameStatus === "play") {
+            let button = this.portableItemButtonList[i];
+            if (button.children.length === 2) {
+                let effect = button.children[1].effect;
+                if (Config.effect[effect].isHelpful) {
+                    this.startEffect(effect);
+                } else {
+                    let enemy = Utils.randomChoose(this.enemyList);
+                    if (enemy) {
+                        enemy.onAteItem(effect);
+                    }
                 }
+                button.removeChildAt(1);
             }
-            button.removeChildAt(1);
         }
     }
 
