@@ -221,7 +221,16 @@ export default class Bike {
         }
 
         if (this.isDead === false && (this.isGoToJump || this.hasEffect("SpiderWeb"))) {
-            this.jump();
+            if (this.hasEffect("SpiderWeb")) {
+                if (this.spiderWebBreakIntervalFrame <= 0) {
+                    this.jump();
+                    this.spiderWebBreakIntervalFrame = Config.enemy.spiderWebBreakIntervalFrame;
+                } else {
+                    this.spiderWebBreakIntervalFrame--;
+                }
+            } else {
+                this.jump();
+            }
             this.isGoToJump = false;
         }
 
@@ -419,6 +428,7 @@ export default class Bike {
                     this.originJumpForce = this.jumpForce;
                     this.jumpForce *= Config.effect.SpiderWeb.jumpForceRate;
                     this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
+                    this.spiderWebBreakIntervalFrame = 0;
                 },
                 cover: () => {
                     this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;

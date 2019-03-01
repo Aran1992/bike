@@ -4865,4 +4865,7 @@ Config.bike.scorePercent = [
     2
 ];
 
+// 敌人挣脱蜘蛛网每次跳跃之间的时间间隔（单位：帧数（每秒大概60帧））
+Config.enemy.spiderWebBreakIntervalFrame = 12;
+
 export default Config;
