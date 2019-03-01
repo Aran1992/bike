@@ -27,7 +27,7 @@ export default class RollingStone extends EditorItem {
     update() {
         super.update();
 
-        if (this.body.isStatic() && this.gameMgr.isItemXInView(this)) {
+        if (this.body.isStatic() && this.gameMgr.isItemXEnterView(this)) {
             this.body.setDynamic();
             this.body.setAngularVelocity(this.config.angularVelocity);
         }

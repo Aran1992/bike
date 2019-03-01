@@ -43,6 +43,7 @@ export default class EditorItem {
         this.sprite.scale.set(this.config.scaleX, this.config.scaleY);
         this.sprite.rotation = this.config.rotation;
         this.sprite.position.set(this.config.x, this.config.y);
+        this.sprite.part = this;
     }
 
     update() {
@@ -56,5 +57,13 @@ export default class EditorItem {
     }
 
     onBeginContact() {
+    }
+
+    getLeftBorderX() {
+        return this.sprite.x - this.sprite.anchor.x * this.sprite.texture.width * this.sprite.scale.x;
+    }
+
+    getRightBorderX() {
+        return this.getLeftBorderX() + this.sprite.texture.width * this.sprite.scale.x;
     }
 }

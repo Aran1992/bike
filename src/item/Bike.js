@@ -226,6 +226,7 @@ export default class Bike {
         }
 
         this.reduceEffect();
+        this.jumpExtraCountdown--;
 
         if (RunOption.showBikeState) {
             this.stateText.text = "";

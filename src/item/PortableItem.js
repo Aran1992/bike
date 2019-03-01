@@ -1,5 +1,5 @@
 import EditorItem from "./EditorItem";
-import {Box} from "../libs/planck-wrapper";
+import {Box, Vec2} from "../libs/planck-wrapper";
 import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
@@ -42,6 +42,9 @@ export default class PortableItem extends EditorItem {
                     EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
                 }
                 this.sprite.visible = false;
+                if (this.gameMgr.dynamicCreateRoad) {
+                    this.gameMgr.removeItem(this);
+                }
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             let enemy = anotherFixture.getBody().getUserData();
@@ -60,6 +63,31 @@ export default class PortableItem extends EditorItem {
                     }
                 }
             }
+        }
+    }
+
+    update() {
+        super.update();
+
+        if (this.body.isKinematic()) {
+            this.moveToPlayer();
+        } else {
+            if (this.gameMgr.hasEffect("Magnet") && this.gameMgr.isItemXInView(this)) {
+                this.body.setKinematic();
+                this.moveToPlayer();
+            }
+        }
+    }
+
+    moveToPlayer() {
+        if (this.gameMgr.gameStatus === "play") {
+            let radius = Utils.calcRadius(this.body.getPosition(), this.gameMgr.bikeBody.getPosition());
+            let velocity = Config.effect.Magnet.velocity * Config.pixel2meter;
+            let vx = velocity * Math.cos(radius);
+            let vy = velocity * Math.sin(radius);
+            this.body.setLinearVelocity(Vec2(vx, vy));
+        } else {
+            this.body.setLinearVelocity(Vec2(0, 0));
         }
     }
 }

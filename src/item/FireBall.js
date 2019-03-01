@@ -34,7 +34,7 @@ export default class FireBall extends EditorItem {
     update() {
         super.update();
 
-        if (this.body.isStatic() && this.gameMgr.isItemXInView(this)) {
+        if (this.body.isStatic() && this.gameMgr.isItemXEnterView(this)) {
             this.body.setKinematic();
             this.body.setLinearVelocity(Vec2(this.config.velocity, 0));
         }

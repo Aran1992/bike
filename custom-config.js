@@ -4802,6 +4802,16 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png"
+    },
+    // 磁铁
+    Magnet: {
+        // 持续时间（单位：秒）
+        duration: 10,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
+        // 吸取速度（单位：像素/秒）
+        velocity: 1000,
+        imagePath: "myLaya/laya/assets/images/crystal_wing_09.png"
     }
 };
 

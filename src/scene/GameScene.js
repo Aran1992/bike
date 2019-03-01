@@ -385,7 +385,7 @@ export default class GameScene extends Scene {
                     delete this.effectRemainFrame.SpiderWeb;
                     this.effectTable.SpiderWeb.end();
                 }
-            } else if (this.effectRemainFrame.UnlimitedJump !== undefined
+            } else if (this.hasEffect("UnlimitedJump")
                 || this.jumpCount < Config.jumpCommonMaxCount
                 || this.jumpExtraCountdown > 0) {
                 let velocity = this.bikeBody.getLinearVelocity();
@@ -666,6 +666,10 @@ export default class GameScene extends Scene {
         this.bikeAccSprite.anchor.set(0.5, 1);
         this.bikeAccSprite.visible = false;
 
+        this.removeAllEffects();
+    }
+
+    removeAllEffects() {
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
                 delete this.effectRemainFrame[type];
@@ -725,6 +729,7 @@ export default class GameScene extends Scene {
         }
 
         this.reduceEffect();
+        this.jumpExtraCountdown--;
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomCamera();
@@ -774,7 +779,7 @@ export default class GameScene extends Scene {
                 this.bikeAccSprite.visible = true;
                 this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeFloatFrame / Config.fps)}.png`];
                 this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
-            } else if (this.effectRemainFrame.Accelerate !== undefined) {
+            } else if (this.hasEffect("Accelerate")) {
                 this.bikeAccSprite.visible = true;
                 let frame = this.effectRemainFrame.Accelerate;
                 if (frame <= 5 * Config.fps) {
@@ -1078,6 +1083,7 @@ export default class GameScene extends Scene {
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
         this.dragBackPos = {x: pos.x, y: pos.y};
+        this.removeAllEffects();
     }
 
     dragBikeBack() {
@@ -1143,8 +1149,12 @@ export default class GameScene extends Scene {
         DataMgr.set(DataMgr.distance, distance);
     }
 
-    isItemXInView(item) {
+    isItemXEnterView(item) {
         return item.getLeftBorderX() < -this.cameraContainer.x + Config.designWidth;
+    }
+
+    isItemXInView(item) {
+        return item.getLeftBorderX() < -this.cameraContainer.x + Config.designWidth && item.getRightBorderX() > -this.cameraContainer.x;
     }
 
     resetJumpStatus() {
@@ -1247,6 +1257,7 @@ export default class GameScene extends Scene {
                     this.jumpForce = this.originJumpForce;
                 },
             },
+            Magnet: {},
         };
     }
 
@@ -1264,6 +1275,14 @@ export default class GameScene extends Scene {
             }
         }
         return effects[Utils.randomWithWeight(weights)];
+    }
+
+    removeItem(item) {
+        let index = this.itemList.indexOf(item);
+        if (index !== -1) {
+            item.destroy();
+            this.itemList.splice(index, 1);
+        }
     }
 }
 
