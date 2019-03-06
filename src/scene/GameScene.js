@@ -20,8 +20,7 @@ import DeadLine from "../item/DeadLine";
 import RollingStone from "../item/RollingStone";
 import EditorItem from "../item/EditorItem";
 import FireBall from "../item/FireBall";
-import InstantItem from "../item/InstantItem";
-import PortableItem from "../item/PortableItem";
+import EatableItem from "../item/EatableItem";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -585,12 +584,8 @@ export default class GameScene extends Scene {
                 this.itemList.push(item);
                 break;
             }
-            case "InstantItem": {
-                this.itemList.push(new InstantItem(this, this.underBikeContianer, this.world, data));
-                break;
-            }
-            case "PortableItem": {
-                this.itemList.push(new PortableItem(this, this.underBikeContianer, this.world, data));
+            case "EatableItem": {
+                this.itemList.push(new EatableItem(this, this.underBikeContianer, this.world, data));
                 break;
             }
             default : {

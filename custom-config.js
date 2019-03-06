@@ -60,13 +60,13 @@ Config.mapList = [
         bgmPath: "sound/SoundBGM102.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -111,13 +111,13 @@ Config.mapList = [
         bgmPath: "sound/SoundBGM103.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -162,13 +162,13 @@ Config.mapList = [
         bgmPath: "sound/SoundBGM105.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -213,13 +213,13 @@ Config.mapList = [
         bgmPath: "sound/SoundBGM105.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -264,13 +264,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -315,13 +315,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -366,13 +366,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -417,13 +417,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -468,13 +468,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -519,13 +519,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -570,13 +570,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
     {
@@ -621,13 +621,13 @@ Config.mapList = [
         bgmPath: "sound/bgm1.mp3",
         // 道具随机权重表（排名竞赛-随机道具-模块1）
         itemRandomTable: {
-			Decelerate: 1,
-			WeakenJump: 1,
-			BlockSight: 1,
-			SpiderWeb: 1,
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
+            Decelerate: 1,
+            WeakenJump: 1,
+            BlockSight: 1,
+            SpiderWeb: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
         },
     },
 ];
@@ -856,10 +856,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map1",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -1069,10 +1069,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map2",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -1282,10 +1282,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map3",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -1495,10 +1495,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map4",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -1708,10 +1708,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map5",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -1921,10 +1921,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map6",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -2134,10 +2134,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map7",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -2347,10 +2347,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map8",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -2560,10 +2560,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map9",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -2773,10 +2773,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map10",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -2986,10 +2986,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map11",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
     {
@@ -3199,10 +3199,10 @@ Config.endlessMode.sceneList = [
         dsc: "Map12",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
-			Accelerate: 1,
-			PowerJump: 1,
-			UnlimitedJump: 1,
-			Magnet: 1,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+            Magnet: 1,
         },
     },
 ];
@@ -4825,106 +4825,101 @@ Config.item = {
         table: {
             // 金币
             0: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "GoldCoin",
             },
             // 陷阱：减速
             1: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "Decelerate",
             },
             // 陷阱：削弱跳跃
             6: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "WeakenJump",
             },
             // 陷阱：遮挡视线
             21: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "BlockSight",
             },
             // 陷阱：束缚道具
             26: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "SpiderWeb",
             },
             // 增益：加速
             101: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "Accelerate",
             },
             // 增益：强化跳跃
             106: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "PowerJump",
             },
             // 增益：无限跳跃
             111: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "UnlimitedJump",
             },
             // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
             121: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
                 effect: "Magnet",
             },
             // 随机效果（机会命运）（还需要程序支持）
             9999: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect
+                portable: 0,
+                effect: "Random",
+            },
+            // 害人道具：减速
+            10: {
+                portable: 1,
+                effect: "Decelerate",
+            },
+            // 害人道具：削弱跳跃
+            60: {
+                portable: 1,
+                effect: "WeakenJump",
+            },
+            // 害人道具：遮挡视线
+            210: {
+                portable: 1,
+                effect: "BlockSight",
+            },
+            // 害人道具：束缚道具
+            260: {
+                portable: 1,
+                effect: "SpiderWeb",
+            },
+            // 增益道具：加速
+            1010: {
+                portable: 1,
+                effect: "Accelerate",
+            },
+            // 增益道具：强化跳跃
+            1060: {
+                portable: 1,
+                effect: "PowerJump",
+            },
+            // 增益道具：无限跳跃
+            1110: {
+                portable: 1,
+                effect: "UnlimitedJump",
+            },
+            // 增益道具：磁铁（只能用于无尽模式，排名竞赛用会当机）
+            1210: {
+                portable: 1,
+                effect: "Magnet",
+            },
+            // 随机道具
+            99990: {
+                portable: 1,
                 effect: "Random",
             },
         }
     },
-    // 可携带物品 如果效果为"Random" 那么就是吃下去之后随即一个道具出来，随机概率根据每个场景自己的配置来
-    PortableItem: {
-        table: {
-            // 害人道具：减速
-            1: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "Decelerate",
-            },
-            // 害人道具：削弱跳跃
-            6: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "WeakenJump",
-            },
-            // 害人道具：遮挡视线
-            21: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "BlockSight",
-            },
-            // 害人道具：束缚道具
-            26: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "SpiderWeb",
-            },
-            // 增益道具：加速
-            101: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "Accelerate",
-            },
-            // 增益道具：强化跳跃
-            106: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "PowerJump",
-            },
-            // 增益道具：无限跳跃
-            111: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "UnlimitedJump",
-            },
-            // 增益道具：磁铁（只能用于无尽模式，排名竞赛用会当机）
-            121: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "Magnet",
-            },
-            // 随机道具
-            9999: {
-                // 吃下去的作用，具体有哪些可以填写参考Config.effect，如果效果是有益的就是对自己使用，如果效果是有害的那么对别人使用
-                effect: "Random",
-            },
-        }
-    }
 };
 
 Config.defaultItemImagePath = "myLaya/laya/assets/images/crystal_grider_09.png";
