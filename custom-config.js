@@ -4820,8 +4820,8 @@ Config.item = {
             }
         }
     },
-    // 立即生效物品
-    InstantItem: {
+    // 可食用物体
+    EatableItem: {
         table: {
             // 金币
             0: {

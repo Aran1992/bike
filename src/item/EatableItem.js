@@ -8,7 +8,7 @@ import {resources} from "../libs/pixi-wrapper";
 
 export default class EatableItem extends EditorItem {
     constructor(gameMgr, parent, world, config) {
-        super("InstantItem", gameMgr, parent, world, config);
+        super("EatableItem", gameMgr, parent, world, config);
 
         this.isHelpful = this.config.portable ? true : Config.effect[this.config.effect].isHelpful;
 
