@@ -194,7 +194,7 @@ export default class GameScene extends Scene {
         this.bikeContainer = this.closeViewContainer.addChild(new Container());
 
         this.emitter = new Emitter(
-            this.cameraContainer,
+            this.bikeContainer,
             [Texture.fromImage(Config.imagePath.bikeParticle)],
             resources[Config.emitterPath.bike].data
         );
@@ -741,7 +741,7 @@ export default class GameScene extends Scene {
 
         if (this.bikeSprite) {
             this.emitter.updateOwnerPos(this.bikeSprite.x, this.bikeSprite.y);
-            this.emitter.update(delta / 60);
+            this.emitter.update(1 / Config.fps);
         }
 
         if (this.gameStatus === "play") {
