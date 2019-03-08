@@ -1,10 +1,11 @@
-import {resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
+import {Emitter, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
 import Config from "../config";
 import {Circle, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -89,11 +90,19 @@ export default class Bike {
             fill: "white",
             fontSize: 50,
         })));
+
+        this.emitter = new Emitter(
+            this.parent,
+            [Texture.fromImage(Config.imagePath.bikeParticle)],
+            resources[Config.emitterPath.bike].data
+        );
+        this.emitter.emit = false;
     }
 
     destroy() {
         this.world.destroyBody(this.bikeBody);
         this.bikeSprite.destroy();
+        this.emitter.destroy();
         clearTimeout(this.deadCompleteTimer);
     }
 
@@ -183,6 +192,8 @@ export default class Bike {
                 EventMgr.dispatchEvent("UseItem", this, someone, effect);
             }
         }
+        this.emitter.updateOwnerPos(this.bikeSprite.x, this.bikeSprite.y);
+        this.emitter.update(1 / Config.fps);
     }
 
     afterUpdate() {
@@ -361,6 +372,15 @@ export default class Bike {
             this.jumpCount++;
             this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
             this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
+            switch (this.jumpCount) {
+                case 1:
+                    break;
+                case 2:
+                    this.emitter.playOnce();
+                    break;
+                default:
+                    this.emitter.playOnce();
+            }
         }
     }
 
