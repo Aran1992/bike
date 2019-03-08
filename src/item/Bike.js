@@ -5,7 +5,6 @@ import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
-import MusicMgr from "../mgr/MusicMgr";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -392,11 +391,7 @@ export default class Bike {
     onAteItem(type, effect) {
         switch (type) {
             case "PortableItem": {
-                if (this.hasEffect("Seal")) {
-                    this.portableItemList.push(effect);
-                } else {
-                    this.onAteItem(effect);
-                }
+                this.portableItemList.push(effect);
                 break;
             }
             case "GoldCoin": {

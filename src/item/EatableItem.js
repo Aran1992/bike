@@ -50,12 +50,10 @@ export default class EatableItem extends EditorItem {
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
                 let enemy = anotherFixture.getBody().getUserData();
                 if (enemy.selfFixture === anotherFixture) {
-                    let effect = Config.effect[this.config.effect];
-                    if (effect) {
-                        if (effect === "Random") {
-                            effect = this.gameMgr.randomEffect();
-                        }
-                        enemy.onAteItem("PortableItem", effect);
+                    if (this.config.effect === "Random") {
+                        enemy.onAteItem("PortableItem", this.gameMgr.randomEffect());
+                    } else {
+                        enemy.onAteItem("PortableItem", this.config.effect);
                     }
                 }
             }
