@@ -4,6 +4,7 @@ import {Circle, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import RunOption from "../../run-option";
+import EventMgr from "../mgr/EventMgr";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -39,8 +40,11 @@ export default class Bike {
 
         this.startFloat = false;
 
+        this.portableItemList = [];
         this.effectRemainFrame = {};
         this.initEffectTable();
+
+        this.playerName = "NPC" + this.config.index;
 
         this.onCreate();
     }
@@ -164,6 +168,20 @@ export default class Bike {
             this.bikeSprite.alpha = Config.enemy.contactPlayerAlpha;
         } else {
             this.bikeSprite.alpha = 1;
+        }
+        if (this.portableItemList.length !== 0 && !this.isDead && !this.hasEffect("Seal")) {
+            let effect = this.portableItemList.pop();
+            let config = Config.effect[effect];
+            if (config.isHelpful) {
+                this.onAteItem(effect);
+            } else {
+                let list = this.gameScene.enemyList
+                    .filter(item => item !== this)
+                    .concat(this.gameScene);
+                let someone = Utils.randomChoose(list);
+                someone.onAteItem(effect);
+                EventMgr.dispatchEvent("UseItem", this, someone, effect);
+            }
         }
     }
 
@@ -351,8 +369,16 @@ export default class Bike {
         this.jumpCount = 0;
     }
 
-    onAteItem(type) {
+    onAteItem(type, effect) {
         switch (type) {
+            case "PortableItem": {
+                if (this.hasEffect("Seal")) {
+                    this.portableItemList.push(effect);
+                } else {
+                    this.onAteItem(effect);
+                }
+                break;
+            }
             case "GoldCoin": {
                 break;
             }
@@ -478,5 +504,9 @@ export default class Bike {
 
     hasEffect(type) {
         return this.effectRemainFrame[type] !== undefined;
+    }
+
+    getName() {
+        return this.playerName;
     }
 }

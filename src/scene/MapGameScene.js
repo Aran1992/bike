@@ -97,6 +97,7 @@ export default class MapGameScene extends GameScene {
                     accVelocity: this.bikeAccVelocity,
                     jumpForce: this.jumpForce,
                     frames: frames,
+                    index: this.enemyList.length + 1
                 });
                 enemy.setPhysicalPosition(pp);
                 this.enemyList.push(enemy);

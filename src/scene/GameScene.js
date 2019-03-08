@@ -21,6 +21,7 @@ import RollingStone from "../item/RollingStone";
 import EditorItem from "../item/EditorItem";
 import FireBall from "../item/FireBall";
 import EatableItem from "../item/EatableItem";
+import EventMgr from "../mgr/EventMgr";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -30,6 +31,7 @@ export default class GameScene extends Scene {
         this.registerEvent("Restart", this.onRestart);
         this.registerEvent("Reborn", this.onReborn);
         this.registerEvent("AteItem", this.onAteItem);
+        this.registerEvent("UseItem", this.onUseItem);
 
         window.addEventListener("keydown", this.onKeydown.bind(this));
 
@@ -77,6 +79,8 @@ export default class GameScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
 
         this.ui.matchRacetrack.visible = false;
+
+        this.ui.itemUseHistoryLabel.text = "";
     }
 
     onShow() {
@@ -112,6 +116,11 @@ export default class GameScene extends Scene {
         }
 
         this.effectRemainFrame = {};
+
+        this.itemUseHistory = [];
+        this.ui.itemUseHistoryLabel.text = "";
+
+        this.playerName = "{{YourselfName}}";
 
         this.initEnvironment();
 
@@ -1052,6 +1061,9 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play") {
             let button = this.portableItemButtonList[i];
             if (button.children.length === 2) {
+                if (this.hasEffect("Seal")) {
+                    return App.showNotice("Your item are sealed now.");
+                }
                 let effect = button.children[1].effect;
                 if (Config.effect[effect].isHelpful) {
                     this.startEffect(effect);
@@ -1060,6 +1072,7 @@ export default class GameScene extends Scene {
                     if (enemy) {
                         enemy.onAteItem(effect);
                     }
+                    EventMgr.dispatchEvent("UseItem", this, enemy, effect);
                 }
                 button.removeChildAt(1);
             }
@@ -1259,6 +1272,7 @@ export default class GameScene extends Scene {
                 },
             },
             Magnet: {},
+            Seal: {},
         };
     }
 
@@ -1284,6 +1298,18 @@ export default class GameScene extends Scene {
             item.destroy();
             this.itemList.splice(index, 1);
         }
+    }
+
+    onUseItem(user, receiver, effect) {
+        this.itemUseHistory.push(`【${user.getName()}】对【${receiver.getName()}】使用了【${effect}】`);
+        if (this.itemUseHistory.length > 5) {
+            this.itemUseHistory.shift();
+        }
+        this.ui.itemUseHistoryLabel.text = this.itemUseHistory.join("\n");
+    }
+
+    getName() {
+        return this.playerName;
     }
 }
 

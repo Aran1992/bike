@@ -5007,6 +5007,14 @@ Config.effect = {
         // 吸取速度（单位：像素/秒）
         velocity: 1000,
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png"
+    },
+    // 封印
+    Seal: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
+        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     }
 };
 

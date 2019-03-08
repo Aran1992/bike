@@ -55,13 +55,7 @@ export default class EatableItem extends EditorItem {
                         if (effect === "Random") {
                             effect = this.gameMgr.randomEffect();
                         }
-                        if (effect.isHelpful) {
-                            enemy.onAteItem(this.config.effect);
-                        } else {
-                            let anotherList = this.gameMgr.enemyList.concat([this.gameMgr.bikeBody.getUserData()]);
-                            anotherList.splice(anotherList.indexOf(enemy), 1);
-                            Utils.randomChoose(anotherList).onAteItem(this.config.effect);
-                        }
+                        enemy.onAteItem("PortableItem", effect);
                     }
                 }
             }
