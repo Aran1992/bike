@@ -677,7 +677,7 @@ export default class GameScene extends Scene {
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
                 delete this.effectRemainFrame[type];
-                if (this.effectTable[type].end) {
+                if (this.effectTable[type] && this.effectTable[type].end) {
                     this.effectTable[type].end();
                 }
             }
@@ -1178,11 +1178,11 @@ export default class GameScene extends Scene {
 
     startEffect(type) {
         if (this.effectRemainFrame[type]) {
-            if (this.effectTable[type].cover) {
+            if (this.effectTable[type] && this.effectTable[type].cover) {
                 this.effectTable[type].cover();
             }
         } else {
-            if (this.effectTable[type].start) {
+            if (this.effectTable[type] && this.effectTable[type].start) {
                 this.effectTable[type].start();
             }
         }
@@ -1195,7 +1195,7 @@ export default class GameScene extends Scene {
                 this.effectRemainFrame[type]--;
                 if (this.effectRemainFrame[type] === 0) {
                     delete this.effectRemainFrame[type];
-                    if (this.effectTable[type].end) {
+                    if (this.effectTable[type] && this.effectTable[type].end) {
                         this.effectTable[type].end();
                     }
                 }
@@ -1240,7 +1240,6 @@ export default class GameScene extends Scene {
                     this.jumpForce = this.originJumpForce;
                 },
             },
-            UnlimitedJump: {},
             BlockSight: {
                 start: () => {
                     this.ui.blockSightSprite.visible = true;
@@ -1271,8 +1270,6 @@ export default class GameScene extends Scene {
                     this.jumpForce = this.originJumpForce;
                 },
             },
-            Magnet: {},
-            Seal: {},
         };
     }
 
