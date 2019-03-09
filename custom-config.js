@@ -5015,6 +5015,13 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
+    },
+    // 落雷
+    Thunder: {
+        isHelpful: 0,
+        // 目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 2,
+        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     }
 };
 

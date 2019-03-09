@@ -183,12 +183,32 @@ export default class Bike {
             if (config.isHelpful) {
                 this.onAteItem(effect);
             } else {
-                let list = this.gameScene.enemyList
+                let others = this.gameScene.enemyList
                     .filter(item => item !== this)
                     .concat(this.gameScene);
-                let someone = Utils.randomChoose(list);
-                someone.onAteItem(effect);
-                EventMgr.dispatchEvent("UseItem", this, someone, effect);
+                let targets;
+                switch (config.targetType) {
+                    case 1: {
+                        targets = [this.gameScene.getFormerOne(this)];
+                        break;
+                    }
+                    case 2: {
+                        targets = others;
+                        break;
+                    }
+                    case 0:
+                    default: {
+                        targets = [Utils.randomChoose(others)];
+                    }
+                }
+                if (targets.length === 0) {
+                    EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                } else {
+                    targets.forEach(other => {
+                        other.onAteItem(effect);
+                        EventMgr.dispatchEvent("UseItem", this, other, effect);
+                    });
+                }
             }
         }
         this.emitter.updateOwnerPos(this.bikeSprite.x, this.bikeSprite.y);
@@ -397,6 +417,10 @@ export default class Bike {
             case "GoldCoin": {
                 break;
             }
+            case "Thunder": {
+                this.isContactFatalEdge = true;
+                break;
+            }
             default:
                 this.startEffect(type);
         }
@@ -521,5 +545,9 @@ export default class Bike {
 
     getName() {
         return this.playerName;
+    }
+
+    getBikePosition() {
+        return this.bikeBody.getPosition();
     }
 }

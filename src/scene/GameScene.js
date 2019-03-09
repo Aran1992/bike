@@ -463,6 +463,10 @@ export default class GameScene extends Scene {
                 MusicMgr.playSound(Config.soundPath.eatGoldCoin);
                 break;
             }
+            case "Thunder": {
+                this.isContactFatalEdge = true;
+                break;
+            }
             default:
                 this.startEffect(type);
         }
@@ -1069,14 +1073,36 @@ export default class GameScene extends Scene {
                     return App.showNotice("Your item are sealed now.");
                 }
                 let effect = button.children[1].effect;
-                if (Config.effect[effect].isHelpful) {
-                    this.startEffect(effect);
+                let config = Config.effect[effect];
+                if (config.isHelpful) {
+                    this.onAteItem(effect);
                 } else {
-                    let enemy = Utils.randomChoose(this.enemyList);
-                    if (enemy) {
-                        enemy.onAteItem(effect);
+                    let others = this.gameScene.enemyList
+                        .filter(item => item !== this)
+                        .concat(this.gameScene);
+                    let targets;
+                    switch (config.targetType) {
+                        case 1: {
+                            targets = [this.gameScene.getFormerOne(this)];
+                            break;
+                        }
+                        case 2: {
+                            targets = others;
+                            break;
+                        }
+                        case 0:
+                        default: {
+                            targets = [Utils.randomChoose(others)];
+                        }
                     }
-                    EventMgr.dispatchEvent("UseItem", this, enemy, effect);
+                    if (targets.length === 0) {
+                        EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                    } else {
+                        targets.forEach(other => {
+                            other.onAteItem(effect);
+                            EventMgr.dispatchEvent("UseItem", this, other, effect);
+                        });
+                    }
                 }
                 button.removeChildAt(1);
             }
@@ -1312,6 +1338,16 @@ export default class GameScene extends Scene {
 
     getName() {
         return this.playerName;
+    }
+
+    getFormerOne(src) {
+        let list = [this].concat(this.enemyList);
+        list.sort((a, b) => a.getBikePosition().x - b.getBikePosition().x);
+        return list[list.indexOf(src) + 1];
+    }
+
+    getBikePosition() {
+        return this.bikeBody.getPosition();
     }
 }
 
