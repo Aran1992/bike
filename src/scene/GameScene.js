@@ -1077,13 +1077,11 @@ export default class GameScene extends Scene {
                 if (config.isHelpful) {
                     this.onAteItem(effect);
                 } else {
-                    let others = this.gameScene.enemyList
-                        .filter(item => item !== this)
-                        .concat(this.gameScene);
+                    let others = this.enemyList;
                     let targets;
                     switch (config.targetType) {
                         case 1: {
-                            targets = [this.gameScene.getFormerOne(this)];
+                            targets = [this.getFormerOne(this)];
                             break;
                         }
                         case 2: {
