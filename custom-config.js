@@ -61,16 +61,43 @@ Config.mapList = [
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
-                Decelerate: 1,
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
             },
             2: {
-                WeakenJump: 1,
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
             },
             3: {
-                BlockSight: 1,
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
             },
             4: {
-                SpiderWeb: 1,
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
             },
         }
     },
@@ -114,18 +141,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM103.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -167,18 +224,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -220,18 +307,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/SoundBGM105.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -273,18 +390,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -326,18 +473,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -379,18 +556,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -432,18 +639,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -485,18 +722,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -538,18 +805,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -591,18 +888,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
     {
         // 显示给人看的名字
@@ -644,18 +971,48 @@ Config.mapList = [
         jumpForce: 12800,
         // BGM路径
         bgmPath: "sound/bgm1.mp3",
-        // 道具随机权重表（排名竞赛-随机道具-模块1）
-        itemRandomTable: {
-            Decelerate: 1,
-            WeakenJump: 1,
-            BlockSight: 1,
-            SpiderWeb: 1,
-            Seal: 1,
-            Thunder: 1,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-        },
+        // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
+        itemRandomTableList: {
+            1: {
+				BlockSight:		1,
+				Accelerate:	 	1,
+				PowerJump: 		1,
+				UnlimitedJump: 	1,
+            },
+            2: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 2,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            3: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		 6,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+            4: {
+				Decelerate: 	10,
+				WeakenJump: 	10,
+				BlockSight:		10,
+				SpiderWeb: 		10,
+				Seal: 			10,
+				Thunder: 		10,
+				Accelerate:	 	10,
+				PowerJump: 		10,
+				UnlimitedJump: 	10,
+            },
+        }
     },
 ];
 
@@ -4986,7 +5343,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
-        targetType: 0,
+        targetType: 1,
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     },
     // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
@@ -4998,7 +5355,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
-        targetType: 0,
+        targetType: 1,
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png"
     },
     // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
@@ -5022,7 +5379,7 @@ Config.effect = {
         // 挣脱需要点击次数
         breakTimes: 5,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
-        targetType: 0,
+        targetType: 1,
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png"
     },
     // 封印
@@ -5032,7 +5389,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
-        targetType: 0,
+        targetType: 1,
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png"
     },
     // 落雷
