@@ -64,6 +64,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -115,6 +117,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -166,6 +170,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -217,6 +223,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -268,6 +276,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -319,6 +329,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -370,6 +382,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -421,6 +435,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -472,6 +488,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -523,6 +541,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -574,6 +594,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -625,6 +647,8 @@ Config.mapList = [
             WeakenJump: 1,
             BlockSight: 1,
             SpiderWeb: 1,
+			Seal: 1,
+			Thunder: 1,
             Accelerate: 1,
             PowerJump: 1,
             UnlimitedJump: 1,
@@ -4843,10 +4867,20 @@ Config.item = {
                 portable: 0,
                 effect: "BlockSight",
             },
-            // 陷阱：束缚道具
+            // 陷阱：束缚
             26: {
                 portable: 0,
                 effect: "SpiderWeb",
+            },
+            // 陷阱：封印
+            31: {
+                portable: 0,
+                effect: "Seal",
+            },
+            // 陷阱：落雷
+            36: {
+                portable: 0,
+                effect: "Thunder",
             },
             // 增益：加速
             101: {
@@ -4888,10 +4922,20 @@ Config.item = {
                 portable: 1,
                 effect: "BlockSight",
             },
-            // 害人道具：束缚道具
+            // 害人道具：束缚
             260: {
                 portable: 1,
                 effect: "SpiderWeb",
+            },
+            // 害人道具：封印
+            1031: {
+                portable: 1,
+                effect: "Seal",
+            },
+            // 害人道具：落雷
+            1036: {
+                portable: 1,
+                effect: "Thunder",
             },
             // 增益道具：加速
             1010: {
@@ -4938,6 +4982,8 @@ Config.effect = {
         rate: 0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
+        // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 0,
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     },
     // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
@@ -4948,6 +4994,8 @@ Config.effect = {
         rate: 0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
+        // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 0,
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png"
     },
     // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
@@ -4956,6 +5004,8 @@ Config.effect = {
         duration: 5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
+        // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 0,
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png"
     },
     // 束缚（可做：害人束缚道具、束缚物件区域）
@@ -4968,7 +5018,27 @@ Config.effect = {
         jumpForceRate: 0.2,
         // 挣脱需要点击次数
         breakTimes: 5,
+        // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 0,
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png"
+    },
+    // 封印
+    Seal: {
+        // 持续时间（单位：秒）
+        duration: 5,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 0,
+        // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 0,
+        imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png"
+    },
+    // 落雷
+    Thunder: {
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 0,
+        // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
+        targetType: 2,
+        imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png"
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
@@ -5007,21 +5077,6 @@ Config.effect = {
         // 吸取速度（单位：像素/秒）
         velocity: 1000,
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png"
-    },
-    // 封印
-    Seal: {
-        // 持续时间（单位：秒）
-        duration: 5,
-        // 是否有益（1为有益，0为陷阱/害人）
-        isHelpful: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
-    },
-    // 落雷
-    Thunder: {
-        isHelpful: 0,
-        // 目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
-        targetType: 2,
-        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     }
 };
 
