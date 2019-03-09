@@ -37,7 +37,6 @@ export default class MapGameScene extends GameScene {
         this.bgY = this.mapConfig.bgY || Config.bgY;
         this.bgmPath = this.mapConfig.bgmPath || Config.defaultBgmPath;
         this.bgScale = this.mapConfig.bgScale || Config.defaultBgScale;
-        this.itemRandomTable = this.mapConfig.itemRandomTable || Config.defaultItemRandomTable;
     }
 
     getResPathList() {
@@ -248,5 +247,26 @@ are you sure?`,
     onDead() {
         super.onDead();
         this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
+    }
+
+    randomEffect(player) {
+        let itemRandomTable;
+        if (this.mapConfig.itemRandomTableList) {
+            let rank = this.getRank(player);
+            itemRandomTable = this.mapConfig.itemRandomTableList[rank];
+        } else if (this.mapConfig.itemRandomTable) {
+            itemRandomTable = this.mapConfig.itemRandomTable;
+        } else {
+            itemRandomTable = Config.defaultItemRandomTable;
+        }
+        let weights = [];
+        let effects = [];
+        for (let effect in itemRandomTable) {
+            if (itemRandomTable.hasOwnProperty(effect)) {
+                weights.push(itemRandomTable[effect]);
+                effects.push(effect);
+            }
+        }
+        return effects[Utils.randomWithWeight(weights)];
     }
 }

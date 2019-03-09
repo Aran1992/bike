@@ -1310,18 +1310,6 @@ export default class GameScene extends Scene {
         return this.effectRemainFrame[type] !== undefined;
     }
 
-    randomEffect() {
-        let weights = [];
-        let effects = [];
-        for (let effect in this.itemRandomTable) {
-            if (this.itemRandomTable.hasOwnProperty(effect)) {
-                weights.push(this.itemRandomTable[effect]);
-                effects.push(effect);
-            }
-        }
-        return effects[Utils.randomWithWeight(weights)];
-    }
-
     removeItem(item) {
         let index = this.itemList.indexOf(item);
         if (index !== -1) {
@@ -1343,14 +1331,20 @@ export default class GameScene extends Scene {
         return this.playerName;
     }
 
-    getFormerOne(src) {
-        let list = [this].concat(this.enemyList);
-        list.sort((a, b) => a.getBikePosition().x - b.getBikePosition().x);
-        return list[list.indexOf(src) + 1];
+    getFormerOne(player) {
+        let players = [this].concat(this.enemyList);
+        players.sort((a, b) => b.getBikePosition().x - a.getBikePosition().x);
+        return players[players.indexOf(player) - 1];
     }
 
     getBikePosition() {
         return this.bikeBody.getPosition();
+    }
+
+    getRank(player) {
+        let players = [this].concat(this.enemyList);
+        players.sort((a, b) => b.getBikePosition().x - a.getBikePosition().x);
+        return players.indexOf(player) + 1;
     }
 }
 

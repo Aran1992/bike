@@ -36,7 +36,7 @@ export default class EatableItem extends EditorItem {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible) {
                     if (this.config.effect === "Random") {
-                        let effect = this.gameMgr.randomEffect();
+                        let effect = this.gameMgr.randomEffect(this.gameMgr);
                         let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
                         EventMgr.dispatchEvent("AteItem", "PortableItem", effect, texture);
                     } else {
@@ -51,7 +51,7 @@ export default class EatableItem extends EditorItem {
                 let enemy = anotherFixture.getBody().getUserData();
                 if (enemy.selfFixture === anotherFixture) {
                     if (this.config.effect === "Random") {
-                        enemy.onAteItem("PortableItem", this.gameMgr.randomEffect());
+                        enemy.onAteItem("PortableItem", this.gameMgr.randomEffect(enemy));
                     } else {
                         enemy.onAteItem("PortableItem", this.config.effect);
                     }

@@ -209,4 +209,16 @@ export default class EndlessGameScene extends GameScene {
     onContinue() {
         this.onClickPauseButton();
     }
+
+    randomEffect() {
+        let weights = [];
+        let effects = [];
+        for (let effect in this.itemRandomTable) {
+            if (this.itemRandomTable.hasOwnProperty(effect)) {
+                weights.push(this.itemRandomTable[effect]);
+                effects.push(effect);
+            }
+        }
+        return effects[Utils.randomWithWeight(weights)];
+    }
 }
