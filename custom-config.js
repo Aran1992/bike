@@ -4916,7 +4916,7 @@ Config.item = {
             // 随机道具
             99990: {
                 portable: 1,
-                effect: "Random",
+                effect: "Thunder",
             },
         }
     },
@@ -5020,7 +5020,7 @@ Config.effect = {
     Thunder: {
         isHelpful: 0,
         // 目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
-        targetType: 2,
+        targetType: 1,
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
     }
 };

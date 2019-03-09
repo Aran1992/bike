@@ -1081,7 +1081,12 @@ export default class GameScene extends Scene {
                     let targets;
                     switch (config.targetType) {
                         case 1: {
-                            targets = [this.getFormerOne(this)];
+                            let target = this.getFormerOne(this);
+                            if (target) {
+                                targets = [target];
+                            } else {
+                                targets = [];
+                            }
                             break;
                         }
                         case 2: {

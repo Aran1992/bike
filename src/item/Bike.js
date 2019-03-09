@@ -189,7 +189,12 @@ export default class Bike {
                 let targets;
                 switch (config.targetType) {
                     case 1: {
-                        targets = [this.gameScene.getFormerOne(this)];
+                        let target = this.gameScene.getFormerOne(this);
+                        if (target) {
+                            targets = [target];
+                        } else {
+                            targets = [];
+                        }
                         break;
                     }
                     case 2: {
