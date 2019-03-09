@@ -118,6 +118,10 @@ export default class GameScene extends Scene {
         this.effectRemainFrame = {};
 
         this.itemUseHistory = [];
+        if (this.itemUseHistoryDisappearTimer) {
+            this.itemUseHistoryDisappearTimer.forEach(timer => clearTimeout(timer));
+        }
+        this.itemUseHistoryDisappearTimer = [];
         this.ui.itemUseHistoryLabel.text = "";
 
         this.playerName = "{{YourselfName}}";
@@ -1299,10 +1303,11 @@ export default class GameScene extends Scene {
 
     onUseItem(user, receiver, effect) {
         this.itemUseHistory.push(`【${user.getName()}】对【${receiver.getName()}】使用了【${effect}】`);
-        if (this.itemUseHistory.length > 5) {
-            this.itemUseHistory.shift();
-        }
         this.ui.itemUseHistoryLabel.text = this.itemUseHistory.join("\n");
+        this.itemUseHistoryDisappearTimer.push(setTimeout(() => {
+            this.itemUseHistory.shift();
+            this.ui.itemUseHistoryLabel.text = this.itemUseHistory.join("\n");
+        }, Config.itemUseHistoryDuration * 1000));
     }
 
     getName() {

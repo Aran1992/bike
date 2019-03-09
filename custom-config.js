@@ -5071,4 +5071,7 @@ Config.bike.scorePercent = [
 // 敌人挣脱蜘蛛网每次跳跃之间的时间间隔（单位：帧数（每秒大概60帧））
 Config.enemy.spiderWebBreakIntervalFrame = 12;
 
+// 使用道具提示消失的时间（单位：秒）
+Config.itemUseHistoryDuration = 5;
+
 export default Config;
