@@ -4,160 +4,160 @@
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "sourceSize": {
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       }
     },
     "firewallx4_02.png": {
       "frame": {
-        "x": 128,
+        "x": 64,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "sourceSize": {
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       }
     },
     "firewallx4_03.png": {
       "frame": {
-        "x": 256,
+        "x": 128,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "sourceSize": {
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       }
     },
     "firewallx4_04.png": {
       "frame": {
-        "x": 384,
+        "x": 192,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       },
       "sourceSize": {
-        "w": 128,
-        "h": 1232
+        "w": 64,
+        "h": 616
       }
     },
     "firewallx4B_01.png": {
       "frame": {
         "x": 0,
-        "y": 1232,
-        "w": 128,
-        "h": 712
+        "y": 616,
+        "w": 64,
+        "h": 356
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       },
       "sourceSize": {
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       }
     },
     "firewallx4B_02.png": {
       "frame": {
-        "x": 128,
-        "y": 1232,
-        "w": 128,
-        "h": 712
+        "x": 64,
+        "y": 616,
+        "w": 64,
+        "h": 356
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       },
       "sourceSize": {
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       }
     },
     "firewallx4B_03.png": {
       "frame": {
-        "x": 256,
-        "y": 1232,
-        "w": 128,
-        "h": 712
+        "x": 128,
+        "y": 616,
+        "w": 64,
+        "h": 356
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       },
       "sourceSize": {
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       }
     },
     "firewallx4B_04.png": {
       "frame": {
-        "x": 384,
-        "y": 1232,
-        "w": 128,
-        "h": 712
+        "x": 192,
+        "y": 616,
+        "w": 64,
+        "h": 356
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       },
       "sourceSize": {
-        "w": 128,
-        "h": 712
+        "w": 64,
+        "h": 356
       }
     }
   },
@@ -181,8 +181,8 @@
     "image": "firewall-animation.png",
     "format": "RGBA8888",
     "size": {
-      "w": 512,
-      "h": 1944
+      "w": 256,
+      "h": 972
     },
     "scale": "1",
     "smartupdate": "$TexturePacker:SmartUpdate:2314bbbdf39e86ddddc3362bde49ab63:e7ae85832838edb31c65ec3938720741:a1faad2593841893a03bd8f8dbb4e44c$"
