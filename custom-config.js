@@ -1069,7 +1069,7 @@ Config.endlessMode.sceneList = [
         // 背景的Y轴位置
         bgY: [0, 256, 256],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [2, 2, 2],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
