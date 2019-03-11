@@ -18,7 +18,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//ID:0",
-            "props":{"y":440,"x":440,"skin":"images/medal.png","scaleY":0.25,"scaleX":0.25,"name":"EatableItem//立即生效物品//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":440,"x":440,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//ID:0",
             "isDirectory":false,
