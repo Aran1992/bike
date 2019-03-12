@@ -70,6 +70,7 @@ function createPhysicalItem(parent, world, data) {
                 let halfHeight = get(collider.props.height, 100) * coefficient;
                 fixture = body.createFixture({
                     shape: Box(halfWidth, halfHeight),
+                    isSensor: get(collider.props.isSensor, false),
                     friction: 0,
                     density: 1,
                 });
@@ -79,6 +80,7 @@ function createPhysicalItem(parent, world, data) {
                 let radius = get(collider.props.radius, 50) * sprite.scale.x * Config.pixel2meter;
                 fixture = body.createFixture({
                     shape: Circle(radius),
+                    isSensor: get(collider.props.isSensor, false),
                     friction: 0,
                     density: 1,
                 });
@@ -152,10 +154,7 @@ export default class BananaPeel {
         }
     }
 
-    onPreSolve(contact, anotherFixture) {
-        if (anotherFixture.getBody().getUserData() === this.thrower) {
-            return contact.setEnabled(false);
-        }
+    onPreSolve() {
     }
 
     onBeginContact(contact, anotherFixture) {

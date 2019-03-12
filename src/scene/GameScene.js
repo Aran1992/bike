@@ -239,10 +239,6 @@ export default class GameScene extends Scene {
                     if (this.gameStatus === "end") {
                         return contact.setEnabled(false);
                     }
-                    let item = anotherFixture.getBody().getUserData();
-                    if (item && item instanceof BananaPeel && item.thrower === this) {
-                        return contact.setEnabled(false);
-                    }
                     if (this.chtable.enemy.is(anotherFixture)) {
                         contact.setEnabled(false);
                     } else if (this.chtable.npc.is(anotherFixture)) {
@@ -270,6 +266,10 @@ export default class GameScene extends Scene {
                         let ud = anotherFixture.getUserData();
                         if (ud && ud.isFatal) {
                             this.isContactFatalEdge = true;
+                            ud = anotherFixture.getBody().getUserData();
+                            if (ud && ud.thrower) {
+                                EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaEffect");
+                            }
                         }
                     }
                 },

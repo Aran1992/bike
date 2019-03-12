@@ -116,10 +116,6 @@ export default class Bike {
         if (this.isDead) {
             return contact.setEnabled(false);
         }
-        let item = anotherFixture.getBody().getUserData();
-        if (item && item instanceof BananaPeel && item.thrower === this) {
-            return contact.setEnabled(false);
-        }
         if (selfFixture === this.selfFixture) {
             if (this.gameScene.chtable.player.is(anotherFixture)
                 || this.gameScene.chtable.enemy.is(anotherFixture)) {
@@ -162,6 +158,10 @@ export default class Bike {
             } else {
                 if (ud && ud.isFatal) {
                     this.isContactFatalEdge = true;
+                    ud = anotherFixture.getBody().getUserData();
+                    if (ud && ud.thrower) {
+                        EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaEffect");
+                    }
                 }
             }
         }

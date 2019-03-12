@@ -5320,7 +5320,7 @@ Config.item = {
             // 随机道具
             99990: {
                 portable: 1,
-                effect: "Random",
+                effect: "BananaPeel",
             },
         }
     },
