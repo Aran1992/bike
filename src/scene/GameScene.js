@@ -18,10 +18,10 @@ import UpDownPlatform from "../item/UpDownPlatform";
 import Road2 from "../item/Road2";
 import DeadLine from "../item/DeadLine";
 import RollingStone from "../item/RollingStone";
-import EditorItem from "../item/EditorItem";
 import FireBall from "../item/FireBall";
 import EatableItem from "../item/EatableItem";
 import EventMgr from "../mgr/EventMgr";
+import BananaPeel from "../item/BananaPeel";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -147,6 +147,7 @@ export default class GameScene extends Scene {
             Config.accGemAniJson,
             Config.fireWallAniJson,
             Config.birdAniJson,
+            Config.effect.BananaPeel.peelPrefabPath,
         ]
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.sceneItemImagePath))
@@ -238,6 +239,10 @@ export default class GameScene extends Scene {
                     if (this.gameStatus === "end") {
                         return contact.setEnabled(false);
                     }
+                    let item = anotherFixture.getBody().getUserData();
+                    if (item && item instanceof BananaPeel && item.thrower === this) {
+                        return contact.setEnabled(false);
+                    }
                     if (this.chtable.enemy.is(anotherFixture)) {
                         contact.setEnabled(false);
                     } else if (this.chtable.npc.is(anotherFixture)) {
@@ -251,6 +256,10 @@ export default class GameScene extends Scene {
                     }
                 },
                 beginContact(contact, anotherFixture,) {
+                    let item = anotherFixture.getBody().getUserData();
+                    if (item && item instanceof BananaPeel && item.thrower === this) {
+                        return;
+                    }
                     let ud = anotherFixture.getUserData();
                     if (this.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
                         this.resetJumpStatus();
@@ -316,8 +325,7 @@ export default class GameScene extends Scene {
             },
             editorItem: {
                 is: (fixture) => {
-                    let ud = fixture.getBody().getUserData();
-                    return ud && ud instanceof EditorItem;
+                    return this.itemList.indexOf(fixture.getBody().getUserData()) !== -1;
                 },
                 preSolve(contact, anotherFixture, selfFixture) {
                     selfFixture.getBody().getUserData().onPreSolve(contact, anotherFixture, selfFixture);
@@ -1073,38 +1081,42 @@ export default class GameScene extends Scene {
                     return App.showNotice("Your item are sealed now.");
                 }
                 let effect = button.children[1].effect;
-                let config = Config.effect[effect];
-                if (config.isHelpful) {
-                    this.onAteItem(effect);
+                if (effect === "BananaPeel") {
+                    this.throwBananaPeel(this);
                 } else {
-                    let others = this.enemyList;
-                    let targets;
-                    switch (config.targetType) {
-                        case 1: {
-                            let target = this.getFormerOne(this);
-                            if (target) {
-                                targets = [target];
-                            } else {
-                                targets = [];
-                            }
-                            break;
-                        }
-                        case 2: {
-                            targets = others;
-                            break;
-                        }
-                        case 0:
-                        default: {
-                            targets = [Utils.randomChoose(others)];
-                        }
-                    }
-                    if (targets.length === 0) {
-                        EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                    let config = Config.effect[effect];
+                    if (config.isHelpful) {
+                        this.onAteItem(effect);
                     } else {
-                        targets.forEach(other => {
-                            other.onAteItem(effect);
-                            EventMgr.dispatchEvent("UseItem", this, other, effect);
-                        });
+                        let others = this.enemyList;
+                        let targets;
+                        switch (config.targetType) {
+                            case 1: {
+                                let target = this.getFormerOne(this);
+                                if (target) {
+                                    targets = [target];
+                                } else {
+                                    targets = [];
+                                }
+                                break;
+                            }
+                            case 2: {
+                                targets = others;
+                                break;
+                            }
+                            case 0:
+                            default: {
+                                targets = [Utils.randomChoose(others)];
+                            }
+                        }
+                        if (targets.length === 0) {
+                            EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                        } else {
+                            targets.forEach(other => {
+                                other.onAteItem(effect);
+                                EventMgr.dispatchEvent("UseItem", this, other, effect);
+                            });
+                        }
                     }
                 }
                 button.removeChildAt(1);
@@ -1333,18 +1345,26 @@ export default class GameScene extends Scene {
 
     getFormerOne(player) {
         let players = [this].concat(this.enemyList);
-        players.sort((a, b) => b.getBikePosition().x - a.getBikePosition().x);
+        players.sort((a, b) => b.getBikePhysicalPosition().x - a.getBikePhysicalPosition().x);
         return players[players.indexOf(player) - 1];
     }
 
-    getBikePosition() {
+    getBikePhysicalPosition() {
         return this.bikeBody.getPosition();
     }
 
     getRank(player) {
         let players = [this].concat(this.enemyList);
-        players.sort((a, b) => b.getBikePosition().x - a.getBikePosition().x);
+        players.sort((a, b) => b.getBikePhysicalPosition().x - a.getBikePhysicalPosition().x);
         return players.indexOf(player) + 1;
+    }
+
+    throwBananaPeel(thrower) {
+        this.itemList.push(new BananaPeel(this, this.underBikeContianer, this.world, thrower));
+    }
+
+    isPlayer() {
+        return true;
     }
 }
 

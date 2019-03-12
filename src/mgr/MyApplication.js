@@ -102,8 +102,35 @@ export default class MyApplication extends Application {
             .on("progress", this.onLoadProgress.bind(this))
             .load(() => {
                 this.onLoadEnded();
-                onLoadedCallback();
+                let list = this.parsePrefabDependRes(resPathList);
+                if (list.length !== 0) {
+                    this.loadResources(list, onLoadedCallback);
+                } else {
+                    onLoadedCallback();
+                }
             });
+    }
+
+    parsePrefabDependRes(resPathList) {
+        let handle = (list, data) => {
+            if (data.props.skin) {
+                list.push(`myLaya/laya/assets/${data.props.skin}`);
+            } else if (data.props.source) {
+                list.push(`myLaya/laya/assets/${data.props.source}`);
+            } else if (data.props.texture) {
+                list.push(`myLaya/laya/assets/${data.props.texture}`);
+            } else if (data.props.preset) {
+                list.push(`myLaya/${data.props.preset}`);
+            }
+            data.child.forEach(child => handle(list, child));
+        };
+        let list = [];
+        resPathList.forEach(path => {
+            if (path.endsWith(".scene") || path.endsWith(".prefab")) {
+                handle(list, JSON.parse(resources[path].data));
+            }
+        });
+        return list;
     }
 
     createLoadScene() {

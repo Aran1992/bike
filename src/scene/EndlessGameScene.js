@@ -6,7 +6,6 @@ import Road from "../item/Road";
 import Utils from "../mgr/Utils";
 import BlackBird from "../item/BlackBird";
 import SceneHelper from "../mgr/SceneHelper";
-import EditorItem from "../item/EditorItem";
 
 export default class EndlessGameScene extends GameScene {
     onCreate() {
@@ -170,7 +169,7 @@ export default class EndlessGameScene extends GameScene {
                     Utils.removeItemFromArray(this.roadList, child.part);
                 } else if (child.part instanceof BlackBird) {
                     Utils.removeItemFromArray(this.birdList, child.part);
-                } else if (child.part instanceof EditorItem) {
+                } else if (this.itemList.indexOf(child.part) !== -1) {
                     Utils.removeItemFromArray(this.itemList, child.part);
                 }
             }

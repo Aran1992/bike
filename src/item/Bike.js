@@ -5,6 +5,7 @@ import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
+import BananaPeel from "./BananaPeel";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -115,6 +116,10 @@ export default class Bike {
         if (this.isDead) {
             return contact.setEnabled(false);
         }
+        let item = anotherFixture.getBody().getUserData();
+        if (item && item instanceof BananaPeel && item.thrower === this) {
+            return contact.setEnabled(false);
+        }
         if (selfFixture === this.selfFixture) {
             if (this.gameScene.chtable.player.is(anotherFixture)
                 || this.gameScene.chtable.enemy.is(anotherFixture)) {
@@ -144,6 +149,10 @@ export default class Bike {
                 this.isGoToJump = true;
             }
         } else {
+            let item = anotherFixture.getBody().getUserData();
+            if (item && item instanceof BananaPeel && item.thrower === this) {
+                return;
+            }
             let ud = anotherFixture.getUserData();
             if (this.gameScene.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
                 this.resetJumpStatus();
@@ -179,40 +188,44 @@ export default class Bike {
         }
         if (this.portableItemList.length !== 0 && !this.isDead && !this.hasEffect("Seal")) {
             let effect = this.portableItemList.pop();
-            let config = Config.effect[effect];
-            if (config.isHelpful) {
-                this.onAteItem(effect);
+            if (effect === "BananaPeel") {
+                this.gameScene.throwBananaPeel(this);
             } else {
-                let others = this.gameScene.enemyList
-                    .filter(item => item !== this)
-                    .concat(this.gameScene);
-                let targets;
-                switch (config.targetType) {
-                    case 1: {
-                        let target = this.gameScene.getFormerOne(this);
-                        if (target) {
-                            targets = [target];
-                        } else {
-                            targets = [];
-                        }
-                        break;
-                    }
-                    case 2: {
-                        targets = others;
-                        break;
-                    }
-                    case 0:
-                    default: {
-                        targets = [Utils.randomChoose(others)];
-                    }
-                }
-                if (targets.length === 0) {
-                    EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                let config = Config.effect[effect];
+                if (config.isHelpful) {
+                    this.onAteItem(effect);
                 } else {
-                    targets.forEach(other => {
-                        other.onAteItem(effect);
-                        EventMgr.dispatchEvent("UseItem", this, other, effect);
-                    });
+                    let others = this.gameScene.enemyList
+                        .filter(item => item !== this)
+                        .concat(this.gameScene);
+                    let targets;
+                    switch (config.targetType) {
+                        case 1: {
+                            let target = this.gameScene.getFormerOne(this);
+                            if (target) {
+                                targets = [target];
+                            } else {
+                                targets = [];
+                            }
+                            break;
+                        }
+                        case 2: {
+                            targets = others;
+                            break;
+                        }
+                        case 0:
+                        default: {
+                            targets = [Utils.randomChoose(others)];
+                        }
+                    }
+                    if (targets.length === 0) {
+                        EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                    } else {
+                        targets.forEach(other => {
+                            other.onAteItem(effect);
+                            EventMgr.dispatchEvent("UseItem", this, other, effect);
+                        });
+                    }
                 }
             }
         }
@@ -552,7 +565,11 @@ export default class Bike {
         return this.playerName;
     }
 
-    getBikePosition() {
+    getBikePhysicalPosition() {
         return this.bikeBody.getPosition();
+    }
+
+    isPlayer() {
+        return true;
     }
 }
