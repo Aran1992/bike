@@ -437,7 +437,7 @@ export default class GameScene extends Scene {
                     }
                 }
                 if (jumpAnimation) {
-                    this.jumpingAnimationFrames = GameUtils.getFrames(jumpAnimation.atlasPath);
+                    this.jumpingAnimationFrames = GameUtils.getFrames(jumpAnimation.atlasPath, jumpAnimation.animationName);
                     this.jumpingAnimationIndex = 0;
                     this.jumpingAnimationInterval = jumpAnimation.interval;
                 } else {

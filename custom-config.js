@@ -1017,7 +1017,7 @@ Config.mapList = [
 ];
 
 // 自行车图集
-Config.bikeAtlasPath = "images/tyariso_run_anim_all.png.json";
+Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
 
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 0.4;
@@ -3636,31 +3636,38 @@ Config.portableItemButtonPosList = [
 
 Config.bikeJumpingAnimation = {
     "2": {
-        atlasPath: "images/tyariso_run_anim_all.png3.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-2",
         interval: 5
     },
     "3": {
-        atlasPath: "images/tyariso_run_anim_all.png4.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-3",
         interval: 5
     },
     "4": {
-        atlasPath: "images/tyariso_run_anim_all.png5.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-4",
         interval: 5
     },
     "5": {
-        atlasPath: "images/tyariso_run_anim_all.png3.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-2",
         interval: 5
     },
     "6": {
-        atlasPath: "images/tyariso_run_anim_all.png4.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-3",
         interval: 5
     },
     "7": {
-        atlasPath: "images/tyariso_run_anim_all.png5.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-4",
         interval: 5
     },
     "8": {
-        atlasPath: "images/tyariso_run_anim_all.png2.json",
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-5",
         interval: 5
     },
 };

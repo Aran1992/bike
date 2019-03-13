@@ -10,7 +10,7 @@ let Config = {
     // 1米等于多少像素
     meter2pixel: 16,
     // 自行车图集
-    bikeAtlasPath: "images/tyariso_run_anim_all.png.json",
+    bikeAtlasPath: "myLaya/laya/assets/animations/bike.json",
     // 自行车缩放比例
     bikeScale: 0.25,
     // 自行车物理半径
