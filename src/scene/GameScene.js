@@ -134,7 +134,7 @@ export default class GameScene extends Scene {
 
     getResPathList() {
         let effectResPathList = [];
-        let resNameList = ["userUsedEffectPath", "bearerSufferedEffectPath", "bearerBuffEffectPath"];
+        let resNameList = ["imagePath", "userUsedEffectPath", "bearerSufferedEffectPath", "bearerBuffEffectPath"];
         for (let effect in Config.effect) {
             if (Config.effect.hasOwnProperty(effect)) {
                 let data = Config.effect[effect];
