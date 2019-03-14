@@ -41,7 +41,7 @@ export default class RollingStone extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            if (this.gameMgr.bikeSprite.y > this.sprite.y) {
+            if (this.gameMgr.bikeSelfContainer.y > this.sprite.y) {
                 this.gameMgr.isContactFatalEdge = true;
             } else {
                 this.gameMgr.resetJumpStatus();
@@ -49,7 +49,7 @@ export default class RollingStone extends EditorItem {
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             let enemy = anotherFixture.getBody().getUserData();
             if (enemy.selfFixture === anotherFixture) {
-                if (enemy.bikeSprite.y > this.sprite.y) {
+                if (enemy.bikeSelfContainer.y > this.sprite.y) {
                     enemy.isContactFatalEdge = true;
                 } else {
                     enemy.resetJumpStatus();

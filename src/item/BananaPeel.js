@@ -26,7 +26,7 @@ function createPhysicalItem(parent, world, data) {
         case "Animation": {
             if (data.props.source) {
                 sprite.textures = GameUtils.getFrames(`myLaya/laya/assets/${data.props.source}`, data.props.autoAnimation);
-                sprite.textureIndex = get(data.props.index, 0);
+                sprite.textureIndex = 0;
                 sprite.texture = sprite.textures[sprite.textureIndex];
                 sprite.interval = get(data.props.interval, 1);
                 let ox = get(data.props.x, 0),

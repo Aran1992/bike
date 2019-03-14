@@ -22,6 +22,7 @@ import FireBall from "../item/FireBall";
 import EatableItem from "../item/EatableItem";
 import EventMgr from "../mgr/EventMgr";
 import BananaPeel from "../item/BananaPeel";
+import Effect from "../item/Effect";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -132,12 +133,12 @@ export default class GameScene extends Scene {
     }
 
     getResPathList() {
-        let effectImagePath = [];
+        let effectResPathList = [];
+        let resNameList = ["userUsedEffectPath", "bearerSufferedEffectPath", "bearerBuffEffectPath"];
         for (let effect in Config.effect) {
             if (Config.effect.hasOwnProperty(effect)) {
-                if (Config.effect[effect].imagePath) {
-                    effectImagePath.push(Config.effect[effect].imagePath);
-                }
+                let data = Config.effect[effect];
+                resNameList.forEach(resName => data[resName] && effectResPathList.push(data[resName]));
             }
         }
         return [
@@ -153,7 +154,7 @@ export default class GameScene extends Scene {
             .concat(Utils.values(Config.sceneItemImagePath))
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
-            .concat(effectImagePath)
+            .concat(effectResPathList)
             .concat(Utils.values(Config.bikeJumpingAnimation).map(item => item.atlasPath));
     }
 
@@ -173,7 +174,7 @@ export default class GameScene extends Scene {
         this.bikeBubbleSprite.visible = true;
         this.bikeBody.setStatic();
         this.bikeBody.setAngle(0);
-        this.bikeSprite.rotation = 0;
+        this.bikeSelfContainer.rotation = 0;
         this.gameLoopFunc = this.play.bind(this);
     }
 
@@ -404,6 +405,8 @@ export default class GameScene extends Scene {
                 if (this.spiderWebRemainBreakTimes === 0) {
                     delete this.effectRemainFrame.SpiderWeb;
                     this.effectTable.SpiderWeb.end();
+                    this.durationEffecTable.SpiderWeb.destroy();
+                    delete this.durationEffecTable.SpiderWeb;
                 }
             } else if (this.hasEffect("UnlimitedJump")
                 || this.jumpCount < Config.jumpCommonMaxCount
@@ -441,7 +444,7 @@ export default class GameScene extends Scene {
                     this.jumpingAnimationIndex = 0;
                     this.jumpingAnimationInterval = jumpAnimation.interval;
                 } else {
-                    this.bikeSprite.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
+                    this.bikeSelfContainer.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                     this.jumpingAnimationFrames = undefined;
                     this.jumpingAnimationIndex = undefined;
                 }
@@ -624,11 +627,14 @@ export default class GameScene extends Scene {
     createBike(pp) {
         let rp = GameUtils.physicsPos2renderPos(pp);
 
-        this.bikeSprite = new Sprite();
-        this.bikeContainer.addChild(this.bikeSprite);
+        this.bikeSelfContainer = this.bikeContainer.addChild(new Container());
+        this.bikeSelfContainer.position.set(rp.x, rp.y);
+        this.bikeSelfContainer.scale.set(Config.bikeScale, Config.bikeScale);
+
+        this.underBikeContainer = this.bikeSelfContainer.addChild(new Container());
+        this.bikeSprite = this.bikeSelfContainer.addChild(new Sprite());
         this.bikeSprite.anchor.set(0.5, 0.5);
-        this.bikeSprite.scale.set(Config.bikeScale, Config.bikeScale);
-        this.bikeSprite.position.set(rp.x, rp.y);
+        this.upBikeContainer = this.bikeSelfContainer.addChild(new Container());
 
         let id = DataMgr.get(DataMgr.selectedBike, 0);
         let config = Config.bikeList.find(config => config.id === id);
@@ -670,6 +676,9 @@ export default class GameScene extends Scene {
                 fontSize: 50,
             })));
         }
+
+        this.effectList = [];
+        this.durationEffecTable = {};
     }
 
     resetBikeStatus() {
@@ -698,6 +707,12 @@ export default class GameScene extends Scene {
                 }
             }
         }
+        for (let type in this.durationEffecTable) {
+            if (this.durationEffecTable.hasOwnProperty(type)) {
+                this.durationEffecTable[type].destroy();
+                delete this.durationEffecTable[type];
+            }
+        }
     }
 
     gameLoop(delta) {
@@ -721,6 +736,12 @@ export default class GameScene extends Scene {
         this.syncBirdSprite();
 
         this.itemList.forEach(item => item.update && item.update());
+        this.effectList.forEach(effect => effect.update());
+        for (let type in this.durationEffecTable) {
+            if (this.durationEffecTable.hasOwnProperty(type)) {
+                this.durationEffecTable[type].update();
+            }
+        }
 
         if (this.syncEnemySprite) {
             this.syncEnemySprite();
@@ -755,8 +776,8 @@ export default class GameScene extends Scene {
             this.autoZoomCamera();
         }
 
-        if (this.bikeSprite) {
-            this.emitter.updateOwnerPos(this.bikeSprite.x, this.bikeSprite.y);
+        if (this.bikeSelfContainer) {
+            this.emitter.updateOwnerPos(this.bikeSelfContainer.x, this.bikeSelfContainer.y);
             this.emitter.update(1 / Config.fps);
         }
 
@@ -794,24 +815,24 @@ export default class GameScene extends Scene {
 
     syncBikeSprite(velocity, bikePhysicsPos) {
         let bikeRenderPos = GameUtils.physicsPos2renderPos(bikePhysicsPos);
-        this.bikeSprite.position.set(bikeRenderPos.x, bikeRenderPos.y);
+        this.bikeSelfContainer.position.set(bikeRenderPos.x, bikeRenderPos.y);
         if (this.gameStatus === "end") {
-            this.bikeSprite.rotation = this.bikeBody.getAngle();
+            this.bikeSelfContainer.rotation = this.bikeBody.getAngle();
             this.bikeAccSprite.visible = false;
         } else {
             if (this.startFloat) {
                 this.bikeAccSprite.visible = true;
                 this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeFloatFrame / Config.fps)}.png`];
-                this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
+                this.bikeAccSprite.position.set(this.bikeSelfContainer.x, this.bikeSelfContainer.y - this.bikeSelfContainer.height / 2);
             } else if (this.hasEffect("Accelerate")) {
                 this.bikeAccSprite.visible = true;
                 let frame = this.effectRemainFrame.Accelerate;
                 if (frame <= 5 * Config.fps) {
                     this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(frame / Config.fps)}.png`];
-                    this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
+                    this.bikeAccSprite.position.set(this.bikeSelfContainer.x, this.bikeSelfContainer.y - this.bikeSelfContainer.height / 2);
                 } else {
                     this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures["speed-up.png"];
-                    this.bikeAccSprite.position.set(this.bikeSprite.x + 32, this.bikeSprite.y - this.bikeSprite.height / 2);
+                    this.bikeAccSprite.position.set(this.bikeSelfContainer.x + 32, this.bikeSelfContainer.y - this.bikeSelfContainer.height / 2);
                 }
             } else {
                 let minRemainFrame = undefined;
@@ -825,7 +846,7 @@ export default class GameScene extends Scene {
                 if (minRemainFrame !== undefined && minRemainFrame < 5 * Config.fps) {
                     this.bikeAccSprite.visible = true;
                     this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(minRemainFrame / Config.fps)}.png`];
-                    this.bikeAccSprite.position.set(this.bikeSprite.x, this.bikeSprite.y - this.bikeSprite.height / 2);
+                    this.bikeAccSprite.position.set(this.bikeSelfContainer.x, this.bikeSelfContainer.y - this.bikeSelfContainer.height / 2);
                 } else {
                     this.bikeAccSprite.visible = false;
                 }
@@ -841,7 +862,7 @@ export default class GameScene extends Scene {
                     this.bikeSprite.texture = frame;
                 }
             } else {
-                this.bikeSprite.rotation = -Math.atan(velocity.y / velocity.x);
+                this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 this.bikeFrame++;
                 if (this.bikeFrame >= this.bikeFrames.length) {
                     this.bikeFrame = 0;
@@ -885,13 +906,13 @@ export default class GameScene extends Scene {
             let oldCameraX = this.cameraContainer.x;
             let oldCameraY = this.cameraContainer.y;
 
-            this.cameraContainer.x = Config.bikeLeftMargin - this.bikeSprite.x;
+            this.cameraContainer.x = Config.bikeLeftMargin - this.bikeSelfContainer.x;
 
-            let bikeY = this.cameraContainer.y + this.bikeSprite.y;
+            let bikeY = this.cameraContainer.y + this.bikeSelfContainer.y;
             if (bikeY < Config.bikeCameraMinY) {
-                this.cameraContainer.y = Config.bikeCameraMinY - this.bikeSprite.y;
+                this.cameraContainer.y = Config.bikeCameraMinY - this.bikeSelfContainer.y;
             } else if (bikeY > Config.bikeCameraMaxY) {
-                this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeSprite.y;
+                this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeSelfContainer.y;
             }
 
             let cameraMoveX = this.cameraContainer.x - oldCameraX;
@@ -1058,13 +1079,13 @@ export default class GameScene extends Scene {
     }
 
     adjustInitCameraBg() {
-        this.cameraContainer.x = Config.bikeLeftMargin - this.bikeSprite.x;
+        this.cameraContainer.x = Config.bikeLeftMargin - this.bikeSelfContainer.x;
 
-        let bikeY = this.cameraContainer.y + this.bikeSprite.y;
+        let bikeY = this.cameraContainer.y + this.bikeSelfContainer.y;
         if (bikeY < Config.bikeCameraMinY) {
-            this.cameraContainer.y = Config.bikeCameraMinY - this.bikeSprite.y;
+            this.cameraContainer.y = Config.bikeCameraMinY - this.bikeSelfContainer.y;
         } else if (bikeY > Config.bikeCameraMaxY) {
-            this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeSprite.y;
+            this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeSelfContainer.y;
         }
 
         this.bgList.forEach((bg) => {
@@ -1081,10 +1102,10 @@ export default class GameScene extends Scene {
                     return App.showNotice("Your item are sealed now.");
                 }
                 let effect = button.children[1].effect;
+                let config = Config.effect[effect];
                 if (effect === "BananaPeel") {
                     this.throwBananaPeel(this);
                 } else {
-                    let config = Config.effect[effect];
                     if (config.isHelpful) {
                         this.onAteItem(effect);
                     } else {
@@ -1118,6 +1139,13 @@ export default class GameScene extends Scene {
                             });
                         }
                     }
+                }
+                if (config.userUsedEffectPath) {
+                    let effect = new Effect(this, config.userUsedEffectPath, () => {
+                        Utils.removeItemFromArray(this.effectList, effect);
+                        effect.destroy();
+                    });
+                    this.effectList.push(effect);
                 }
                 button.removeChildAt(1);
             }
@@ -1172,7 +1200,7 @@ export default class GameScene extends Scene {
             let moveY = event.data.global.y - this.startY;
             this.startY = event.data.global.y;
             let curPos = this.bikeBody.getPosition();
-            let newY = this.bikeSprite.position.y + moveY;
+            let newY = this.bikeSelfContainer.y + moveY;
             let rect = {
                 x: -this.cameraContainer.x,
                 y: GameUtils.physicsPos2renderPos(this.dragBackPos).y - Config.designHeight,
@@ -1230,6 +1258,9 @@ export default class GameScene extends Scene {
             if (this.effectTable[type] && this.effectTable[type].start) {
                 this.effectTable[type].start();
             }
+            if (Config.effect[type].bearerBuffEffectPath) {
+                this.durationEffecTable[type] = new Effect(this, Config.effect[type].bearerBuffEffectPath);
+            }
         }
         this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
     }
@@ -1242,6 +1273,10 @@ export default class GameScene extends Scene {
                     delete this.effectRemainFrame[type];
                     if (this.effectTable[type] && this.effectTable[type].end) {
                         this.effectTable[type].end();
+                    }
+                    if (this.durationEffecTable[type]) {
+                        this.durationEffecTable[type].destroy();
+                        delete this.durationEffecTable[type];
                     }
                 }
             }
@@ -1365,6 +1400,15 @@ export default class GameScene extends Scene {
 
     isPlayer() {
         return true;
+    }
+
+    addBikeChild(displayObject, index) {
+        if (index === 0) {
+            this.underBikeContainer.addChild(displayObject);
+        } else {
+            this.upBikeContainer.addChild(displayObject);
+        }
+        return displayObject;
     }
 }
 
