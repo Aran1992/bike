@@ -405,8 +405,10 @@ export default class GameScene extends Scene {
                 if (this.spiderWebRemainBreakTimes === 0) {
                     delete this.effectRemainFrame.SpiderWeb;
                     this.effectTable.SpiderWeb.end();
-                    this.durationEffecTable.SpiderWeb.destroy();
-                    delete this.durationEffecTable.SpiderWeb;
+                    if (this.durationEffecTable.SpiderWeb) {
+                        this.durationEffecTable.SpiderWeb.destroy();
+                        delete this.durationEffecTable.SpiderWeb;
+                    }
                 }
             } else if (this.hasEffect("UnlimitedJump")
                 || this.jumpCount < Config.jumpCommonMaxCount
