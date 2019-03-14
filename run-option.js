@@ -7,6 +7,6 @@ const RunOption = {
     // 是否显示死亡线（1就显示 为0就不显示）
     showDeadLine: -1,
     // 是否显示自行车状态（1就显示 为0就不显示）
-    showBikeState: 1,
+    showBikeState: 0,
 };
 export default RunOption;

@@ -50,7 +50,9 @@ export default class Bike {
     }
 
     onCreate() {
-        this.bikeSelfContainer = this.parent.addChildAt(new Sprite(), 0);
+        this.bikeOutterContainer = this.parent.addChildAt(new Container(), 0);
+
+        this.bikeSelfContainer = this.bikeOutterContainer.addChild(new Container());
         this.bikeSelfContainer.scale.set(Config.bikeScale, Config.bikeScale);
 
         this.underBikeContainer = this.bikeSelfContainer.addChild(new Container());
@@ -96,7 +98,7 @@ export default class Bike {
         })));
 
         this.effectList = [];
-        this.durationEffecTable = {};
+        this.durationEffectTable = {};
 
         this.emitter = new Emitter(
             this.parent,
@@ -104,12 +106,16 @@ export default class Bike {
             resources[Config.emitterPath.bike].data
         );
         this.emitter.emit = false;
+
+        this.buffIconContainer = this.bikeOutterContainer.addChild(new Container());
+        this.buffIconContainer.y = Config.buff.containerY;
+        this.buffIconTable = {};
     }
 
     destroy() {
         this.resetJumpStatus();
         this.world.destroyBody(this.bikeBody);
-        this.bikeSelfContainer.destroy();
+        this.bikeOutterContainer.destroy();
         this.emitter.destroy();
         clearTimeout(this.deadCompleteTimer);
     }
@@ -117,7 +123,7 @@ export default class Bike {
     setPhysicalPosition(pp) {
         this.bikeBody.setPosition(pp);
         let rp = GameUtils.physicsPos2renderPos(pp);
-        this.bikeSelfContainer.position.set(rp);
+        this.bikeOutterContainer.position.set(rp);
     }
 
     onPreSolve(contact, anotherFixture, selfFixture) {
@@ -183,24 +189,18 @@ export default class Bike {
         this.bikeSprite.texture = this.frames[this.frameIndex];
         let pp = this.bikeBody.getPosition();
         let rp = GameUtils.physicsPos2renderPos(pp);
-        this.bikeSelfContainer.x = rp.x;
-        this.bikeSelfContainer.y = rp.y;
+        this.bikeOutterContainer.x = rp.x;
+        this.bikeOutterContainer.y = rp.y;
         if (!this.isDead && !this.jumping) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
         }
         if (Utils.calcPointDistance(this.bikeBody.getPosition(), this.gameScene.bikeBody.getPosition()) < Config.bikeRadius * 2) {
-            this.bikeSelfContainer.alpha = Config.enemy.contactPlayerAlpha;
+            this.bikeOutterContainer.alpha = Config.enemy.contactPlayerAlpha;
         } else {
-            this.bikeSelfContainer.alpha = 1;
+            this.bikeOutterContainer.alpha = 1;
         }
-        this.effectList.forEach(effect => effect.update());
-        for (let type in this.durationEffecTable) {
-            if (this.durationEffecTable.hasOwnProperty(type)) {
-                this.durationEffecTable[type].update();
-            }
-        }
-        this.emitter.updateOwnerPos(this.bikeSelfContainer.x, this.bikeSelfContainer.y);
+        this.emitter.updateOwnerPos(this.bikeOutterContainer.x, this.bikeOutterContainer.y);
         this.emitter.update(1 / Config.fps);
     }
 
@@ -215,7 +215,7 @@ export default class Bike {
 
         if (!this.completeGame && this.isDead === false) {
             let bikePhysicsPos = this.bikeBody.getPosition();
-            let lowestRoadTopY = this.gameScene.findLowestRoadTopY(this.bikeSelfContainer.x);
+            let lowestRoadTopY = this.gameScene.findLowestRoadTopY(this.bikeOutterContainer.x);
             if (bikePhysicsPos.y < GameUtils.renderY2PhysicsY(lowestRoadTopY) - Config.bikeGameOverOffsetHeight) {
                 this.onDead();
                 return;
@@ -273,6 +273,13 @@ export default class Bike {
 
         this.reduceEffect();
         this.jumpExtraCountdown--;
+        this.updateBuffIcon();
+        this.effectList.forEach(effect => effect.update());
+        for (let type in this.durationEffectTable) {
+            if (this.durationEffectTable.hasOwnProperty(type)) {
+                this.durationEffectTable[type].update();
+            }
+        }
 
         if (RunOption.showBikeState) {
             this.stateText.text = "";
@@ -365,7 +372,7 @@ export default class Bike {
         if (fx && fy) {
             this.startDragBikeBack = false;
             this.startAdjustHeight = true;
-            let rp = this.gameScene.findAdjustHeight(this.bikeSelfContainer.x);
+            let rp = this.gameScene.findAdjustHeight(this.bikeOutterContainer.x);
             rp.y += Utils.randomInRange(...Config.bikeAdjustHeightOffset);
             let pos = GameUtils.renderPos2PhysicsPos(rp);
             this.floatTargetPosX = pos.x;
@@ -421,8 +428,12 @@ export default class Bike {
             if (this.spiderWebRemainBreakTimes === 0) {
                 delete this.effectRemainFrame.SpiderWeb;
                 this.effectTable.SpiderWeb.end();
-                this.durationEffecTable.SpiderWeb.destroy();
-                delete this.durationEffecTable.SpiderWeb;
+                this.removeBuffIcon("SpiderWeb");
+                if (this.durationEffectTable.SpiderWeb) {
+                    this.durationEffectTable.SpiderWeb.destroy();
+                    delete this.durationEffectTable.SpiderWeb;
+                }
+                this.removeBuffIcon("SpiderWeb");
             }
         } else if (this.jumpCount < Config.jumpCommonMaxCount
             || this.jumpExtraCountdown > 0) {
@@ -477,8 +488,19 @@ export default class Bike {
             if (this.effectTable[type] && this.effectTable[type].start) {
                 this.effectTable[type].start();
             }
-            if (Config.effect[type].bearerBuffEffectPath) {
-                this.durationEffecTable[type] = new Effect(this, Config.effect[type].bearerBuffEffectPath);
+            let config = Config.effect[type];
+            if (config.bearerBuffEffectPath) {
+                this.durationEffectTable[type] = new Effect(this, config.bearerBuffEffectPath);
+            }
+            if (config.bearerSufferedEffectPath) {
+                let effect = new Effect(this, config.bearerSufferedEffectPath, () => {
+                    effect.destroy();
+                    Utils.removeItemFromArray(this.effectList, effect);
+                });
+                this.effectList.push(effect);
+            }
+            if (config.buffIconImagePath) {
+                this.addBuffIcon(type);
             }
         }
         this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
@@ -493,9 +515,10 @@ export default class Bike {
                     if (this.effectTable[type] && this.effectTable[type].end) {
                         this.effectTable[type].end();
                     }
-                    if (this.durationEffecTable[type]) {
-                        this.durationEffecTable[type].destroy();
-                        delete this.durationEffecTable[type];
+                    this.removeBuffIcon(type);
+                    if (this.durationEffectTable[type]) {
+                        this.durationEffectTable[type].destroy();
+                        delete this.durationEffectTable[type];
                     }
                 }
             }
@@ -584,12 +607,13 @@ export default class Bike {
                 if (this.effectTable[type] && this.effectTable[type].end) {
                     this.effectTable[type].end();
                 }
+                this.removeBuffIcon(type);
             }
         }
-        for (let type in this.durationEffecTable) {
-            if (this.durationEffecTable.hasOwnProperty(type)) {
-                this.durationEffecTable[type].destroy();
-                delete this.durationEffecTable[type];
+        for (let type in this.durationEffectTable) {
+            if (this.durationEffectTable.hasOwnProperty(type)) {
+                this.durationEffectTable[type].destroy();
+                delete this.durationEffectTable[type];
             }
         }
     }
@@ -617,5 +641,50 @@ export default class Bike {
             this.upBikeContainer.addChild(displayObject);
         }
         return displayObject;
+    }
+
+    addBuffIcon(type) {
+        if (Config.effect[type].buffIconImagePath && this.buffIconTable[type] === undefined) {
+            let sprite = this.buffIconContainer.addChild(new Sprite());
+            sprite.anchor.set(0.5, 0);
+            sprite.texture = resources[Config.effect[type].buffIconImagePath].texture;
+            let seconds = Math.ceil(this.effectRemainFrame[type] / Config.fps);
+            let text = sprite.addChild(new Text(seconds, new TextStyle(Config.buff.text)));
+            text.anchor.set(0.5, 0.5);
+            text.position.set(...Config.buff.textPosition);
+            this.buffIconTable[type] = sprite;
+            this.sortBuffIcon();
+        }
+    }
+
+    removeBuffIcon(type) {
+        if (this.buffIconTable[type]) {
+            this.buffIconTable[type].destroy();
+            delete this.buffIconTable[type];
+            this.sortBuffIcon();
+        }
+    }
+
+    sortBuffIcon() {
+        let index = -1;
+        Utils.keys(Config.effect).forEach(type => {
+            if (this.buffIconTable[type]) {
+                index++;
+                this.buffIconTable[type].x = index * Config.buff.iconInterval;
+            }
+        });
+        this.buffIconContainer.x = -index * Config.buff.iconInterval / 2;
+    }
+
+    updateBuffIcon() {
+        for (let type in this.buffIconTable) {
+            if (this.buffIconTable.hasOwnProperty(type)) {
+                if (this.effectRemainFrame[type] > 0) {
+                    this.buffIconTable[type].getChildAt(0).text = Math.ceil(this.effectRemainFrame[type] / Config.fps);
+                } else {
+                    this.buffIconTable[type].getChildAt(0).text = "";
+                }
+            }
+        }
     }
 }

@@ -5404,7 +5404,9 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
+        // 持续效果ICON路径
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
     },
     // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
     WeakenJump: {
@@ -5416,7 +5418,8 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_frog_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
     },
     // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
     BlockSight: {
@@ -5426,7 +5429,8 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 0,
-        imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
     },
     // 束缚（可做：害人束缚道具、束缚物件区域）
     SpiderWeb: {
@@ -5441,10 +5445,14 @@ Config.effect = {
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
-        // 使用者使用特效路径
+        // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
-        // 承受者持续特效路径
-        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        // 承受者受击特效路径（只能是动画）
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        // 承受者持续特效路径（可以是动画或者静态图片）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/TestSpriteEffect.prefab",
+        // 持续效果ICON路径
+        buffIconImagePath: "myLaya/laya/assets/images/medal.png",
     },
     // 封印
     Seal: {
@@ -5454,7 +5462,8 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
     },
     // 落雷
     Thunder: {
@@ -5462,7 +5471,8 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 2,
-        imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_icon1_09.png",
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
@@ -5472,7 +5482,8 @@ Config.effect = {
         rate: 1.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_jet_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
     },
     // 强化跳跃（可做：增益强化跳跃道具、强化跳跃物件区域）
     PowerJump: {
@@ -5482,7 +5493,8 @@ Config.effect = {
         rate: 1.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_drill_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
     },
     // 无限跳跃（可做：增益无限跳跃道具、无限跳跃物件区域）
     UnlimitedJump: {
@@ -5490,7 +5502,8 @@ Config.effect = {
         duration: 5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
-        imagePath: "myLaya/laya/assets/images/crystal_wing_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
     },
     // 磁铁（只能用于无尽模式，排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
     Magnet: {
@@ -5500,13 +5513,14 @@ Config.effect = {
         isHelpful: 1,
         // 吸取速度（单位：像素/秒）
         velocity: 1000,
-        imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png"
+        imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
     },
     // 香蕉皮
     BananaPeel: {
         imagePath: "myLaya/laya/assets/images/crystal_icon3_09.png",
         // 丢出去的香蕉皮的编辑器预制件
-        peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab"
+        peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab",
     }
 };
 
@@ -5565,5 +5579,16 @@ Config.enemy.spiderWebBreakIntervalFrame = 12;
 
 // 使用道具提示消失的时间（单位：秒）
 Config.itemUseHistoryDuration = 5;
+
+// buff相关配置
+Config.buff = {
+    text: {
+        fill: "white",
+        fontSize: 50,
+    },
+    textPosition: [0, 100],
+    iconInterval: 100,
+    containerY: 25,
+};
 
 export default Config;

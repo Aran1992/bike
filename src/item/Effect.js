@@ -21,7 +21,7 @@ export default class Effect {
 
         switch (data.type) {
             case "Sprite": {
-                sprite.texture = resources[`myLaya/laya/assets/${data.props.skin}`].texture;
+                sprite.texture = resources[`myLaya/laya/assets/${data.props.texture}`].texture;
                 break;
             }
             case "Animation": {
