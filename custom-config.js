@@ -5415,7 +5415,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_04.png",
     },
     // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
     WeakenJump: {
@@ -5434,7 +5434,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_03.png",
     },
     // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
     BlockSight: {
@@ -5451,7 +5451,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_06.png",
     },
     // 束缚（可做：害人束缚道具、束缚物件区域）
     SpiderWeb: {
@@ -5474,7 +5474,7 @@ Config.effect = {
         // 承受者持续特效路径（可以是动画或者静态图片）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_07.png",
     },
     // 封印
     Seal: {
@@ -5491,7 +5491,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_11.png",
     },
     // 落雷
     Thunder: {
@@ -5519,7 +5519,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_05.png",
     },
     // 强化跳跃（可做：增益强化跳跃道具、强化跳跃物件区域）
     PowerJump: {
@@ -5534,7 +5534,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_02.png",
     },
     // 无限跳跃（可做：增益无限跳跃道具、无限跳跃物件区域）
     UnlimitedJump: {
@@ -5547,7 +5547,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_09.png",
     },
     // 磁铁（只能用于无尽模式，排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
     Magnet: {
@@ -5562,7 +5562,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_01.png",
     },
     // 香蕉皮
     BananaPeel: {
@@ -5638,16 +5638,16 @@ Config.buff = {
     text: {
         fill: "white",
 		// 倒计时数字大小
-        fontSize: 50,
+        fontSize: 80,
     },
 	// 倒计时位置
-    textPosition: [0, 100],
+    textPosition: [0, 130],
 	// buff图左右间距
     iconInterval: 30,
 	// buff图与自行车上下间距
     containerY: 20,
 	// buff图大小（注意也会影响到倒计时数字大小）
-    iconScale: 0.5,
+    iconScale: 0.25,
 };
 
 export default Config;
