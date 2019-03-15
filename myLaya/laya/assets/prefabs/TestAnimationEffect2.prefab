@@ -32,7 +32,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation",
-            "props":{"source":"animations/bike.json","presetID":3,"preset":"laya/assets/prefabs/TestAnimationEffect2.prefab","autoAnimation":"enemy"},
+            "props":{"y":-148,"x":-40,"source":"animations/bike.json","presetID":3,"preset":"laya/assets/prefabs/TestAnimationEffect2.prefab","autoAnimation":"enemy"},
             "nodeParent":57,
             "label":"Animation(TestAnimationEffect2)",
             "isDirectory":false,

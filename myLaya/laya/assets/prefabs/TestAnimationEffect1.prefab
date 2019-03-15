@@ -32,7 +32,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation",
-            "props":{"y":-40,"x":-40,"source":"animations/gold-coin-animation.json","presetID":3,"preset":"laya/assets/prefabs/TestAnimationEffect1.prefab"},
+            "props":{"y":-64,"x":-66,"source":"animations/gold-coin-animation.json","scaleY":0.8,"scaleX":0.8,"presetID":3,"preset":"laya/assets/prefabs/TestAnimationEffect1.prefab"},
             "nodeParent":57,
             "label":"Animation(TestAnimationEffect1)",
             "isDirectory":false,

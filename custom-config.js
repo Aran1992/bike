@@ -5472,7 +5472,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
         // 承受者持续特效路径（可以是动画或者静态图片）
-        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/TestSpriteEffect.prefab",
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
     },
