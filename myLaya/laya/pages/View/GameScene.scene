@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":53,
+    "selectedBox":54,
+    "selecteID":56,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":54,
+    "maxID":57,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -231,6 +231,21 @@
         {
             "x":15,
             "type":"Image",
+            "searchKey":"Image,matchRacetrack",
+            "props":{"y":1119,"x":217,"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
+            "nodeParent":1,
+            "label":"matchRacetrack",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":36,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
             "searchKey":"Image,portableItemButton1",
             "props":{"var":"portableItemButton1","skin":"images/bottom-item.png","scaleY":0.8,"scaleX":0.8,"left":50,"bottom":150},
             "nodeParent":1,
@@ -258,16 +273,58 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image,matchRacetrack",
-            "props":{"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
+            "type":"Panel",
+            "searchKey":"Panel,sealMask",
+            "props":{"var":"sealMask","left":55,"height":300,"bottom":30},
             "nodeParent":1,
-            "label":"matchRacetrack",
+            "label":"sealMask",
             "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":54,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/ButtonClose_Gray.png","bottom":8},
+                    "nodeParent":54,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":55,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/ButtonClose_Gray.png","bottom":128},
+                    "nodeParent":54,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":56,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,itemUseHistoryLabel",
+            "props":{"y":100,"x":0,"var":"itemUseHistoryLabel","top":100,"text":"【NPC1】对【james】使用了【图片】","left":0,"fontSize":25,"color":"#ffffff"},
+            "nodeParent":1,
+            "label":"itemUseHistoryLabel",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":36,
+            "compId":53,
             "child":[
                 ]
         },
@@ -275,7 +332,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,rebornPanel",
-            "props":{"width":614,"var":"rebornPanel","skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":300,"centerX":14,"bottom":212},
+            "props":{"y":768,"x":67,"width":614,"var":"rebornPanel","skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":300,"centerX":14,"bottom":212},
             "nodeParent":1,
             "label":"rebornPanel",
             "isOpen":true,
@@ -325,21 +382,8 @@
                             "child":[
                                 ]
                         }]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Label",
-            "searchKey":"Label,itemUseHistoryLabel",
-            "props":{"var":"itemUseHistoryLabel","top":100,"text":"【NPC1】对【james】使用了【图片】","left":0,"fontSize":25,"color":"#ffffff"},
-            "nodeParent":1,
-            "label":"itemUseHistoryLabel",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":53,
-            "child":[
-                ]
+                }],
+            "$HIDDEN":true
         }],
     "animations":[
         {

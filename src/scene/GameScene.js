@@ -110,6 +110,7 @@ export default class GameScene extends Scene {
         this.itemList = [];
 
         this.portableItemButtonList.forEach(button => button.children.length === 2 && button.removeChildAt(1));
+        this.ui.sealMask.visible = false;
 
         if (Config.enableCameraAutoZoom) {
             this.autoZoomContainer.scale.set(1, 1);
@@ -1373,6 +1374,14 @@ export default class GameScene extends Scene {
                     this.jumpForce = this.originJumpForce;
                 },
             },
+            Seal: {
+                start: () => {
+                    this.ui.sealMask.visible = true;
+                },
+                end: () => {
+                    this.ui.sealMask.visible = false;
+                },
+            },
         };
     }
 
@@ -1439,6 +1448,7 @@ export default class GameScene extends Scene {
             let sprite = this.buffIconContainer.addChild(new Sprite());
             sprite.anchor.set(0.5, 0);
             sprite.texture = resources[Config.effect[type].buffIconImagePath].texture;
+            sprite.scale.set(Config.buff.iconScale, Config.buff.iconScale);
             let seconds = Math.ceil(this.effectRemainFrame[type] / Config.fps);
             let text = sprite.addChild(new Text(seconds, new TextStyle(Config.buff.text)));
             text.anchor.set(0.5, 0.5);

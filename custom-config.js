@@ -5589,6 +5589,7 @@ Config.buff = {
     textPosition: [0, 100],
     iconInterval: 100,
     containerY: 25,
+    iconScale: 1,
 };
 
 export default Config;
