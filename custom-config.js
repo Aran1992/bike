@@ -5641,11 +5641,11 @@ Config.buff = {
         fontSize: 80,
     },
 	// 倒计时位置
-    textPosition: [0, 130],
+    textPosition: [0, 140],
 	// buff图左右间距
     iconInterval: 30,
 	// buff图与自行车上下间距
-    containerY: 20,
+    containerY: 30,
 	// buff图大小（注意也会影响到倒计时数字大小）
     iconScale: 0.25,
 };
