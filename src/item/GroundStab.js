@@ -17,6 +17,7 @@ export default class GroundStab {
         this.sprite.position.set(config.props.x, config.props.y);
 
         this.body = this.world.createBody();
+        this.body.setUserData(this);
         this.body.setPosition(GameUtils.renderPos2PhysicsPos(this.sprite.position));
 
         this.update();
@@ -54,4 +55,11 @@ export default class GroundStab {
             }
         }
     }
+
+    onPreSolve() {
+    }
+
+    onBeginContact() {
+    }
 }
+
