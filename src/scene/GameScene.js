@@ -1469,7 +1469,7 @@ export default class GameScene extends Scene {
 
     sortBuffIcon() {
         let index = -1;
-        Utils.keys(Config.effect).forEach(type => {
+        Utils.keys(Config.effect).forEach(type =>    {
             if (this.buffIconTable[type]) {
                 index++;
                 this.buffIconTable[type].x = index * Config.buff.iconInterval;

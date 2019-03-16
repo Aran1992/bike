@@ -2,6 +2,7 @@ import {Sprite} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Config from "../config";
 import {Polygon, Vec2} from "../libs/planck-wrapper";
+import Utils from "../mgr/Utils";
 
 export default class GroundStab {
     constructor(parent, world, config,) {
@@ -15,10 +16,14 @@ export default class GroundStab {
         this.sprite.anchor.set(config.props.anchorX, config.props.anchorY);
         this.sprite.scale.set(config.props.scaleX, config.props.scaleY);
         this.sprite.position.set(config.props.x, config.props.y);
+        console.log(config);
+        this.sprite.rotation = config.props.rotation === undefined ? 0 : Utils.angle2radius(config.props.rotation);
+        console.log(this.sprite.rotation);
 
         this.body = this.world.createBody();
         this.body.setUserData(this);
         this.body.setPosition(GameUtils.renderPos2PhysicsPos(this.sprite.position));
+        this.body.setAngle(-this.sprite.rotation);
 
         this.update();
 
