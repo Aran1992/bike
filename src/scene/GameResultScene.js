@@ -56,6 +56,7 @@ export default class GameResultScene extends Scene {
 
     static onClickMainButton() {
         App.hideScene("GameResultScene");
+        App.getScene("MapGameScene").pauseGame();
         App.destroyScene("MapGameScene");
         App.showScene("MainScene");
     }

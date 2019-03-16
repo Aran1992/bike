@@ -1246,6 +1246,7 @@ export default class GameScene extends Scene {
         DataMgr.set(DataMgr.coin, coin);
         let distance = DataMgr.get(DataMgr.distance, 0) + Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
         DataMgr.set(DataMgr.distance, distance);
+        this.gameLoopFunc = this.pause.bind(this);
     }
 
     isItemXEnterView(item) {
@@ -1487,6 +1488,10 @@ export default class GameScene extends Scene {
                 }
             }
         }
+    }
+
+    pauseGame() {
+        this.gameLoopFunc = this.pause.bind(this);
     }
 }
 
