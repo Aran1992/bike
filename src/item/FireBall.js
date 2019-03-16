@@ -26,7 +26,7 @@ export default class FireBall extends EditorItem {
         let hh = texture.height / 2 * Config.pixel2meter * this.config.scaleY;
         sd.shape = Box(hw, hh);
         sd.isSensor = true;
-        this.body.createFixture(sd);
+        this.body.createFixture(sd).setUserData({isDanger: true});
 
         this.leftBorderX = this.sprite.x - this.sprite.texture.width * this.sprite.scale.x / 2;
     }

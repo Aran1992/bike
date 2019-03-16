@@ -85,7 +85,7 @@ export default class Bike {
         }
         this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, 0));
 
-        this.aiSensor = this.bikeBody.createFixture({shape: Circle(Config.bikeRadius * 2), isSensor: true});
+        this.aiSensor = this.bikeBody.createFixture({shape: Circle(Config.bikeRadius * 5), isSensor: true});
 
         let vy = this.jumpForce / this.bikeBody.getMass() / Config.fps;
         let jumpRadius = this.calcJumpRadius(this.commonVelocity, vy, this.world.getGravity().y);
@@ -149,7 +149,7 @@ export default class Bike {
     onBeginContact(contact, anotherFixture, selfFixture) {
         if (selfFixture === this.aiSensor) {
             let ud = anotherFixture.getUserData();
-            if ((ud && (ud.isFatal || ud.isCliff))
+            if ((ud && (ud.isFatal || ud.isCliff || ud.isDanger))
                 || this.gameScene.chtable.obstacle.is(anotherFixture)) {
                 this.isGoToJump = true;
             }

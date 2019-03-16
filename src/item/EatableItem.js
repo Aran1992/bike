@@ -26,7 +26,7 @@ export default class EatableItem extends EditorItem {
         let hh = texture.height / 2 * Config.pixel2meter * this.sprite.scale.y;
         sd.shape = Box(hw, hh);
         sd.isSensor = true;
-        this.body.createFixture(sd);
+        this.body.createFixture(sd).setUserData({isDanger: !this.isHelpful});
         this.body.setPosition(GameUtils.renderPos2PhysicsPos(this.sprite.position));
         this.body.setAngle(-this.sprite.rotation);
     }

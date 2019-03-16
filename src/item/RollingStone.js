@@ -16,7 +16,7 @@ export default class RollingStone extends EditorItem {
         this.body = this.world.createBody();
         this.body.setUserData(this);
         let radius = this.sprite.texture.width / 2 * this.sprite.scale.x * Config.pixel2meter;
-        this.body.createFixture(Circle(radius), {density: 1, friction: 1});
+        this.body.createFixture(Circle(radius), {density: 1, friction: 1}).setUserData({isDanger: true});
         let pp = GameUtils.renderPos2PhysicsPos(this.sprite.position);
         this.body.setPosition(pp);
         this.body.setAngle(-this.config.rotation);

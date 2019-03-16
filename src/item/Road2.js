@@ -101,8 +101,8 @@ export default class Road2 {
         for (let i = 0; i < path.length - 2; i += 2) {
             let p1 = Vec2(path[i], path[i + 1]);
             let p2 = Vec2(path[i + 2], path[i + 3]);
-            this.body.createFixture(Edge(p1, p2),
-                {density: 0, friction: 1,}).setUserData({resetJumpStatus: true, p1, p2});
+            this.body.createFixture(Edge(p1, p2), {density: 0, friction: 1,})
+                .setUserData({resetJumpStatus: true, p1, p2});
         }
     }
 
