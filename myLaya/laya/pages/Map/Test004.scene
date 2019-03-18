@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":1678,
+    "selecteID":2226,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":2220,
+    "maxID":2227,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -1115,20 +1115,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1985,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Lines",
-            "searchKey":"Lines,Road",
-            "props":{"y":928,"x":9257,"points":"421,-676,1004,-602,1388,-690,1749,-546,1864,-399,2262,-393,2522,-603,2732,-601,2948,-286,3243,-251,3416,-454,3620,-477,3814,-229,4109,-251,4308,-438,4848,-453","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
-            "nodeParent":1,
-            "label":"Road",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1988,
             "child":[
                 ]
         },
@@ -3406,20 +3392,6 @@
         },
         {
             "x":15,
-            "type":"Lines",
-            "searchKey":"Lines,Road",
-            "props":{"y":257,"x":32526,"points":"-877,0,3223,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
-            "nodeParent":1,
-            "label":"Road",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2159,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺",
             "props":{"y":258,"x":31982,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺","anchorY":1,"anchorX":0.5},
@@ -4103,15 +4075,99 @@
         {
             "x":15,
             "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":257,"x":32526,"points":"-877,0,700,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2220,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":257,"x":32526,"points":"700,0,2200,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2221,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":257,"x":32526,"points":"2200,0,3223,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2222,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":928,"x":9257,"points":"421,-676,1004,-602,1388,-690,1749,-546,1864,-399","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2223,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":928,"x":9262,"points":"1864,-399,2262,-393,2522,-603,2732,-601,2948,-286,3243,-251,3416,-454","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2224,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":928,"x":9262,"points":"3416,-454,3620,-477,3814,-229,4109,-251,4308,-438,4848,-453","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2225,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
             "searchKey":"Lines,Road//终点安全道路(一定要放在最后1位)",
-            "props":{"y":-64,"x":38842,"points":"0,0,1500,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":-54,"x":38852,"points":"0,0,1500,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road//终点安全道路(一定要放在最后1位)",
             "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":2219,
+            "compId":2226,
             "child":[
                 ]
         }],
