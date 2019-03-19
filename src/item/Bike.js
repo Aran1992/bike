@@ -7,6 +7,7 @@ import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
 import BananaPeel from "./BananaPeel";
 import Effect from "./Effect";
+import Value from "./Value";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -18,9 +19,8 @@ export default class Bike {
 
         this.bikeBody = undefined;
 
-        this.commonVelocity = this.config.commonVelocity;
-        this.accVelocity = this.config.accVelocity;
-        this.jumpForce = this.config.jumpForce;
+        this.velocity = new Value(this.config.commonVelocity);
+        this.jumpForce = new Value(this.config.jumpForce);
 
         this.frames = config.frames;
         this.frameIndex = 0;
@@ -80,15 +80,14 @@ export default class Bike {
         this.selfFixture = this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1});
         this.bikeBody.setUserData(this);
         if (config.velocityPercent) {
-            this.commonVelocity *= config.velocityPercent;
-            this.accVelocity *= config.velocityPercent;
+            this.velocity.setBasicValue(this.config.commonVelocity * config.velocityPercent);
         }
-        this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, 0));
+        this.bikeBody.setLinearVelocity(Vec2(this.velocity.value, 0));
 
         this.aiSensor = this.bikeBody.createFixture({shape: Circle(Config.bikeRadius * 5), isSensor: true});
 
-        let vy = this.jumpForce / this.bikeBody.getMass() / Config.fps;
-        let jumpRadius = this.calcJumpRadius(this.commonVelocity, vy, this.world.getGravity().y);
+        let vy = this.jumpForce.value / this.bikeBody.getMass() / Config.fps;
+        let jumpRadius = this.calcJumpRadius(this.velocity.value, vy, this.world.getGravity().y);
         this.eatItemSensor = this.bikeBody.createFixture({shape: Circle(jumpRadius), isSensor: true});
         // todo 当跳跃力之类的东西发生变化的时候 也需要修改探测圈的范围
 
@@ -253,8 +252,7 @@ export default class Bike {
         }
 
         if (this.isDead === false) {
-            let velocity = this.bikeBody.getLinearVelocity();
-            this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+            this.bikeBody.setLinearVelocity(Vec2(this.velocity.value, this.bikeBody.getLinearVelocity().y));
         }
 
         if (this.isDead === false && (this.isGoToJump || this.hasEffect("SpiderWeb"))) {
@@ -423,12 +421,13 @@ export default class Bike {
 
     jump() {
         if (this.hasEffect("SpiderWeb")) {
-            this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
+            this.bikeBody.applyForceToCenter(Vec2(0, Config.effect.SpiderWeb.jumpForce));
             this.spiderWebRemainBreakTimes--;
             if (this.spiderWebRemainBreakTimes === 0) {
                 delete this.effectRemainFrame.SpiderWeb;
-                this.effectTable.SpiderWeb.end();
-                this.removeBuffIcon("SpiderWeb");
+                if (this.effectTable.SpiderWeb.end) {
+                    this.effectTable.SpiderWeb.end();
+                }
                 if (this.durationEffectTable.SpiderWeb) {
                     this.durationEffectTable.SpiderWeb.destroy();
                     delete this.durationEffectTable.SpiderWeb;
@@ -439,7 +438,7 @@ export default class Bike {
             || this.jumpExtraCountdown > 0) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
-            this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce));
+            this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce.value));
             this.jumping = true;
             this.jumpCount++;
             this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
@@ -529,60 +528,47 @@ export default class Bike {
         this.effectTable = {
             Decelerate: {
                 start: () => {
-                    this.originPlayerCommonVelocity = this.commonVelocity;
-                    this.commonVelocity *= Config.effect.Decelerate.rate;
-                    let velocity = this.bikeBody.getLinearVelocity();
-                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                    this.velocity.increaseValueByRate(Config.effect.Decelerate.rate);
+                    this.bikeBody.setLinearVelocity(Vec2(this.velocity.value, this.bikeBody.getLinearVelocity().y));
                 },
                 end: () => {
-                    this.commonVelocity = this.originPlayerCommonVelocity;
-                    let velocity = this.bikeBody.getLinearVelocity();
-                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                    this.velocity.increaseValueByRate(-Config.effect.Decelerate.rate);
+                    this.bikeBody.setLinearVelocity(Vec2(this.velocity.value, this.bikeBody.getLinearVelocity().y));
                 },
             },
             Accelerate: {
                 start: () => {
-                    this.originPlayerCommonVelocity = this.commonVelocity;
-                    this.commonVelocity *= Config.effect.Accelerate.rate;
-                    let velocity = this.bikeBody.getLinearVelocity();
-                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                    this.velocity.increaseValueByRate(Config.effect.Accelerate.rate);
+                    this.bikeBody.setLinearVelocity(Vec2(this.velocity.value, this.bikeBody.getLinearVelocity().y));
                 },
                 end: () => {
-                    this.commonVelocity = this.originPlayerCommonVelocity;
-                    let velocity = this.bikeBody.getLinearVelocity();
-                    this.bikeBody.setLinearVelocity(Vec2(this.commonVelocity, velocity.y));
+                    this.velocity.increaseValueByRate(-Config.effect.Accelerate.rate);
+                    this.bikeBody.setLinearVelocity(Vec2(this.velocity.value, this.bikeBody.getLinearVelocity().y));
                 },
             },
             WeakenJump: {
                 start: () => {
-                    this.originJumpForce = this.jumpForce;
-                    this.jumpForce *= Config.effect.WeakenJump.rate;
+                    this.jumpForce.increaseValueByRate(Config.effect.WeakenJump.rate);
                 },
                 end: () => {
-                    this.jumpForce = this.originJumpForce;
+                    this.jumpForce.increaseValueByRate(-Config.effect.WeakenJump.rate);
                 },
             },
             SpiderWeb: {
                 start: () => {
-                    this.originJumpForce = this.jumpForce;
-                    this.jumpForce *= Config.effect.SpiderWeb.jumpForceRate;
                     this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
                     this.spiderWebBreakIntervalFrame = 0;
                 },
                 cover: () => {
                     this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
-                },
-                end: () => {
-                    this.jumpForce = this.originJumpForce;
                 }
             },
             PowerJump: {
                 start: () => {
-                    this.originJumpForce = this.jumpForce;
-                    this.jumpForce *= Config.effect.PowerJump.rate;
+                    this.jumpForce.increaseValueByRate(Config.effect.PowerJump.rate);
                 },
                 end: () => {
-                    this.jumpForce = this.originJumpForce;
+                    this.jumpForce.increaseValueByRate(-Config.effect.PowerJump.rate);
                 },
             },
         };

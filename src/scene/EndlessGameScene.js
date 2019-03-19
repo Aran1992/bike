@@ -27,7 +27,6 @@ export default class EndlessGameScene extends GameScene {
 
     initEnvironment() {
         this.bikeCommonVelocity = this.sceneConfig.bikeVelocity || Config.bikeVelocity;
-        this.bikeAccVelocity = this.sceneConfig.bikeAccVelocity || Config.bikeAccVelocity;
         this.gravity = this.sceneConfig.gravity || Config.gravity;
         this.jumpForce = this.sceneConfig.jumpForce || Config.jumpForce;
         this.bgTextureList = this.sceneConfig.texture.bg;
