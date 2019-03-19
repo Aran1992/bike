@@ -1,0 +1,61 @@
+{"frames": {
+
+"hero kungFu particle_1.png":
+{
+	"frame": {"x":0,"y":0,"w":44,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":48},
+	"sourceSize": {"w":44,"h":48}
+},
+"hero kungFu particle_2.png":
+{
+	"frame": {"x":44,"y":0,"w":44,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":48},
+	"sourceSize": {"w":44,"h":48}
+},
+"hero kungFu particle_3.png":
+{
+	"frame": {"x":88,"y":0,"w":44,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":48},
+	"sourceSize": {"w":44,"h":48}
+},
+"hero kungFu particle_4.png":
+{
+	"frame": {"x":132,"y":0,"w":44,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":48},
+	"sourceSize": {"w":44,"h":48}
+},
+"hero kungFu particle_5.png":
+{
+	"frame": {"x":176,"y":0,"w":44,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":48},
+	"sourceSize": {"w":44,"h":48}
+}},
+  "animations": {
+	"bomb-2": [
+	"hero kungFu particle_1.png",
+	"hero kungFu particle_2.png",
+	"hero kungFu particle_3.png",
+	"hero kungFu particle_4.png",
+	"hero kungFu particle_5.png"
+	]
+  },
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bomb-2.png",
+	"format": "RGBA8888",
+	"size": {"w":220,"h":48},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:6947db4fda39a2a4b9bffedfedde6fb7:a67783da58131ceb63178117ebc248ef:437656f2fc15c7dbf252e57468533590$"
+}
+}
