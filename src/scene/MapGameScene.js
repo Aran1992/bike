@@ -24,7 +24,6 @@ export default class MapGameScene extends GameScene {
 
     initEnvironment() {
         this.bikeCommonVelocity = this.mapConfig.bikeVelocity || Config.bikeVelocity;
-        this.bikeAccVelocity = this.mapConfig.bikeAccVelocity || Config.bikeAccVelocity;
         this.gravity = this.mapConfig.gravity || Config.gravity;
         this.jumpForce = this.mapConfig.jumpForce || Config.jumpForce;
         this.bgTextureList = this.mapConfig.texture.bg;
@@ -93,7 +92,6 @@ export default class MapGameScene extends GameScene {
                 // let id = 2;
                 let enemy = new Enemy(this, this.bikeContainer, this.world, id, {
                     commonVelocity: this.bikeCommonVelocity,
-                    accVelocity: this.bikeAccVelocity,
                     jumpForce: this.jumpForce,
                     frames: frames,
                     index: this.enemyList.length + 1

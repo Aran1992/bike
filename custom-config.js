@@ -5402,13 +5402,13 @@ Config.effect = {
     Decelerate: {
         // 持续时间（单位：秒）
         duration: 5,
-        // 削减之后是原来速度的多少
-        rate: 0.5,
+        // 对基础速度的修改比例（比如说基础为10，如果rate为-0.1，那么最终为 10 * ( 1 - 0.1 ) = 9; 如果rate为-0.6，那么最终为 10 * ( 1 - 0.6 ) = 4 ）
+        rate: -0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5421,13 +5421,13 @@ Config.effect = {
     WeakenJump: {
         // 持续时间（单位：秒）
         duration: 5,
-        // 削减之后是原来跳跃力的多少
-        rate: 0.5,
+        // 对基础跳跃力的修改比例（比如说基础为10，如果rate为-0.1，那么最终为 10 * ( 1 - 0.1 ) = 9; 如果rate为-0.6，那么最终为 10 * ( 1 - 0.6 ) = 4 ）
+        rate: -0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5444,7 +5444,7 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 0,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5459,13 +5459,13 @@ Config.effect = {
         duration: -1,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
-        // 削减之后是原来跳跃力的多少
-        jumpForceRate: 0.2,
+        // 身缠蜘蛛网时的跳跃力
+        jumpForce: 2560,
         // 挣脱需要点击次数
         breakTimes: 5,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5484,7 +5484,7 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5499,7 +5499,7 @@ Config.effect = {
         isHelpful: 0,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 2,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5510,11 +5510,11 @@ Config.effect = {
     Accelerate: {
         // 持续时间（单位：秒）
         duration: 5,
-        // 强化之后是原来速度的多少
-        rate: 1.5,
+        // 对基础速度的修改比例（比如说基础为10，如果rate为-0.1，那么最终为 10 * ( 1 - 0.1 ) = 9; 如果rate为-0.6，那么最终为 10 * ( 1 - 0.6 ) = 4 ）
+        rate: 0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5525,11 +5525,11 @@ Config.effect = {
     PowerJump: {
         // 持续时间（单位：秒）
         duration: 5,
-        // 强化之后是原来跳跃力的多少
-        rate: 1.5,
+        // 对基础跳跃力的修改比例（比如说基础为10，如果rate为-0.1，那么最终为 10 * ( 1 - 0.1 ) = 9; 如果rate为0.6，那么最终为 10 * ( 1 + 0.6 ) = 16 ）
+        rate: 0.5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5542,7 +5542,7 @@ Config.effect = {
         duration: 5,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5557,7 +5557,7 @@ Config.effect = {
         isHelpful: 1,
         // 吸取速度（单位：像素/秒）
         velocity: 1000,
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5568,7 +5568,7 @@ Config.effect = {
     BananaPeel: {
         // 丢出去的香蕉皮的编辑器预制件
         peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab",
-		// 道具栏显示的道具图标
+        // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon3_09.png",
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
@@ -5637,16 +5637,16 @@ Config.itemUseHistoryDuration = 5;
 Config.buff = {
     text: {
         fill: "white",
-		// 倒计时数字大小
+        // 倒计时数字大小
         fontSize: 80,
     },
-	// 倒计时位置
+    // 倒计时位置
     textPosition: [0, 140],
-	// buff图左右间距
+    // buff图左右间距
     iconInterval: 30,
-	// buff图与自行车上下间距
+    // buff图与自行车上下间距
     containerY: 30,
-	// buff图大小（注意也会影响到倒计时数字大小）
+    // buff图大小（注意也会影响到倒计时数字大小）
     iconScale: 0.25,
 };
 

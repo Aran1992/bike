@@ -54,8 +54,6 @@ let Config = {
     jumpForce: 5000,
     mapBasePath: "myLaya/laya/pages/Map/",
     finalFlagImagePath: "images/flag.png",
-    // 自行车吃了加速宝石之后的速度
-    bikeAccVelocity: 50,
     // 自行车加速的帧数
     accFrame: 420,
     startScene: {

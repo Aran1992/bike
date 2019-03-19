@@ -16,9 +16,7 @@ export default class GroundStab {
         this.sprite.anchor.set(config.props.anchorX, config.props.anchorY);
         this.sprite.scale.set(config.props.scaleX, config.props.scaleY);
         this.sprite.position.set(config.props.x, config.props.y);
-        console.log(config);
         this.sprite.rotation = config.props.rotation === undefined ? 0 : Utils.angle2radius(config.props.rotation);
-        console.log(this.sprite.rotation);
 
         this.body = this.world.createBody();
         this.body.setUserData(this);
