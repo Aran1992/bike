@@ -77,7 +77,7 @@ let Config = {
         },
     },
     fatalEdgeAngleRange: [Math.PI / 180 * 80, Math.PI / 180 * 100],
-    goldCoinAniJson: "images/gold-coin-animation.json",
+    goldCoinAniJson: "myLaya/laya/assets/animations/gold-coin-animation.json",
     accGemAniJson: "images/crystal-jet-animation.json",
     fireWallAniJson: "images/firewall-animation.json",
     birdAniJson: "images/bird-animation.json",
