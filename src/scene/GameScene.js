@@ -1175,7 +1175,7 @@ export default class GameScene extends Scene {
                 let sprite = new Sprite(texture);
                 button.addChild(sprite);
                 sprite.anchor.set(0.5, 0.5);
-                sprite.position.set(button.width / 2, button.height / 2);
+                sprite.position.set(button.mywidth / 2, button.myheight / 2);
                 sprite.effect = effect;
                 return true;
             }
