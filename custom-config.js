@@ -22,7 +22,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test1",
         // scene文件的路径
-        scenePath: "Test002",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -109,7 +109,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test2",
         // scene文件的路径
-        scenePath: "Test002",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -196,7 +196,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test3",
         // scene文件的路径
-        scenePath: "Test001",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -283,7 +283,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test4",
         // scene文件的路径
-        scenePath: "Test001",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -370,7 +370,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test5",
         // scene文件的路径
-        scenePath: "Test003",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -457,7 +457,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test6",
         // scene文件的路径
-        scenePath: "Test003",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -544,7 +544,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test7",
         // scene文件的路径
-        scenePath: "Test004",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -631,7 +631,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test8",
         // scene文件的路径
-        scenePath: "Test002",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -718,7 +718,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test9",
         // scene文件的路径
-        scenePath: "Test004",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -805,7 +805,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test10",
         // scene文件的路径
-        scenePath: "Test002",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -892,7 +892,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test11",
         // scene文件的路径
-        scenePath: "Test012",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -979,7 +979,7 @@ Config.mapList = [
         // 显示给人看的名字
         showName: "Test12",
         // scene文件的路径
-        scenePath: "Test012",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -5411,9 +5411,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_04.png",
     },
@@ -5430,9 +5430,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_03.png",
     },
@@ -5462,7 +5462,7 @@ Config.effect = {
         // 身缠蜘蛛网时的跳跃力
         jumpForce: 2560,
         // 挣脱需要点击次数
-        breakTimes: 5,
+        breakTimes: 3,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
         // 道具栏显示的道具图标
@@ -5487,9 +5487,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_11.png",
     },
@@ -5504,7 +5504,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect2.prefab",
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
@@ -5517,7 +5517,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_05.png",
     },
@@ -5532,7 +5532,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_02.png",
     },
@@ -5545,7 +5545,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_09.png",
     },
@@ -5573,7 +5573,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab",
     }
 };
 
