@@ -1204,7 +1204,8 @@ export default class GameScene extends Scene {
         let pos = this.bikeBody.getPosition();
         let rp = this.findAdjustHeight(this.bikeOutterContainer.x);
         let pp = GameUtils.renderPos2PhysicsPos(rp);
-        this.dragBackPos = {x: pos.x, y: pp.y + Config.bikeRadius};
+        this.dragBackPos = {x: pos.x, y: pp.y + Config.bikeRadius - Config.rebornPosOffsetHeight * Config.pixel2meter};
+        this.deadPos = {x: pos.x, y: pos.y};
         this.removeAllEffects();
     }
 
@@ -1238,7 +1239,7 @@ export default class GameScene extends Scene {
             let newY = this.bikeOutterContainer.y + moveY;
             let rect = {
                 x: -this.cameraContainer.x,
-                y: GameUtils.physicsPos2renderPos(this.dragBackPos).y - Config.designHeight,
+                y: GameUtils.physicsPos2renderPos(this.deadPos).y - Config.designHeight,
                 width: Config.designWidth,
                 height: Config.designHeight
             };

@@ -5650,4 +5650,7 @@ Config.buff = {
     iconScale: 0.25,
 };
 
+// 复活位置偏差（单位：像素，正数的话为向下偏）
+Config.rebornPosOffsetHeight = -100;
+
 export default Config;
