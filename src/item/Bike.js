@@ -479,6 +479,9 @@ export default class Bike {
     }
 
     startEffect(type) {
+        if (this.isDead) {
+            return;
+        }
         if (this.effectRemainFrame[type]) {
             if (this.effectTable[type] && this.effectTable[type].cover) {
                 this.effectTable[type].cover();

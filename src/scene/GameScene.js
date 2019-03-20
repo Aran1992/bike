@@ -1298,6 +1298,9 @@ export default class GameScene extends Scene {
     }
 
     startEffect(type) {
+        if (this.gameStatus === "end") {
+            return;
+        }
         if (this.effectRemainFrame[type]) {
             if (this.effectTable[type] && this.effectTable[type].cover) {
                 this.effectTable[type].cover();
