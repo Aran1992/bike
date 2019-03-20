@@ -778,7 +778,11 @@ export default class GameScene extends Scene {
 
         this.judgeGameWin(bikePhysicsPos);
 
-        this.moveCamera();
+        if (this.startDragBikeBack) {
+            this.dragBikeBack();
+        }
+
+        this.moveCamera(this.targetCameraPos);
 
         this.scrollBg();
 
@@ -819,10 +823,6 @@ export default class GameScene extends Scene {
             let newX = this.bikeBody.getPosition().x;
             this.distance += newX - oldX;
             this.ui.distanceText.text = Math.floor(this.distance) + "m";
-        }
-
-        if (this.startDragBikeBack) {
-            this.dragBikeBack();
         }
 
         if (RunOption.showBikeState) {
@@ -936,17 +936,19 @@ export default class GameScene extends Scene {
     }
 
     moveCamera() {
-        if (this.gameStatus === "play" || this.startAdjustBikeHeight) {
+        if (this.gameStatus === "play" || this.startAdjustBikeHeight || this.targetCameraPos) {
+            let pos = this.targetCameraPos ? GameUtils.physicsPos2renderPos(this.targetCameraPos) : this.bikeOutterContainer;
+
             let oldCameraX = this.cameraContainer.x;
             let oldCameraY = this.cameraContainer.y;
 
-            this.cameraContainer.x = Config.bikeLeftMargin - this.bikeOutterContainer.x;
+            this.cameraContainer.x = Config.bikeLeftMargin - pos.x;
 
-            let bikeY = this.cameraContainer.y + this.bikeOutterContainer.y;
+            let bikeY = this.cameraContainer.y + pos.y;
             if (bikeY < Config.bikeCameraMinY) {
-                this.cameraContainer.y = Config.bikeCameraMinY - this.bikeOutterContainer.y;
+                this.cameraContainer.y = Config.bikeCameraMinY - pos.y;
             } else if (bikeY > Config.bikeCameraMaxY) {
-                this.cameraContainer.y = Config.bikeCameraMaxY - this.bikeOutterContainer.y;
+                this.cameraContainer.y = Config.bikeCameraMaxY - pos.y;
             }
 
             let cameraMoveX = this.cameraContainer.x - oldCameraX;
@@ -1206,6 +1208,11 @@ export default class GameScene extends Scene {
         let pp = GameUtils.renderPos2PhysicsPos(rp);
         this.dragBackPos = {x: pos.x, y: pp.y + Config.bikeRadius - Config.rebornPosOffsetHeight * Config.pixel2meter};
         this.deadPos = {x: pos.x, y: pos.y};
+        this.targetCameraPos = {x: pos.x, y: pos.y};
+        this.moveCameraVelocity = {
+            x: (this.dragBackPos.x - this.targetCameraPos.x) / Config.rebornDragDuration / Config.fps,
+            y: (this.dragBackPos.y - this.targetCameraPos.y) / Config.rebornDragDuration / Config.fps
+        };
         this.removeAllEffects();
     }
 
@@ -1220,12 +1227,15 @@ export default class GameScene extends Scene {
         let {value: y, final: fy} = Utils.successive(curPos.y, targetPos.y, moveY);
         let newPos = Vec2(x, y);
         this.bikeBody.setPosition(newPos);
+        this.targetCameraPos.x += this.moveCameraVelocity.x;
+        this.targetCameraPos.y += this.moveCameraVelocity.y;
         if (fx && fy) {
             this.onDragBackEnded();
         }
     }
 
     onDragBackEnded() {
+        this.targetCameraPos = undefined;
         this.startDragBikeBack = false;
         this.startAdjustBikeHeight = true;
         this.ui.rebornPanel.visible = true;
