@@ -34,6 +34,14 @@ export default class UpDownPlatform extends EditorItem {
         } else {
             this.body.setLinearVelocity(Vec2(0, -this.config.velocity));
         }
+
+        let bounds = this.gameMgr.getSpriteGameBounds(this.sprite);
+        this.leftBorderX = bounds.x;
+        this.rightBorderX = bounds.x + bounds.width;
+        // 平台移动到最低点计算出来的bounds
+        this.lowestTopY = bounds.y + bounds.height + this.config.bottomOffset;
+        // 平台移动到最高点计算出来的bounds
+        this.highestTopY = bounds.y - this.config.topOffset;
     }
 
     update() {
@@ -45,5 +53,28 @@ export default class UpDownPlatform extends EditorItem {
         } else if (rp.y >= this.config.bottomY) {
             this.body.setLinearVelocity(Vec2(0, this.config.velocity));
         }
+    }
+
+    getLeftBorderX() {
+        return this.leftBorderX;
+    }
+
+    getRightBorderX() {
+        return this.rightBorderX;
+    }
+
+    getLowestTopY() {
+        // todo 先简单返回最底部就好
+        return this.lowestTopY;
+    }
+
+    getTopPosInTargetX(x) {
+        // todo 先简单返回最顶部就好
+        return {x: x, y: this.highestTopY};
+    }
+
+    getLeftTopPoint() {
+        // todo 先简单返回最顶部就好
+        return {x: this.leftBorderX, y: this.highestTopY};
     }
 }

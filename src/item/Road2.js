@@ -31,7 +31,7 @@ export default class Road2 {
 
         let rect = Utils.getPathRect(this.config.path);
 
-        this.rigthBorderX = rect.x + rect.width;
+        this.rightBorderX = rect.x + rect.width;
         this.leftBorderX = rect.x;
         this.lowestTopY = this.config.path.reduce((max, y, i) => {
             if (i % 2 === 1) {
@@ -107,7 +107,7 @@ export default class Road2 {
     }
 
     getRightBorderX() {
-        return this.rigthBorderX;
+        return this.rightBorderX;
     }
 
     getLeftBorderX() {

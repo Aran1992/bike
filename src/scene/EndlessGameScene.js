@@ -2,9 +2,7 @@ import Config from "../config";
 import GameScene from "./GameScene";
 import {resources} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
-import Road from "../item/Road";
 import Utils from "../mgr/Utils";
-import BlackBird from "../item/BlackBird";
 import SceneHelper from "../mgr/SceneHelper";
 
 export default class EndlessGameScene extends GameScene {
@@ -112,13 +110,7 @@ export default class EndlessGameScene extends GameScene {
             this.createPart(data);
         });
         this.roadList.sort((a, b) => {
-            let ax = a.getLeftBorderX();
-            let bx = b.getLeftBorderX();
-            if (ax < bx) {
-                return -1;
-            } else if (ax > bx) {
-                return 1;
-            }
+            return a.getLeftBorderX() - b.getLeftBorderX();
         });
     }
 
@@ -161,16 +153,14 @@ export default class EndlessGameScene extends GameScene {
     }
 
     cleanPartOutOfView() {
-        this.underBikeContianer.children.forEach(child => {
-            if (child.part && child.part.getRightBorderX() < -this.cameraContainer.x) {
-                child.part.destroy();
-                if (child.part instanceof Road) {
-                    Utils.removeItemFromArray(this.roadList, child.part);
-                } else if (child.part instanceof BlackBird) {
-                    Utils.removeItemFromArray(this.birdList, child.part);
-                } else if (this.itemList.indexOf(child.part) !== -1) {
-                    Utils.removeItemFromArray(this.itemList, child.part);
-                }
+        this.underBikeContianer.children.forEach(({part}) => {
+            if (part && part.getRightBorderX() < -this.cameraContainer.x) {
+                part.destroy();
+                [this.roadList, this.birdList, this.itemList].forEach(list => {
+                    if (list.indexOf(part) !== -1) {
+                        Utils.removeItemFromArray(list, part);
+                    }
+                });
             }
         });
     }

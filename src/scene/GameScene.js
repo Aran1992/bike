@@ -602,6 +602,7 @@ export default class GameScene extends Scene {
             case "UpDownPlatform": {
                 let item = new UpDownPlatform(this, this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
+                this.roadList.push(item);
                 break;
             }
             case "DeadLine": {
@@ -1484,6 +1485,13 @@ export default class GameScene extends Scene {
 
     pauseGame() {
         this.gameLoopFunc = this.pause.bind(this);
+    }
+
+    getSpriteGameBounds(sprite) {
+        let bounds = sprite.getBounds();
+        bounds.x -= this.cameraContainer.x;
+        bounds.y -= this.cameraContainer.y;
+        return bounds;
     }
 }
 
