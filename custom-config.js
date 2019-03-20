@@ -1132,157 +1132,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map1",
@@ -1345,157 +1237,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map2",
@@ -1558,157 +1342,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map3",
@@ -1771,157 +1447,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map4",
@@ -1984,157 +1552,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map5",
@@ -2197,157 +1657,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map6",
@@ -2410,157 +1762,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map7",
@@ -2623,157 +1867,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map8",
@@ -2836,157 +1972,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map9",
@@ -3049,157 +2077,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map10",
@@ -3262,157 +2182,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map11",
@@ -3475,157 +2287,49 @@ Config.endlessMode.sceneList = [
         roadSectionLengthList: [3200, 4800, 8000, 16000],
         roadSectionList: [
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/0/Test14",
-                },
+                "Test/0/Test1",
+                "Test/0/Test2",
+                "Test/0/Test3",
+                "Test/0/Test4",
+                "Test/0/Test11",
+                "Test/0/Test12",
+                "Test/0/Test13",
+                "Test/0/Test14"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/1/Test13",
-                },
+                "Test/1/Test1",
+                "Test/1/Test2",
+                "Test/1/Test3",
+                "Test/1/Test11",
+                "Test/1/Test12",
+                "Test/1/Test13"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/2/Test12",
-                },
+                "Test/2/Test1",
+                "Test/2/Test2",
+                "Test/2/Test11",
+                "Test/2/Test12"
             ],
             [
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test4",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test14",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-3",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-12",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test1-13",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-1",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-2",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-11",
-                },
-                {
-                    // scene文件的路径
-                    scenePath: "Test/3/Test2-12",
-                },
-            ],
+                "Test/3/Test1",
+                "Test/3/Test2",
+                "Test/3/Test3",
+                "Test/3/Test4",
+                "Test/3/Test11",
+                "Test/3/Test12",
+                "Test/3/Test13",
+                "Test/3/Test14",
+                "Test/3/Test1-1",
+                "Test/3/Test1-2",
+                "Test/3/Test1-3",
+                "Test/3/Test1-11",
+                "Test/3/Test1-12",
+                "Test/3/Test1-13",
+                "Test/3/Test2-1",
+                "Test/3/Test2-2",
+                "Test/3/Test2-11",
+                "Test/3/Test2-12"
+            ]
         ],
         // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
         dsc: "Map12",

@@ -43,7 +43,7 @@ export default class EndlessGameScene extends GameScene {
     getResPathList() {
         this.sceneFilePathList = this.sceneConfig.roadSectionList.reduce((list, diff) =>
             list.concat(diff.map(section =>
-                `${Config.endlessMode.baseScenePath}${section.scenePath}.scene`)), []);
+                `${Config.endlessMode.baseScenePath}${section}.scene`)), []);
         return super.getResPathList()
             .concat(this.sceneConfig.texture.bg)
             .concat([
@@ -86,7 +86,7 @@ export default class EndlessGameScene extends GameScene {
 
         this.diffIndex = 0;
         let roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section}.scene`].data));
 
         this.partList = [];
         let sumLength = 0;
@@ -94,7 +94,7 @@ export default class EndlessGameScene extends GameScene {
         while (config > sumLength) {
             if (roadSectionList.length === 0) {
                 roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-                    JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+                    JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section}.scene`].data));
             }
             let index = Math.floor(Math.random() * roadSectionList.length);
             let item = roadSectionList.splice(index, 1)[0];
@@ -121,14 +121,14 @@ export default class EndlessGameScene extends GameScene {
                     this.diffIndex++;
                 }
                 let list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-                    JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+                    JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section}.scene`].data));
                 this.partList = [];
                 let config = this.sceneConfig.roadSectionLengthList[this.diffIndex];
                 let sumLength = 0;
                 while (config > sumLength) {
                     if (list.length === 0) {
                         list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-                            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section.scenePath}.scene`].data));
+                            JSON.parse(resources[`${Config.endlessMode.baseScenePath}${section}.scene`].data));
                     }
                     let index = Math.floor(Math.random() * list.length);
                     let item = list.splice(index, 1)[0];
