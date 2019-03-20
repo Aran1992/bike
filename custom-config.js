@@ -5411,7 +5411,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab",
         // 承受者受击特效路径（只能是动画）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab",
         // 持续效果ICON路径
@@ -5462,7 +5462,7 @@ Config.effect = {
         // 身缠蜘蛛网时的跳跃力
         jumpForce: 2560,
         // 挣脱需要点击次数
-        breakTimes: 5,
+        breakTimes: 3,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
         targetType: 1,
         // 道具栏显示的道具图标
@@ -5573,7 +5573,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab",
     }
 };
 

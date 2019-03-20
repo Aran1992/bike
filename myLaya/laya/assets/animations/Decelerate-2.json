@@ -2,69 +2,45 @@
 
 "01.png":
 {
-	"frame": {"x":0,"y":0,"w":80,"h":60},
+	"frame": {"x":0,"y":0,"w":63,"h":112},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
+	"spriteSourceSize": {"x":0,"y":0,"w":63,"h":112},
+	"sourceSize": {"w":63,"h":112}
 },
 "02.png":
 {
-	"frame": {"x":80,"y":0,"w":80,"h":60},
+	"frame": {"x":0,"y":112,"w":63,"h":112},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
+	"spriteSourceSize": {"x":0,"y":0,"w":63,"h":112},
+	"sourceSize": {"w":63,"h":112}
 },
 "03.png":
 {
-	"frame": {"x":160,"y":0,"w":80,"h":60},
+	"frame": {"x":0,"y":224,"w":63,"h":112},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
+	"spriteSourceSize": {"x":0,"y":0,"w":63,"h":112},
+	"sourceSize": {"w":63,"h":112}
 },
 "04.png":
 {
-	"frame": {"x":240,"y":0,"w":80,"h":60},
+	"frame": {"x":0,"y":336,"w":63,"h":112},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
-},
-"05.png":
-{
-	"frame": {"x":320,"y":0,"w":80,"h":60},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
-},
-"06.png":
-{
-	"frame": {"x":400,"y":0,"w":80,"h":60},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
-},
-"07.png":
-{
-	"frame": {"x":480,"y":0,"w":80,"h":60},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":60},
-	"sourceSize": {"w":80,"h":60}
+	"spriteSourceSize": {"x":0,"y":0,"w":63,"h":112},
+	"sourceSize": {"w":63,"h":112}
 }},
   "animations": {
-    "Decelerate-2": [
+    "Decelerate": [
       "01.png",
       "02.png",
       "03.png",
-      "04.png",
-      "05.png",
-      "06.png",
-      "07.png"
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png"
     ]
   },
 "meta": {
@@ -72,8 +48,8 @@
 	"version": "1.0",
 	"image": "Decelerate-2.png",
 	"format": "RGBA8888",
-	"size": {"w":560,"h":60},
+	"size": {"w":63,"h":448},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:940f965953b9107b895a87017ee9dc2c:9f74c69b9438b3ae73033c08a8d2ff07:3c57f446503caf92fe4720001e69f07a$"
+	"smartupdate": "$TexturePacker:SmartUpdate:ebed51c5fe0332a258c7c8c33c9b7020:b756fa557927f2ddc10500b2745d5952:3c57f446503caf92fe4720001e69f07a$"
 }
 }
