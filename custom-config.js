@@ -4004,14 +4004,14 @@ Size      small`,
         // 自行车的描述
         dsc:
             `【 NO.10  bike 】
-Speed     140%
+Speed     120%
 Jump       90%
 HighJump  normal
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.4,
+        velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4031,14 +4031,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.11  bike 】
-Speed     140%
+Speed     120%
 Jump       90%
 HighJump  normal
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.4,
+        velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4058,14 +4058,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.12  bike 】
-Speed     140%
+Speed     120%
 Jump       90%
 HighJump  normal
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.4,
+        velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4247,14 +4247,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.19  bike 】
-Speed     120%
+Speed     110%
 Jump      180%
 HighJump  hard
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
+        velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 0.8,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4274,14 +4274,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.20  bike 】
-Speed     120%
+Speed     110%
 Jump      180%
 HighJump  hard
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
+        velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 0.8,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4301,14 +4301,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.21  bike 】
-Speed     120%
+Speed     110%
 Jump      180%
 HighJump  hard
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
+        velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 0.8,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4328,14 +4328,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.22  bike 】
-Speed     120%
+Speed     110%
 Jump       80%
 HighJump  easy
 Size      small`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
+        velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4355,14 +4355,14 @@ Size      small`,
         // 自行车的描述
         dsc:
             `【 NO.23  bike 】
-Speed     120%
+Speed     110%
 Jump       80%
 HighJump  easy
 Size      small`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
+        velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4382,14 +4382,14 @@ Size      small`,
         // 自行车的描述
         dsc:
             `【 NO.24  bike 】
-Speed     120%
+Speed     110%
 Jump       80%
 HighJump  easy
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.2,
+        velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4409,14 +4409,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.25  bike 】
-Speed     160%
+Speed     130%
 Jump      100%
 HighJump  hard
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
+        velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4436,14 +4436,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.26  bike 】
-Speed     160%
+Speed     130%
 Jump      100%
 HighJump  hard
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
+        velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4463,14 +4463,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.27  bike 】
-Speed     160%
+Speed     130%
 Jump      100%
 HighJump  hard
 Size      middle`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
+        velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4490,14 +4490,14 @@ Size      middle`,
         // 自行车的描述
         dsc:
             `【 NO.28  bike 】
-Speed     160%
+Speed     130%
 Jump       80%
 HighJump  normal
 Size      small`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
+        velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4517,14 +4517,14 @@ Size      small`,
         // 自行车的描述
         dsc:
             `【 NO.29  bike 】
-Speed     160%
+Speed     130%
 Jump       80%
 HighJump  normal
 Size      big`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
+        velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4544,14 +4544,14 @@ Size      big`,
         // 自行车的描述
         dsc:
             `【 NO.30  bike 】
-Speed     160%
+Speed     130%
 Jump       80%
 HighJump  normal
 Size      small`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 1.6,
+        velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4571,14 +4571,14 @@ Size      small`,
         // 自行车的描述
         dsc:
             `【 NO.31  bike 】
-Speed     200%
+Speed     150%
 Jump       80%
 HighJump  hard
 Size      big`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 2,
+        velocityPercent: 1.5,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4598,14 +4598,14 @@ Size      big`,
         // 自行车的描述
         dsc:
             `【 NO.32  bike 】
-Speed     200%
+Speed     150%
 Jump       80%
 HighJump  hard
 Size      big`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 2,
+        velocityPercent: 1.5,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
@@ -4625,14 +4625,14 @@ Size      big`,
         // 自行车的描述
         dsc:
             `【 NO.33  bike 】
-Speed     200%
+Speed     150%
 Jump       80%
 HighJump  hard
 Size      big`,
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
-        velocityPercent: 2,
+        velocityPercent: 1.5,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         densityPercent: 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
