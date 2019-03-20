@@ -1187,7 +1187,9 @@ export default class GameScene extends Scene {
         MusicMgr.playSound(Config.soundPath.die);
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
-        this.dragBackPos = {x: pos.x, y: pos.y};
+        let rp = this.findAdjustHeight(this.bikeOutterContainer.x);
+        let pp = GameUtils.renderPos2PhysicsPos(rp);
+        this.dragBackPos = {x: pos.x, y: pp.y + Config.bikeRadius};
         this.removeAllEffects();
     }
 
