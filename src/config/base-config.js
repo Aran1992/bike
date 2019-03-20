@@ -218,6 +218,7 @@ Config.imagePath = {
     bubble: "images/bubble.png",
     racetrackPlayer: "myLaya/laya/assets/images/racetrack-player.png",
     racetrackEnemy: "myLaya/laya/assets/images/racetrack-npc.png",
+    rebornArrow: "myLaya/laya/assets/images/UI_Respawn_ArrowS.png",
 };
 
 Config.emitterPath = {

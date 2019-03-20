@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":54,
-    "selecteID":56,
+    "selectedBox":41,
+    "selecteID":48,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -345,7 +345,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"top":75,"text":"Sliding to Adjust Resurrection Position","fontSize":30,"color":"#ffffff","centerX":0},
+                    "props":{"width":500,"top":40,"text":"Sliding Up and Down to Adjust Resurrection Position","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":41,
                     "label":"Label",
                     "isOpen":true,
@@ -383,7 +383,7 @@
                                 ]
                         }]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         }],
     "animations":[
         {

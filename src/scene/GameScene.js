@@ -174,6 +174,7 @@ export default class GameScene extends Scene {
         this.startDragBikeBack = true;
         this.rebornDragVelocity = Utils.calcPointDistance(this.bikeBody.getPosition(), this.dragBackPos) / Config.rebornDragDuration / Config.fps;
         this.bikeBubbleSprite.visible = true;
+        this.bikeArrowList.forEach(sprite => sprite.visible = true);
         this.bikeBody.setStatic();
         this.bikeBody.setAngle(0);
         this.bikeSelfContainer.rotation = 0;
@@ -667,11 +668,25 @@ export default class GameScene extends Scene {
             density = Config.bikeDensity;
         }
 
-        this.bikeBubbleSprite = new Sprite(resources[Config.imagePath.bubble].texture);
-        this.bikeSprite.addChild(this.bikeBubbleSprite);
+        let bubbleTexture = resources[Config.imagePath.bubble].texture;
+        this.bikeBubbleSprite = this.bikeOutterContainer.addChild(new Sprite(bubbleTexture));
         this.bikeBubbleSprite.anchor.set(0.5, 0.5);
-        this.bikeBubbleSprite.scale.set(1 / Config.bikeScale, 1 / Config.bikeScale);
         this.bikeBubbleSprite.visible = false;
+
+        let arrowTexture = resources[Config.imagePath.rebornArrow].texture;
+
+        this.bikeArrowSprite1 = this.bikeOutterContainer.addChild(new Sprite(arrowTexture));
+        this.bikeArrowSprite1.position.set(0, -bubbleTexture.height / 2);
+
+        this.bikeArrowSprite2 = this.bikeOutterContainer.addChild(new Sprite(arrowTexture));
+        this.bikeArrowSprite2.rotation = Math.PI;
+        this.bikeArrowSprite2.position.set(0, bubbleTexture.height / 2);
+
+        this.bikeArrowList = [this.bikeArrowSprite1, this.bikeArrowSprite2];
+        this.bikeArrowList.forEach(sprite => {
+            sprite.anchor.set(0.5, 1);
+            sprite.visible = false;
+        });
 
         this.bikeBody = this.world.createDynamicBody();
         this.bikeBody.setUserData(this);
@@ -1246,6 +1261,7 @@ export default class GameScene extends Scene {
         this.bikeBody.setDynamic();
         this.resetBikeStatus();
         this.startFloat = true;
+        this.bikeArrowList.forEach(sprite => sprite.visible = false);
         this.bikeFloatFrame = Config.rebornFloatFrame;
     }
 

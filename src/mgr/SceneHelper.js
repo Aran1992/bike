@@ -203,6 +203,7 @@ function createLabel(child, parent) {
     let fill = getValue(data.color, "black");
     let fontSize = getValue(data.fontSize, 10);
     let fontFamily = getValue(data.font);
+    let width = getValue(data.width);
 
     let x = getValue(data.x, 0);
     let y = getValue(data.y, 0);
@@ -250,9 +251,15 @@ function createLabel(child, parent) {
     let textStyle = {
         fill: fill,
         fontSize: fontSize,
+        wordWrap: false,
+        wordWrapWidth: 0
     };
     if (fontFamily) {
         textStyle.fontFamily = fontFamily;
+    }
+    if (width !== undefined) {
+        textStyle.wordWrap = true;
+        textStyle.wordWrapWidth = width;
     }
     let text = new Text(textContent, new TextStyle(textStyle));
 
