@@ -174,7 +174,6 @@ export default class GameScene extends Scene {
         this.startDragBikeBack = true;
         this.rebornDragVelocity = Utils.calcPointDistance(this.bikeBody.getPosition(), this.dragBackPos) / Config.rebornDragDuration / Config.fps;
         this.bikeBubbleSprite.visible = true;
-        this.bikeArrowList.forEach(sprite => sprite.visible = true);
         this.bikeBody.setStatic();
         this.bikeBody.setAngle(0);
         this.bikeSelfContainer.rotation = 0;
@@ -1238,6 +1237,7 @@ export default class GameScene extends Scene {
         this.targetCameraPos = undefined;
         this.startDragBikeBack = false;
         this.startAdjustBikeHeight = true;
+        this.bikeArrowList.forEach(sprite => sprite.visible = true);
         this.ui.rebornPanel.visible = true;
     }
 
