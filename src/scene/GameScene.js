@@ -127,6 +127,8 @@ export default class GameScene extends Scene {
         this.itemUseHistoryDisappearTimer = [];
         this.ui.itemUseHistoryLabel.text = "";
 
+        this.targetCameraPos = undefined;
+
         this.playerName = "{{YourselfName}}";
 
         this.initEnvironment();
