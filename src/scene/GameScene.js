@@ -988,7 +988,7 @@ export default class GameScene extends Scene {
             let item = list[i];
             if (item.getRightBorderX() > viewLeft) {
                 lowestRoadTopY = item.getLowestTopY();
-                for (; i < list.length; i++) {
+                for (i++; i < list.length; i++) {
                     item = list[i];
                     if (item.getLeftBorderX() >= viewRight) {
                         break;
@@ -1522,10 +1522,24 @@ export default class GameScene extends Scene {
     }
 
     getSpriteGameBounds(sprite) {
+        // todo 不知道有没有更严谨的算法
         let bounds = sprite.getBounds();
+        let {scaleX, scaleY} = this.getParentScale(sprite);
+        ["x", "width"].forEach(key => bounds[key] /= scaleX);
+        ["y", "height"].forEach(key => bounds[key] /= scaleY);
         bounds.x -= this.cameraContainer.x;
         bounds.y -= this.cameraContainer.y;
         return bounds;
+    }
+
+    getParentScale(item) {
+        let scaleX = 1, scaleY = 1;
+        while (item.parent) {
+            scaleX *= item.parent.scale.x;
+            scaleY *= item.parent.scale.y;
+            item = item.parent;
+        }
+        return {scaleX, scaleY};
     }
 }
 

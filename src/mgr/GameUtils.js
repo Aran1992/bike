@@ -1,6 +1,8 @@
 import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
 import DataMgr from "./DataMgr";
+import Utils from "./Utils";
+import {resources} from "../libs/pixi-wrapper";
 
 export default class GameUtils {
     static physicsPos2renderPos(pp) {
@@ -61,5 +63,12 @@ export default class GameUtils {
         }
         let config = Config.bikeList.find(bike => bike.id === id);
         return (config[key] || Config.bike[key])[level];
+    }
+
+    static getFrames(jsonPath, animationName) {
+        if (animationName === undefined) {
+            animationName = Utils.keys(resources[jsonPath].data.animations)[0];
+        }
+        return resources[jsonPath].data.animations[animationName].map(texturePath => resources[jsonPath].textures[texturePath]);
     }
 }
