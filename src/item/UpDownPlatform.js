@@ -2,7 +2,6 @@ import {Box, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Config from "../config";
 import EditorItem from "./EditorItem";
-import {Text, TextStyle} from "../libs/pixi-wrapper";
 
 export default class UpDownPlatform extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -43,11 +42,6 @@ export default class UpDownPlatform extends EditorItem {
         this.lowestTopY = bounds.y + bounds.height + this.config.bottomOffset;
         // 平台移动到最高点计算出来的bounds
         this.highestTopY = bounds.y - this.config.topOffset;
-
-        this.sprite.addChild(new Text(JSON.stringify(bounds, undefined, "\t"), new TextStyle({
-            fill: "white",
-            fontSize: 50,
-        })));
     }
 
     update() {

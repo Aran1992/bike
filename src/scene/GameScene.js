@@ -469,6 +469,16 @@ export default class GameScene extends Scene {
                 this.onClickGameContainer();
                 break;
             }
+            case "Space": {
+                if (this.gameStatus === "play") {
+                    this.gameStatus = "end";
+                    this.gameLoopFunc = this.pause.bind(this);
+                } else if (this.gameStatus === "end") {
+                    this.gameStatus = "play";
+                    this.gameLoopFunc = this.play.bind(this);
+                }
+                break;
+            }
         }
     }
 
@@ -783,7 +793,10 @@ export default class GameScene extends Scene {
             this.dragBikeBack();
         }
 
-        this.moveCamera(this.targetCameraPos);
+        if (RunOption.cameraFollowEnemy && this.enemyList[0]) {
+            this.targetCameraPos = this.enemyList[0].bikeBody.getPosition();
+        }
+        this.moveCamera();
 
         this.scrollBg();
 

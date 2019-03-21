@@ -8,5 +8,7 @@ const RunOption = {
     showDeadLine: -1,
     // 是否显示自行车状态（1就显示 为0就不显示）
     showBikeState: 0,
+    // 镜头跟随敌方自行车
+    cameraFollowEnemy: 0,
 };
 export default RunOption;

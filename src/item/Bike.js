@@ -258,16 +258,24 @@ export default class Bike {
         if (this.isDead === false && (this.isGoToJump || this.hasEffect("SpiderWeb"))) {
             if (this.hasEffect("SpiderWeb")) {
                 if (this.spiderWebBreakIntervalFrame <= 0) {
-                    this.jump();
+                    this.isGoToJump = true;
                     this.spiderWebBreakIntervalFrame = Config.enemy.spiderWebBreakIntervalFrame;
                 } else {
                     this.spiderWebBreakIntervalFrame--;
                 }
             } else {
-                this.jump();
+                this.isGoToJump = true;
             }
-            this.isGoToJump = false;
         }
+
+        if (this.isDead === false && !this.isGoToJump && this.bikeBody.getLinearVelocity().y < 0 && !this.hasRoadUnderBike()) {
+            this.isGoToJump = true;
+        }
+
+        if (this.isDead === false && this.isGoToJump) {
+            this.jump();
+        }
+        this.isGoToJump = false;
 
         this.reduceEffect();
         this.jumpExtraCountdown--;
@@ -676,5 +684,23 @@ export default class Bike {
                 }
             }
         }
+    }
+
+    hasRoadUnderBike() {
+        let list = this.gameScene.roadList;
+        let length = list.length;
+        let bikeX = this.bikeOutterContainer.x;
+        let bikeY = this.bikeOutterContainer.y;
+        for (let i = 0; i < length; i++) {
+            let item = list[i];
+            if (item.getLeftBorderX() <= bikeX) {
+                if (item.getRightBorderX() > bikeX && item.getLowestTopY() >= bikeY) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+        return false;
     }
 }
