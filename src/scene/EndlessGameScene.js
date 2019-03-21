@@ -109,9 +109,7 @@ export default class EndlessGameScene extends GameScene {
             data.props.y += offsetY;
             this.createPart(data);
         });
-        this.roadList.sort((a, b) => {
-            return a.getLeftBorderX() - b.getLeftBorderX();
-        });
+        this.roadList.sort((a, b) => a.getLeftBorderX() - b.getLeftBorderX());
     }
 
     dynamicCreateRoad() {

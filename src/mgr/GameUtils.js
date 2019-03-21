@@ -1,7 +1,5 @@
 import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
-import Utils from "./Utils";
-import {resources} from "../libs/pixi-wrapper";
 import DataMgr from "./DataMgr";
 
 export default class GameUtils {
@@ -52,35 +50,6 @@ export default class GameUtils {
         if (propStr) {
             return propStr.split(":")[1];
         }
-    }
-
-    static sortSceneChildrenByX(children) {
-        children.sort((a, b) => {
-            let ax = GameUtils.getSceneChildX(a);
-            let bx = GameUtils.getSceneChildX(b);
-            if (ax < bx) {
-                return -1;
-            } else if (ax > bx) {
-                return 1;
-            } else {
-                return a.compId - b.compId;
-            }
-        });
-    }
-
-    static getSceneChildX(child) {
-        if (GameUtils.getItemType(child) === "Road") {
-            return parseInt(child.props.points.split(",")[0]) + child.props.x;
-        } else {
-            return child.props.x;
-        }
-    }
-
-    static getFrames(jsonPath, animationName) {
-        if (animationName === undefined) {
-            animationName = Utils.keys(resources[jsonPath].data.animations)[0];
-        }
-        return resources[jsonPath].data.animations[animationName].map(texturePath => resources[jsonPath].textures[texturePath]);
     }
 
     static getBikeConfig(key, id, level,) {

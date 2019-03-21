@@ -132,15 +132,7 @@ export default class MapGameScene extends GameScene {
     createMap() {
         let json = JSON.parse(resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
         json.child.forEach(data => this.createPart(data));
-        this.roadList.sort((a, b) => {
-            let ax = a.getLeftBorderX();
-            let bx = b.getLeftBorderX();
-            if (ax < bx) {
-                return -1;
-            } else if (ax > bx) {
-                return 1;
-            }
-        });
+        this.roadList.sort((a, b) => a.getLeftBorderX() - b.getLeftBorderX());
     }
 
     createFinalFlag() {
