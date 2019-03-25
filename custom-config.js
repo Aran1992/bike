@@ -542,9 +542,9 @@ Config.mapList = [
     },
     {
         // 显示给人看的名字
-        showName: "Test007",
+        showName: "Test7",
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test007",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -716,9 +716,9 @@ Config.mapList = [
     },
     {
         // 显示给人看的名字
-        showName: "Test009",
+        showName: "Test9",
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test009",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1088,7 +1088,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 0,
         // 显示给人看的名字
-        showName: "Test1",
+        showName: "Map1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1399,7 +1399,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 10,
         // 显示给人看的名字
-        showName: "Test2",
+        showName: "Map2",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1710,7 +1710,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 50,
         // 显示给人看的名字
-        showName: "Test3",
+        showName: "Map3",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2021,7 +2021,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 100,
         // 显示给人看的名字
-        showName: "Test4",
+        showName: "Map4",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2332,7 +2332,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 150,
         // 显示给人看的名字
-        showName: "Test5",
+        showName: "Map5",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2643,7 +2643,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 200,
         // 显示给人看的名字
-        showName: "Test6",
+        showName: "Map6",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2954,7 +2954,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 250,
         // 显示给人看的名字
-        showName: "Test7",
+        showName: "Map7",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -3265,7 +3265,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 显示给人看的名字
-        showName: "Test8",
+        showName: "Map8",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -3576,7 +3576,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 显示给人看的名字
-        showName: "Test9",
+        showName: "Map9",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -3887,7 +3887,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 显示给人看的名字
-        showName: "Test10",
+        showName: "Map10",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -4198,7 +4198,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 显示给人看的名字
-        showName: "Test11",
+        showName: "Map11",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -4509,7 +4509,7 @@ Config.endlessMode.sceneList = [
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 显示给人看的名字
-        showName: "Test12",
+        showName: "Map12",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
