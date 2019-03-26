@@ -5,8 +5,11 @@ export default class Radio {
         this.root = root;
         this.clickButtonFunc = clickButtonFunc;
         this.button = this.root.children[0];
+        if (buttonDistance === undefined) {
+            buttonDistance = this.button.mywidth;
+        }
         this.buttonList = infoList.map((info, index) => {
-            let button = UIHelper.clone(this.button);
+            let button = UIHelper.uiClone(this.button);
             initItemFunc(button, info, index);
             this.root.addChild(button);
             button.x = index * buttonDistance;
@@ -22,11 +25,11 @@ export default class Radio {
         this.buttonList.forEach((button_, index) => {
             if (button === button_) {
                 this.selectedIndex = index;
-                button_.children[0].visible = false;
-                button_.children[1].visible = true;
+                button_.ui.common.visible = false;
+                button_.ui.selected.visible = true;
             } else {
-                button_.children[0].visible = true;
-                button_.children[1].visible = false;
+                button_.ui.common.visible = true;
+                button_.ui.selected.visible = false;
             }
         });
         this.clickButtonFunc(this.selectedIndex, oldIndex);

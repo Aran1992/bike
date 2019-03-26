@@ -3,6 +3,21 @@ import Config from "../config";
 import Utils from "../mgr/Utils";
 
 export default class UIHelper {
+    static uiClone(displayObject, root) {
+        let displayObject_ = UIHelper.copy(displayObject);
+        if (root === undefined) {
+            root = displayObject_;
+            root.ui = {};
+        }
+        if (displayObject_.uiname) {
+            root.ui[displayObject_.uiname] = displayObject_;
+        }
+        displayObject.children.forEach(child => {
+            displayObject_.addChild(UIHelper.uiClone(child, root));
+        });
+        return displayObject_;
+    }
+
     static clone(displayObject) {
         let displayObject_ = UIHelper.copy(displayObject);
         displayObject.children.forEach(child => {
@@ -12,15 +27,20 @@ export default class UIHelper {
     }
 
     static copy(displayObject) {
+        let item;
         if (displayObject instanceof Text) {
-            return UIHelper.copyText(displayObject);
+            item = UIHelper.copyText(displayObject);
         } else if (displayObject instanceof Sprite) {
-            return UIHelper.copySprite(displayObject);
+            item = UIHelper.copySprite(displayObject);
         } else if (displayObject instanceof NineSlicePlane) {
-            return UIHelper.copyNineSlicePlane(displayObject);
+            item = UIHelper.copyNineSlicePlane(displayObject);
         } else if (displayObject instanceof Container) {
-            return UIHelper.copyContainer(displayObject);
+            item = UIHelper.copyContainer(displayObject);
         }
+        if (displayObject.uiname) {
+            item.uiname = displayObject.uiname;
+        }
+        return item;
     }
 
     static copyContainer(src) {

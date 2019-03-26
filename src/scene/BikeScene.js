@@ -22,13 +22,8 @@ export default class BikeScene extends Scene {
     }
 
     initItem(item) {
-        item.itemRoot = item.children[0];
-        item.selectedImage = item.itemRoot.children[0];
-        item.lostMaskImage = item.itemRoot.children[1];
-        item.fightMaskImage = item.itemRoot.children[2];
-        item.levelText = item.itemRoot.children[3];
-        item.bikeSprite = new BikeSprite(item.itemRoot, 2);
-        item.bikeSprite.setPosition(item.itemRoot.mywidth / 2, item.itemRoot.myheight / 2 + 20);
+        item.bikeSprite = new BikeSprite(item.ui.bikePanel, 2);
+        item.bikeSprite.setPosition(item.ui.bikePanel.mywidth / 2, item.ui.bikePanel.myheight / 2 + 20);
         this.onClick(item, this.onClickItem.bind(this));
     }
 
@@ -38,15 +33,15 @@ export default class BikeScene extends Scene {
         item.bikeSprite.setBikeID(config.id);
         if (this.selectedIndex === index) {
             item.bikeSprite.play();
-            item.selectedImage.visible = true;
+            item.ui.selectedImage.visible = true;
         } else {
             item.bikeSprite.stop();
-            item.selectedImage.visible = false;
+            item.ui.selectedImage.visible = false;
         }
-        item.lostMaskImage.visible = !this.hasOwnedBike(config.id);
-        item.fightMaskImage.visible = DataMgr.get(DataMgr.selectedBike, 0) === config.id;
+        item.ui.lostMaskImage.visible = !this.hasOwnedBike(config.id);
+        item.ui.fightMaskImage.visible = DataMgr.get(DataMgr.selectedBike, 0) === config.id;
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
-        item.levelText.text = level !== undefined ? `LV${level + 1}` : "";
+        item.ui.levelText.text = level !== undefined ? `LV${level + 1}` : "";
     }
 
     onClickReturnButton() {

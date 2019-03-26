@@ -59,6 +59,9 @@ function createSceneChild(child, parent, root) {
         root[data.var] = item;
     }
     child.child.forEach(child => item.addChild(createSceneChild(child, item, root)));
+    if (data.name) {
+        item.uiname = data.name;
+    }
     return item;
 }
 

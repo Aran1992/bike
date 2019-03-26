@@ -48,7 +48,7 @@ export default class ShopScene extends Scene {
     }
 
     initRadioButton(button, info) {
-        button.children[2].text = info;
+        button.ui.label.text = info;
     }
 
     onClickRadio(selectedIndex, lastIndex) {
