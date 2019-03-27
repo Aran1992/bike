@@ -5,6 +5,7 @@ import List from "../ui/List";
 import {Container, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
+import DataMgr from "../mgr/DataMgr";
 
 const BACKGROUNDS = 0;
 const FLOORS = 1;
@@ -81,7 +82,7 @@ export default class HomeScene extends Scene {
         this.on("pointerupoutside", this.onTouchEnd.bind(this));
     }
 
-    onShow(bgID, floorID, spoilsList, petsList) {
+    onShow({bgID, floorID, spoilsList, petsList}) {
         if (bgID === undefined) {
             bgID = 1;
         }
@@ -107,7 +108,7 @@ export default class HomeScene extends Scene {
         this.floorSprite.texture = Texture.from(Config.home.floor[this.floorIndex].path);
 
         this.spoilsContainer.removeChildren();
-        spoilsList.forEach(([id, x, y]) => this.createSpoils(id, x, y));
+        spoilsList.forEach(([itemID, id, x, y]) => this.createSpoils(itemID, id, x, y));
 
         this.petsContainer.children.forEach(child => cancelAnimationFrame(child.animationID));
         this.petsContainer.removeChildren();
@@ -116,9 +117,10 @@ export default class HomeScene extends Scene {
         this.radio.select(BACKGROUNDS);
     }
 
-    createSpoils(id, x, y) {
+    createSpoils(itemID, id, x, y) {
         let config = Config.home.spoils.find(item => item.id === id);
         let sprite = Sprite.from(config.path);
+        sprite.itemID = itemID;
         sprite.anchor.set(0.5, 0.5);
         this.spoilsContainer.addChild(sprite);
         sprite.position.set(x, y);
@@ -131,7 +133,8 @@ export default class HomeScene extends Scene {
 
     createPet(id, pos = randomPos()) {
         let outerContainer = this.petsContainer.addChild(new Container());
-        let innerSprite = outerContainer.addChild(Sprite.from(Config.home.pets.find(item => item.id === id).path));
+        let config = Config.home.pets.find(item => item.id === id);
+        let innerSprite = outerContainer.addChild(Sprite.from(config.path));
         pos.y += innerSprite.texture.height / 2;
         outerContainer.position.set(pos.x, pos.y);
         innerSprite.anchor.set(0.5, 1);
@@ -140,6 +143,7 @@ export default class HomeScene extends Scene {
         removeItemBtn.anchor.set(0.5, 0.5);
         this.onClick(removeItemBtn, this.onClickRemoveItemBtn.bind(this));
         outerContainer.removeItemBtn = removeItemBtn;
+        outerContainer.itemConfig = config;
         let targetPos = randomPos();
         let frame = 0;
         let interval = Config.home.petsJumpInterval * Config.fps;
@@ -147,7 +151,7 @@ export default class HomeScene extends Scene {
             let {x, y, final} = GameUtils.moveToTargetPos(
                 outerContainer.position,
                 targetPos,
-                1
+                Config.home.petsVelocity
             );
             outerContainer.position.set(x, y);
             frame++;
@@ -206,12 +210,18 @@ export default class HomeScene extends Scene {
         switch (this.radio.selectedIndex) {
             case BACKGROUNDS: {
                 this.selectedBgID = Config.home.bg[this.bgIndex].id;
+                let data = DataMgr.get(DataMgr.homeData);
+                data.bgID = this.selectedBgID;
+                DataMgr.set(DataMgr.homeData, data);
                 this.ui.commonItemBtn.visible = false;
                 this.ui.selectedItemBtn.visible = true;
                 break;
             }
             case FLOORS: {
                 this.selectedFloorID = Config.home.floor[this.floorIndex].id;
+                let data = DataMgr.get(DataMgr.homeData);
+                data.floorID = this.selectedFloorID;
+                DataMgr.set(DataMgr.homeData, data);
                 this.ui.commonItemBtn.visible = false;
                 this.ui.selectedItemBtn.visible = true;
                 break;
@@ -337,11 +347,16 @@ export default class HomeScene extends Scene {
             let pos = this.homeInnerContainer.getGlobalPosition();
             let x = event.data.global.x - pos.x;
             let y = event.data.global.y - pos.y;
+            let data = DataMgr.get(DataMgr.homeData);
             if (this.radio.selectedIndex === SPOILS) {
-                this.createSpoils(this.touchingItemID, x, y);
+                data.spoilsLength++;
+                this.createSpoils(data.spoilsLength, this.touchingItemID, x, y);
+                data.spoilsList.push([data.spoilsLength, this.touchingItemID, x, y]);
             } else {
                 this.createPet(this.touchingItemID, {x, y});
+                data.petsList.push(this.touchingItemID);
             }
+            DataMgr.set(DataMgr.homeData, data);
         }
     }
 
@@ -365,6 +380,16 @@ export default class HomeScene extends Scene {
             confirmCallback: () => {
                 let item = button.parent;
                 cancelAnimationFrame(item.animationID);
+                let data = DataMgr.get(DataMgr.homeData);
+                if (item.animationID !== undefined) {
+                    Utils.removeItemFromArray(data.petsList, item.itemConfig.id);
+                } else {
+                    let index = data.spoilsList.findIndex(spoils => spoils[0] === item.itemID);
+                    if (index !== -1) {
+                        data.spoilsList.splice(index, 1);
+                    }
+                }
+                DataMgr.set(DataMgr.homeData, data);
                 item.destroy();
             },
             cancelCallback: () => {

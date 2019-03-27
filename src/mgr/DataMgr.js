@@ -42,6 +42,7 @@ DataMgr.bgmOn = "bgmOn";
 DataMgr.soundOn = "soundOn";
 DataMgr.distanceRecord = "distanceRecord";
 DataMgr.bikeLevelMap = "bikeLevelMap";
+DataMgr.homeData = "homeData";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);
@@ -61,5 +62,14 @@ if (DataMgr.get(DataMgr.nextFreeDrawTime) === undefined) {
 }
 if (DataMgr.get(DataMgr.currentMapScene) === undefined) {
     DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.mapList.length));
+}
+if (DataMgr.get(DataMgr.homeData) === undefined) {
+    DataMgr.set(DataMgr.homeData, {
+        bgID: 1,
+        floorID: 1,
+        spoilsList: [],
+        spoilsLength: 0,
+        petsList: [],
+    });
 }
 export default DataMgr;

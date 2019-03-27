@@ -112,7 +112,7 @@ export default class MainScene extends Scene {
 
     onClickHomeButton() {
         App.hideScene("MainScene");
-        App.showScene("HomeScene");
+        App.showScene("HomeScene", DataMgr.get("homeData"));
     }
 
     onClickShopButton() {

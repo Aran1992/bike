@@ -6842,8 +6842,11 @@ Config.home = {
     petsJumpInterval: 0.2,
     // 宠物跳动旋转角度（单位：角度）
     petsJumpRotation: 30,
+    // 宠物移动的速度（单位：像素）
+    petsVelocity: 1,
     // 删除物件按钮的图片路径
     removeItemButtonImagePath: "myLaya/laya/assets/images/ButtonClose_Gray.png",
+    // 背景相关配置 最少要有一个id为1的
     bg: [
         {
             id: 1,
@@ -6856,6 +6859,7 @@ Config.home = {
             name: "Background 2",
         },
     ],
+    // 地板相关配置 最少要有一个id为1的
     floor: [
         {
             id: 1,
@@ -6868,6 +6872,7 @@ Config.home = {
             name: "Floor 2",
         },
     ],
+    // 战利品板相关配置 最少要有一个id为1的
     spoils: [
         {
             id: 1,
@@ -6885,6 +6890,7 @@ Config.home = {
             name: "Spoils 3",
         },
     ],
+    // 宠物板相关配置 最少要有一个id为1的
     pets: [
         {
             id: 1,
