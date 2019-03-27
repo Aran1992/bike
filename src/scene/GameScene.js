@@ -1231,19 +1231,15 @@ export default class GameScene extends Scene {
     }
 
     dragBikeBack() {
-        let velocity = this.rebornDragVelocity;
-        let targetPos = this.dragBackPos;
-        let curPos = this.bikeBody.getPosition();
-        let radius = Utils.calcRadius(curPos, targetPos);
-        let moveX = velocity * Math.cos(radius);
-        let moveY = velocity * Math.sin(radius);
-        let {value: x, final: fx} = Utils.successive(curPos.x, targetPos.x, moveX);
-        let {value: y, final: fy} = Utils.successive(curPos.y, targetPos.y, moveY);
-        let newPos = Vec2(x, y);
-        this.bikeBody.setPosition(newPos);
+        let {x, y, final} = GameUtils.moveToTargetPos(
+            this.bikeBody.getPosition(),
+            this.dragBackPos,
+            this.rebornDragVelocity
+        );
+        this.bikeBody.setPosition(Vec2(x, y));
         this.targetCameraPos.x += this.moveCameraVelocity.x;
         this.targetCameraPos.y += this.moveCameraVelocity.y;
-        if (fx && fy) {
+        if (final) {
             this.onDragBackEnded();
         }
     }

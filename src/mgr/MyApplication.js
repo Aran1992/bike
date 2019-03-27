@@ -22,6 +22,7 @@ import BikeScene from "../scene/BikeScene";
 import TipScene from "../scene/TipScene";
 import GameResultScene from "../scene/GameResultScene";
 import SystemScene from "../scene/SystemScene";
+import HomeScene from "../scene/HomeScene";
 import UIHelper from "../ui/UIHelper";
 
 export default class MyApplication extends Application {
@@ -50,6 +51,7 @@ export default class MyApplication extends Application {
             "EndlessGameScene": EndlessGameScene,
             "GameOverScene": GameOverScene,
             "PauseScene": PauseScene,
+            "HomeScene": HomeScene,
             "ShopScene": ShopScene,
             "DrawScene": DrawScene,
             "BikeScene": BikeScene,

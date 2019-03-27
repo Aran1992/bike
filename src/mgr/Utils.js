@@ -10,14 +10,10 @@ export default class Utils {
         return angle / 180 * Math.PI;
     }
 
-    static radius2angle(radius) {
-        return radius / Math.PI * 180;
-    }
-
     static createLinearGradientMask(width, height, colorStop) {
         let canvas = document.createElement("canvas");
-        canvas.width = `${width}`;
-        canvas.height = `${height}`;
+        canvas.width = width;
+        canvas.height = height;
         let ctx = canvas.getContext("2d");
         let gradient = ctx.createLinearGradient(0, 0, 0, height);
         colorStop.forEach(({offset, opacity}) => gradient.addColorStop(offset, `rgba(0, 0, 0, ${opacity})`));
@@ -54,7 +50,7 @@ export default class Utils {
         };
     }
 
-    static calcRadius(sp, ep) {
+    static calcRadians(sp, ep) {
         let x = ep.x - sp.x;
         let y = ep.y - sp.y;
         if (x > 0) {
@@ -96,20 +92,10 @@ export default class Utils {
         return arr;
     }
 
-    static entryCount(json) {
-        let count = 0;
-        for (let key in json) {
-            if (json.hasOwnProperty(key)) {
-                count++;
-            }
-        }
-        return count;
-    }
-
     static getTexturePointColor(texture, x, y) {
         let canvas = document.createElement("canvas");
-        canvas.width = `${texture.width}`;
-        canvas.height = `${texture.height}`;
+        canvas.width = texture.width;
+        canvas.height = texture.height;
         let ctx = canvas.getContext("2d");
         ctx.drawImage(texture.baseTexture.source, 0, 0, texture.width, texture.height);
         let data = ctx.getImageData(x, y, 1, 1).data;

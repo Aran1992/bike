@@ -89,7 +89,7 @@ export default class EatableItem extends EditorItem {
 
     moveToPlayer() {
         if (this.gameMgr.gameStatus === "play") {
-            let radius = Utils.calcRadius(this.body.getPosition(), this.gameMgr.bikeBody.getPosition());
+            let radius = Utils.calcRadians(this.body.getPosition(), this.gameMgr.bikeBody.getPosition());
             let velocity = Config.effect.Magnet.velocity * Config.pixel2meter;
             let vx = velocity * Math.cos(radius);
             let vy = velocity * Math.sin(radius);

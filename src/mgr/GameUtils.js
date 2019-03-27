@@ -71,4 +71,13 @@ export default class GameUtils {
         }
         return resources[jsonPath].data.animations[animationName].map(texturePath => resources[jsonPath].textures[texturePath]);
     }
+
+    static moveToTargetPos(src, dst, velocity) {
+        let radians = Utils.calcRadians(src, dst);
+        let moveX = velocity * Math.cos(radians);
+        let moveY = velocity * Math.sin(radians);
+        let {value: x, final: fx} = Utils.successive(src.x, dst.x, moveX);
+        let {value: y, final: fy} = Utils.successive(src.y, dst.y, moveY);
+        return {x, y, final: fx && fy};
+    }
 }

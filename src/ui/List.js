@@ -6,7 +6,6 @@ export default class List {
     constructor({root, initItemFunc, updateItemFunc, count, isStatic, isHorizontal}) {
         this.itemTable = {};
         this.cacheItemList = [];
-        this.count = count;
 
         this.root = root;
         this.root.hitArea = new Rectangle(0, 0, this.root.mywidth, this.root.myheight);
@@ -28,12 +27,17 @@ export default class List {
 
         this.countPerLine = Math.ceil(this.lineLength / this.itemLineLength);
         this.maxOffset = 0;
+        this.setCount(count);
+
+        this.update();
+    }
+
+    setCount(count) {
+        this.count = count;
         this.minOffset = this.viewLength - Math.ceil(this.count / this.countPerLine) * this.itemLength;
         if (this.minOffset > this.maxOffset) {
             this.minOffset = 0;
         }
-
-        this.update();
     }
 
     initDirectionRelatedVariable(isHorizontal) {
@@ -196,5 +200,17 @@ export default class List {
                 this.updateItem(this.itemTable[index], parseInt(index));
             }
         }
+    }
+
+    reset(count) {
+        this.setCount(count);
+        for (let index in this.itemTable) {
+            if (this.itemTable.hasOwnProperty(index)) {
+                this.itemTable[index].visible = false;
+                this.cacheItemList.push(this.itemTable[index]);
+                delete this.itemTable[index];
+            }
+        }
+        this.update();
     }
 }

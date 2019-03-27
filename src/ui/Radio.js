@@ -34,4 +34,8 @@ export default class Radio {
         });
         this.clickButtonFunc(this.selectedIndex, oldIndex);
     }
+
+    select(index) {
+        this.onClickButton(this.buttonList[index]);
+    }
 }

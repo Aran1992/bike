@@ -62,7 +62,7 @@ export default class Road {
             let sprite = new TilingSprite(texture, width, texture.height);
             this.sprite.addChild(sprite);
             sprite.position.set(sp.x, sp.y);
-            sprite.rotation = Utils.calcRadius(sp, ep);
+            sprite.rotation = Utils.calcRadians(sp, ep);
         }
     }
 
@@ -84,7 +84,7 @@ export default class Road {
             let sprite = new Sprite(texture);
             this.sprite.addChild(sprite);
             sprite.position.set(sp.x, sp.y);
-            sprite.rotation = Utils.calcRadius(sp, ep);
+            sprite.rotation = Utils.calcRadians(sp, ep);
         });
     }
 
@@ -124,7 +124,7 @@ export default class Road {
                 if (roadLength <= Config.roadFatalMinLength) {
                     body.createFixture(Edge(Vec2(sp.x, sp.y), Vec2(ep.x, ep.y)), fd);
                 } else {
-                    let radians = Utils.calcRadius(ep, sp);
+                    let radians = Utils.calcRadians(ep, sp);
                     let mp = {
                         x: ep.x + Math.cos(radians) * Config.roadFatalMinLength,
                         y: ep.y + Math.sin(radians) * Config.roadFatalMinLength,
@@ -181,7 +181,7 @@ export default class Road {
             let sp = {x: path[i], y: path[i + 1]};
             let ep = {x: path[i + 2], y: path[i + 3]};
             if (x >= sp.x && x < ep.x) {
-                let radius = Utils.calcRadius(sp, ep);
+                let radius = Utils.calcRadians(sp, ep);
                 return {
                     x: sp.x + (x - sp.x),
                     y: sp.y + (x - sp.x) * Math.tan(radius),

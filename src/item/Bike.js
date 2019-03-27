@@ -368,7 +368,7 @@ export default class Bike {
         let velocity = this.rebornDragVelocity;
         let targetPos = this.dragBackPos;
         let curPos = this.bikeBody.getPosition();
-        let radius = Utils.calcRadius(curPos, targetPos);
+        let radius = Utils.calcRadians(curPos, targetPos);
         let moveX = velocity * Math.cos(radius);
         let moveY = velocity * Math.sin(radius);
         let {value: x, final: fx} = Utils.successive(curPos.x, targetPos.x, moveX);

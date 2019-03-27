@@ -9,13 +9,13 @@ import RunOption from "../../run-option";
 export default class MainScene extends Scene {
     onCreate() {
         [
-            this.ui.homeButton,
             this.ui.rankButton,
         ].forEach(button => this.onClick(button, this.onClickCloseFuncButton.bind(this)));
 
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
         this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
+        this.onClick(this.ui.homeButton, this.onClickHomeButton.bind(this));
         this.onClick(this.ui.shopButton, this.onClickShopButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
@@ -108,6 +108,11 @@ export default class MainScene extends Scene {
             App.hideScene("MainScene");
             App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
         }
+    }
+
+    onClickHomeButton() {
+        App.hideScene("MainScene");
+        App.showScene("HomeScene");
     }
 
     onClickShopButton() {

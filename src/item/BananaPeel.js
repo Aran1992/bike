@@ -34,7 +34,7 @@ function createPhysicalItem(parent, world, data) {
                 let sp = {x: 0, y: 0};
                 let ep = {x: sprite.texture.width / 2 * sprite.scale.x, y: sprite.texture.height / 2 * sprite.scale.y};
                 let radius = Utils.calcPointDistance(sp, ep);
-                let radians = Utils.calcRadius(sp, ep);
+                let radians = Utils.calcRadians(sp, ep);
                 let x = ox + Math.cos(radians) * radius,
                     y = oy + Math.sin(radians) * radius;
                 sprite.position.set(x, y);

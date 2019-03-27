@@ -73,7 +73,7 @@ export default class Road2 {
             let width = Utils.calcPointDistance(sp, ep);
             let sprite = this.container.addChild(new TilingSprite(texture, width, texture.height));
             sprite.position.set(sp.x, sp.y);
-            sprite.rotation = Utils.calcRadius(sp, ep);
+            sprite.rotation = Utils.calcRadians(sp, ep);
         }
     }
 
@@ -128,7 +128,7 @@ export default class Road2 {
             let sp = {x: path[i], y: path[i + 1]};
             let ep = {x: path[i + 2], y: path[i + 3]};
             if (x >= sp.x && x < ep.x) {
-                let radius = Utils.calcRadius(sp, ep);
+                let radius = Utils.calcRadians(sp, ep);
                 return {
                     x: sp.x + (x - sp.x),
                     y: sp.y + (x - sp.x) * Math.tan(radius),
