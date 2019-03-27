@@ -134,10 +134,10 @@ export default class HomeScene extends Scene {
         let innerSprite = outerContainer.addChild(Sprite.from(Config.home.pets.find(item => item.id === id).path));
         pos.y += innerSprite.texture.height / 2;
         outerContainer.position.set(pos.x, pos.y);
-        innerSprite.anchor.set(0.5, 0.5);
+        innerSprite.anchor.set(0.5, 1);
         let removeItemBtn = outerContainer.addChild(Sprite.from(Config.home.removeItemButtonImagePath));
         removeItemBtn.visible = this.ui.endRemoveItemModeBtn.visible;
-        removeItemBtn.anchor.set(0.5, 1);
+        removeItemBtn.anchor.set(0.5, 0.5);
         this.onClick(removeItemBtn, this.onClickRemoveItemBtn.bind(this));
         outerContainer.removeItemBtn = removeItemBtn;
         let targetPos = randomPos();
