@@ -6833,15 +6833,15 @@ Config.rebornPosOffsetHeight = -100;
 // 家园相关配置
 Config.home = {
     // 地板距离顶部的距离（单位：像素）
-    floorStartY: 1024,
+    floorStartY: 128,
     // 家园的宽度（单位：像素）
-    homeWidth: 2048,
+    homeWidth: 720,
     // 家园的高度（单位：像素）
-    homeHeight: 2048,
+    homeHeight: 1500,
     // 宠物跳动时间间隔（单位：秒）
-    petsJumpInterval: 0.2,
+    petsJumpInterval: 2,
     // 宠物跳动旋转角度（单位：角度）
-    petsJumpRotation: 30,
+    petsJumpRotation: 5,
     // 宠物移动的速度（单位：像素）
     petsVelocity: 1,
     // 删除物件按钮的图片路径
@@ -6850,20 +6850,50 @@ Config.home = {
     bg: [
         {
             id: 1,
-            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground01.png",
+            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             name: "Background 1",
         },
         {
             id: 2,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
+            path: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             name: "Background 2",
+        },
+        {
+            id: 3,
+            path: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
+            name: "Background 3",
+        },
+        {
+            id: 4,
+            path: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
+            name: "Background 4",
+        },
+        {
+            id: 5,
+            path: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
+            name: "Background 5",
+        },
+        {
+            id: 6,
+            path: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
+            name: "Background 6",
+        },
+        {
+            id: 7,
+            path: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+            name: "Background 7",
+        },
+        {
+            id: 8,
+            path: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+            name: "Background 8",
         },
     ],
     // 地板相关配置 最少要有一个id为1的
     floor: [
         {
             id: 1,
-            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground03.png",
+            path: "images/home/floor/floor001.jpg",
             name: "Floor 1",
         },
         {
@@ -6871,36 +6901,141 @@ Config.home = {
             path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
             name: "Floor 2",
         },
+        {
+            id: 3,
+            path: "images/home/floor/floor001.jpg",
+            name: "Floor 3",
+        },
+        {
+            id: 4,
+            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+            name: "Floor 4",
+        },
+        {
+            id: 5,
+            path: "images/home/floor/floor001.jpg",
+            name: "Floor 5",
+        },
+        {
+            id: 6,
+            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+            name: "Floor 6",
+        },
+        {
+            id: 7,
+            path: "images/home/floor/floor001.jpg",
+            name: "Floor 7",
+        },
+        {
+            id: 8,
+            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+            name: "Floor 8",
+        },
     ],
     // 战利品板相关配置 最少要有一个id为1的
     spoils: [
         {
             id: 1,
-            path: "images/map/DX2_Aries/TextureDX2_AriesForeground.png",
+            path: "images/home/item/decoDX2_Aquarius-101.png",
             name: "Spoils 1",
         },
         {
             id: 2,
-            path: "images/map/DX2_Capricorn/TextureDX2_CapricornForeground.png",
+            path: "images/home/item/decoDX2_Cancer-101.png",
             name: "Spoils 2",
         },
         {
             id: 3,
-            path: "images/map/DX2_Gemini/TextureDX2_GeminiForeground.png",
+            path: "images/home/item/decoDX2_Cancer-103.png",
             name: "Spoils 3",
+        },
+        {
+            id: 4,
+            path: "images/home/item/decoDX2_Capricorn-101.png",
+            name: "Spoils 4",
+        },
+        {
+            id: 5,
+            path: "images/home/item/decoDX2_Capricorn-102.png",
+            name: "Spoils 5",
+        },
+        {
+            id: 6,
+            path: "images/home/item/decoDX2_Gemini-101.png",
+            name: "Spoils 6",
+        },
+        {
+            id: 7,
+            path: "images/home/item/decoDX2_Leo-102.png",
+            name: "Spoils 7",
+        },
+        {
+            id: 8,
+            path: "images/home/item/decoDX2_Gemini-101",
+            name: "Spoils 8",
+        },
+        {
+            id: 9,
+            path: "images/home/item/decoDX2_Leo-103.png",
+            name: "Spoils 9",
+        },
+        {
+            id: 10,
+            path: "images/home/item/decoDX2_Leo-104.png",
+            name: "Spoils 10",
+        },
+        {
+            id: 11,
+            path: "images/home/item/decoDX2_Leo-105.png",
+            name: "Spoils 11",
+        },
+        {
+            id: 12,
+            path: "images/home/item/decoDX2_Libra-101.png",
+            name: "Spoils 12",
         },
     ],
     // 宠物板相关配置 最少要有一个id为1的
     pets: [
         {
             id: 1,
-            path: "images/map/DX2_Aquarius/TextureDX2_AquariusForeground.png",
+            path: "images/home/item/decoDX2_Aquarius-1.png",
             name: "Pet 1",
         },
         {
             id: 2,
-            path: "images/map/DX2_Cancer/TextureDX2_CancerForeground.png",
+            path: "images/home/item/decoDX2_Aquarius-3.png",
             name: "Pet 2",
+        },
+        {
+            id: 3,
+            path: "images/home/item/decoDX2_Aries-1.png",
+            name: "Pet 3",
+        },
+        {
+            id: 4,
+            path: "images/home/item/decoDX2_Cancer-1.png",
+            name: "Pet 4",
+        },
+        {
+            id: 5,
+            path: "images/home/item/decoDX2_Capricorn-1.png",
+            name: "Pet 5",
+        },
+        {
+            id: 6,
+            path: "images/home/item/decoDX2_Gemini-1.png",
+            name: "Pet 6",
+        },
+        {
+            id: 7,
+            path: "images/home/item/decoDX2_Gemini-2.png",
+            name: "Pet 7",
+        },
+        {
+            id: 8,
+            path: "images/home/item/decoDX2_Leo-1.png",
+            name: "Pet 8",
         },
     ]
 };
