@@ -25,12 +25,14 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.showUIBtn, this.onClickShowUIButton.bind(this));
         this.onClick(this.ui.startRemoveItemModeBtn, this.onClickStartRemoveItemModeButton.bind(this));
         this.onClick(this.ui.endRemoveItemModeBtn, this.onClickEndRemoveItemModeButton.bind(this));
+        this.onClick(this.ui.removeAllItemBtn, this.onClickRemoveAllItemButton.bind(this));
         this.onClick(this.ui.lastBtn, () => this.onClickToggleButton(-1));
         this.onClick(this.ui.nextBtn, () => this.onClickToggleButton(1));
         this.onClick(this.ui.commonItemBtn, this.onClickCommonItemBtn.bind(this));
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
+        this.ui.removeAllItemBtn.visible = false;
 
         this.radio = new Radio({
             root: this.ui.radio,
@@ -416,6 +418,7 @@ export default class HomeScene extends Scene {
         this.petsContainer.children.forEach(child => child.removeItemBtn.visible = true);
         this.ui.startRemoveItemModeBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = true;
+        this.ui.removeAllItemBtn.visible = true;
     }
 
     onClickEndRemoveItemModeButton() {
@@ -423,6 +426,7 @@ export default class HomeScene extends Scene {
         this.petsContainer.children.forEach(child => child.removeItemBtn.visible = false);
         this.ui.startRemoveItemModeBtn.visible = true;
         this.ui.endRemoveItemModeBtn.visible = false;
+        this.ui.removeAllItemBtn.visible = false;
     }
 
     onClickRemoveItemBtn(button) {
@@ -442,6 +446,30 @@ export default class HomeScene extends Scene {
                 }
                 DataMgr.set(DataMgr.homeData, data);
                 item.destroy();
+            },
+            cancelCallback: () => {
+            }
+        });
+    }
+
+    onClickRemoveAllItemButton() {
+        App.showScene("TipScene", {
+            tip: "Are you sure you want to delete all items?",
+            confirmCallback: () => {
+                App.showScene("TipScene", {
+                    tip: "Are you really sure you want to DELETE ALL ITEMS?",
+                    confirmCallback: () => {
+                        this.spoilsContainer.removeChildren();
+                        this.petsContainer.children.forEach(item => cancelAnimationFrame(item.animationID));
+                        this.petsContainer.removeChildren();
+                        let data = DataMgr.get(DataMgr.homeData);
+                        data.spoilsList = [];
+                        data.petsList = [];
+                        DataMgr.set(DataMgr.homeData, data);
+                    },
+                    cancelCallback: () => {
+                    }
+                });
             },
             cancelCallback: () => {
             }
