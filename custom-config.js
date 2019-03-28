@@ -6838,12 +6838,12 @@ Config.home = {
     homeWidth: 720,
     // 家园的高度（单位：像素）
     homeHeight: 1500,
-    // 宠物跳动时间间隔（单位：秒）
-    petsJumpInterval: 2,
-    // 宠物跳动旋转角度（单位：角度）
-    petsJumpRotation: 5,
-    // 宠物移动的速度（单位：像素）
-    petsVelocity: 1,
+    // 默认宠物跳动时间间隔（单位：秒）
+    defaultPetsJumpInterval: 2,
+    // 默认宠物跳动旋转角度（单位：角度）
+    defaultPetsJumpRotation: 5,
+    // 默认宠物移动的速度（单位：像素）
+    defaultPetsVelocity: 1,
     // 删除物件按钮的图片路径
     removeItemButtonImagePath: "myLaya/laya/assets/images/ButtonClose_Gray.png",
     // 场景物件默认缩放
@@ -7009,6 +7009,12 @@ Config.home = {
             id: 1,
             path: "images/home/item/decoDX2_Aquarius-1.png",
             name: "Pet 1",
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 30,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 5,
         },
         {
             id: 2,

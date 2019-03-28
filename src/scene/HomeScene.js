@@ -18,6 +18,10 @@ function randomPos() {
     return {x, y};
 }
 
+function get(v, dv) {
+    return v === undefined ? dv : v;
+}
+
 export default class HomeScene extends Scene {
     onCreate() {
         this.onClick(this.ui.returnBtn, HomeScene.onClickReturnButton);
@@ -152,16 +156,16 @@ export default class HomeScene extends Scene {
         outerContainer.itemConfig = config;
         let targetPos = randomPos();
         let frame = 0;
-        let interval = Config.home.petsJumpInterval * Config.fps;
+        let interval = get(config.petsJumpInterval, Config.home.defaultPetsJumpInterval) * Config.fps;
         let handle = () => {
             let {x, y, final} = GameUtils.moveToTargetPos(
                 outerContainer.position,
                 targetPos,
-                Config.home.petsVelocity
+                get(config.petsVelocity, Config.home.defaultPetsVelocity)
             );
             outerContainer.position.set(x, y);
             frame++;
-            innerSprite.rotation = Utils.angle2radius((Math.floor(frame / interval) % 2 === 0 ? 1 : -1) * Config.home.petsJumpRotation);
+            innerSprite.rotation = Utils.angle2radius((Math.floor(frame / interval) % 2 === 0 ? 1 : -1) * get(config.petsJumpRotation, Config.home.defaultPetsJumpRotation));
             if (final) {
                 targetPos = randomPos();
             }
