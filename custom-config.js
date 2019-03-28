@@ -6846,12 +6846,18 @@ Config.home = {
     petsVelocity: 1,
     // 删除物件按钮的图片路径
     removeItemButtonImagePath: "myLaya/laya/assets/images/ButtonClose_Gray.png",
+    // 场景物件默认缩放
+    defaultSceneItemScale: 1,
+    // 物件图标默认缩放
+    defaultIconItemScale: 0.2,
     // 背景相关配置 最少要有一个id为1的
     bg: [
         {
             id: 1,
             path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             name: "Background 1",
+            itemScale: 1,
+            iconScale: 0.1,
         },
         {
             id: 2,
@@ -6971,7 +6977,7 @@ Config.home = {
         },
         {
             id: 8,
-            path: "images/home/item/decoDX2_Gemini-101",
+            path: "images/home/item/decoDX2_Gemini-101.png",
             name: "Spoils 8",
         },
         {

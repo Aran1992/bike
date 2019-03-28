@@ -27,17 +27,9 @@ export default class List {
 
         this.countPerLine = Math.ceil(this.lineLength / this.itemLineLength);
         this.maxOffset = 0;
-        this.setCount(count);
+        this.setItemCount(count);
 
         this.update();
-    }
-
-    setCount(count) {
-        this.count = count;
-        this.minOffset = this.viewLength - Math.ceil(this.count / this.countPerLine) * this.itemLength;
-        if (this.minOffset > this.maxOffset) {
-            this.minOffset = 0;
-        }
     }
 
     initDirectionRelatedVariable(isHorizontal) {
@@ -160,14 +152,14 @@ export default class List {
         if (startLine < 0) {
             startLine = 0;
         }
-        let maxLine = Math.ceil(this.count / this.countPerLine);
+        let maxLine = Math.ceil(this.itemCount / this.countPerLine);
         if (endLine > maxLine - 1) {
             endLine = maxLine - 1;
         }
         let start = startLine * this.countPerLine;
         let end = (endLine + 1) * this.countPerLine - 1;
-        if (end >= this.count) {
-            end = this.count - 1;
+        if (end >= this.itemCount) {
+            end = this.itemCount - 1;
         }
         return {start, end};
     }
@@ -203,7 +195,8 @@ export default class List {
     }
 
     reset(count) {
-        this.setCount(count);
+        this.container[this.moveAxis] = 0;
+        this.setItemCount(count);
         for (let index in this.itemTable) {
             if (this.itemTable.hasOwnProperty(index)) {
                 this.itemTable[index].visible = false;
@@ -212,5 +205,30 @@ export default class List {
             }
         }
         this.update();
+    }
+
+    getIndex() {
+        return -Math.floor(this.container[this.moveAxis] / this.itemLength);
+    }
+
+    setIndex(index) {
+        this.container[this.moveAxis] = -this.itemLength * index;
+        this.update();
+    }
+
+    getItemCount() {
+        return this.itemCount;
+    }
+
+    setItemCount(count) {
+        this.itemCount = count;
+        this.minOffset = this.viewLength - Math.ceil(this.itemCount / this.countPerLine) * this.itemLength;
+        if (this.minOffset > this.maxOffset) {
+            this.minOffset = 0;
+        }
+    }
+
+    getViewLineCount() {
+        return Math.floor(this.viewLength / this.itemLength);
     }
 }

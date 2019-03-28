@@ -2,7 +2,7 @@ import Config from "../config";
 import Scene from "./Scene";
 import Radio from "../ui/Radio";
 import List from "../ui/List";
-import {Container, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
+import {Container, Graphics, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
@@ -32,18 +32,6 @@ export default class HomeScene extends Scene {
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
 
-        this.uiList = [
-            this.ui.returnBtn,
-            this.ui.hideUIBtn,
-            this.ui.startRemoveItemModeBtn,
-            this.ui.endRemoveItemModeBtn,
-            this.ui.radio,
-            this.ui.lastBtn,
-            this.ui.nextBtn,
-            this.ui.itemList,
-            this.ui.selectItemPanel,
-        ];
-
         this.radio = new Radio({
             root: this.ui.radio,
             initItemFunc: HomeScene.initRadioButton,
@@ -60,7 +48,13 @@ export default class HomeScene extends Scene {
             isStatic: true,
         });
 
-        this.homeContainer = this.addChildAt(new Container(), 0);
+        this.homeContainer = this.ui.homeContainer;
+        this.homeContainerPos = this.homeContainer.getGlobalPosition();
+        this.homeContainerMask = new Graphics()
+            .beginFill()
+            .drawRect(this.homeContainerPos.x, this.homeContainerPos.y, this.homeContainer.mywidth, this.homeContainer.myheight)
+            .endFill();
+        this.homeContainer.mask = this.homeContainerMask;
         this.homeInnerContainer = this.homeContainer.addChild(new Container());
         this.bgSprite = this.homeInnerContainer.addChild(new Sprite());
         this.floorSprite = this.homeInnerContainer.addChild(new Sprite());
@@ -68,14 +62,14 @@ export default class HomeScene extends Scene {
         this.spoilsContainer = this.homeInnerContainer.addChild(new Container());
         this.petsContainer = this.homeInnerContainer.addChild(new Container());
 
-        this.homeMinX = App.sceneWidth - Config.home.homeWidth;
+        this.homeMinX = this.homeContainer.mywidth - Config.home.homeWidth;
         this.homeMaxX = 0;
-        this.homeMinY = App.sceneHeight - Config.home.homeHeight;
+        this.homeMinY = this.homeContainer.myheight - Config.home.homeHeight;
         this.homeMaxY = 0;
 
         this.homeContainer.buttonMode = true;
         this.homeContainer.interactive = true;
-        this.homeContainer.hitArea = new Rectangle(0, 0, Config.home.homeWidth, Config.home.homeHeight);
+        this.homeContainer.hitArea = new Rectangle(0, 0, this.homeContainer.mywidth, this.homeContainer.myheight);
         this.homeContainer.on("pointerdown", this.onTouchHomeStart.bind(this));
         this.on("pointermove", this.onTouchMove.bind(this));
         this.on("pointerup", this.onTouchEnd.bind(this));
@@ -122,6 +116,8 @@ export default class HomeScene extends Scene {
         let sprite = Sprite.from(config.path);
         sprite.itemID = itemID;
         sprite.anchor.set(0.5, 0.5);
+        let scale = config.itemScale || Config.home.defaultSceneItemScale;
+        sprite.scale.set(scale, scale);
         this.spoilsContainer.addChild(sprite);
         sprite.position.set(x, y);
         let removeItemBtn = sprite.addChild(Sprite.from(Config.home.removeItemButtonImagePath));
@@ -138,6 +134,8 @@ export default class HomeScene extends Scene {
         pos.y += innerSprite.texture.height / 2;
         outerContainer.position.set(pos.x, pos.y);
         innerSprite.anchor.set(0.5, 1);
+        let scale = config.itemScale || Config.home.defaultSceneItemScale;
+        innerSprite.scale.set(scale, scale);
         let removeItemBtn = outerContainer.addChild(Sprite.from(Config.home.removeItemButtonImagePath));
         removeItemBtn.visible = this.ui.endRemoveItemModeBtn.visible;
         removeItemBtn.anchor.set(0.5, 0.5);
@@ -170,37 +168,63 @@ export default class HomeScene extends Scene {
     }
 
     onClickHideUIButton() {
-        this.uiList.forEach(item => item.visible = false);
+        this.ui.uiContainer.visible = false;
         this.ui.showUIBtn.visible = true;
+        this.homeContainer.position.set(0, 0);
+        this.homeContainer.mask = undefined;
     }
 
     onClickShowUIButton() {
-        this.uiList.forEach(item => item.visible = true);
+        this.ui.uiContainer.visible = true;
         this.ui.showUIBtn.visible = false;
+        this.homeContainer.position.set(this.homeContainerPos.x, this.homeContainerPos.y);
+        this.homeContainer.maks = this.homeContainerMask;
     }
 
     onClickToggleButton(offset) {
         switch (this.radio.selectedIndex) {
             case BACKGROUNDS: {
-                let config = Config.home.bg[this.bgIndex + offset];
-                if (config) {
-                    this.bgIndex += offset;
-                    this.bgSprite.texture = Texture.from(config.path);
-                    this.ui.selectItemName.text = config.name;
-                    this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
-                    this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
+                let index = this.bgIndex + offset;
+                if (index < 0) {
+                    index = Config.home.bg.length - 1;
+                } else if (index >= Config.home.bg.length) {
+                    index = 0;
                 }
+                let config = Config.home.bg[index];
+                this.bgIndex = index;
+                this.bgSprite.texture = Texture.from(config.path);
+                this.ui.selectItemName.text = config.name;
+                this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
+                this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
                 break;
             }
             case FLOORS: {
-                let config = Config.home.floor[this.floorIndex + offset];
-                if (config) {
-                    this.floorIndex += offset;
-                    this.floorSprite.texture = Texture.from(config.path);
-                    this.ui.selectItemName.text = config.name;
-                    this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
-                    this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
+                let index = this.floorIndex + offset;
+                if (index < 0) {
+                    index = Config.home.floor.length - 1;
+                } else if (index >= Config.home.floor.length) {
+                    index = 0;
                 }
+                let config = Config.home.floor[index];
+                this.floorIndex = index;
+                this.floorSprite.texture = Texture.from(config.path);
+                this.ui.selectItemName.text = config.name;
+                this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
+                this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
+                break;
+            }
+            case SPOILS:
+            case PETS: {
+                let viewLineCount = this.itemList.getViewLineCount();
+                let itemCount = this.itemList.getItemCount();
+                let index = this.itemList.getIndex() + viewLineCount * offset;
+                if (index < 0) {
+                    let pages = Math.ceil(itemCount / viewLineCount);
+                    index = (pages - 1) * viewLineCount;
+                } else if (index >= itemCount) {
+                    index = 0;
+                }
+                this.itemList.setIndex(index);
                 break;
             }
         }
@@ -291,7 +315,6 @@ export default class HomeScene extends Scene {
         let sprite = item.ui.icon.children[0];
         sprite.anchor.set(0.5, 0.5);
         sprite.position.set(item.ui.icon.mywidth / 2, item.ui.icon.myheight / 2);
-        sprite.scale.set(0.25, 0.25);
 
         item.buttonMode = true;
         item.interactive = true;
@@ -302,6 +325,8 @@ export default class HomeScene extends Scene {
         let type = this.radio.selectedIndex === SPOILS ? "spoils" : "pets";
         let config = Config.home[type][index];
         item.ui.icon.children[0].texture = Texture.from(config.path);
+        let scale = config.iconScale || Config.home.defaultIconItemScale;
+        item.ui.icon.children[0].scale.set(scale, scale);
         item.itemConfig = config;
     }
 
@@ -315,6 +340,8 @@ export default class HomeScene extends Scene {
         sprite.texture = Texture.from(item.itemConfig.path);
         sprite.anchor.set(0.5, 0.5);
         sprite.position.set(event.data.global.x, event.data.global.y);
+        let scale = item.itemConfig.itemScale || Config.home.defaultSceneItemScale;
+        sprite.scale.set(scale, scale);
         this.touchingSprite = sprite;
         this.touchingItemID = item.itemConfig.id;
     }
@@ -344,19 +371,27 @@ export default class HomeScene extends Scene {
         } else if (this.touchingSprite) {
             this.touchingSprite.destroy();
             this.touchingSprite = undefined;
-            let pos = this.homeInnerContainer.getGlobalPosition();
-            let x = event.data.global.x - pos.x;
-            let y = event.data.global.y - pos.y;
-            let data = DataMgr.get(DataMgr.homeData);
-            if (this.radio.selectedIndex === SPOILS) {
-                data.spoilsLength++;
-                this.createSpoils(data.spoilsLength, this.touchingItemID, x, y);
-                data.spoilsList.push([data.spoilsLength, this.touchingItemID, x, y]);
-            } else {
-                this.createPet(this.touchingItemID, {x, y});
-                data.petsList.push(this.touchingItemID);
+            let pos = this.homeContainer.getGlobalPosition();
+            if (Utils.isPointInRect(event.data.global, {
+                x: pos.x,
+                y: pos.y,
+                width: this.homeContainer.mywidth,
+                height: this.homeContainer.myheight
+            })) {
+                let pos = this.homeInnerContainer.getGlobalPosition();
+                let x = event.data.global.x - pos.x;
+                let y = event.data.global.y - pos.y;
+                let data = DataMgr.get(DataMgr.homeData);
+                if (this.radio.selectedIndex === SPOILS) {
+                    data.spoilsLength++;
+                    this.createSpoils(data.spoilsLength, this.touchingItemID, x, y);
+                    data.spoilsList.push([data.spoilsLength, this.touchingItemID, x, y]);
+                } else {
+                    this.createPet(this.touchingItemID, {x, y});
+                    data.petsList.push(this.touchingItemID);
+                }
+                DataMgr.set(DataMgr.homeData, data);
             }
-            DataMgr.set(DataMgr.homeData, data);
         }
     }
 
