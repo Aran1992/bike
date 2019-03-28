@@ -6856,7 +6856,7 @@ Config.home = {
             id: 1,
             path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             name: "Background 1",
-            itemScale: 1,
+            itemScale: 2,
             iconScale: 0.1,
         },
         {
@@ -6901,6 +6901,8 @@ Config.home = {
             id: 1,
             path: "images/home/floor/floor001.jpg",
             name: "Floor 1",
+            itemScale: 2,
+            iconScale: 0.1,
         },
         {
             id: 2,

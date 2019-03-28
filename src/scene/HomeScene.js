@@ -95,11 +95,17 @@ export default class HomeScene extends Scene {
         }
         this.selectedBgID = bgID;
         this.bgIndex = Config.home.bg.findIndex(item => item.id === bgID);
-        this.bgSprite.texture = Texture.from(Config.home.bg[this.bgIndex].path);
+        let bgConfig = Config.home.bg[this.bgIndex];
+        this.bgSprite.texture = Texture.from(bgConfig.path);
+        let bgScale = bgConfig.itemScale || Config.home.defaultSceneItemScale;
+        this.bgSprite.scale.set(bgScale, bgScale);
 
         this.selectedFloorID = floorID;
         this.floorIndex = Config.home.floor.findIndex(item => item.id === floorID);
-        this.floorSprite.texture = Texture.from(Config.home.floor[this.floorIndex].path);
+        let floorConfig = Config.home.floor[this.floorIndex];
+        this.floorSprite.texture = Texture.from(floorConfig.path);
+        let floorScale = floorConfig.itemScale || Config.home.defaultSceneItemScale;
+        this.floorSprite.scale.set(floorScale, floorScale);
 
         this.spoilsContainer.removeChildren();
         spoilsList.forEach(([itemID, id, x, y]) => this.createSpoils(itemID, id, x, y));
@@ -193,6 +199,8 @@ export default class HomeScene extends Scene {
                 let config = Config.home.bg[index];
                 this.bgIndex = index;
                 this.bgSprite.texture = Texture.from(config.path);
+                let scale = config.itemScale || Config.home.defaultSceneItemScale;
+                this.bgSprite.scale.set(scale, scale);
                 this.ui.selectItemName.text = config.name;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
@@ -208,6 +216,8 @@ export default class HomeScene extends Scene {
                 let config = Config.home.floor[index];
                 this.floorIndex = index;
                 this.floorSprite.texture = Texture.from(config.path);
+                let scale = config.itemScale || Config.home.defaultSceneItemScale;
+                this.floorSprite.scale.set(scale, scale);
                 this.ui.selectItemName.text = config.name;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
@@ -262,13 +272,19 @@ export default class HomeScene extends Scene {
             case BACKGROUNDS: {
                 this.ui.selectItemPanel.visible = false;
                 this.bgIndex = Config.home.bg.findIndex(item => item.id === this.selectedBgID);
-                this.bgSprite.texture = Texture.from(Config.home.bg[this.bgIndex].path);
+                let config = Config.home.bg[this.bgIndex];
+                this.bgSprite.texture = Texture.from(config.path);
+                let scale = config.itemScale || Config.home.defaultSceneItemScale;
+                this.bgSprite.scale.set(scale, scale);
                 break;
             }
             case FLOORS: {
                 this.ui.selectItemPanel.visible = false;
                 this.floorIndex = Config.home.floor.findIndex(item => item.id === this.selectedFloorID);
-                this.floorSprite.texture = Texture.from(Config.home.floor[this.floorIndex].path);
+                let config = Config.home.floor[this.floorIndex];
+                this.floorSprite.texture = Texture.from(config.path);
+                let scale = config.itemScale || Config.home.defaultSceneItemScale;
+                this.floorSprite.scale.set(scale, scale);
                 break;
             }
             case SPOILS:
