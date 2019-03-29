@@ -72,6 +72,9 @@ export default class HomeScene extends Scene {
         this.homeMinY = this.homeContainer.myheight - Config.home.homeHeight;
         this.homeMaxY = 0;
 
+        this.moveX = 0;
+        this.moveY = 0;
+
         this.homeContainer.buttonMode = true;
         this.homeContainer.interactive = true;
         this.homeContainer.hitArea = new Rectangle(0, 0, this.homeContainer.mywidth, this.homeContainer.myheight);
@@ -373,21 +376,41 @@ export default class HomeScene extends Scene {
     }
 
     onTouchMove(event) {
+        let tx = event.data.global.x;
+        let ty = event.data.global.y;
         if (this.touching) {
-            let moveX = event.data.global.x - this.lastTouchPosition.x;
+            let moveX = tx - this.lastTouchPosition.x;
             let newX = this.homeInnerContainer.x + moveX;
             if (newX >= this.homeMinX && newX < this.homeMaxX) {
                 this.homeInnerContainer.x = newX;
             }
-            let moveY = event.data.global.y - this.lastTouchPosition.y;
+            let moveY = ty - this.lastTouchPosition.y;
             let newY = this.homeInnerContainer.y + moveY;
             if (newY >= this.homeMinY && newY < this.homeMaxY) {
                 this.homeInnerContainer.y = newY;
             }
-            this.lastTouchPosition.x = event.data.global.x;
-            this.lastTouchPosition.y = event.data.global.y;
+            this.lastTouchPosition.x = tx;
+            this.lastTouchPosition.y = ty;
         } else if (this.touchingSprite) {
-            this.touchingSprite.position.set(event.data.global.x, event.data.global.y);
+            this.touchingSprite.position.set(tx, ty);
+            if (tx < this.homeContainer.x + Config.home.edgeMoveOffset.x
+                && tx > this.homeContainer.x) {
+                this.moveX = Config.home.edgeMoveVelocity.x;
+            } else if (tx > this.homeContainer.x + this.homeContainer.mywidth - Config.home.edgeMoveOffset.x
+                && tx < this.homeContainer.x + this.homeContainer.mywidth) {
+                this.moveX = -Config.home.edgeMoveVelocity.x;
+            } else {
+                this.moveX = 0;
+            }
+            if (ty < this.homeContainer.y + Config.home.edgeMoveOffset.y
+                && ty > this.homeContainer.y) {
+                this.moveY = Config.home.edgeMoveVelocity.y;
+            } else if (ty > this.homeContainer.y + this.homeContainer.myheight - Config.home.edgeMoveOffset.y
+                && ty < this.homeContainer.y + this.homeContainer.myheight) {
+                this.moveY = -Config.home.edgeMoveVelocity.y;
+            } else {
+                this.moveY = 0;
+            }
         }
     }
 
@@ -420,6 +443,8 @@ export default class HomeScene extends Scene {
                 DataMgr.set(DataMgr.homeData, data);
             }
         }
+        this.moveX = 0;
+        this.moveY = 0;
     }
 
     onClickStartRemoveItemModeButton() {
@@ -493,6 +518,14 @@ export default class HomeScene extends Scene {
     gameLoop() {
         this.itemContainer.children.forEach(item => item.onEachFrame && item.onEachFrame());
         this.sortItems();
+        let newX = this.homeInnerContainer.x + this.moveX;
+        if (newX >= this.homeMinX && newX < this.homeMaxX) {
+            this.homeInnerContainer.x = newX;
+        }
+        let newY = this.homeInnerContainer.y + this.moveY;
+        if (newY >= this.homeMinY && newY < this.homeMaxY) {
+            this.homeInnerContainer.y = newY;
+        }
     }
 }
 

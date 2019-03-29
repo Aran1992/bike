@@ -6850,6 +6850,16 @@ Config.home = {
     defaultSceneItemScale: 1,
     // 物件图标默认缩放
     defaultIconItemScale: 0.2,
+    // 边缘移动的一个偏差 偏差越大靠近边缘越容易进行移动
+    edgeMoveOffset: {
+        x: 50,
+        y: 50
+    },
+    // 边缘移动的速度
+    edgeMoveVelocity: {
+        x: 5,
+        y: 5
+    },
     // 背景相关配置 最少要有一个id为1的
     bg: [
         {
