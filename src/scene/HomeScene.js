@@ -184,13 +184,18 @@ export default class HomeScene extends Scene {
         this.ui.showUIBtn.visible = true;
         this.homeContainer.position.set(0, 0);
         this.homeContainer.mask = undefined;
+        this.homeMinX = App.sceneWidth - Config.home.homeWidth;
+        this.homeMinY = App.sceneHeight - Config.home.homeHeight;
+        this.homeInnerContainer.position.set(0, 0);
     }
 
     onClickShowUIButton() {
         this.ui.uiContainer.visible = true;
         this.ui.showUIBtn.visible = false;
         this.homeContainer.position.set(this.homeContainerPos.x, this.homeContainerPos.y);
-        this.homeContainer.maks = this.homeContainerMask;
+        this.homeContainer.mask = this.homeContainerMask;
+        this.homeMinX = this.homeContainer.mywidth - Config.home.homeWidth;
+        this.homeMinY = this.homeContainer.myheight - Config.home.homeHeight;
     }
 
     onClickToggleButton(offset) {
