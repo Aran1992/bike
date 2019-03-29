@@ -6863,7 +6863,6 @@ Config.home = {
             id: 2,
             path: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             name: "Background 2",
-            iconScale: 0.1,
             // 场景物件缩放
             itemScale: 1.41,
         },
@@ -6914,45 +6913,17 @@ Config.home = {
     floor: [
         {
             id: 1,
-            path: "images/home/floor/floor001.jpg",
+            path: "images/home/floor/floor001.png",
             name: "Floor 1",
             // 场景物件缩放
-            itemScale: 2.54,
+            itemScale: 1,
         },
         {
             id: 2,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+            path: "images/home/floor/floor002.png",
             name: "Floor 2",
-        },
-        {
-            id: 3,
-            path: "images/home/floor/floor001.jpg",
-            name: "Floor 3",
-        },
-        {
-            id: 4,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
-            name: "Floor 4",
-        },
-        {
-            id: 5,
-            path: "images/home/floor/floor001.jpg",
-            name: "Floor 5",
-        },
-        {
-            id: 6,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
-            name: "Floor 6",
-        },
-        {
-            id: 7,
-            path: "images/home/floor/floor001.jpg",
-            name: "Floor 7",
-        },
-        {
-            id: 8,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
-            name: "Floor 8",
+            // 场景物件缩放
+            itemScale: 1,
         },
     ],
     // 战利品板相关配置 最少要有一个id为1的
