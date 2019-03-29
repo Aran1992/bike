@@ -8,10 +8,6 @@ import RunOption from "../../run-option";
 
 export default class MainScene extends Scene {
     onCreate() {
-        [
-            this.ui.rankButton,
-        ].forEach(button => this.onClick(button, this.onClickCloseFuncButton.bind(this)));
-
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
         this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
@@ -20,6 +16,7 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
+        this.onClick(this.ui.rankButton, this.onClickRankButton.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
@@ -59,9 +56,6 @@ export default class MainScene extends Scene {
             this.bikeSprite.setPositionX(-this.bikeSprite.getWidth() / 2);
         }
         this.animationFrame = requestAnimationFrame(this.onUpdate.bind(this));
-    }
-
-    onClickCloseFuncButton() {
     }
 
     onClickMapModeButton() {
@@ -133,6 +127,11 @@ export default class MainScene extends Scene {
     onClickSystemButton() {
         App.hideScene("MainScene");
         App.showScene("SystemScene");
+    }
+
+    onClickRankButton() {
+        App.hideScene("MainScene");
+        App.showScene("RankScene");
     }
 }
 

@@ -24,6 +24,7 @@ import GameResultScene from "../scene/GameResultScene";
 import SystemScene from "../scene/SystemScene";
 import HomeScene from "../scene/HomeScene";
 import UIHelper from "../ui/UIHelper";
+import RankScene from "../scene/RankScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -58,6 +59,7 @@ export default class MyApplication extends Application {
             "TipScene": TipScene,
             "GameResultScene": GameResultScene,
             "SystemScene": SystemScene,
+            "RankScene": RankScene,
         };
 
         this.sceneTable = {};
