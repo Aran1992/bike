@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":15,
-    "selecteID":118,
+    "selectedBox":62,
+    "selecteID":69,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":135,
+    "maxID":136,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -501,13 +501,27 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,Text",
-                    "props":{"width":260,"text":"210000000","right":100,"name":"Text","height":50,"fontSize":50,"color":"#ffffff","centerY":0},
+                    "props":{"width":260,"text":"0","right":100,"name":"Text","height":50,"fontSize":50,"color":"#ffffff","centerY":0,"align":"right"},
                     "nodeParent":62,
                     "label":"Text",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":69,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"text":"MyRank","left":80,"fontSize":50,"color":"#ffffff","centerY":0},
+                    "nodeParent":62,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":135,
                     "child":[
                         ]
                 }]

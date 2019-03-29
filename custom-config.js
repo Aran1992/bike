@@ -6854,7 +6854,7 @@ Config.home = {
     bg: [
         {
             id: 1,
-            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
+            path: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
             name: "Background 1",
             // 场景物件缩放
             itemScale: 1.41,
@@ -6868,43 +6868,71 @@ Config.home = {
         },
         {
             id: 3,
-            path: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
+            path: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
             name: "Background 3",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 4,
-            path: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
+            path: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
             name: "Background 4",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 5,
-            path: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
+            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             name: "Background 5",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 6,
-            path: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
+            path: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
             name: "Background 6",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 7,
-            path: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+            path: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
             name: "Background 7",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 8,
-            path: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+            path: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
             name: "Background 8",
+            // 场景物件缩放
+            itemScale: 1.41,
+        },
+        {
+            id: 9,
+            path: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+            name: "Background 9",
+            // 场景物件缩放
+            itemScale: 1.41,
+        },
+        {
+            id: 10,
+            path: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+            name: "Background 10",
+            // 场景物件缩放
+            itemScale: 1.41,
+        },
+        {
+            id: 11,
+            path: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
+            name: "Background 11",
+            // 场景物件缩放
+            itemScale: 1.41,
+        },
+        {
+            id: 12,
+            path: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
+            name: "Background 12",
             // 场景物件缩放
             itemScale: 1.41,
         },
@@ -6925,6 +6953,41 @@ Config.home = {
             // 场景物件缩放
             itemScale: 1,
         },
+        {
+            id: 3,
+            path: "images/home/floor/floor003.png",
+            name: "Floor 3",
+            // 场景物件缩放
+            itemScale: 1,
+        },
+        {
+            id: 4,
+            path: "images/home/floor/floor004.png",
+            name: "Floor 4",
+            // 场景物件缩放
+            itemScale: 1,
+        },
+        {
+            id: 5,
+            path: "images/home/floor/floor005.png",
+            name: "Floor 5",
+            // 场景物件缩放
+            itemScale: 1,
+        },
+        {
+            id: 6,
+            path: "images/home/floor/floor006.png",
+            name: "Floor 6",
+            // 场景物件缩放
+            itemScale: 1,
+        },
+        {
+            id: 7,
+            path: "images/home/floor/floor007.png",
+            name: "Floor 7",
+            // 场景物件缩放
+            itemScale: 1,
+        },
     ],
     // 战利品板相关配置 最少要有一个id为1的
     spoils: [
@@ -6938,7 +7001,7 @@ Config.home = {
             iconScale: 0.4,
         },
         {
-            id: 2,
+            id: 21,
             path: "images/home/item/decoDX2_Cancer-101.png",
             name: "Spoils 2",
             // 场景物件缩放
@@ -6947,7 +7010,7 @@ Config.home = {
             iconScale: 0.4,
         },
         {
-            id: 3,
+            id: 22,
             path: "images/home/item/decoDX2_Cancer-103.png",
             name: "Spoils 3",
             // 场景物件缩放
@@ -6956,8 +7019,8 @@ Config.home = {
             iconScale: 0.4,
         },
         {
-            id: 4,
-            path: "images/home/item/decoDX2_Capricorn-101.png",
+            id: 31,
+            path: "images/home/item/decoDX2_Capricorn-1.png",
             name: "Spoils 4",
             // 场景物件缩放
             itemScale: 0.5,
@@ -6965,44 +7028,44 @@ Config.home = {
             iconScale: 0.4,
         },
         {
-            id: 5,
-            path: "images/home/item/decoDX2_Capricorn-102.png",
+            id: 32,
+            path: "images/home/item/decoDX2_Capricorn-101.png",
             name: "Spoils 5",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 33,
+            path: "images/home/item/decoDX2_Capricorn-102.png",
+            name: "Spoils 6",
             // 场景物件缩放
             itemScale: 0.3,
             // 物件图标缩放
             iconScale: 0.2,
         },
         {
-            id: 6,
+            id: 41,
             path: "images/home/item/decoDX2_Gemini-101.png",
-            name: "Spoils 6",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-        },
-        {
-            id: 7,
-            path: "images/home/item/decoDX2_Leo-102.png",
             name: "Spoils 7",
             // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 0.4,
             // 物件图标缩放
-            iconScale: 0.4,
+            iconScale: 0.3,
         },
         {
-            id: 8,
-            path: "images/home/item/decoDX2_Sagittarius-1.png",
+            id: 42,
+            path: "images/home/item/decoDX2_Gemini-102.png",
             name: "Spoils 8",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
-            iconScale: 0.2,
+            iconScale: 0.3,
         },
         {
-            id: 9,
-            path: "images/home/item/decoDX2_Leo-103.png",
+            id: 51,
+            path: "images/home/item/decoDX2_Leo-3.png",
             name: "Spoils 9",
             // 场景物件缩放
             itemScale: 0.5,
@@ -7010,27 +7073,153 @@ Config.home = {
             iconScale: 0.4,
         },
         {
-            id: 10,
-            path: "images/home/item/decoDX2_Leo-104.png",
+            id: 52,
+            path: "images/home/item/decoDX2_Leo-102.png",
             name: "Spoils 10",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
-            iconScale: 0.3,
+            iconScale: 0.4,
         },
         {
-            id: 11,
-            path: "images/home/item/decoDX2_Leo-105.png",
+            id: 53,
+            path: "images/home/item/decoDX2_Leo-103.png",
             name: "Spoils 11",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 54,
+            path: "images/home/item/decoDX2_Leo-104.png",
+            name: "Spoils 12",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
             iconScale: 0.3,
         },
         {
-            id: 12,
+            id: 55,
+            path: "images/home/item/decoDX2_Leo-105.png",
+            name: "Spoils 13",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.3,
+        },
+        {
+            id: 61,
             path: "images/home/item/decoDX2_Libra-101.png",
-            name: "Spoils 12",
+            name: "Spoils 14",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 62,
+            path: "images/home/item/decoDX2_Libra-102.png",
+            name: "Spoils 15",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 71,
+            path: "images/home/item/decoDX2_Pisces-1.png",
+            name: "Spoils 16",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 72,
+            path: "images/home/item/decoDX2_Pisces-2.png",
+            name: "Spoils 17",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 73,
+            path: "images/home/item/decoDX2_Pisces-101.png",
+            name: "Spoils 18",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 74,
+            path: "images/home/item/decoDX2_Pisces-102.png",
+            name: "Spoils 19",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.18,
+        },
+        {
+            id: 81,
+            path: "images/home/item/decoDX2_Sagittarius-1.png",
+            name: "Spoils 20",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.2,
+        },
+        {
+            id: 82,
+            path: "images/home/item/decoDX2_Sagittarius-101.png",
+            name: "Spoils 21",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.2,
+        },
+        {
+            id: 91,
+            path: "images/home/item/decoDX2_Scorpius-2.png",
+            name: "Spoils 22",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+        },
+        {
+            id: 92,
+            path: "images/home/item/decoDX2_Scorpius-3.png",
+            name: "Spoils 23",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+        },
+        {
+            id: 101,
+            path: "images/home/item/decoDX2_Taurus-101.png",
+            name: "Spoils 24",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+        },
+        {
+            id: 102,
+            path: "images/home/item/decoDX2_Taurus-102.png",
+            name: "Spoils 25",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+        },
+        {
+            id: 111,
+            path: "images/home/item/decoDX2_Virgo-101.png",
+            name: "Spoils 26",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -7070,7 +7259,7 @@ Config.home = {
             petsVelocity: 1,
         },
         {
-            id: 3,
+            id: 11,
             path: "images/home/item/decoDX2_Aries-1.png",
             name: "Pet 3",
             // 场景物件缩放
@@ -7085,7 +7274,7 @@ Config.home = {
             petsVelocity: 0.5,
         },
         {
-            id: 4,
+            id: 21,
             path: "images/home/item/decoDX2_Cancer-1.png",
             name: "Pet 4",
             // 场景物件缩放
@@ -7100,26 +7289,11 @@ Config.home = {
             petsVelocity: 1,
         },
         {
-            id: 5,
-            path: "images/home/item/decoDX2_Capricorn-1.png",
+            id: 41,
+            path: "images/home/item/decoDX2_Gemini-1.png",
             name: "Pet 5",
             // 场景物件缩放
-            itemScale: 0.4,
-            // 物件图标缩放
-            iconScale: 0.3,
-            // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 2,
-            // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 10,
-            // 宠物移动的速度（单位：像素）
-            petsVelocity: 0.5,
-        },
-        {
-            id: 6,
-            path: "images/home/item/decoDX2_Gemini-1.png",
-            name: "Pet 6",
-            // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 0.6,
             // 物件图标缩放
             iconScale: 0.4,
             // 宠物跳动时间间隔（单位：秒）
@@ -7130,9 +7304,9 @@ Config.home = {
             petsVelocity: 1,
         },
         {
-            id: 7,
+            id: 42,
             path: "images/home/item/decoDX2_Gemini-2.png",
-            name: "Pet 7",
+            name: "Pet 6",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -7145,19 +7319,109 @@ Config.home = {
             petsVelocity: 1,
         },
         {
-            id: 8,
-            path: "images/home/item/decoDX2_Leo-1.png",
+            id: 51,
+            path: "images/home/item/decoDX2_Leo-4.png",
+            name: "Pet 7",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.05,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1,
+        },
+        {
+            id: 52,
+            path: "images/home/item/decoDX2_Leo-5.png",
             name: "Pet 8",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.15,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1,
+        },
+        {
+            id: 53,
+            path: "images/home/item/decoDX2_Leo-6.png",
+            name: "Pet 9",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.25,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1,
+        },
+        {
+            id: 61,
+            path: "images/home/item/decoDX2_Libra-1.png",
+            name: "Pet 10",
+            // 场景物件缩放
+            itemScale: 0.1,
+            // 物件图标缩放
+            iconScale: 0.1,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 2,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 5,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 0.5,
+        },
+        {
+            id: 91,
+            path: "images/home/item/decoDX2_Scorpius-1.png",
+            name: "Pet 11",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
             iconScale: 0.4,
             // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 2.1,
+            petsJumpInterval: 1.35,
             // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 1,
+            petsJumpRotation: 10,
             // 宠物移动的速度（单位：像素）
-            petsVelocity: 0.5,
+            petsVelocity: 1.5,
+        },
+        {
+            id: 101,
+            path: "images/home/item/decoDX2_Taurus-1.png",
+            name: "Pet 12",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 0.8,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 2,
+        },
+        {
+            id: 102,
+            path: "images/home/item/decoDX2_Taurus-3.png",
+            name: "Pet 13",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 2,
         },
     ]
 };
