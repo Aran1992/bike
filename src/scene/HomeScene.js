@@ -65,8 +65,7 @@ export default class HomeScene extends Scene {
         this.bgSprite = this.homeInnerContainer.addChild(new Sprite());
         this.floorSprite = this.homeInnerContainer.addChild(new Sprite());
         this.floorSprite.position.set(0, Config.home.floorStartY);
-        this.spoilsContainer = this.homeInnerContainer.addChild(new Container());
-        this.petsContainer = this.homeInnerContainer.addChild(new Container());
+        this.itemContainer = this.homeInnerContainer.addChild(new Container());
 
         this.homeMinX = this.homeContainer.mywidth - Config.home.homeWidth;
         this.homeMaxX = 0;
@@ -80,6 +79,8 @@ export default class HomeScene extends Scene {
         this.on("pointermove", this.onTouchMove.bind(this));
         this.on("pointerup", this.onTouchEnd.bind(this));
         this.on("pointerupoutside", this.onTouchEnd.bind(this));
+
+        App.ticker.add(this.gameLoop.bind(this));
     }
 
     onShow({bgID, floorID, spoilsList, petsList}) {
@@ -113,12 +114,13 @@ export default class HomeScene extends Scene {
         let floorScale = floorConfig.itemScale || Config.home.defaultSceneItemScale;
         this.floorSprite.scale.set(floorScale, floorScale);
 
-        this.spoilsContainer.removeChildren();
+        this.itemContainer.removeChildren();
+
         spoilsList.forEach(([itemID, id, x, y]) => this.createSpoils(itemID, id, x, y));
 
-        this.petsContainer.children.forEach(child => cancelAnimationFrame(child.animationID));
-        this.petsContainer.removeChildren();
         petsList.forEach(id => this.createPet(id));
+
+        this.sortItems();
 
         this.radio.select(BACKGROUNDS);
     }
@@ -127,10 +129,10 @@ export default class HomeScene extends Scene {
         let config = Config.home.spoils.find(item => item.id === id);
         let sprite = Sprite.from(config.path);
         sprite.itemID = itemID;
-        sprite.anchor.set(0.5, 0.5);
+        sprite.anchor.set(0.5, 1);
         let scale = config.itemScale || Config.home.defaultSceneItemScale;
         sprite.scale.set(scale, scale);
-        this.spoilsContainer.addChild(sprite);
+        this.itemContainer.addChild(sprite);
         sprite.position.set(x, y);
         let removeItemBtn = sprite.addChild(Sprite.from(Config.home.removeItemButtonImagePath));
         removeItemBtn.anchor.set(0.5, 0.5);
@@ -140,10 +142,9 @@ export default class HomeScene extends Scene {
     }
 
     createPet(id, pos = randomPos()) {
-        let outerContainer = this.petsContainer.addChild(new Container());
+        let outerContainer = this.itemContainer.addChild(new Container());
         let config = Config.home.pets.find(item => item.id === id);
         let innerSprite = outerContainer.addChild(Sprite.from(config.path));
-        pos.y += innerSprite.texture.height / 2;
         outerContainer.position.set(pos.x, pos.y);
         innerSprite.anchor.set(0.5, 1);
         let scale = config.itemScale || Config.home.defaultSceneItemScale;
@@ -157,7 +158,7 @@ export default class HomeScene extends Scene {
         let targetPos = randomPos();
         let frame = 0;
         let interval = get(config.petsJumpInterval, Config.home.defaultPetsJumpInterval) * Config.fps;
-        let handle = () => {
+        outerContainer.onEachFrame = () => {
             let {x, y, final} = GameUtils.moveToTargetPos(
                 outerContainer.position,
                 targetPos,
@@ -169,9 +170,7 @@ export default class HomeScene extends Scene {
             if (final) {
                 targetPos = randomPos();
             }
-            outerContainer.animationID = requestAnimationFrame(handle);
         };
-        handle();
     }
 
     static onClickReturnButton() {
@@ -365,7 +364,7 @@ export default class HomeScene extends Scene {
     onTouchItemStart(item, event) {
         let sprite = this.addChild(new Sprite());
         sprite.texture = Texture.from(item.itemConfig.path);
-        sprite.anchor.set(0.5, 0.5);
+        sprite.anchor.set(0.5, 1);
         sprite.position.set(event.data.global.x, event.data.global.y);
         let scale = item.itemConfig.itemScale || Config.home.defaultSceneItemScale;
         sprite.scale.set(scale, scale);
@@ -417,22 +416,21 @@ export default class HomeScene extends Scene {
                     this.createPet(this.touchingItemID, {x, y});
                     data.petsList.push(this.touchingItemID);
                 }
+                this.sortItems();
                 DataMgr.set(DataMgr.homeData, data);
             }
         }
     }
 
     onClickStartRemoveItemModeButton() {
-        this.spoilsContainer.children.forEach(child => child.removeItemBtn.visible = true);
-        this.petsContainer.children.forEach(child => child.removeItemBtn.visible = true);
+        this.itemContainer.children.forEach(child => child.removeItemBtn.visible = true);
         this.ui.startRemoveItemModeBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = true;
         this.ui.removeAllItemBtn.visible = true;
     }
 
     onClickEndRemoveItemModeButton() {
-        this.spoilsContainer.children.forEach(child => child.removeItemBtn.visible = false);
-        this.petsContainer.children.forEach(child => child.removeItemBtn.visible = false);
+        this.itemContainer.children.forEach(child => child.removeItemBtn.visible = false);
         this.ui.startRemoveItemModeBtn.visible = true;
         this.ui.endRemoveItemModeBtn.visible = false;
         this.ui.removeAllItemBtn.visible = false;
@@ -443,9 +441,8 @@ export default class HomeScene extends Scene {
             tip: "Are you sure you want to delete this item?",
             confirmCallback: () => {
                 let item = button.parent;
-                cancelAnimationFrame(item.animationID);
                 let data = DataMgr.get(DataMgr.homeData);
-                if (item.animationID !== undefined) {
+                if (item.onEachFrame !== undefined) {
                     Utils.removeItemFromArray(data.petsList, item.itemConfig.id);
                 } else {
                     let index = data.spoilsList.findIndex(spoils => spoils[0] === item.itemID);
@@ -468,9 +465,7 @@ export default class HomeScene extends Scene {
                 App.showScene("TipScene", {
                     tip: "Are you really sure you want to DELETE ALL ITEMS?",
                     confirmCallback: () => {
-                        this.spoilsContainer.removeChildren();
-                        this.petsContainer.children.forEach(item => cancelAnimationFrame(item.animationID));
-                        this.petsContainer.removeChildren();
+                        this.itemContainer.removeChildren();
                         let data = DataMgr.get(DataMgr.homeData);
                         data.spoilsList = [];
                         data.petsList = [];
@@ -483,6 +478,21 @@ export default class HomeScene extends Scene {
             cancelCallback: () => {
             }
         });
+    }
+
+    sortItems() {
+        this.itemContainer.children.sort((a, b) => {
+            let diff = a.y - b.y;
+            if (diff === 0) {
+                diff = a.x - b.x;
+            }
+            return diff;
+        });
+    }
+
+    gameLoop() {
+        this.itemContainer.children.forEach(item => item.onEachFrame && item.onEachFrame());
+        this.sortItems();
     }
 }
 
