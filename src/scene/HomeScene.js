@@ -93,6 +93,11 @@ export default class HomeScene extends Scene {
     }
 
     onShow({bgID, floorID, spoilsList, petsList}) {
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.distance, 0))}m`;
+        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
+
         if (bgID === undefined) {
             bgID = 1;
         }
@@ -109,6 +114,7 @@ export default class HomeScene extends Scene {
         if (petsList === undefined) {
             petsList = [1, 2,];
         }
+
         this.selectedBgID = bgID;
         this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === bgID);
         let bgConfig = Config.home.backgrounds[this.bgIndex];
