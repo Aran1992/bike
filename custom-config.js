@@ -7110,7 +7110,7 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 50],
-                [4, 72000],
+                [4, 12000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -7130,7 +7130,7 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 50],
-                [4, 216000],
+                [4, 72000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -7150,7 +7150,7 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 50],
-                [4, 864000],
+                [4, 216000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -7170,7 +7170,7 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 50],
-                [4, 3456000],
+                [4, 864000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -7190,7 +7190,7 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 50],
-                [4, 6912000],
+                [4, 3456000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -7210,6 +7210,7 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 50],
+                [4, 6912000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
