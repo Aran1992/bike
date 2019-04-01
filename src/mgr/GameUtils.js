@@ -54,7 +54,7 @@ export default class GameUtils {
         }
     }
 
-    static getBikeConfig(key, id, level,) {
+    static getBikeConfig(key, id, level) {
         if (id === undefined) {
             id = DataMgr.get(DataMgr.selectedBike, 0);
         }
@@ -62,7 +62,19 @@ export default class GameUtils {
             level = DataMgr.get(DataMgr.bikeLevelMap, {})[id];
         }
         let config = Config.bikeList.find(bike => bike.id === id);
-        return (config[key] || Config.bike[key])[level];
+        let value = (config[key] || Config.bike[key])[level];
+
+        Config.home.types.forEach(type => {
+            Config.home[type].forEach(item => {
+                if (item.unlockRewards
+                    && item.unlockRewards.length !== 0
+                    && !DataMgr.isHomeItemLocked(type, item.id)) {
+                    value += item.unlockRewards[key];
+                }
+            });
+        });
+
+        return Math.floor(value * 100) / 100;
     }
 
     static getFrames(jsonPath, animationName) {
