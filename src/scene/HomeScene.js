@@ -12,8 +12,6 @@ const FLOORS = 1;
 const SPOILS = 2;
 const PETS = 3;
 
-const types = ["backgrounds", "floors", "spoils", "pets"];
-
 function randomPos() {
     let x = Math.random() * Config.home.homeWidth;
     let y = Math.random() * Config.home.homeHeight;
@@ -229,7 +227,7 @@ export default class HomeScene extends Scene {
                 this.ui.selectItemName.text = config.name;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
-                this.ui.lockedItemBtn.visible = this.isLocked(this.getSelectedType(), config.id);
+                this.ui.lockedItemBtn.visible = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
                 break;
             }
             case FLOORS: {
@@ -247,7 +245,7 @@ export default class HomeScene extends Scene {
                 this.ui.selectItemName.text = config.name;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
-                this.ui.lockedItemBtn.visible = this.isLocked(this.getSelectedType(), config.id);
+                this.ui.lockedItemBtn.visible = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
                 break;
             }
             case SPOILS:
@@ -385,7 +383,7 @@ export default class HomeScene extends Scene {
         item.ui.icon.children[0].scale.set(scale, scale);
         item.itemConfig = config;
 
-        if (this.isLocked(type, config.id)) {
+        if (DataMgr.isHomeItemLocked(type, config.id)) {
             sprite.filters = [this.grayFilter];
         } else {
             sprite.filters = [];
@@ -398,7 +396,7 @@ export default class HomeScene extends Scene {
     }
 
     onTouchItemStart(item, event) {
-        if (this.isLocked(this.getSelectedType(), item.itemConfig.id)) {
+        if (DataMgr.isHomeItemLocked(this.getSelectedType(), item.itemConfig.id)) {
             this.showLockedInfo(this.getSelectedType(), item.itemConfig.id);
         } else {
             let sprite = this.addChild(new Sprite());
@@ -565,20 +563,16 @@ export default class HomeScene extends Scene {
         }
     }
 
-    isLocked(type, id) {
-        let conditions = Config.home[type].find(item => item.id === id).unlockConditions;
-        if (conditions === undefined || conditions.length === 0) {
-            return false;
-        }
-        let data = DataMgr.get(DataMgr.homeData);
-        return data.unlocked[type].indexOf(id) === -1;
-    }
-
     getUnlockConditions(type, id) {
         let config = Config.home[type].find(item => item.id === id);
         if (config.unlockConditions) {
-            return config.unlockConditions.map(([id, ...args]) =>
-                GameUtils.formatString(Config.conditions[id], ...args));
+            return config.unlockConditions.map(([id, ...args]) => {
+                if (id === Config.conditionsEnum.unlockMap) {
+                    return GameUtils.formatString(Config.conditions[id], Config.endlessMode.sceneList.find(item => item.id === args[0]).showName);
+                } else {
+                    return GameUtils.formatString(Config.conditions[id], ...args);
+                }
+            });
         } else {
             return [];
         }
@@ -612,7 +606,7 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
     }
 
     getSelectedType() {
-        return types[this.radio.selectedIndex];
+        return Config.home.types[this.radio.selectedIndex];
     }
 }
 

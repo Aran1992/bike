@@ -7,11 +7,49 @@ class DataMgr_ {
         } else {
             this.dataTable = {};
         }
+        this.conditionTable = {
+            //需消费 #### 数量的金币
+            1: value => DataMgr.get(DataMgr.costCoin, 0) >= value,
+            //需消费 #### 数量的钻石
+            2: value => DataMgr.get(DataMgr.costDiamond, 0) >= value,
+            //需要解锁地图 ####
+            3: id => !DataMgr.isEndlessSceneLocked(id),
+            //需要总里程达到 ####
+            4: value => DataMgr.get(DataMgr.distance, 0) >= value,
+            //需要最远里程达到过 ####
+            5: value => DataMgr.get(DataMgr.distanceRecord, 0) >= value,
+            //需要积分达到过 ####
+            6: value => DataMgr.get(DataMgr.totalScore, 0) > value,
+            //需要总里程排名达到过第 #### 名
+            7: () => false,
+            //需要最远里程排名达到过第 #### 名
+            8: () => false,
+            //需要积分排名达到过第 #### 名
+            9: () => false,
+        };
     }
 
     set(key, value) {
+        let oldValue = this.dataTable[key];
         this.dataTable[key] = value;
         localStorage[window.location.href] = JSON.stringify(this.dataTable);
+        if (key === DataMgr.coin && value < oldValue) {
+            this.set(DataMgr.costCoin, this.get(DataMgr.costCoin, 0) + (oldValue - value));
+            this.checkConditions(Config.conditionsEnum.costCoin);
+        } else if (key === DataMgr.diamond && value < oldValue) {
+            this.set(DataMgr.costDiamond, this.get(DataMgr.costDiamond, 0) + (oldValue - value));
+            this.checkConditions(Config.conditionsEnum.costDiamond);
+        } else if (key === DataMgr.unlockAllEndlessScene
+            || key === DataMgr.unlockEndlessSceneIDList
+            || key === DataMgr.distance) {
+            this.checkConditions(Config.conditionsEnum.unlockMap);
+        } else if (key === DataMgr.distance) {
+            this.checkConditions(Config.conditionsEnum.distance);
+        } else if (key === DataMgr.distanceRecord) {
+            this.checkConditions(Config.conditionsEnum.distanceRecord);
+        } else if (key === DataMgr.totalScore) {
+            this.checkConditions(Config.conditionsEnum.totalScore);
+        }
     }
 
     get(key, defaultValue) {
@@ -20,6 +58,43 @@ class DataMgr_ {
             value = defaultValue;
         }
         return value;
+    }
+
+    isHomeItemLocked(type, id) {
+        let unlockConditions = Config.home[type].find(item => item.id === id).unlockConditions;
+        if (unlockConditions
+            && unlockConditions.length !== 0
+            && DataMgr.get(DataMgr.homeData).unlocked[type].indexOf(id) === -1) {
+            return true;
+        }
+    }
+
+    checkCondition(id, ...args) {
+        return this.conditionTable[id](...args);
+    }
+
+    checkConditions(conditionID) {
+        Config.home.types.forEach(type => {
+            Config.home[type].forEach(item => {
+                if (DataMgr.isHomeItemLocked(type, item.id)
+                    && item.unlockConditions && item.unlockConditions.find(([id]) => id === conditionID)) {
+                    if (!item.unlockConditions.some(([id, ...args]) => {
+                        return !this.checkCondition(id, args);
+                    })) {
+                        let data = DataMgr.get(DataMgr.homeData);
+                        data.unlocked[type].push(item.id);
+                        DataMgr.set(DataMgr.homeData, data);
+                    }
+                }
+            });
+        });
+    }
+
+    isEndlessSceneLocked(id) {
+        return DataMgr.get(DataMgr.unlockAllEndlessScene, false) === false
+            && DataMgr.get(DataMgr.unlockEndlessSceneIDList, []).indexOf(id) === -1
+            && DataMgr.get(DataMgr.distance, 0)
+            < Config.endlessMode.sceneList.find(item => item.id === id).unlockDistance;
     }
 }
 
@@ -43,6 +118,8 @@ DataMgr.soundOn = "soundOn";
 DataMgr.distanceRecord = "distanceRecord";
 DataMgr.bikeLevelMap = "bikeLevelMap";
 DataMgr.homeData = "homeData";
+DataMgr.costCoin = "costCoin";
+DataMgr.costDiamond = "costDiamond";
 
 if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
     DataMgr.set(DataMgr.ownedBikeList, [0]);

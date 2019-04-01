@@ -252,7 +252,7 @@ export default class ShopScene extends Scene {
         } else {
             item.mapDescription.visible = false;
         }
-        if (this.isEndlessSceneLocked(config.id)) {
+        if (DataMgr.isEndlessSceneLocked(config.id)) {
             item.commonImage.visible = false;
             item.selectedImage.visible = false;
             item.lockedImage.visible = true;
@@ -293,13 +293,6 @@ export default class ShopScene extends Scene {
         } else {
             App.showNotice("Diamond is not enough!");
         }
-    }
-
-    isEndlessSceneLocked(id) {
-        return DataMgr.get(DataMgr.unlockAllEndlessScene, false) === false
-            && DataMgr.get(DataMgr.unlockEndlessSceneIDList, []).indexOf(id) === -1
-            && DataMgr.get(DataMgr.distance, 0)
-            < Config.endlessMode.sceneList.find(item => item.id === id).unlockDistance;
     }
 }
 
