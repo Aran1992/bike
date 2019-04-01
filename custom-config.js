@@ -6861,13 +6861,23 @@ Config.home = {
         y: 5
     },
     // 背景相关配置 最少要有一个id为1的
-    bg: [
+    backgrounds: [
         {
             id: 1,
             path: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
             name: "Background 1",
             // 场景物件缩放
             itemScale: 1.41,
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                gold: 0.1,
+                distance: 0.2,
+                score: 0.5,
+            }
         },
         {
             id: 2,
@@ -6948,7 +6958,7 @@ Config.home = {
         },
     ],
     // 地板相关配置 最少要有一个id为1的
-    floor: [
+    floors: [
         {
             id: 1,
             path: "images/home/floor/floor001.png",

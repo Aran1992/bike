@@ -71,6 +71,8 @@ if (DataMgr.get(DataMgr.homeData) === undefined) {
         spoilsLength: 0,
         petsList: [],
         unlocked: {
+            backgrounds: [],
+            floors: [],
             spoils: [],
             pets: [],
         }

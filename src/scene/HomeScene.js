@@ -35,6 +35,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.lastBtn, () => this.onClickToggleButton(-1));
         this.onClick(this.ui.nextBtn, () => this.onClickToggleButton(1));
         this.onClick(this.ui.commonItemBtn, this.onClickCommonItemBtn.bind(this));
+        this.onClick(this.ui.lockedItemBtn, this.onClickLockedItemBtn.bind(this));
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
@@ -109,15 +110,15 @@ export default class HomeScene extends Scene {
             petsList = [1, 2,];
         }
         this.selectedBgID = bgID;
-        this.bgIndex = Config.home.bg.findIndex(item => item.id === bgID);
-        let bgConfig = Config.home.bg[this.bgIndex];
+        this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === bgID);
+        let bgConfig = Config.home.backgrounds[this.bgIndex];
         this.bgSprite.texture = Texture.from(bgConfig.path);
         let bgScale = bgConfig.itemScale || Config.home.defaultSceneItemScale;
         this.bgSprite.scale.set(bgScale, bgScale);
 
         this.selectedFloorID = floorID;
-        this.floorIndex = Config.home.floor.findIndex(item => item.id === floorID);
-        let floorConfig = Config.home.floor[this.floorIndex];
+        this.floorIndex = Config.home.floors.findIndex(item => item.id === floorID);
+        let floorConfig = Config.home.floors[this.floorIndex];
         this.floorSprite.texture = Texture.from(floorConfig.path);
         let floorScale = floorConfig.itemScale || Config.home.defaultSceneItemScale;
         this.floorSprite.scale.set(floorScale, floorScale);
@@ -210,11 +211,11 @@ export default class HomeScene extends Scene {
             case BACKGROUNDS: {
                 let index = this.bgIndex + offset;
                 if (index < 0) {
-                    index = Config.home.bg.length - 1;
-                } else if (index >= Config.home.bg.length) {
+                    index = Config.home.backgrounds.length - 1;
+                } else if (index >= Config.home.backgrounds.length) {
                     index = 0;
                 }
-                let config = Config.home.bg[index];
+                let config = Config.home.backgrounds[index];
                 this.bgIndex = index;
                 this.bgSprite.texture = Texture.from(config.path);
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
@@ -222,16 +223,17 @@ export default class HomeScene extends Scene {
                 this.ui.selectItemName.text = config.name;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
+                this.ui.lockedItemBtn.visible = this.isLocked(this.getSelectedType(), config.id);
                 break;
             }
             case FLOORS: {
                 let index = this.floorIndex + offset;
                 if (index < 0) {
-                    index = Config.home.floor.length - 1;
-                } else if (index >= Config.home.floor.length) {
+                    index = Config.home.floors.length - 1;
+                } else if (index >= Config.home.floors.length) {
                     index = 0;
                 }
-                let config = Config.home.floor[index];
+                let config = Config.home.floors[index];
                 this.floorIndex = index;
                 this.floorSprite.texture = Texture.from(config.path);
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
@@ -239,6 +241,7 @@ export default class HomeScene extends Scene {
                 this.ui.selectItemName.text = config.name;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
+                this.ui.lockedItemBtn.visible = this.isLocked(this.getSelectedType(), config.id);
                 break;
             }
             case SPOILS:
@@ -261,7 +264,7 @@ export default class HomeScene extends Scene {
     onClickCommonItemBtn() {
         switch (this.radio.selectedIndex) {
             case BACKGROUNDS: {
-                this.selectedBgID = Config.home.bg[this.bgIndex].id;
+                this.selectedBgID = Config.home.backgrounds[this.bgIndex].id;
                 let data = DataMgr.get(DataMgr.homeData);
                 data.bgID = this.selectedBgID;
                 DataMgr.set(DataMgr.homeData, data);
@@ -270,7 +273,7 @@ export default class HomeScene extends Scene {
                 break;
             }
             case FLOORS: {
-                this.selectedFloorID = Config.home.floor[this.floorIndex].id;
+                this.selectedFloorID = Config.home.floors[this.floorIndex].id;
                 let data = DataMgr.get(DataMgr.homeData);
                 data.floorID = this.selectedFloorID;
                 DataMgr.set(DataMgr.homeData, data);
@@ -281,6 +284,16 @@ export default class HomeScene extends Scene {
         }
     }
 
+    onClickLockedItemBtn() {
+        let id;
+        if (this.getSelectedType() === "backgrounds") {
+            id = Config.home.backgrounds[this.bgIndex].id;
+        } else {
+            id = Config.home.floors[this.floorIndex].id;
+        }
+        this.showLockedInfo(this.getSelectedType(), id);
+    }
+
     static initRadioButton(button, info) {
         button.ui.name.text = info;
     }
@@ -289,8 +302,8 @@ export default class HomeScene extends Scene {
         switch (lastIndex) {
             case BACKGROUNDS: {
                 this.ui.selectItemPanel.visible = false;
-                this.bgIndex = Config.home.bg.findIndex(item => item.id === this.selectedBgID);
-                let config = Config.home.bg[this.bgIndex];
+                this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === this.selectedBgID);
+                let config = Config.home.backgrounds[this.bgIndex];
                 this.bgSprite.texture = Texture.from(config.path);
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
                 this.bgSprite.scale.set(scale, scale);
@@ -298,8 +311,8 @@ export default class HomeScene extends Scene {
             }
             case FLOORS: {
                 this.ui.selectItemPanel.visible = false;
-                this.floorIndex = Config.home.floor.findIndex(item => item.id === this.selectedFloorID);
-                let config = Config.home.floor[this.floorIndex];
+                this.floorIndex = Config.home.floors.findIndex(item => item.id === this.selectedFloorID);
+                let config = Config.home.floors[this.floorIndex];
                 this.floorSprite.texture = Texture.from(config.path);
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
                 this.floorSprite.scale.set(scale, scale);
@@ -318,18 +331,20 @@ export default class HomeScene extends Scene {
         switch (selectedIndex) {
             case BACKGROUNDS: {
                 this.ui.selectItemPanel.visible = true;
-                let config = Config.home.bg.find(item => item.id === this.selectedBgID);
+                let config = Config.home.backgrounds.find(item => item.id === this.selectedBgID);
                 this.ui.selectItemName.text = config && config.name;
                 this.ui.commonItemBtn.visible = false;
                 this.ui.selectedItemBtn.visible = true;
+                this.ui.lockedItemBtn.visible = false;
                 break;
             }
             case FLOORS: {
                 this.ui.selectItemPanel.visible = true;
-                let config = Config.home.floor.find(item => item.id === this.selectedFloorID);
+                let config = Config.home.floors.find(item => item.id === this.selectedFloorID);
                 this.ui.selectItemName.text = config && config.name;
                 this.ui.commonItemBtn.visible = false;
                 this.ui.selectedItemBtn.visible = true;
+                this.ui.lockedItemBtn.visible = false;
                 break;
             }
             case SPOILS: {
