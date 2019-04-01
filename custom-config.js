@@ -8172,9 +8172,9 @@ Config.home = {
 // ID已经对应功能了，不要更改ID和描述的对应关系
 Config.conditions = {
     //需消费 #### 数量的金币
-    1: "Need to consume ${v0} Gold Coins",
+    1: "${v0} Gold Coins",
     //需消费 #### 数量的钻石
-    2: "Need to consume ${v0} Diamonds",
+    2: "${v0} Diamonds",
     //需要解锁地图 ####
     3: "Need to unlock ${v0}",
     //需要总里程达到 ####

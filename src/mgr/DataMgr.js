@@ -9,9 +9,9 @@ class DataMgr_ {
         }
         this.conditionTable = {
             //需消费 #### 数量的金币
-            1: value => DataMgr.get(DataMgr.costCoin, 0) >= value,
+            1: () => false,
             //需消费 #### 数量的钻石
-            2: value => DataMgr.get(DataMgr.costDiamond, 0) >= value,
+            2: () => false,
             //需要解锁地图 ####
             3: id => !DataMgr.isEndlessSceneLocked(id),
             //需要总里程达到 ####
@@ -30,16 +30,9 @@ class DataMgr_ {
     }
 
     set(key, value) {
-        let oldValue = this.dataTable[key];
         this.dataTable[key] = value;
         localStorage[window.location.href] = JSON.stringify(this.dataTable);
-        if (key === DataMgr.coin && value < oldValue) {
-            this.set(DataMgr.costCoin, this.get(DataMgr.costCoin, 0) + (oldValue - value));
-            this.checkConditions(Config.conditionsEnum.costCoin);
-        } else if (key === DataMgr.diamond && value < oldValue) {
-            this.set(DataMgr.costDiamond, this.get(DataMgr.costDiamond, 0) + (oldValue - value));
-            this.checkConditions(Config.conditionsEnum.costDiamond);
-        } else if (key === DataMgr.unlockAllEndlessScene
+        if (key === DataMgr.unlockAllEndlessScene
             || key === DataMgr.unlockEndlessSceneIDList
             || key === DataMgr.distance) {
             this.checkConditions(Config.conditionsEnum.unlockMap);
@@ -65,6 +58,15 @@ class DataMgr_ {
         if (unlockConditions
             && unlockConditions.length !== 0
             && DataMgr.get(DataMgr.homeData).unlocked[type].indexOf(id) === -1) {
+            return true;
+        }
+    }
+
+    isHomeItemSatisfiedCostCondition(type, id) {
+        let unlockConditions = Config.home[type].find(item => item.id === id).unlockConditions;
+        if (!unlockConditions
+            .filter(condition => [Config.conditionsEnum.costCoin, Config.conditionsEnum.costDiamond].indexOf(condition[0]) === -1)
+            .some(condition => !this.checkCondition(...condition))) {
             return true;
         }
     }

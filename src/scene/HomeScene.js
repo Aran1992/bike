@@ -91,10 +91,7 @@ export default class HomeScene extends Scene {
     }
 
     onShow({bgID, floorID, spoilsList, petsList}) {
-        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.distance, 0))}m`;
-        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
-        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
-        this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
+        this.refreshPlayerBasicInfo();
 
         if (bgID === undefined) {
             bgID = 1;
@@ -136,6 +133,13 @@ export default class HomeScene extends Scene {
         this.sortItems();
 
         this.radio.select(BACKGROUNDS);
+    }
+
+    refreshPlayerBasicInfo() {
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.distance, 0))}m`;
+        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
     }
 
     createSpoils(itemID, id, x, y) {
@@ -582,31 +586,102 @@ export default class HomeScene extends Scene {
         let config = Config.home[type].find(item => item.id === id);
         if (config.unlockRewards) {
             return [
-                `Gold Coin: ${Math.floor(config.unlockRewards.gold * 100)}%`,
-                `Distance: ${Math.floor(config.unlockRewards.distance * 100)}%`,
-                `Score: ${Math.floor(config.unlockRewards.score * 100)}%`,
+                `Gold Coin: ${Math.floor(config.unlockRewards.coinPercent * 100)}%`,
+                `Distance: ${Math.floor(config.unlockRewards.distancePercent * 100)}%`,
+                `Score: ${Math.floor(config.unlockRewards.scorePercent * 100)}%`,
             ];
         } else {
             return [];
         }
     }
 
+    getUnlockCosts(type, id) {
+        let config = Config.home[type].find(item => item.id === id);
+        if (config.unlockConditions) {
+            return config.unlockConditions
+                .filter(list => list[0] === Config.conditionsEnum.costCoin || list[0] === Config.conditionsEnum.costDiamond)
+                .map(([id, ...args]) => GameUtils.formatString(Config.conditions[id], ...args));
+        } else {
+            return [];
+        }
+    }
+
     showLockedInfo(type, id) {
-        App.showTip(
-            `This item is locked.
+        if (DataMgr.isHomeItemSatisfiedCostCondition(type, id)) {
+            App.showTip(
+                `This item is able to unlock.
+                
+Unlock Reward(s):
+${this.getUnlockRewards(type, id).join("\n")}
+
+Would you like to cost the following items to unlock this item?
+${this.getUnlockCosts(type, id).join("\n")}`,
+                () => {
+                    let coin = DataMgr.get(DataMgr.coin, 0);
+                    let diamond = DataMgr.get(DataMgr.diamond, 0);
+                    let conditions = Config.home[type].find(item => item.id === id).unlockConditions;
+                    let coinCondition = conditions.find(list => list[0] === Config.conditionsEnum.costCoin);
+                    let costCoin = coinCondition ? coinCondition[1] : 0;
+                    let diamondCondition = conditions.find(list => list[0] === Config.conditionsEnum.costDiamond);
+                    let costDiamond = diamondCondition ? diamondCondition[1] : 0;
+                    if (coin < costCoin || diamond < costDiamond) {
+                        App.showNotice("Cost is not enough!");
+                    } else {
+                        DataMgr.set(DataMgr.coin, coin - costCoin);
+                        DataMgr.set(DataMgr.diamond, diamond - costDiamond);
+                        let data = DataMgr.get(DataMgr.homeData);
+                        data.unlocked[type].push(id);
+                        DataMgr.set(DataMgr.homeData, data);
+                        this.refreshPlayerBasicInfo();
+                        this.refreshCurItemInfo();
+                    }
+                },
+                () => {
+                }
+            );
+        } else {
+            App.showTip(
+                `This item is locked.
+                
 Unlock condition(s):
 ${this.getUnlockConditions(type, id).join("\n")}
+
 Unlock Reward(s):
 ${this.getUnlockRewards(type, id).join("\n")}`,
-            () => {
-            },
-            () => {
-            }
-        );
+                () => {
+                },
+                () => {
+                }
+            );
+        }
     }
 
     getSelectedType() {
         return Config.home.types[this.radio.selectedIndex];
+    }
+
+    refreshCurItemInfo() {
+        switch (this.radio.selectedIndex) {
+            case BACKGROUNDS: {
+                let config = Config.home.backgrounds[this.bgIndex];
+                this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
+                this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
+                this.ui.lockedItemBtn.visible = false;
+                break;
+            }
+            case FLOORS: {
+                let config = Config.home.floors[this.floorIndex];
+                this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
+                this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
+                this.ui.lockedItemBtn.visible = false;
+                break;
+            }
+            case SPOILS:
+            case PETS: {
+                this.itemList.refresh();
+                break;
+            }
+        }
     }
 }
 
