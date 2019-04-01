@@ -567,10 +567,14 @@ export default class HomeScene extends Scene {
         }
     }
 
-    getUnlockConditions(type, id) {
+    getUnlockConditions(type, id, ignoreCost) {
         let config = Config.home[type].find(item => item.id === id);
         if (config.unlockConditions) {
-            return config.unlockConditions.map(([id, ...args]) => {
+            let conditions = config.unlockConditions;
+            if (ignoreCost) {
+                conditions = conditions.filter(list => [Config.conditionsEnum.costCoin, Config.conditionsEnum.costDiamond].indexOf(list[0]) === -1);
+            }
+            return conditions.map(([id, ...args]) => {
                 if (id === Config.conditionsEnum.unlockMap) {
                     return GameUtils.formatString(Config.conditions[id], Config.endlessMode.sceneList.find(item => item.id === args[0]).showName);
                 } else {
@@ -608,9 +612,11 @@ export default class HomeScene extends Scene {
 
     showLockedInfo(type, id) {
         if (DataMgr.isHomeItemSatisfiedCostCondition(type, id)) {
+            let conditions = this.getUnlockConditions(type, id, true);
             App.showTip(
                 `This item is able to unlock.
-                
+
+${conditions.length !== 0 ? "Unlock condition(s):\n" + conditions.join("\n") + "\n" : ""}
 Unlock Reward(s):
 ${this.getUnlockRewards(type, id).join("\n")}
 
