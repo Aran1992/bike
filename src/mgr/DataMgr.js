@@ -77,10 +77,9 @@ class DataMgr_ {
         Config.home.types.forEach(type => {
             Config.home[type].forEach(item => {
                 if (DataMgr.isHomeItemLocked(type, item.id)
-                    && item.unlockConditions && item.unlockConditions.find(([id]) => id === conditionID)) {
-                    if (!item.unlockConditions.some(([id, ...args]) => {
-                        return !this.checkCondition(id, args);
-                    })) {
+                    && item.unlockConditions
+                    && item.unlockConditions.find(([id]) => id === conditionID)) {
+                    if (!item.unlockConditions.some(list => !this.checkCondition(...list))) {
                         let data = DataMgr.get(DataMgr.homeData);
                         data.unlocked[type].push(item.id);
                         DataMgr.set(DataMgr.homeData, data);
