@@ -17,3 +17,4 @@ export const TextStyle = PIXI.TextStyle;
 export const NineSlicePlane = PIXI.mesh.NineSlicePlane;
 export const Emitter = particles.Emitter;
 export const Rectangle = PIXI.Rectangle;
+export const filters = PIXI.filters;

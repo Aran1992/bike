@@ -18,6 +18,12 @@ export default class TipScene extends Scene {
         this.parent.setChildIndex(this, this.parent.children.length - 1);
 
         this.ui.tipText.text = args.tip;
+
+        this.ui.panel.height = this.ui.tipText.height + 170;
+
+        this.ui.confirmButton.y = this.ui.tipText.y + this.ui.tipText.height + 25;
+        this.ui.cancelButton = this.ui.confirmButton.y;
+
         this.args = args;
     }
 

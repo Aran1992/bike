@@ -226,4 +226,8 @@ export default class MyApplication extends Application {
             handler();
         }, Config.notice.duration);
     }
+
+    showTip(tip, confirmCallback, cancelCallback) {
+        App.showScene("TipScene", {tip, confirmCallback, cancelCallback});
+    }
 }

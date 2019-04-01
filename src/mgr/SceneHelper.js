@@ -260,7 +260,7 @@ function createLabel(child, parent) {
     if (fontFamily) {
         textStyle.fontFamily = fontFamily;
     }
-    if (width !== undefined) {
+    if (data.wordWrap === true) {
         textStyle.wordWrap = true;
         textStyle.wordWrapWidth = width;
     }

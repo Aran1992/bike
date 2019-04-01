@@ -70,6 +70,10 @@ if (DataMgr.get(DataMgr.homeData) === undefined) {
         spoilsList: [],
         spoilsLength: 0,
         petsList: [],
+        unlocked: {
+            spoils: [],
+            pets: [],
+        }
     });
 }
 export default DataMgr;

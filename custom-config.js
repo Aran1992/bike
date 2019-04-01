@@ -7009,6 +7009,17 @@ Config.home = {
             itemScale: 0.5,
             // 物件图标缩放
             iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                gold: 0.1,
+                distance: 0.2,
+                score: 0.5,
+            }
         },
         {
             id: 21,
@@ -7434,6 +7445,29 @@ Config.home = {
             petsVelocity: 2,
         },
     ]
+};
+
+// 解锁条件相关配置
+// ID已经对应功能了，不要更改ID和描述的对应关系
+Config.conditions = {
+    //需消费 #### 数量的金币
+    1: "Need to consume ${v0} Gold Coins",
+    //需消费 #### 数量的钻石
+    2: "Need to consume ${v0} Diamonds",
+    //需要解锁地图 ####
+    3: "Need to unlock Map${v0}",
+    //需要总里程达到 ####
+    4: "Total distance required to reach ${v0}m",
+    //需要最远里程达到过 ####
+    5: "Total farthest distance required to reach ${v0}m",
+    //需要积分达到过 ####
+    6: "Score required to reach ${v0}",
+    //需要总里程排名达到过第 #### 名
+    7: "Need to rank ${v0}st in total distance",
+    //需要最远里程排名达到过第 #### 名
+    8: "Need to rank ${v0}st in farthest distance",
+    //需要积分排名达到过第 #### 名
+    9: "Need to rank ${v0}st in score",
 };
 
 export default Config;

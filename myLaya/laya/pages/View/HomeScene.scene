@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":28,
-    "selecteID":58,
+    "selectedBox":2,
+    "selecteID":31,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -35,13 +35,14 @@
             "props":{"var":"uiContainer","top":0,"right":0,"left":0,"bottom":0},
             "nodeParent":2,
             "label":"uiContainer",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":720,"top":1,"skin":"images/bg-7.png","right":0,"left":0,"height":135},
@@ -269,6 +270,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,returnBtn",
                     "props":{"y":25,"x":25,"var":"returnBtn","top":25,"skin":"images/ButtonBack_Blue.png","left":25},
@@ -282,6 +284,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,hideUIBtn",
                     "props":{"var":"hideUIBtn","top":140,"skin":"images/button-shop-2.png","scaleY":0.7,"scaleX":0.7,"left":5},
@@ -294,6 +297,7 @@
                     "compId":26,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"HideUI","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -308,6 +312,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,startRemoveItemModeBtn",
                     "props":{"var":"startRemoveItemModeBtn","top":140,"skin":"images/button-shop-3.png","scaleY":0.7,"scaleX":0.7,"right":5},
@@ -320,6 +325,7 @@
                     "compId":27,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"StartRemove","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
@@ -334,6 +340,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endRemoveItemModeBtn",
                     "props":{"var":"endRemoveItemModeBtn","top":140,"skin":"images/button-shop-2.png","scaleY":0.7,"scaleX":0.7,"right":5},
@@ -346,6 +353,7 @@
                     "compId":29,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"EndRemove","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
@@ -360,6 +368,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,removeAllItemBtn",
                     "props":{"var":"removeAllItemBtn","top":140,"skin":"images/button-shop-1.png","scaleY":0.7,"scaleX":0.7,"right":130},
@@ -372,6 +381,7 @@
                     "compId":32,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"RemoveAll","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
@@ -386,6 +396,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,radio",
                     "props":{"width":640,"var":"radio","left":40,"height":78,"bottom":160},
@@ -454,6 +465,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lastBtn",
                     "props":{"var":"lastBtn","skin":"images/button-lastBtn.png","scaleY":2,"scaleX":2,"left":20,"bottom":45},
@@ -469,6 +481,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,nextBtn",
                     "props":{"var":"nextBtn","skin":"images/button-nextBtn.png","scaleY":2,"scaleX":2,"right":20,"bottom":45},
@@ -484,18 +497,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,itemList",
                     "props":{"width":480,"var":"itemList","height":120,"centerX":0,"bottom":20},
                     "nodeParent":31,
                     "label":"itemList",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":8,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item",
                             "props":{"width":120,"top":0,"name":"item","left":0,"height":120},
@@ -508,6 +523,7 @@
                             "compId":9,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,bg",
                                     "props":{"width":100,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","name":"bg","height":100,"centerY":0,"centerX":0},
@@ -520,6 +536,7 @@
                                     "compId":10,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,icon",
                                             "props":{"skin":"images/money-icon/MainMenuItemCourseNum01.png","name":"icon","centerY":0,"centerX":0},
@@ -536,9 +553,11 @@
                                         }],
                                     "$HIDDEN":false
                                 }]
-                        }]
+                        }],
+                    "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,selectItemPanel",
                     "props":{"width":480,"var":"selectItemPanel","height":120,"centerX":0,"bottom":20},
@@ -551,6 +570,7 @@
                     "compId":19,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,selectItemName",
                             "props":{"var":"selectItemName","top":0,"text":"Background","fontSize":30,"color":"#ffffff","centerX":0},
@@ -565,6 +585,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,commonItemBtn",
                             "props":{"var":"commonItemBtn","skin":"images/button-shop-2.png","centerX":0,"bottom":0},
@@ -577,6 +598,7 @@
                             "compId":23,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"Enable","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -592,6 +614,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selectedItemBtn",
                             "props":{"var":"selectedItemBtn","skin":"images/button-shop-1.png","centerX":0,"bottom":0},
@@ -604,6 +627,7 @@
                             "compId":24,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"Selected","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -628,14 +652,13 @@
             "props":{"var":"showUIBtn","top":5,"skin":"images/button-shop-1.png","scaleY":0.7,"scaleX":0.7,"left":5},
             "nodeParent":2,
             "label":"showUIBtn",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"y":0,"x":0,"text":"ShowUI","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},

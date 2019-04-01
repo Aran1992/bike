@@ -2,7 +2,7 @@ import Config from "../config";
 import Scene from "./Scene";
 import Radio from "../ui/Radio";
 import List from "../ui/List";
-import {Container, Graphics, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
+import {Container, filters, Graphics, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
@@ -11,6 +11,8 @@ const BACKGROUNDS = 0;
 const FLOORS = 1;
 const SPOILS = 2;
 const PETS = 3;
+
+const types = ["backgrounds", "floors", "spoils", "pets"];
 
 function randomPos() {
     let x = Math.random() * Config.home.homeWidth;
@@ -37,6 +39,9 @@ export default class HomeScene extends Scene {
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
         this.ui.removeAllItemBtn.visible = false;
+
+        this.grayFilter = new filters.ColorMatrixFilter();
+        this.grayFilter.greyscale(0.5);
 
         this.radio = new Radio({
             root: this.ui.radio,
@@ -351,12 +356,19 @@ export default class HomeScene extends Scene {
     }
 
     updateListItem(item, index) {
-        let type = this.radio.selectedIndex === SPOILS ? "spoils" : "pets";
+        let type = this.getSelectedType();
         let config = Config.home[type][index];
-        item.ui.icon.children[0].texture = Texture.from(config.path);
+        let sprite = item.ui.icon.children[0];
+        sprite.texture = Texture.from(config.path);
         let scale = config.iconScale || Config.home.defaultIconItemScale;
         item.ui.icon.children[0].scale.set(scale, scale);
         item.itemConfig = config;
+
+        if (this.isLocked(type, config.id)) {
+            sprite.filters = [this.grayFilter];
+        } else {
+            sprite.filters = [];
+        }
     }
 
     onTouchHomeStart(event) {
@@ -365,14 +377,18 @@ export default class HomeScene extends Scene {
     }
 
     onTouchItemStart(item, event) {
-        let sprite = this.addChild(new Sprite());
-        sprite.texture = Texture.from(item.itemConfig.path);
-        sprite.anchor.set(0.5, 1);
-        sprite.position.set(event.data.global.x, event.data.global.y);
-        let scale = item.itemConfig.itemScale || Config.home.defaultSceneItemScale;
-        sprite.scale.set(scale, scale);
-        this.touchingSprite = sprite;
-        this.touchingItemID = item.itemConfig.id;
+        if (this.isLocked(this.getSelectedType(), item.itemConfig.id)) {
+            this.showLockedInfo(this.getSelectedType(), item.itemConfig.id);
+        } else {
+            let sprite = this.addChild(new Sprite());
+            sprite.texture = Texture.from(item.itemConfig.path);
+            sprite.anchor.set(0.5, 1);
+            sprite.position.set(event.data.global.x, event.data.global.y);
+            let scale = item.itemConfig.itemScale || Config.home.defaultSceneItemScale;
+            sprite.scale.set(scale, scale);
+            this.touchingSprite = sprite;
+            this.touchingItemID = item.itemConfig.id;
+        }
     }
 
     onTouchMove(event) {
@@ -526,6 +542,56 @@ export default class HomeScene extends Scene {
         if (newY >= this.homeMinY && newY < this.homeMaxY) {
             this.homeInnerContainer.y = newY;
         }
+    }
+
+    isLocked(type, id) {
+        let conditions = Config.home[type].find(item => item.id === id).unlockConditions;
+        if (conditions === undefined || conditions.length === 0) {
+            return false;
+        }
+        let data = DataMgr.get(DataMgr.homeData);
+        return data.unlocked[type].indexOf(id) === -1;
+    }
+
+    getUnlockConditions(type, id) {
+        let config = Config.home[type].find(item => item.id === id);
+        if (config.unlockConditions) {
+            return config.unlockConditions.map(([id, ...args]) =>
+                GameUtils.formatString(Config.conditions[id], ...args));
+        } else {
+            return [];
+        }
+    }
+
+    getUnlockRewards(type, id) {
+        let config = Config.home[type].find(item => item.id === id);
+        if (config.unlockRewards) {
+            return [
+                `Gold Coin: ${Math.floor(config.unlockRewards.gold * 100)}%`,
+                `Distance: ${Math.floor(config.unlockRewards.distance * 100)}%`,
+                `Score: ${Math.floor(config.unlockRewards.score * 100)}%`,
+            ];
+        } else {
+            return [];
+        }
+    }
+
+    showLockedInfo(type, id) {
+        App.showTip(
+            `This item is locked.
+Unlock condition(s):
+${this.getUnlockConditions(type, id).join("\n")}
+Unlock Reward(s):
+${this.getUnlockRewards(type, id).join("\n")}`,
+            () => {
+            },
+            () => {
+            }
+        );
+    }
+
+    getSelectedType() {
+        return types[this.radio.selectedIndex];
     }
 }
 
