@@ -102,5 +102,5 @@ export default class BikeScene extends Scene {
     }
 }
 
-BikeScene.sceneFilePath = "myLaya/laya/pages/View/BikeScene.scene";
+BikeScene.sceneFilePath = "myLaya/laya/pages/View/BikeScene.scene.json";
 BikeScene.resPathList = BikeSprite.resPathList;

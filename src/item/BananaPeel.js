@@ -107,7 +107,7 @@ export default class BananaPeel {
         this.world = world;
         this.thrower = thrower;
 
-        let {sprite, body, fixture} = createPhysicalItem(parent, world, JSON.parse(resources[Config.effect.BananaPeel.peelPrefabPath].data));
+        let {sprite, body, fixture} = createPhysicalItem(parent, world, resources[Config.effect.BananaPeel.peelPrefabPath].data);
 
         this.sprite = sprite;
         this.sprite.part = this;

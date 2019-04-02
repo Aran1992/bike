@@ -42,4 +42,4 @@ export default class TipScene extends Scene {
     }
 }
 
-TipScene.sceneFilePath = "myLaya/laya/pages/View/TipScene.scene";
+TipScene.sceneFilePath = "myLaya/laya/pages/View/TipScene.scene.json";

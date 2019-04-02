@@ -10,7 +10,7 @@ export default class Effect {
         this.bike = bike;
         this.animationEndCallback = animationEndCallback;
 
-        let effectData = JSON.parse(resources[effectPath].data);
+        let effectData = resources[effectPath].data;
         let index = effectData.child.findIndex(child => child.label !== "Bike");
         let data = effectData.child[index];
         let sprite = this.bike.addBikeChild(new Sprite(), index);

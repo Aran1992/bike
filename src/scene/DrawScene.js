@@ -142,5 +142,5 @@ Score     ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) 
     }
 }
 
-DrawScene.sceneFilePath = "myLaya/laya/pages/View/DrawScene.scene";
+DrawScene.sceneFilePath = "myLaya/laya/pages/View/DrawScene.scene.json";
 DrawScene.resPathList = BikeSprite.resPathList;

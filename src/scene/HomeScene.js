@@ -691,4 +691,4 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
     }
 }
 
-HomeScene.sceneFilePath = "myLaya/laya/pages/View/HomeScene.scene";
+HomeScene.sceneFilePath = "myLaya/laya/pages/View/HomeScene.scene.json";

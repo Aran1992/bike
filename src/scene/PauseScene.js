@@ -57,4 +57,4 @@ automatically after exit.`,
     }
 }
 
-PauseScene.sceneFilePath = "myLaya/laya/pages/View/PauseScene.scene";
+PauseScene.sceneFilePath = "myLaya/laya/pages/View/PauseScene.scene.json";

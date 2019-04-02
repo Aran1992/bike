@@ -118,4 +118,4 @@ export default class GameResultScene extends Scene {
     }
 }
 
-GameResultScene.sceneFilePath = "myLaya/laya/pages/View/GameResultScene.scene";
+GameResultScene.sceneFilePath = "myLaya/laya/pages/View/GameResultScene.scene.json";

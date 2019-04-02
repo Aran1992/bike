@@ -3,13 +3,17 @@ const path = require("path");
 const webpack = require("webpack");
 const config = require("../webpack.config");
 
+const exceptFileEnds = [".scene", ".prefab"];
+
 function copy_(src, dist, exceptList) {
     if (exceptList && exceptList.some(file => file === src)) {
         return;
     }
     if (fs.lstatSync(src).isFile()) {
-        fs.mkdirSync(path.dirname(dist), {recursive: true});
-        fs.writeFileSync(dist, fs.readFileSync(src));
+        if (!exceptFileEnds.some(ends => src.endsWith(ends))) {
+            fs.mkdirSync(path.dirname(dist), {recursive: true});
+            fs.writeFileSync(dist, fs.readFileSync(src));
+        }
     } else {
         fs.mkdirSync(dist, {recursive: true});
         fs.readdirSync(src).forEach(file => copy_(path.join(src, file), path.join(dist, file), exceptList));
@@ -39,7 +43,8 @@ function deleteall(path) {
     }
 }
 
-config.mode = "production";
+require("../pack").pack();
+// config.mode = "production";
 webpack(config, () => {
     deleteall("./publish");
     [

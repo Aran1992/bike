@@ -6588,9 +6588,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_04.png",
     },
@@ -6607,9 +6607,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_03.png",
     },
@@ -6624,9 +6624,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_06.png",
     },
@@ -6645,11 +6645,11 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 承受者持续特效路径（可以是动画或者静态图片）
-        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab",
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_07.png",
     },
@@ -6664,9 +6664,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_11.png",
     },
@@ -6679,9 +6679,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect2.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect2.prefab.json",
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
@@ -6694,7 +6694,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_05.png",
     },
@@ -6709,7 +6709,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_02.png",
     },
@@ -6722,7 +6722,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_09.png",
     },
@@ -6737,20 +6737,20 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_01.png",
     },
     // 香蕉皮
     BananaPeel: {
         // 丢出去的香蕉皮的编辑器预制件
-        peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab",
+        peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab.json",
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon3_09.png",
         // 使用者使用特效路径（只能是动画）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab.json",
     }
 };
 

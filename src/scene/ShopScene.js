@@ -296,7 +296,7 @@ export default class ShopScene extends Scene {
     }
 }
 
-ShopScene.sceneFilePath = "myLaya/laya/pages/View/ShopScene.scene";
+ShopScene.sceneFilePath = "myLaya/laya/pages/View/ShopScene.scene.json";
 ShopScene.resPathList = Config.endlessMode.sceneList.map(scene => scene.texture.shopCover)
     .concat(Config.moneyList.map(item => item.imagePath))
     .concat(Config.presentList.map(item => item.imagePath));

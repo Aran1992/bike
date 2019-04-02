@@ -33,4 +33,4 @@ export default class SystemScene extends Scene {
     }
 }
 
-SystemScene.sceneFilePath = "myLaya/laya/pages/View/SystemScene.scene";
+SystemScene.sceneFilePath = "myLaya/laya/pages/View/SystemScene.scene.json";

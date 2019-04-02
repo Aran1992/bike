@@ -20,14 +20,13 @@ function loadSceneRes(pathList, callback) {
         item.child.forEach(item => handle(item));
     };
     pathList.forEach(path => {
-        let sceneData = JSON.parse(resources[path].data);
-        handle(sceneData);
+        handle(resources[path].data);
     });
     App.loadResources(resPathList, callback);
 }
 
 function createScene(path, sceneContainer) {
-    let sceneData = JSON.parse(resources[path].data);
+    let sceneData = resources[path].data;
     sceneContainer.mywidth = App.sceneWidth;
     sceneContainer.myheight = App.sceneHeight;
     sceneContainer.interactive = true;
@@ -260,7 +259,7 @@ function createLabel(child, parent) {
     if (fontFamily) {
         textStyle.fontFamily = fontFamily;
     }
-    if (data.wordWrap === true) {
+    if (width !== undefined) {
         textStyle.wordWrap = true;
         textStyle.wordWrapWidth = width;
     }

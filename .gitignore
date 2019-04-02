@@ -6,3 +6,5 @@
 /publish-fb
 /test.html
 /note.txt
+*.scene.json
+*.prefab.json

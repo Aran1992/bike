@@ -130,8 +130,8 @@ export default class MyApplication extends Application {
         };
         let list = [];
         resPathList.forEach(path => {
-            if (path.endsWith(".scene") || path.endsWith(".prefab")) {
-                handle(list, JSON.parse(resources[path].data));
+            if (path.endsWith(".scene.json") || path.endsWith(".prefab.json")) {
+                handle(list, resources[path].data);
             }
         });
         return list;

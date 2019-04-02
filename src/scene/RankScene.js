@@ -73,4 +73,4 @@ export default class RankScene extends Scene {
     }
 }
 
-RankScene.sceneFilePath = "myLaya/laya/pages/View/RankScene.scene";
+RankScene.sceneFilePath = "myLaya/laya/pages/View/RankScene.scene.json";

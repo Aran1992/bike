@@ -2,41 +2,55 @@ import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
 import Utils from "./mgr/Utils";
 
-if (document.body.children[0] instanceof HTMLParagraphElement) {
-    document.body.removeChild(document.body.children[0]);
-}
+const findRootWindow = () => {
+    let w = window;
+    while (w.parent !== w) {
+        w = w.parent;
+    }
+    return w;
+};
+findRootWindow();
 
-document.body.style.margin = "0";
+window.onload = () => {
+    if (document.body.children[0] instanceof HTMLParagraphElement) {
+        document.body.removeChild(document.body.children[0]);
+    }
 
-let resolution,
-    appWidth,
-    appHeight;
+    document.body.style.margin = "0";
 
-let wwhRatio = window.innerWidth / window.innerHeight;
-let dwhRatio = Config.designWidth / Config.designHeight;
-if (wwhRatio >= dwhRatio) {
-    resolution = window.innerHeight / Config.designHeight;
-    appWidth = Config.designWidth;
-    appHeight = Config.designHeight;
-} else {
-    resolution = window.innerWidth / Config.designWidth;
-    appWidth = Config.designWidth;
-    appHeight = Config.designWidth / window.innerWidth * window.innerHeight;
-}
+    let window = findRootWindow();
 
-const App = new MyApplication({
-    width: appWidth,
-    height: appHeight,
-    resolution: resolution,
-    antialias: true,
-    transparent: false,
-});
-document.body.appendChild(App.view);
+    let resolution = 0.5,
+        appWidth = 720,
+        appHeight = 1280;
 
-App.view.style.position = "absolute";
-App.view.style.left = (window.innerWidth - App.view.offsetWidth) / 2 + "px";
-App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
+    let wwhRatio = window.innerWidth / window.innerHeight;
+    let dwhRatio = Config.designWidth / Config.designHeight;
+    if (wwhRatio >= dwhRatio) {
+        resolution = window.innerHeight / Config.designHeight;
+        appWidth = Config.designWidth;
+        appHeight = Config.designHeight;
+    } else {
+        resolution = window.innerWidth / Config.designWidth;
+        appWidth = Config.designWidth;
+        appHeight = Config.designWidth / window.innerWidth * window.innerHeight;
+    }
 
-App.loadResources(Utils.values(Config.startImagePath), () => {
-    App.showScene(Config.initScene);
-});
+
+    const App = new MyApplication({
+        width: appWidth,
+        height: appHeight,
+        resolution: resolution,
+        antialias: true,
+        transparent: false,
+    });
+    document.body.appendChild(App.view);
+
+    App.view.style.position = "absolute";
+    App.view.style.left = (window.innerWidth - App.view.offsetWidth) / 2 + "px";
+    App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
+
+    App.loadResources(Utils.values(Config.startImagePath), () => {
+        App.showScene(Config.initScene);
+    });
+};

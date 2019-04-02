@@ -135,7 +135,7 @@ export default class MainScene extends Scene {
     }
 }
 
-MainScene.sceneFilePath = "myLaya/laya/pages/View/MainScene.scene";
+MainScene.sceneFilePath = "myLaya/laya/pages/View/MainScene.scene.json";
 MainScene.resPathList = Config.mapList.map(scene => scene.texture.mainCover)
     .concat(Config.endlessMode.sceneList.map(scene => scene.texture.mainCover))
     .concat(BikeSprite.resPathList);

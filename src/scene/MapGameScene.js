@@ -46,12 +46,12 @@ export default class MapGameScene extends GameScene {
                 this.mapConfig.texture.top,
                 this.mapConfig.texture.side2,
                 this.mapConfig.texture.top2,
-                Config.mapBasePath + this.mapConfig.scenePath + ".scene",
+                Config.mapBasePath + this.mapConfig.scenePath + ".scene.json",
             ]);
     }
 
     onLoadedBaseRes() {
-        SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene", this.onLoadedGameRes.bind(this));
+        SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene.json", this.onLoadedGameRes.bind(this));
     }
 
     onRestart() {
@@ -103,7 +103,7 @@ export default class MapGameScene extends GameScene {
     }
 
     getRoadPathList() {
-        let json = JSON.parse(resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
+        let json = resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene.json"].data;
         return json.child
             .filter(data => data.label.split("//").find(str => str === "Road"))
             .map(data => {
@@ -130,7 +130,7 @@ export default class MapGameScene extends GameScene {
     }
 
     createMap() {
-        let json = JSON.parse(resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene"].data);
+        let json = resources[Config.mapBasePath + this.mapConfig.scenePath + ".scene.json"].data;
         json.child.forEach(data => this.createPart(data));
         this.roadList.sort((a, b) => a.getLeftBorderX() - b.getLeftBorderX());
     }
