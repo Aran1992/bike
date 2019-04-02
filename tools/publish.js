@@ -44,7 +44,7 @@ function deleteall(path) {
 }
 
 require("../pack").pack();
-// config.mode = "production";
+config.mode = "production";
 webpack(config, () => {
     deleteall("./publish");
     [
