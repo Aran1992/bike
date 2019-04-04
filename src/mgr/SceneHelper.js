@@ -1,4 +1,4 @@
-import {Container, NineSlicePlane, resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
+import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle} from "../libs/pixi-wrapper";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -48,6 +48,10 @@ function createSceneChild(child, parent, root) {
         }
         case "Label": {
             item = createLabel(child, parent);
+            break;
+        }
+        case "TextInput": {
+            item = createTextInput(child, parent);
             break;
         }
         default: {
@@ -279,6 +283,45 @@ function createLabel(child, parent) {
     text.visible = visible;
 
     return text;
+}
+
+function createTextInput(child, parent) {
+    let data = child.props;
+
+    let width = getValue(data.width, 100);
+    let height = getValue(data.height, 100);
+    let fontSize = getValue(data.fontSize, 12);
+
+    let inputStyle = {
+        fontSize: `${fontSize}px`,
+        padding: `${(height - fontSize) / 2}px`,
+        width: `${width}px`,
+        color: "#26272E"
+    };
+
+    let boxStyle = {
+        default: {fill: 0xE8E9F3, rounded: 12, stroke: {color: 0xCBCEE0, width: 3}},
+        focused: {fill: 0xE1E3EE, rounded: 12, stroke: {color: 0xABAFC6, width: 3}},
+        disabled: {fill: 0xDBDBDB, rounded: 12}
+    };
+
+    let item = new TextInput(inputStyle, boxStyle);
+
+    item.placeholder = data.prompt;
+
+    let x = 0, y = 0;
+
+    if (data.centerX !== undefined) {
+        x = parent.mywidth / 2 + data.centerX - width / 2;
+    }
+
+    if (data.centerY !== undefined) {
+        y = parent.myheight / 2 + data.centerY - height / 2;
+    }
+
+    item.position.set(x, y);
+
+    return item;
 }
 
 function getPanelBaseInfo(child, parent, defaultInfo) {

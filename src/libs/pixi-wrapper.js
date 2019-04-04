@@ -1,5 +1,6 @@
 import * as PIXI from "pixi.js";
 import * as particles from "pixi-particles";
+import "./pixi-textinput";
 
 export default PIXI;
 
@@ -18,3 +19,4 @@ export const NineSlicePlane = PIXI.mesh.NineSlicePlane;
 export const Emitter = particles.Emitter;
 export const Rectangle = PIXI.Rectangle;
 export const filters = PIXI.filters;
+export const TextInput = PIXI.TextInput;

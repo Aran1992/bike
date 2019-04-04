@@ -1,7 +1,7 @@
 let Config = {
     roadFatalMinLength: 0.5,
     listResistance: 2,
-    initScene: "MainScene",
+    initScene: "LoginScene",
     designWidth: 720,
     designHeight: 1280,
     resolution: 1,

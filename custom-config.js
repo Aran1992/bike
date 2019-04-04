@@ -7984,8 +7984,8 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-				[2, 50],
-				[3, 7],
+                [2, 50],
+                [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -8203,5 +8203,7 @@ Config.conditionsEnum = {
     farthestDistanceRank: 8,
     scoreRank: 9,
 };
+
+Config.serverUrl = "http://47.106.20.87:10001";
 
 export default Config;

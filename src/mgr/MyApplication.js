@@ -25,6 +25,8 @@ import SystemScene from "../scene/SystemScene";
 import HomeScene from "../scene/HomeScene";
 import UIHelper from "../ui/UIHelper";
 import RankScene from "../scene/RankScene";
+import RegisterScene from "../scene/RegisterScene";
+import LoginScene from "../scene/LoginScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -60,6 +62,8 @@ export default class MyApplication extends Application {
             "GameResultScene": GameResultScene,
             "SystemScene": SystemScene,
             "RankScene": RankScene,
+            "RegisterScene": RegisterScene,
+            "LoginScene": LoginScene,
         };
 
         this.sceneTable = {};
@@ -199,6 +203,8 @@ export default class MyApplication extends Application {
         let text = new Text(notice, new TextStyle({
             fill: Config.notice.fill,
             fontSize: Config.notice.fontSize,
+            wordWrap: true,
+            wordWrapWidth: App.sceneWidth * 0.8,
         }));
         text.position.set(margin / 2, margin / 2);
 

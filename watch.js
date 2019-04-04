@@ -14,7 +14,7 @@ fs.watch(root, {recursive: true}, (event, filename) => {
             data = data
                 .replace(/\.prefab/g, ".prefab.json")
                 .replace(/\.scene/g, ".scene.json");
-            fs.writeFile(filepath + ".json", JSON.stringify(JSON.parse(data)));
+            fs.writeFileSync(filepath + ".json", JSON.stringify(JSON.parse(data)));
         });
     }
 });

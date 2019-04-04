@@ -33,12 +33,16 @@ export default class TipScene extends Scene {
 
     onClickConfirmButton() {
         App.hideScene("TipScene");
-        this.args.confirmCallback();
+        if (this.args.confirmCallback) {
+            this.args.confirmCallback();
+        }
     }
 
     onClickCancelButton() {
         App.hideScene("TipScene");
-        this.args.cancelCallback();
+        if (this.args.cancelCallback) {
+            this.args.cancelCallback();
+        }
     }
 }
 
