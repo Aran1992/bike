@@ -173,4 +173,8 @@ export default class Utils {
         let height = p.y - lp1.y - Math.tan(angle) * (p.x - lp1.x);
         return Math.cos(angle) * height;
     }
+
+    static clone(object) {
+        return JSON.parse(JSON.stringify(object));
+    }
 }

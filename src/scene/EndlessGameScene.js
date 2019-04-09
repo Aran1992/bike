@@ -4,6 +4,7 @@ import {resources} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import SceneHelper from "../mgr/SceneHelper";
+import {Vec2} from "../libs/planck-wrapper";
 
 export default class EndlessGameScene extends GameScene {
     onCreate() {
@@ -41,9 +42,13 @@ export default class EndlessGameScene extends GameScene {
     }
 
     getResPathList() {
-        this.sceneFilePathList = this.sceneConfig.roadSectionList.reduce((list, diff) =>
-            list.concat(diff.map(section =>
-                `${Config.endlessMode.baseScenePath}${section}.scene.json`)), []);
+        this.sceneFilePathList = this.sceneConfig.roadSectionList.reduce((list, diff) => {
+            diff.list.forEach(roadSectionID => {
+                let roadSection = Config.roadSections[roadSectionID];
+                roadSection.forEach(name => list.push(`${Config.endlessMode.baseScenePath}${name}.scene.json`));
+            });
+            return list;
+        }, []);
         return super.getResPathList()
             .concat(this.sceneConfig.texture.bg)
             .concat([
@@ -84,23 +89,9 @@ export default class EndlessGameScene extends GameScene {
 
         this.enemyList = [];
 
-        this.diffIndex = 0;
-        let roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-            resources[`${Config.endlessMode.baseScenePath}${section}.scene.json`].data);
-
-        this.partList = [];
-        let sumLength = 0;
-        let config = this.sceneConfig.roadSectionLengthList[this.diffIndex];
-        while (config > sumLength) {
-            if (roadSectionList.length === 0) {
-                roadSectionList = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-                    resources[`${Config.endlessMode.baseScenePath}${section}.scene.json`].data);
-            }
-            let index = Math.floor(Math.random() * roadSectionList.length);
-            let item = roadSectionList.splice(index, 1)[0];
-            this.partList.push(item);
-            sumLength += item.props.width;
-        }
+        this.diffIndex = -1;
+        this.roadSectionList = this.sceneConfig.roadSectionList;
+        this.preparePartList();
     }
 
     createRoadSection(json, offsetX, offsetY) {
@@ -115,30 +106,43 @@ export default class EndlessGameScene extends GameScene {
     dynamicCreateRoad() {
         if (this.mapWidth <= -this.cameraContainer.x + Config.designWidth) {
             if (this.partList.length === 0) {
-                if (this.sceneConfig.roadSectionList[this.diffIndex + 1]) {
-                    this.diffIndex++;
-                }
-                let list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-                    resources[`${Config.endlessMode.baseScenePath}${section}.scene.json`].data);
-                this.partList = [];
-                let config = this.sceneConfig.roadSectionLengthList[this.diffIndex];
-                let sumLength = 0;
-                while (config > sumLength) {
-                    if (list.length === 0) {
-                        list = this.sceneConfig.roadSectionList[this.diffIndex].map(section =>
-                            resources[`${Config.endlessMode.baseScenePath}${section}.scene.json`].data);
-                    }
-                    let index = Math.floor(Math.random() * list.length);
-                    let item = list.splice(index, 1)[0];
-                    this.partList.push(item);
-                    sumLength += item.props.width;
-                }
+                this.preparePartList();
             }
             let item = this.partList.pop();
             this.createRoadSection(item, this.offsetX, this.offsetY);
             this.mapWidth += item.props.width;
             this.offsetX += item.props.width;
             this.offsetY += item.props.height;
+        }
+    }
+
+    preparePartList() {
+        if (this.roadSectionList[this.diffIndex + 1]) {
+            this.diffIndex++;
+        } else {
+            this.diffIndex = 0;
+            this.roadSectionList = this.sceneConfig.infiniteRoadSectionList;
+        }
+        let roadSection = this.roadSectionList[this.diffIndex];
+        let rsListID = Utils.randomChoose(roadSection.list);
+        let rsList = Config.roadSections[rsListID].map(name =>
+            Utils.clone(resources[`${Config.endlessMode.baseScenePath}${name}.scene.json`].data));
+
+        this.player.velocity.setBasicValueRate(roadSection.velocity);
+        this.bikeBody.setLinearVelocity(Vec2(this.player.velocity.value, this.bikeBody.getLinearVelocity().y));
+
+        this.partList = [];
+        let sumLength = 0;
+        let roadSectionLength = roadSection.length;
+        while (roadSectionLength > sumLength) {
+            if (rsList.length === 0) {
+                rsList = Config.roadSections[rsListID].map(name =>
+                    Utils.clone(resources[`${Config.endlessMode.baseScenePath}${name}.scene.json`].data));
+            }
+            let index = Math.floor(Math.random() * rsList.length);
+            let item = rsList.splice(index, 1)[0];
+            this.partList.push(item);
+            sumLength += item.props.width;
         }
     }
 

@@ -65,7 +65,7 @@ export default class GameScene extends Scene {
             this.gameContainer.addChild(this.cameraContainer);
         }
 
-        this.createBottomMask();
+        // this.createBottomMask();
 
         // this.createFPSText();
 
