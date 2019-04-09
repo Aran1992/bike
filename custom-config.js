@@ -8204,6 +8204,10 @@ Config.conditionsEnum = {
     scoreRank: 9,
 };
 
-Config.serverUrl = "http://47.106.20.87:10001";
+if (window.ipConfig && window.ipConfig.innerHTML.length) {
+    Config.serverUrl = window.ipConfig.innerText;
+} else {
+    Config.serverUrl = "http://47.106.20.87:10001";
+}
 
 export default Config;

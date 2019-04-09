@@ -1,6 +1,5 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
-import Utils from "./mgr/Utils";
 
 FBInstant.initializeAsync()
     .then(function () {
@@ -38,8 +37,6 @@ FBInstant.initializeAsync()
                 App.view.style.left = (window.innerWidth - App.view.offsetWidth) / 2 + "px";
                 App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
 
-                App.loadResources(Utils.values(Config.startImagePath), () => {
-                    App.showScene(Config.initScene);
-                });
+                App.showScene(Config.initScene);
             });
     });

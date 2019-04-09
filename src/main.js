@@ -1,6 +1,5 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
-import Utils from "./mgr/Utils";
 import NetworkMgr from "./mgr/NetworkMgr";
 
 const findRootWindow = () => {
@@ -50,17 +49,15 @@ window.onload = () => {
     App.view.style.left = (window.innerWidth - App.view.offsetWidth) / 2 + "px";
     App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
 
-    App.loadResources(Utils.values(Config.startImagePath), () => {
-        let username = localStorage.username;
-        let password = localStorage.password;
-        if (username && password) {
-            NetworkMgr.requestLogin(username, password, () => {
-                App.showScene("MainScene");
-            }, () => {
-                App.showScene("LoginScene");
-            });
-        } else {
+    let username = localStorage.username;
+    let password = localStorage.password;
+    if (username && password) {
+        NetworkMgr.requestLogin(username, password, () => {
+            App.showScene("MainScene");
+        }, () => {
             App.showScene("LoginScene");
-        }
-    });
+        });
+    } else {
+        App.showScene("LoginScene");
+    }
 };

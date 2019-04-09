@@ -14,9 +14,9 @@ export default class LoginScene extends Scene {
         this.onClick(this.ui.goToCreateAccountBtn, this.onClickGoToCreateAccountBtn.bind(this));
     }
 
-    onShow(){
-        this.ui.usernameInput.text="";
-        this.ui.passwordInput.text="";
+    onShow() {
+        this.ui.usernameInput.text = "";
+        this.ui.passwordInput.text = "";
     }
 
     onClickLoginBtn() {
