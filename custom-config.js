@@ -1081,43 +1081,26 @@ Config.bikeJumpingRotation = -30;
 
 // 路段配置
 Config.roadSections = {
+    // 奖励关卡（Special-1）
+    "0-0": [
+		// 关卡元素：纯路线
+        "Special011/Special011-00000101",
+        "Special011/Special011-00000102",
+        "Special011/Special011-00000121",
+        "Special011/Special011-00000122",
+    ],
+    // 关卡阶段1（安全阶段）（LV-1）
     "1-1": [
         // 关卡元素：纯路线
+        "Lv011/Lv011-00000101",
         "Lv011/Lv011-00000121",
         "Lv011/Lv011-00000401",
         "Lv011/Lv011-00000421",
         "Lv011/Lv011-00000701",
         "Lv011/Lv011-00000721",
-        "Lv011/Lv011-00000101"
     ],
-    "2-1": [
-        // 关卡元素：滚石1
-        "Lv021/Lv021-00800101",
-        "Lv021/Lv021-00800121",
-        "Lv021/Lv021-00800401",
-        "Lv021/Lv021-00800421",
-        "Lv021/Lv021-00800701",
-        "Lv021/Lv021-00800721",
-    ],
-    "2-2": [
-        // 关卡元素：小鸟1
-        "Lv021/Lv021-00700101",
-        "Lv021/Lv021-00700121",
-        "Lv021/Lv021-00700401",
-        "Lv021/Lv021-00700421",
-        "Lv021/Lv021-00700701",
-        "Lv021/Lv021-00700721",
-    ],
-    "2-3": [
-        // 关卡元素：移动平台
-        "Lv021/Lv021-00100101",
-        "Lv021/Lv021-00100121",
-        "Lv021/Lv021-00100401",
-        "Lv021/Lv021-00100421",
-        "Lv021/Lv021-00100701",
-        "Lv021/Lv021-00100721",
-    ],
-    "2-4": [
+    // 关卡阶段2（普通难度）（LV-2）
+    "2-0": [
         // 关卡元素：纯路线-带道具
         "Lv021/Lv021-00000101-0",
         "Lv021/Lv021-00000121-0",
@@ -1126,14 +1109,160 @@ Config.roadSections = {
         "Lv021/Lv021-00000701-0",
         "Lv021/Lv021-00000721-0",
     ],
-    "2-5": [
+    "2-1": [
         // 关卡元素：纯路线
+        "Lv021/Lv021-00000101",
         "Lv021/Lv021-00000121",
         "Lv021/Lv021-00000401",
         "Lv021/Lv021-00000421",
         "Lv021/Lv021-00000701",
         "Lv021/Lv021-00000721",
-        "Lv021/Lv021-00000101"
+    ],
+    "2-11": [
+        // 关卡元素：移动平台
+        "Lv021/Lv021-00100101",
+        "Lv021/Lv021-00100121",
+        "Lv021/Lv021-00100401",
+        "Lv021/Lv021-00100421",
+        "Lv021/Lv021-00100701",
+        "Lv021/Lv021-00100721",
+    ],
+    "2-21": [
+        // 关卡元素：蜘蛛网
+        "Lv021/Lv021-00200101",
+        "Lv021/Lv021-00200121",
+        "Lv021/Lv021-00200401",
+        "Lv021/Lv021-00200421",
+        "Lv021/Lv021-00200701",
+        "Lv021/Lv021-00200721",
+    ],
+    "2-31": [
+        // 关卡元素：地刺-固定
+        "Lv021/Lv021-00300101",
+        "Lv021/Lv021-00300121",
+        "Lv021/Lv021-00300401",
+        "Lv021/Lv021-00300421",
+        "Lv021/Lv021-00300701",
+        "Lv021/Lv021-00300721",
+    ],
+    "2-51": [
+        // 关卡元素：火柱
+        "Lv021/Lv021-00500101",
+        "Lv021/Lv021-00500121",
+        "Lv021/Lv021-00500401",
+        "Lv021/Lv021-00500421",
+        "Lv021/Lv021-00500701",
+        "Lv021/Lv021-00500721",
+    ],
+    "2-61": [
+        // 关卡元素：火球
+        "Lv021/Lv021-00600101",
+        "Lv021/Lv021-00600121",
+        "Lv021/Lv021-00600401",
+        "Lv021/Lv021-00600421",
+        "Lv021/Lv021-00600701",
+        "Lv021/Lv021-00600721",
+    ],
+    "2-71": [
+        // 关卡元素：小鸟1
+        "Lv021/Lv021-00700101",
+        "Lv021/Lv021-00700121",
+        "Lv021/Lv021-00700401",
+        "Lv021/Lv021-00700421",
+        "Lv021/Lv021-00700701",
+        "Lv021/Lv021-00700721",
+    ],
+    "2-81": [
+        // 关卡元素：滚石1
+        "Lv021/Lv021-00800101",
+        "Lv021/Lv021-00800121",
+        "Lv021/Lv021-00800401",
+        "Lv021/Lv021-00800421",
+        "Lv021/Lv021-00800701",
+        "Lv021/Lv021-00800721",
+    ],
+
+    // 关卡阶段3（困难难度）（LV-3）
+    "3-0": [
+        // 关卡元素：纯路线-带道具
+        "Lv031/Lv031-00000101-0",
+        "Lv031/Lv031-00000121-0",
+        "Lv031/Lv031-00000401-0",
+        "Lv031/Lv031-00000421-0",
+        "Lv031/Lv031-00000701-0",
+        "Lv031/Lv031-00000721-0",
+    ],
+    "3-1": [
+        // 关卡元素：纯路线
+        "Lv031/Lv031-00000101",
+        "Lv031/Lv031-00000121",
+        "Lv031/Lv031-00000401",
+        "Lv031/Lv031-00000421",
+        "Lv031/Lv031-00000701",
+        "Lv031/Lv031-00000721",
+    ],
+    "3-11": [
+        // 关卡元素：移动平台
+        "Lv031/Lv031-00100101",
+        "Lv031/Lv031-00100121",
+        "Lv031/Lv031-00100401",
+        "Lv031/Lv031-00100421",
+        "Lv031/Lv031-00100701",
+        "Lv031/Lv031-00100721",
+    ],
+    "3-21": [
+        // 关卡元素：蜘蛛网
+        "Lv031/Lv031-00200101",
+        "Lv031/Lv031-00200121",
+        "Lv031/Lv031-00200401",
+        "Lv031/Lv031-00200421",
+        "Lv031/Lv031-00200701",
+        "Lv031/Lv031-00200721",
+    ],
+    "3-31": [
+        // 关卡元素：地刺-固定
+        "Lv031/Lv031-00300101",
+        "Lv031/Lv031-00300121",
+        "Lv031/Lv031-00300401",
+        "Lv031/Lv031-00300421",
+        "Lv031/Lv031-00300701",
+        "Lv031/Lv031-00300721",
+    ],
+    "3-51": [
+        // 关卡元素：火柱
+        "Lv031/Lv031-00500101",
+        "Lv031/Lv031-00500121",
+        "Lv031/Lv031-00500401",
+        "Lv031/Lv031-00500421",
+        "Lv031/Lv031-00500701",
+        "Lv031/Lv031-00500721",
+    ],
+    "3-61": [
+        // 关卡元素：火球
+        "Lv031/Lv031-00600101",
+        "Lv031/Lv031-00600121",
+        "Lv031/Lv031-00600401",
+        "Lv031/Lv031-00600421",
+        "Lv031/Lv031-00600701",
+        "Lv031/Lv031-00600721",
+    ],
+    "3-71": [
+        // 关卡元素：小鸟1
+        "Lv031/Lv031-00700101",
+        "Lv031/Lv031-00700121",
+        "Lv031/Lv031-00700401",
+        "Lv031/Lv031-00700421",
+        "Lv031/Lv031-00700701",
+        "Lv031/Lv031-00700721",
+    ],
+    "3-81": [
+        // 关卡元素：滚石1
+        "Lv031/Lv031-00800101",
+        "Lv031/Lv031-00800121",
+        "Lv031/Lv031-00800401",
+        "Lv031/Lv031-00800421",
+        "Lv031/Lv031-00800701",
+        "Lv031/Lv031-00800721",
     ],
 };
 
@@ -1189,25 +1318,41 @@ Config.endlessMode.sceneList = [
         // 每个难度的长度（单位像素）（1米=16像素）（几个难度就要填几个，最后一个难度虽然重复但要填不然会报错）
         roadSectionList: [
             {
-                list: ["1-1",],
-                length: 10000,
+                list: ["2-0",],
+                length: 1000,
                 velocity: 1,
             },
+
             {
-                list: ["2-1", "2-2", "2-3", "2-4", "2-5",],
-                length: 10000,
-                velocity: 2,
+                list: ["2-61", "2-11",],
+                length: 1000,
+                velocity: 1.2,
+            },
+            {
+                list: ["2-0",],
+                length: 1000,
+                velocity: 1.2,
+            },
+            {
+                list: ["2-61", "2-11",],
+                length: 1000,
+                velocity: 1.2,
+            },
+            {
+                list: ["2-0",],
+                length: 1000,
+                velocity: 1.2,
             },
         ],
         infiniteRoadSectionList: [
             {
-                list: ["1-1",],
-                length: 10000,
-                velocity: 1,
+                list: ["2-1",],
+                length: 1000,
+                velocity: 3,
             },
             {
-                list: ["2-1", "2-2", "2-3", "2-4", "2-5",],
-                length: 10000,
+                list: ["3-1",],
+                length: 1000,
                 velocity: 2,
             },
         ],
@@ -6416,9 +6561,9 @@ Config.effect = {
         targetType: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_04.png",
@@ -6435,9 +6580,9 @@ Config.effect = {
         targetType: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_03.png",
@@ -6452,9 +6597,9 @@ Config.effect = {
         targetType: 0,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_06.png",
@@ -6473,11 +6618,11 @@ Config.effect = {
         targetType: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
-        // 承受者持续特效路径（可以是动画或者静态图片）
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_07.png",
@@ -6492,9 +6637,9 @@ Config.effect = {
         targetType: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_11.png",
@@ -6507,9 +6652,9 @@ Config.effect = {
         targetType: 2,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect2.prefab.json",
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
@@ -6522,7 +6667,7 @@ Config.effect = {
         isHelpful: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_05.png",
@@ -6537,7 +6682,7 @@ Config.effect = {
         isHelpful: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_02.png",
@@ -6550,7 +6695,7 @@ Config.effect = {
         isHelpful: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_09.png",
@@ -6565,20 +6710,20 @@ Config.effect = {
         velocity: 1000,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_01.png",
     },
     // 香蕉皮
     BananaPeel: {
-        // 丢出去的香蕉皮的编辑器预制件
+        // 丢出去的香蕉皮的编辑器预制件（因为平台关系需加上.json）
         peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab.json",
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon3_09.png",
-        // 使用者使用特效路径（只能是动画）
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
-        // 承受者受击特效路径（只能是动画）
+        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab.json",
     }
 };
