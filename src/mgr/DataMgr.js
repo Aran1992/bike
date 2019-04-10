@@ -1,12 +1,8 @@
 import Config from "../config";
+import NetworkMgr from "./NetworkMgr";
 
 class DataMgr_ {
     constructor() {
-        if (localStorage[window.location.href]) {
-            this.dataTable = JSON.parse(localStorage[window.location.href]);
-        } else {
-            this.dataTable = {};
-        }
         this.conditionTable = {
             //需消费 #### 数量的金币
             1: () => false,
@@ -29,9 +25,48 @@ class DataMgr_ {
         };
     }
 
+    init(dataTable) {
+        this.dataTable = dataTable;
+        if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
+            DataMgr.set(DataMgr.ownedBikeList, [0]);
+        }
+        let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
+        DataMgr.get(DataMgr.ownedBikeList, []).forEach(id => {
+            if (bikeLevelMap[id] === undefined) {
+                bikeLevelMap[id] = 0;
+            }
+        });
+        DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
+        if (DataMgr.get(DataMgr.selectedBike) === undefined) {
+            DataMgr.set(DataMgr.selectedBike, 0);
+        }
+        if (DataMgr.get(DataMgr.nextFreeDrawTime) === undefined) {
+            DataMgr.set(DataMgr.nextFreeDrawTime, (new Date()).getTime());
+        }
+        if (DataMgr.get(DataMgr.currentMapScene) === undefined) {
+            DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.mapList.length));
+        }
+        if (DataMgr.get(DataMgr.homeData) === undefined) {
+            DataMgr.set(DataMgr.homeData, {
+                bgID: 1,
+                floorID: 1,
+                spoilsList: [],
+                spoilsLength: 0,
+                petsList: [],
+                unlocked: {
+                    backgrounds: [],
+                    floors: [],
+                    spoils: [],
+                    pets: [],
+                }
+            });
+        }
+    }
+
     set(key, value) {
         this.dataTable[key] = value;
-        localStorage[window.location.href] = JSON.stringify(this.dataTable);
+        clearTimeout(this.timer);
+        this.timer = setTimeout(() => NetworkMgr.requestSaveData(this.dataTable), 100);
         if (key === DataMgr.unlockAllEndlessScene
             || key === DataMgr.unlockEndlessSceneIDList
             || key === DataMgr.distance) {
@@ -101,59 +136,25 @@ class DataMgr_ {
 
 const DataMgr = new DataMgr_();
 
-DataMgr.selectedEndlessScene = "selectedEndlessScene";
-DataMgr.distance = "distance";
-DataMgr.diamond = "diamond";
-DataMgr.coin = "coin";
-DataMgr.totalScore = "totalScore";
-DataMgr.currentMapScene = "currentMapScene";
-DataMgr.selectedBike = "selectedBike";
-DataMgr.ownedBikeList = "ownedBikeList";
-DataMgr.nextFreeDrawTime = "nextFreeDrawTime";
-DataMgr.hasBuyPresentIDList = "hasBuyPresentIDList";
-DataMgr.unlockAllBike = "unlockAllBike";
-DataMgr.unlockAllEndlessScene = "unlockAllEndlessScene";
-DataMgr.unlockEndlessSceneIDList = "unlockEndlessSceneIDList";
-DataMgr.bgmOn = "bgmOn";
-DataMgr.soundOn = "soundOn";
-DataMgr.distanceRecord = "distanceRecord";
-DataMgr.bikeLevelMap = "bikeLevelMap";
-DataMgr.homeData = "homeData";
-DataMgr.costCoin = "costCoin";
-DataMgr.costDiamond = "costDiamond";
+DataMgr.selectedEndlessScene = "0";
+DataMgr.distance = "1";
+DataMgr.diamond = "2";
+DataMgr.coin = "3";
+DataMgr.totalScore = "4";
+DataMgr.currentMapScene = "5";
+DataMgr.selectedBike = "6";
+DataMgr.ownedBikeList = "7";
+DataMgr.nextFreeDrawTime = "8";
+DataMgr.hasBuyPresentIDList = "9";
+DataMgr.unlockAllBike = "10";
+DataMgr.unlockAllEndlessScene = "11";
+DataMgr.unlockEndlessSceneIDList = "12";
+DataMgr.bgmOn = "13";
+DataMgr.soundOn = "14";
+DataMgr.distanceRecord = "15";
+DataMgr.bikeLevelMap = "16";
+DataMgr.homeData = "17";
+DataMgr.costCoin = "18";
+DataMgr.costDiamond = "19";
 
-if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
-    DataMgr.set(DataMgr.ownedBikeList, [0]);
-}
-let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
-DataMgr.get(DataMgr.ownedBikeList, []).forEach(id => {
-    if (bikeLevelMap[id] === undefined) {
-        bikeLevelMap[id] = 0;
-    }
-});
-DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
-if (DataMgr.get(DataMgr.selectedBike) === undefined) {
-    DataMgr.set(DataMgr.selectedBike, 0);
-}
-if (DataMgr.get(DataMgr.nextFreeDrawTime) === undefined) {
-    DataMgr.set(DataMgr.nextFreeDrawTime, (new Date()).getTime());
-}
-if (DataMgr.get(DataMgr.currentMapScene) === undefined) {
-    DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.mapList.length));
-}
-if (DataMgr.get(DataMgr.homeData) === undefined) {
-    DataMgr.set(DataMgr.homeData, {
-        bgID: 1,
-        floorID: 1,
-        spoilsList: [],
-        spoilsLength: 0,
-        petsList: [],
-        unlocked: {
-            backgrounds: [],
-            floors: [],
-            spoils: [],
-            pets: [],
-        }
-    });
-}
 export default DataMgr;
