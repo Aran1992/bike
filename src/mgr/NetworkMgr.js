@@ -125,6 +125,18 @@ class NetworkMgr_ {
     requestGetScoreRank(scb, fcb) {
         this.request(Config.serverUrl + "/board/get_score_board", "GET", {}, scb, fcb);
     }
+
+    requestSaveSocialData(data, scb, fcb) {
+        let formData = new FormData();
+        formData.append("data", JSON.stringify(data));
+        this.request(Config.serverUrl + "/player/save_social_data", "POST", formData, scb, fcb);
+    }
+
+    requestLoadSocialData(name, scb, fcb) {
+        let formData = new FormData();
+        formData.append("name", name);
+        this.request(Config.serverUrl + "/player/load_social_data", "POST", formData, scb, fcb);
+    }
 }
 
 const NetworkMgr = new NetworkMgr_();

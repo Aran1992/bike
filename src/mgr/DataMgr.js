@@ -80,6 +80,8 @@ class DataMgr_ {
         } else if (key === DataMgr.totalScore) {
             NetworkMgr.requestUpdateScore(value);
             this.checkConditions(Config.conditionsEnum.totalScore);
+        } else if (key === DataMgr.homeData) {
+            NetworkMgr.requestSaveSocialData({home: value});
         }
     }
 

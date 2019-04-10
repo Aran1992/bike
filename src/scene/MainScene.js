@@ -43,6 +43,8 @@ export default class MainScene extends Scene {
         this.bikeSprite.setPosition(-this.bikeSprite.getWidth() / 2, 0);
         this.bikeSprite.play();
         this.onUpdate();
+
+        this.ui.userNameText.text = localStorage.username;
     }
 
     onHide() {

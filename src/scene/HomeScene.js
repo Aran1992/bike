@@ -93,23 +93,6 @@ export default class HomeScene extends Scene {
     onShow({bgID, floorID, spoilsList, petsList}) {
         this.refreshPlayerBasicInfo();
 
-        if (bgID === undefined) {
-            bgID = 1;
-        }
-        if (floorID === undefined) {
-            floorID = 1;
-        }
-        if (spoilsList === undefined) {
-            spoilsList = [
-                [1, 100, 100],
-                [2, 333, 333],
-                [3, 456, 789],
-            ];
-        }
-        if (petsList === undefined) {
-            petsList = [1, 2,];
-        }
-
         this.selectedBgID = bgID;
         this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === bgID);
         let bgConfig = Config.home.backgrounds[this.bgIndex];

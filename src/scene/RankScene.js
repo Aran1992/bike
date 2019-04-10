@@ -45,7 +45,8 @@ export default class RankScene extends Scene {
         App.showScene("MainScene");
     }
 
-    initListItem() {
+    initListItem(item) {
+        this.onClick(item, this.onClickItem.bind(this));
     }
 
     updateListItem(item, index) {
@@ -53,6 +54,7 @@ export default class RankScene extends Scene {
         item.ui.userNameText.text = data.username;
         typeList.forEach(type => item.ui[type].visible = this.type === type);
         item.ui.value.text = data.value;
+        item.index = index;
     }
 
     static initTypeRadioButton(button, info) {
@@ -95,6 +97,18 @@ export default class RankScene extends Scene {
         this.list.reset(this.data.length);
         let index = this.data.findIndex(item => item.username === localStorage.username);
         this.ui.myValue.text = index === -1 ? "Not Listed" : index;
+    }
+
+    onClickItem(item) {
+        NetworkMgr.requestLoadSocialData(this.data[item.index].username, (data) => {
+            try {
+                let homeData = JSON.parse(data.response).home;
+                App.hideScene("RankScene");
+                App.showScene("HomeScene", homeData);
+            } catch (e) {
+                App.showNotice("This player has no home data.");
+            }
+        });
     }
 }
 
