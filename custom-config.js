@@ -6713,9 +6713,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6733,9 +6733,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6753,9 +6753,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6773,9 +6773,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6793,9 +6793,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6813,9 +6813,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6833,9 +6833,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6853,9 +6853,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6873,9 +6873,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6893,9 +6893,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6913,9 +6913,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
     ],
@@ -6943,9 +6943,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6963,9 +6963,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -6983,9 +6983,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7003,9 +7003,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7023,9 +7023,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7043,9 +7043,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
     ],
@@ -7068,9 +7068,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7090,9 +7090,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7112,9 +7112,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7134,9 +7134,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7156,9 +7156,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7178,9 +7178,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7200,9 +7200,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7222,9 +7222,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7244,9 +7244,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7266,9 +7266,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7288,9 +7288,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7310,9 +7310,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7332,9 +7332,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7354,9 +7354,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7376,9 +7376,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7398,9 +7398,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7420,9 +7420,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7442,9 +7442,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7464,9 +7464,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7486,9 +7486,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7508,9 +7508,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7530,9 +7530,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7552,9 +7552,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7574,9 +7574,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7596,9 +7596,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
         {
@@ -7619,9 +7619,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
             }
         },
     ],
@@ -7650,9 +7650,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7678,9 +7678,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7706,9 +7706,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7734,9 +7734,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7762,9 +7762,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7790,9 +7790,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7818,9 +7818,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7846,9 +7846,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7874,9 +7874,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7903,9 +7903,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7932,9 +7932,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7961,9 +7961,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
         {
@@ -7990,9 +7990,9 @@ Config.home = {
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.2,
-                distancePercent: 0.2,
-                scorePercent: 0.2,
+                coinPercent: 0.1,
+                distancePercent: 0.1,
+                scorePercent: 0.1,
             }
         },
     ]
