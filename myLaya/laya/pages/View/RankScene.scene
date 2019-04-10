@@ -484,44 +484,29 @@
             "child":[
                 {
                     "x":30,
-                    "type":"Panel",
-                    "searchKey":"Panel,myRank",
-                    "props":{"width":150,"name":"myRank","left":100,"height":50,"centerY":0},
-                    "nodeParent":62,
-                    "label":"myRank",
-                    "isOpen":false,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":65,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "searchKey":"Label,Text",
-                    "props":{"width":260,"text":"0","right":100,"name":"Text","height":50,"fontSize":50,"color":"#ffffff","centerY":0,"align":"right"},
-                    "nodeParent":62,
-                    "label":"Text",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":69,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"text":"MyRank","left":80,"fontSize":50,"color":"#ffffff","centerY":0},
+                    "props":{"y":20,"x":80,"text":"My Rank","left":80,"fontSize":50,"color":"#ffffff","centerY":0},
                     "nodeParent":62,
                     "label":"Label",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":135,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,myValue",
+                    "props":{"width":260,"var":"myValue","text":"0","right":100,"height":50,"fontSize":50,"color":"#ffffff","centerY":0,"align":"right"},
+                    "nodeParent":62,
+                    "label":"myValue",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":69,
                     "child":[
                         ]
                 }]

@@ -81,7 +81,6 @@ class NetworkMgr_ {
 
     requestLoadData(scb, fcb) {
         this.request(Config.serverUrl + "/player/load_data", "GET", {}, (data) => {
-            console.log(JSON.parse(data.response));
             if (data.response) {
                 DataMgr.init(JSON.parse(data.response));
             } else {
@@ -95,6 +94,36 @@ class NetworkMgr_ {
         let formData = new FormData();
         formData.append("data", JSON.stringify(dataTable));
         this.request(Config.serverUrl + "/player/save_data", "POST", formData);
+    }
+
+    requestUpdateTotalMileage(value, scb, fcb) {
+        let formData = new FormData();
+        formData.append("value", value);
+        this.request(Config.serverUrl + "/board/update_total_mileage", "POST", formData, scb, fcb);
+    }
+
+    requestGetTotalMileageRank(scb, fcb) {
+        this.request(Config.serverUrl + "/board/get_total_mileage_board", "GET", {}, scb, fcb);
+    }
+
+    requestUpdateFarthestMileage(value, scb, fcb) {
+        let formData = new FormData();
+        formData.append("value", value);
+        this.request(Config.serverUrl + "/board/update_farest_mileage", "POST", formData, scb, fcb);
+    }
+
+    requestGetFarthestMileageRank(scb, fcb) {
+        this.request(Config.serverUrl + "/board/get_farest_mileage_board", "GET", {}, scb, fcb);
+    }
+
+    requestUpdateScore(value, scb, fcb) {
+        let formData = new FormData();
+        formData.append("value", value);
+        this.request(Config.serverUrl + "/board/update_score", "POST", formData, scb, fcb);
+    }
+
+    requestGetScoreRank(scb, fcb) {
+        this.request(Config.serverUrl + "/board/get_score_board", "GET", {}, scb, fcb);
     }
 }
 

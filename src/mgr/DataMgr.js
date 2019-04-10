@@ -72,10 +72,13 @@ class DataMgr_ {
             || key === DataMgr.distance) {
             this.checkConditions(Config.conditionsEnum.unlockMap);
         } else if (key === DataMgr.distance) {
+            NetworkMgr.requestUpdateTotalMileage(value);
             this.checkConditions(Config.conditionsEnum.distance);
         } else if (key === DataMgr.distanceRecord) {
+            NetworkMgr.requestUpdateFarthestMileage(value);
             this.checkConditions(Config.conditionsEnum.distanceRecord);
         } else if (key === DataMgr.totalScore) {
+            NetworkMgr.requestUpdateScore(value);
             this.checkConditions(Config.conditionsEnum.totalScore);
         }
     }

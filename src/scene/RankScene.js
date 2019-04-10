@@ -1,7 +1,7 @@
 import Scene from "./Scene";
 import Radio from "../ui/Radio";
 import List from "../ui/List";
-import MainScene from "./MainScene";
+import NetworkMgr from "../mgr/NetworkMgr";
 
 let TOTAL_DISTANCE = 1;
 let FARTHEST_DISTANCE = 2;
@@ -49,9 +49,10 @@ export default class RankScene extends Scene {
     }
 
     updateListItem(item, index) {
-        item.ui.userNameText.text = (this.range === WORLD ? "WORLD" : "FRIEND") + index;
+        let data = this.data[index];
+        item.ui.userNameText.text = data.username;
         typeList.forEach(type => item.ui[type].visible = this.type === type);
-        item.ui.value.text = index;
+        item.ui.value.text = data.value;
     }
 
     static initTypeRadioButton(button, info) {
@@ -60,7 +61,7 @@ export default class RankScene extends Scene {
 
     onClickTypeRadio(selectedIndex) {
         this.type = typeList[selectedIndex];
-        this.list.reset(this.range === WORLD ? 100 : 10);
+        this.reset();
     }
 
     static initRangeRadioButton(button, info) {
@@ -69,7 +70,31 @@ export default class RankScene extends Scene {
 
     onClickRangeRadio(selectedIndex) {
         this.range = rangeList[selectedIndex];
-        this.list.reset(this.range === WORLD ? 100 : 10);
+        this.reset();
+    }
+
+    reset() {
+        switch (this.type) {
+            case TOTAL_DISTANCE: {
+                NetworkMgr.requestGetTotalMileageRank(this.onRequestData.bind(this));
+                break;
+            }
+            case FARTHEST_DISTANCE: {
+                NetworkMgr.requestGetFarthestMileageRank(this.onRequestData.bind(this));
+                break;
+            }
+            case SCORE: {
+                NetworkMgr.requestGetScoreRank(this.onRequestData.bind(this));
+                break;
+            }
+        }
+    }
+
+    onRequestData(data) {
+        this.data = data.response;
+        this.list.reset(this.data.length);
+        let index = this.data.findIndex(item => item.username === localStorage.username);
+        this.ui.myValue.text = index === -1 ? "Not Listed" : index;
     }
 }
 
