@@ -42,13 +42,19 @@ export default class EndlessGameScene extends GameScene {
     }
 
     getResPathList() {
-        this.sceneFilePathList = this.sceneConfig.roadSectionList.reduce((list, diff) => {
-            diff.list.forEach(roadSectionID => {
-                let roadSection = Config.roadSections[roadSectionID];
-                roadSection.forEach(name => list.push(`${Config.endlessMode.baseScenePath}${name}.scene.json`));
+        this.sceneFilePathList = [];
+        [this.sceneConfig.roadSectionList, this.sceneConfig.infiniteRoadSectionList]
+            .forEach(rsList => {
+                let pathList = rsList.reduce((list, diff) => {
+                    diff.list.forEach(roadSectionID => {
+                        let roadSection = Config.roadSections[roadSectionID];
+                        roadSection.forEach(name =>
+                            list.push(`${Config.endlessMode.baseScenePath}${name}.scene.json`));
+                    });
+                    return list;
+                }, []);
+                this.sceneFilePathList = this.sceneFilePathList.concat(pathList);
             });
-            return list;
-        }, []);
         return super.getResPathList()
             .concat(this.sceneConfig.texture.bg)
             .concat([
