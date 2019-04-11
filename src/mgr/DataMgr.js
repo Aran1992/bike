@@ -71,16 +71,20 @@ class DataMgr_ {
             || key === DataMgr.unlockEndlessSceneIDList
             || key === DataMgr.distance) {
             this.checkConditions(Config.conditionsEnum.unlockMap);
-        } else if (key === DataMgr.distance) {
+        }
+        if (key === DataMgr.distance) {
             NetworkMgr.requestUpdateTotalMileage(value);
             this.checkConditions(Config.conditionsEnum.distance);
-        } else if (key === DataMgr.distanceRecord) {
+        }
+        if (key === DataMgr.distanceRecord) {
             NetworkMgr.requestUpdateFarthestMileage(value);
             this.checkConditions(Config.conditionsEnum.distanceRecord);
-        } else if (key === DataMgr.totalScore) {
+        }
+        if (key === DataMgr.totalScore) {
             NetworkMgr.requestUpdateScore(value);
             this.checkConditions(Config.conditionsEnum.totalScore);
-        } else if (key === DataMgr.homeData) {
+        }
+        if (key === DataMgr.homeData) {
             NetworkMgr.requestSaveSocialData({home: value});
         }
     }
