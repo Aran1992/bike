@@ -6,6 +6,7 @@ import {Container, filters, Graphics, Rectangle, Sprite, Texture} from "../libs/
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
+import EventMgr from "../mgr/EventMgr";
 
 const BACKGROUNDS = 0;
 const FLOORS = 1;
@@ -35,6 +36,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.commonItemBtn, this.onClickCommonItemBtn.bind(this));
         this.onClick(this.ui.lockedItemBtn, this.onClickLockedItemBtn.bind(this));
         this.onClick(this.ui.returnRankBtn, HomeScene.onClickReturnRankButton);
+        EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
@@ -91,6 +93,11 @@ export default class HomeScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
     }
 
+    onRefreshRankData() {
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
+    }
+
     onShow({bgID, floorID, spoilsList, petsList}, isSelf = true) {
         this.selectedBgID = bgID;
         this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === bgID);
@@ -127,10 +134,10 @@ export default class HomeScene extends Scene {
     }
 
     refreshPlayerBasicInfo() {
-        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.distance, 0))}m`;
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
-        this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
     }
 
     createSpoils(itemID, id, x, y) {

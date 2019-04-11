@@ -5,6 +5,7 @@ import {resources} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import RunOption from "../../run-option";
+import EventMgr from "../mgr/EventMgr";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -18,17 +19,23 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
         this.onClick(this.ui.rankButton, this.onClickRankButton.bind(this));
         this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
+        EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
         this.onClickEndlessModeButton();
     }
 
+    onRefreshRankData() {
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
+    }
+
     onShow() {
-        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.distance, 0))}m`;
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
-        this.ui.totalScoreText.text = DataMgr.get(DataMgr.totalScore, 0);
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
         this.ui.costCoinText.text = 0;
 
         if (this.mode === "Map") {

@@ -1291,8 +1291,9 @@ export default class GameScene extends Scene {
     settle() {
         let coin = DataMgr.get(DataMgr.coin, 0) + Math.floor(this.coin * GameUtils.getBikeConfig("coinPercent"));
         DataMgr.set(DataMgr.coin, coin);
-        let distance = DataMgr.get(DataMgr.distance, 0) + Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
-        DataMgr.set(DataMgr.distance, distance);
+        let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
+        DataMgr.add(DataMgr.distance, distance);
+        DataMgr.add(DataMgr.rankDistance, distance);
         this.gameLoopFunc = this.pause.bind(this);
     }
 

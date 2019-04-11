@@ -27,6 +27,19 @@ class DataMgr_ {
 
     init(dataTable) {
         this.dataTable = dataTable;
+
+        // 根据排行榜刷新时间来判断排行相关数据是否过期 如果过期就进行重置
+        let refreshTime = DataMgr.get(DataMgr.nextRankRefreshTime);
+        if (new Date().getTime() > refreshTime || refreshTime === undefined) {
+            this.resetRankData();
+        }
+
+        setInterval(() => {
+            if (new Date().getTime() > DataMgr.get(DataMgr.nextRankRefreshTime)) {
+                this.resetRankData();
+            }
+        }, 1000);
+
         if (DataMgr.get(DataMgr.ownedBikeList, []).length === 0) {
             DataMgr.set(DataMgr.ownedBikeList, [0]);
         }
@@ -73,20 +86,32 @@ class DataMgr_ {
             this.checkConditions(Config.conditionsEnum.unlockMap);
         }
         if (key === DataMgr.distance) {
-            NetworkMgr.requestUpdateTotalMileage(value);
             this.checkConditions(Config.conditionsEnum.distance);
         }
         if (key === DataMgr.distanceRecord) {
-            NetworkMgr.requestUpdateFarthestMileage(value);
             this.checkConditions(Config.conditionsEnum.distanceRecord);
         }
         if (key === DataMgr.totalScore) {
-            NetworkMgr.requestUpdateScore(value);
             this.checkConditions(Config.conditionsEnum.totalScore);
         }
         if (key === DataMgr.homeData) {
             NetworkMgr.requestSaveSocialData({home: value});
         }
+        if (key === DataMgr.rankDistance && value !== 0) {
+            NetworkMgr.requestUpdateTotalMileage(value);
+        }
+        if (key === DataMgr.rankDistanceRecord && value !== 0) {
+            NetworkMgr.requestUpdateFarthestMileage(value);
+        }
+        if (key === DataMgr.rankTotalScore && value !== 0) {
+            NetworkMgr.requestUpdateScore(value);
+        }
+    }
+
+    add(key, addValue) {
+        let value = this.get(key, 0) + addValue;
+        this.set(key, value);
+        return value;
     }
 
     get(key, defaultValue) {
@@ -141,14 +166,27 @@ class DataMgr_ {
             && DataMgr.get(DataMgr.distance, 0)
             < Config.endlessMode.sceneList.find(item => item.id === id).unlockDistance;
     }
+
+    resetRankData() {
+        DataMgr.set(DataMgr.rankDistance, 0);
+        DataMgr.set(DataMgr.rankDistanceRecord, 0);
+        DataMgr.set(DataMgr.rankTotalScore, 0);
+        let cur = new Date().getTime();
+        let start = Config.rankStartTime.getTime();
+        let interval = Config.rankRefreshInterval * 1000;
+        let refreshTime = start + Math.ceil((cur - start) / interval) * interval;
+        DataMgr.set(DataMgr.nextRankRefreshTime, refreshTime);
+    }
 }
 
 const DataMgr = new DataMgr_();
 
 DataMgr.selectedEndlessScene = "0";
+// 整个游戏历史累计的里程
 DataMgr.distance = "1";
 DataMgr.diamond = "2";
 DataMgr.coin = "3";
+// 整个游戏历史累计的总分
 DataMgr.totalScore = "4";
 DataMgr.currentMapScene = "5";
 DataMgr.selectedBike = "6";
@@ -160,10 +198,18 @@ DataMgr.unlockAllEndlessScene = "11";
 DataMgr.unlockEndlessSceneIDList = "12";
 DataMgr.bgmOn = "13";
 DataMgr.soundOn = "14";
+// 整个游戏历史最好的单次最远距离
 DataMgr.distanceRecord = "15";
 DataMgr.bikeLevelMap = "16";
 DataMgr.homeData = "17";
 DataMgr.costCoin = "18";
 DataMgr.costDiamond = "19";
+DataMgr.nextRankRefreshTime = "20";
+// 本次排行累计的里程
+DataMgr.rankDistance = "21";
+// 本次排行最好的单次最远距离
+DataMgr.rankDistanceRecord = "22";
+// 本次排行累计的总分
+DataMgr.rankTotalScore = "23";
 
 export default DataMgr;

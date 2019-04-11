@@ -27,9 +27,9 @@ export default class GameResultScene extends Scene {
 
         let playerName = "{{YourselfName}}";
         let thisGameScore = Math.floor(Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent"));
-        let totalScore = DataMgr.get(DataMgr.totalScore, 0) + thisGameScore;
-        DataMgr.set(DataMgr.totalScore, totalScore);
-        this.ui.totalScoreText.text = `${playerName} current total score: ${totalScore}`;
+        DataMgr.add(DataMgr.totalScore, thisGameScore);
+        let totalScore = DataMgr.add(DataMgr.rankTotalScore, thisGameScore);
+        this.ui.totalScoreText.text = `${playerName} current rank total score: ${totalScore}`;
 
         if (this.resultList === undefined) {
             this.resultList = new List({

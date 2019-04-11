@@ -40,6 +40,10 @@ export default class GameOverScene extends Scene {
             this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
             this.ui.beyondText.text = `${record - finalDistance} meters more to go beyond yourself`;
         }
+        let rankDistanceRecord = DataMgr.get(DataMgr.rankDistanceRecord, 0);
+        if (finalDistance > rankDistanceRecord) {
+            DataMgr.set(DataMgr.rankDistanceRecord, finalDistance);
+        }
 
         if (this.resultList) {
             this.resultList.refresh();
