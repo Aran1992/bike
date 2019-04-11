@@ -2,6 +2,14 @@ import Config from "../config";
 import DataMgr from "./DataMgr";
 
 class NetworkMgr_ {
+    constructor() {
+        this.rankDataTable = {
+            "/board/get_total_mileage_board": {},
+            "/board/get_farest_mileage_board": {},
+            "/board/get_score_board": {},
+        };
+    }
+
     request(url, method, formData, successCallback, failedCallback) {
         successCallback = successCallback || (() => {
         });
@@ -103,7 +111,7 @@ class NetworkMgr_ {
     }
 
     requestGetTotalMileageRank(scb, fcb) {
-        this.request(Config.serverUrl + "/board/get_total_mileage_board", "GET", {}, scb, fcb);
+        this.requestGetRank("/board/get_total_mileage_board", scb, fcb);
     }
 
     requestUpdateFarthestMileage(value, scb, fcb) {
@@ -113,7 +121,7 @@ class NetworkMgr_ {
     }
 
     requestGetFarthestMileageRank(scb, fcb) {
-        this.request(Config.serverUrl + "/board/get_farest_mileage_board", "GET", {}, scb, fcb);
+        this.requestGetRank("/board/get_farest_mileage_board", scb, fcb);
     }
 
     requestUpdateScore(value, scb, fcb) {
@@ -123,7 +131,7 @@ class NetworkMgr_ {
     }
 
     requestGetScoreRank(scb, fcb) {
-        this.request(Config.serverUrl + "/board/get_score_board", "GET", {}, scb, fcb);
+        this.requestGetRank("/board/get_score_board", scb, fcb);
     }
 
     requestSaveSocialData(data, scb, fcb) {
@@ -136,6 +144,17 @@ class NetworkMgr_ {
         let formData = new FormData();
         formData.append("name", name);
         this.request(Config.serverUrl + "/player/load_social_data", "POST", formData, scb, fcb);
+    }
+
+    requestGetRank(key, scb, fcb) {
+        if (this.rankDataTable[key].nextRefreshTime > new Date().getTime()) {
+            return scb(this.rankDataTable[key].data, this.rankDataTable[key].nextRefreshTime);
+        }
+        this.request(Config.serverUrl + key, "GET", {}, (data) => {
+            this.rankDataTable[key].nextRefreshTime = new Date().getTime() + Config.rankRefreshInterval * 1000;
+            this.rankDataTable[key].data = data.response;
+            scb(data.response, this.rankDataTable[key].nextRefreshTime);
+        }, fcb);
     }
 }
 

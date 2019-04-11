@@ -2,6 +2,7 @@ import Scene from "./Scene";
 import Radio from "../ui/Radio";
 import List from "../ui/List";
 import NetworkMgr from "../mgr/NetworkMgr";
+import Utils from "../mgr/Utils";
 
 let TOTAL_DISTANCE = 1;
 let FARTHEST_DISTANCE = 2;
@@ -38,6 +39,7 @@ export default class RankScene extends Scene {
     }
 
     onShow() {
+        this.reset();
     }
 
     static onClickReturnButton() {
@@ -54,6 +56,7 @@ export default class RankScene extends Scene {
         item.ui.userNameText.text = data.username;
         typeList.forEach(type => item.ui[type].visible = this.type === type);
         item.ui.value.text = data.value;
+        item.ui.playerRank.text = index + 1;
         item.index = index;
     }
 
@@ -76,6 +79,8 @@ export default class RankScene extends Scene {
     }
 
     reset() {
+        clearInterval(this.refreshTimeInterval);
+        this.ui.resetTimeText.text = "Requesting rank data";
         switch (this.type) {
             case TOTAL_DISTANCE: {
                 NetworkMgr.requestGetTotalMileageRank(this.onRequestData.bind(this));
@@ -92,11 +97,22 @@ export default class RankScene extends Scene {
         }
     }
 
-    onRequestData(data) {
-        this.data = data.response;
+    onRequestData(data, nextRefreshTime) {
+        this.data = data;
         this.list.reset(this.data.length);
         let index = this.data.findIndex(item => item.username === localStorage.username);
-        this.ui.myValue.text = index === -1 ? "Not Listed" : index;
+        this.ui.myValue.text = index === -1 ? "Not Listed" : (index + 1);
+        clearInterval(this.refreshTimeInterval);
+        let time = nextRefreshTime - (new Date()).getTime();
+        this.ui.resetTimeText.text = `Refresh after ${Utils.getCDTimeString(time)}`;
+        this.refreshTimeInterval = setInterval(() => {
+            let time = nextRefreshTime - (new Date()).getTime();
+            if (time > 0) {
+                this.ui.resetTimeText.text = `Refresh after ${Utils.getCDTimeString(time)}`;
+            } else {
+                this.reset();
+            }
+        }, 1000);
     }
 
     onClickItem(item) {
@@ -104,7 +120,7 @@ export default class RankScene extends Scene {
             try {
                 let homeData = JSON.parse(data.response).home;
                 App.hideScene("RankScene");
-                App.showScene("HomeScene", homeData);
+                App.showScene("HomeScene", homeData, false);
             } catch (e) {
                 App.showNotice("This player has no home data.");
             }

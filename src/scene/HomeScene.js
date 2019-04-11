@@ -34,6 +34,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.nextBtn, () => this.onClickToggleButton(1));
         this.onClick(this.ui.commonItemBtn, this.onClickCommonItemBtn.bind(this));
         this.onClick(this.ui.lockedItemBtn, this.onClickLockedItemBtn.bind(this));
+        this.onClick(this.ui.returnRankBtn, HomeScene.onClickReturnRankButton);
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
@@ -90,9 +91,7 @@ export default class HomeScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
     }
 
-    onShow({bgID, floorID, spoilsList, petsList}) {
-        this.refreshPlayerBasicInfo();
-
+    onShow({bgID, floorID, spoilsList, petsList}, isSelf = true) {
         this.selectedBgID = bgID;
         this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === bgID);
         let bgConfig = Config.home.backgrounds[this.bgIndex];
@@ -115,7 +114,16 @@ export default class HomeScene extends Scene {
 
         this.sortItems();
 
-        this.radio.select(BACKGROUNDS);
+        if (isSelf) {
+            this.refreshPlayerBasicInfo();
+            this.radio.select(BACKGROUNDS);
+            this.onClickShowUIButton();
+        } else {
+            this.onClickHideUIButton();
+        }
+        this.ui.uiContainer.visible = isSelf;
+        this.ui.showUIBtn.visible = false;
+        this.ui.returnRankBtn.visible = !isSelf;
     }
 
     refreshPlayerBasicInfo() {
@@ -176,6 +184,11 @@ export default class HomeScene extends Scene {
     static onClickReturnButton() {
         App.hideScene("HomeScene");
         App.showScene("MainScene");
+    }
+
+    static onClickReturnRankButton() {
+        App.hideScene("HomeScene");
+        App.showScene("RankScene");
     }
 
     onClickHideUIButton() {
