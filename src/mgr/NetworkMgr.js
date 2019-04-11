@@ -147,11 +147,11 @@ class NetworkMgr_ {
     }
 
     requestGetRank(key, scb, fcb) {
-        if (this.rankDataTable[key].nextRefreshTime > new Date().getTime()) {
-            return scb(this.rankDataTable[key].data, this.rankDataTable[key].nextRefreshTime);
-        }
         this.request(Config.serverUrl + key, "GET", {}, (data) => {
-            this.rankDataTable[key].nextRefreshTime = new Date().getTime() + Config.rankRefreshInterval * 1000;
+            let cur = new Date().getTime();
+            let start = Config.rankStartTime.getTime();
+            let interval = Config.rankRefreshInterval * 1000;
+            this.rankDataTable[key].nextRefreshTime = start + Math.ceil((cur - start) / interval) * interval;
             this.rankDataTable[key].data = data.response;
             scb(data.response, this.rankDataTable[key].nextRefreshTime);
         }, fcb);

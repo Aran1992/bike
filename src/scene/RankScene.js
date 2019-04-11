@@ -103,12 +103,12 @@ export default class RankScene extends Scene {
         let index = this.data.findIndex(item => item.username === localStorage.username);
         this.ui.myValue.text = index === -1 ? "Not Listed" : (index + 1);
         clearInterval(this.refreshTimeInterval);
-        let time = nextRefreshTime - (new Date()).getTime();
-        this.ui.resetTimeText.text = `Refresh after ${Utils.getCDTimeString(time)}`;
+        let time = nextRefreshTime - new Date().getTime();
+        this.ui.resetTimeText.text = `Restart after ${Utils.getCDTimeString(time)}`;
         this.refreshTimeInterval = setInterval(() => {
-            let time = nextRefreshTime - (new Date()).getTime();
+            let time = nextRefreshTime - new Date().getTime();
             if (time > 0) {
-                this.ui.resetTimeText.text = `Refresh after ${Utils.getCDTimeString(time)}`;
+                this.ui.resetTimeText.text = `Restart after ${Utils.getCDTimeString(time)}`;
             } else {
                 this.reset();
             }

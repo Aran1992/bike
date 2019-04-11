@@ -9596,7 +9596,9 @@ if (window.ipConfig && window.ipConfig.innerHTML.length) {
     Config.serverUrl = "http://47.106.20.87:10001";
 }
 
+// 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）
+Config.rankStartTime = new Date(2019, 4, 11, 0, 0, 0);
 // 排行榜刷新时间间隔（单位：秒）
-Config.rankRefreshInterval = 60;
+Config.rankRefreshInterval = 60 * 60 * 24;
 
 export default Config;
