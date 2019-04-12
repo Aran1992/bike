@@ -27,7 +27,7 @@ export default class GameOverScene extends Scene {
 
         this.args = args;
 
-        let record = DataMgr.get(DataMgr.distanceRecord, 0);
+        let record = DataMgr.get(DataMgr.rankDistanceRecord, 0);
         let finalDistance = Math.floor(args.distance * GameUtils.getBikeConfig("distancePercent"));
         if (finalDistance === record) {
             this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
@@ -35,14 +35,14 @@ export default class GameOverScene extends Scene {
         } else if (finalDistance > record) {
             this.ui.recordText.text = `{{YourselfName}} New Record: ${finalDistance}m`;
             this.ui.beyondText.text = "";
-            DataMgr.set(DataMgr.distanceRecord, finalDistance);
+            DataMgr.set(DataMgr.rankDistanceRecord, finalDistance);
         } else {
             this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
             this.ui.beyondText.text = `${record - finalDistance} meters more to go beyond yourself`;
         }
-        let rankDistanceRecord = DataMgr.get(DataMgr.rankDistanceRecord, 0);
-        if (finalDistance > rankDistanceRecord) {
-            DataMgr.set(DataMgr.rankDistanceRecord, finalDistance);
+        let distanceRecord = DataMgr.get(DataMgr.distanceRecord, 0);
+        if (finalDistance > distanceRecord) {
+            DataMgr.set(DataMgr.distanceRecord, finalDistance);
         }
 
         if (this.resultList) {
