@@ -89,12 +89,15 @@ class NetworkMgr_ {
 
     requestLoadData(scb, fcb) {
         this.request(Config.serverUrl + "/player/load_data", "GET", {}, (data) => {
-            if (data.response.data) {
-                DataMgr.init(JSON.parse(data.response.data));
-            } else {
-                DataMgr.init({});
-            }
-            scb(data);
+            this.request(Config.serverUrl + "/board/get_farest_mileage_board", "GET", {}, ({response}) => {
+                if (data.response.data) {
+                    DataMgr.init(JSON.parse(data.response.data), response.periodIdx);
+                } else {
+                    DataMgr.init({}, response.periodIdx);
+                }
+                DataMgr.setData(data.response);
+                scb(data);
+            });
         }, fcb);
     }
 
@@ -152,8 +155,8 @@ class NetworkMgr_ {
             let start = Config.rankStartTime.getTime();
             let interval = Config.rankRefreshInterval * 1000;
             this.rankDataTable[key].nextRefreshTime = start + Math.ceil((cur - start) / interval) * interval;
-            this.rankDataTable[key].data = data.response;
-            scb(data.response, this.rankDataTable[key].nextRefreshTime);
+            this.rankDataTable[key].data = data.response.boards;
+            scb(data.response.boards, this.rankDataTable[key].nextRefreshTime);
         }, fcb);
     }
 }

@@ -17,21 +17,27 @@ class DataMgr_ {
             //需要积分达到过 ####
             6: value => DataMgr.get(DataMgr.totalScore, 0) > value,
             //需要总里程排名达到过第 #### 名
-            7: () => false,
+            7: value => this.data.totalMileageBoardBestRanking !== 0 && this.data.totalMileageBoardBestRanking <= value,
             //需要最远里程排名达到过第 #### 名
-            8: () => false,
+            8: value => this.data.farestMileageBoardBestRanking !== 0 && this.data.farestMileageBoardBestRanking <= value,
             //需要积分排名达到过第 #### 名
-            9: () => false,
+            9: value => this.data.scoreBoardBestRanking !== 0 && this.data.scoreBoardBestRanking <= value,
         };
     }
 
-    init(dataTable) {
+    // todo
+    // 但是排行榜刷新之后需要重新刷新这个东西
+    // 这个时候又要去获取一下数据 然后来刷新一下这个东西
+
+    setData(data) {
+        this.data = data;
+    }
+
+    init(dataTable, periodIdx) {
         this.dataTable = dataTable;
 
-        // 根据排行榜刷新时间来判断排行相关数据是否过期 如果过期就进行重置
-        let refreshTime = DataMgr.get(DataMgr.nextRankRefreshTime);
-        if (new Date().getTime() > refreshTime || refreshTime === undefined) {
-            this.resetRankData();
+        if (DataMgr.get(DataMgr.periodIdx) !== periodIdx) {
+            this.resetRankData(periodIdx);
         }
 
         setInterval(() => {
@@ -167,10 +173,11 @@ class DataMgr_ {
             < Config.endlessMode.sceneList.find(item => item.id === id).unlockDistance;
     }
 
-    resetRankData() {
+    resetRankData(periodIdx = DataMgr.get(DataMgr.periodIdx) + 1) {
         DataMgr.set(DataMgr.rankDistance, 0);
         DataMgr.set(DataMgr.rankDistanceRecord, 0);
         DataMgr.set(DataMgr.rankTotalScore, 0);
+        DataMgr.set(DataMgr.periodIdx, periodIdx);
         let cur = new Date().getTime();
         let start = Config.rankStartTime.getTime();
         let interval = Config.rankRefreshInterval * 1000;
@@ -211,5 +218,6 @@ DataMgr.rankDistance = "21";
 DataMgr.rankDistanceRecord = "22";
 // 本次排行累计的总分
 DataMgr.rankTotalScore = "23";
+DataMgr.periodIdx = "24";
 
 export default DataMgr;
