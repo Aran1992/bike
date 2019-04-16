@@ -27,6 +27,7 @@ import UIHelper from "../ui/UIHelper";
 import RankScene from "../scene/RankScene";
 import RegisterScene from "../scene/RegisterScene";
 import LoginScene from "../scene/LoginScene";
+import MusicMgr from "./MusicMgr";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -101,21 +102,44 @@ export default class MyApplication extends Application {
 
     loadResources(resPathList, onLoadedCallback) {
         resPathList = Array.from(new Set(resPathList));
-        resPathList = resPathList.filter(path => resources[path] === undefined);
+        resPathList = resPathList.filter(path => resources[path] === undefined && !MusicMgr.hasLoadedAudio(path));
         this.loadList = resPathList.map(path => [path, false]);
         this.loadScene.visible = true;
         this.updateLoadText();
-        loader
-            .add(resPathList)
-            .on("progress", this.onLoadProgress.bind(this))
-            .load(() => {
+        let commonResPathList = [];
+        let audioResPathList = [];
+        let isMusicLoaded = false;
+        let isCommonLoaded = false;
+        resPathList.forEach(path => {
+            if ([".mp3", ".ogg", ".m4a", ".wav",].some(end => path.endsWith(end))) {
+                audioResPathList.push(path);
+            } else {
+                commonResPathList.push(path);
+            }
+        });
+
+        let onLoadedResource = () => {
+            if (isMusicLoaded && isCommonLoaded) {
                 this.onLoadEnded();
-                let list = this.parsePrefabDependRes(resPathList);
+                let list = this.parsePrefabDependRes(commonResPathList);
                 if (list.length !== 0) {
                     this.loadResources(list, onLoadedCallback);
                 } else {
                     onLoadedCallback();
                 }
+            }
+        };
+
+        MusicMgr.loadAudioRes(audioResPathList, () => {
+            isMusicLoaded = true;
+            onLoadedResource();
+        });
+        loader
+            .add(commonResPathList)
+            .on("progress", this.onLoadProgress.bind(this))
+            .load(() => {
+                isCommonLoaded = true;
+                onLoadedResource();
             });
     }
 

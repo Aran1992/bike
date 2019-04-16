@@ -89,8 +89,8 @@ class NetworkMgr_ {
 
     requestLoadData(scb, fcb) {
         this.request(Config.serverUrl + "/player/load_data", "GET", {}, (data) => {
-            if (data.response) {
-                DataMgr.init(JSON.parse(data.response));
+            if (data.response.data) {
+                DataMgr.init(JSON.parse(data.response.data));
             } else {
                 DataMgr.init({});
             }

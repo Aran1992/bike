@@ -154,6 +154,7 @@ export default class GameScene extends Scene {
             Config.birdAniJson,
             Config.effect.BananaPeel.peelPrefabPath,
             Config.startImagePath.ui,
+            this.bgmPath,
         ]
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.sceneItemImagePath))
