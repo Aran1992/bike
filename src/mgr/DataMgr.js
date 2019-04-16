@@ -25,10 +25,6 @@ class DataMgr_ {
         };
     }
 
-    // todo
-    // 但是排行榜刷新之后需要重新刷新这个东西
-    // 这个时候又要去获取一下数据 然后来刷新一下这个东西
-
     setData(data) {
         this.data = data;
     }
@@ -183,6 +179,9 @@ class DataMgr_ {
         let interval = Config.rankRefreshInterval * 1000;
         let refreshTime = start + Math.ceil((cur - start) / interval) * interval;
         DataMgr.set(DataMgr.nextRankRefreshTime, refreshTime);
+        NetworkMgr.request(Config.serverUrl + "/player/load_data", "GET", {}, (data) => {
+            this.setData(data.response);
+        });
     }
 }
 
