@@ -20,5 +20,5 @@ module.exports = {
         publicPath: "/",
         filename: "bundle.js"
     },
-    mode: "production"
+    mode: "development"
 };
