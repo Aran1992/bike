@@ -65,7 +65,7 @@ export default class GameScene extends Scene {
             this.gameContainer.addChild(this.cameraContainer);
         }
 
-        // this.createBottomMask();
+        this.createBottomMask();
 
         // this.createFPSText();
 
@@ -248,9 +248,6 @@ export default class GameScene extends Scene {
                     }
                     if (this.chtable.enemy.is(anotherFixture)) {
                         contact.setEnabled(false);
-                    } else if (this.chtable.npc.is(anotherFixture)) {
-                        contact.setEnabled(false);
-                        this.isContactFatalEdge = true;
                     } else if (this.chtable.road2.is(anotherFixture)) {
                         let {p1, p2} = anotherFixture.getUserData();
                         if (Utils.getDistanceFromPointToLine(this.bikeBody.getPosition(), p1, p2) < Config.bikeRadius - Config.pixel2meter) {
@@ -302,8 +299,32 @@ export default class GameScene extends Scene {
                         return ud.type === "BlackBird";
                     }
                 },
-                preSolve: (contact,) => {
-                    contact.setEnabled(false);
+                preSolve: (contact, anotherFixture) => {
+                    if (!this.chtable.player.is(anotherFixture)
+                        && !this.chtable.enemy.is(anotherFixture)) {
+                        contact.setEnabled(false);
+                    }
+                },
+                beginContact: (contact, anotherFixture, selfFixture) => {
+                    let bird = selfFixture.getBody().getUserData();
+                    if (this.chtable.player.is(anotherFixture)) {
+                        if (this.bikeBody.getPosition().y < bird.body.getPosition().y) {
+                            this.isContactFatalEdge = true;
+                        } else {
+                            this.resetJumpStatus();
+                            bird.isDead = true;
+                        }
+                    } else if (this.chtable.enemy.is(anotherFixture)) {
+                        let enemy = anotherFixture.getBody().getUserData();
+                        if (enemy.selfFixture === anotherFixture) {
+                            if (anotherFixture.getBody().getPosition().y > bird.body.getPosition().y) {
+                                enemy.isContactFatalEdge = true;
+                            } else {
+                                enemy.resetJumpStatus();
+                                bird.isDead = true;
+                            }
+                        }
+                    }
                 },
             },
             road: {
@@ -1073,6 +1094,10 @@ export default class GameScene extends Scene {
 
     keepBirdMove() {
         this.birdList.forEach(bird => {
+            if (bird.isDead) {
+                return;
+            }
+
             let rp = bird.sprite.position;
             if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 if (!bird.showed) {

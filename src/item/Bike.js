@@ -133,9 +133,6 @@ export default class Bike {
             if (this.gameScene.chtable.player.is(anotherFixture)
                 || this.gameScene.chtable.enemy.is(anotherFixture)) {
                 contact.setEnabled(false);
-            } else if (this.gameScene.chtable.npc.is(anotherFixture)) {
-                contact.setEnabled(false);
-                this.isContactFatalEdge = true;
             } else if (this.gameScene.chtable.road2.is(anotherFixture)) {
                 let {p1, p2} = anotherFixture.getUserData();
                 if (Utils.getDistanceFromPointToLine(this.bikeBody.getPosition(), p1, p2) < Config.bikeRadius - Config.pixel2meter) {
