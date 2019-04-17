@@ -7418,6 +7418,10 @@ Config.item = {
         bodyWidth: 64,
         // 实际区域高度
         bodyHeight: 40,
+        // 触碰到的时候的自行车受到的冲击力大小
+        contactBikeImpulse: 250,
+        // 触碰到的时候的小鸟受到的冲击力大小
+        contactBirdImpulse: 125,
     },
     // 地刺
     groundStab: {

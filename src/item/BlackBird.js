@@ -40,23 +40,4 @@ export default class BlackBird extends Item {
         this.baseY = pp.y;
         this.type = GameUtils.getItemType(this.config);
     }
-
-    onBeginContact(contact, anotherFixture) {
-        if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            if (this.gameMgr.bikeOutterContainer.y > this.sprite.y) {
-                this.gameMgr.isContactFatalEdge = true;
-            } else {
-                this.gameMgr.resetJumpStatus();
-            }
-        } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            let enemy = anotherFixture.getBody().getUserData();
-            if (enemy.selfFixture === anotherFixture) {
-                if (enemy.bikeOutterContainer.y > this.sprite.y) {
-                    enemy.isContactFatalEdge = true;
-                } else {
-                    enemy.resetJumpStatus();
-                }
-            }
-        }
-    }
 }

@@ -299,30 +299,32 @@ export default class GameScene extends Scene {
                         return ud.type === "BlackBird";
                     }
                 },
-                preSolve: (contact, anotherFixture) => {
-                    if (!this.chtable.player.is(anotherFixture)
-                        && !this.chtable.enemy.is(anotherFixture)) {
+                preSolve: (contact, anotherFixture, selfFixture) => {
+                    if (this.chtable.player.is(anotherFixture)
+                        || this.chtable.enemy.is(anotherFixture)) {
+                        if (!selfFixture.getBody().getUserData().isDead) {
+                            contact.setEnabled(false);
+                        }
+                    } else {
                         contact.setEnabled(false);
                     }
                 },
                 beginContact: (contact, anotherFixture, selfFixture) => {
                     let bird = selfFixture.getBody().getUserData();
-                    if (this.chtable.player.is(anotherFixture)) {
-                        if (this.bikeBody.getPosition().y < bird.body.getPosition().y) {
-                            this.isContactFatalEdge = true;
+                    if (bird.isDead) {
+                        return;
+                    }
+                    if (this.chtable.player.is(anotherFixture)
+                        || (this.chtable.enemy.is(anotherFixture) && anotherFixture.getBody().getUserData().selfFixture === anotherFixture)) {
+                        let bikeBody = anotherFixture.getBody();
+                        let bike = bikeBody.getUserData();
+                        if (bikeBody.getPosition().y < bird.body.getPosition().y) {
+                            bike.isContactFatalEdge = true;
                         } else {
-                            this.resetJumpStatus();
+                            bike.resetJumpStatus();
+                            bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), bikeBody.getPosition());
+                            bird.body.applyLinearImpulse(Vec2(0, -Config.item.bird.contactBirdImpulse), bird.body.getPosition());
                             bird.isDead = true;
-                        }
-                    } else if (this.chtable.enemy.is(anotherFixture)) {
-                        let enemy = anotherFixture.getBody().getUserData();
-                        if (enemy.selfFixture === anotherFixture) {
-                            if (anotherFixture.getBody().getPosition().y > bird.body.getPosition().y) {
-                                enemy.isContactFatalEdge = true;
-                            } else {
-                                enemy.resetJumpStatus();
-                                bird.isDead = true;
-                            }
                         }
                     }
                 },
