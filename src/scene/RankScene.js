@@ -8,9 +8,9 @@ let TOTAL_DISTANCE = 1;
 let FARTHEST_DISTANCE = 2;
 let SCORE = 3;
 let typeList = [TOTAL_DISTANCE, FARTHEST_DISTANCE, SCORE];
-let WORLD = 1;
-let FRIEND = 2;
-let rangeList = [WORLD, FRIEND];
+let CURRENT = 1;
+let HISTORY = 2;
+let rangeList = [CURRENT, HISTORY];
 
 export default class RankScene extends Scene {
     onCreate() {
@@ -66,7 +66,9 @@ export default class RankScene extends Scene {
 
     onClickTypeRadio(selectedIndex) {
         this.type = typeList[selectedIndex];
-        this.reset();
+        if (this.rangeRadio) {
+            this.rangeRadio.select(0);
+        }
     }
 
     static initRangeRadioButton(button, info) {
@@ -79,22 +81,18 @@ export default class RankScene extends Scene {
     }
 
     reset() {
+        let map = {
+            [TOTAL_DISTANCE]: "/board/get_total_mileage_board",
+            [FARTHEST_DISTANCE]: "/board/get_farest_mileage_board",
+            [SCORE]: "/board/get_score_board",
+        };
         clearInterval(this.refreshTimeInterval);
         this.ui.resetTimeText.text = "Requesting rank data";
-        switch (this.type) {
-            case TOTAL_DISTANCE: {
-                NetworkMgr.requestGetTotalMileageRank(this.onRequestData.bind(this));
-                break;
-            }
-            case FARTHEST_DISTANCE: {
-                NetworkMgr.requestGetFarthestMileageRank(this.onRequestData.bind(this));
-                break;
-            }
-            case SCORE: {
-                NetworkMgr.requestGetScoreRank(this.onRequestData.bind(this));
-                break;
-            }
+        let key = map[this.type];
+        if (this.range === HISTORY) {
+            key += "_history";
         }
+        NetworkMgr.requestGetRank(key, this.onRequestData.bind(this));
     }
 
     onRequestData(data, nextRefreshTime) {

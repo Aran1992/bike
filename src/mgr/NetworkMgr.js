@@ -2,14 +2,6 @@ import Config from "../config";
 import DataMgr from "./DataMgr";
 
 class NetworkMgr_ {
-    constructor() {
-        this.rankDataTable = {
-            "/board/get_total_mileage_board": {},
-            "/board/get_farest_mileage_board": {},
-            "/board/get_score_board": {},
-        };
-    }
-
     request(url, method, formData, successCallback, failedCallback) {
         successCallback = successCallback || (() => {
         });
@@ -113,28 +105,16 @@ class NetworkMgr_ {
         this.request(Config.serverUrl + "/board/update_total_mileage", "POST", formData, scb, fcb);
     }
 
-    requestGetTotalMileageRank(scb, fcb) {
-        this.requestGetRank("/board/get_total_mileage_board", scb, fcb);
-    }
-
     requestUpdateFarthestMileage(value, scb, fcb) {
         let formData = new FormData();
         formData.append("value", value);
         this.request(Config.serverUrl + "/board/update_farest_mileage", "POST", formData, scb, fcb);
     }
 
-    requestGetFarthestMileageRank(scb, fcb) {
-        this.requestGetRank("/board/get_farest_mileage_board", scb, fcb);
-    }
-
     requestUpdateScore(value, scb, fcb) {
         let formData = new FormData();
         formData.append("value", value);
         this.request(Config.serverUrl + "/board/update_score", "POST", formData, scb, fcb);
-    }
-
-    requestGetScoreRank(scb, fcb) {
-        this.requestGetRank("/board/get_score_board", scb, fcb);
     }
 
     requestSaveSocialData(data, scb, fcb) {
@@ -154,9 +134,14 @@ class NetworkMgr_ {
             let cur = new Date().getTime();
             let start = Config.rankStartTime.getTime();
             let interval = Config.rankRefreshInterval * 1000;
-            this.rankDataTable[key].nextRefreshTime = start + Math.ceil((cur - start) / interval) * interval;
-            this.rankDataTable[key].data = data.response.boards;
-            scb(data.response.boards, this.rankDataTable[key].nextRefreshTime);
+            let nextRefreshTime = start + Math.ceil((cur - start) / interval) * interval;
+            let boards;
+            if (data.response.boards) {
+                boards = data.response.boards;
+            } else {
+                boards = JSON.parse(data.response);
+            }
+            scb(boards, nextRefreshTime);
         }, fcb);
     }
 }
