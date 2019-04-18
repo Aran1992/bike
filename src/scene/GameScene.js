@@ -321,7 +321,7 @@ export default class GameScene extends Scene {
                         if (bikeBody.getPosition().y < bird.body.getPosition().y) {
                             bike.isContactFatalEdge = true;
                         } else {
-                            bike.resetJumpStatus();
+                            bike.jumpCount = 0;
                             bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), bikeBody.getPosition());
                             bird.body.applyLinearImpulse(Vec2(0, -Config.item.bird.contactBirdImpulse), bird.body.getPosition());
                             bird.isDead = true;
