@@ -258,8 +258,14 @@ function createLabel(child, parent) {
         fill: fill,
         fontSize: fontSize,
         wordWrap: false,
-        wordWrapWidth: 0
+        wordWrapWidth: 0,
     };
+    if (getValue(data.strokeColor) !== undefined) {
+        textStyle.stroke = getValue(data.strokeColor);
+    }
+    if (getValue(data.stroke) !== undefined) {
+        textStyle.strokeThickness = getValue(data.stroke);
+    }
     if (fontFamily) {
         textStyle.fontFamily = fontFamily;
     }

@@ -138,6 +138,11 @@ export default class HomeScene extends Scene {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
+        this.ui.addtionText.text = [
+            `Gold Coin: ${Math.floor(GameUtils.getHomeConfig("coinPercent") * 100)}%`,
+            `Distance: ${Math.floor(GameUtils.getHomeConfig("distancePercent") * 100)}%`,
+            `Score: ${Math.floor(GameUtils.getHomeConfig("scorePercent") * 100)}%`,
+        ].join("\n");
     }
 
     createSpoils(itemID, id, x, y) {

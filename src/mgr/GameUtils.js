@@ -77,6 +77,20 @@ export default class GameUtils {
         return Math.floor(value * 100) / 100;
     }
 
+    static getHomeConfig(key) {
+        let value = 0;
+        Config.home.types.forEach(type => {
+            Config.home[type].forEach(item => {
+                if (item.unlockRewards
+                    && item.unlockRewards.length !== 0
+                    && !DataMgr.isHomeItemLocked(type, item.id)) {
+                    value += item.unlockRewards[key];
+                }
+            });
+        });
+        return value;
+    }
+
     static getFrames(jsonPath, animationName) {
         if (animationName === undefined) {
             animationName = Utils.keys(resources[jsonPath].data.animations)[0];
