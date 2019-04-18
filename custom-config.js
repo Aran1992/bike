@@ -9605,7 +9605,7 @@ if (window.ipConfig && window.ipConfig.innerHTML.length) {
 // 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）
 Config.rankStartTime = new Date(2019, 4, 11, 0, 0, 0);
 // 排行榜刷新时间间隔（单位：秒）
-Config.rankRefreshInterval = 60 * 60 * 24;
+Config.rankRefreshInterval = 60 * 10;
 
 // 玩家自行车排名文本相关配置
 Config.bike.rankText = {
@@ -9627,23 +9627,23 @@ Config.bike.enemyNameText = {
         // 颜色
         fill: "white",
         // 字体大小
-        fontSize: 25,
+        fontSize: 20,
     },
     // Y轴位置
-    positionY: -150
+    positionY: -100
 };
 
 // 敌人自行车头像图片相关配置
 Config.bike.enemyHeadImage = {
     // Y轴位置
-    positionY: -50,
+    positionY: -60,
     // 宽
-    width: 50,
+    width: 30,
     // 高
-    height: 50,
+    height: 30,
 };
 
 // 默认敌人头像路径
-Config.defaultEnemyHeadImagePath = "images/bubble.png";
+Config.defaultEnemyHeadImagePath = "myLaya/laya/assets/images/UserIconDefault.png";
 
 export default Config;
