@@ -7422,6 +7422,8 @@ Config.item = {
         contactBikeImpulse: 250,
         // 触碰到的时候的小鸟受到的冲击力大小
         contactBirdImpulse: 125,
+        // 出现音效
+        appearSoundPath: "sound/SE310.mp3",
     },
     // 地刺
     groundStab: {

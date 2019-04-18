@@ -146,6 +146,14 @@ export default class GameScene extends Scene {
                 resNameList.forEach(resName => data[resName] && effectResPathList.push(data[resName]));
             }
         }
+        let soundPathList = [];
+        for (let itemType in Config.item) {
+            if (Config.item.hasOwnProperty(itemType)) {
+                if (Config.item[itemType].appearSoundPath) {
+                    soundPathList.push(Config.item[itemType].appearSoundPath);
+                }
+            }
+        }
         return [
             Config.bikeAtlasPath,
             Config.finalFlagImagePath,
@@ -157,6 +165,7 @@ export default class GameScene extends Scene {
             Config.startImagePath.ui,
             this.bgmPath,
         ]
+            .concat(soundPathList)
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.sceneItemImagePath))
             .concat(Utils.values(Config.emitterPath))
@@ -359,10 +368,12 @@ export default class GameScene extends Scene {
                     return this.itemList.indexOf(fixture.getBody().getUserData()) !== -1;
                 },
                 preSolve(contact, anotherFixture, selfFixture) {
-                    selfFixture.getBody().getUserData().onPreSolve(contact, anotherFixture, selfFixture);
+                    let ud = selfFixture.getBody().getUserData();
+                    ud.onPreSolve && ud.onPreSolve(contact, anotherFixture, selfFixture);
                 },
                 beginContact(contact, anotherFixture, selfFixture) {
-                    selfFixture.getBody().getUserData().onBeginContact(contact, anotherFixture, selfFixture);
+                    let ud = selfFixture.getBody().getUserData();
+                    ud.onBeginContact && ud.onBeginContact(contact, anotherFixture, selfFixture);
                 }
             }
         };
@@ -628,6 +639,7 @@ export default class GameScene extends Scene {
             case "BlackBird": {
                 let item = new BlackBird(data, this.world);
                 this.birdList.push(item);
+                this.itemList.push(item);
                 this.underBikeContianer.addChild(item.sprite);
                 break;
             }
@@ -805,7 +817,16 @@ export default class GameScene extends Scene {
 
         this.syncBirdSprite();
 
-        this.itemList.forEach(item => item.update && item.update());
+        this.itemList.forEach(item => {
+            item.update && item.update();
+            let itemType = item.itemType;
+            if (!item.itemShowed && this.isItemXEnterView(item)) {
+                item.itemShowed = true;
+                if (Config.item[itemType] && Config.item[itemType].appearSoundPath) {
+                    MusicMgr.playSound(Config.item[itemType].appearSoundPath);
+                }
+            }
+        });
 
         if (this.syncEnemySprite) {
             this.syncEnemySprite();
@@ -1104,7 +1125,6 @@ export default class GameScene extends Scene {
             let rp = bird.sprite.position;
             if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
                 if (!bird.showed) {
-                    MusicMgr.playSound(Config.soundPath.birdAppear);
                     bird.showed = true;
                     bird.createBody();
                 }
@@ -1327,7 +1347,9 @@ export default class GameScene extends Scene {
     }
 
     isItemXEnterView(item) {
-        return item.getLeftBorderX() < -this.cameraContainer.x + Config.designWidth;
+        if (item.getLeftBorderX) {
+            return item.getLeftBorderX() < -this.cameraContainer.x + Config.designWidth;
+        }
     }
 
     isItemXInView(item) {

@@ -107,7 +107,6 @@ let Config = {
         eatGoldCoin: "sound/SoundSE319.mp3",
         eatAccGem: "sound/SE202.mp3",
         die: "sound/SE104.mp3",
-        birdAppear: "sound/SE310.mp3",
         startLevel: "sound/stagekettei.mp3",
         throughFlag: "sound/SoundBGM202.mp3",
     },

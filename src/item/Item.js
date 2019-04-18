@@ -73,6 +73,10 @@ export default class Item {
         return this.sprite.position.x - (this.sprite.anchor.x * this.sprite.width) + this.sprite.width;
     }
 
+    getLeftBorderX() {
+        return this.sprite.position.x - (this.sprite.anchor.x * this.sprite.width);
+    }
+
     destroy() {
         this.world.destroyBody(this.body);
         this.sprite.parent.removeChild(this.sprite);

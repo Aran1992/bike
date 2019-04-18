@@ -39,5 +39,6 @@ export default class BlackBird extends Item {
         this.body = body;
         this.baseY = pp.y;
         this.type = GameUtils.getItemType(this.config);
+        this.itemType = "bird";
     }
 }

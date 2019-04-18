@@ -5,6 +5,7 @@ import Config from "../config";
 
 export default class EditorItem {
     constructor(itemType, gameMgr, parent, world, config) {
+        this.itemType = itemType;
         this.gameMgr = gameMgr;
         this.parent = parent;
         this.world = world;
