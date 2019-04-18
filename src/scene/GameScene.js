@@ -1581,6 +1581,10 @@ export default class GameScene extends Scene {
         }
         return {scaleX, scaleY};
     }
+
+    getHead() {
+        return Config.defaultEnemyHeadImagePath;
+    }
 }
 
 GameScene.sceneFilePath = "myLaya/laya/pages/View/GameScene.scene.json";

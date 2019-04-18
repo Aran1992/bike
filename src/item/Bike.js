@@ -80,6 +80,8 @@ export default class Bike {
         this.bikeRankText.position.set(0, Config.bike.enemyNameText.positionY);
 
         this.bikeHeadImage = this.bikeOutterContainer.addChild(Sprite.from(Config.defaultEnemyHeadImagePath));
+        this.bikeHeadImage.width = Config.bike.enemyHeadImage.width;
+        this.bikeHeadImage.height = Config.bike.enemyHeadImage.height;
         this.bikeHeadImage.anchor.set(0.5, 1);
         this.bikeHeadImage.position.set(0, Config.bike.enemyHeadImage.positionY);
 
@@ -707,5 +709,9 @@ export default class Bike {
             }
         }
         return false;
+    }
+
+    getHead() {
+        return Config.defaultEnemyHeadImagePath;
     }
 }

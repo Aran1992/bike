@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
+import {resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
@@ -285,6 +285,7 @@ are you sure?`,
                 distance = nextPlayerX - playerX;
             }
             this.ui.nextPlayerDistance.text = Math.ceil(distance) + "m";
+            this.ui.nextPlayerHead.children[0].texture = Texture.from(nextPlayer.getHead());
         } else {
             this.ui.nextPlayerInfo.visible = false;
         }

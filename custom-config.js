@@ -9634,7 +9634,11 @@ Config.bike.enemyNameText = {
 // 敌人自行车头像图片相关配置
 Config.bike.enemyHeadImage = {
     // Y轴位置
-    positionY: -50
+    positionY: -50,
+    // 宽
+    width: 50,
+    // 高
+    height: 50,
 };
 
 // 默认敌人头像路径
