@@ -81,6 +81,7 @@ export default class GameScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
 
         this.ui.matchRacetrack.visible = false;
+        this.ui.nextPlayerInfo.visible = false;
 
         this.ui.itemUseHistoryLabel.text = "";
     }

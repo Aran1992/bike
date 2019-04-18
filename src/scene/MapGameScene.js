@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {resources, Sprite} from "../libs/pixi-wrapper";
+import {resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
@@ -77,6 +77,13 @@ export default class MapGameScene extends GameScene {
         this.createBike(pp);
         this.createEnemy(pp);
         this.createRacetrackPlayer();
+    }
+
+    createBike(pp) {
+        super.createBike(pp);
+        this.bikeRankText = this.bikeOutterContainer.addChild(new Text("", new TextStyle(Config.bike.rankText.style)));
+        this.bikeRankText.anchor.set(0.5, 1);
+        this.bikeRankText.position.set(0, Config.bike.rankText.positionY);
     }
 
     createEnemy(pp) {
@@ -232,6 +239,8 @@ are you sure?`,
     play() {
         super.play();
         this.updateRacetrackPlayer();
+        this.updateNextPlayerInfo();
+        this.bikeRankText.text = this.getRank(this);
     }
 
     onDead() {
@@ -258,5 +267,20 @@ are you sure?`,
             }
         }
         return effects[Utils.randomWithWeight(weights)];
+    }
+
+    updateNextPlayerInfo() {
+        let nextPlayer = this.getFormerOne(this);
+        if (nextPlayer && !this.isPlayerInScreen(nextPlayer)) {
+            this.ui.nextPlayerInfo.visible = true;
+            this.ui.nextPlayerName.text = nextPlayer.getName();
+            this.ui.nextPlayerDistance.text = Math.ceil(nextPlayer.bikeBody.getPosition().x - this.bikeBody.getPosition().x) + "m";
+        } else {
+            this.ui.nextPlayerInfo.visible = false;
+        }
+    }
+
+    isPlayerInScreen(player) {
+        return player.bikeOutterContainer.x < App.sceneWidth - this.cameraContainer.x;
     }
 }

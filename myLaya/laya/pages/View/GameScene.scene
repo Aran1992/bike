@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":41,
-    "selecteID":48,
+    "selectedBox":62,
+    "selecteID":60,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":57,
+    "maxID":63,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -36,13 +36,14 @@
             "props":{"y":0,"x":0,"width":720,"skin":"images/bg-7.png","height":76},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,pauseButton",
                     "props":{"y":0,"x":0,"var":"pauseButton","top":0,"skin":"images/button-pause.png","left":0},
@@ -56,6 +57,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,surrenderButton",
                     "props":{"var":"surrenderButton","top":0,"skin":"images/ButtonClose_Gray.png","left":0},
@@ -69,6 +71,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":10,"x":75,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"left":75},
@@ -122,6 +125,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":10,"x":290,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":37},
@@ -175,6 +179,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":10,"x":505,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":252},
@@ -278,14 +283,13 @@
             "props":{"var":"sealMask","left":55,"height":300,"bottom":30},
             "nodeParent":1,
             "label":"sealMask",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":54,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/ButtonClose_Gray.png","bottom":8},
@@ -300,7 +304,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/ButtonClose_Gray.png","bottom":128},
@@ -335,14 +338,13 @@
             "props":{"y":768,"x":67,"width":614,"var":"rebornPanel","skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":300,"centerX":14,"bottom":212},
             "nodeParent":1,
             "label":"rebornPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":41,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"width":500,"top":40,"text":"Sliding Up and Down to Adjust Resurrection Position","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
@@ -357,7 +359,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,confirmButton",
                     "props":{"x":147,"var":"confirmButton","skin":"images/button-start.png","centerX":0,"bottom":75},
@@ -384,6 +385,64 @@
                         }]
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "searchKey":"Panel,nextPlayerInfo",
+            "props":{"width":200,"var":"nextPlayerInfo","top":200,"right":0,"height":70},
+            "nodeParent":1,
+            "label":"nextPlayerInfo",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":62,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,nextPlayerHead",
+                    "props":{"x":662,"var":"nextPlayerHead","skin":"images/icon-metre.png","scaleY":0.9,"scaleX":0.9,"right":0,"centerY":0},
+                    "nodeParent":62,
+                    "label":"nextPlayerHead",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":59,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,nextPlayerName",
+                    "props":{"y":200,"x":599,"var":"nextPlayerName","top":0,"text":"npc1","right":70,"fontSize":30,"color":"#000000"},
+                    "nodeParent":62,
+                    "label":"nextPlayerName",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":61,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,nextPlayerDistance",
+                    "props":{"y":173,"x":590,"var":"nextPlayerDistance","text":"231m","right":70,"fontSize":30,"color":"#000000","bottom":0},
+                    "nodeParent":62,
+                    "label":"nextPlayerDistance",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":60,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

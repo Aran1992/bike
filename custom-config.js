@@ -9605,4 +9605,39 @@ Config.rankStartTime = new Date(2019, 4, 11, 0, 0, 0);
 // 排行榜刷新时间间隔（单位：秒）
 Config.rankRefreshInterval = 60 * 60 * 24;
 
+// 玩家自行车排名文本相关配置
+Config.bike.rankText = {
+    // 字体样式
+    style: {
+        // 颜色
+        fill: "white",
+        // 字体大小
+        fontSize: 50,
+    },
+    // Y轴位置
+    positionY: -50
+};
+
+// 敌人自行车名字文本相关配置
+Config.bike.enemyNameText = {
+    // 字体样式
+    style: {
+        // 颜色
+        fill: "white",
+        // 字体大小
+        fontSize: 25,
+    },
+    // Y轴位置
+    positionY: -150
+};
+
+// 敌人自行车头像图片相关配置
+Config.bike.enemyHeadImage = {
+    // Y轴位置
+    positionY: -50
+};
+
+// 默认敌人头像路径
+Config.defaultEnemyHeadImagePath = "images/bubble.png";
+
 export default Config;

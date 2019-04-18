@@ -75,6 +75,14 @@ export default class Bike {
         this.bikeBubbleSprite.scale.set(1 / Config.bikeScale, 1 / Config.bikeScale);
         this.bikeBubbleSprite.visible = false;
 
+        this.bikeRankText = this.bikeOutterContainer.addChild(new Text(this.getName(), new TextStyle(Config.bike.enemyNameText.style)));
+        this.bikeRankText.anchor.set(0.5, 1);
+        this.bikeRankText.position.set(0, Config.bike.enemyNameText.positionY);
+
+        this.bikeHeadImage = this.bikeOutterContainer.addChild(Sprite.from(Config.defaultEnemyHeadImagePath));
+        this.bikeHeadImage.anchor.set(0.5, 1);
+        this.bikeHeadImage.position.set(0, Config.bike.enemyHeadImage.positionY);
+
         this.bikeBody = this.world.createDynamicBody();
         let density = Config.bikeDensity * (config.densityPercent || 1);
         this.selfFixture = this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1});
