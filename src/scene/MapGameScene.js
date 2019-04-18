@@ -66,6 +66,7 @@ export default class MapGameScene extends GameScene {
             x: (lastPath[lastPath.length - 6] + lastPath[lastPath.length - 4]) / 2,
             y: (lastPath[lastPath.length - 5] + lastPath[lastPath.length - 3]) / 2,
         };
+        this.finalPointPhysicX = GameUtils.renderPos2PhysicsPos(this.finalPoint).x;
 
         this.createMap();
 
@@ -274,13 +275,22 @@ are you sure?`,
         if (nextPlayer && !this.isPlayerInScreen(nextPlayer)) {
             this.ui.nextPlayerInfo.visible = true;
             this.ui.nextPlayerName.text = nextPlayer.getName();
-            this.ui.nextPlayerDistance.text = Math.ceil(nextPlayer.bikeBody.getPosition().x - this.bikeBody.getPosition().x) + "m";
+            let playerX = this.bikeBody.getPosition().x;
+            let nextPlayerX = nextPlayer.bikeBody.getPosition().x;
+            let finalX = this.finalPointPhysicX;
+            let distance;
+            if (nextPlayerX > finalX) {
+                distance = finalX - playerX;
+            } else {
+                distance = nextPlayerX - playerX;
+            }
+            this.ui.nextPlayerDistance.text = Math.ceil(distance) + "m";
         } else {
             this.ui.nextPlayerInfo.visible = false;
         }
     }
 
     isPlayerInScreen(player) {
-        return player.bikeOutterContainer.x < App.sceneWidth - this.cameraContainer.x;
+        return player.bikeOutterContainer.x < Config.designWidth - this.cameraContainer.x;
     }
 }
