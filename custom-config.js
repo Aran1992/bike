@@ -57,7 +57,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM102.mp3",
+        bgmPath: "sound/01_oushiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -144,7 +144,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM103.mp3",
+        bgmPath: "sound/05_ohitsujiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -231,7 +231,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM105.mp3",
+        bgmPath: "sound/09_yagiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -318,7 +318,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM105.mp3",
+        bgmPath: "sound/04_sasori.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -405,7 +405,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/03_mizugameza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -492,7 +492,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/11_kaniza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -579,7 +579,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/06_futagoza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -666,7 +666,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/12_shishiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -753,7 +753,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/08_tenbinza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -840,7 +840,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/10_uoza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -927,7 +927,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/02_iteza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -1014,7 +1014,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/07_otomeza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -1312,7 +1312,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM102.mp3",
+        bgmPath: "sound/01_oushiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -1723,7 +1723,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM103.mp3",
+        bgmPath: "sound/05_ohitsujiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -2134,7 +2134,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM105.mp3",
+        bgmPath: "sound/09_yagiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -2545,7 +2545,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/SoundBGM105.mp3",
+        bgmPath: "sound/04_sasori.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -2956,7 +2956,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/03_mizugameza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -3367,7 +3367,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/11_kaniza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -3778,7 +3778,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/06_futagoza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -4189,7 +4189,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/12_shishiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -4600,7 +4600,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/08_tenbinza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -5011,7 +5011,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/10_uoza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -5422,7 +5422,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/02_iteza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -5833,7 +5833,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/bgm1.mp3",
+        bgmPath: "sound/07_otomeza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
