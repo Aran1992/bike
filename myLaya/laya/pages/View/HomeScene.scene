@@ -664,7 +664,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,addtionText",
-                    "props":{"var":"addtionText","text":"123456","strokeColor":"#ffffff","stroke":5,"left":25,"fontSize":25,"bottom":275,"align":"left"},
+                    "props":{"var":"addtionText","text":"123456","strokeColor":"#000000","stroke":5,"left":25,"fontSize":25,"color":"#ffffff","bottom":275,"align":"left"},
                     "nodeParent":31,
                     "label":"addtionText",
                     "isDirectory":false,
