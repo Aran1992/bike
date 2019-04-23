@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":31,
-    "selecteID":65,
+    "selectedBox":59,
+    "selecteID":60,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -291,16 +291,17 @@
                     "props":{"var":"hideUIBtn","top":140,"skin":"images/button-shop-2.png","scaleY":0.7,"scaleX":0.7,"left":5},
                     "nodeParent":31,
                     "label":"hideUIBtn",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":26,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":0,"x":0,"text":"HideUI","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                            "props":{"y":0,"x":0,"text":"${HideUI}","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
                             "nodeParent":26,
                             "label":"Label",
                             "isDirectory":false,
@@ -318,16 +319,17 @@
                     "props":{"var":"startRemoveItemModeBtn","top":140,"skin":"images/button-shop-3.png","scaleY":0.7,"scaleX":0.7,"right":5},
                     "nodeParent":31,
                     "label":"startRemoveItemModeBtn",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":27,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"text":"StartRemove","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                            "props":{"text":"${StartRemove}","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
                             "nodeParent":27,
                             "label":"Label",
                             "isDirectory":false,
@@ -345,16 +347,17 @@
                     "props":{"var":"endRemoveItemModeBtn","top":140,"skin":"images/button-shop-2.png","scaleY":0.7,"scaleX":0.7,"right":5},
                     "nodeParent":31,
                     "label":"endRemoveItemModeBtn",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":29,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":0,"x":0,"text":"EndRemove","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                            "props":{"y":0,"x":0,"text":"${EndRemove}","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
                             "nodeParent":29,
                             "label":"Label",
                             "isDirectory":false,
@@ -372,16 +375,17 @@
                     "props":{"var":"removeAllItemBtn","top":140,"skin":"images/button-shop-1.png","scaleY":0.7,"scaleX":0.7,"right":130},
                     "nodeParent":31,
                     "label":"removeAllItemBtn",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":32,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":0,"x":0,"text":"RemoveAll","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                            "props":{"y":0,"x":0,"text":"${RemoveAll}","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
                             "nodeParent":32,
                             "label":"Label",
                             "isDirectory":false,
@@ -399,13 +403,14 @@
                     "props":{"width":640,"var":"radio","left":40,"height":78,"bottom":160},
                     "nodeParent":31,
                     "label":"radio",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,check",
                             "props":{"width":160,"top":0,"name":"check","height":78},
@@ -418,6 +423,7 @@
                             "compId":4,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,common",
                                     "props":{"top":0,"skin":"images/button-tab-1.png","sizeGrid":"10,10,10,10","right":0,"name":"common","left":0,"bottom":0},
@@ -431,6 +437,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,selected",
                                     "props":{"visible":false,"top":0,"skin":"images/button-tab-2.png","sizeGrid":"10,10,10,10","right":0,"name":"selected","left":0,"bottom":0},
@@ -445,6 +452,7 @@
                                     "$HIDDEN":false
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,name",
                                     "props":{"text":"Background","name":"name","fontSize":25,"color":"#000000","centerY":0,"centerX":0},
@@ -557,13 +565,14 @@
                     "props":{"width":480,"var":"selectItemPanel","height":120,"centerX":0,"bottom":20},
                     "nodeParent":31,
                     "label":"selectItemPanel",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":19,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,commonItemBtn",
                             "props":{"var":"commonItemBtn","skin":"images/button-shop-2.png","centerX":0,"bottom":0},
@@ -576,9 +585,10 @@
                             "compId":23,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"text":"Enable","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"text":"${Enable}","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
                                     "nodeParent":23,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -591,6 +601,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selectedItemBtn",
                             "props":{"var":"selectedItemBtn","skin":"images/button-shop-1.png","centerX":0,"bottom":0},
@@ -603,9 +614,10 @@
                             "compId":24,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":0,"x":0,"text":"Selected","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"y":0,"x":0,"text":"${Selected}","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
                                     "nodeParent":24,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -618,6 +630,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedItemBtn",
                             "props":{"y":54,"x":160,"var":"lockedItemBtn","skin":"images/button-shop-3.png","centerX":0,"bottom":0},
@@ -630,9 +643,10 @@
                             "compId":59,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":0,"x":0,"text":"Locked","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"y":0,"x":0,"text":"${Unlocked}","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
                                     "nodeParent":59,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -645,6 +659,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,selectItemName",
                             "props":{"y":0,"x":160,"var":"selectItemName","top":0,"text":"Background","fontSize":30,"color":"#ffffff","centerX":0},
@@ -664,7 +679,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,addtionText",
-                    "props":{"var":"addtionText","text":"123456","strokeColor":"#ffffff","stroke":5,"left":25,"fontSize":25,"bottom":275,"align":"left"},
+                    "props":{"var":"addtionText","text":"123456","strokeColor":"#000000","stroke":5,"left":25,"fontSize":25,"color":"#ffffff","bottom":275,"align":"left"},
                     "nodeParent":31,
                     "label":"addtionText",
                     "isDirectory":false,
@@ -683,16 +698,17 @@
             "props":{"var":"showUIBtn","top":5,"skin":"images/button-shop-1.png","scaleY":0.7,"scaleX":0.7,"left":5},
             "nodeParent":2,
             "label":"showUIBtn",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":0,"x":0,"text":"ShowUI","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                    "props":{"y":0,"x":0,"text":"${ShowUI}","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
                     "nodeParent":28,
                     "label":"Label",
                     "isDirectory":false,
