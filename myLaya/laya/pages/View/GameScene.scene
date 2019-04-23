@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":62,
-    "selecteID":60,
+    "selectedBox":41,
+    "selecteID":48,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -321,7 +321,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,itemUseHistoryLabel",
-            "props":{"y":100,"x":0,"var":"itemUseHistoryLabel","top":100,"text":"【NPC1】对【james】使用了【图片】","strokeColor":"#000000","stroke":5,"left":0,"fontSize":25,"color":"#ffffff"},
+            "props":{"y":100,"x":0,"var":"itemUseHistoryLabel","top":100,"text":"${use_item}","strokeColor":"#000000","stroke":5,"left":0,"fontSize":25,"color":"#ffffff"},
             "nodeParent":1,
             "label":"itemUseHistoryLabel",
             "isDirectory":false,
@@ -338,16 +338,17 @@
             "props":{"y":768,"x":67,"width":614,"var":"rebornPanel","skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":300,"centerX":14,"bottom":212},
             "nodeParent":1,
             "label":"rebornPanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":41,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"width":500,"top":40,"text":"Sliding Up and Down to Adjust Resurrection Position","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"width":500,"top":40,"text":"${Resurrection_Position}","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":41,
                     "label":"Label",
                     "isOpen":true,
@@ -359,6 +360,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,confirmButton",
                     "props":{"x":147,"var":"confirmButton","skin":"images/button-start.png","centerX":0,"bottom":75},
