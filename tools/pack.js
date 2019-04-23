@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const root = "myLaya";
 
 const handle = (root) => {
     const files = fs.readdirSync(root);
@@ -19,7 +18,7 @@ const handle = (root) => {
     });
 };
 
-exports.pack = () => {
+exports.pack = (root) => {
     handle(root);
     console.log("pack success");
 };

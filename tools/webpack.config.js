@@ -1,5 +1,6 @@
+const path = require("path");
 module.exports = {
-    entry: "./src/main.js",
+    entry: "../src/main.js",
     module: {
         rules: [{
             test: /\.js$/,
@@ -16,8 +17,7 @@ module.exports = {
         extensions: ["*", ".js"]
     },
     output: {
-        path: __dirname + "/dist",
-        publicPath: "/",
+        path: path.resolve("../dist"),
         filename: "bundle.js"
     },
     mode: "development"

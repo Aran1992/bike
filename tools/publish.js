@@ -1,11 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const webpack = require("webpack");
-const config = require("../webpack.config");
-
-const exceptFileEnds = [".scene", ".prefab"];
+const config = require("./webpack.config");
+const pack = require("./pack").pack;
+const i18n = require("./i18n").i18n;
+const language = require("../publish-test.config").language;
 
 function copy_(src, dist, exceptList) {
+    const exceptFileEnds = [".scene", ".prefab"];
     if (exceptList && exceptList.some(file => file === src)) {
         return;
     }
@@ -43,10 +45,13 @@ function deleteall(path) {
     }
 }
 
-require("../pack").pack();
+pack("../myLaya/laya");
+
+i18n(language);
+
 config.mode = "production";
 webpack(config, () => {
-    deleteall("./publish");
+    deleteall("../publish");
     [
         "images",
         "sound",
@@ -55,6 +60,6 @@ webpack(config, () => {
         "myLaya/laya/assets/images",
         "myLaya/laya/assets/prefabs",
         "index.html",
-        "dist/bundle.js",
-    ].forEach(file => copy(file, `publish/${file}`));
+        "dist",
+    ].forEach(file => copy(`../${file}`, `../publish/${file}`));
 });
