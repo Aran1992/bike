@@ -1,3 +1,4 @@
+import Config from "../config";
 import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle} from "../libs/pixi-wrapper";
 
 function getValue(value, defaultValue) {
@@ -205,7 +206,7 @@ function createScale9Image(child, parent) {
 function createLabel(child, parent) {
     let data = child.props;
 
-    let textContent = getValue(data.text, "");
+    let textContent = getValue(data.text, "").replace(/\${.*?}/g, id => resources[Config.i18nPath].data[id.substring(2, id.length - 1)]);
     let fill = getValue(data.color, "black");
     let fontSize = getValue(data.fontSize, 10);
     let fontFamily = getValue(data.font);

@@ -257,4 +257,6 @@ Config.loadingImagePathList = [
     "images/loading/of_native_loader_progress_12.png",
 ];
 
+Config.i18nPath = "dist/i18n.json";
+
 export default Config;

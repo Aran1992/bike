@@ -8,7 +8,7 @@ exports.i18n = language => {
     let column;
     for (let code = 65; ; code++) {
         column = String.fromCharCode(code);
-        if (sheet[`${column}2`].v === language) {
+        if (sheet[`${column}2`] && sheet[`${column}2`].v === language) {
             break;
         }
     }
