@@ -13,7 +13,7 @@ i18n(language);
 fs.watch(root, {recursive: true}, (event, filename) => {
     console.log(event, filename);
     if (filename) {
-        if (filename.startsWith(sceneFileRoot) && event === "change" && filename.endsWith(".scene") || filename.endsWith(".prefab")) {
+        if (event === "change" && filename.endsWith(".scene") || filename.endsWith(".prefab")) {
             let filepath = path.join(root, filename);
             fs.readFile(filepath, "utf8", (err, data) => {
                 if (err) {
