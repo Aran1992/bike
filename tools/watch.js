@@ -12,8 +12,8 @@ i18n(language);
 
 fs.watch(root, {recursive: true}, (event, filename) => {
     console.log(event, filename);
-    if (filename) {
-        if (event === "change" && filename.endsWith(".scene") || filename.endsWith(".prefab")) {
+    if (filename && event === "change") {
+        if (filename.endsWith(".scene") || filename.endsWith(".prefab")) {
             let filepath = path.join(root, filename);
             fs.readFile(filepath, "utf8", (err, data) => {
                 if (err) {
