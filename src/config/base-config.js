@@ -116,8 +116,6 @@ let Config = {
 // 地图配置
 Config.mapList = [
     {
-        // 显示给人看的名字
-        showName: "Test",
         // scene文件的路径
         scenePath: "Test",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -154,8 +152,6 @@ Config.endlessMode = {
 
 Config.endlessMode.sceneList = [
     {
-        // 显示给人看的名字
-        showName: "Test",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边

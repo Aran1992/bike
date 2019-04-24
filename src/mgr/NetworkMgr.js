@@ -30,7 +30,7 @@ class NetworkMgr_ {
                         failedCallback(data);
                     }
                 } else {
-                    App.showTip("Network request failed");
+                    App.showTip(App.getText("NetworkBusy"));
                     if (failedCallback) {
                         failedCallback({message: "Network request failed"});
                     }
@@ -124,9 +124,7 @@ class NetworkMgr_ {
     }
 
     requestLoadSocialData(name, scb, fcb) {
-        let formData = new FormData();
-        formData.append("name", name);
-        this.request(Config.serverUrl + "/player/load_social_data", "POST", formData, scb, fcb);
+        this.request(Config.serverUrl + "/player/load_social_data", "GET", {name: name}, scb, fcb);
     }
 
     requestGetRank(key, scb, fcb) {

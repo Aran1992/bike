@@ -19,8 +19,6 @@ Config.defaultItemRandomTable = {
 // 地图配置
 Config.mapList = [
     {
-        // 显示给人看的名字
-        showName: "Test1",
         // scene文件的路径
         scenePath: "Test001",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -106,8 +104,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test2",
         // scene文件的路径
         scenePath: "Test002",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -193,8 +189,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test3",
         // scene文件的路径
         scenePath: "Test003",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -280,8 +274,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test4",
         // scene文件的路径
         scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -367,8 +359,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test5",
         // scene文件的路径
         scenePath: "Test005",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -454,8 +444,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test6",
         // scene文件的路径
         scenePath: "Test006",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -541,8 +529,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test7",
         // scene文件的路径
         scenePath: "Test007",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -628,8 +614,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test8",
         // scene文件的路径
         scenePath: "Test008",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -715,8 +699,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test9",
         // scene文件的路径
         scenePath: "Test009",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -802,8 +784,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test10",
         // scene文件的路径
         scenePath: "Test010",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -889,8 +869,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test11",
         // scene文件的路径
         scenePath: "Test011",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -976,8 +954,6 @@ Config.mapList = [
         }
     },
     {
-        // 显示给人看的名字
-        showName: "Test12",
         // scene文件的路径
         scenePath: "Test012",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -1274,8 +1250,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 0,
         // 花费解锁所需钻石
         unlockCostDiamond: 0,
-        // 显示给人看的名字
-        showName: "Map1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1669,8 +1643,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map1",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -1685,8 +1657,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 12000,
         // 花费解锁所需钻石
         unlockCostDiamond: 10,
-        // 显示给人看的名字
-        showName: "Map2",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2080,8 +2050,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map2",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -2096,8 +2064,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 36000,
         // 花费解锁所需钻石
         unlockCostDiamond: 50,
-        // 显示给人看的名字
-        showName: "Map3",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2491,8 +2457,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map3",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -2507,8 +2471,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 72000,
         // 花费解锁所需钻石
         unlockCostDiamond: 100,
-        // 显示给人看的名字
-        showName: "Map4",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2902,8 +2864,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map4",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -2918,8 +2878,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 144000,
         // 花费解锁所需钻石
         unlockCostDiamond: 150,
-        // 显示给人看的名字
-        showName: "Map5",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -3313,8 +3271,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map5",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -3329,8 +3285,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 216000,
         // 花费解锁所需钻石
         unlockCostDiamond: 200,
-        // 显示给人看的名字
-        showName: "Map6",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -3724,8 +3678,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map6",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -3740,8 +3692,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 432000,
         // 花费解锁所需钻石
         unlockCostDiamond: 250,
-        // 显示给人看的名字
-        showName: "Map7",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -4135,8 +4085,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map7",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -4151,8 +4099,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 864000,
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
-        // 显示给人看的名字
-        showName: "Map8",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -4546,8 +4492,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map8",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -4562,8 +4506,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 1728000,
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
-        // 显示给人看的名字
-        showName: "Map9",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -4957,8 +4899,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map9",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -4973,8 +4913,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 3456000,
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
-        // 显示给人看的名字
-        showName: "Map10",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -5368,8 +5306,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map10",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -5384,8 +5320,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 5184000,
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
-        // 显示给人看的名字
-        showName: "Map11",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -5779,8 +5713,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map11",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -5795,8 +5727,6 @@ Config.endlessMode.sceneList = [
         unlockDistance: 6912000,
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
-        // 显示给人看的名字
-        showName: "Map12",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -6190,8 +6120,6 @@ Config.endlessMode.sceneList = [
                 velocity: 2,
             },
         ],
-        // 地图的描述，用于商店显示，内容为空或者没有该项的时候商店会自动隐藏描述
-        dsc: "Map12",
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
             Accelerate: 1,
@@ -8257,14 +8185,12 @@ Config.home = {
         {
             id: 1,
             path: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
-            name: "Background 1",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 2,
             path: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
-            name: "Background 2",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8284,7 +8210,6 @@ Config.home = {
         {
             id: 3,
             path: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
-            name: "Background 3",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8304,7 +8229,6 @@ Config.home = {
         {
             id: 4,
             path: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
-            name: "Background 4",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8324,7 +8248,6 @@ Config.home = {
         {
             id: 5,
             path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
-            name: "Background 5",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8344,7 +8267,6 @@ Config.home = {
         {
             id: 6,
             path: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
-            name: "Background 6",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8364,7 +8286,6 @@ Config.home = {
         {
             id: 7,
             path: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
-            name: "Background 7",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8384,7 +8305,6 @@ Config.home = {
         {
             id: 8,
             path: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
-            name: "Background 8",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8404,7 +8324,6 @@ Config.home = {
         {
             id: 9,
             path: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
-            name: "Background 9",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8424,7 +8343,6 @@ Config.home = {
         {
             id: 10,
             path: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
-            name: "Background 10",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8444,7 +8362,6 @@ Config.home = {
         {
             id: 11,
             path: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
-            name: "Background 11",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8464,7 +8381,6 @@ Config.home = {
         {
             id: 12,
             path: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
-            name: "Background 12",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8487,14 +8403,12 @@ Config.home = {
         {
             id: 1,
             path: "images/home/floor/floor001.png",
-            name: "Floor 1",
             // 场景物件缩放
             itemScale: 1,
         },
         {
             id: 2,
             path: "images/home/floor/floor002.png",
-            name: "Floor 2",
             // 场景物件缩放
             itemScale: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8514,7 +8428,6 @@ Config.home = {
         {
             id: 3,
             path: "images/home/floor/floor003.png",
-            name: "Floor 3",
             // 场景物件缩放
             itemScale: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8534,7 +8447,6 @@ Config.home = {
         {
             id: 4,
             path: "images/home/floor/floor004.png",
-            name: "Floor 4",
             // 场景物件缩放
             itemScale: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8554,7 +8466,6 @@ Config.home = {
         {
             id: 5,
             path: "images/home/floor/floor005.png",
-            name: "Floor 5",
             // 场景物件缩放
             itemScale: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8574,7 +8485,6 @@ Config.home = {
         {
             id: 6,
             path: "images/home/floor/floor006.png",
-            name: "Floor 6",
             // 场景物件缩放
             itemScale: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8594,7 +8504,6 @@ Config.home = {
         {
             id: 7,
             path: "images/home/floor/floor007.png",
-            name: "Floor 7",
             // 场景物件缩放
             itemScale: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -8617,7 +8526,6 @@ Config.home = {
         {
             id: 1,
             path: "images/home/item/decoDX2_Aquarius-101.png",
-            name: "Spoils 1",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8639,7 +8547,6 @@ Config.home = {
         {
             id: 21,
             path: "images/home/item/decoDX2_Cancer-101.png",
-            name: "Spoils 2",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8661,7 +8568,6 @@ Config.home = {
         {
             id: 22,
             path: "images/home/item/decoDX2_Cancer-103.png",
-            name: "Spoils 3",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8683,7 +8589,6 @@ Config.home = {
         {
             id: 31,
             path: "images/home/item/decoDX2_Capricorn-1.png",
-            name: "Spoils 4",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8705,7 +8610,6 @@ Config.home = {
         {
             id: 32,
             path: "images/home/item/decoDX2_Capricorn-101.png",
-            name: "Spoils 5",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8727,7 +8631,6 @@ Config.home = {
         {
             id: 33,
             path: "images/home/item/decoDX2_Capricorn-102.png",
-            name: "Spoils 6",
             // 场景物件缩放
             itemScale: 0.3,
             // 物件图标缩放
@@ -8749,7 +8652,6 @@ Config.home = {
         {
             id: 41,
             path: "images/home/item/decoDX2_Gemini-101.png",
-            name: "Spoils 7",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -8771,7 +8673,6 @@ Config.home = {
         {
             id: 42,
             path: "images/home/item/decoDX2_Gemini-102.png",
-            name: "Spoils 8",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -8793,7 +8694,6 @@ Config.home = {
         {
             id: 51,
             path: "images/home/item/decoDX2_Leo-3.png",
-            name: "Spoils 9",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8815,7 +8715,6 @@ Config.home = {
         {
             id: 52,
             path: "images/home/item/decoDX2_Leo-102.png",
-            name: "Spoils 10",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8837,7 +8736,6 @@ Config.home = {
         {
             id: 53,
             path: "images/home/item/decoDX2_Leo-103.png",
-            name: "Spoils 11",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8859,7 +8757,6 @@ Config.home = {
         {
             id: 54,
             path: "images/home/item/decoDX2_Leo-104.png",
-            name: "Spoils 12",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8881,7 +8778,6 @@ Config.home = {
         {
             id: 55,
             path: "images/home/item/decoDX2_Leo-105.png",
-            name: "Spoils 13",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8903,7 +8799,6 @@ Config.home = {
         {
             id: 61,
             path: "images/home/item/decoDX2_Libra-101.png",
-            name: "Spoils 14",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8925,7 +8820,6 @@ Config.home = {
         {
             id: 62,
             path: "images/home/item/decoDX2_Libra-102.png",
-            name: "Spoils 15",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8947,7 +8841,6 @@ Config.home = {
         {
             id: 71,
             path: "images/home/item/decoDX2_Pisces-1.png",
-            name: "Spoils 16",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8969,7 +8862,6 @@ Config.home = {
         {
             id: 72,
             path: "images/home/item/decoDX2_Pisces-2.png",
-            name: "Spoils 17",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -8991,7 +8883,6 @@ Config.home = {
         {
             id: 73,
             path: "images/home/item/decoDX2_Pisces-101.png",
-            name: "Spoils 18",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9013,7 +8904,6 @@ Config.home = {
         {
             id: 74,
             path: "images/home/item/decoDX2_Pisces-102.png",
-            name: "Spoils 19",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9035,7 +8925,6 @@ Config.home = {
         {
             id: 81,
             path: "images/home/item/decoDX2_Sagittarius-1.png",
-            name: "Spoils 20",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9057,7 +8946,6 @@ Config.home = {
         {
             id: 82,
             path: "images/home/item/decoDX2_Sagittarius-101.png",
-            name: "Spoils 21",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9079,7 +8967,6 @@ Config.home = {
         {
             id: 91,
             path: "images/home/item/decoDX2_Scorpius-2.png",
-            name: "Spoils 22",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9101,7 +8988,6 @@ Config.home = {
         {
             id: 92,
             path: "images/home/item/decoDX2_Scorpius-3.png",
-            name: "Spoils 23",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9123,7 +9009,6 @@ Config.home = {
         {
             id: 101,
             path: "images/home/item/decoDX2_Taurus-101.png",
-            name: "Spoils 24",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9145,7 +9030,6 @@ Config.home = {
         {
             id: 102,
             path: "images/home/item/decoDX2_Taurus-102.png",
-            name: "Spoils 25",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9167,7 +9051,6 @@ Config.home = {
         {
             id: 111,
             path: "images/home/item/decoDX2_Virgo-101.png",
-            name: "Spoils 26",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9193,7 +9076,6 @@ Config.home = {
         {
             id: 1,
             path: "images/home/item/decoDX2_Aquarius-1.png",
-            name: "Pet 1",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9221,7 +9103,6 @@ Config.home = {
         {
             id: 2,
             path: "images/home/item/decoDX2_Aquarius-3.png",
-            name: "Pet 2",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9249,7 +9130,6 @@ Config.home = {
         {
             id: 11,
             path: "images/home/item/decoDX2_Aries-1.png",
-            name: "Pet 3",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9277,7 +9157,6 @@ Config.home = {
         {
             id: 21,
             path: "images/home/item/decoDX2_Cancer-1.png",
-            name: "Pet 4",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9305,7 +9184,6 @@ Config.home = {
         {
             id: 41,
             path: "images/home/item/decoDX2_Gemini-1.png",
-            name: "Pet 5",
             // 场景物件缩放
             itemScale: 0.6,
             // 物件图标缩放
@@ -9333,7 +9211,6 @@ Config.home = {
         {
             id: 42,
             path: "images/home/item/decoDX2_Gemini-2.png",
-            name: "Pet 6",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9361,7 +9238,6 @@ Config.home = {
         {
             id: 51,
             path: "images/home/item/decoDX2_Leo-4.png",
-            name: "Pet 7",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9389,7 +9265,6 @@ Config.home = {
         {
             id: 52,
             path: "images/home/item/decoDX2_Leo-5.png",
-            name: "Pet 8",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9417,7 +9292,6 @@ Config.home = {
         {
             id: 53,
             path: "images/home/item/decoDX2_Leo-6.png",
-            name: "Pet 9",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9445,7 +9319,6 @@ Config.home = {
         {
             id: 61,
             path: "images/home/item/decoDX2_Libra-1.png",
-            name: "Pet 10",
             // 场景物件缩放
             itemScale: 0.1,
             // 物件图标缩放
@@ -9474,7 +9347,6 @@ Config.home = {
         {
             id: 91,
             path: "images/home/item/decoDX2_Scorpius-1.png",
-            name: "Pet 11",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9503,7 +9375,6 @@ Config.home = {
         {
             id: 101,
             path: "images/home/item/decoDX2_Taurus-1.png",
-            name: "Pet 12",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
@@ -9532,7 +9403,6 @@ Config.home = {
         {
             id: 102,
             path: "images/home/item/decoDX2_Taurus-3.png",
-            name: "Pet 13",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -9569,7 +9439,7 @@ Config.conditions = {
     //需消费 #### 数量的钻石
     2: "${0} Diamonds",
     //需要解锁地图 ####
-    3: "Need to unlock ${0}",
+    3: "Need to unlock Map${0}",
     //需要总里程达到 ####
     4: "Total distance required to reach ${0}m",
     //需要最远里程达到过 ####

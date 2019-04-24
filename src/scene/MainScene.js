@@ -106,7 +106,7 @@ export default class MainScene extends Scene {
                     App.showScene("MapGameScene", RunOption.fixedMapID);
                 }
             } else {
-                App.showNotice("Gold Coin is not enough!");
+                App.showNotice(App.getText("Gold Coin is not enough!"));
             }
         } else if (this.mode === "Endless") {
             App.hideScene("MainScene");
@@ -145,7 +145,7 @@ export default class MainScene extends Scene {
     }
 
     onClickUserImage() {
-        App.showTip("Do you want log out?", () => {
+        App.showTip(App.getText("Do you want log out?"), () => {
             delete localStorage.username;
             delete localStorage.password;
             App.hideScene("MainScene");

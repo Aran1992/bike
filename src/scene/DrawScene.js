@@ -47,7 +47,7 @@ export default class DrawScene extends Scene {
             if (diamond >= Config.diamondDrawCost) {
                 this.startAnimation();
             } else {
-                App.showNotice("Diamond is not enough!");
+                App.showNotice(App.getText("DiamondIsNotEnough"));
             }
         } else {
             this.startAnimation();
@@ -121,7 +121,7 @@ export default class DrawScene extends Scene {
         this.bikeSprite.setBikeID(this.id);
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[this.id];
         this.ui.bikeDsc.text = config.dsc + "\n"
-            + `LV ${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}
+            + `${App.getText("LV")}${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}
 ${App.getText("Coin")} ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%
 ${App.getText("Distance")} ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
 ${App.getText("Score")} ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;

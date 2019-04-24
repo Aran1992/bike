@@ -236,7 +236,7 @@ export default class HomeScene extends Scene {
                 this.bgSprite.texture = Texture.from(config.path);
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
                 this.bgSprite.scale.set(scale, scale);
-                this.ui.selectItemName.text = config.name;
+                this.ui.selectItemName.text = App.getText("Backgrounds") + config.id;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
                 this.ui.lockedItemBtn.visible = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
@@ -254,7 +254,7 @@ export default class HomeScene extends Scene {
                 this.floorSprite.texture = Texture.from(config.path);
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
                 this.floorSprite.scale.set(scale, scale);
-                this.ui.selectItemName.text = config.name;
+                this.ui.selectItemName.text = App.getText("Floors") + config.id;
                 this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
                 this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
                 this.ui.lockedItemBtn.visible = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
@@ -348,7 +348,7 @@ export default class HomeScene extends Scene {
             case BACKGROUNDS: {
                 this.ui.selectItemPanel.visible = true;
                 let config = Config.home.backgrounds.find(item => item.id === this.selectedBgID);
-                this.ui.selectItemName.text = config && config.name;
+                this.ui.selectItemName.text = config && App.getText("Backgrounds") + config.id;
                 this.ui.commonItemBtn.visible = false;
                 this.ui.selectedItemBtn.visible = true;
                 this.ui.lockedItemBtn.visible = false;
@@ -357,7 +357,7 @@ export default class HomeScene extends Scene {
             case FLOORS: {
                 this.ui.selectItemPanel.visible = true;
                 let config = Config.home.floors.find(item => item.id === this.selectedFloorID);
-                this.ui.selectItemName.text = config && config.name;
+                this.ui.selectItemName.text = config && App.getText("Floors") + config.id;
                 this.ui.commonItemBtn.visible = false;
                 this.ui.selectedItemBtn.visible = true;
                 this.ui.lockedItemBtn.visible = false;
@@ -584,7 +584,7 @@ export default class HomeScene extends Scene {
             }
             return conditions.map(([id, ...args]) => {
                 if (id === Config.conditionsEnum.unlockMap) {
-                    return App.getText(Config.conditions[id], [Config.endlessMode.sceneList.find(item => item.id === args[0]).showName]);
+                    return App.getText(Config.conditions[id], [args[0] + 1]);
                 } else {
                     return App.getText(Config.conditions[id], args);
                 }
