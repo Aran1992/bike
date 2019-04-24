@@ -3,6 +3,7 @@ import Scene from "./Scene";
 import List from "../ui/List";
 import DataMgr from "../mgr/DataMgr";
 import BikeSprite from "../item/BikeSprite";
+import GameUtils from "../mgr/GameUtils";
 
 export default class BikeScene extends Scene {
     onCreate() {
@@ -60,30 +61,32 @@ export default class BikeScene extends Scene {
         let config = Config.bikeList[item.index];
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
         let isHighestLevel = (config.coinPercent || Config.bike.coinPercent)[level + 1] === undefined;
-        let dsc = config.dsc;
+        let dsc = GameUtils.getBikeDsc(config);
+        let coin, distance, score;
         if (this.hasOwnedBike(config.id)) {
-            let get = (config, name, key, level) => {
+            let get = (config, key, level) => {
                 let list = config[key] || Config.bike[key];
                 let curValue = list[level];
                 let nextValue = list[level + 1];
-                return `${name} ${Math.floor(curValue * 100)}%` + (nextValue !== undefined ? ` -> ${Math.floor(nextValue * 100)}%` : "");
+                return `${Math.floor(curValue * 100)}%` + (nextValue !== undefined ? ` -> ${Math.floor(nextValue * 100)}%` : "");
             };
-            dsc += "\n" + `${App.getText("LV")}${level + 1} ${isHighestLevel ? "Highest Level" : `-> ${level + 2}`}`
-                + "\n" + get(config, "Gold Coin", "coinPercent", level)
-                + "\n" + get(config, "Distance ", "distancePercent", level)
-                + "\n" + get(config, "Score    ", "scorePercent", level);
+            dsc += "\n" + `${App.getText("LV")}${level + 1} ${isHighestLevel ? "Highest Level" : `-> ${level + 2}`}`;
+            coin = get(config, "coinPercent", level);
+            distance = get(config, "distancePercent", level);
+            score = get(config, "scorePercent", level);
         } else {
-            let get = (config, name, key, level) => {
+            let get = (config, key, level) => {
                 let list = config[key] || Config.bike[key];
                 let curValue = list[level];
-                return `${name} ${Math.floor(curValue * 100)}%`;
+                return `${Math.floor(curValue * 100)}%`;
             };
             level = 0;
-            dsc += "\n" + `${App.getText("LV")}${level + 1}`
-                + "\n" + get(config, "Gold Coin", "coinPercent", level)
-                + "\n" + get(config, "Distance ", "distancePercent", level)
-                + "\n" + get(config, "Score    ", "scorePercent", level);
+            dsc += "\n" + `${App.getText("LV")}${level + 1}`;
+            coin = get(config, "coinPercent", level);
+            distance = get(config, "distancePercent", level);
+            score = get(config, "scorePercent", level);
         }
+        dsc += "\n" + App.getText("BonusDsc", {coin, distance, score});
         this.ui.bikeDscText.text = dsc;
 
         let hasOwned = this.hasOwnedBike(config.id);

@@ -6231,13 +6231,9 @@ Config.bikeList = [
         anchor: [0.5, 0.5],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.1  bike 】
-Speed     100%
-Jump      100%
-HighJump  normal
-Size      small`,
+        index: 1,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6276,13 +6272,9 @@ Size      small`,
         anchor: [0.63, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.2  bike 】
-Speed     100%
-Jump      100%
-HighJump  normal
-Size      small`,
+        index: 2,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6303,13 +6295,9 @@ Size      small`,
         anchor: [0.62, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.3  bike 】
-Speed     100%
-Jump      100%
-HighJump  normal
-Size      small`,
+        index: 3,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6330,13 +6318,9 @@ Size      small`,
         anchor: [0.6, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.4  bike 】
-Speed     100%
-Jump      100%
-HighJump  normal
-Size      small`,
+        index: 4,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6357,13 +6341,9 @@ Size      small`,
         anchor: [1, 0.5],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.5  bike 】
-Speed     100%
-Jump      100%
-HighJump  normal
-Size      small`,
+        index: 5,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6384,13 +6364,9 @@ Size      small`,
         anchor: [0.5, 0.8],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.6  bike 】
-Speed     100%
-Jump      100%
-HighJump  normal
-Size      small`,
+        index: 6,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6411,13 +6387,9 @@ Size      small`,
         anchor: [0.63, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.7  bike 】
-Speed     100%
-Jump      150%
-HighJump  normal
-Size      small`,
+        index: 7,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6438,13 +6410,9 @@ Size      small`,
         anchor: [0.63, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.8  bike 】
-Speed     100%
-Jump      150%
-HighJump  normal
-Size      small`,
+        index: 8,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6465,13 +6433,9 @@ Size      small`,
         anchor: [0.63, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.9  bike 】
-Speed     100%
-Jump      150%
-HighJump  normal
-Size      small`,
+        index: 9,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6492,13 +6456,9 @@ Size      small`,
         anchor: [0.5, 0.6],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.10  bike 】
-Speed     120%
-Jump       90%
-HighJump  normal
-Size      middle`,
+        index: 10,
+        highJump: "Normal",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6519,13 +6479,9 @@ Size      middle`,
         anchor: [0.5, 0.5],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.11  bike 】
-Speed     120%
-Jump       90%
-HighJump  normal
-Size      middle`,
+        index: 11,
+        highJump: "Normal",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6546,13 +6502,9 @@ Size      middle`,
         anchor: [0.45, 0.68],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.12  bike 】
-Speed     120%
-Jump       90%
-HighJump  normal
-Size      middle`,
+        index: 12,
+        highJump: "Normal",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6573,13 +6525,9 @@ Size      middle`,
         anchor: [0.5, 0.86],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.13  bike 】
-Speed      80%
-Jump      180%
-HighJump  normal
-Size      small`,
+        index: 13,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6600,13 +6548,9 @@ Size      small`,
         anchor: [0.48, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.14  bike 】
-Speed      80%
-Jump      180%
-HighJump  normal
-Size      small`,
+        index: 14,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6627,13 +6571,9 @@ Size      small`,
         anchor: [0.77, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.15  bike 】
-Speed      80%
-Jump      180%
-HighJump  normal
-Size      small`,
+        index: 15,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6654,13 +6594,9 @@ Size      small`,
         anchor: [0.63, 0.7],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.16  bike 】
-Speed      80%
-Jump      100%
-HighJump  easy
-Size      small`,
+        index: 16,
+        highJump: "Easy",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6681,13 +6617,9 @@ Size      small`,
         anchor: [0.28, 1.1],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.17  bike 】
-Speed      80%
-Jump      100%
-HighJump  easy
-Size      small`,
+        index: 17,
+        highJump: "Easy",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6708,13 +6640,9 @@ Size      small`,
         anchor: [0.46, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.18  bike 】
-Speed      80%
-Jump      100%
-HighJump  easy
-Size      middle`,
+        index: 18,
+        highJump: "Easy",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6735,13 +6663,9 @@ Size      middle`,
         anchor: [0.71, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.19  bike 】
-Speed     110%
-Jump      180%
-HighJump  hard
-Size      middle`,
+        index: 19,
+        highJump: "Hard",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6762,13 +6686,9 @@ Size      middle`,
         anchor: [0.71, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.20  bike 】
-Speed     110%
-Jump      180%
-HighJump  hard
-Size      middle`,
+        index: 20,
+        highJump: "Hard",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6789,13 +6709,9 @@ Size      middle`,
         anchor: [0.71, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.21  bike 】
-Speed     110%
-Jump      180%
-HighJump  hard
-Size      middle`,
+        index: 21,
+        highJump: "Hard",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6816,13 +6732,9 @@ Size      middle`,
         anchor: [0.5, 1.25],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.22  bike 】
-Speed     110%
-Jump       80%
-HighJump  easy
-Size      small`,
+        index: 22,
+        highJump: "Easy",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6843,13 +6755,9 @@ Size      small`,
         anchor: [0.71, 0.65],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.23  bike 】
-Speed     110%
-Jump       80%
-HighJump  easy
-Size      small`,
+        index: 23,
+        highJump: "Easy",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6870,13 +6778,9 @@ Size      small`,
         anchor: [0.71, 0.6],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.24  bike 】
-Speed     110%
-Jump       80%
-HighJump  easy
-Size      middle`,
+        index: 24,
+        highJump: "Easy",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6897,13 +6801,9 @@ Size      middle`,
         anchor: [0.45, 0.35],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.25  bike 】
-Speed     130%
-Jump      100%
-HighJump  hard
-Size      middle`,
+        index: 25,
+        highJump: "Hard",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6924,13 +6824,9 @@ Size      middle`,
         anchor: [0.55, 0.3],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.26  bike 】
-Speed     130%
-Jump      100%
-HighJump  hard
-Size      middle`,
+        index: 26,
+        highJump: "Hard",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6951,13 +6847,9 @@ Size      middle`,
         anchor: [0.5, 0.6],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.27  bike 】
-Speed     130%
-Jump      100%
-HighJump  hard
-Size      middle`,
+        index: 27,
+        highJump: "Hard",
+        size: "Middle",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -6978,13 +6870,9 @@ Size      middle`,
         anchor: [1.05, 1.08],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.28  bike 】
-Speed     130%
-Jump       80%
-HighJump  normal
-Size      small`,
+        index: 28,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -7005,13 +6893,9 @@ Size      small`,
         anchor: [0.59, 0.71],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.29  bike 】
-Speed     130%
-Jump       80%
-HighJump  normal
-Size      big`,
+        index: 29,
+        highJump: "Normal",
+        size: "Big",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -7032,13 +6916,9 @@ Size      big`,
         anchor: [0.69, 0.8],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.30  bike 】
-Speed     130%
-Jump       80%
-HighJump  normal
-Size      small`,
+        index: 30,
+        highJump: "Normal",
+        size: "Small",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -7059,13 +6939,9 @@ Size      small`,
         anchor: [0.52, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.31  bike 】
-Speed     150%
-Jump       80%
-HighJump  hard
-Size      big`,
+        index: 31,
+        highJump: "Hard",
+        size: "Big",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -7086,13 +6962,9 @@ Size      big`,
         anchor: [0.71, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.32  bike 】
-Speed     150%
-Jump       80%
-HighJump  hard
-Size      big`,
+        index: 32,
+        highJump: "Hard",
+        size: "Big",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -7113,13 +6985,9 @@ Size      big`,
         anchor: [0.6, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        // 自行车的描述
-        dsc:
-            `【 NO.33  bike 】
-Speed     150%
-Jump       80%
-HighJump  hard
-Size      big`,
+        index: 33,
+        highJump: "Hard",
+        size: "Big",
         // 随机的权重
         weight: 1,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）

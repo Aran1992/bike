@@ -120,11 +120,14 @@ export default class DrawScene extends Scene {
         this.ui.detailPanel.visible = true;
         this.bikeSprite.setBikeID(this.id);
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[this.id];
-        this.ui.bikeDsc.text = config.dsc + "\n"
-            + `${App.getText("LV")}${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}
-${App.getText("Coin")} ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%
-${App.getText("Distance")} ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
-${App.getText("Score")} ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;
+        let bonusDsc = App.getText("BonusDsc", {
+            coin: Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100) + "%",
+            distance: Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100) + "%",
+            score: Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100) + "%",
+        });
+        this.ui.bikeDsc.text = `${GameUtils.getBikeDsc(config)}
+${App.getText("LV")}${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}
+${bonusDsc}`;
         this.bikeSprite.play();
     }
 

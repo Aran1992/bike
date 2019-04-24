@@ -106,4 +106,14 @@ export default class GameUtils {
         let {value: y, final: fy} = Utils.successive(src.y, dst.y, moveY);
         return {x, y, final: fx && fy};
     }
+
+    static getBikeDsc(config) {
+        return App.getText("BikeDsc", {
+            index: config.index,
+            speed: Math.floor(config.velocityPercent * 100),
+            jump: Math.floor((2 - config.densityPercent) * 100),
+            highJump: App.getText(config.highJump),
+            size: App.getText(config.size),
+        });
+    }
 }

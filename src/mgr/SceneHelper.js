@@ -259,7 +259,7 @@ function createLabel(child, parent) {
         fill: fill,
         fontSize: fontSize,
         wordWrap: false,
-        wordWrapWidth: 0,
+        leading: getValue(data.leading, 0),
     };
     if (getValue(data.strokeColor) !== undefined) {
         textStyle.stroke = getValue(data.strokeColor);
