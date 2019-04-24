@@ -348,7 +348,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"width":500,"top":40,"text":"${Resurrection_Position}","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
+                    "props":{"width":500,"top":40,"text":"${ResurrectionPosition}","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":41,
                     "label":"Label",
                     "isOpen":true,
