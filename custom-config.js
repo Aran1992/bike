@@ -7341,7 +7341,7 @@ Config.presentList = [
         // 礼包ID
         id: 1,
         // 礼包描述
-        dsc: "Unlock All Bike",
+        dsc: "UnlockAllBike",
         // 购买所需货币
         costMoney: 50,
         imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum01.png",
@@ -7350,7 +7350,7 @@ Config.presentList = [
         // 礼包ID
         id: 2,
         // 礼包描述
-        dsc: "Unlock All Endless Scene",
+        dsc: "UnlockAllEndlessScene",
         // 购买所需货币
         costMoney: 200,
         imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum02.png",
@@ -7359,7 +7359,7 @@ Config.presentList = [
         // 礼包ID
         id: 3,
         // 礼包描述
-        dsc: "1 Money \n= 50 Diamond + 5000 Gold Coins",
+        dsc: "Money2DCPresentDsc",
         // 购买所需货币
         costMoney: 1,
         // 购买礼包获得的钻石数量
@@ -7372,7 +7372,7 @@ Config.presentList = [
         // 礼包ID
         id: 4,
         // 礼包描述
-        dsc: "6 Money \n= 150 Diamond + 15000 Gold Coins",
+        dsc: "Money2DCPresentDsc",
         // 购买所需货币
         costMoney: 6,
         // 购买礼包获得的钻石数量
@@ -9565,23 +9565,23 @@ Config.home = {
 // ID已经对应功能了，不要更改ID和描述的对应关系
 Config.conditions = {
     //需消费 #### 数量的金币
-    1: "${v0} Gold Coins",
+    1: "${0} Gold Coins",
     //需消费 #### 数量的钻石
-    2: "${v0} Diamonds",
+    2: "${0} Diamonds",
     //需要解锁地图 ####
-    3: "Need to unlock ${v0}",
+    3: "Need to unlock ${0}",
     //需要总里程达到 ####
-    4: "Total distance required to reach ${v0}m",
+    4: "Total distance required to reach ${0}m",
     //需要最远里程达到过 ####
-    5: "Total farthest distance required to reach ${v0}m",
+    5: "Total farthest distance required to reach ${0}m",
     //需要积分达到过 ####
-    6: "Score required to reach ${v0}",
+    6: "Score required to reach ${0}",
     //需要总里程排名达到过第 #### 名
-    7: "Need to rank ${v0}st in total distance",
+    7: "Need to rank ${0}st in total distance",
     //需要最远里程排名达到过第 #### 名
-    8: "Need to rank ${v0}st in farthest distance",
+    8: "Need to rank ${0}st in farthest distance",
     //需要积分排名达到过第 #### 名
-    9: "Need to rank ${v0}st in score",
+    9: "Need to rank ${0}st in score",
 };
 
 Config.conditionsEnum = {

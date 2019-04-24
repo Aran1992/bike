@@ -15,7 +15,8 @@ exports.i18n = language => {
     let table = {};
     for (let row = 3, id = sheet[`A${row}`]; id; row++, id = sheet[`A${row}`]) {
         if (table[id.v]) {
-            throw(`存在复数个ID为${id.v}的条目`);
+            console.log(`存在复数个ID为${id.v}的条目`);
+            continue;
         }
         table[id.v] = sheet[`${column}${row}`].v;
     }

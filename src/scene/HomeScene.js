@@ -139,9 +139,9 @@ export default class HomeScene extends Scene {
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
         this.ui.addtionText.text = [
-            `Gold Coin: ${Math.floor(GameUtils.getHomeConfig("coinPercent") * 100)}%`,
-            `Distance: ${Math.floor(GameUtils.getHomeConfig("distancePercent") * 100)}%`,
-            `Score: ${Math.floor(GameUtils.getHomeConfig("scorePercent") * 100)}%`,
+            `${App.getText("Coin")}: ${Math.floor(GameUtils.getHomeConfig("coinPercent") * 100)}%`,
+            `${App.getText("Distance")}: ${Math.floor(GameUtils.getHomeConfig("distancePercent") * 100)}%`,
+            `${App.getText("Score")}: ${Math.floor(GameUtils.getHomeConfig("scorePercent") * 100)}%`,
         ].join("\n");
     }
 
@@ -311,7 +311,7 @@ export default class HomeScene extends Scene {
     }
 
     static initRadioButton(button, info) {
-        button.ui.name.text = info;
+        button.ui.name.text = App.getText(info);
     }
 
     onClickRadio(selectedIndex, lastIndex) {
@@ -510,7 +510,7 @@ export default class HomeScene extends Scene {
 
     onClickRemoveItemBtn(button) {
         App.showScene("TipScene", {
-            tip: "Are you sure you want to delete this item?",
+            tip: App.getText("ConfirmDeleteHomeItem"),
             confirmCallback: () => {
                 let item = button.parent;
                 let data = DataMgr.get(DataMgr.homeData);
@@ -532,10 +532,10 @@ export default class HomeScene extends Scene {
 
     onClickRemoveAllItemButton() {
         App.showScene("TipScene", {
-            tip: "Are you sure you want to delete all items?",
+            tip: App.getText("ConfirmDeleteAllHomeItem"),
             confirmCallback: () => {
                 App.showScene("TipScene", {
-                    tip: "Are you really sure you want to DELETE ALL ITEMS?",
+                    tip: App.getText("ConfirmDeleteAllHomeItemAgain"),
                     confirmCallback: () => {
                         this.itemContainer.removeChildren();
                         let data = DataMgr.get(DataMgr.homeData);
@@ -584,9 +584,9 @@ export default class HomeScene extends Scene {
             }
             return conditions.map(([id, ...args]) => {
                 if (id === Config.conditionsEnum.unlockMap) {
-                    return GameUtils.formatString(Config.conditions[id], Config.endlessMode.sceneList.find(item => item.id === args[0]).showName);
+                    return App.getText(Config.conditions[id], [Config.endlessMode.sceneList.find(item => item.id === args[0]).showName]);
                 } else {
-                    return GameUtils.formatString(Config.conditions[id], ...args);
+                    return App.getText(Config.conditions[id], args);
                 }
             });
         } else {
@@ -598,9 +598,9 @@ export default class HomeScene extends Scene {
         let config = Config.home[type].find(item => item.id === id);
         if (config.unlockRewards) {
             return [
-                `Gold Coin: ${Math.floor(config.unlockRewards.coinPercent * 100)}%`,
-                `Distance: ${Math.floor(config.unlockRewards.distancePercent * 100)}%`,
-                `Score: ${Math.floor(config.unlockRewards.scorePercent * 100)}%`,
+                `${App.getText("Coin")}: ${Math.floor(config.unlockRewards.coinPercent * 100)}%`,
+                `${App.getText("Distance")}: ${Math.floor(config.unlockRewards.distancePercent * 100)}%`,
+                `${App.getText("Score")}: ${Math.floor(config.unlockRewards.scorePercent * 100)}%`,
             ];
         } else {
             return [];
@@ -612,7 +612,7 @@ export default class HomeScene extends Scene {
         if (config.unlockConditions) {
             return config.unlockConditions
                 .filter(list => list[0] === Config.conditionsEnum.costCoin || list[0] === Config.conditionsEnum.costDiamond)
-                .map(([id, ...args]) => GameUtils.formatString(Config.conditions[id], ...args));
+                .map(([id, ...args]) => App.getText(Config.conditions[id], args));
         } else {
             return [];
         }
@@ -622,13 +622,13 @@ export default class HomeScene extends Scene {
         if (DataMgr.isHomeItemSatisfiedCostCondition(type, id)) {
             let conditions = this.getUnlockConditions(type, id, true);
             App.showTip(
-                `This item is able to unlock.
+                `${App.getText("ItemIsAbleToUnlock")}
 
-${conditions.length !== 0 ? "Unlock condition(s):\n" + conditions.join("\n") + "\n" : ""}
-Unlock Reward(s):
+${conditions.length !== 0 ? App.getText("UnlockConditions") + "\n" + conditions.join("\n") + "\n" : ""}
+${App.getText("UnlockRewards")}
 ${this.getUnlockRewards(type, id).join("\n")}
 
-Would you like to cost the following items to unlock this item?
+${App.getText("Would you like to cost the following items to unlock this item?")}
 ${this.getUnlockCosts(type, id).join("\n")}`,
                 () => {
                     let coin = DataMgr.get(DataMgr.coin, 0);
@@ -639,7 +639,7 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
                     let diamondCondition = conditions.find(list => list[0] === Config.conditionsEnum.costDiamond);
                     let costDiamond = diamondCondition ? diamondCondition[1] : 0;
                     if (coin < costCoin || diamond < costDiamond) {
-                        App.showNotice("Cost is not enough!");
+                        App.showNotice(App.getText("Cost is not enough!"));
                     } else {
                         DataMgr.set(DataMgr.coin, coin - costCoin);
                         DataMgr.set(DataMgr.diamond, diamond - costDiamond);
@@ -655,12 +655,12 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
             );
         } else {
             App.showTip(
-                `This item is locked.
+                `${App.getText("This item is locked.")}
                 
-Unlock condition(s):
+${App.getText("UnlockConditions")}
 ${this.getUnlockConditions(type, id).join("\n")}
 
-Unlock Reward(s):
+${App.getText("UnlockRewards")}
 ${this.getUnlockRewards(type, id).join("\n")}`,
                 () => {
                 },

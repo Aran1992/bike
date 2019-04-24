@@ -186,14 +186,14 @@ export default class MapGameScene extends GameScene {
         App.showScene("GameResultScene", {
             rank: rank,
             distance: Math.floor(this.distance),
-            coin: this.coin
+            coin: this.coin,
+            playerNameList: this.getPlayerRankList().map(player => player.getName())
         });
     }
 
     onClickSurrenderButton() {
         App.showScene("TipScene", {
-            tip: `You only get the last prize after surrender,
-are you sure?`,
+            tip: App.getText("You only get the last prize after surrender, are you sure?"),
             confirmCallback: () => {
                 this.gameWin(Config.enemy.count);
             },

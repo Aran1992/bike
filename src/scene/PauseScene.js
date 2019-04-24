@@ -26,9 +26,7 @@ export default class PauseScene extends Scene {
 
     static onClickMainButton() {
         App.showScene("TipScene", {
-            tip: `Are you sure you want to quit the game? 
-The current game data will be saved
-automatically after exit.`,
+            tip: App.getText("Are you sure you want to quit the game?  The current game data will be saved automatically after exit."),
             confirmCallback: () => {
                 App.getScene("EndlessGameScene").settle();
                 App.hideScene("PauseScene");
@@ -43,9 +41,7 @@ automatically after exit.`,
 
     static onClickRestartButton() {
         App.showScene("TipScene", {
-            tip: `Are you sure to restart the game? 
-The current game data will be saved
-automatically after exit.`,
+            tip: App.getText("Are you sure to restart the game? The current game data will be saved automatically after exit."),
             confirmCallback: () => {
                 App.getScene("EndlessGameScene").settle();
                 App.hideScene("PauseScene");

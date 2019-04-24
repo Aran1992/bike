@@ -106,15 +106,4 @@ export default class GameUtils {
         let {value: y, final: fy} = Utils.successive(src.y, dst.y, moveY);
         return {x, y, final: fx && fy};
     }
-
-    static formatString(template, ...args) {
-        for (
-            let index = 0, replacement = `\${v${index}}`;
-            template.indexOf(replacement) !== -1;
-            index++, replacement = `\${v${index}}`
-        ) {
-            template = template.replace(replacement, args[index]);
-        }
-        return template;
-    }
 }

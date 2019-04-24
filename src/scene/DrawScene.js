@@ -45,9 +45,6 @@ export default class DrawScene extends Scene {
         if (this.ui.costDiamondPanel.visible) {
             let diamond = DataMgr.get(DataMgr.diamond, 0);
             if (diamond >= Config.diamondDrawCost) {
-                diamond -= Config.diamondDrawCost;
-                DataMgr.set(DataMgr.diamond, diamond);
-                this.ui.diamondText.text = diamond;
                 this.startAnimation();
             } else {
                 App.showNotice("Diamond is not enough!");
@@ -82,6 +79,11 @@ export default class DrawScene extends Scene {
     }
 
     onAnimationEnded() {
+        let diamond = DataMgr.get(DataMgr.diamond, 0);
+        diamond -= Config.diamondDrawCost;
+        DataMgr.set(DataMgr.diamond, diamond);
+        this.ui.diamondText.text = diamond;
+
         App.hideMask();
 
         cancelAnimationFrame(this.animationID);
@@ -117,10 +119,10 @@ export default class DrawScene extends Scene {
         this.bikeSprite.setBikeID(this.id);
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[this.id];
         this.ui.bikeDsc.text = config.dsc + "\n"
-            + `LV ${level + 1} ${highestLevel ? "Highest Level" : ""}
-Gold Coin ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%
-Distance  ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
-Score     ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;
+            + `LV ${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}
+${App.getText("Coin")} ${Math.floor(GameUtils.getBikeConfig("coinPercent", this.id, level,) * 100)}%
+${App.getText("Distance")} ${Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100)}%
+${App.getText("Score")} ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100)}%`;
         this.bikeSprite.play();
     }
 
@@ -133,7 +135,7 @@ Score     ${Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) 
         let cur = new Date();
         let freeTime = DataMgr.get(DataMgr.nextFreeDrawTime);
         if (cur >= freeTime) {
-            this.ui.drawTimeText.text = "Free";
+            this.ui.drawTimeText.text = App.getText("Free");
             this.ui.costDiamondPanel.visible = false;
         } else {
             this.ui.drawTimeText.text = Utils.getCDTimeString(freeTime - cur);

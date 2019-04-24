@@ -87,7 +87,7 @@ export default class RankScene extends Scene {
             [SCORE]: "/board/get_score_board",
         };
         clearInterval(this.refreshTimeInterval);
-        this.ui.resetTimeText.text = "Requesting rank data";
+        this.ui.resetTimeText.text = App.getText("RequestingRankData");
         let key = map[this.type];
         if (this.range === HISTORY) {
             key += "_history";
@@ -99,14 +99,14 @@ export default class RankScene extends Scene {
         this.data = data;
         this.list.reset(this.data.length);
         let index = this.data.findIndex(item => item.username === localStorage.username);
-        this.ui.myValue.text = index === -1 ? "Not Listed" : (index + 1);
+        this.ui.myValue.text = index === -1 ? App.getText("NotListed") : (index + 1);
         clearInterval(this.refreshTimeInterval);
         let time = nextRefreshTime - new Date().getTime();
-        this.ui.resetTimeText.text = `Restart after ${Utils.getCDTimeString(time)}`;
+        this.ui.resetTimeText.text = App.getText("RestartAfterTime", {time: Utils.getCDTimeString(time)});
         this.refreshTimeInterval = setInterval(() => {
             let time = nextRefreshTime - new Date().getTime();
             if (time > 0) {
-                this.ui.resetTimeText.text = `Restart after ${Utils.getCDTimeString(time)}`;
+                this.ui.resetTimeText.text = App.getText("RestartAfterTime", {time: Utils.getCDTimeString(time)});
             } else {
                 this.reset();
             }
@@ -120,7 +120,7 @@ export default class RankScene extends Scene {
                 App.hideScene("RankScene");
                 App.showScene("HomeScene", homeData, false);
             } catch (e) {
-                App.showNotice("This player has no home data.");
+                App.showNotice(App.getText("NetworkBusy"));
             }
         });
     }

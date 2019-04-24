@@ -48,7 +48,7 @@ export default class ShopScene extends Scene {
     }
 
     initRadioButton(button, info) {
-        button.ui.label.text = info;
+        button.ui.label.text = App.getText(info);
     }
 
     onClickRadio(selectedIndex, lastIndex) {
@@ -86,7 +86,11 @@ export default class ShopScene extends Scene {
     updatePresentItem(item, index) {
         let config = Config.presentList[index];
         item.icon.children[0].texture = resources[config.imagePath].texture;
-        item.dsc.text = config.dsc;
+        item.dsc.text = App.getText(config.dsc, {
+            money: config.costMoney,
+            diamond: config.getDiamond,
+            coin: config.getCoin,
+        });
         item.buyDsc.text = config.costMoney;
         item.buyButton.visible = false;
         item.diableButton.visible = false;
@@ -176,13 +180,13 @@ export default class ShopScene extends Scene {
         if (config.getCoin) {
             item.buyCoinButton.visible = true;
             item.buyCoinDsc.text = config.costDiamond;
-            item.dsc.text = `${config.getCoin} gold coin`;
+            item.dsc.text = `${config.getCoin} ${App.getText("Coin")}`;
             item.buyCoinButton.getCoin = config.getCoin;
             item.buyCoinButton.costDiamond = config.costDiamond;
         } else {
             item.buyDiamondButton.visible = true;
             item.buyDiamondDsc.text = config.costMoney;
-            item.dsc.text = `${config.getDiamond} diamond`;
+            item.dsc.text = `${config.getDiamond} ${App.getText("Diamond")}`;
             item.buyDiamondButton.getDiamond = config.getDiamond;
             item.buyDiamondButton.costMoney = config.costMoney;
         }
@@ -208,7 +212,7 @@ export default class ShopScene extends Scene {
             this.ui.diamondText.text = diamond;
             this.ui.coinText.text = coin;
         } else {
-            App.showNotice("Diamond is not enough!");
+            App.showNotice(App.getText("DiamondIsNotEnough"));
             // todo 后面在修复多条提示重叠的问题
         }
     }
@@ -259,7 +263,7 @@ export default class ShopScene extends Scene {
             item.unlockButton.visible = true;
             item.unlockCostText.text = config.unlockCostDiamond;
             item.unlockCondition.visible = true;
-            item.unlockConditionText.text = `Total distance reached ${config.unlockDistance}m`;
+            item.unlockConditionText.text = App.getText("TotalDistanceReach", {distance: config.unlockDistance});
             item.interactive = false;
             item.unlockButton.id = config.id;
         } else {
@@ -291,7 +295,7 @@ export default class ShopScene extends Scene {
             DataMgr.set(DataMgr.unlockEndlessSceneIDList, list);
             this.mapList.refresh();
         } else {
-            App.showNotice("Diamond is not enough!");
+            App.showNotice(App.getText("DiamondIsNotEnough"));
         }
     }
 }

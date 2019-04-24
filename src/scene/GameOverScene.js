@@ -30,15 +30,27 @@ export default class GameOverScene extends Scene {
         let record = DataMgr.get(DataMgr.rankDistanceRecord, 0);
         let finalDistance = Math.floor(args.distance * GameUtils.getBikeConfig("distancePercent"));
         if (finalDistance === record) {
-            this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
-            this.ui.beyondText.text = "Leveling with the highest record";
+            this.ui.recordText.text = App.getText("${player} Record: ${record}m", {
+                player: DataMgr.getPlayerName(),
+                record: record
+            });
+            this.ui.beyondText.text = "";
         } else if (finalDistance > record) {
-            this.ui.recordText.text = `{{YourselfName}} New Record: ${finalDistance}m`;
+            this.ui.recordText.text = App.getText("${player} New Record: ${distance}m", {
+                player: DataMgr.getPlayerName(),
+                distance: finalDistance
+            });
             this.ui.beyondText.text = "";
             DataMgr.set(DataMgr.rankDistanceRecord, finalDistance);
         } else {
-            this.ui.recordText.text = `{{YourselfName}} Record: ${record}m`;
-            this.ui.beyondText.text = `${record - finalDistance} meters more to go beyond yourself`;
+            this.ui.recordText.text = App.getText("${player} Record: ${record}m", {
+                player: DataMgr.getPlayerName(),
+                record: record
+            });
+            this.ui.beyondText.text = App.getText("${diff} meters more to go beyond yourself", {
+                player: DataMgr.getPlayerName(),
+                diff: record - finalDistance
+            });
         }
         let distanceRecord = DataMgr.get(DataMgr.distanceRecord, 0);
         if (finalDistance > distanceRecord) {
@@ -83,9 +95,9 @@ export default class GameOverScene extends Scene {
                 break;
             }
         }
-        item.children[0].text = `${name}\t${originValue}`;
+        item.children[0].text = `${App.getText(name)}\t${originValue}`;
         item.children[1].text = `*${multiple}->`;
-        item.children[2].text = `${name}\t${Math.floor(originValue * multiple)}`;
+        item.children[2].text = `${App.getText(name)}\t${Math.floor(originValue * multiple)}`;
     }
 
     static onClickMainButton() {
@@ -114,7 +126,7 @@ export default class GameOverScene extends Scene {
             App.hideScene("GameOverScene");
             EventMgr.dispatchEvent("Reborn");
         } else {
-            App.showNotice("Diamond is not enough!");
+            App.showNotice(App.getText("DiamondIsNotEnough"));
         }
     }
 }

@@ -183,6 +183,10 @@ class DataMgr_ {
             this.setData(data.response);
         });
     }
+
+    getPlayerName() {
+        return localStorage.username;
+    }
 }
 
 const DataMgr = new DataMgr_();

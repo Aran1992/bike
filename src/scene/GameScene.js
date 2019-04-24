@@ -130,7 +130,7 @@ export default class GameScene extends Scene {
 
         this.targetCameraPos = undefined;
 
-        this.playerName = "{{YourselfName}}";
+        this.playerName = DataMgr.getPlayerName();
 
         this.initEnvironment();
 
@@ -1230,7 +1230,7 @@ export default class GameScene extends Scene {
                             }
                         }
                         if (targets.length === 0) {
-                            EventMgr.dispatchEvent("UseItem", this, {getName: () => "Air"}, effect);
+                            EventMgr.dispatchEvent("UseItem", this, {getName: () => App.getText("Air")}, effect);
                         } else {
                             targets.forEach(other => {
                                 other.onAteItem(effect);
@@ -1488,7 +1488,11 @@ export default class GameScene extends Scene {
     }
 
     onUseItem(user, receiver, effect) {
-        this.itemUseHistory.push(`【${user.getName()}】对【${receiver.getName()}】使用了【${effect}】`);
+        this.itemUseHistory.push(App.getText("UseItem", {
+            player1: user.getName(),
+            player2: receiver.getName(),
+            item: effect
+        }));
         this.ui.itemUseHistoryLabel.text = this.itemUseHistory.join("\n");
         this.itemUseHistoryDisappearTimer.push(setTimeout(() => {
             this.itemUseHistory.shift();
@@ -1606,6 +1610,12 @@ export default class GameScene extends Scene {
 
     getHead() {
         return Config.defaultEnemyHeadImagePath;
+    }
+
+    getPlayerRankList() {
+        let players = [this].concat(this.enemyList);
+        players.sort((a, b) => b.getBikePhysicalPosition().x - a.getBikePhysicalPosition().x);
+        return players;
     }
 }
 

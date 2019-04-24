@@ -154,7 +154,7 @@ export default class EndlessGameScene extends GameScene {
 
     showDistance() {
         if (this.distance >= this.nextNoticeDistance) {
-            App.showNotice(`You have ridden ${this.nextNoticeDistance} meters`);
+            App.showNotice(App.getText("You have ridden ${distance} meters", {distance: this.nextNoticeDistance}));
             this.nextDistanceIndex++;
             this.nextNoticeDistance = this.sceneConfig.distanceNotice[this.nextDistanceIndex];
         }

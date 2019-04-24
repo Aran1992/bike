@@ -25,11 +25,13 @@ export default class GameResultScene extends Scene {
 
         this.args = args;
 
-        let playerName = "{{YourselfName}}";
         let thisGameScore = Math.floor(Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent"));
         DataMgr.add(DataMgr.totalScore, thisGameScore);
         let totalScore = DataMgr.add(DataMgr.rankTotalScore, thisGameScore);
-        this.ui.totalScoreText.text = `${playerName} current rank total score: ${totalScore}`;
+        this.ui.totalScoreText.text = App.getText("${player} current rank total score: ${score}", {
+            player: DataMgr.getPlayerName(),
+            score: totalScore,
+        });
 
         if (this.resultList === undefined) {
             this.resultList = new List({
@@ -85,14 +87,14 @@ export default class GameResultScene extends Scene {
                 break;
             }
         }
-        item.children[0].text = `${name}\t${originValue}`;
+        item.children[0].text = `${App.getText(name)}\t${originValue}`;
         item.children[1].text = `*${multiple}->`;
-        item.children[2].text = `${name}\t${Math.floor(originValue * multiple)}`;
+        item.children[2].text = `${App.getText(name)}\t${Math.floor(originValue * multiple)}`;
     }
 
     updateRankItem(item, index) {
         let rank = "";
-        let name = index === this.args.rank ? "YourselfName" : "{{PlayerName}}";
+        let name = this.args.playerNameList[index];
         let value = Config.rankScore[index] || 0;
         switch (index) {
             case 0: {
@@ -113,7 +115,7 @@ export default class GameResultScene extends Scene {
         }
         item.children[0].text = rank;
         item.children[1].text = name;
-        item.children[2].text = "Score";
+        item.children[2].text = App.getText("Score");
         item.children[3].text = value;
     }
 }

@@ -41,8 +41,8 @@ export default class MyApplication extends Application {
         this.scenesContainer = new Container();
         this.stage.addChild(this.scenesContainer);
 
-        this.mask = new Container();
-        this.stage.addChild(this.mask);
+        this.maskShowCount = 0;
+        this.mask = this.stage.addChild(new Container());
         this.mask.hitArea = new Rectangle(0, 0, this.sceneWidth, this.sceneHeight);
         this.mask.visible = false;
         UIHelper.onClick(this.mask, () => this.clickMaskCallback && this.clickMaskCallback(), true);
@@ -211,12 +211,18 @@ export default class MyApplication extends Application {
     }
 
     showMask(clickMaskCallback) {
+        this.maskShowCount++;
         this.mask.visible = true;
         this.clickMaskCallback = clickMaskCallback;
     }
 
     hideMask() {
-        this.mask.visible = false;
+        if (this.maskShowCount > 0) {
+            this.maskShowCount--;
+        }
+        if (this.maskShowCount === 0) {
+            this.mask.visible = false;
+        }
     }
 
     showNotice(notice) {
@@ -259,5 +265,13 @@ export default class MyApplication extends Application {
 
     showTip(tip, confirmCallback, cancelCallback) {
         App.showScene("TipScene", {tip, confirmCallback, cancelCallback});
+    }
+
+    getText(id, args) {
+        let base = resources[Config.i18nPath].data[id] || id;
+        if (args) {
+            base = base.replace(/\$\{.*?\}/g, match => args[match.substring(2, match.length - 1)]);
+        }
+        return base;
     }
 }
