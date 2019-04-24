@@ -79,10 +79,12 @@ export default class DrawScene extends Scene {
     }
 
     onAnimationEnded() {
-        let diamond = DataMgr.get(DataMgr.diamond, 0);
-        diamond -= Config.diamondDrawCost;
-        DataMgr.set(DataMgr.diamond, diamond);
-        this.ui.diamondText.text = diamond;
+        if (this.ui.costDiamondPanel.visible) {
+            let diamond = DataMgr.get(DataMgr.diamond, 0);
+            diamond -= Config.diamondDrawCost;
+            DataMgr.set(DataMgr.diamond, diamond);
+            this.ui.diamondText.text = diamond;
+        }
 
         App.hideMask();
 
