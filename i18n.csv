@@ -1,4 +1,4 @@
-﻿ID,备注,对应界面（策划内部看的）,简中,英语,日语
+﻿ID,备注【排版要把字体改为黑体】,对应界面（策划内部看的）,简中,英语,日语
 id,comments,scene,sc,en,jp
 NetworkBusy,,,网络繁忙，请稍后重试。,The network is busy. Please try again later.,ネットワークがビジー状態で、少し時間をおいて再度お試しください。
 UseItem,,GameScene.scene.json,${player1} 对 ${player2} 使用了 ${item},${player1} used ${item} for ${player2}.,${player1} は ${player2} に ${item} を使いました。
@@ -33,17 +33,17 @@ RequestingRankData,,RankScene.scene.json,请求排行榜数据中,Requesting ran
 NotListed,,RankScene.scene.json,未上榜,Not Listed,
 RestartAfterTime,,RankScene.scene.json,在 ${time} 之后重新开始,Restart after ${time},
 UnlockAllBike,,ShopScene.scene.json,解锁所有的自行车,Unlock All Bike,
-UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽模式场景,Unlock All Endless Scene,
+UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽旅程地图,Unlock All Endless Scene,
 Money2DCPresentDsc,,ShopScene.scene.json,"${money} 钱
 = ${diamond} 钻石 + ${coin} 金币","${money} Money 
 = ${diamond} Diamond + ${coin} Gold Coins",
 Present,,ShopScene.scene.json,礼物,Present,
-Money,,ShopScene.scene.json,货币,Money,
+Money,,ShopScene.scene.json,财宝,Money,
 Map,,ShopScene.scene.json,地图,Map,
 Diamond,,,钻石,Diamond,
 Coin,,,金币,Gold Coin,
 DiamondIsNotEnough,,ShopScene.scene.json,钻石不足！,Diamond is not enough!,
-TotalDistanceReach,,ShopScene.scene.json,历史总里程达到 ${distance}m,Total distance reached ${distance}m,
+TotalDistanceReach,,ShopScene.scene.json,总里程达到 ${distance}m,Total distance reached ${distance}m,
 Backgrounds,,HomeScene.scene.json,背景,Backgrounds,
 Floors,,HomeScene.scene.json,地板,Floors,
 Spoils,,HomeScene.scene.json,战利品,Spoils,
@@ -55,18 +55,18 @@ ConfirmDeleteAllHomeItemAgain,,HomeScene.scene.json,真的确定要删除所有�
 ItemIsAbleToUnlock,,,这个物品可以解锁了。,This item is able to unlock.,
 UnlockConditions,,,解锁条件：,Unlock condition(s):,
 UnlockRewards,,,解锁奖励：,Unlock Reward(s):,
-Would you like to cost the following items to unlock this item?,,,是否愿意花费一下物品来解锁这个物品？,Would you like to cost the following items to unlock this item?,
+Would you like to cost the following items to unlock this item?,,,是否愿意花费以下这些来解锁这个物品？,Would you like to cost the following items to unlock this item?,
 Cost is not enough!,,,没有足够的金币或者钻石！,Cost is not enough!,
 This item is locked.,,,这个物品未解锁。,This item is locked.,
 ${0} Gold Coins,,,${0} 金币,${0} Gold Coins,
 ${0} Diamonds,,,${0} 钻石,${0} Diamonds,
 Need to unlock Map${0},,,需要解锁 地图${0},Need to unlock Map${0},
-Total distance required to reach ${0}m,,,历史总里程达到 ${0}m,Total distance required to reach ${0}m,
+Total distance required to reach ${0}m,,,总里程达到 ${0}m,Total distance required to reach ${0}m,
 Total farthest distance required to reach ${0}m,,,历史最远里程达到 ${0}m,Total farthest distance required to reach ${0}m,
-Score required to reach ${0},,,历史总分达到 ${0},Score required to reach ${0},
-Need to rank ${0}st in total distance,,,排名总里程到达过第${0}名,Need to rank ${0}st in total distance,
-Need to rank ${0}st in farthest distance,,,排名最远里程到达过第${0}名,Need to rank ${0}st in farthest distance,
-Need to rank ${0}st in score,,,排名总分到达过第${0}名,Need to rank ${0}st in score,
+Score required to reach ${0},,,历史积分达到 ${0},Score required to reach ${0},
+Need to rank ${0}st in total distance,,,历史累计里程排行到达过第${0}名,Need to rank ${0}st in total distance,
+Need to rank ${0}st in farthest distance,,,历史最远里程排行到达过第${0}名,Need to rank ${0}st in farthest distance,
+Need to rank ${0}st in score,,,历史积分排行到达过第${0}名,Need to rank ${0}st in score,
 Highest Level,,,最高等级,Highest Level,
 You have ridden ${distance} meters,,,你已经骑了${distance}m,You have ridden ${distance} meters,
 Air,,,空气,Air,
@@ -88,7 +88,7 @@ BikeDsc,,,"【No.${index} 自行车】
 速度     ${speed}%
 跳跃力   ${jump}%
 连续跳跃 ${highJump}
-大小     ${size}","【No.${index} bike】
+体积     ${size}","【No.${index} bike】
 Speed     ${speed}%
 Jump      ${jump}%
 HighJump  ${highJump}
