@@ -125,8 +125,9 @@ export default class DrawScene extends Scene {
             distance: Math.floor(GameUtils.getBikeConfig("distancePercent", this.id, level,) * 100) + "%",
             score: Math.floor(GameUtils.getBikeConfig("scorePercent", this.id, level,) * 100) + "%",
         });
+        let levelDsc = App.getText("LevelDsc", {level: `${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}`});
         this.ui.bikeDsc.text = `${GameUtils.getBikeDsc(config)}
-${App.getText("LV")}${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}
+${levelDsc}
 ${bonusDsc}`;
         this.bikeSprite.play();
     }
