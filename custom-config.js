@@ -7970,7 +7970,7 @@ Config.racetrack = {
 };
 
 // 敌人自行车和玩家接触时的透明度（0完全透明 ~ 1完全不透明）
-Config.enemy.contactPlayerAlpha = 0.6;
+Config.enemy.contactPlayerAlpha = 0.2;
 
 // 默认结算金币倍率
 Config.bike.coinPercent = [
