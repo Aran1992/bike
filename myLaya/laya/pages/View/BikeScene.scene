@@ -203,7 +203,7 @@
                             "x":45,
                             "type":"Label",
                             "searchKey":"Label,bikeDscText",
-                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"font":"monospace","color":"#ffffff","centerY":0,"centerX":30},
+                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":0,"centerX":30},
                             "nodeParent":21,
                             "label":"bikeDscText",
                             "isDirectory":false,

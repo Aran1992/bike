@@ -24,7 +24,7 @@ fs.watch(root, {recursive: true}, (event, filename) => {
                     .replace(/\.scene/g, ".scene.json");
                 fs.writeFileSync(filepath + ".json", JSON.stringify(JSON.parse(data)));
             });
-        } else if (filename.endsWith("i18n.xlsx")) {
+        } else if (filename.endsWith("i18n.csv")) {
             i18n(language);
         }
     }

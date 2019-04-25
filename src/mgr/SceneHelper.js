@@ -261,7 +261,7 @@ function createLabel(child, parent) {
         fontSize: fontSize,
         wordWrap: false,
         leading: getValue(data.leading, 0),
-        padding: 3,
+        padding: 5,
     };
     if (getValue(data.strokeColor) !== undefined) {
         textStyle.stroke = getValue(data.strokeColor);
