@@ -95,7 +95,7 @@ export default class GameScene extends Scene {
         this.ui.diamondText.text = 0;
         this.updateCoinText(0);
 
-        this.isContactFatalEdge = false;
+        this.setContactFatalEdge(false);
 
         this.dragBackPos = undefined;
         this.startDragBikeBack = undefined;
@@ -275,11 +275,11 @@ export default class GameScene extends Scene {
                         this.resetJumpStatus();
                     }
                     if (this.chtable.obstacle.is(anotherFixture)) {
-                        this.isContactFatalEdge = true;
+                        this.setContactFatalEdge(true);
                     } else {
                         let ud = anotherFixture.getUserData();
                         if (ud && ud.isFatal) {
-                            this.isContactFatalEdge = true;
+                            this.setContactFatalEdge(true);
                             ud = anotherFixture.getBody().getUserData();
                             if (ud && ud.thrower) {
                                 EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaEffect");
@@ -329,7 +329,7 @@ export default class GameScene extends Scene {
                         let bikeBody = anotherFixture.getBody();
                         let bike = bikeBody.getUserData();
                         if (bikeBody.getPosition().y < bird.body.getPosition().y) {
-                            bike.isContactFatalEdge = true;
+                            bike.setContactFatalEdge(true);
                         } else {
                             bike.jumpCount = 0;
                             bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), bikeBody.getPosition());
@@ -531,7 +531,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "Thunder": {
-                this.isContactFatalEdge = true;
+                this.setContactFatalEdge(true);
                 break;
             }
             default:
@@ -766,7 +766,7 @@ export default class GameScene extends Scene {
         this.jumpCount = 0;
         this.jumping = false;
 
-        this.isContactFatalEdge = false;
+        this.setContactFatalEdge(false);
 
         this.bikeFrames = GameUtils.getFrames(Config.bikeAtlasPath, "bike");
         this.bikeFrame = 0;
@@ -1616,6 +1616,12 @@ export default class GameScene extends Scene {
         let players = [this].concat(this.enemyList);
         players.sort((a, b) => b.getBikePhysicalPosition().x - a.getBikePhysicalPosition().x);
         return players;
+    }
+
+    setContactFatalEdge(flag) {
+        if (!this.startFloat) {
+            this.isContactFatalEdge = flag;
+        }
     }
 }
 

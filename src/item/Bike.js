@@ -25,7 +25,7 @@ export default class Bike {
         this.frames = config.frames;
         this.frameIndex = 0;
 
-        this.isContactFatalEdge = false;
+        this.setContactFatalEdge(false);
 
         this.jumping = false;
         this.jumpCount = 0;
@@ -174,10 +174,10 @@ export default class Bike {
                 this.resetJumpStatus();
             }
             if (this.gameScene.chtable.obstacle.is(anotherFixture)) {
-                this.isContactFatalEdge = true;
+                this.setContactFatalEdge(true);
             } else {
                 if (ud && ud.isFatal) {
-                    this.isContactFatalEdge = true;
+                    this.setContactFatalEdge(true);
                     ud = anotherFixture.getBody().getUserData();
                     if (ud && ud.thrower) {
                         EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaEffect");
@@ -424,7 +424,7 @@ export default class Bike {
         if (this.bikeFloatFrame === 0 || this.bikeBody.getPosition().x >= this.floatTargetPosX) {
             this.startFloat = false;
             this.bikeBubbleSprite.visible = false;
-            this.isContactFatalEdge = false;
+            this.setContactFatalEdge(false);
             this.jumping = false;
             this.jumpCount = 0;
             this.isDead = false;
@@ -485,7 +485,7 @@ export default class Bike {
                 break;
             }
             case "Thunder": {
-                this.isContactFatalEdge = true;
+                this.setContactFatalEdge(true);
                 break;
             }
             default:
@@ -603,7 +603,7 @@ export default class Bike {
         this.jumpCount = 0;
         this.jumping = false;
 
-        this.isContactFatalEdge = false;
+        this.setContactFatalEdge(false);
 
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
@@ -713,5 +713,11 @@ export default class Bike {
 
     getHead() {
         return Config.defaultEnemyHeadImagePath;
+    }
+
+    setContactFatalEdge(flag) {
+        if (!this.startFloat) {
+            this.isContactFatalEdge = flag;
+        }
     }
 }
