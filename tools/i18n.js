@@ -5,6 +5,9 @@ exports.i18n = language => {
     let buf = fs.readFileSync("../i18n.xlsx");
     let wb = xlsx.read(buf, {type: "buffer"});
     let sheet = wb.Sheets.Sheet1;
+    delete sheet["!ref"];
+    delete sheet["!margins"];
+    fs.writeFileSync("../i18n.json", JSON.stringify(sheet, undefined, "\t"));
     let column;
     for (let code = 65; ; code++) {
         column = String.fromCharCode(code);
