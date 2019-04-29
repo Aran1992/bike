@@ -2,13 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const i18n = require("./i18n").i18n;
 const pack = require("./pack").pack;
-const language = require("../publish-test.config").language;
+const language = require("../publish.config").language;
 const root = "..";
 const sceneFileRoot = "../myLaya";
 
 pack(sceneFileRoot);
 
-i18n(language);
+i18n(language, "../i18n.csv", "../dist/i18n.json");
 
 fs.watch(root, {recursive: true}, (event, filename) => {
     console.log(event, filename);

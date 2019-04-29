@@ -1,6 +1,5 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
-import NetworkMgr from "./mgr/NetworkMgr";
 
 const findRootWindow = () => {
     let w = window;
@@ -11,7 +10,7 @@ const findRootWindow = () => {
 };
 findRootWindow();
 
-window.onload = () => {
+export function main(callback) {
     if (document.body.children[0] instanceof HTMLParagraphElement) {
         document.body.removeChild(document.body.children[0]);
     }
@@ -21,8 +20,8 @@ window.onload = () => {
     let window = findRootWindow();
 
     let resolution = 0.5,
-        appWidth = 720,
-        appHeight = 1280;
+        appWidth,
+        appHeight;
 
     let wwhRatio = window.innerWidth / window.innerHeight;
     let dwhRatio = Config.designWidth / Config.designHeight;
@@ -49,17 +48,5 @@ window.onload = () => {
     App.view.style.left = (window.innerWidth - App.view.offsetWidth) / 2 + "px";
     App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
 
-    App.loadResources([Config.i18nPath], () => {
-        let username = localStorage.username;
-        let password = localStorage.password;
-        if (username && password) {
-            NetworkMgr.requestLogin(username, password, () => {
-                App.showScene("MainScene");
-            }, () => {
-                App.showScene("LoginScene");
-            });
-        } else {
-            App.showScene("LoginScene");
-        }
-    });
-};
+    App.loadResources([Config.i18nPath], callback);
+}

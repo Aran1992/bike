@@ -2,7 +2,7 @@ import Config from "../config";
 import DataMgr from "./DataMgr";
 
 class NetworkMgr_ {
-    request(url, method, formData, successCallback, failedCallback) {
+    request(url, method, formData, successCallback, failedCallback, hideTip) {
         successCallback = successCallback || (() => {
         });
         failedCallback = failedCallback || (() => {
@@ -26,11 +26,15 @@ class NetworkMgr_ {
                     if (data.key === "0") {
                         successCallback(data);
                     } else {
-                        App.showNotice(data.message);
+                        if (!hideTip) {
+                            App.showNotice(data.message);
+                        }
                         failedCallback(data);
                     }
                 } else {
-                    App.showTip(App.getText("NetworkBusy"));
+                    if (!hideTip) {
+                        App.showTip(App.getText("NetworkBusy"));
+                    }
                     if (failedCallback) {
                         failedCallback({message: "Network request failed"});
                     }
@@ -69,14 +73,14 @@ class NetworkMgr_ {
         this.request(Config.serverUrl + "/user/register", "POST", formData, successCallback, failedCallback);
     }
 
-    requestLogin(username, password, successCallback, failedCallback) {
+    requestLogin(username, password, successCallback, failedCallback, hideTip) {
         let formData = new FormData();
         formData.append("username", username);
         formData.append("password", password);
 
         this.request(Config.serverUrl + "/user/login", "POST", formData, () => {
             this.requestLoadData(successCallback, failedCallback);
-        }, failedCallback);
+        }, failedCallback, hideTip);
     }
 
     requestLoadData(scb, fcb) {

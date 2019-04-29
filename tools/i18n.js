@@ -1,8 +1,8 @@
 const xlsx = require("xlsx");
 const fs = require("fs");
-const path = require("path");
-exports.i18n = language => {
-    let buf = fs.readFileSync("../i18n.csv");
+const utils = require("./utils");
+exports.i18n = (language, input, output) => {
+    let buf = fs.readFileSync(input);
     let wb = xlsx.read(buf, {type: "buffer"});
     let sheet = wb.Sheets.Sheet1;
     let column;
@@ -20,12 +20,6 @@ exports.i18n = language => {
         }
         table[id.v] = sheet[`${column}${row}`].v;
     }
-    let dir = "../dist/";
-    try {
-        fs.mkdirSync(dir);
-    } catch (e) {
-    } finally {
-        fs.writeFileSync(path.join(dir, "i18n.json"), JSON.stringify(table));
-    }
+    utils.writeFileSync(output, JSON.stringify(table));
     console.log("i18n generate success");
 };

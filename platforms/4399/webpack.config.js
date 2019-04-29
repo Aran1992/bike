@@ -1,6 +1,6 @@
 const path = require("path");
 module.exports = {
-    entry: "../src/main.js",
+    entry: "./game.js",
     module: {
         rules: [{
             test: /\.js$/,
@@ -17,8 +17,8 @@ module.exports = {
         extensions: ["*", ".js"]
     },
     output: {
-        path: path.resolve("../dist"),
+        path: path.resolve("./dist"),
         filename: "bundle.js"
     },
-    mode: "development"
+    mode: "production"
 };

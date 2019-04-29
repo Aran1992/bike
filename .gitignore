@@ -1,10 +1,6 @@
 /node_modules
 /.idea
-/dist
-/publish
-/publish-wx
-/publish-fb
-/test.html
-/note.txt
+dist
+publish
 *.scene.json
 *.prefab.json
