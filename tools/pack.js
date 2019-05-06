@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const utils = require("./utils");
 
 const handle = (root) => {
     const files = fs.readdirSync(root);
@@ -10,7 +11,7 @@ const handle = (root) => {
                 let data = fs.readFileSync(filepath, "utf8")
                     .replace(/\.prefab/g, ".prefab.json")
                     .replace(/\.scene/g, ".scene.json");
-                fs.writeFileSync(filepath + ".json", JSON.stringify(JSON.parse(data)));
+                fs.writeFileSync(filepath + ".json", JSON.stringify(utils.filterSceneData(JSON.parse(data))));
             }
         } else {
             handle(filepath);

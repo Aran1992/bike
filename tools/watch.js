@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const utils = require("./utils");
 const i18n = require("./i18n").i18n;
 const pack = require("./pack").pack;
 const language = require("../publish.config").language;
@@ -22,7 +23,7 @@ fs.watch(root, {recursive: true}, (event, filename) => {
                 data = data
                     .replace(/\.prefab/g, ".prefab.json")
                     .replace(/\.scene/g, ".scene.json");
-                fs.writeFileSync(filepath + ".json", JSON.stringify(JSON.parse(data)));
+                fs.writeFileSync(filepath + ".json", JSON.stringify(utils.filterSceneData(JSON.parse(data))));
             });
         } else if (filename.endsWith("i18n.csv")) {
             i18n(language);

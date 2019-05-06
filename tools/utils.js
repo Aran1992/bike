@@ -49,6 +49,34 @@ const copy = (src, dist, exceptList) => {
     copy_(src, dist, exceptList);
 };
 
+const list = [
+    "selectedBox",
+    "selecteID",
+    "searchKey",
+    "nodeParent",
+    "maxID",
+    "isOpen",
+    "isDirectory",
+    "isAniNode",
+    "hasChild",
+    "compId",
+    "animations",
+];
+
+const filterSceneData = (data) => {
+    for (let key in data) {
+        if (data.hasOwnProperty(key)) {
+            if (list.indexOf(key) !== -1) {
+                delete data[key];
+            } else if (typeof data[key] === "object") {
+                data[key] = filterSceneData(data[key]);
+            }
+        }
+    }
+    return data;
+};
+
 exports.deleteAll = deleteAll;
 exports.writeFileSync = writeFileSync;
 exports.copy = copy;
+exports.filterSceneData = filterSceneData;
