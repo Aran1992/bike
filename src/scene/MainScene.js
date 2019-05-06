@@ -1,7 +1,7 @@
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
-import {resources} from "../libs/pixi-wrapper";
+import {resources, Texture} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import RunOption from "../../run-option";
@@ -51,7 +51,8 @@ export default class MainScene extends Scene {
         this.bikeSprite.play();
         this.onUpdate();
 
-        this.ui.userNameText.text = localStorage.username;
+        this.ui.userImage.children[0].texture = Texture.from(DataMgr.get(DataMgr.headurl, Config.defaultEnemyHeadImagePath));
+        this.ui.userNameText.text = DataMgr.getPlayerName();
     }
 
     onHide() {

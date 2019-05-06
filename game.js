@@ -5,7 +5,7 @@ main(() => {
     let username = localStorage.username;
     let password = localStorage.password;
     if (username && password) {
-        NetworkMgr.requestLogin(username, password, () => {
+        NetworkMgr.requestLogin(username, password, username, undefined, () => {
             App.showScene("MainScene");
         }, () => {
             App.showScene("LoginScene");

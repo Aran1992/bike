@@ -3,6 +3,7 @@ import Radio from "../ui/Radio";
 import List from "../ui/List";
 import NetworkMgr from "../mgr/NetworkMgr";
 import Utils from "../mgr/Utils";
+import {Texture} from "../libs/pixi-wrapper";
 
 let TOTAL_DISTANCE = 1;
 let FARTHEST_DISTANCE = 2;
@@ -53,11 +54,21 @@ export default class RankScene extends Scene {
 
     updateListItem(item, index) {
         let data = this.data[index];
-        item.ui.userNameText.text = data.username;
+        item.ui.userNameText.text = "--";
         typeList.forEach(type => item.ui[type].visible = this.type === type);
         item.ui.value.text = data.value;
         item.ui.playerRank.text = index + 1;
         item.index = index;
+        let username = data.username;
+        item.username = username;
+        NetworkMgr.requestLoadSocialData(username, (data) => {
+            if (item.username === username) {
+                let playername = JSON.parse(data.response).playername;
+                let headurl = JSON.parse(data.response).headurl;
+                item.ui.userNameText.text = playername;
+                item.ui.userImage.children[0].texture = Texture.from(headurl);
+            }
+        });
     }
 
     static initTypeRadioButton(button, info) {

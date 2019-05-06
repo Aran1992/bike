@@ -25,11 +25,10 @@ export default class LoginScene extends Scene {
         if (username === "" || password === "") {
             return App.showNotice("Please enter Username and Password!");
         }
-        NetworkMgr.requestLogin(username, password, () => {
+        NetworkMgr.requestLogin(username, password, username, undefined, () => {
+            localStorage.playername = username;
             App.hideScene("LoginScene");
             App.showScene("MainScene");
-            localStorage.username = username;
-            localStorage.password = password;
         });
     }
 

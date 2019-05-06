@@ -73,13 +73,20 @@ class NetworkMgr_ {
         this.request(Config.serverUrl + "/user/register", "POST", formData, successCallback, failedCallback);
     }
 
-    requestLogin(username, password, successCallback, failedCallback, hideTip) {
+    requestLogin(username, password, playername, headurl = Config.defaultEnemyHeadImagePath, successCallback, failedCallback, hideTip) {
         let formData = new FormData();
         formData.append("username", username);
         formData.append("password", password);
 
         this.request(Config.serverUrl + "/user/login", "POST", formData, () => {
-            this.requestLoadData(successCallback, failedCallback);
+            localStorage.username = username;
+            localStorage.password = password;
+            this.requestLoadData((...args) => {
+                DataMgr.set(DataMgr.playername, playername);
+                DataMgr.set(DataMgr.headurl, headurl);
+                this.requestSaveSocialData({playername, headurl});
+                successCallback(...args);
+            }, failedCallback);
         }, failedCallback, hideTip);
     }
 
@@ -121,8 +128,9 @@ class NetworkMgr_ {
         this.request(Config.serverUrl + "/board/update_score", "POST", formData, scb, fcb);
     }
 
-    requestSaveSocialData(data, scb, fcb) {
+    requestSaveSocialData({home = DataMgr.get(DataMgr.homeData), playername = DataMgr.get(DataMgr.playername), headurl = DataMgr.get(DataMgr.headurl)}, scb, fcb) {
         let formData = new FormData();
+        let data = {home, playername, headurl};
         formData.append("data", JSON.stringify(data));
         this.request(Config.serverUrl + "/player/save_social_data", "POST", formData, scb, fcb);
     }

@@ -185,7 +185,7 @@ class DataMgr_ {
     }
 
     getPlayerName() {
-        return localStorage.username;
+        return DataMgr.get(DataMgr.playername, "");
     }
 }
 
@@ -222,5 +222,7 @@ DataMgr.rankDistanceRecord = "22";
 // 本次排行累计的总分
 DataMgr.rankTotalScore = "23";
 DataMgr.periodIdx = "24";
+DataMgr.playername = "25";
+DataMgr.headurl = "26";
 
 export default DataMgr;

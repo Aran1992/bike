@@ -26,6 +26,7 @@
     "xlsx": "^0.14.2"
   },
   "dependencies": {
+    "md5": "^2.2.1",
     "pixi-particles": "^3.1.0",
     "pixi.js": "^4.8.2",
     "planck-js": "^0.3.0-rc.2"

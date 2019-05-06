@@ -2,5 +2,6 @@
 /.idea
 dist
 publish
+publish.zip
 *.scene.json
 *.prefab.json

@@ -1,23 +1,12 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
 
-const findRootWindow = () => {
-    let w = window;
-    while (w.parent !== w) {
-        w = w.parent;
-    }
-    return w;
-};
-findRootWindow();
-
 export function main(callback) {
     if (document.body.children[0] instanceof HTMLParagraphElement) {
         document.body.removeChild(document.body.children[0]);
     }
 
     document.body.style.margin = "0";
-
-    let window = findRootWindow();
 
     let resolution = 0.5,
         appWidth,
