@@ -2,6 +2,10 @@ import {main} from "../../src/main";
 import NetworkMgr from "../../src/mgr/NetworkMgr";
 import * as md5 from "md5";
 
+window.PlatformHelper = {
+    canLogout: false,
+};
+
 const CALLBACK_KEY = "36ffbe82a8c58d24237b42a91c7f6cc3";
 
 function getArgs(url) {
