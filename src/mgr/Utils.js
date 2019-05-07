@@ -151,6 +151,22 @@ export default class Utils {
         return list[i];
     }
 
+    static randomChooseMulti(list, count) {
+        let newList = list.map(item => item);
+        let resultList = [];
+        while (count) {
+            if (newList.length) {
+                let index = Math.floor(Math.random() * newList.length);
+                let [item] = newList.splice(index, 1);
+                resultList.push(item);
+                count--;
+            } else {
+                break;
+            }
+        }
+        return resultList;
+    }
+
     static randomInRange(min, max) {
         return min + (max - min) * Math.random();
     }

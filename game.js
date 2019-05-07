@@ -2,7 +2,7 @@ import {main} from "./src/main";
 import NetworkMgr from "./src/mgr/NetworkMgr";
 
 window.PlatformHelper = {
-    canLogout: false,
+    canLogout: true,
 };
 
 main(() => {

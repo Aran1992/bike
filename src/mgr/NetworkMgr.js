@@ -1,5 +1,15 @@
 import Config from "../config";
 import DataMgr from "./DataMgr";
+import Utils from "./Utils";
+
+const RANK_LIST = [
+    "/board/get_total_mileage_board",
+    "/board/get_farest_mileage_board",
+    "/board/get_score_board",
+    "/board/get_total_mileage_board_history",
+    "/board/get_farest_mileage_board_history",
+    "/board/get_score_board_history",
+];
 
 class NetworkMgr_ {
     request(url, method, formData, successCallback, failedCallback, hideTip) {
@@ -153,6 +163,38 @@ class NetworkMgr_ {
             }
             scb(boards, nextRefreshTime);
         }, fcb);
+    }
+
+    requestRandomPlayerInfo(count, successCallback) {
+        let completeCount = 0;
+        let uidList = [];
+        RANK_LIST.forEach(rank => {
+            this.requestGetRank(rank, boards => {
+                uidList = uidList.concat(boards.map(board => board.username));
+                completeCount++;
+                if (completeCount === RANK_LIST.length) {
+                    uidList = Array.from(new Set(uidList));
+                    uidList = uidList.filter(uid => uid !== localStorage.username);
+                    uidList = Utils.randomChooseMulti(uidList, count);
+                    completeCount = 0;
+                    let infoList = [];
+                    if (uidList.length) {
+                        uidList.forEach(uid => this.requestLoadSocialData(uid, (data) => {
+                            data = JSON.parse(data.response);
+                            let playername = data.playername;
+                            let headurl = data.headurl;
+                            infoList.push({playername, headurl});
+                            completeCount++;
+                            if (completeCount === uidList.length) {
+                                successCallback(infoList);
+                            }
+                        }));
+                    } else {
+                        successCallback(infoList);
+                    }
+                }
+            });
+        });
     }
 }
 

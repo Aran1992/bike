@@ -7,6 +7,7 @@ import Enemy from "../item/Enemy";
 import RunOption from "../../run-option";
 import DataMgr from "../mgr/DataMgr";
 import SceneHelper from "../mgr/SceneHelper";
+import NetworkMgr from "../mgr/NetworkMgr";
 
 export default class MapGameScene extends GameScene {
     onCreate() {
@@ -51,7 +52,10 @@ export default class MapGameScene extends GameScene {
     }
 
     onLoadedBaseRes() {
-        SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene.json", this.onLoadedGameRes.bind(this));
+        NetworkMgr.requestRandomPlayerInfo(Config.enemy.count, enemyInfoList => {
+            this.enemyInfoList = enemyInfoList;
+            SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene.json", this.onLoadedGameRes.bind(this));
+        });
     }
 
     onRestart() {
@@ -98,11 +102,19 @@ export default class MapGameScene extends GameScene {
                 list.splice(index, 1);
                 // let id = DataMgr.get(DataMgr.selectedBike, 0);
                 // let id = 2;
+                let playername = `NPC${i + 1}`;
+                let headurl = Config.defaultEnemyHeadImagePath;
+                let item = this.enemyInfoList.pop();
+                if (item) {
+                    playername = item.playername;
+                    headurl = item.headurl;
+                }
                 let enemy = new Enemy(this, this.bikeContainer, this.world, id, {
                     commonVelocity: this.bikeCommonVelocity,
                     jumpForce: this.jumpForce,
                     frames: frames,
-                    index: this.enemyList.length + 1
+                    playername: playername,
+                    headurl: headurl,
                 });
                 enemy.setPhysicalPosition(pp);
                 this.enemyList.push(enemy);

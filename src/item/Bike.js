@@ -44,7 +44,8 @@ export default class Bike {
         this.effectRemainFrame = {};
         this.initEffectTable();
 
-        this.playerName = "NPC" + this.config.index;
+        this.playername = this.config.playername;
+        this.headurl = this.config.headurl;
 
         this.onCreate();
     }
@@ -79,7 +80,7 @@ export default class Bike {
         this.bikeRankText.anchor.set(0.5, 1);
         this.bikeRankText.position.set(0, Config.bike.enemyNameText.positionY);
 
-        this.bikeHeadImage = this.bikeOutterContainer.addChild(Sprite.from(Config.defaultEnemyHeadImagePath));
+        this.bikeHeadImage = this.bikeOutterContainer.addChild(Sprite.from(this.headurl));
         this.bikeHeadImage.width = Config.bike.enemyHeadImage.width;
         this.bikeHeadImage.height = Config.bike.enemyHeadImage.height;
         this.bikeHeadImage.anchor.set(0.5, 1);
@@ -127,6 +128,14 @@ export default class Bike {
         this.bikeOutterContainer.destroy();
         this.emitter.destroy();
         clearTimeout(this.deadCompleteTimer);
+    }
+
+    getHead() {
+        return this.headurl;
+    }
+
+    getName() {
+        return this.playername;
     }
 
     setPhysicalPosition(pp) {
@@ -626,10 +635,6 @@ export default class Bike {
         return this.effectRemainFrame[type] !== undefined;
     }
 
-    getName() {
-        return this.playerName;
-    }
-
     getBikePhysicalPosition() {
         return this.bikeBody.getPosition();
     }
@@ -709,10 +714,6 @@ export default class Bike {
             }
         }
         return false;
-    }
-
-    getHead() {
-        return Config.defaultEnemyHeadImagePath;
     }
 
     setContactFatalEdge(flag) {
