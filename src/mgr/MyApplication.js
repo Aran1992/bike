@@ -35,14 +35,30 @@ export default class MyApplication extends Application {
 
         window.App = this;
 
-        this.sceneWidth = args.width;
-        this.sceneHeight = args.height;
+        let wwhRatio = args.width / args.height;
+        let dwhRatio = Config.designWidth / Config.designHeight;
+        if (wwhRatio >= dwhRatio) {
+            this.sceneWidth = Config.designWidth;
+            this.sceneHeight = Config.designHeight;
+        } else {
+            this.sceneWidth = Config.designWidth;
+            this.sceneHeight = Config.designWidth / args.width * args.height;
+        }
+
+        this.root = this.stage.addChild(new Container());
+        let x = (args.width - this.sceneWidth) / 2;
+        let y = (args.height - this.sceneHeight) / 2;
+        this.root.mask = new Graphics()
+            .beginFill()
+            .drawRect(x, y, this.sceneWidth, this.sceneHeight)
+            .endFill();
+        this.root.position.set(x, y);
 
         this.scenesContainer = new Container();
-        this.stage.addChild(this.scenesContainer);
+        this.root.addChild(this.scenesContainer);
 
         this.maskShowCount = 0;
-        this.mask = this.stage.addChild(new Container());
+        this.mask = this.root.addChild(new Container());
         this.mask.hitArea = new Rectangle(0, 0, this.sceneWidth, this.sceneHeight);
         this.mask.visible = false;
         UIHelper.onClick(this.mask, () => this.clickMaskCallback && this.clickMaskCallback(), true);
@@ -166,7 +182,7 @@ export default class MyApplication extends Application {
     }
 
     createLoadScene() {
-        this.loadScene = this.stage.addChild(new Container());
+        this.loadScene = this.root.addChild(new Container());
 
         this.loadScene.addChild(
             new Graphics()
@@ -247,7 +263,7 @@ export default class MyApplication extends Application {
         container.addChild(text);
 
         container.position.set(this.sceneWidth / 2 - text.width / 2, Config.notice.positionY);
-        this.stage.addChild(container);
+        this.root.addChild(container);
 
         setTimeout(() => {
             let reduce = 1000 / 60 / Config.notice.fadeDuration;

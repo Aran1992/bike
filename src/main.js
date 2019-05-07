@@ -6,36 +6,26 @@ export function main(callback) {
         document.body.removeChild(document.body.children[0]);
     }
 
-    document.body.style.margin = "0";
-
-    let resolution = 0.5,
-        appWidth,
-        appHeight;
-
+    let width;
+    let height;
     let wwhRatio = window.innerWidth / window.innerHeight;
     let dwhRatio = Config.designWidth / Config.designHeight;
-    if (wwhRatio >= dwhRatio) {
-        resolution = window.innerHeight / Config.designHeight;
-        appWidth = Config.designWidth;
-        appHeight = Config.designHeight;
+    if (wwhRatio > dwhRatio) {
+        height = Config.designHeight;
+        width = height * wwhRatio;
     } else {
-        resolution = window.innerWidth / Config.designWidth;
-        appWidth = Config.designWidth;
-        appHeight = Config.designWidth / window.innerWidth * window.innerHeight;
+        width = Config.designWidth;
+        height = width / wwhRatio;
     }
 
-    const App = new MyApplication({
-        width: appWidth,
-        height: appHeight,
-        resolution: resolution,
+    let App = new MyApplication({
+        backgroundColor: Config.backgroundColor,
+        width: width,
+        height: height,
         antialias: true,
         transparent: false,
+        view: canvas,
     });
-    document.body.appendChild(App.view);
-
-    App.view.style.position = "absolute";
-    App.view.style.left = (window.innerWidth - App.view.offsetWidth) / 2 + "px";
-    App.view.style.top = (window.innerHeight - App.view.offsetHeight) / 2 + "px";
 
     App.loadResources([Config.i18nPath], callback);
 }
