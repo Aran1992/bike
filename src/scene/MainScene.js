@@ -18,7 +18,9 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
         this.onClick(this.ui.rankButton, this.onClickRankButton.bind(this));
-        this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
+        if (window.PlatformHelper.canLogout) {
+            this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
+        }
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);

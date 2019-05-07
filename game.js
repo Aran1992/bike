@@ -1,6 +1,10 @@
 import {main} from "./src/main";
 import NetworkMgr from "./src/mgr/NetworkMgr";
 
+window.PlatformHelper = {
+    canLogout: false,
+};
+
 main(() => {
     let username = localStorage.username;
     let password = localStorage.password;
