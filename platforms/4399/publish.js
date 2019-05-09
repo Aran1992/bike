@@ -30,11 +30,11 @@ function createSceneJSON() {
 function copyRes() {
     [
         "images",
-        "sound",
         "myLaya/laya/pages",
         "myLaya/laya/assets/animations",
         "myLaya/laya/assets/images",
         "myLaya/laya/assets/prefabs",
+        "myLaya/laya/assets/sounds",
     ].forEach(file => utils.copy(`../../${file}`, `./publish/${file}`));
     utils.copy("./dist", "./publish/dist");
     utils.copy("./index.html", "./publish/index.html");
