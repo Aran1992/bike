@@ -290,4 +290,12 @@ export default class MyApplication extends Application {
         }
         return base;
     }
+
+    getGlobalPosition(displayObject) {
+        let {x, y} = displayObject.getGlobalPosition();
+        return {
+            x: x - this.root.x,
+            y: y - this.root.y
+        };
+    }
 }

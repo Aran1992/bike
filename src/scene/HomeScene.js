@@ -62,10 +62,15 @@ export default class HomeScene extends Scene {
         });
 
         this.homeContainer = this.ui.homeContainer;
-        this.homeContainerPos = this.homeContainer.getGlobalPosition();
+        this.homeContainerPos = App.getGlobalPosition(this.homeContainer);
         this.homeContainerMask = new Graphics()
             .beginFill()
-            .drawRect(this.homeContainerPos.x, this.homeContainerPos.y, this.homeContainer.mywidth, this.homeContainer.myheight)
+            .drawRect(
+                this.homeContainer.getGlobalPosition().x,
+                this.homeContainer.getGlobalPosition().y,
+                this.homeContainer.mywidth,
+                this.homeContainer.myheight
+            )
             .endFill();
         this.homeContainer.mask = this.homeContainerMask;
         this.homeInnerContainer = this.homeContainer.addChild(new Container());
