@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":18,
-    "selecteID":23,
+  "selectedBox": 24,
+  "selecteID": 13,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -157,16 +157,24 @@
             "props":{"width":700,"var":"tab","top":141,"height":79,"centerX":0},
             "nodeParent":1,
             "label":"tab",
-            "isOpen":false,
+          "isOpen": true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":24,
             "child":[
                 {
+                  "x": 30,
                     "type":"Panel",
                     "searchKey":"Panel,radio",
-                    "props":{"width":80,"var":"radio","top":0,"left":0,"height":78},
+                  "props": {
+                    "width": 80,
+                    "var": "radio",
+                    "top": 0,
+                    "runtime": "../laya/assets/sounds/SoundSE001.mp3",
+                    "left": 0,
+                    "height": 78
+                  },
                     "nodeParent":24,
                     "label":"radio",
                     "isOpen":true,
@@ -176,6 +184,7 @@
                     "compId":13,
                     "child":[
                         {
+                          "x": 45,
                             "type":"Image",
                             "searchKey":"Image,common",
                             "props":{"width":80,"top":0,"skin":"images/button-tab-1.png","name":"common","height":78},
@@ -189,6 +198,7 @@
                                 ]
                         },
                         {
+                          "x": 45,
                             "type":"Image",
                             "searchKey":"Image,selected",
                             "props":{"width":80,"visible":false,"top":0,"skin":"images/button-tab-2.png","name":"selected","left":0,"height":78},
@@ -203,6 +213,7 @@
                             "$HIDDEN":true
                         },
                         {
+                          "x": 45,
                             "type":"Label",
                             "searchKey":"Label,label",
                             "props":{"text":"Present","name":"label","fontSize":20,"color":"#000000","centerY":0,"centerX":0},
