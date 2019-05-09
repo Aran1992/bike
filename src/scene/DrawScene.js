@@ -5,6 +5,7 @@ import DataMgr from "../mgr/DataMgr";
 import {Rectangle} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
 import GameUtils from "../mgr/GameUtils";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class DrawScene extends Scene {
     onCreate() {
@@ -29,6 +30,13 @@ export default class DrawScene extends Scene {
 
     onShow() {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+    }
+
+    onHide() {
+        if (this.drawSound) {
+            MusicMgr.stopLoopSound(this.drawSound);
+            this.drawSound = undefined;
+        }
     }
 
     onClickReturnButton() {
@@ -63,6 +71,7 @@ export default class DrawScene extends Scene {
         this.totalAnimationFrame = 180;
         this.totalRotation = Math.PI * 2 * 6;
         this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
+        this.drawSound = MusicMgr.playLoopSound(Config.drawScene.res.drawSound);
     }
 
     onAnimation() {
@@ -79,6 +88,11 @@ export default class DrawScene extends Scene {
     }
 
     onAnimationEnded() {
+        if (this.drawSound) {
+            MusicMgr.stopLoopSound(this.drawSound);
+            this.drawSound = undefined;
+        }
+
         if (this.ui.costDiamondPanel.visible) {
             let diamond = DataMgr.get(DataMgr.diamond, 0);
             diamond -= Config.diamondDrawCost;
@@ -151,4 +165,4 @@ ${bonusDsc}`;
 }
 
 DrawScene.sceneFilePath = "myLaya/laya/pages/View/DrawScene.scene.json";
-DrawScene.resPathList = BikeSprite.resPathList;
+DrawScene.resPathList = BikeSprite.resPathList.concat(Utils.values(Config.drawScene.res));

@@ -7035,7 +7035,10 @@ Config.drawScene = {
     // 自行车相关配置
     bikeSprite: {
         y: 100,
-    }
+    },
+    res: {
+        drawSound: "myLaya/laya/assets/sounds/Sound0028.mp3"
+    },
 };
 
 // 商店游戏币配置
