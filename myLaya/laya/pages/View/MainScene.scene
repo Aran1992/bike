@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":31,
-    "selecteID":33,
+    "selectedBox": 21,
+    "selecteID": 29,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -576,16 +576,25 @@
             "props":{"width":720,"skin":"images/bg-7.png","height":235,"centerX":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen": true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
+                    "x": 30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
-                    "props":{"width":290,"var":"endlessModeButton","skin":"images/button-1.png","left":50,"height":156,"bottom":30},
+                    "props": {
+                        "width": 290,
+                        "var": "endlessModeButton",
+                        "skin": "images/button-1.png",
+                        "runtime": "../laya/assets/sounds/SoundSE001.mp3",
+                        "left": 50,
+                        "height": 156,
+                        "bottom": 30
+                    },
                     "nodeParent":21,
                     "label":"endlessModeButton",
                     "isOpen":true,
@@ -595,6 +604,7 @@
                     "compId":29,
                     "child":[
                         {
+                            "x": 45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Endless.png","scaleY":1,"scaleX":1,"centerY":0,"centerX":0},
@@ -609,6 +619,7 @@
                         }]
                 },
                 {
+                    "x": 30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"width":290,"var":"mapModeButton","skin":"images/button-1.png","right":50,"height":156,"bottom":30},
@@ -621,6 +632,7 @@
                     "compId":30,
                     "child":[
                         {
+                            "x": 45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Match.png","scaleY":1,"scaleX":1,"centerY":0,"centerX":0},

@@ -1,5 +1,6 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
+import Utils from "./mgr/Utils";
 
 export function main(callback) {
     if (document.body.children[0] instanceof HTMLParagraphElement) {
@@ -27,5 +28,5 @@ export function main(callback) {
         view: canvas,
     });
 
-    App.loadResources([Config.i18nPath], callback);
+    App.loadResources([Config.i18nPath,].concat(Utils.values(Config.baseRes)), callback);
 }

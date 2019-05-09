@@ -2,6 +2,7 @@ import EditorItem from "./EditorItem";
 import Config from "../config";
 import {Box, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class FireBall extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -35,6 +36,7 @@ export default class FireBall extends EditorItem {
         super.update();
 
         if (this.body.isStatic() && this.gameMgr.isItemXEnterView(this)) {
+            MusicMgr.playSound(Config.item.fireBall.appearSoundPath);
             this.body.setKinematic();
             this.body.setLinearVelocity(Vec2(this.config.velocity, 0));
         }

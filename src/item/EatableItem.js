@@ -5,6 +5,7 @@ import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
 import {resources} from "../libs/pixi-wrapper";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class EatableItem extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -35,6 +36,7 @@ export default class EatableItem extends EditorItem {
         if (this.config.portable) {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible) {
+                    MusicMgr.playSound(Config.soundPath.eatRandomItem);
                     if (this.config.effect === "Random") {
                         let effect = this.gameMgr.randomEffect(this.gameMgr);
                         let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;

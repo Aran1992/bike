@@ -95,20 +95,9 @@ let Config = {
     // 镜头自动调整缩放系数
     cameraAutoZoomCoefficient: 0.5,
     // 默认背景音乐
-    defaultBgmPath: "sound/SoundBGM002.mp3",
+    defaultBgmPath: "myLaya/laya/assets/sounds/SoundBGM002.mp3",
     // 主界面背景音乐
-    mainBgmPath: "sound/SoundBGM002.mp3",
-    //音效路径
-    soundPath: {
-        firstJump: "sound/SoundSE101.mp3",
-        secondJump: "sound/SoundSE102.mp3",
-        extraJump: "sound/SoundSE103.mp3",
-        eatGoldCoin: "sound/SoundSE319.mp3",
-        eatAccGem: "sound/SE202.mp3",
-        die: "sound/SE104.mp3",
-        startLevel: "sound/stagekettei.mp3",
-        throughFlag: "sound/SoundBGM202.mp3",
-    },
+    mainBgmPath: "myLaya/laya/assets/sounds/SoundBGM002.mp3",
     defaultBgScale: [1, 1, 1,]
 };
 

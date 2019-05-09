@@ -111,6 +111,22 @@ class MusicMgr_ {
         });
     }
 
+    playLoopSound(path) {
+        let soundSource = this.context.createBufferSource();
+        soundSource.buffer = this.bufferTable[path];
+        soundSource.loop = true;
+        if (DataMgr.get(DataMgr.soundOn, true)) {
+            soundSource.connect(this.context.destination);
+        }
+        soundSource.start();
+        return soundSource;
+    }
+
+    stopLoopSound(soundSource) {
+        soundSource.stop();
+        soundSource.disconnect();
+    }
+
     muteBGM(muted) {
         if (muted) {
             this.bgmSource.disconnect();

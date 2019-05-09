@@ -18,6 +18,9 @@ function loadSceneRes(pathList, callback) {
         if (item.props.skin) {
             resPathList.push(`myLaya/laya/assets/${item.props.skin}`);
         }
+        if (item.props.runtime) {
+            resPathList.push(item.props.runtime.replace("../", "myLaya/"));
+        }
         item.child.forEach(item => handle(item));
     };
     pathList.forEach(path => {
@@ -65,6 +68,9 @@ function createSceneChild(child, parent, root) {
     child.child.forEach(child => item.addChild(createSceneChild(child, item, root)));
     if (data.name) {
         item.uiname = data.name;
+    }
+    if (data.runtime) {
+        item.clickSoundPath = data.runtime.replace("../", "myLaya/");
     }
     return item;
 }

@@ -55,7 +55,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/01_oushiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -140,7 +140,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/05_ohitsujiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -225,7 +225,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/09_yagiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/09_yagiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -310,7 +310,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/04_sasori.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/04_sasori.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -395,7 +395,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/03_mizugameza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/03_mizugameza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -480,7 +480,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/11_kaniza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/11_kaniza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -565,7 +565,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/06_futagoza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/06_futagoza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -650,7 +650,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/12_shishiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/12_shishiza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -735,7 +735,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/08_tenbinza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/08_tenbinza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -820,7 +820,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/10_uoza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/10_uoza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -905,7 +905,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/02_iteza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/02_iteza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -990,7 +990,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/07_otomeza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/07_otomeza.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -1286,7 +1286,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/01_oushiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -1693,7 +1693,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/05_ohitsujiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -2100,7 +2100,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/09_yagiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/09_yagiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -2507,7 +2507,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/04_sasori.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/04_sasori.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -2914,7 +2914,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/03_mizugameza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/03_mizugameza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -3321,7 +3321,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/11_kaniza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/11_kaniza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -3728,7 +3728,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/06_futagoza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/06_futagoza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -4135,7 +4135,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/12_shishiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/12_shishiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -4542,7 +4542,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/08_tenbinza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/08_tenbinza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -4949,7 +4949,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/10_uoza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/10_uoza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -5356,7 +5356,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/02_iteza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/02_iteza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -5763,7 +5763,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "sound/07_otomeza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/07_otomeza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
         distanceNotice: [100, 200, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -7219,7 +7219,7 @@ Config.item = {
         // 触碰到的时候的小鸟受到的冲击力大小
         contactBirdImpulse: 125,
         // 出现音效
-        appearSoundPath: "sound/SE310.mp3",
+        appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
     },
     // 地刺
     groundStab: {
@@ -7596,6 +7596,8 @@ Config.item = {
     },
     //滚石
     rollingStone: {
+        // 出现音效
+        appearSoundPath: "myLaya/laya/assets/sounds/Sound0316.mp3",
         table: {
             1: {
                 // 旋转速度
@@ -7613,6 +7615,8 @@ Config.item = {
     },
     // 火球
     fireBall: {
+        // 出现音效
+        appearSoundPath: "myLaya/laya/assets/sounds/Sound0311.mp3",
         table: {
             1: {
                 // 移动速度（单位：像素, 为正的话是像右移动）
@@ -7781,6 +7785,10 @@ Config.effect = {
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_04.png",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff0010.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0001.mp3",
     },
     // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
     WeakenJump: {
@@ -7800,6 +7808,10 @@ Config.effect = {
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_03.png",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff0060.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0006.mp3",
     },
     // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
     BlockSight: {
@@ -7817,6 +7829,10 @@ Config.effect = {
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_06.png",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff0210.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0021.mp3",
     },
     // 束缚（可做：害人束缚道具、束缚物件区域）
     SpiderWeb: {
@@ -7840,6 +7856,10 @@ Config.effect = {
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_07.png",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff0260.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0026.mp3",
     },
     // 封印
     Seal: {
@@ -7857,6 +7877,10 @@ Config.effect = {
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_11.png",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff1031.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0031.mp3",
     },
     // 落雷
     Thunder: {
@@ -7870,6 +7894,10 @@ Config.effect = {
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect2.prefab.json",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff1036.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0036.mp3",
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
@@ -7900,6 +7928,8 @@ Config.effect = {
         userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_02.png",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0106.mp3",
     },
     // 无限跳跃（可做：增益无限跳跃道具、无限跳跃物件区域）
     UnlimitedJump: {
@@ -7913,6 +7943,8 @@ Config.effect = {
         userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_09.png",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0111.mp3",
     },
     // 磁铁（只能用于无尽模式，排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
     Magnet: {
@@ -7928,6 +7960,8 @@ Config.effect = {
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff_icon_01.png",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
     },
     // 香蕉皮
     BananaPeel: {
@@ -7939,6 +7973,10 @@ Config.effect = {
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab.json",
+        // 使用音效
+        useSound: "myLaya/laya/assets/sounds/Buff1041.mp3",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0041.mp3",
     }
 };
 
@@ -9383,5 +9421,26 @@ Config.bike.enemyHeadImage = {
 
 // 默认敌人头像路径
 Config.defaultEnemyHeadImagePath = "myLaya/laya/assets/images/UserIconDefault.png";
+
+//音效路径
+Config.soundPath = {
+    firstJump: "myLaya/laya/assets/sounds/SoundSE101.mp3",
+    secondJump: "myLaya/laya/assets/sounds/SoundSE102.mp3",
+    extraJump: "myLaya/laya/assets/sounds/SoundSE103.mp3",
+    eatGoldCoin: "myLaya/laya/assets/sounds/SoundSE319.mp3",
+    eatAccGem: "myLaya/laya/assets/sounds/SE202.mp3",
+    die: "myLaya/laya/assets/sounds/SE104.mp3",
+    throughFlag: "myLaya/laya/assets/sounds/SoundBGM202.mp3",
+    //吃随机道具的音效
+    eatRandomItem: "myLaya/laya/assets/sounds/Buff9999.mp3",
+    //复活后，带泡泡自动向前移动时
+    bubbleFloat: "myLaya/laya/assets/sounds/Sound0017.mp3",
+    //复活后，带泡泡自动向前移动，泡泡消失时的音效
+    bubbleDestroy: "myLaya/laya/assets/sounds/Sound0329.mp3",
+    //关卡开始倒数，3、2、1的音效
+    countdown: "myLaya/laya/assets/sounds/SoundSE006.mp3",
+    //关卡倒数为0，正式开始的音效
+    startLevel: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+};
 
 export default Config;

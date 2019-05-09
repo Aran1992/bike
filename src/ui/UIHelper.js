@@ -1,6 +1,7 @@
 import {Container, NineSlicePlane, Sprite, Text} from "../libs/pixi-wrapper";
 import Config from "../config";
 import Utils from "../mgr/Utils";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class UIHelper {
     static uiClone(displayObject, root) {
@@ -39,6 +40,9 @@ export default class UIHelper {
         }
         if (displayObject.uiname) {
             item.uiname = displayObject.uiname;
+        }
+        if (displayObject.clickSoundPath) {
+            item.clickSoundPath = displayObject.clickSoundPath;
         }
         return item;
     }
@@ -141,6 +145,9 @@ export default class UIHelper {
                         height: Config.buttonClickOffset * 2,
                     })) {
                     handler(button, event);
+                    if (button.clickSoundPath) {
+                        MusicMgr.playSound(button.clickSoundPath);
+                    }
                 }
                 button.clickPoint = undefined;
             }

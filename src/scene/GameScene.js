@@ -137,9 +137,24 @@ export default class GameScene extends Scene {
         App.loadResources(this.getResPathList(), this.onLoadedBaseRes.bind(this));
     }
 
+    onHide() {
+        if (this.bubbleFloatSound) {
+            MusicMgr.stopLoopSound(this.bubbleFloatSound);
+            this.bubbleFloatSound = undefined;
+        }
+    }
+
     getResPathList() {
         let effectResPathList = [];
-        let resNameList = ["imagePath", "userUsedEffectPath", "bearerSufferedEffectPath", "bearerBuffEffectPath", "buffIconImagePath"];
+        let resNameList = [
+            "imagePath",
+            "userUsedEffectPath",
+            "bearerSufferedEffectPath",
+            "bearerBuffEffectPath",
+            "buffIconImagePath",
+            "useSound",
+            "sufferSound",
+        ];
         for (let effect in Config.effect) {
             if (Config.effect.hasOwnProperty(effect)) {
                 let data = Config.effect[effect];
@@ -440,6 +455,11 @@ export default class GameScene extends Scene {
             if (this.startFloat) {
                 this.startFloat = false;
                 this.bikeBubbleSprite.visible = false;
+                if (this.bubbleFloatSound) {
+                    MusicMgr.stopLoopSound(this.bubbleFloatSound);
+                    this.bubbleFloatSound = undefined;
+                }
+                MusicMgr.playSound(Config.soundPath.bubbleDestroy);
             } else if (this.hasEffect("SpiderWeb")) {
                 this.bikeBody.applyForceToCenter(Vec2(0, Config.effect.SpiderWeb.jumpForce));
                 this.spiderWebRemainBreakTimes--;
@@ -1095,6 +1115,11 @@ export default class GameScene extends Scene {
             if (this.startFloat) {
                 if (this.bikeFloatFrame === 0) {
                     this.startFloat = false;
+                    if (this.bubbleFloatSound) {
+                        MusicMgr.stopLoopSound(this.bubbleFloatSound);
+                        this.bubbleFloatSound = undefined;
+                    }
+                    MusicMgr.playSound(Config.soundPath.bubbleDestroy);
                     this.bikeBubbleSprite.visible = false;
                 } else {
                     this.bikeFloatFrame--;
@@ -1246,6 +1271,9 @@ export default class GameScene extends Scene {
                     });
                     this.effectList.push(effect);
                 }
+                if (config.useSound) {
+                    MusicMgr.playSound(config.useSound);
+                }
                 button.removeChildAt(1);
             }
         }
@@ -1335,6 +1363,12 @@ export default class GameScene extends Scene {
         this.startFloat = true;
         this.bikeArrowList.forEach(sprite => sprite.visible = false);
         this.bikeFloatFrame = Config.rebornFloatFrame;
+        MusicMgr.playSound(Config.soundPath.rebornButton);
+        if (this.bubbleFloatSound) {
+            MusicMgr.stopLoopSound(this.bubbleFloatSound);
+            this.bubbleFloatSound = undefined;
+        }
+        this.bubbleFloatSound = MusicMgr.playLoopSound(Config.soundPath.bubbleFloat);
     }
 
     settle() {
@@ -1386,6 +1420,9 @@ export default class GameScene extends Scene {
             }
             if (config.buffIconImagePath) {
                 this.addBuffIcon(type);
+            }
+            if (config.sufferSound) {
+                MusicMgr.playSound(config.sufferSound);
             }
         }
         this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;

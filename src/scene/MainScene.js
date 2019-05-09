@@ -9,6 +9,7 @@ import EventMgr from "../mgr/EventMgr";
 
 export default class MainScene extends Scene {
     onCreate() {
+        console.log("this.ui.endlessModeButton", this.ui.endlessModeButton);
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
         this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));

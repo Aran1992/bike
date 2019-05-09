@@ -2,6 +2,7 @@ import EditorItem from "./EditorItem";
 import {Circle} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Config from "../config";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class RollingStone extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -28,6 +29,7 @@ export default class RollingStone extends EditorItem {
         super.update();
 
         if (this.body.isStatic() && this.gameMgr.isItemXEnterView(this)) {
+            MusicMgr.playSound(Config.item.rollingStone.appearSoundPath);
             this.body.setDynamic();
             this.body.setAngularVelocity(this.config.angularVelocity);
         }
