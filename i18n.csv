@@ -35,7 +35,7 @@ RestartAfterTime,,RankScene.scene.json,在 ${time} 之后重新开始,Restart af
 UnlockAllBike,,ShopScene.scene.json,解锁所有的自行车,Unlock All Bike,
 UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽旅程地图,Unlock All Endless Scene,
 Money2DCPresentDsc,,ShopScene.scene.json,"${money} 钱
-= ${diamond} 钻石 + ${coin} 金币","${money} Money 
+= ${diamond} 钻石 + ${coin} 金币","${money} Money
 = ${diamond} Diamond + ${coin} Gold Coins",
 Present,,ShopScene.scene.json,礼物,Present,
 Money,,ShopScene.scene.json,财宝,Money,
@@ -60,7 +60,7 @@ Cost is not enough!,,,没有足够的金币或者钻石！,Cost is not enough!,
 This item is locked.,,,这个物品未解锁。,This item is locked.,
 ${0} Gold Coins,,,${0} 金币,${0} Gold Coins,
 ${0} Diamonds,,,${0} 钻石,${0} Diamonds,
-Need to unlock Map${0},,,需要解锁 地图${0},Need to unlock Map${0},
+Need to unlock Map: ${0}                                                                              ,              ,                                               ,需要解锁地图：${0}                                                                        ,Need to unlock Map: ${0}                                                                              ,
 Total distance required to reach ${0}m,,,总里程达到 ${0}m,Total distance required to reach ${0}m,
 Total farthest distance required to reach ${0}m,,,历史最远里程达到 ${0}m,Total farthest distance required to reach ${0}m,
 Score required to reach ${0},,,历史积分达到 ${0},Score required to reach ${0},

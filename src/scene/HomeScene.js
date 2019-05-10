@@ -588,7 +588,9 @@ export default class HomeScene extends Scene {
             }
             return conditions.map(([id, ...args]) => {
                 if (id === Config.conditionsEnum.unlockMap) {
-                    return App.getText(Config.conditions[id], [args[0] + 1]);
+                    let config = Config.endlessMode.sceneList[args[0]];
+                    let mapName = config.name ? App.getText(config.name) : App.getText("Map") + config.id;
+                    return App.getText(Config.conditions[id], [mapName]);
                 } else {
                     return App.getText(Config.conditions[id], args);
                 }

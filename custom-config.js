@@ -1246,6 +1246,8 @@ Config.roadSections = {
 Config.endlessMode.sceneList = [
     {
         id: 0,
+        // 地图名称
+        name: "heiheihei",
         // 免费解锁所需总距离
         unlockDistance: 0,
         // 花费解锁所需钻石
@@ -9348,7 +9350,7 @@ Config.conditions = {
     //需消费 #### 数量的钻石
     2: "${0} Diamonds",
     //需要解锁地图 ####
-    3: "Need to unlock Map${0}",
+    3: "Need to unlock Map: ${0}",
     //需要总里程达到 ####
     4: "Total distance required to reach ${0}m",
     //需要最远里程达到过 ####

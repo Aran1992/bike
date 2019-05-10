@@ -250,7 +250,7 @@ export default class ShopScene extends Scene {
         let config = Config.endlessMode.sceneList[index];
         let path = config.texture.shopCover;
         item.backgroundImage.texture = resources[path].texture;
-        item.mapDescriptionText.text = App.getText("Map") + config.id;
+        item.mapDescriptionText.text = config.name ? App.getText(config.name) : (App.getText("Map") + config.id);
         if (DataMgr.isEndlessSceneLocked(config.id)) {
             item.commonImage.visible = false;
             item.selectedImage.visible = false;
