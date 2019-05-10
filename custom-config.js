@@ -1247,7 +1247,7 @@ Config.endlessMode.sceneList = [
     {
         id: 0,
         // 地图名称
-        name: "heiheihei",
+        name: "Select Map1",
         // 免费解锁所需总距离
         unlockDistance: 0,
         // 花费解锁所需钻石
@@ -1655,6 +1655,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 1,
+        // 地图名称
+        name: "Select Map2",
         // 免费解锁所需总距离
         unlockDistance: 12000,
         // 花费解锁所需钻石
@@ -2062,6 +2064,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 2,
+        // 地图名称
+        name: "Select Map3",
         // 免费解锁所需总距离
         unlockDistance: 36000,
         // 花费解锁所需钻石
@@ -2469,6 +2473,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 3,
+        // 地图名称
+        name: "Select Map4",
         // 免费解锁所需总距离
         unlockDistance: 72000,
         // 花费解锁所需钻石
@@ -2876,6 +2882,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 4,
+        // 地图名称
+        name: "Select Map5",
         // 免费解锁所需总距离
         unlockDistance: 144000,
         // 花费解锁所需钻石
@@ -3283,6 +3291,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 5,
+        // 地图名称
+        name: "Select Map6",
         // 免费解锁所需总距离
         unlockDistance: 216000,
         // 花费解锁所需钻石
@@ -3690,6 +3700,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 6,
+        // 地图名称
+        name: "Select Map7",
         // 免费解锁所需总距离
         unlockDistance: 432000,
         // 花费解锁所需钻石
@@ -4097,6 +4109,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 7,
+        // 地图名称
+        name: "Select Map8",
         // 免费解锁所需总距离
         unlockDistance: 864000,
         // 花费解锁所需钻石
@@ -4504,6 +4518,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 8,
+        // 地图名称
+        name: "Select Map9",
         // 免费解锁所需总距离
         unlockDistance: 1728000,
         // 花费解锁所需钻石
@@ -4911,6 +4927,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 9,
+        // 地图名称
+        name: "Select Map10",
         // 免费解锁所需总距离
         unlockDistance: 3456000,
         // 花费解锁所需钻石
@@ -5318,6 +5336,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 10,
+        // 地图名称
+        name: "Select Map11",
         // 免费解锁所需总距离
         unlockDistance: 5184000,
         // 花费解锁所需钻石
@@ -5725,6 +5745,8 @@ Config.endlessMode.sceneList = [
     },
     {
         id: 11,
+        // 地图名称
+        name: "Select Map12",
         // 免费解锁所需总距离
         unlockDistance: 6912000,
         // 花费解锁所需钻石
