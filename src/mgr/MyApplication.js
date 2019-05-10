@@ -298,4 +298,11 @@ export default class MyApplication extends Application {
             y: y - this.root.y
         };
     }
+
+    trans2GlobalPosition({x, y}) {
+        return {
+            x: x - this.root.x,
+            y: y - this.root.y
+        };
+    }
 }

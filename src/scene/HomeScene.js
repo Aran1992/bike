@@ -419,7 +419,8 @@ export default class HomeScene extends Scene {
             let sprite = this.addChild(new Sprite());
             sprite.texture = Texture.from(item.itemConfig.path);
             sprite.anchor.set(0.5, 1);
-            sprite.position.set(event.data.global.x, event.data.global.y);
+            let {x, y} = App.trans2GlobalPosition(event.data.global);
+            sprite.position.set(x, y);
             let scale = item.itemConfig.itemScale || Config.home.defaultSceneItemScale;
             sprite.scale.set(scale, scale);
             this.touchingSprite = sprite;
@@ -428,8 +429,7 @@ export default class HomeScene extends Scene {
     }
 
     onTouchMove(event) {
-        let tx = event.data.global.x;
-        let ty = event.data.global.y;
+        let {x: tx, y: ty} = App.trans2GlobalPosition(event.data.global);
         if (this.touching) {
             let moveX = tx - this.lastTouchPosition.x;
             let newX = this.homeInnerContainer.x + moveX;
@@ -479,9 +479,8 @@ export default class HomeScene extends Scene {
                 width: this.homeContainer.mywidth,
                 height: this.homeContainer.myheight
             })) {
-                let pos = this.homeInnerContainer.getGlobalPosition();
-                let x = event.data.global.x - pos.x;
-                let y = event.data.global.y - pos.y;
+                let x = event.data.global.x - pos.x - this.homeInnerContainer.x;
+                let y = event.data.global.y - pos.y - this.homeInnerContainer.y;
                 let data = DataMgr.get(DataMgr.homeData);
                 if (this.radio.selectedIndex === SPOILS) {
                     data.spoilsLength++;
