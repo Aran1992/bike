@@ -5,15 +5,14 @@ function get(v, d) {
     return v === undefined ? d : v;
 }
 
-export default class Effect {
-    constructor(bike, effectPath, animationEndCallback) {
-        this.bike = bike;
+export default class BaseEffect {
+    constructor(effectPath, animationEndCallback) {
         this.animationEndCallback = animationEndCallback;
 
         let effectData = resources[effectPath].data;
         let index = effectData.child.findIndex(child => child.label !== "Bike");
         let data = effectData.child[index];
-        let sprite = this.bike.addBikeChild(new Sprite(), index);
+        let sprite = new Sprite();
         sprite.scale.set(get(data.props.scaleX, 1), get(data.props.scaleY, 1));
         sprite.alpha = get(data.props.alpha, 1);
         sprite.visible = get(data.props.visible, true);
@@ -34,6 +33,7 @@ export default class Effect {
         }
 
         this.sprite = sprite;
+        this.index = index;
     }
 
     update() {

@@ -6,7 +6,7 @@ import Utils from "../mgr/Utils";
 import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
 import BananaPeel from "./BananaPeel";
-import Effect from "./Effect";
+import BikeEffect from "./BikeEffect";
 import Value from "./Value";
 
 export default class Bike {
@@ -359,7 +359,7 @@ export default class Bike {
                 }
             }
             if (config.userUsedEffectPath) {
-                let effect = new Effect(this, config.userUsedEffectPath, () => {
+                let effect = new BikeEffect(this, config.userUsedEffectPath, () => {
                     Utils.removeItemFromArray(this.effectList, effect);
                     effect.destroy();
                 });
@@ -495,6 +495,7 @@ export default class Bike {
             }
             case "Thunder": {
                 this.setContactFatalEdge(true);
+                this.gameScene.addEffect(this, Config.effect.Thunder.bearerSufferedEffectPath);
                 break;
             }
             default:
@@ -516,10 +517,10 @@ export default class Bike {
             }
             let config = Config.effect[type];
             if (config.bearerBuffEffectPath) {
-                this.durationEffectTable[type] = new Effect(this, config.bearerBuffEffectPath);
+                this.durationEffectTable[type] = new BikeEffect(this, config.bearerBuffEffectPath);
             }
             if (config.bearerSufferedEffectPath) {
-                let effect = new Effect(this, config.bearerSufferedEffectPath, () => {
+                let effect = new BikeEffect(this, config.bearerSufferedEffectPath, () => {
                     effect.destroy();
                     Utils.removeItemFromArray(this.effectList, effect);
                 });

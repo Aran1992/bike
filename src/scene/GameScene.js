@@ -22,8 +22,9 @@ import FireBall from "../item/FireBall";
 import EatableItem from "../item/EatableItem";
 import EventMgr from "../mgr/EventMgr";
 import BananaPeel from "../item/BananaPeel";
-import Effect from "../item/Effect";
+import BikeEffect from "../item/BikeEffect";
 import Value from "../item/Value";
+import BaseEffect from "../item/BaseEffect";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -552,6 +553,8 @@ export default class GameScene extends Scene {
             }
             case "Thunder": {
                 this.setContactFatalEdge(true);
+                MusicMgr.playSound(Config.effect.Thunder.sufferSound);
+                this.addEffect(this, Config.effect.Thunder.bearerSufferedEffectPath);
                 break;
             }
             default:
@@ -1265,7 +1268,7 @@ export default class GameScene extends Scene {
                     }
                 }
                 if (config.userUsedEffectPath) {
-                    let effect = new Effect(this, config.userUsedEffectPath, () => {
+                    let effect = new BikeEffect(this, config.userUsedEffectPath, () => {
                         Utils.removeItemFromArray(this.effectList, effect);
                         effect.destroy();
                     });
@@ -1409,10 +1412,10 @@ export default class GameScene extends Scene {
             }
             let config = Config.effect[type];
             if (config.bearerBuffEffectPath) {
-                this.durationEffectTable[type] = new Effect(this, config.bearerBuffEffectPath);
+                this.durationEffectTable[type] = new BikeEffect(this, config.bearerBuffEffectPath);
             }
             if (config.bearerSufferedEffectPath) {
-                let effect = new Effect(this, config.bearerSufferedEffectPath, () => {
+                let effect = new BikeEffect(this, config.bearerSufferedEffectPath, () => {
                     effect.destroy();
                     Utils.removeItemFromArray(this.effectList, effect);
                 });
@@ -1659,6 +1662,18 @@ export default class GameScene extends Scene {
         if (!this.startFloat) {
             this.isContactFatalEdge = flag;
         }
+    }
+
+    addEffect(bike, path) {
+        let effectContainer = this.bikeContainer.addChild(new Container());
+        effectContainer.position.set(bike.bikeOutterContainer.x, bike.bikeOutterContainer.y);
+        let effect = new BaseEffect(path, () => {
+            effect.destroy();
+            effectContainer.destroy();
+            Utils.removeItemFromArray(this.effectList, effect);
+        });
+        effectContainer.addChild(effect.sprite);
+        this.effectList.push(effect);
     }
 }
 

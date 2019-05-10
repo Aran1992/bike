@@ -3,6 +3,7 @@ import {resources, Sprite} from "../libs/pixi-wrapper";
 import {Box, Circle, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
+import MusicMgr from "../mgr/MusicMgr";
 
 function get(v, d) {
     return v === undefined ? d : v;
@@ -166,6 +167,10 @@ export default class BananaPeel {
         let ud = anotherFixture.getBody().getUserData();
         if (ud && ud.isPlayer && ud.isPlayer()) {
             this.contactPlayer = true;
+            this.gameMgr.addEffect(ud, Config.effect.BananaPeel.bearerSufferedEffectPath);
+            if (ud === this.gameMgr) {
+                MusicMgr.playSound(Config.effect.BananaPeel.sufferSound);
+            }
         }
     }
 }
