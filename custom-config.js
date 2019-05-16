@@ -6259,7 +6259,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 4,
+        weight: 8,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6300,7 +6300,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 2,
+        weight: 8,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6323,7 +6323,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 2,
+        weight: 8,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6342,7 +6342,7 @@ Config.bikeList = [
         anchor: [0.6, 0.73],
         // 图片在自行车内的位置 (0,0)就是在中心点
         position: [0, 0],
-        index: 4,
+        index: 8,
         highJump: "Normal",
         size: "Small",
         // 随机的权重
@@ -6369,7 +6369,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 2,
+        weight: 8,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6392,7 +6392,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 2,
+        weight: 8,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6415,7 +6415,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 3,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6438,7 +6438,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 3,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6461,7 +6461,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 3,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6484,11 +6484,11 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1.1,
+        densityPercent: 1.09,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
     },
@@ -6507,11 +6507,11 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1.1,
+        densityPercent: 1.09,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
     },
@@ -6530,11 +6530,11 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.2,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
-        densityPercent: 1.1,
+        densityPercent: 1.09,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
     },
@@ -6553,7 +6553,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6576,7 +6576,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6599,7 +6599,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6622,7 +6622,7 @@ Config.bikeList = [
         highJump: "Easy",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6645,7 +6645,7 @@ Config.bikeList = [
         highJump: "Easy",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6668,7 +6668,7 @@ Config.bikeList = [
         highJump: "Easy",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 0.8,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6691,7 +6691,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 3,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6714,7 +6714,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 3,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6737,7 +6737,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 3,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6760,7 +6760,7 @@ Config.bikeList = [
         highJump: "Easy",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6783,7 +6783,7 @@ Config.bikeList = [
         highJump: "Easy",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6806,7 +6806,7 @@ Config.bikeList = [
         highJump: "Easy",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.1,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6829,7 +6829,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6852,7 +6852,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6875,7 +6875,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Middle",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6898,7 +6898,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6921,7 +6921,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Big",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6944,7 +6944,7 @@ Config.bikeList = [
         highJump: "Normal",
         size: "Small",
         // 随机的权重
-        weight: 1,
+        weight: 4,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.3,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6967,7 +6967,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Big",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.5,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -6990,7 +6990,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Big",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.5,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
@@ -7013,7 +7013,7 @@ Config.bikeList = [
         highJump: "Hard",
         size: "Big",
         // 随机的权重
-        weight: 1,
+        weight: 2,
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         velocityPercent: 1.5,
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
