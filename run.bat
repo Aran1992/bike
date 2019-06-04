@@ -1,4 +1,4 @@
-start http-server
+start static-server
 cd tools
 start watch
 cd ..
