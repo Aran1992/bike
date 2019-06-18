@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":74,
-    "selecteID":76,
+    "selectedBox":82,
+    "selecteID":83,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -76,17 +76,16 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,typeRadio",
-            "props":{"width":670,"var":"typeRadio","top":115,"height":84,"centerX":0},
+            "props":{"width":670,"var":"typeRadio","top":300,"height":84,"centerX":0},
             "nodeParent":1,
             "label":"typeRadio",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":73,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,typeCheck",
                     "props":{"width":225,"var":"typeCheck","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":84,"centerX":0},
@@ -99,7 +98,6 @@
                     "compId":74,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selected",
                             "props":{"width":220,"visible":false,"skin":"images/button-tab-11.png","name":"selected","height":84},
@@ -113,7 +111,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,common",
                             "props":{"width":220,"visible":true,"top":0,"skin":"images/button-tab-12.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"common","left":0,"height":84},
@@ -128,7 +125,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.5,"scaleX":0.5,"name":"1","left":10,"centerY":0},
@@ -141,7 +137,6 @@
                             "compId":78,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,value",
                                     "props":{"y":0,"text":"${TotalDistance}","scaleY":2,"scaleX":2,"name":"value","left":80,"fontSize":35,"color":"#ffffff","centerY":0},
@@ -157,7 +152,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
                             "props":{"y":0,"skin":"images/icon-metre.png","scaleY":0.5,"scaleX":0.5,"name":"2","left":10,"centerY":0},
@@ -170,7 +164,6 @@
                             "compId":79,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,value",
                                     "props":{"y":0,"x":0,"text":"${FarthestDistance}","scaleY":2,"scaleX":2,"name":"value","left":80,"fontSize":35,"color":"#ffffff","centerY":0},
@@ -186,7 +179,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,3",
                             "props":{"y":0,"skin":"images/icon-mark.png","scaleY":1,"scaleX":1,"name":"3","left":20,"centerY":0},
@@ -199,7 +191,6 @@
                             "compId":80,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,value",
                                     "props":{"y":0,"text":"${Score}","name":"value","left":60,"fontSize":35,"color":"#ffffff","centerY":0},
@@ -220,7 +211,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,rangeRadio",
-            "props":{"width":508,"var":"rangeRadio","top":300,"height":84,"centerX":0},
+            "props":{"width":508,"var":"rangeRadio","top":115,"height":84,"centerX":0},
             "nodeParent":1,
             "label":"rangeRadio",
             "isOpen":true,
@@ -246,7 +237,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,selected",
-                            "props":{"width":254,"visible":false,"skin":"images/button-tab-11.png","name":"selected","height":84},
+                            "props":{"width":254,"visible":false,"skin":"images/button-enabled-scene.png","name":"selected","height":84},
                             "nodeParent":82,
                             "label":"selected",
                             "isDirectory":false,
@@ -260,7 +251,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,common",
-                            "props":{"width":254,"visible":true,"top":0,"skin":"images/button-tab-12.png","name":"common","left":0,"height":84},
+                            "props":{"width":254,"visible":true,"top":0,"skin":"images/button-disabled-scene.png","name":"common","left":0,"height":84},
                             "nodeParent":82,
                             "label":"common",
                             "isDirectory":false,
