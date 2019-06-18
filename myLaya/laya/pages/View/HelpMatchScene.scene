@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":104,
-    "selecteID":106,
+    "selectedBox":16,
+    "selecteID":41,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -601,21 +601,21 @@
                                         ]
                                 }]
                         }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,closeButton",
+                    "props":{"top":-39,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-10,"name":"closeButton"},
+                    "nodeParent":16,
+                    "label":"closeButton",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":41,
+                    "child":[
+                        ]
                 }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,closeButton",
-            "props":{"y":21,"x":631,"top":21,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":11,"name":"closeButton"},
-            "nodeParent":1,
-            "label":"closeButton",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":41,
-            "child":[
-                ]
         }],
     "animations":[
         {
