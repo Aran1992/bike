@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":4,
-    "selecteID":85,
+    "selectedBox":30,
+    "selecteID":90,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":86,
+    "maxID":91,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -705,6 +705,21 @@
                             "compId":50,
                             "child":[
                                 ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"visible":false,"top":-30,"skin":"images/icon-metre.png","centerX":0},
+                            "nodeParent":29,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":88,
+                            "child":[
+                                ]
                         }]
                 },
                 {
@@ -731,6 +746,21 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":51,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"visible":false,"top":-30,"skin":"images/icon-metre.png","centerX":0},
+                            "nodeParent":30,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":90,
                             "child":[
                                 ]
                         },
