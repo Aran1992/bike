@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":77,
+    "selectedBox":4,
+    "selecteID":85,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":84,
+    "maxID":86,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -63,13 +63,14 @@
                     "props":{"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -82,6 +83,7 @@
                             "compId":56,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":5,"skin":"images/icon-diamond.png","scaleY":1.7,"scaleX":1.7,"centerY":2},
@@ -97,6 +99,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
                             "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -108,6 +111,21 @@
                             "compId":7,
                             "child":[
                                 ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,Button",
+                            "props":{"skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"name":"Button","centerY":-3},
+                            "nodeParent":3,
+                            "label":"Button",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":84,
+                            "child":[
+                                ]
                         }]
                 },
                 {
@@ -117,13 +135,14 @@
                     "props":{"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":240},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":4,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -136,6 +155,7 @@
                             "compId":58,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-coin.png","scaleY":1,"scaleX":1},
@@ -151,6 +171,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
                             "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -160,6 +181,21 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":9,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,Button",
+                            "props":{"y":0,"x":0,"skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"name":"Button","centerY":-3},
+                            "nodeParent":4,
+                            "label":"Button",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":85,
                             "child":[
                                 ]
                         }]
