@@ -160,7 +160,7 @@
                                             "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,lockedImage",
-                                            "props":{"visible":false,"skin":"images/key_lock.png","scaleY":2,"scaleX":2,"name":"lockedImage","centerY":0,"centerX":0},
+                                            "props":{"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
                                             "nodeParent":20,
                                             "label":"lockedImage",
                                             "isDirectory":false,
