@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":3,
-    "selecteID":30,
+    "selectedBox":20,
+    "selecteID":64,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":63,
+    "maxID":65,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -117,6 +117,7 @@
                                             "props":{"width":150,"skin":"images/bg-2.png","sizeGrid":"20,20,20,20","name":"lostMaskImage","height":150,"centerY":0,"centerX":0,"alpha":0.5},
                                             "nodeParent":20,
                                             "label":"lostMaskImage",
+                                            "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
@@ -154,6 +155,21 @@
                                             "compId":61,
                                             "child":[
                                                 ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image,lockedImage",
+                                            "props":{"visible":false,"skin":"images/key_lock.png","scaleY":2,"scaleX":2,"name":"lockedImage","centerY":0,"centerX":0},
+                                            "nodeParent":20,
+                                            "label":"lockedImage",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":64,
+                                            "child":[
+                                                ],
+                                            "$HIDDEN":false
                                         }]
                                 }]
                         }]
