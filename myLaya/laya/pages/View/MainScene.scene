@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":30,
-    "selecteID":90,
+    "selectedBox":81,
+    "selecteID":83,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":91,
+    "maxID":92,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -814,10 +814,10 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image",
-            "props":{"top":170,"skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":110},
+            "searchKey":"Image,signButton",
+            "props":{"top":170,"skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":110,"name":"signButton"},
             "nodeParent":1,
-            "label":"Image",
+            "label":"signButton",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
@@ -843,7 +843,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":0,"x":0,"text":"签到","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":0},
+                    "props":{"y":0,"x":0,"text":"签到","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0},
                     "nodeParent":77,
                     "label":"Label",
                     "isDirectory":false,
@@ -857,10 +857,10 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image",
-            "props":{"x":0,"top":170,"skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
+            "searchKey":"Image,giftButton",
+            "props":{"x":0,"top":170,"skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10,"name":"giftButton"},
             "nodeParent":1,
-            "label":"Image",
+            "label":"giftButton",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
@@ -886,7 +886,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":0,"x":0,"text":"礼包","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":0},
+                    "props":{"y":0,"x":0,"text":"礼包","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0},
                     "nodeParent":81,
                     "label":"Label",
                     "isDirectory":false,
@@ -895,6 +895,21 @@
                     "compId":83,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,giftTimeText",
+                    "props":{"text":"00:00","name":"giftTimeText","fontSize":20,"color":"#ffffff","centerX":0,"bottom":-25},
+                    "nodeParent":81,
+                    "label":"giftTimeText",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":91,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
                 }]
         }],
     "animations":[
