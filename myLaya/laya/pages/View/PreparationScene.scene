@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":250,
-    "selecteID":255,
+    "selecteID":263,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":259,
+    "maxID":265,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -157,6 +157,35 @@
                         {
                             "x":45,
                             "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":300,"x":10,"width":180,"top":300,"skin":"images/bg-10.png","height":40,"centerX":0},
+                            "nodeParent":231,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":259,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "nodeParent":259,
+                                    "label":"Label",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":260,
+                                    "child":[
+                                        ]
+                                }]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
                             "searchKey":"Image,advertButton",
                             "props":{"width":167,"top":300,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"advertButton","height":50,"centerX":0},
                             "nodeParent":231,
@@ -287,6 +316,35 @@
                         {
                             "x":45,
                             "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":300,"x":10,"width":180,"top":300,"skin":"images/bg-10.png","height":40,"centerX":0},
+                            "nodeParent":241,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":261,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "nodeParent":261,
+                                    "label":"Label",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":262,
+                                    "child":[
+                                        ]
+                                }]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
                             "searchKey":"Image,advertButton",
                             "props":{"width":167,"top":300,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"advertButton","height":50,"centerX":0},
                             "nodeParent":241,
@@ -413,6 +471,35 @@
                             "compId":255,
                             "child":[
                                 ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":300,"x":10,"width":180,"top":300,"skin":"images/bg-10.png","height":40,"centerX":0},
+                            "nodeParent":250,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":263,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "nodeParent":263,
+                                    "label":"Label",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":264,
+                                    "child":[
+                                        ]
+                                }]
                         },
                         {
                             "x":45,
