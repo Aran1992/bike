@@ -6,7 +6,7 @@
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":92,
+    "maxID":95,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -50,14 +50,13 @@
             "props":{"width":720,"top":0,"skin":"images/bg-7.png","right":0,"left":0,"height":150},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0},
@@ -70,7 +69,6 @@
                     "compId":3,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -83,7 +81,6 @@
                             "compId":56,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":5,"skin":"images/icon-diamond.png","scaleY":1.7,"scaleX":1.7,"centerY":2},
@@ -99,7 +96,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
                             "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -113,7 +109,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,Button",
                             "props":{"skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"name":"Button","centerY":-3},
@@ -129,7 +124,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":240},
@@ -142,7 +136,6 @@
                     "compId":4,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -155,7 +148,6 @@
                             "compId":58,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-coin.png","scaleY":1,"scaleX":1},
@@ -171,7 +163,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
                             "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -185,7 +176,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,Button",
                             "props":{"y":0,"x":0,"skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"name":"Button","centerY":-3},
@@ -201,7 +191,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":75,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0},
@@ -255,7 +244,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":75,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":240},
@@ -309,7 +297,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"x":56,"var":"userImage","top":5,"skin":"images/UserIconDefault.png"},
@@ -322,7 +309,6 @@
                     "compId":60,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,userNameText",
                             "props":{"var":"userNameText","text":"Player","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":0},
@@ -426,7 +412,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel",
-            "props":{"width":105,"left":20,"height":711,"bottom":240},
+            "props":{"width":105,"left":20,"height":831,"bottom":240},
             "nodeParent":1,
             "label":"Panel",
             "isOpen":true,
@@ -438,8 +424,36 @@
                 {
                     "x":30,
                     "type":"Image",
+                    "searchKey":"Image,playerinfoButton",
+                    "props":{"width":101,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":0,"height":101,"bottom":720},
+                    "nodeParent":28,
+                    "label":"playerinfoButton",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":92,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"x":0,"text":"成就","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0,"bold":true},
+                            "nodeParent":92,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":94,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
                     "searchKey":"Image,shopButton",
-                    "props":{"width":101,"var":"shopButton","skin":"images/ButtonShop.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":600},
+                    "props":{"y":10,"x":0,"width":101,"var":"shopButton","skin":"images/ButtonShop.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":600},
                     "nodeParent":28,
                     "label":"shopButton",
                     "isOpen":true,
@@ -843,7 +857,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":0,"x":0,"text":"签到","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0},
+                    "props":{"y":0,"x":0,"text":"签到","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0,"bold":true},
                     "nodeParent":77,
                     "label":"Label",
                     "isDirectory":false,
@@ -886,7 +900,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"y":0,"x":0,"text":"礼包","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0},
+                    "props":{"y":0,"x":0,"text":"礼包","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0,"bottom":0,"bold":true},
                     "nodeParent":81,
                     "label":"Label",
                     "isDirectory":false,
