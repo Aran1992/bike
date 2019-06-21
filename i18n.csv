@@ -83,6 +83,12 @@ Are you sure you want to quit the game?  The current game data will be saved aut
 Are you sure to restart the game? The current game data will be saved automatically after exit.,,,"确定重新开始游戏吗？
 当前的游戏数据会自动保存。",Are you sure to restart the game? The current game data will be saved automatically after exit.,
 Do you want log out?,,,要登出账号吗？,Do you want log out?,
+double reward no Reborn,,,"确定进行双倍奖励结算吗？
+这样就无法再复活了哟！",,
+quit the game no double reward,,,"确定退出游戏吗？
+双倍奖励还没领取哟！",,
+restart the game no double reward,,,"确定重新开始游戏吗？
+双倍奖励还没领取哟！",,
 Gold Coin is not enough!,,,金币不足！,Gold Coin is not enough!,
 BikeDsc,,,"【No.${index} 自行车】
 速度     ${speed}%
@@ -116,6 +122,7 @@ PrizeTitle,,,恭喜获得,,
 PlayerInfoTitle,,,玩家成就内容,,
 PreparationTitle,,,开战前额外准备,,
 FreeCollection,,,免费领取,,
+DoubleReward,,,双倍奖励,,
 PreparationItem1,,,随机道具,,
 PreparationItem2,,,随机道具,,
 PreparationItem3,,,特殊自行车,,
