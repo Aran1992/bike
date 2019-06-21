@@ -9566,4 +9566,15 @@ Config.soundPath = {
     startLevel: "myLaya/laya/assets/sounds/SoundSE007.mp3",
 };
 
+// 无尽模式开始路段长度（单位：像素）
+Config.startRoadLength = 2000;
+
+// 引导动画相关配置
+Config.guideAction = {
+    // 动画间隔时间（单位：帧）
+    delayFrame: 30,
+    // 开始所放的倍数
+    startScale: 10,
+};
+
 export default Config;

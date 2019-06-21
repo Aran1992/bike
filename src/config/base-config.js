@@ -202,6 +202,10 @@ Config.imagePath = {
     racetrackPlayer: "myLaya/laya/assets/images/racetrack-player.png",
     racetrackEnemy: "myLaya/laya/assets/images/racetrack-npc.png",
     rebornArrow: "myLaya/laya/assets/images/UI_Respawn_ArrowS.png",
+    start1: "myLaya/laya/assets/images/start-1.png",
+    start2: "myLaya/laya/assets/images/start-2.png",
+    start3: "myLaya/laya/assets/images/start-3.png",
+    startGo: "myLaya/laya/assets/images/start-go.png",
 };
 
 Config.emitterPath = {

@@ -449,10 +449,10 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":700,"visible":false,"top":990,"skin":"images/bg-12.png","sizeGrid":"50,50,50,50","centerX":0,"bottom":10},
+            "searchKey":"Image,guidePanel",
+            "props":{"width":700,"visible":false,"var":"guidePanel","top":990,"skin":"images/bg-12.png","sizeGrid":"50,50,50,50","centerX":0,"bottom":10},
             "nodeParent":1,
-            "label":"Image",
+            "label":"guidePanel",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
