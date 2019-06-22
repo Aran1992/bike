@@ -5,6 +5,7 @@ import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import SceneHelper from "../mgr/SceneHelper";
 import {Vec2} from "../libs/planck-wrapper";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class EndlessGameScene extends GameScene {
     onCreate() {
@@ -67,7 +68,7 @@ export default class EndlessGameScene extends GameScene {
     }
 
     onLoadedBaseRes() {
-        SceneHelper.loadSceneRes(this.sceneFilePathList, this.onLoadedGameRes.bind(this));
+        SceneHelper.loadSceneRes(this.sceneFilePathList, this.onLoadedGameRes.bind(this), true);
     }
 
     onRestart() {
@@ -236,9 +237,9 @@ export default class EndlessGameScene extends GameScene {
         this.gaSprite.x = window.App.sceneWidth / 2;
         this.gaStep = -1;
         this.gaSpriteTextureList = [
-            Config.imagePath.start1,
+            Config.imagePath.start3,
             Config.imagePath.start2,
-            Config.imagePath.start3
+            Config.imagePath.start1,
         ];
         this.startAction();
     }
@@ -250,12 +251,16 @@ export default class EndlessGameScene extends GameScene {
                 window.App.showMask();
             }),
             () => this.actionMove(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
             () => this.actionDelay(),
             () => this.actionMove(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
             () => this.actionDelay(),
             () => this.actionMove(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
             () => this.actionDelay(),
             () => this.actionScale(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideStartGo)),
             () => this.actionDelay(),
             () => this.actionFadeout(),
             () => this.actionCallback(() => {
