@@ -116,4 +116,10 @@ export default class GameUtils {
             size: App.getText(config.size),
         });
     }
+
+    static closeLogoScene() {
+        if (window.logoScene && window.logoScene.parentNode) {
+            window.logoScene.parentNode.removeChild(window.logoScene);
+        }
+    }
 }

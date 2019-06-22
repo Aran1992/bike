@@ -1,12 +1,7 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
-import Utils from "./mgr/Utils";
 
 export function main(callback) {
-    if (document.body.children[0] instanceof HTMLParagraphElement) {
-        document.body.removeChild(document.body.children[0]);
-    }
-
     let width;
     let height;
     let wwhRatio = window.innerWidth / window.innerHeight;
@@ -28,5 +23,5 @@ export function main(callback) {
         view: canvas,
     });
 
-    App.loadResources([Config.i18nPath,].concat(Utils.values(Config.baseRes)), callback);
+    App.loadResources([Config.i18nPath,], callback);
 }

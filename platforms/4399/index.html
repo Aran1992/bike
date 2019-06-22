@@ -3,9 +3,14 @@
     <meta content="text/html;charset=utf-8" http-equiv="content-type">
 </head>
 <body style="margin:0">
-<p style="color: red; font-size: 80px;">loading base resources</p>
-<p hidden id="ipConfig">http://47.106.20.87:10001</p>
-<canvas id="canvas" style="width:100%;height:100%;"></canvas>
+<p id="ipConfig" hidden>http://47.106.20.87:10001</p>
+<canvas id="canvas" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0;"></canvas>
+<div id="logoScene" style="background-color: white; width: 100%; height: 100%; position: absolute; left: 0; top: 0;">
+    <img src="myLaya/laya/assets/images/logo.png"
+         style="position: absolute; top: calc(50% - 48px); left: calc(50% - 200px);">
+    <img src="myLaya/laya/assets/images/english/logo-name.png"
+         style="position: absolute; top: calc(50% - 31px); right: calc(50% - 200px);">
+</div>
 <script src="https://cdn.h5wan.4399sj.com/h5web-frame/dist/static/js/api.js"></script>
 <script src="dist/bundle.js"></script>
 </body>

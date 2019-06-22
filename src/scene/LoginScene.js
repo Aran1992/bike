@@ -1,6 +1,7 @@
 import Scene from "./Scene";
 import {Graphics} from "../libs/pixi-wrapper";
 import NetworkMgr from "../mgr/NetworkMgr";
+import GameUtils from "../mgr/GameUtils";
 
 export default class LoginScene extends Scene {
     onCreate() {
@@ -17,6 +18,7 @@ export default class LoginScene extends Scene {
     onShow() {
         this.ui.usernameInput.text = "";
         this.ui.passwordInput.text = "";
+        GameUtils.closeLogoScene && GameUtils.closeLogoScene();
     }
 
     onClickLoginBtn() {

@@ -6,10 +6,10 @@ import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
+import GameUtils from "../mgr/GameUtils";
 
 export default class MainScene extends Scene {
     onCreate() {
-        console.log("this.ui.endlessModeButton", this.ui.endlessModeButton);
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
         this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
@@ -56,6 +56,8 @@ export default class MainScene extends Scene {
 
         this.ui.userImage.children[0].texture = Texture.from(DataMgr.get(DataMgr.headurl, Config.defaultEnemyHeadImagePath));
         this.ui.userNameText.text = DataMgr.getPlayerName();
+
+        GameUtils.closeLogoScene && GameUtils.closeLogoScene();
     }
 
     onHide() {
