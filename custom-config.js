@@ -7907,7 +7907,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_04.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_04.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0010.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7930,7 +7930,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_03.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_03.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0060.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7951,7 +7951,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_06.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_06.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0210.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7978,7 +7978,7 @@ Config.effect = {
         // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_07.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_07.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0260.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7999,7 +7999,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_11.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_11.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff1031.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -8035,7 +8035,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_05.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_05.png",
     },
     // 强化跳跃（可做：增益强化跳跃道具、强化跳跃物件区域）
     PowerJump: {
@@ -8050,7 +8050,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_02.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_02.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0106.mp3",
     },
@@ -8065,7 +8065,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_09.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0111.mp3",
     },
@@ -8082,7 +8082,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff_icon_01.png",
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_01.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
     },
