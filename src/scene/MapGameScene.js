@@ -22,9 +22,6 @@ export default class MapGameScene extends GameScene {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
         super.onShow();
-        MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
-            MusicMgr.playBGM(this.bgmPath, true);
-        });
     }
 
     initEnvironment() {
@@ -59,6 +56,13 @@ export default class MapGameScene extends GameScene {
         NetworkMgr.requestRandomPlayerInfo(Config.enemy.count, enemyInfoList => {
             this.enemyInfoList = enemyInfoList;
             SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene.json", this.onLoadedGameRes.bind(this));
+        });
+    }
+
+    onLoadedGameRes() {
+        super.onLoadedGameRes();
+        MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
+            MusicMgr.playBGM(this.bgmPath, true);
         });
     }
 

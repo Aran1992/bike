@@ -116,6 +116,11 @@ export default class MyApplication extends Application {
         }
     }
 
+    // 可以自定义加载界面 可以自定义加载回调
+    // 将所有的加载合并成为一个加载过程
+    // 将scene文件合并到里面
+    // 有的时候不想要加载依赖
+
     loadResources(resPathList, onLoadedCallback) {
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined && !MusicMgr.hasLoadedAudio(path));
@@ -163,12 +168,18 @@ export default class MyApplication extends Application {
         let handle = (list, data) => {
             if (data.props.skin) {
                 list.push(`myLaya/laya/assets/${data.props.skin}`);
-            } else if (data.props.source) {
+            }
+            if (data.props.source) {
                 list.push(`myLaya/laya/assets/${data.props.source}`);
-            } else if (data.props.texture) {
+            }
+            if (data.props.texture) {
                 list.push(`myLaya/laya/assets/${data.props.texture}`);
-            } else if (data.props.preset) {
+            }
+            if (data.props.preset) {
                 list.push(`myLaya/${data.props.preset}`);
+            }
+            if (data.props.runtime) {
+                list.push(data.props.runtime.replace("../", "myLaya/"));
             }
             data.child.forEach(child => handle(list, child));
         };
