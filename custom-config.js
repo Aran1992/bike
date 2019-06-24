@@ -9571,7 +9571,7 @@ Config.soundPath = {
 };
 
 // 无尽模式开始路段长度（单位：像素）
-Config.startRoadLength = 2000;
+Config.startRoadLength = 3000;
 
 // 引导动画相关配置
 Config.guideAction = {
