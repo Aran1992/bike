@@ -8,6 +8,7 @@ import RunOption from "../../run-option";
 import DataMgr from "../mgr/DataMgr";
 import SceneHelper from "../mgr/SceneHelper";
 import NetworkMgr from "../mgr/NetworkMgr";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class MapGameScene extends GameScene {
     onCreate() {
@@ -21,6 +22,9 @@ export default class MapGameScene extends GameScene {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
         super.onShow();
+        MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
+            MusicMgr.playBGM(this.bgmPath, true);
+        });
     }
 
     initEnvironment() {

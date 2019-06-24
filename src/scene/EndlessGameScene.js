@@ -260,7 +260,9 @@ export default class EndlessGameScene extends GameScene {
             () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
             () => this.actionDelay(),
             () => this.actionScale(),
-            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideStartGo)),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
+                MusicMgr.playBGM(this.bgmPath, true);
+            })),
             () => this.actionDelay(),
             () => this.actionFadeout(),
             () => this.actionCallback(() => {

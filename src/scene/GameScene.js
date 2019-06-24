@@ -257,9 +257,6 @@ export default class GameScene extends Scene {
         this.gameLoopFunc = this.play.bind(this);
 
         MusicMgr.pauseBGM();
-        MusicMgr.playSound(Config.soundPath.startLevel, () => {
-            MusicMgr.playBGM(this.bgmPath, true);
-        });
     }
 
     initContactHandleTable() {
