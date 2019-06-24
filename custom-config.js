@@ -9565,9 +9565,9 @@ Config.soundPath = {
     //关卡倒数为0，正式开始的音效
     startLevel: "myLaya/laya/assets/sounds/SoundSE007.mp3",
     //无尽模式引导倒计时音效
-    guideCountDown: "myLaya/laya/assets/sounds/SoundSE319.mp3",
+    guideCountDown: "myLaya/laya/assets/sounds/SoundSE006.mp3",
     //无尽模式引导倒计时GO音效
-    guideStartGo: "myLaya/laya/assets/sounds/SoundSE103.mp3",
+    guideStartGo: "myLaya/laya/assets/sounds/SoundSE007.mp3",
 };
 
 // 无尽模式开始路段长度（单位：像素）
