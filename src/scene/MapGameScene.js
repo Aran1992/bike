@@ -18,9 +18,10 @@ export default class MapGameScene extends GameScene {
         this.ui.matchRacetrack.visible = true;
     }
 
-    onShow(mapIndex) {
+    onShow(mapIndex, rewards) {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
+        this.rewards = rewards;
         super.onShow();
     }
 

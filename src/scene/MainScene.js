@@ -4,7 +4,6 @@ import Config from "../config";
 import {resources, Texture} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
-import RunOption from "../../run-option";
 import EventMgr from "../mgr/EventMgr";
 import GameUtils from "../mgr/GameUtils";
 
@@ -12,7 +11,6 @@ export default class MainScene extends Scene {
     onCreate() {
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
         this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
-        this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
         this.onClick(this.ui.homeButton, this.onClickHomeButton.bind(this));
         this.onClick(this.ui.shopButton, this.onClickShopButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
@@ -26,7 +24,8 @@ export default class MainScene extends Scene {
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
-        this.onClickEndlessModeButton();
+        this.mode = "Endless";
+        this.refreshEndlessMode();
     }
 
     onRefreshRankData() {
@@ -39,12 +38,11 @@ export default class MainScene extends Scene {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
-        this.ui.costCoinText.text = 0;
 
         if (this.mode === "Map") {
-            this.onClickMapModeButton();
+            this.refreshMapMode();
         } else {
-            this.onClickEndlessModeButton();
+            this.refreshEndlessMode();
         }
 
         MusicMgr.playBGM(Config.mainBgmPath);
@@ -75,10 +73,9 @@ export default class MainScene extends Scene {
     }
 
     onClickMapModeButton() {
-        this.ui.costCoinPanel.visible = true;
-        this.ui.costCoinText.text = Config.rankMode.costCoin;
         this.mode = "Map";
         this.refreshMapMode();
+        App.showScene("PreparationScene", this.mode);
     }
 
     refreshMapMode() {
@@ -88,36 +85,15 @@ export default class MainScene extends Scene {
     }
 
     onClickEndlessModeButton() {
-        this.ui.costCoinPanel.visible = false;
         this.mode = "Endless";
         this.refreshEndlessMode();
+        App.showScene("PreparationScene", this.mode);
     }
 
     refreshEndlessMode() {
         let index = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         let path = Config.endlessMode.sceneList[index].texture.mainCover;
         this.ui.sceneImage.children[0].texture = resources[path].texture;
-    }
-
-    onClickStartButton() {
-        if (this.mode === "Map") {
-            let coin = DataMgr.get(DataMgr.coin, 0);
-            let costCoin = Config.rankMode.costCoin;
-            if (coin >= costCoin) {
-                DataMgr.set(DataMgr.coin, coin - costCoin);
-                App.hideScene("MainScene");
-                if (RunOption.fixedMapID === undefined || RunOption.fixedMapID === -1) {
-                    App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
-                } else {
-                    App.showScene("MapGameScene", RunOption.fixedMapID);
-                }
-            } else {
-                App.showNotice(App.getText("Gold Coin is not enough!"));
-            }
-        } else if (this.mode === "Endless") {
-            App.hideScene("MainScene");
-            App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
-        }
     }
 
     onClickHomeButton() {

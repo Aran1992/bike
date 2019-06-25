@@ -15,13 +15,14 @@ export default class EndlessGameScene extends GameScene {
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
 
-    onShow(sceneIndex) {
+    onShow(sceneIndex, rewards) {
         this.sceneIndex = sceneIndex;
         this.sceneConfig = Config.endlessMode.sceneList[sceneIndex];
         this.nextDistanceIndex = 0;
         let config = this.sceneConfig.distanceNotice;
         this.nextNoticeDistance = config && config[this.nextDistanceIndex];
         this.diamondReborn = false;
+        this.rewards = rewards;
         super.onShow();
     }
 

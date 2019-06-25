@@ -1,5 +1,6 @@
 import Config from "../config";
 import NetworkMgr from "./NetworkMgr";
+import Utils from "./Utils";
 
 class DataMgr_ {
     constructor() {
@@ -75,6 +76,9 @@ class DataMgr_ {
                     pets: [],
                 }
             });
+        }
+        if (DataMgr.get(DataMgr.preparationData) === undefined) {
+            this.refreshPreparationRewards();
         }
     }
 
@@ -187,6 +191,16 @@ class DataMgr_ {
     getPlayerName() {
         return DataMgr.get(DataMgr.playername, "");
     }
+
+    refreshPreparationRewards(){
+        let effectList = Utils.randomChooseMulti(Config.preparationRandomEffectList, 2);
+        let bike = Utils.randomChoose(Config.preparationRandomBikeList);
+        DataMgr.set(DataMgr.preparationData, [
+            {effect: effectList[0]},
+            {effect: effectList[1]},
+            {bike: bike}
+        ]);
+    }
 }
 
 const DataMgr = new DataMgr_();
@@ -224,5 +238,6 @@ DataMgr.rankTotalScore = "23";
 DataMgr.periodIdx = "24";
 DataMgr.playername = "25";
 DataMgr.headurl = "26";
+DataMgr.preparationData = "27";
 
 export default DataMgr;

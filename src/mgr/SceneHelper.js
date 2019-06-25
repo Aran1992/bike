@@ -120,9 +120,9 @@ function createImage(child, parent) {
 function createCommonImage(child, parent) {
     let data = child.props;
     let path = `myLaya/laya/assets/${data.skin}`;
-    let texture = resources[path].texture;
-    let width = getValue(data.width, texture.width);
-    let height = getValue(data.height, texture.height);
+    let texture = resources[path] && resources[path].texture;
+    let width = texture ? getValue(data.width, texture.width) : 0;
+    let height = texture ? getValue(data.height, texture.height) : 0;
     let scaleX = getValue(data.scaleX, 1);
     let scaleY = getValue(data.scaleY, 1);
     let x = getValue(data.x, 0);

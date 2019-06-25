@@ -253,6 +253,13 @@ export default class GameScene extends Scene {
 
         this.adjustInitCameraBg();
 
+        for (let i = 0; i < 2; i++) {
+            if (this.rewards[i].received) {
+                let texture = Texture.from(Config.effect[this.rewards[i].effect].imagePath);
+                this.showPortableItem(this.rewards[i].effect, texture);
+            }
+        }
+
         this.gameStatus = "play";
         this.gameLoopFunc = this.play.bind(this);
 
@@ -716,7 +723,12 @@ export default class GameScene extends Scene {
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.upBikeContainer = this.bikeSelfContainer.addChild(new Container());
 
-        let id = DataMgr.get(DataMgr.selectedBike, 0);
+        let id;
+        if (this.rewards[2].received) {
+            id = this.rewards[2].bike;
+        } else {
+            id = DataMgr.get(DataMgr.selectedBike, 0);
+        }
         let config = Config.bikeList.find(config => config.id === id);
         this.bikeDecorateSprite = new Sprite(resources[config.imagePath].texture);
         this.bikeSprite.addChild(this.bikeDecorateSprite);
@@ -1377,6 +1389,7 @@ export default class GameScene extends Scene {
         let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
         DataMgr.add(DataMgr.distance, distance);
         DataMgr.add(DataMgr.rankDistance, distance);
+        DataMgr.refreshPreparationRewards();
         this.gameLoopFunc = this.pause.bind(this);
     }
 

@@ -56,6 +56,10 @@ export default class BikeSprite {
     stop() {
         this.bikeSprite.stop();
     }
+
+    destroy() {
+        this.bikeSprite.destroy();
+    }
 }
 
 BikeSprite.resPathList = [Config.bikeAtlasPath, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];

@@ -9581,4 +9581,27 @@ Config.guideAction = {
     startScale: 10,
 };
 
+// 战前准备随机道具列表
+Config.preparationRandomEffectList = [
+    "Decelerate",
+    "WeakenJump",
+    "BlockSight",
+    "SpiderWeb",
+    "Seal",
+    "Thunder",
+    "Accelerate",
+    "PowerJump",
+    "UnlimitedJump",
+    "Magnet",
+    "BananaPeel",
+];
+
+// 战前准备随机自行车ID列表
+Config.preparationRandomBikeList = [
+    0, 1, 4, 11, 13, 15, 2, 5, 6, 20,
+    8, 41, 21, 22, 23, 7, 42, 43, 51, 53,
+    54, 19, 10, 12, 9, 24, 18, 14,
+    16, 17, 3, 52, 25
+];
+
 export default Config;
