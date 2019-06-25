@@ -9665,4 +9665,7 @@ Config.giftList = [
     },
 ];
 
+// 每天重置各种奖励的时间（小时）
+Config.resetRewardHour = 22;
+
 export default Config;

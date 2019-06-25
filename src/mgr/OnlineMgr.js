@@ -4,6 +4,7 @@ import Config from "../config";
 class OnlineMgr_ {
     start() {
         this.startGiftCountDown();
+        this.startResetRewardTimer();
     }
 
     restartGiftCountDown() {
@@ -44,6 +45,33 @@ class OnlineMgr_ {
         let giftIndex = DataMgr.get(DataMgr.giftIndex, 0);
         let gift = Config.giftList[giftIndex];
         return gift !== undefined;
+    }
+
+    startResetRewardTimer() {
+        this.setResetRewardHour();
+        setInterval(() => {
+            console.log(new Date().getTime());
+            if (new Date().getTime() >= this.resetRewardTime) {
+                this.setResetRewardHour();
+                DataMgr.set(DataMgr.giftIndex, 0);
+                DataMgr.set(DataMgr.remainGiftOnlineMinutes, Config.giftList[0].onlineMinutes);
+                this.startGiftCountDown();
+            }
+        }, 1000);
+    }
+
+    setResetRewardHour() {
+        let cur = new Date();
+        cur.setSeconds(0);
+        cur.setMinutes(0);
+        cur.setMilliseconds(0);
+        if (cur.getHours() >= Config.resetRewardHour) {
+            cur.setHours(Config.resetRewardHour);
+            this.resetRewardTime = cur.getTime() + 24 * 60 * 60 * 1000;
+        } else {
+            cur.setHours(Config.resetRewardHour);
+            this.resetRewardTime = cur.getTime();
+        }
     }
 }
 
