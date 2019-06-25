@@ -2,10 +2,7 @@ import Scene from "./Scene";
 import {Graphics, Texture} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
-import RunOption from "../../run-option";
 import BikeSprite from "../item/BikeSprite";
-
-// 需要判断今天是不是还能播放广告 如果不能播放广告了 那就直接开始游戏？
 
 export default class PreparationScene extends Scene {
     onCreate() {

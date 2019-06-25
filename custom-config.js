@@ -9609,12 +9609,56 @@ Config.preparationRandomEffectList = {
 Config.preparationRandomBikeList = {
     // 无尽模式
     endless: [
-		3, 52, 25
+        3, 52, 25
     ],
     // 排名模式
     map: [
-		3, 52, 25
+        3, 52, 25
     ]
 };
+
+// 每日在线礼包列表
+Config.giftList = [
+    {
+        // 在线分钟数
+        onlineMinutes: 0,
+        // 奖励金币
+        rewardCoin: 1000,
+        // 奖励钻石
+        rewardDiamond: 10,
+    },
+    {
+        // 在线分钟数
+        onlineMinutes: 5,
+        // 奖励金币
+        rewardCoin: 2000,
+        // 奖励钻石
+        rewardDiamond: 20,
+    },
+    {
+        // 在线分钟数
+        onlineMinutes: 10,
+        // 奖励金币
+        rewardCoin: 3000,
+        // 奖励钻石
+        rewardDiamond: 30,
+    },
+    {
+        // 在线分钟数
+        onlineMinutes: 15,
+        // 奖励金币
+        rewardCoin: 4000,
+        // 奖励钻石
+        rewardDiamond: 40,
+    },
+    {
+        // 在线分钟数
+        onlineMinutes: 30,
+        // 奖励金币
+        rewardCoin: 5000,
+        // 奖励钻石
+        rewardDiamond: 50,
+    },
+];
 
 export default Config;

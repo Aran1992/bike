@@ -1,6 +1,7 @@
 import Config from "../config";
 import NetworkMgr from "./NetworkMgr";
 import Utils from "./Utils";
+import OnlineMgr from "./OnlineMgr";
 
 class DataMgr_ {
     constructor() {
@@ -83,6 +84,8 @@ class DataMgr_ {
         if (DataMgr.get(DataMgr.preparationDataEndless) === undefined) {
             this.refreshPreparationRewards(DataMgr.preparationDataEndless);
         }
+
+        OnlineMgr.start();
     }
 
     set(key, value) {
@@ -251,5 +254,7 @@ DataMgr.playername = "25";
 DataMgr.headurl = "26";
 DataMgr.preparationDataMap = "27";
 DataMgr.preparationDataEndless = "28";
+DataMgr.giftIndex = "29";
+DataMgr.remainGiftOnlineMinutes = "30";
 
 export default DataMgr;

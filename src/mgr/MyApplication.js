@@ -29,6 +29,8 @@ import RegisterScene from "../scene/RegisterScene";
 import LoginScene from "../scene/LoginScene";
 import MusicMgr from "./MusicMgr";
 import PreparationScene from "../scene/PreparationScene";
+import GiftScene from "../scene/GiftScene";
+import PrizeScene from "../scene/PrizeScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -83,6 +85,8 @@ export default class MyApplication extends Application {
             "RegisterScene": RegisterScene,
             "LoginScene": LoginScene,
             "PreparationScene": PreparationScene,
+            "GiftScene": GiftScene,
+            "PrizeScene": PrizeScene,
         };
 
         this.sceneTable = {};

@@ -6,6 +6,8 @@ import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
 import GameUtils from "../mgr/GameUtils";
+import Utils from "../mgr/Utils";
+import OnlineMgr from "../mgr/OnlineMgr";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -26,6 +28,8 @@ export default class MainScene extends Scene {
 
         this.mode = "Endless";
         this.refreshEndlessMode();
+
+        this.initGift();
     }
 
     onRefreshRankData() {
@@ -133,6 +137,34 @@ export default class MainScene extends Scene {
             App.hideScene("MainScene");
             App.showScene("LoginScene");
         });
+    }
+
+    initGift() {
+        this.onClick(this.ui.giftButton, this.onClickGiftButton.bind(this));
+        this.updateGiftState();
+        setInterval(() => {
+            this.updateGiftState();
+        }, 1000);
+    }
+
+    updateGiftState() {
+        let remainTime = OnlineMgr.getGiftRemainTime();
+        if (remainTime === 0) {
+            this.ui.giftTimeText.visible = false;
+        } else {
+            this.ui.giftTimeText.visible = true;
+            this.ui.giftTimeText.text = Utils.getCDTimeString(remainTime * 1000);
+        }
+    }
+
+    onClickGiftButton() {
+        if (!OnlineMgr.hasGift()) {
+            App.showNotice(App.getText("ThereIsNoGiftToday"));
+        } else if (OnlineMgr.getGiftRemainTime() === 0) {
+            App.showScene("GiftScene");
+        } else {
+            App.showNotice(App.getText("领取礼包的时间还没到"));
+        }
     }
 }
 
