@@ -5,6 +5,8 @@ import Config from "../config";
 import RunOption from "../../run-option";
 import BikeSprite from "../item/BikeSprite";
 
+// 需要判断今天是不是还能播放广告 如果不能播放广告了 那就直接开始游戏？
+
 export default class PreparationScene extends Scene {
     onCreate() {
         let mask = new Graphics()
@@ -29,11 +31,12 @@ export default class PreparationScene extends Scene {
         if (this.mode === "Map") {
             this.ui.coinPanel.visible = true;
             this.ui.costCoinText.text = Config.rankMode.costCoin;
+            this.rewards = DataMgr.get(DataMgr.preparationDataMap);
         } else {
             this.ui.coinPanel.visible = false;
+            this.rewards = DataMgr.get(DataMgr.preparationDataEndless);
         }
 
-        this.rewards = DataMgr.get(DataMgr.preparationData);
         this.ui.itemIcon1.children[0].texture = Texture.from(Config.effect[this.rewards[0].effect].imagePath);
         this.ui.itemIcon2.children[0].texture = Texture.from(Config.effect[this.rewards[1].effect].imagePath);
         this.bikeSprite.setBikeID(this.rewards[2].bike);

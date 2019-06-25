@@ -4,6 +4,17 @@ import * as md5 from "md5";
 
 window.PlatformHelper = {
     canLogout: false,
+    showAd: callback => {
+        window.H5API.callPlayAd(data => {
+            if (data.canPlayAd) {
+                window.H5API.playAd(data => {
+                    callback(data.code === 10000);
+                });
+            } else {
+                callback(true);
+            }
+        });
+    },
 };
 
 const CALLBACK_KEY = "36ffbe82a8c58d24237b42a91c7f6cc3";

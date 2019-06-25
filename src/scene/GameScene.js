@@ -25,6 +25,7 @@ import BananaPeel from "../item/BananaPeel";
 import BikeEffect from "../item/BikeEffect";
 import Value from "../item/Value";
 import BaseEffect from "../item/BaseEffect";
+import MapGameScene from "./MapGameScene";
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -1389,7 +1390,7 @@ export default class GameScene extends Scene {
         let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
         DataMgr.add(DataMgr.distance, distance);
         DataMgr.add(DataMgr.rankDistance, distance);
-        DataMgr.refreshPreparationRewards();
+        DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
         this.gameLoopFunc = this.pause.bind(this);
     }
 

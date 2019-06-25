@@ -77,8 +77,11 @@ class DataMgr_ {
                 }
             });
         }
-        if (DataMgr.get(DataMgr.preparationData) === undefined) {
-            this.refreshPreparationRewards();
+        if (DataMgr.get(DataMgr.preparationDataMap) === undefined) {
+            this.refreshPreparationRewards(DataMgr.preparationDataMap);
+        }
+        if (DataMgr.get(DataMgr.preparationDataEndless) === undefined) {
+            this.refreshPreparationRewards(DataMgr.preparationDataEndless);
         }
     }
 
@@ -192,10 +195,18 @@ class DataMgr_ {
         return DataMgr.get(DataMgr.playername, "");
     }
 
-    refreshPreparationRewards(){
-        let effectList = Utils.randomChooseMulti(Config.preparationRandomEffectList, 2);
-        let bike = Utils.randomChoose(Config.preparationRandomBikeList);
-        DataMgr.set(DataMgr.preparationData, [
+    refreshPreparationRewards(key) {
+        let l1, l2;
+        if (key === DataMgr.preparationDataMap) {
+            l1 = Config.preparationRandomEffectList.map;
+            l2 = Config.preparationRandomBikeList.map;
+        } else {
+            l1 = Config.preparationRandomEffectList.endless;
+            l2 = Config.preparationRandomBikeList.endless;
+        }
+        let effectList = Utils.randomChooseMulti(l1, 2);
+        let bike = Utils.randomChoose(l2);
+        DataMgr.set(key, [
             {effect: effectList[0]},
             {effect: effectList[1]},
             {bike: bike}
@@ -238,6 +249,7 @@ DataMgr.rankTotalScore = "23";
 DataMgr.periodIdx = "24";
 DataMgr.playername = "25";
 DataMgr.headurl = "26";
-DataMgr.preparationData = "27";
+DataMgr.preparationDataMap = "27";
+DataMgr.preparationDataEndless = "28";
 
 export default DataMgr;

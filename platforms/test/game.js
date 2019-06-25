@@ -3,6 +3,9 @@ import NetworkMgr from "../../src/mgr/NetworkMgr";
 
 window.PlatformHelper = {
     canLogout: true,
+    showAd: callback => {
+        callback(true);
+    },
 };
 
 main(() => {
