@@ -9585,17 +9585,10 @@ Config.guideAction = {
 Config.preparationRandomEffectList = {
     // 无尽模式
     endless: [
-        "Decelerate",
-        "WeakenJump",
-        "BlockSight",
-        "SpiderWeb",
-        "Seal",
-        "Thunder",
         "Accelerate",
         "PowerJump",
         "UnlimitedJump",
         "Magnet",
-        "BananaPeel",
     ],
     // 排名模式
     map: [
@@ -9605,11 +9598,10 @@ Config.preparationRandomEffectList = {
         "SpiderWeb",
         "Seal",
         "Thunder",
+        "BananaPeel",
         "Accelerate",
         "PowerJump",
         "UnlimitedJump",
-        "Magnet",
-        "BananaPeel",
     ]
 };
 
@@ -9617,17 +9609,11 @@ Config.preparationRandomEffectList = {
 Config.preparationRandomBikeList = {
     // 无尽模式
     endless: [
-        0, 1, 4, 11, 13, 15, 2, 5, 6, 20,
-        8, 41, 21, 22, 23, 7, 42, 43, 51, 53,
-        54, 19, 10, 12, 9, 24, 18, 14,
-        16, 17, 3, 52, 25
+		3, 52, 25
     ],
     // 排名模式
     map: [
-        0, 1, 4, 11, 13, 15, 2, 5, 6, 20,
-        8, 41, 21, 22, 23, 7, 42, 43, 51, 53,
-        54, 19, 10, 12, 9, 24, 18, 14,
-        16, 17, 3, 52, 25
+		3, 52, 25
     ]
 };
 
