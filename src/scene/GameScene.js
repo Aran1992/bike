@@ -136,6 +136,8 @@ export default class GameScene extends Scene {
 
         this.initEnvironment();
 
+        this.rewards = DataMgr.get(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
+
         App.loadResources(this.getResPathList(), this.onLoadedBaseRes.bind(this));
     }
 
