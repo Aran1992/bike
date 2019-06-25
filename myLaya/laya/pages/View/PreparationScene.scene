@@ -590,30 +590,32 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"x":0,"top":170,"skin":"images/english/Endless.png","scaleY":2,"scaleX":2,"centerX":0},
+                    "searchKey":"Image,endlessModeImage",
+                    "props":{"x":0,"var":"endlessModeImage","top":170,"skin":"images/english/Endless.png","scaleY":2,"scaleX":2,"centerX":0},
                     "nodeParent":16,
-                    "label":"Image",
+                    "label":"endlessModeImage",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":280,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"x":0,"top":170,"skin":"images/english/Match.png","scaleY":2,"scaleX":2,"centerX":0},
+                    "searchKey":"Image,mapModeImage",
+                    "props":{"x":0,"var":"mapModeImage","top":170,"skin":"images/english/Match.png","scaleY":2,"scaleX":2,"centerX":0},
                     "nodeParent":16,
-                    "label":"Image",
+                    "label":"mapModeImage",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":281,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 }]
         }],
     "animations":[

@@ -28,11 +28,15 @@ export default class PreparationScene extends Scene {
 
     onShow(mode) {
         this.mode = mode;
+        this.ui.endlessModeImage.visible = false;
+        this.ui.mapModeImage.visible = false;
         if (this.mode === "Map") {
+            this.ui.mapModeImage.visible = true;
             this.ui.coinPanel.visible = true;
             this.ui.costCoinText.text = Config.rankMode.costCoin;
             this.rewards = DataMgr.get(DataMgr.preparationDataMap);
         } else {
+            this.ui.endlessModeImage.visible = true;
             this.ui.coinPanel.visible = false;
             this.rewards = DataMgr.get(DataMgr.preparationDataEndless);
         }
