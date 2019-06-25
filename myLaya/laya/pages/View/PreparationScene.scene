@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":16,
-    "selecteID":281,
+    "selectedBox":231,
+    "selecteID":233,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -76,16 +76,17 @@
                     "props":{"width":200,"top":270,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","name":"1","left":20,"height":370},
                     "nodeParent":16,
                     "label":"1",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":231,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":180,"top":10,"skin":"images/bg-10.png","height":40,"centerX":0},
+                            "props":{"width":160,"top":15,"skin":"images/bg-10.png","height":40,"centerX":0},
                             "nodeParent":231,
                             "label":"Image",
                             "isOpen":true,
@@ -95,6 +96,7 @@
                             "compId":233,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationItem1}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -110,6 +112,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"width":175,"top":70,"skin":"images/bg-10.png","sizeGrid":"40,40,40,40","height":175,"centerX":0},
@@ -122,6 +125,7 @@
                             "compId":235,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,itemIcon1",
                                     "props":{"var":"itemIcon1","skin":"images/Bird01.png","centerY":0,"centerX":0},
@@ -137,6 +141,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"top":260,"text":"${PreparationItemContent1}","strokeColor":"#000000","stroke":5,"fontSize":20,"color":"#ffffff","centerX":0},
@@ -150,6 +155,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,receivedText1",
                             "props":{"y":300,"x":10,"width":180,"var":"receivedText1","top":300,"skin":"images/bg-10.png","height":40,"centerX":0},
@@ -162,6 +168,7 @@
                             "compId":259,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -179,6 +186,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,advertButton1",
                             "props":{"width":167,"var":"advertButton1","top":300,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerX":0},
@@ -229,16 +237,17 @@
                     "props":{"width":200,"top":270,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","name":"2","height":370,"centerX":0},
                     "nodeParent":16,
                     "label":"2",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":241,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":180,"top":10,"skin":"images/bg-10.png","height":40,"centerX":0},
+                            "props":{"width":160,"top":15,"skin":"images/bg-10.png","height":40,"centerX":0},
                             "nodeParent":241,
                             "label":"Image",
                             "isOpen":true,
@@ -248,6 +257,7 @@
                             "compId":242,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationItem2}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -263,6 +273,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"width":175,"top":70,"skin":"images/bg-10.png","sizeGrid":"40,40,40,40","height":175,"centerX":0},
@@ -275,6 +286,7 @@
                             "compId":244,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,itemIcon2",
                                     "props":{"var":"itemIcon2","skin":"images/Bird01.png","centerY":0,"centerX":0},
@@ -290,6 +302,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"top":260,"text":"${PreparationItemContent2}","strokeColor":"#000000","stroke":5,"fontSize":20,"color":"#ffffff","centerX":0},
@@ -303,6 +316,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,receivedText2",
                             "props":{"y":300,"x":10,"width":180,"var":"receivedText2","top":300,"skin":"images/bg-10.png","height":40,"centerX":0},
@@ -315,6 +329,7 @@
                             "compId":261,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -330,6 +345,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,advertButton2",
                             "props":{"width":167,"var":"advertButton2","top":300,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerX":0},
@@ -342,6 +358,7 @@
                             "compId":247,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":26,"skin":"images/advert.png","scaleY":1,"scaleX":1,"left":10,"centerY":0},
@@ -356,6 +373,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${FreeCollection}","left":50,"fontSize":20,"color":"#ffffff","centerY":0},
@@ -378,16 +396,17 @@
                     "props":{"width":200,"top":270,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","right":20,"name":"3","height":370},
                     "nodeParent":16,
                     "label":"3",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":250,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":180,"top":10,"skin":"images/bg-10.png","height":40,"centerX":0},
+                            "props":{"width":160,"top":15,"skin":"images/bg-10.png","height":40,"centerX":0},
                             "nodeParent":250,
                             "label":"Image",
                             "isOpen":true,
@@ -397,6 +416,7 @@
                             "compId":251,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationItem3}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -412,6 +432,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"width":175,"top":70,"skin":"images/bg-10.png","sizeGrid":"40,40,40,40","height":175,"centerX":0},
@@ -424,9 +445,10 @@
                             "compId":253,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,itemIcon3",
-                                    "props":{"width":0,"var":"itemIcon3","height":0,"centerY":0,"centerX":0},
+                                    "props":{"width":0,"var":"itemIcon3","height":0,"centerY":20,"centerX":10},
                                     "nodeParent":253,
                                     "label":"itemIcon3",
                                     "isDirectory":false,
@@ -438,6 +460,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"top":260,"text":"${PreparationItemContent3}","strokeColor":"#000000","stroke":5,"fontSize":20,"color":"#ffffff","centerX":0},
@@ -451,6 +474,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,receivedText3",
                             "props":{"y":300,"x":10,"width":180,"var":"receivedText3","top":300,"skin":"images/bg-10.png","height":40,"centerX":0},
@@ -463,6 +487,7 @@
                             "compId":263,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -478,6 +503,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,advertButton3",
                             "props":{"width":167,"var":"advertButton3","top":300,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerX":0},
@@ -490,6 +516,7 @@
                             "compId":256,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":26,"skin":"images/advert.png","scaleY":1,"scaleX":1,"left":10,"centerY":0},
@@ -504,6 +531,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${FreeCollection}","left":50,"fontSize":20,"color":"#ffffff","centerY":0},

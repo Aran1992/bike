@@ -9609,11 +9609,15 @@ Config.preparationRandomEffectList = {
 Config.preparationRandomBikeList = {
     // 无尽模式
     endless: [
-        3, 52, 25
+		21, 22, 23,
+		7, 42, 43,
+		3, 52, 25
     ],
     // 排名模式
     map: [
-        3, 52, 25
+		9, 24, 18,
+		14, 16, 17,
+		3, 52, 25
     ]
 };
 
