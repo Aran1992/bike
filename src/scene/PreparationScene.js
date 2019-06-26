@@ -3,6 +3,7 @@ import {Graphics, Texture} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import BikeSprite from "../item/BikeSprite";
+import RunOption from "../../run-option";
 
 export default class PreparationScene extends Scene {
     onCreate() {
