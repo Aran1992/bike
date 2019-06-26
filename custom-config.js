@@ -9633,7 +9633,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 0,
+        onlineMinutes: 5,
         // 奖励金币
         rewardCoin: 2000,
         // 奖励钻石
@@ -9641,7 +9641,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 0,
+        onlineMinutes: 10,
         // 奖励金币
         rewardCoin: 3000,
         // 奖励钻石
@@ -9649,7 +9649,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 0,
+        onlineMinutes: 15,
         // 奖励金币
         rewardCoin: 4000,
         // 奖励钻石
@@ -9657,7 +9657,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 1,
+        onlineMinutes: 30,
         // 奖励金币
         rewardCoin: 5000,
         // 奖励钻石
@@ -9665,7 +9665,7 @@ Config.giftList = [
     },
 ];
 
-// 每天重置各种奖励的时间（小时）
-Config.resetRewardHour = 22;
+// 每天重置各种奖励的时间（小时）(范例：0为凌晨0点，23为晚上11点)
+Config.resetRewardHour = 0;
 
 export default Config;
