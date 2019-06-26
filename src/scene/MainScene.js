@@ -22,7 +22,7 @@ export default class MainScene extends Scene {
         if (window.PlatformHelper.canLogout) {
             this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
         }
-        EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
+        EventMgr.registerEvent("RefreshPlayerData", this.onRefreshPlayerData.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
@@ -32,7 +32,7 @@ export default class MainScene extends Scene {
         this.initGift();
     }
 
-    onRefreshRankData() {
+    onRefreshPlayerData() {
         this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
     }
@@ -149,11 +149,11 @@ export default class MainScene extends Scene {
 
     updateGiftState() {
         let remainTime = OnlineMgr.getGiftRemainTime();
-        if (remainTime === 0) {
-            this.ui.giftTimeText.visible = false;
-        } else {
+        if (remainTime) {
             this.ui.giftTimeText.visible = true;
             this.ui.giftTimeText.text = Utils.getCDTimeString(remainTime * 1000);
+        } else {
+            this.ui.giftTimeText.visible = false;
         }
     }
 

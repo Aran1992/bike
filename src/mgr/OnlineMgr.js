@@ -50,7 +50,6 @@ class OnlineMgr_ {
     startResetRewardTimer() {
         this.setResetRewardHour();
         setInterval(() => {
-            console.log(new Date().getTime());
             if (new Date().getTime() >= this.resetRewardTime) {
                 this.setResetRewardHour();
                 DataMgr.set(DataMgr.giftIndex, 0);

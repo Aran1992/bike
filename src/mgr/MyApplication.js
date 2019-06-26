@@ -122,11 +122,6 @@ export default class MyApplication extends Application {
         }
     }
 
-    // 可以自定义加载界面 可以自定义加载回调
-    // 将所有的加载合并成为一个加载过程
-    // 将scene文件合并到里面
-    // 有的时候不想要加载依赖
-
     loadResources(resPathList, onLoadedCallback) {
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined && !MusicMgr.hasLoadedAudio(path));

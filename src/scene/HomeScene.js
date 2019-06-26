@@ -36,7 +36,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.commonItemBtn, this.onClickCommonItemBtn.bind(this));
         this.onClick(this.ui.lockedItemBtn, this.onClickLockedItemBtn.bind(this));
         this.onClick(this.ui.returnRankBtn, HomeScene.onClickReturnRankButton);
-        EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
+        EventMgr.registerEvent("RefreshPlayerData", this.onRefreshPlayerData.bind(this));
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
@@ -98,7 +98,7 @@ export default class HomeScene extends Scene {
         App.ticker.add(this.gameLoop.bind(this));
     }
 
-    onRefreshRankData() {
+    onRefreshPlayerData() {
         this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
     }

@@ -2,6 +2,7 @@ import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import OnlineMgr from "../mgr/OnlineMgr";
+import EventMgr from "../mgr/EventMgr";
 
 export default class GiftScene extends Scene {
     onCreate() {
@@ -21,6 +22,7 @@ export default class GiftScene extends Scene {
                 DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + gift.rewardCoin);
                 DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + gift.rewardDiamond);
                 DataMgr.set(DataMgr.giftIndex, giftIndex + 1);
+                EventMgr.dispatchEvent("RefreshPlayerData");
                 OnlineMgr.restartGiftCountDown();
                 App.hideScene("GiftScene");
                 App.showScene("PrizeScene", gift);
