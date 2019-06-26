@@ -142,6 +142,14 @@ export default class Utils {
         return `${format(hour)}:${format(min)}:${format(second)}`;
     }
 
+    static getCDTimeStringWithoutHour(time) {
+        let format = (value) => value < 10 ? `0${value}` : `${value}`;
+        time = Math.ceil(time / 1000);
+        let second = time % 60;
+        let min = (time - second) / 60;
+        return `${format(min)}:${format(second)}`;
+    }
+
     static isIOS() {
         return !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     }

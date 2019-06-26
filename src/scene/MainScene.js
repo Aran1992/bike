@@ -153,7 +153,7 @@ export default class MainScene extends Scene {
         let remainTime = OnlineMgr.getGiftRemainTime();
         if (remainTime) {
             this.ui.giftTimeText.visible = true;
-            this.ui.giftTimeText.text = Utils.getCDTimeString(remainTime * 1000);
+            this.ui.giftTimeText.text = Utils.getCDTimeStringWithoutHour(remainTime * 1000);
         } else {
             this.ui.giftTimeText.visible = false;
         }
