@@ -13,8 +13,9 @@ export default class PrizeScene extends Scene {
             this.list.push(item);
         }
         this.list.forEach(item => {
-            item.itemIcon = item.children[0].children[0].children[1].addChild(new Sprite());
-            item.numberText = item.children[0].children[0].children[2];
+            item.itemIcon = item.children[0].children[1].children[1].addChild(new Sprite());
+            item.itemIcon.anchor.set(0.5, 0.5);
+            item.numberText = item.children[0].children[1].children[2];
         });
     }
 
@@ -26,6 +27,7 @@ export default class PrizeScene extends Scene {
         });
         rewards.forEach((reward, i) => {
             let item = this.list[i];
+            console.log(i);
             item.visible = true;
             let itemIcon = item.itemIcon;
             let numberText = item.numberText;
@@ -41,20 +43,20 @@ export default class PrizeScene extends Scene {
                 numberText.text = reward.rewardDiamond;
             }
         });
+        let itemWidth = this.list[0].mywidth;
         switch (rewards.length) {
             case 1: {
-                this.list[0].x = this.ui.list.mywidth / 2;
+                this.list[0].x = this.ui.list.mywidth / 2 - itemWidth / 2;
                 break;
             }
             case 2: {
-                this.list[0].x = this.ui.list.mywidth / 3;
-                this.list[1].x = this.ui.list.mywidth / 3 * 2;
+                this.list[0].x = this.ui.list.mywidth / 3 - itemWidth / 2;
+                this.list[1].x = this.ui.list.mywidth / 3 * 2 - itemWidth / 2;
                 break;
             }
             case 3: {
-                let itemWidth = this.list[0].mywidth;
                 this.list.forEach((item, i) => {
-                    item.x = itemWidth / 2 + i * itemWidth;
+                    item.x = itemWidth / 2 + i * itemWidth - itemWidth / 2;
                 });
                 break;
             }

@@ -9633,7 +9633,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 5,
+        onlineMinutes: 0,
         // 奖励金币
         rewardCoin: 2000,
         // 奖励钻石
@@ -9641,7 +9641,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 10,
+        onlineMinutes: 0,
         // 奖励金币
         rewardCoin: 3000,
         // 奖励钻石
@@ -9649,7 +9649,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 15,
+        onlineMinutes: 0,
         // 奖励金币
         rewardCoin: 4000,
         // 奖励钻石
@@ -9657,7 +9657,7 @@ Config.giftList = [
     },
     {
         // 在线分钟数
-        onlineMinutes: 30,
+        onlineMinutes: 1,
         // 奖励金币
         rewardCoin: 5000,
         // 奖励钻石
