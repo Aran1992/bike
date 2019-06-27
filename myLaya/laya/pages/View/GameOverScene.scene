@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":16,
-    "selecteID":46,
+    "selectedBox":34,
+    "selecteID":37,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -254,13 +254,14 @@
                     "props":{"top":200,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":28,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,recordText",
                             "props":{"var":"recordText","text":"JAMES 当前最高纪录 1234567890m","fontSize":30,"color":"#ffffff","centerY":-25,"centerX":0},
@@ -274,6 +275,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,beyondText",
                             "props":{"var":"beyondText","text":"还差 1234567890m 就可以超越自己","fontSize":30,"color":"#ffffff","centerY":25,"centerX":0},
@@ -294,16 +296,17 @@
                     "props":{"top":450,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":29,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,resultList",
-                            "props":{"x":25,"width":600,"var":"resultList","height":100,"centerY":0,"centerX":0},
+                            "props":{"width":600,"var":"resultList","height":150,"centerY":0,"centerX":0},
                             "nodeParent":29,
                             "label":"resultList",
                             "isOpen":true,
@@ -313,9 +316,10 @@
                             "compId":33,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,resultItem",
-                                    "props":{"width":600,"var":"resultItem","top":0,"left":0,"height":50},
+                                    "props":{"width":600,"var":"resultItem","top":0,"height":70,"centerX":0},
                                     "nodeParent":33,
                                     "label":"resultItem",
                                     "isOpen":true,
@@ -325,9 +329,10 @@
                                     "compId":34,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"top":0,"text":"积分 500","left":0,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"top":30,"text":"积分 500","left":20,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":34,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -338,9 +343,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"top":0,"text":"*2倍->","left":200,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"top":30,"text":"*2倍->","left":250,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":34,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -351,9 +357,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"top":0,"text":"积分 1000","left":400,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"top":30,"text":"积分 1000","left":430,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":34,
                                             "label":"Label",
                                             "isDirectory":false,
