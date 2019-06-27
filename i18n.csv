@@ -26,7 +26,7 @@ FarthestDistance,,RankScene.scene.json,最远里程,Farthest Distance,最長の�
 Score,,RankScene.scene.json,积分,Score,ポイント
 Now,,RankScene.scene.json,当前排行,Now,現在のランキング
 LastTime,,RankScene.scene.json,上次排行,Last Time,前回のランキング
-MyRank,,RankScene.scene.json,我的排行,My Rank,自分のランク
+MyRank,,RankScene.scene.json,【骑士大人当前的排行】,My Rank,自分のランク
 Purchased,,ShopScene.scene.json,已拥有,Purchased,持っているもの
 Confirm,,TipScene.scene.json,确认,Confirm,確認
 RequestingRankData,,RankScene.scene.json,排行榜数据加载中,Requesting rank data,
@@ -54,8 +54,8 @@ ConfirmDeleteHomeItem,,HomeScene.scene.json,您确定要删除该装饰吗？,Ar
 ConfirmDeleteAllHomeItem,,HomeScene.scene.json,您确定要删除所有装饰吗？,Are you sure you want to delete all items?,
 ConfirmDeleteAllHomeItemAgain,,HomeScene.scene.json,确实要删除所有装饰吗？,Are you really sure you want to DELETE ALL ITEMS?,
 ItemIsAbleToUnlock,,,报告骑士大人，您可以解锁新物品啦！,This item is able to unlock.,
-UnlockConditions,,,解锁条件：,Unlock condition(s):,
-UnlockRewards,,,解锁奖励：,Unlock Reward(s):,
+UnlockConditions,,,【解锁条件】,Unlock condition(s):,
+UnlockRewards,,,【解锁奖励】,Unlock Reward(s):,
 Would you like to cost the following items to unlock this item?,,,您是否想花费以下这些来解锁该物品？,Would you like to cost the following items to unlock this item?,
 Cost is not enough!,,,没有足够的金币或钻石！,Cost is not enough!,
 This item is locked.,,,该物品未解锁。,This item is locked.,
@@ -92,18 +92,18 @@ restart the game no double reward,,,"确定重新开始游戏吗？
 双倍奖励还没领取哟！",,
 Gold Coin is not enough!,,,金币不足！,Gold Coin is not enough!,
 BikeDsc,,,"【No.${index} 自行车】
-速度     ${speed}%
-跳跃力   ${jump}%
-连续跳跃 ${highJump}
-体积     ${size}","【No.${index} bike】
+速度          ${speed}%
+跳跃力      ${jump}%
+连续跳跃   ${highJump}
+体积          ${size}","【No.${index} bike】
 Speed     ${speed}%
 Jump      ${jump}%
 HighJump  ${highJump}
 Size      ${size}",
-LevelDsc,,,等级     ${level},LV        ${level},
-BonusDsc,,,"金币     ${coin}
-里程     ${distance}
-积分     ${score}","Gold Coin ${coin}
+LevelDsc,,,等级          ${level},LV        ${level},
+BonusDsc,,,"金币          ${coin}
+里程          ${distance}
+积分          ${score}","Gold Coin ${coin}
 Distance  ${distance}
 Score     ${score}",
 Easy,,,简单,Easy,
@@ -156,6 +156,16 @@ MatchHelp9,,,封印道具，让前一名对手，暂时封印道具无法使用�
 MatchHelp10,,,墨鱼道具，让随机一名对手，暂时遮挡视线。,,
 MatchHelp11,,,落雷道具，让所有对手，受到落雷立即死亡。,,
 MatchHelp12,,,炸弹道具，向前方抛射一个炸弹，对手碰到立即死亡。,,
+HomeHelp1,,,骑士大人的家园，有4大类装饰资源可供自由布局。,,
+HomeHelp2,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp3,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp4,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp5,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp6,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp7,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp8,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp9,,,战力品、宠物，解锁后，可拖动到地,,
+HomeHelp10,,,战力品、宠物，解锁后，可拖动到地,,
 Select Map1,,,地图1,Map1,
 Select Map2,,,地图2,Map2,
 Select Map3,,,地图3,Map3,
