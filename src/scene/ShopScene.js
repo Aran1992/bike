@@ -1,9 +1,11 @@
 import List from "../ui/List";
 import Scene from "./Scene";
-import {resources} from "../libs/pixi-wrapper";
+import {resources, Texture} from "../libs/pixi-wrapper";
 import Config from "../config";
 import DataMgr from "../mgr/DataMgr";
 import Radio from "../ui/Radio";
+import Utils from "../mgr/Utils";
+import OnlineMgr from "../mgr/OnlineMgr";
 
 export default class ShopScene extends Scene {
     onCreate() {
@@ -11,19 +13,19 @@ export default class ShopScene extends Scene {
         this.selectedMapID = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         this.panelList = [
             {
-                panel: this.ui.presentPanel,
-                init: this.initPresentPanel.bind(this),
-                show: this.showPresentPanel.bind(this),
-            },
-            {
-                panel: this.ui.moneyPanel,
-                init: this.initMoneyPanel.bind(this),
-                show: this.showMoneyPanel.bind(this),
-            },
-            {
                 panel: this.ui.mapPanel,
                 init: this.initMapPanel.bind(this),
                 show: this.showMapPanel.bind(this),
+            },
+            {
+                panel: this.ui.goldPanel,
+                init: this.initGoldPanel.bind(this),
+                show: this.showGoldPanel.bind(this),
+            },
+            {
+                panel: this.ui.diamondPanel,
+                init: this.initDiamondPanel.bind(this),
+                show: this.showDiamondPanel.bind(this),
             },
         ];
         this.panelList.forEach(panelMgr => panelMgr.panel.visible = false);
@@ -31,7 +33,7 @@ export default class ShopScene extends Scene {
             root: this.ui.tab,
             initItemFunc: this.initRadioButton.bind(this),
             clickButtonFunc: this.onClickRadio.bind(this),
-            infoList: ["Present", "Money", "Map"],
+            infoList: ["Map", "Coin", "Diamond",],
             buttonDistance: 100
         });
     }
@@ -215,6 +217,122 @@ export default class ShopScene extends Scene {
             App.showNotice(App.getText("DiamondIsNotEnough"));
             // todo 后面在修复多条提示重叠的问题
         }
+    }
+
+    initGoldPanel() {
+        this.goldList = new List({
+            root: this.ui.goldList,
+            initItemFunc: this.initGoldItem.bind(this),
+            updateItemFunc: this.updateGoldItem.bind(this),
+            count: Config.rewardGoldList.length,
+        });
+    }
+
+    initGoldItem(item) {
+        this.onClick(item.ui.advertButton, this.onClickCoinAdvertButton.bind(this));
+    }
+
+    updateGoldItem(item, index) {
+        clearInterval(item.timer);
+        item.ui.itemIcon.children[0].texture = Texture.from(`myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum0${index + 1}.png`);
+        item.ui.onlineText.visible = false;
+        item.ui.buyText.visible = false;
+        item.ui.advertButton.visible = false;
+        item.ui.advertButton.index = index;
+        item.ui.advertButton.rewardCoin = Config.rewardGoldList[index].rewardCoin;
+        item.ui.dsc.text = `${App.getText("Coin")} ${Config.rewardGoldList[index].rewardCoin}`;
+        let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
+        if (DataMgr.get(DataMgr.receivedCoinList, []).indexOf(index) !== -1) {
+            item.ui.buyText.visible = true;
+        } else if (countdown <= 0) {
+            item.ui.advertButton.visible = true;
+        } else {
+            item.ui.onlineText.visible = true;
+            item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+            item.timer = setInterval(() => {
+                let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
+                item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+                if (countdown <= 0) {
+                    item.ui.onlineText.visible = false;
+                    item.ui.advertButton.visible = true;
+                    clearInterval(item.timer);
+                }
+            }, 1000);
+        }
+    }
+
+    showGoldPanel() {
+        this.goldList.refresh();
+    }
+
+    onClickCoinAdvertButton(button) {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + button.rewardCoin);
+                let list = DataMgr.get(DataMgr.receivedCoinList, []);
+                list.push(button.index);
+                DataMgr.set(DataMgr.receivedCoinList, list);
+                this.goldList.refresh();
+            }
+        });
+    }
+
+    initDiamondPanel() {
+        this.diamondList = new List({
+            root: this.ui.diamondList,
+            initItemFunc: this.initDiamondItem.bind(this),
+            updateItemFunc: this.updateDiamondItem.bind(this),
+            count: Config.rewardDiamondList.length,
+        });
+    }
+
+    initDiamondItem(item) {
+        this.onClick(item.ui.advertButton, this.onClickDiamondAdvertButton.bind(this));
+    }
+
+    updateDiamondItem(item, index) {
+        clearInterval(item.timer);
+        item.ui.itemIcon.children[0].texture = Texture.from(`myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum0${index + 1}.png`);
+        item.ui.onlineText.visible = false;
+        item.ui.buyText.visible = false;
+        item.ui.advertButton.visible = false;
+        item.ui.advertButton.index = index;
+        item.ui.advertButton.rewardDiamond = Config.rewardDiamondList[index].rewardDiamond;
+        item.ui.dsc.text = `${App.getText("Diamond")} ${Config.rewardDiamondList[index].rewardDiamond}`;
+        let countdown = (Config.rewardDiamondList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
+        if (DataMgr.get(DataMgr.receivedDiamondList, []).indexOf(index) !== -1) {
+            item.ui.buyText.visible = true;
+        } else if (countdown <= 0) {
+            item.ui.advertButton.visible = true;
+        } else {
+            item.ui.onlineText.visible = true;
+            item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+            item.timer = setInterval(() => {
+                let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
+                item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+                if (countdown <= 0) {
+                    item.ui.onlineText.visible = false;
+                    item.ui.advertButton.visible = true;
+                    clearInterval(item.timer);
+                }
+            }, 1000);
+        }
+    }
+
+    showDiamondPanel() {
+        this.diamondList.refresh();
+    }
+
+    onClickDiamondAdvertButton(button) {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + button.rewardDiamond);
+                let list = DataMgr.get(DataMgr.receivedDiamondList, []);
+                list.push(button.index);
+                DataMgr.set(DataMgr.receivedDiamondList, list);
+                this.diamondList.refresh();
+            }
+        });
     }
 
     initMapPanel() {

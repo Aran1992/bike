@@ -256,5 +256,9 @@ DataMgr.preparationDataMap = "27";
 DataMgr.preparationDataEndless = "28";
 DataMgr.giftIndex = "29";
 DataMgr.remainGiftOnlineMinutes = "30";
+DataMgr.receivedCoinList = "31";
+DataMgr.receivedDiamondList = "32";
+DataMgr.nextResetTime = "33";
+DataMgr.onlineTime = "34";
 
 export default DataMgr;

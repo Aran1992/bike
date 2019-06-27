@@ -7065,102 +7065,6 @@ Config.drawScene = {
     },
 };
 
-// 商店金币配置
-Config.goldList = [
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 0,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 1000,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum01.png"
-    },
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 0,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 2000,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum02.png"
-    },
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 0,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 5000,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum03.png"
-    },
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 0,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 10000,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum04.png"
-    },
-];
-
-// 商店钻石配置
-Config.diamondList = [
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 10,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 0,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum01.png"
-    },
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 20,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 0,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum02.png"
-    },
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 50,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 0,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum03.png"
-    },
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        getDiamond: 100,
-        // 消耗的货币数量（金币物品此项设置为零或者去掉）
-        costMoney: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        getCoin: 0,
-        // 消耗的钻石数量（钻石物品此项设置为零或者去掉）
-        costDiamond: 0,
-        imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum04.png"
-    },
-];
-
 // 商店游戏币配置
 Config.moneyList = [
     {
@@ -9662,6 +9566,30 @@ Config.giftList = [
         rewardCoin: 5000,
         // 奖励钻石
         rewardDiamond: 50,
+    },
+];
+
+// 商店广告金币配置
+Config.rewardGoldList = [
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 1000,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 0,
+    },
+];
+
+// 商店广告钻石配置
+Config.rewardDiamondList = [
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 10,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 0,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 0,
     },
 ];
 

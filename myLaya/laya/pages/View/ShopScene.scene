@@ -1,7 +1,7 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":129,
+    "selectedBox":130,
     "selecteID":158,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
@@ -221,7 +221,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,presentPanel",
-            "props":{"var":"presentPanel","top":220,"right":0,"left":0,"bottom":0},
+            "props":{"visible":false,"var":"presentPanel","top":220,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"presentPanel",
             "isOpen":false,
@@ -367,13 +367,13 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,moneyPanel",
-            "props":{"visible":true,"var":"moneyPanel","top":220,"right":0,"left":0,"bottom":0},
+            "props":{"visible":false,"var":"moneyPanel","top":220,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"moneyPanel",
             "isOpen":false,
@@ -784,7 +784,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,goldPanel",
-            "props":{"visible":false,"var":"goldPanel","top":220,"right":0,"left":0,"bottom":0},
+            "props":{"var":"goldPanel","top":220,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"goldPanel",
             "isOpen":true,
@@ -835,10 +835,10 @@
                                         {
                                             "x":75,
                                             "type":"Image",
-                                            "searchKey":"Image,goldItemIcon",
-                                            "props":{"var":"goldItemIcon","skin":"images/money-icon/MainMenuItemCourseNum01.png","left":25,"centerY":0},
+                                            "searchKey":"Image,itemIcon",
+                                            "props":{"skin":"images/money-icon/MainMenuItemCourseNum01.png","name":"itemIcon","left":25,"centerY":0},
                                             "nodeParent":131,
-                                            "label":"goldItemIcon",
+                                            "label":"itemIcon",
                                             "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
@@ -851,10 +851,10 @@
                                         {
                                             "x":75,
                                             "type":"Label",
-                                            "searchKey":"Label,goldDsc",
-                                            "props":{"var":"goldDsc","text":"somethingsomething","left":75,"fontSize":25,"color":"#ffffff","centerY":0},
+                                            "searchKey":"Label,dsc",
+                                            "props":{"text":"somethingsomething","name":"dsc","left":75,"fontSize":25,"color":"#ffffff","centerY":0},
                                             "nodeParent":131,
-                                            "label":"goldDsc",
+                                            "label":"dsc",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
@@ -865,10 +865,10 @@
                                         {
                                             "x":75,
                                             "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"width":150,"visible":true,"skin":"images/button-shop-3.png","right":25,"height":50,"centerY":0},
+                                            "searchKey":"Image,buyText",
+                                            "props":{"width":150,"skin":"images/button-shop-3.png","right":25,"name":"buyText","height":50,"centerY":0},
                                             "nodeParent":131,
-                                            "label":"Image",
+                                            "label":"buyText",
                                             "isOpen":true,
                                             "isDirectory":true,
                                             "isAniNode":true,
@@ -940,16 +940,17 @@
                                 {
                                     "x":60,
                                     "type":"Label",
-                                    "searchKey":"Label,on-line time",
-                                    "props":{"y":0,"x":0,"text":"on-line time","right":200,"name":"on-line time","fontSize":25,"color":"#ffffff","centerY":0},
+                                    "searchKey":"Label,onlineText",
+                                    "props":{"y":0,"x":0,"text":"on-line time","right":200,"name":"onlineText","fontSize":25,"color":"#ffffff","centerY":0},
                                     "nodeParent":130,
-                                    "label":"on-line time",
+                                    "label":"onlineText",
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
                                     "compId":158,
                                     "child":[
-                                        ]
+                                        ],
+                                    "$HIDDEN":false
                                 }]
                         }]
                 },
@@ -968,13 +969,13 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,diamondPanel",
-            "props":{"visible":false,"var":"diamondPanel","top":220,"right":0,"left":0,"bottom":0},
+            "props":{"var":"diamondPanel","top":220,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"diamondPanel",
             "isOpen":true,
@@ -1025,10 +1026,10 @@
                                         {
                                             "x":75,
                                             "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/money-icon/MainMenuItemCourseNum01.png","left":25,"centerY":0},
+                                            "searchKey":"Image,itemIcon",
+                                            "props":{"skin":"images/money-icon/MainMenuItemCourseNum01.png","name":"itemIcon","left":25,"centerY":0},
                                             "nodeParent":148,
-                                            "label":"Image",
+                                            "label":"itemIcon",
                                             "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
@@ -1041,10 +1042,10 @@
                                         {
                                             "x":75,
                                             "type":"Label",
-                                            "searchKey":"Label,diamondDsc",
-                                            "props":{"var":"diamondDsc","text":"somethingsomething","left":75,"fontSize":25,"color":"#ffffff","centerY":0},
+                                            "searchKey":"Label,dsc",
+                                            "props":{"text":"somethingsomething","name":"dsc","left":75,"fontSize":25,"color":"#ffffff","centerY":0},
                                             "nodeParent":148,
-                                            "label":"diamondDsc",
+                                            "label":"dsc",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
@@ -1055,10 +1056,10 @@
                                         {
                                             "x":75,
                                             "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"width":150,"visible":true,"skin":"images/button-shop-3.png","right":25,"height":50,"centerY":0},
+                                            "searchKey":"Image,buyText",
+                                            "props":{"width":150,"visible":true,"skin":"images/button-shop-3.png","right":25,"name":"buyText","height":50,"centerY":0},
                                             "nodeParent":148,
-                                            "label":"Image",
+                                            "label":"buyText",
                                             "isOpen":true,
                                             "isDirectory":true,
                                             "isAniNode":true,
@@ -1130,10 +1131,10 @@
                                 {
                                     "x":60,
                                     "type":"Label",
-                                    "searchKey":"Label,on-line time",
-                                    "props":{"y":0,"text":"on-line time","right":200,"name":"on-line time","fontSize":25,"color":"#ffffff","centerY":0},
+                                    "searchKey":"Label,onlineText",
+                                    "props":{"y":0,"text":"on-line time","right":200,"name":"onlineText","fontSize":25,"color":"#ffffff","centerY":0},
                                     "nodeParent":147,
-                                    "label":"on-line time",
+                                    "label":"onlineText",
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,

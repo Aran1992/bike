@@ -5,6 +5,7 @@ class OnlineMgr_ {
     start() {
         this.startGiftCountDown();
         this.startResetRewardTimer();
+        this.startOnlineTime();
     }
 
     restartGiftCountDown() {
@@ -22,6 +23,7 @@ class OnlineMgr_ {
         if (gift) {
             this.giftRemainTime = DataMgr.get(DataMgr.remainGiftOnlineMinutes, 0) * 60;
             if (this.giftRemainTime !== 0) {
+                clearInterval(this.giftCountDownTimer);
                 this.giftCountDownTimer = setInterval(() => {
                     this.giftRemainTime--;
                     let oldMinutes = DataMgr.get(DataMgr.remainGiftOnlineMinutes, 0);
@@ -48,13 +50,12 @@ class OnlineMgr_ {
     }
 
     startResetRewardTimer() {
-        this.setResetRewardHour();
+        if (new Date().getTime() >= DataMgr.get(DataMgr.nextResetTime, 0)) {
+            this.reset();
+        }
         setInterval(() => {
-            if (new Date().getTime() >= this.resetRewardTime) {
-                this.setResetRewardHour();
-                DataMgr.set(DataMgr.giftIndex, 0);
-                DataMgr.set(DataMgr.remainGiftOnlineMinutes, Config.giftList[0].onlineMinutes);
-                this.startGiftCountDown();
+            if (new Date().getTime() >= DataMgr.get(DataMgr.nextResetTime, 0)) {
+                this.reset();
             }
         }, 1000);
     }
@@ -64,13 +65,41 @@ class OnlineMgr_ {
         cur.setSeconds(0);
         cur.setMinutes(0);
         cur.setMilliseconds(0);
+        let resetRewardTime;
         if (cur.getHours() >= Config.resetRewardHour) {
             cur.setHours(Config.resetRewardHour);
-            this.resetRewardTime = cur.getTime() + 24 * 60 * 60 * 1000;
+            resetRewardTime = cur.getTime() + 24 * 60 * 60 * 1000;
         } else {
             cur.setHours(Config.resetRewardHour);
-            this.resetRewardTime = cur.getTime();
+            resetRewardTime = cur.getTime();
         }
+        DataMgr.set(DataMgr.nextResetTime, resetRewardTime);
+    }
+
+    reset() {
+        this.setResetRewardHour();
+        DataMgr.set(DataMgr.giftIndex, 0);
+        DataMgr.set(DataMgr.remainGiftOnlineMinutes, Config.giftList[0].onlineMinutes);
+        this.startGiftCountDown();
+        DataMgr.set(DataMgr.receivedCoinList, []);
+        DataMgr.set(DataMgr.receivedDiamondList, []);
+        DataMgr.set(DataMgr.onlineTime, 0);
+    }
+
+    getOnlineTime() {
+        return this.onlineTime;
+    }
+
+    startOnlineTime() {
+        this.onlineTime = DataMgr.get(DataMgr.onlineTime, 0);
+        setInterval(() => {
+            let oldMinutes = Math.floor(this.onlineTime / 60);
+            this.onlineTime++;
+            let newMinutes = Math.floor(this.onlineTime / 60);
+            if (oldMinutes !== newMinutes) {
+                DataMgr.set(DataMgr.onlineTime, this.onlineTime);
+            }
+        }, 1000);
     }
 }
 
