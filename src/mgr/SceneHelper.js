@@ -263,7 +263,7 @@ function createLabel(child, parent) {
 
     let textStyle = {
         fill: fill,
-        fontFamily: "黑体",
+        fontFamily: "arial",
         fontSize: fontSize,
         wordWrap: false,
         leading: getValue(data.leading, 0),
