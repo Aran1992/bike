@@ -7031,7 +7031,7 @@ Config.notice = {
     // 字体颜色
     fill: "white",
     // 字体大小
-    fontSize: 50,
+    fontSize: 40,
     // 背景比字体大多少像素
     margin: 10,
     // 背景颜色
