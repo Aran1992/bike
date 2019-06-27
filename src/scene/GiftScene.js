@@ -3,9 +3,16 @@ import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import OnlineMgr from "../mgr/OnlineMgr";
 import EventMgr from "../mgr/EventMgr";
+import {Graphics} from "../libs/pixi-wrapper";
 
 export default class GiftScene extends Scene {
     onCreate() {
+        let mask = new Graphics()
+            .beginFill(0x000000, 0.5)
+            .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
+            .endFill();
+        this.addChildAt(mask, 0);
+
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
         this.onClick(this.ui.advertButton, this.onClickAdvertButton.bind(this));
     }

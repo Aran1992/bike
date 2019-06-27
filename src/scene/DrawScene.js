@@ -2,7 +2,7 @@ import Config from "../config";
 import Scene from "./Scene";
 import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
-import {Rectangle} from "../libs/pixi-wrapper";
+import {Graphics, Rectangle} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
 import GameUtils from "../mgr/GameUtils";
 import MusicMgr from "../mgr/MusicMgr";
@@ -26,6 +26,11 @@ export default class DrawScene extends Scene {
         this.onTick();
         this.timer = setInterval(this.onTick.bind(this), 1000);
         this.ui.costDiamondText.text = Config.diamondDrawCost;
+        let mask = new Graphics()
+            .beginFill(0x000000, 0.5)
+            .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
+            .endFill();
+        this.ui.detailPanel.addChildAt(mask, 0);
     }
 
     onShow() {

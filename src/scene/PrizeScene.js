@@ -1,9 +1,15 @@
 import Scene from "./Scene";
-import {Sprite, Texture} from "../libs/pixi-wrapper";
+import {Graphics, Sprite, Texture} from "../libs/pixi-wrapper";
 import UIHelper from "../ui/UIHelper";
 
 export default class PrizeScene extends Scene {
     onCreate() {
+        let mask = new Graphics()
+            .beginFill(0x000000, 0.5)
+            .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
+            .endFill();
+        this.addChildAt(mask, 0);
+
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
         this.list = [];
         this.list.push(this.ui.item);
