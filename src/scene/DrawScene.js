@@ -13,6 +13,7 @@ export default class DrawScene extends Scene {
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.closeDetailButton, this.onClickCloseDetailButton.bind(this));
+        this.onClick(this.ui.advertButton, this.onClickAdvertButton.bind(this));
         this.ui.detailPanel.visible = false;
         this.ui.detailPanel.interactive = true;
         this.ui.detailPanel.hitArea = new Rectangle(0, 0, App.sceneWidth, App.sceneHeight);
@@ -34,6 +35,7 @@ export default class DrawScene extends Scene {
     }
 
     onShow() {
+        this.onTick();
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
     }
 
@@ -65,6 +67,14 @@ export default class DrawScene extends Scene {
         } else {
             this.startAnimation();
         }
+    }
+
+    onClickAdvertButton() {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                this.startAnimation();
+            }
+        });
     }
 
     startAnimation() {
@@ -103,6 +113,11 @@ export default class DrawScene extends Scene {
             diamond -= Config.diamondDrawCost;
             DataMgr.set(DataMgr.diamond, diamond);
             this.ui.diamondText.text = diamond;
+        } else if (this.ui.advertButton.visible === true) {
+            DataMgr.set(DataMgr.drawAdvertTimes, DataMgr.get(DataMgr.drawAdvertTimes, 0) + 1);
+        } else {
+            let nextTime = (new Date()).getTime() + Config.freeDrawInterval * 1000;
+            DataMgr.set(DataMgr.nextFreeDrawTime, nextTime);
         }
 
         App.hideMask();
@@ -132,8 +147,6 @@ export default class DrawScene extends Scene {
             }
         }
         DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
-        let nextTime = (new Date()).getTime() + Config.freeDrawInterval * 1000;
-        DataMgr.set(DataMgr.nextFreeDrawTime, nextTime);
 
         this.ballImage.visible = false;
         this.ui.detailPanel.visible = true;
@@ -149,6 +162,8 @@ export default class DrawScene extends Scene {
 ${levelDsc}
 ${bonusDsc}`;
         this.bikeSprite.play();
+
+        this.onTick();
     }
 
     onClickCloseDetailButton() {
@@ -157,13 +172,21 @@ ${bonusDsc}`;
     }
 
     onTick() {
+        this.ui.drawButton.visible = false;
+        this.ui.advertButton.visible = false;
+        this.ui.costDiamondPanel.visible = false;
         let cur = new Date();
         let freeTime = DataMgr.get(DataMgr.nextFreeDrawTime);
         if (cur >= freeTime) {
             this.ui.drawTimeText.text = App.getText("Free");
             this.ui.costDiamondPanel.visible = false;
+            this.ui.drawButton.visible = true;
+        } else if (DataMgr.get(DataMgr.drawAdvertTimes, 0) < Config.advertDrawBikeTime) {
+            this.ui.advertButton.visible = true;
+            this.ui.drawTimeText.text = Utils.getCDTimeString(freeTime - cur);
         } else {
             this.ui.drawTimeText.text = Utils.getCDTimeString(freeTime - cur);
+            this.ui.drawButton.visible = true;
             this.ui.costDiamondPanel.visible = true;
         }
     }

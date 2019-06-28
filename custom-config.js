@@ -9656,4 +9656,7 @@ Config.signRewardList = [
     {bike: 11, coin: 15000, diamond: 100},
 ];
 
+// 每天广告扭蛋的次数
+Config.advertDrawBikeTime = 3;
+
 export default Config;

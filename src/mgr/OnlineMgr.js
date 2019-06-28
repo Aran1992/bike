@@ -84,6 +84,7 @@ class OnlineMgr_ {
         DataMgr.set(DataMgr.receivedCoinList, []);
         DataMgr.set(DataMgr.receivedDiamondList, []);
         DataMgr.set(DataMgr.onlineTime, 0);
+        DataMgr.set(DataMgr.drawAdvertTimes, 0);
     }
 
     getOnlineTime() {

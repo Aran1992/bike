@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":30,
-    "selecteID":15,
+    "selectedBox":1,
+    "selecteID":44,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -155,8 +155,37 @@
         {
             "x":15,
             "type":"Image",
+            "searchKey":"Image,drawButton",
+            "props":{"y":1138,"x":200,"var":"drawButton","skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":55},
+            "nodeParent":1,
+            "label":"drawButton",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":11,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"text":"${Draw}","fontSize":50,"color":"#ffffff","centerY":0,"centerX":0},
+                    "nodeParent":11,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":12,
+                    "child":[
+                        ]
+                }],
+            "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"Image",
             "searchKey":"Image,advertButton",
-            "props":{"y":1138,"x":200,"visible":false,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"advertButton","centerX":0,"bottom":55},
+            "props":{"y":1138,"x":200,"visible":false,"var":"advertButton","skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":55},
             "nodeParent":1,
             "label":"advertButton",
             "isOpen":false,
@@ -189,33 +218,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":46,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,drawButton",
-            "props":{"var":"drawButton","skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":55},
-            "nodeParent":1,
-            "label":"drawButton",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":11,
-            "child":[
-                {
-                    "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"text":"${Draw}","fontSize":50,"color":"#ffffff","centerY":0,"centerX":0},
-                    "nodeParent":11,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":12,
                     "child":[
                         ]
                 }]
@@ -389,7 +391,7 @@
                         }],
                     "$HIDDEN":false
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         }],
     "animations":[
         {

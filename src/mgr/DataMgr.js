@@ -59,7 +59,7 @@ class DataMgr_ {
             DataMgr.set(DataMgr.selectedBike, 0);
         }
         if (DataMgr.get(DataMgr.nextFreeDrawTime) === undefined) {
-            DataMgr.set(DataMgr.nextFreeDrawTime, (new Date()).getTime());
+            DataMgr.set(DataMgr.nextFreeDrawTime, 0);
         }
         if (DataMgr.get(DataMgr.currentMapScene) === undefined) {
             DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.mapList.length));
@@ -280,5 +280,6 @@ DataMgr.receivedDiamondList = "32";
 DataMgr.nextResetTime = "33";
 DataMgr.onlineTime = "34";
 DataMgr.receivedSignReward = "35";
+DataMgr.drawAdvertTimes = "36";
 
 export default DataMgr;
