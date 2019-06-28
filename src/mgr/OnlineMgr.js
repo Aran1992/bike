@@ -101,6 +101,29 @@ class OnlineMgr_ {
             }
         }, 1000);
     }
+
+    isSignRewardReceived(index) {
+        return index <= DataMgr.get(DataMgr.receivedSignReward, -1);
+    }
+
+    isSignRewardReceivable(index) {
+        let createTime = new Date(DataMgr.createTime);
+        createTime.setMilliseconds(0);
+        createTime.setSeconds(0);
+        createTime.setMinutes(0);
+        createTime.setHours(0);
+        let cur = new Date();
+        cur.setMilliseconds(0);
+        cur.setSeconds(0);
+        cur.setMinutes(0);
+        cur.setHours(0);
+        let days = (cur - createTime) / 1000 / 60 / 60 / 24;
+        return index <= days;
+    }
+
+    hasSignReward() {
+        return Config.signRewardList[DataMgr.get(DataMgr.receivedSignReward, -1) + 1] !== undefined;
+    }
 }
 
 const OnlineMgr = new OnlineMgr_();

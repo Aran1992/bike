@@ -19,6 +19,9 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
         this.onClick(this.ui.rankButton, this.onClickRankButton.bind(this));
+        this.onClick(this.ui.giftButton, this.onClickGiftButton.bind(this));
+        this.ui.signButton.visible = OnlineMgr.hasSignReward();
+        this.onClick(this.ui.signButton, this.onClickSignButton.bind(this));
         if (window.PlatformHelper.canLogout) {
             this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
         }
@@ -142,7 +145,6 @@ export default class MainScene extends Scene {
     }
 
     initGift() {
-        this.onClick(this.ui.giftButton, this.onClickGiftButton.bind(this));
         this.updateGiftState();
         setInterval(() => {
             this.updateGiftState();
@@ -167,6 +169,14 @@ export default class MainScene extends Scene {
         } else {
             App.showNotice(App.getText("领取礼包的时间还没到"));
         }
+    }
+
+    onClickSignButton() {
+        App.showScene("SignScene");
+    }
+
+    hideSignScene() {
+        this.ui.signButton.visible = false;
     }
 }
 

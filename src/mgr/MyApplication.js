@@ -31,6 +31,7 @@ import MusicMgr from "./MusicMgr";
 import PreparationScene from "../scene/PreparationScene";
 import GiftScene from "../scene/GiftScene";
 import PrizeScene from "../scene/PrizeScene";
+import SignScene from "../scene/SignScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -87,6 +88,7 @@ export default class MyApplication extends Application {
             "PreparationScene": PreparationScene,
             "GiftScene": GiftScene,
             "PrizeScene": PrizeScene,
+            "SignScene": SignScene,
         };
 
         this.sceneTable = {};

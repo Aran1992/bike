@@ -31,8 +31,9 @@ class DataMgr_ {
         this.data = data;
     }
 
-    init(dataTable, periodIdx) {
+    init(dataTable, periodIdx, createTime) {
         this.dataTable = dataTable;
+        this.createTime = new Date(createTime);
 
         if (DataMgr.get(DataMgr.periodIdx) !== periodIdx) {
             this.resetRankData(periodIdx);
@@ -215,6 +216,24 @@ class DataMgr_ {
             {bike: bike}
         ]);
     }
+
+    plusBike(id) {
+        let ownedBikeList = DataMgr.get(DataMgr.ownedBikeList, []);
+        let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
+        let config = Config.bikeList.find(item => item.id === id);
+        if (ownedBikeList.indexOf(id) === -1) {
+            ownedBikeList.push(id);
+            DataMgr.set(DataMgr.ownedBikeList, ownedBikeList);
+            bikeLevelMap[id] = 0;
+            DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
+
+        } else {
+            if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[id] + 1] !== undefined) {
+                bikeLevelMap[id]++;
+                DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
+            }
+        }
+    }
 }
 
 const DataMgr = new DataMgr_();
@@ -260,5 +279,6 @@ DataMgr.receivedCoinList = "31";
 DataMgr.receivedDiamondList = "32";
 DataMgr.nextResetTime = "33";
 DataMgr.onlineTime = "34";
+DataMgr.receivedSignReward = "35";
 
 export default DataMgr;

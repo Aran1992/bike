@@ -104,7 +104,7 @@ class NetworkMgr_ {
         this.request(Config.serverUrl + "/player/load_data", "GET", {}, (data) => {
             this.request(Config.serverUrl + "/board/get_farest_mileage_board", "GET", {}, ({response}) => {
                 if (data.response.data) {
-                    DataMgr.init(JSON.parse(data.response.data), response.periodIdx);
+                    DataMgr.init(JSON.parse(data.response.data), response.periodIdx, data.response.createTime);
                 } else {
                     DataMgr.init({}, response.periodIdx);
                 }

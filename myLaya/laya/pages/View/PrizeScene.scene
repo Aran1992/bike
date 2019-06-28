@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":156,
-    "selecteID":158,
+    "selecteID":231,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":231,
+    "maxID":232,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -147,6 +147,20 @@
                                                     "isAniNode":true,
                                                     "hasChild":false,
                                                     "compId":158,
+                                                    "child":[
+                                                        ]
+                                                },
+                                                {
+                                                    "x":90,
+                                                    "type":"Panel",
+                                                    "searchKey":"Panel,bikePanel",
+                                                    "props":{"width":0,"name":"bikePanel","height":0,"centerY":0,"centerX":0},
+                                                    "nodeParent":156,
+                                                    "label":"bikePanel",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":231,
                                                     "child":[
                                                         ]
                                                 }]

@@ -9644,4 +9644,16 @@ Config.giftList = [
 // 每天重置各种奖励的时间（小时）(范例：0为凌晨0点，23为晚上11点)
 Config.resetRewardHour = 0;
 
+// 签到奖励列表
+// 按顺序从上往下是第一天到第七天
+Config.signRewardList = [
+    {coin: 1000},
+    {bike: 1},
+    {diamond: 100},
+    {bike: 4},
+    {coin: 15000},
+    {diamond: 100},
+    {bike: 11, coin: 15000, diamond: 100},
+];
+
 export default Config;

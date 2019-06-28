@@ -3,6 +3,7 @@ import {Graphics, Sprite, Texture} from "../libs/pixi-wrapper";
 import UIHelper from "../ui/UIHelper";
 import DataMgr from "../mgr/DataMgr";
 import EventMgr from "../mgr/EventMgr";
+import BikeSprite from "../item/BikeSprite";
 
 export default class PrizeScene extends Scene {
     onCreate() {
@@ -24,6 +25,9 @@ export default class PrizeScene extends Scene {
             item.itemIcon = item.children[0].children[1].children[1].addChild(new Sprite());
             item.itemIcon.anchor.set(0.5, 0.5);
             item.numberText = item.children[0].children[1].children[2];
+            item.bikePanel = item.children[0].children[1].children[3];
+            item.bikeSprite = new BikeSprite(item.bikePanel);
+            item.bikeSprite.play();
         });
     }
 
@@ -33,6 +37,8 @@ export default class PrizeScene extends Scene {
                 DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + reward.rewardCoin);
             } else if (reward.rewardDiamond) {
                 DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + reward.rewardDiamond);
+            } else if (reward.rewardBike) {
+                DataMgr.plusBike(reward.rewardBike);
             }
         });
         EventMgr.dispatchEvent("RefreshRankData");
@@ -40,6 +46,7 @@ export default class PrizeScene extends Scene {
         this.list.forEach(item => {
             item.itemIcon.visible = false;
             item.numberText.visible = false;
+            item.bikePanel.visible = false;
             item.visible = false;
         });
         rewards.forEach((reward, i) => {
@@ -57,6 +64,9 @@ export default class PrizeScene extends Scene {
                 numberText.visible = true;
                 itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-diamond.png");
                 numberText.text = reward.rewardDiamond;
+            } else if (reward.rewardBike) {
+                item.bikePanel.visible = true;
+                item.bikeSprite.setBikeID(reward.rewardBike);
             }
         });
         let itemWidth = this.list[0].mywidth;
