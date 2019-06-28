@@ -7879,7 +7879,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
         // 持续效果ICON路径
@@ -7902,9 +7902,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_03.png",
         // 使用音效
@@ -7923,7 +7923,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BlockSightEffect2.prefab.json",
         // 持续效果ICON路径
@@ -7948,7 +7948,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
@@ -7971,9 +7971,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect.prefab.json",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_11.png",
         // 使用音效
@@ -7990,9 +7990,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon1_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect2.prefab.json",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/ThunderEffect3.prefab.json",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff1036.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -8034,7 +8034,7 @@ Config.effect = {
     UnlimitedJump: {
         // 持续时间（单位：秒）
         duration: 5,
-        // 是否有益（1为有益，0为陷阱/害人）
+        // 是否有益（1为有益，0为陷阱/
         isHelpful: 1,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
@@ -8056,7 +8056,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_01.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -8069,7 +8069,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon3_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BananaPeel2.prefab.json",
         // 使用音效
