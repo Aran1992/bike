@@ -34,7 +34,7 @@ export default class ShopScene extends Scene {
             root: this.ui.tab,
             initItemFunc: this.initRadioButton.bind(this),
             clickButtonFunc: this.onClickRadio.bind(this),
-            infoList: ["Map", "Coin", "Diamond",],
+            infoList: ["Coin", "Diamond", "Map",],
             buttonDistance: 100
         });
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
