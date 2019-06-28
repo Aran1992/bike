@@ -50,12 +50,12 @@ export default class PrizeScene extends Scene {
             if (reward.rewardCoin) {
                 itemIcon.visible = true;
                 numberText.visible = true;
-                itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-diamond.png");
+                itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-coin.png");
                 numberText.text = reward.rewardCoin;
             } else if (reward.rewardDiamond) {
                 itemIcon.visible = true;
                 numberText.visible = true;
-                itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-coin.png");
+                itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-diamond.png");
                 numberText.text = reward.rewardDiamond;
             }
         });
