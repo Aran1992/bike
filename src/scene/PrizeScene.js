@@ -1,6 +1,8 @@
 import Scene from "./Scene";
 import {Graphics, Sprite, Texture} from "../libs/pixi-wrapper";
 import UIHelper from "../ui/UIHelper";
+import DataMgr from "../mgr/DataMgr";
+import EventMgr from "../mgr/EventMgr";
 
 export default class PrizeScene extends Scene {
     onCreate() {
@@ -26,6 +28,15 @@ export default class PrizeScene extends Scene {
     }
 
     onShow(rewards) {
+        rewards.forEach(reward => {
+            if (reward.rewardCoin) {
+                DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + reward.rewardCoin);
+            } else if (reward.rewardDiamond) {
+                DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + reward.rewardDiamond);
+            }
+        });
+        EventMgr.dispatchEvent("RefreshRankData");
+
         this.list.forEach(item => {
             item.itemIcon.visible = false;
             item.numberText.visible = false;
@@ -33,7 +44,6 @@ export default class PrizeScene extends Scene {
         });
         rewards.forEach((reward, i) => {
             let item = this.list[i];
-            console.log(i);
             item.visible = true;
             let itemIcon = item.itemIcon;
             let numberText = item.numberText;

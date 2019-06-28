@@ -6,6 +6,7 @@ import DataMgr from "../mgr/DataMgr";
 import Radio from "../ui/Radio";
 import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
+import EventMgr from "../mgr/EventMgr";
 
 export default class ShopScene extends Scene {
     onCreate() {
@@ -36,6 +37,7 @@ export default class ShopScene extends Scene {
             infoList: ["Map", "Coin", "Diamond",],
             buttonDistance: 100
         });
+        EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
     }
 
     onShow() {
@@ -66,7 +68,7 @@ export default class ShopScene extends Scene {
         panelMgr.show();
     }
 
-    initPresentPanel() {
+    /*initPresentPanel() {
         this.presentList = new List({
             root: this.ui.presentList,
             initItemFunc: this.initPresentItem.bind(this),
@@ -217,7 +219,7 @@ export default class ShopScene extends Scene {
             App.showNotice(App.getText("DiamondIsNotEnough"));
             // todo 后面在修复多条提示重叠的问题
         }
-    }
+    }*/
 
     initGoldPanel() {
         this.goldList = new List({
@@ -268,7 +270,7 @@ export default class ShopScene extends Scene {
     onClickCoinAdvertButton(button) {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + button.rewardCoin);
+                App.showScene("PrizeScene", [{rewardCoin: button.rewardCoin}]);
                 let list = DataMgr.get(DataMgr.receivedCoinList, []);
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedCoinList, list);
@@ -326,7 +328,7 @@ export default class ShopScene extends Scene {
     onClickDiamondAdvertButton(button) {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + button.rewardDiamond);
+                App.showScene("PrizeScene", [{rewardDiamond: button.rewardDiamond}]);
                 let list = DataMgr.get(DataMgr.receivedDiamondList, []);
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedDiamondList, list);
@@ -410,6 +412,11 @@ export default class ShopScene extends Scene {
         } else {
             App.showNotice(App.getText("DiamondIsNotEnough"));
         }
+    }
+
+    onRefreshRankData() {
+        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
     }
 }
 
