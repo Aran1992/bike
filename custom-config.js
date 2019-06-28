@@ -9648,12 +9648,12 @@ Config.resetRewardHour = 0;
 // 按顺序从上往下是第一天到第七天
 Config.signRewardList = [
     {coin: 1000},
-    {bike: 1},
+    {bike: 2},
     {diamond: 100},
-    {bike: 4},
+    {bike: 51},
     {coin: 15000},
-    {diamond: 100},
-    {bike: 11, coin: 15000, diamond: 100},
+    {diamond: 200},
+    {bike: 3, coin: 20000, diamond: 200},
 ];
 
 // 每天广告扭蛋的次数

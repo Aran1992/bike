@@ -154,7 +154,7 @@
                                                     "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,bikePanel",
-                                                    "props":{"width":0,"name":"bikePanel","height":0,"centerY":0,"centerX":0},
+                                                    "props":{"width":0,"name":"bikePanel","height":0,"centerY":20,"centerX":0},
                                                     "nodeParent":156,
                                                     "label":"bikePanel",
                                                     "isDirectory":false,
