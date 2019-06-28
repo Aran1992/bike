@@ -14,11 +14,6 @@ export default class ShopScene extends Scene {
         this.selectedMapID = DataMgr.get(DataMgr.selectedEndlessScene, 0);
         this.panelList = [
             {
-                panel: this.ui.mapPanel,
-                init: this.initMapPanel.bind(this),
-                show: this.showMapPanel.bind(this),
-            },
-            {
                 panel: this.ui.goldPanel,
                 init: this.initGoldPanel.bind(this),
                 show: this.showGoldPanel.bind(this),
@@ -27,6 +22,11 @@ export default class ShopScene extends Scene {
                 panel: this.ui.diamondPanel,
                 init: this.initDiamondPanel.bind(this),
                 show: this.showDiamondPanel.bind(this),
+            },
+            {
+                panel: this.ui.mapPanel,
+                init: this.initMapPanel.bind(this),
+                show: this.showMapPanel.bind(this),
             },
         ];
         this.panelList.forEach(panelMgr => panelMgr.panel.visible = false);
@@ -250,10 +250,10 @@ export default class ShopScene extends Scene {
             item.ui.advertButton.visible = true;
         } else {
             item.ui.onlineText.visible = true;
-            item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+            item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
             item.timer = setInterval(() => {
                 let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
-                item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+                item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
                 if (countdown <= 0) {
                     item.ui.onlineText.visible = false;
                     item.ui.advertButton.visible = true;
@@ -308,10 +308,10 @@ export default class ShopScene extends Scene {
             item.ui.advertButton.visible = true;
         } else {
             item.ui.onlineText.visible = true;
-            item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+            item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
             item.timer = setInterval(() => {
                 let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
-                item.ui.onlineText.text = Utils.getCDTimeStringWithoutHour(countdown);
+                item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
                 if (countdown <= 0) {
                     item.ui.onlineText.visible = false;
                     item.ui.advertButton.visible = true;
