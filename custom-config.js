@@ -7065,7 +7065,7 @@ Config.drawScene = {
     },
 };
 
-// 商店游戏币配置
+// 商店游戏币配置（目前关闭了不用）
 Config.moneyList = [
     {
         // 获得的钻石数量（金币物品此项设置为零或者去掉）
@@ -7157,7 +7157,7 @@ Config.moneyList = [
     },
 ];
 
-// 商店礼包配置
+// 商店礼包配置（目前关闭了不用）
 // 礼包ID已经对应上功能了，不要更改ID和描述的对应关系，但是可以修改礼包的顺序
 Config.presentList = [
     {
@@ -7203,6 +7203,78 @@ Config.presentList = [
         // 购买礼包获得金币数量
         getCoin: 15000,
         imagePath: "myLaya/laya/assets/images/money-icon/MainMenuItemCourseNum04.png",
+    },
+];
+
+// 商店广告金币配置
+Config.rewardGoldList = [
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 1000,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 0,
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 2000,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 10,
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 5000,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 30,
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 0,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 10000,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 60,
+    },
+];
+
+// 商店广告钻石配置
+Config.rewardDiamondList = [
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 10,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 0,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 0,
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 20,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 0,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 10,
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 50,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 0,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 30,
+    },
+    {
+        // 获得的钻石数量（金币物品此项设置为零或者去掉）
+        rewardDiamond: 100,
+        // 获得的金币数量（钻石物品此项设置为零或者去掉）
+        rewardCoin: 0,
+        // 所需在线时长（单位：分钟）
+        onlineMinutes: 60,
     },
 ];
 
@@ -7853,7 +7925,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect2.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
+        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BlockSightEffect2.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_06.png",
         // 使用音效
@@ -9566,30 +9638,6 @@ Config.giftList = [
         rewardCoin: 5000,
         // 奖励钻石
         rewardDiamond: 50,
-    },
-];
-
-// 商店广告金币配置
-Config.rewardGoldList = [
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        rewardDiamond: 0,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 1000,
-        // 所需在线时长（单位：分钟）
-        onlineMinutes: 0,
-    },
-];
-
-// 商店广告钻石配置
-Config.rewardDiamondList = [
-    {
-        // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        rewardDiamond: 10,
-        // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 0,
-        // 所需在线时长（单位：分钟）
-        onlineMinutes: 0,
     },
 ];
 
