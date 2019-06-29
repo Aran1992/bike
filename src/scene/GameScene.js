@@ -89,6 +89,7 @@ export default class GameScene extends Scene {
     }
 
     onShow() {
+        this.doubleReward = false;
         this.ui.blockSightSprite.visible = false;
 
         clearTimeout(this.deadCompleteTimer);

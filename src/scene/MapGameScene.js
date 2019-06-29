@@ -191,23 +191,31 @@ export default class MapGameScene extends GameScene {
         }
         DataMgr.set(DataMgr.currentMapScene, id);
 
-        this.settle();
-
+        let playerNameList = [];
         if (rank === undefined) {
             rank = this.enemyList.reduce((count, enemy) => {
                 if (enemy.completeGame) {
+
                     return count + 1;
                 } else {
                     return count;
                 }
             }, 0);
+            playerNameList = this.getPlayerRankList().map(player => player.getName());
+        } else {
+            let players = [].concat(this.enemyList);
+            players.sort((a, b) => b.getBikePhysicalPosition().x - a.getBikePhysicalPosition().x);
+            playerNameList = players.concat([this]).map(player => player.getName());
         }
+
+        this.rank = rank;
 
         App.showScene("GameResultScene", {
             rank: rank,
             distance: Math.floor(this.distance),
             coin: this.coin,
-            playerNameList: this.getPlayerRankList().map(player => player.getName())
+            playerNameList: playerNameList,
+            gameScene: this,
         });
     }
 
@@ -313,5 +321,19 @@ export default class MapGameScene extends GameScene {
 
     isPlayerInScreen(player) {
         return player.bikeOutterContainer.x < Config.designWidth - this.cameraContainer.x;
+    }
+
+    settle() {
+        let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
+        let score = Math.floor(Config.rankScore[this.rank] * GameUtils.getBikeConfig("scorePercent"));
+        if (this.doubleReward) {
+            score *= 2;
+        }
+        DataMgr.add(DataMgr.distance, distance);
+        DataMgr.add(DataMgr.rankDistance, distance);
+        DataMgr.add(DataMgr.totalScore, score);
+        DataMgr.add(DataMgr.rankTotalScore, score);
+        DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
+        this.gameLoopFunc = this.pause.bind(this);
     }
 }

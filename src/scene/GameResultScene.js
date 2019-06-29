@@ -15,6 +15,7 @@ export default class GameResultScene extends Scene {
         this.addChildAt(mask, 0);
 
         this.onClick(this.ui.mainButton, GameResultScene.onClickMainButton);
+        this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
     }
 
     onShow(args) {
@@ -25,40 +26,13 @@ export default class GameResultScene extends Scene {
 
         this.args = args;
 
-        let thisGameScore = Math.floor(Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent"));
-        DataMgr.add(DataMgr.totalScore, thisGameScore);
-        let totalScore = DataMgr.add(DataMgr.rankTotalScore, thisGameScore);
-        this.ui.totalScoreText.text = App.getText("${player} current rank total score: ${score}", {
-            player: DataMgr.getPlayerName(),
-            score: totalScore,
-        });
-
-        if (this.resultList === undefined) {
-            this.resultList = new List({
-                root: this.ui.resultList,
-                updateItemFunc: this.updateResultItem.bind(this),
-                count: 3,
-                isStatic: true,
-            });
-        } else {
-            this.resultList.refresh();
-        }
-
-        if (this.rankList === undefined) {
-            this.rankList = new List({
-                root: this.ui.rankList,
-                updateItemFunc: this.updateRankItem.bind(this),
-                count: Config.enemy.count + 1,
-                isStatic: true,
-            });
-        } else {
-            this.rankList.refresh();
-        }
+        this.refresh();
     }
 
     static onClickMainButton() {
         App.hideScene("GameResultScene");
         App.getScene("MapGameScene").pauseGame();
+        App.getScene("MapGameScene").settle();
         App.destroyScene("MapGameScene");
         App.showScene("MainScene");
     }
@@ -80,16 +54,14 @@ export default class GameResultScene extends Scene {
                 multiple = GameUtils.getBikeConfig("distancePercent");
                 break;
             }
-            case 2: {
-                name = "Coin";
-                originValue = this.args.coin;
-                multiple = GameUtils.getBikeConfig("coinPercent");
-                break;
-            }
+        }
+        let finalValue = originValue * multiple;
+        if (this.args.gameScene.doubleReward) {
+            finalValue *= 2;
         }
         item.children[0].text = `${App.getText(name)}\t${originValue}`;
-        item.children[1].text = `*${multiple}->`;
-        item.children[2].text = `${App.getText(name)}\t${Math.floor(originValue * multiple)}`;
+        item.children[1].text = `x${multiple}-> ${this.args.gameScene.doubleReward ? "x2" : ""}`;
+        item.children[2].text = `${App.getText(name)}\t${Math.floor(finalValue)}`;
     }
 
     updateRankItem(item, index) {
@@ -117,6 +89,56 @@ export default class GameResultScene extends Scene {
         item.children[1].text = name;
         item.children[2].text = App.getText("Score");
         item.children[3].text = value;
+    }
+
+    onClickAdvertDoubleButton() {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                this.args.gameScene.doubleReward = true;
+                this.refresh();
+            }
+        });
+    }
+
+    refresh() {
+        if (this.args.gameScene.doubleReward) {
+            this.ui.advertDoubleButton.visible = false;
+            this.ui.hasDoubleRewardText.visible = true;
+        } else {
+            this.ui.advertDoubleButton.visible = true;
+            this.ui.hasDoubleRewardText.visible = false;
+        }
+        let thisGameScore = Math.floor(Config.rankScore[this.args.rank] * GameUtils.getBikeConfig("scorePercent"));
+        if (this.args.gameScene.doubleReward) {
+            thisGameScore *= 2;
+        }
+        let totalScore = DataMgr.get(DataMgr.rankTotalScore, 0) + thisGameScore;
+        this.ui.totalScoreText.text = App.getText("${player} current rank total score: ${score}", {
+            player: DataMgr.getPlayerName(),
+            score: totalScore,
+        });
+
+        if (this.resultList === undefined) {
+            this.resultList = new List({
+                root: this.ui.resultList,
+                updateItemFunc: this.updateResultItem.bind(this),
+                count: 2,
+                isStatic: true,
+            });
+        } else {
+            this.resultList.refresh();
+        }
+
+        if (this.rankList === undefined) {
+            this.rankList = new List({
+                root: this.ui.rankList,
+                updateItemFunc: this.updateRankItem.bind(this),
+                count: Config.enemy.count + 1,
+                isStatic: true,
+            });
+        } else {
+            this.rankList.refresh();
+        }
     }
 }
 

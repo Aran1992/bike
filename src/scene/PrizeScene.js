@@ -32,6 +32,8 @@ export default class PrizeScene extends Scene {
     }
 
     onShow(rewards) {
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
+
         rewards.forEach(reward => {
             if (reward.rewardCoin) {
                 DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + reward.rewardCoin);
