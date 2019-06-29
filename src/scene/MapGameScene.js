@@ -328,6 +328,7 @@ export default class MapGameScene extends GameScene {
         let score = Math.floor(Config.rankScore[this.rank] * GameUtils.getBikeConfig("scorePercent"));
         if (this.doubleReward) {
             score *= 2;
+            distance *= 2;
         }
         DataMgr.add(DataMgr.distance, distance);
         DataMgr.add(DataMgr.rankDistance, distance);
