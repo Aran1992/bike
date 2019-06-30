@@ -60,7 +60,7 @@ export default class GameResultScene extends Scene {
             finalValue *= 2;
         }
         item.children[0].text = `${App.getText(name)}\t${originValue}`;
-        item.children[1].text = `x${multiple}-> ${this.args.gameScene.doubleReward ? "x2" : ""}`;
+        item.children[1].text = `x${multiple}${this.args.gameScene.doubleReward ? " x2" : ""}->`;
         item.children[2].text = `${App.getText(name)}\t${Math.floor(finalValue)}`;
     }
 

@@ -16,8 +16,9 @@ export default class GameOverScene extends Scene {
 
         this.onClick(this.ui.mainButton, GameOverScene.onClickMainButton);
         this.onClick(this.ui.restartButton, GameOverScene.onClickRestartButton);
-        this.onClick(this.ui.rebornButton, GameOverScene.onClickRebornButton);
+        this.onClick(this.ui.advertRebornButton, GameOverScene.onClickAdvertRebornButton);
         this.onClick(this.ui.diamondRebornButton, GameOverScene.onClickDiamondRebornButton);
+        this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
         this.ui.diamondRebornCostText.text = Config.diamondRebornCost;
     }
@@ -27,8 +28,87 @@ export default class GameOverScene extends Scene {
 
         this.args = args;
 
+        this.refresh();
+    }
+
+    updateResultItem(item, index) {
+        let name = "";
+        let originValue = 0;
+        let multiple = 0;
+        switch (index) {
+            case 0: {
+                name = "Distance";
+                originValue = Math.floor(this.args.distance);
+                multiple = GameUtils.getBikeConfig("distancePercent");
+                break;
+            }
+            case 1: {
+                name = "Coin";
+                originValue = this.args.coin;
+                multiple = GameUtils.getBikeConfig("coinPercent");
+                break;
+            }
+        }
+        let finalValue = originValue * multiple;
+        if (this.args.gameScene.doubleReward) {
+            finalValue *= 2;
+        }
+        item.children[0].text = `${App.getText(name)}\t${originValue}`;
+        item.children[1].text = `x${multiple}${this.args.gameScene.doubleReward ? " x2" : ""}->`;
+        item.children[2].text = `${App.getText(name)}\t${Math.floor(finalValue)}`;
+    }
+
+    static onClickMainButton() {
+        App.getScene("EndlessGameScene").settle();
+        App.hideScene("GameOverScene");
+        App.destroyScene("EndlessGameScene");
+        App.showScene("MainScene");
+    }
+
+    static onClickRestartButton() {
+        App.getScene("EndlessGameScene").settle();
+        App.hideScene("GameOverScene");
+        EventMgr.dispatchEvent("Restart");
+    }
+
+    static onClickAdvertRebornButton() {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                this.args.gameScene.rebornTimes++;
+                App.hideScene("GameOverScene");
+                EventMgr.dispatchEvent("Reborn");
+            }
+        });
+    }
+
+    static onClickDiamondRebornButton() {
+        let diamond = DataMgr.get(DataMgr.diamond, 0);
+        if (diamond >= Config.diamondRebornCost) {
+            diamond -= Config.diamondRebornCost;
+            DataMgr.set(DataMgr.diamond, diamond);
+            this.args.gameScene.rebornTimes++;
+            App.hideScene("GameOverScene");
+            EventMgr.dispatchEvent("Reborn");
+        } else {
+            App.showNotice(App.getText("DiamondIsNotEnough"));
+        }
+    }
+
+    onClickAdvertDoubleButton() {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                this.args.gameScene.doubleReward = true;
+                this.refresh();
+            }
+        });
+    }
+
+    refresh() {
         let record = DataMgr.get(DataMgr.rankDistanceRecord, 0);
-        let finalDistance = Math.floor(args.distance * GameUtils.getBikeConfig("distancePercent"));
+        let finalDistance = Math.floor(this.args.distance * GameUtils.getBikeConfig("distancePercent"));
+        if (this.args.gameScene.doubleReward) {
+            finalDistance *= 2;
+        }
         if (finalDistance === record) {
             this.ui.recordText.text = App.getText("${player} Record: ${record}m", {
                 player: DataMgr.getPlayerName(),
@@ -68,66 +148,13 @@ export default class GameOverScene extends Scene {
             });
         }
 
-        this.ui.diamondRebornButton.visible = false;
-        this.ui.rebornButton.visible = false;
-        if (this.args.diamondReborn) {
-            this.ui.diamondRebornButton.visible = true;
-        } else {
-            this.ui.rebornButton.visible = true;
-        }
-    }
+        this.ui.hasDoubleRewardText.visible = !!this.args.gameScene.doubleReward;
+        this.ui.advertDoubleButton.visible = !this.args.gameScene.doubleReward;
 
-    updateResultItem(item, index) {
-        let name = "";
-        let originValue = 0;
-        let multiple = 0;
-        switch (index) {
-            case 0: {
-                name = "Distance";
-                originValue = Math.floor(this.args.distance);
-                multiple = GameUtils.getBikeConfig("distancePercent");
-                break;
-            }
-            case 1: {
-                name = "Coin";
-                originValue = this.args.coin;
-                multiple = GameUtils.getBikeConfig("coinPercent");
-                break;
-            }
-        }
-        item.children[0].text = `${App.getText(name)}\t${originValue}`;
-        item.children[1].text = `*${multiple}->`;
-        item.children[2].text = `${App.getText(name)}\t${Math.floor(originValue * multiple)}`;
-    }
-
-    static onClickMainButton() {
-        App.getScene("EndlessGameScene").settle();
-        App.hideScene("GameOverScene");
-        App.destroyScene("EndlessGameScene");
-        App.showScene("MainScene");
-    }
-
-    static onClickRestartButton() {
-        App.getScene("EndlessGameScene").settle();
-        App.hideScene("GameOverScene");
-        EventMgr.dispatchEvent("Restart");
-    }
-
-    static onClickRebornButton() {
-        App.hideScene("GameOverScene");
-        EventMgr.dispatchEvent("Reborn");
-    }
-
-    static onClickDiamondRebornButton() {
-        let diamond = DataMgr.get(DataMgr.diamond, 0);
-        if (diamond >= Config.diamondRebornCost) {
-            diamond -= Config.diamondRebornCost;
-            DataMgr.set(DataMgr.diamond, diamond);
-            App.hideScene("GameOverScene");
-            EventMgr.dispatchEvent("Reborn");
-        } else {
-            App.showNotice(App.getText("DiamondIsNotEnough"));
-        }
+        let a = this.args.gameScene.rebornTimes < Config.rebornTimes;
+        this.ui.advertRebornButton.visible = a;
+        this.ui.diamondRebornButton.visible = a;
+        this.ui.hasNoRebornTimesText.visible = !a;
     }
 }
 

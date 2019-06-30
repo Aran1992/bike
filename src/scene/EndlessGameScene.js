@@ -21,7 +21,6 @@ export default class EndlessGameScene extends GameScene {
         this.nextDistanceIndex = 0;
         let config = this.sceneConfig.distanceNotice;
         this.nextNoticeDistance = config && config[this.nextDistanceIndex];
-        this.diamondReborn = false;
         super.onShow();
     }
 
@@ -178,9 +177,8 @@ export default class EndlessGameScene extends GameScene {
         App.showScene("GameOverScene", {
             distance: Math.floor(this.distance),
             coin: this.coin,
-            diamondReborn: this.diamondReborn
+            gameScene: this
         });
-        this.diamondReborn = true;
     }
 
     onDead() {

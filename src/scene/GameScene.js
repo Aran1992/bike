@@ -90,6 +90,7 @@ export default class GameScene extends Scene {
 
     onShow() {
         this.doubleReward = false;
+        this.rebornTimes = 0;
         this.ui.blockSightSprite.visible = false;
 
         clearTimeout(this.deadCompleteTimer);
@@ -1388,9 +1389,13 @@ export default class GameScene extends Scene {
     }
 
     settle() {
-        let coin = DataMgr.get(DataMgr.coin, 0) + Math.floor(this.coin * GameUtils.getBikeConfig("coinPercent"));
-        DataMgr.set(DataMgr.coin, coin);
+        let coin = Math.floor(this.coin * GameUtils.getBikeConfig("coinPercent"));
         let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
+        if (this.doubleReward) {
+            coin *= 2;
+            distance *= 2;
+        }
+        DataMgr.add(DataMgr.coin, coin);
         DataMgr.add(DataMgr.distance, distance);
         DataMgr.add(DataMgr.rankDistance, distance);
         DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);

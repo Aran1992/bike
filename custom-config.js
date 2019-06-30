@@ -9659,4 +9659,7 @@ Config.signRewardList = [
 // 每天广告扭蛋的次数
 Config.advertDrawBikeTime = 3;
 
+// 每局能够进行的复活总次数（包括广告和钻石）
+Config.rebornTimes = 3;
+
 export default Config;
