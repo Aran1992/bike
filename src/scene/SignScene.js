@@ -25,9 +25,7 @@ export default class SignScene extends Scene {
     onShow() {
         let index = DataMgr.get(DataMgr.receivedSignReward, -1) + 1;
         let reward = Config.signRewardList[index];
-        if (reward === undefined) {
-            this.ui.advertButton.visible = false;
-        }
+        this.ui.advertButton.visible = reward !== undefined && OnlineMgr.isSignRewardReceivable(index);
         this.list.refresh();
         this.updateItem7();
     }
@@ -112,6 +110,7 @@ export default class SignScene extends Scene {
                         App.hideScene("SignScene");
                         App.getScene("MainScene").hideSignScene();
                     }
+                    this.onShow();
                 }
             });
         } else {
