@@ -41,6 +41,8 @@ export default class MyApplication extends Application {
 
         window.App = this;
 
+        this.realWidth = args.width;
+
         let wwhRatio = args.width / args.height;
         let dwhRatio = Config.designWidth / Config.designHeight;
         if (wwhRatio >= dwhRatio) {

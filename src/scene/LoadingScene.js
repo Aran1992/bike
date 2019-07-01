@@ -48,7 +48,8 @@ export default class LoadingScene extends Scene {
         );
         graphics.endFill();
         this.ui.percentImage.mask = graphics;
-        this.bikeSprite.setPosition(pos.x + width, pos.y);
+        console.log(App.realWidth, App.sceneWidth);
+        this.bikeSprite.setPosition(pos.x + width - (App.realWidth - App.sceneWidth) / 2, pos.y);
     }
 
     onAnimationFrame() {
