@@ -6,7 +6,6 @@ import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
 import RunOption from "../../run-option";
 import DataMgr from "../mgr/DataMgr";
-import SceneHelper from "../mgr/SceneHelper";
 import NetworkMgr from "../mgr/NetworkMgr";
 import MusicMgr from "../mgr/MusicMgr";
 
@@ -22,6 +21,10 @@ export default class MapGameScene extends GameScene {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
         super.onShow();
+
+        this.args.gameScene.rebornTimes++;
+        App.hideScene("GameOverScene");
+        TDGA.onEvent("竞技模式");
     }
 
     initEnvironment() {

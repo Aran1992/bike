@@ -35,6 +35,7 @@
     "App": true,
     "canvas": false,
     "wx": false,
-    "FBInstant": false
+    "FBInstant": false,
+    "TDGA": false
   }
 }

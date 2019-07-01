@@ -74,9 +74,8 @@ export default class GameOverScene extends Scene {
     onClickAdvertRebornButton() {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                this.args.gameScene.rebornTimes++;
-                App.hideScene("GameOverScene");
-                EventMgr.dispatchEvent("Reborn");
+                this.reborn();
+                TDGA.onEvent("广告无尽模式复活");
             }
         });
     }
@@ -86,9 +85,7 @@ export default class GameOverScene extends Scene {
         if (diamond >= Config.diamondRebornCost) {
             diamond -= Config.diamondRebornCost;
             DataMgr.set(DataMgr.diamond, diamond);
-            this.args.gameScene.rebornTimes++;
-            App.hideScene("GameOverScene");
-            EventMgr.dispatchEvent("Reborn");
+            this.reborn();
         } else {
             App.showNotice(App.getText("DiamondIsNotEnough"));
         }
@@ -99,6 +96,7 @@ export default class GameOverScene extends Scene {
             if (success) {
                 this.args.gameScene.doubleReward = true;
                 this.refresh();
+                TDGA.onEvent("广告无尽模式双倍");
             }
         });
     }
@@ -155,6 +153,13 @@ export default class GameOverScene extends Scene {
         this.ui.advertRebornButton.visible = a;
         this.ui.diamondRebornButton.visible = a;
         this.ui.hasNoRebornTimesText.visible = !a;
+    }
+
+    reborn() {
+        this.args.gameScene.rebornTimes++;
+        App.hideScene("GameOverScene");
+        EventMgr.dispatchEvent("Reborn");
+        TDGA.onEvent("无尽模式复活");
     }
 }
 

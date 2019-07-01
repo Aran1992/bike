@@ -3,7 +3,6 @@ import GameScene from "./GameScene";
 import {resources, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
-import SceneHelper from "../mgr/SceneHelper";
 import {Vec2} from "../libs/planck-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 
@@ -22,6 +21,7 @@ export default class EndlessGameScene extends GameScene {
         let config = this.sceneConfig.distanceNotice;
         this.nextNoticeDistance = config && config[this.nextDistanceIndex];
         super.onShow();
+        TDGA.onEvent("无尽模式");
     }
 
     initEnvironment() {
