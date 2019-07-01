@@ -9,26 +9,6 @@ function getValue(value, defaultValue) {
     }
 }
 
-function loadSceneRes(pathList, callback) {
-    let resPathList = [];
-    if (typeof (pathList) === "string") {
-        pathList = [pathList];
-    }
-    let handle = item => {
-        if (item.props.skin) {
-            resPathList.push(`myLaya/laya/assets/${item.props.skin}`);
-        }
-        if (item.props.runtime) {
-            resPathList.push(item.props.runtime.replace("../", "myLaya/"));
-        }
-        item.child.forEach(item => handle(item));
-    };
-    pathList.forEach(path => {
-        handle(resources[path].data);
-    });
-    App.loadResources(resPathList, callback);
-}
-
 function createScene(path, sceneContainer) {
     let sceneData = resources[path].data;
     sceneContainer.mywidth = App.sceneWidth;
@@ -391,5 +371,5 @@ function getPanelBaseInfo(child, parent, defaultInfo) {
     };
 }
 
-export default {createScene, loadSceneRes};
+export default {createScene};
 

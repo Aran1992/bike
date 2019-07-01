@@ -52,15 +52,11 @@ export default class MapGameScene extends GameScene {
             ]);
     }
 
-    onLoadedBaseRes() {
+    onLoadedGameRes() {
         NetworkMgr.requestRandomPlayerInfo(Config.enemy.count, enemyInfoList => {
             this.enemyInfoList = enemyInfoList;
-            SceneHelper.loadSceneRes(Config.mapBasePath + this.mapConfig.scenePath + ".scene.json", this.onLoadedGameRes.bind(this));
+            super.onLoadedGameRes();
         });
-    }
-
-    onLoadedGameRes() {
-        super.onLoadedGameRes();
         MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
             MusicMgr.playBGM(this.bgmPath, true);
         });

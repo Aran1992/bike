@@ -66,10 +66,6 @@ export default class EndlessGameScene extends GameScene {
             .concat(this.sceneFilePathList);
     }
 
-    onLoadedBaseRes() {
-        SceneHelper.loadSceneRes(this.sceneFilePathList, this.onLoadedGameRes.bind(this), true);
-    }
-
     onRestart() {
         this.onShow(this.sceneIndex);
     }

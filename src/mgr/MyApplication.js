@@ -33,6 +33,7 @@ import GiftScene from "../scene/GiftScene";
 import PrizeScene from "../scene/PrizeScene";
 import SignScene from "../scene/SignScene";
 import HelpHomeScene from "../scene/HelpHomeScene";
+import LoadingScene from "../scene/LoadingScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -91,6 +92,7 @@ export default class MyApplication extends Application {
             "PrizeScene": PrizeScene,
             "SignScene": SignScene,
             "HelpHomeScene": HelpHomeScene,
+            "LoadingScene": LoadingScene,
         };
 
         this.sceneTable = {};
@@ -126,11 +128,14 @@ export default class MyApplication extends Application {
         }
     }
 
-    loadResources(resPathList, onLoadedCallback) {
+    loadResources(resPathList, onLoadedCallback, onProgressCallback, minLoadTime = 0, count = 0) {
+        let start = new Date().getTime();
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined && !MusicMgr.hasLoadedAudio(path));
         this.loadList = resPathList.map(path => [path, false]);
-        this.loadScene.visible = true;
+        if (onProgressCallback === undefined) {
+            this.loadScene.visible = true;
+        }
         this.updateLoadText();
         let commonResPathList = [];
         let audioResPathList = [];
@@ -148,10 +153,17 @@ export default class MyApplication extends Application {
             if (isMusicLoaded && isCommonLoaded) {
                 this.onLoadEnded();
                 let list = this.parsePrefabDependRes(commonResPathList);
+                let end = new Date().getTime();
+                let remain = minLoadTime - (end - start);
                 if (list.length !== 0) {
-                    this.loadResources(list, onLoadedCallback);
+                    this.loadResources(list, onLoadedCallback, onProgressCallback, remain, count + 1);
                 } else {
-                    onLoadedCallback();
+                    if (remain <= 0) {
+                        onLoadedCallback();
+                    } else {
+                        onProgressCallback(100);
+                        setTimeout(onLoadedCallback, remain);
+                    }
                 }
             }
         };
@@ -162,7 +174,14 @@ export default class MyApplication extends Application {
         });
         loader
             .add(commonResPathList)
-            .on("progress", this.onLoadProgress.bind(this))
+            .on("progress", (loader, resource) => {
+                let item = this.loadList.find(item => resource.url === item[0]);
+                if (item) {
+                    item[1] = true;
+                    this.updateLoadText();
+                }
+                onProgressCallback && onProgressCallback(this.calcLoadProgress(count, this.loadList));
+            })
             .load(() => {
                 isCommonLoaded = true;
                 onLoadedResource();
@@ -224,18 +243,14 @@ export default class MyApplication extends Application {
     }
 
     updateLoadText() {
-        // this.loadText.text = this.loadList.map(item => {
-        //     return `${item[0]}:${item[1] ? "loaded" : "loading"}`;
-        // }).join("\n");
+        // this.loadText.text = this.loadList.map(item => `${item[0]}:${item[1] ? "loaded" : "loading"}`).join("\n");
         this.loadText.text = `${Math.floor(this.loadList.reduce((sum, item) => sum + (item[1] ? 1 : 0), 0) / this.loadList.length * 100)}%`;
     }
 
-    onLoadProgress(loader, resource) {
-        let item = this.loadList.find(item => resource.url === item[0]);
-        if (item) {
-            item[1] = true;
-            this.updateLoadText();
-        }
+    calcLoadProgress(count, loadList) {
+        let f = x => x === 0 ? 0 : (100 - f(x - 1)) / 2 + f(x - 1);
+        let start = f(count);
+        return start + (100 - start) / 2 * loadList.reduce((sum, item) => sum + (item[1] ? 1 : 0), 0) / loadList.length;
     }
 
     onLoadEnded() {
@@ -322,3 +337,31 @@ export default class MyApplication extends Application {
         };
     }
 }
+
+function x(plist, callback) {
+    load(plist, () => {
+        let newplist = parse(res);
+        if (newplist) {
+            x(plist, callback);
+        } else {
+            callback();
+        }
+    });
+}
+
+function loadResources(plist, callback, progressCallback) {
+    load(plist, () => {
+        let newplist = parse(result);
+        if (newplist) {
+            load(plist, () => {
+            });
+        } else {
+            callback();
+        }
+    }, () => {
+        progressCallback(res);
+    });
+}
+
+// 第一遍加载就是百分之五十 第二遍加载就是百分之七十五 第三遍加载就是百分之87.5
+// 总只要有一个总的加载进度

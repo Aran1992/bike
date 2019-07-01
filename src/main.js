@@ -1,5 +1,7 @@
 import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
+import LoadingScene from "./scene/LoadingScene";
+import GameScene from "./scene/GameScene";
 
 export function main(callback) {
     let width;
@@ -23,5 +25,5 @@ export function main(callback) {
         view: canvas,
     });
 
-    App.loadResources([Config.i18nPath,], callback);
+    App.loadResources([Config.i18nPath, LoadingScene.sceneFilePath, GameScene.sceneFilePath], callback);
 }

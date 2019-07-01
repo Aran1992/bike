@@ -9662,4 +9662,10 @@ Config.advertDrawBikeTime = 3;
 // 每局能够进行的复活总次数（包括广告和钻石）
 Config.rebornTimes = 3;
 
+// 进入关卡的最短加载时间（单位：秒）
+Config.minLoadingTime = 2;
+
+// 进入关卡前的加载界面的提示数量
+Config.tipCount = 9;
+
 export default Config;

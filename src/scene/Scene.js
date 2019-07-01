@@ -38,11 +38,7 @@ export default class Scene extends Container {
         if (this.__proto__.constructor.resPathList) {
             resPathList = resPathList.concat(this.__proto__.constructor.resPathList);
         }
-        App.loadResources(resPathList, this.onLoadedSceneFile.bind(this));
-    }
-
-    onLoadedSceneFile() {
-        SceneHelper.loadSceneRes(this.sceneFilePath, this.onLoadedAllRes.bind(this));
+        App.loadResources(resPathList, this.onLoadedAllRes.bind(this));
     }
 
     onLoadedAllRes() {

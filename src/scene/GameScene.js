@@ -140,7 +140,20 @@ export default class GameScene extends Scene {
 
         this.rewards = DataMgr.get(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
 
-        App.loadResources(this.getResPathList(), this.onLoadedBaseRes.bind(this));
+        App.showScene("LoadingScene", this.getBikeID());
+        App.loadResources(this.getResPathList(), this.onLoadedGameRes.bind(this), (percent) => {
+            App.getScene("LoadingScene").goToPercent(percent);
+        }, Config.minLoadingTime * 1000);
+    }
+
+    getBikeID() {
+        let id;
+        if (this.rewards[2].received) {
+            id = this.rewards[2].bike;
+        } else {
+            id = DataMgr.get(DataMgr.selectedBike, 0);
+        }
+        return id;
     }
 
     onHide() {
@@ -216,6 +229,8 @@ export default class GameScene extends Scene {
     }
 
     onLoadedGameRes() {
+        window.App.hideScene("LoadingScene");
+
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
         this.world.on("begin-contact", this.onBeginContact.bind(this));
@@ -728,12 +743,7 @@ export default class GameScene extends Scene {
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.upBikeContainer = this.bikeSelfContainer.addChild(new Container());
 
-        let id;
-        if (this.rewards[2].received) {
-            id = this.rewards[2].bike;
-        } else {
-            id = DataMgr.get(DataMgr.selectedBike, 0);
-        }
+        let id = this.getBikeID();
         let config = Config.bikeList.find(config => config.id === id);
         this.bikeDecorateSprite = new Sprite(resources[config.imagePath].texture);
         this.bikeSprite.addChild(this.bikeDecorateSprite);
