@@ -30,20 +30,24 @@ export default class ShopScene extends Scene {
             },
         ];
         this.panelList.forEach(panelMgr => panelMgr.panel.visible = false);
+        this.infoList = ["Coin", "Diamond", "Map",];
         this.radio = new Radio({
             root: this.ui.tab,
             initItemFunc: this.initRadioButton.bind(this),
             clickButtonFunc: this.onClickRadio.bind(this),
-            infoList: ["Coin", "Diamond", "Map",],
+            infoList: this.infoList,
             buttonDistance: 100
         });
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
     }
 
-    onShow() {
+    onShow(tab) {
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         this.onClickRadio(this.radio.selectedIndex);
+        if (tab && this.infoList.indexOf(tab) !== -1) {
+            this.radio.select(this.infoList.indexOf(tab));
+        }
     }
 
     onClickReturnButton() {

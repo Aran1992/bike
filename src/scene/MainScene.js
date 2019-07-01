@@ -20,6 +20,8 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
         this.onClick(this.ui.rankButton, this.onClickRankButton.bind(this));
         this.onClick(this.ui.giftButton, this.onClickGiftButton.bind(this));
+        this.onClick(this.ui.addDiamondButton, this.onClickAddDiamondButton.bind(this));
+        this.onClick(this.ui.addCoinButton, this.onClickAddCoinButton.bind(this));
         this.ui.signButton.visible = OnlineMgr.hasSignReward();
         this.onClick(this.ui.signButton, this.onClickSignButton.bind(this));
         if (window.PlatformHelper.canLogout) {
@@ -177,6 +179,14 @@ export default class MainScene extends Scene {
 
     hideSignScene() {
         this.ui.signButton.visible = false;
+    }
+
+    onClickAddDiamondButton() {
+        App.showScene("ShopScene", "Diamond");
+    }
+
+    onClickAddCoinButton() {
+        App.showScene("ShopScene", "Coin");
     }
 }
 

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":77,
+    "selectedBox":4,
+    "selecteID":85,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -50,13 +50,14 @@
             "props":{"width":720,"top":0,"skin":"images/bg-7.png","right":0,"left":0,"height":150},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0},
@@ -69,6 +70,7 @@
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -81,6 +83,7 @@
                             "compId":56,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":5,"skin":"images/icon-diamond.png","scaleY":1.7,"scaleX":1.7,"centerY":2},
@@ -96,6 +99,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
                             "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -109,11 +113,12 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
-                            "searchKey":"Image,Button",
-                            "props":{"skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"name":"Button","centerY":-3},
+                            "searchKey":"Image,addDiamondButton",
+                            "props":{"var":"addDiamondButton","skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"centerY":-3},
                             "nodeParent":3,
-                            "label":"Button",
+                            "label":"addDiamondButton",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -124,6 +129,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":5,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":240},
@@ -136,6 +142,7 @@
                     "compId":4,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -148,6 +155,7 @@
                             "compId":58,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-coin.png","scaleY":1,"scaleX":1},
@@ -163,6 +171,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
                             "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -176,11 +185,12 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
-                            "searchKey":"Image,Button",
-                            "props":{"y":0,"x":0,"skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"name":"Button","centerY":-3},
+                            "searchKey":"Image,addCoinButton",
+                            "props":{"y":0,"x":0,"var":"addCoinButton","skin":"images/plus.png","scaleY":2,"scaleX":2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"centerY":-3},
                             "nodeParent":4,
-                            "label":"Button",
+                            "label":"addCoinButton",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -191,6 +201,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":75,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0},
@@ -244,6 +255,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":75,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":240},
@@ -297,6 +309,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"x":56,"var":"userImage","top":5,"skin":"images/UserIconDefault.png"},
@@ -309,6 +322,7 @@
                     "compId":60,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,userNameText",
                             "props":{"var":"userNameText","text":"Player","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":0},
