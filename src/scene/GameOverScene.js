@@ -16,8 +16,8 @@ export default class GameOverScene extends Scene {
 
         this.onClick(this.ui.mainButton, GameOverScene.onClickMainButton);
         this.onClick(this.ui.restartButton, GameOverScene.onClickRestartButton);
-        this.onClick(this.ui.advertRebornButton, GameOverScene.onClickAdvertRebornButton);
-        this.onClick(this.ui.diamondRebornButton, GameOverScene.onClickDiamondRebornButton);
+        this.onClick(this.ui.advertRebornButton, this.onClickAdvertRebornButton.bind(this));
+        this.onClick(this.ui.diamondRebornButton, this.onClickDiamondRebornButton.bind(this));
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
         this.ui.diamondRebornCostText.text = Config.diamondRebornCost;
@@ -71,7 +71,7 @@ export default class GameOverScene extends Scene {
         EventMgr.dispatchEvent("Restart");
     }
 
-    static onClickAdvertRebornButton() {
+    onClickAdvertRebornButton() {
         window.PlatformHelper.showAd(success => {
             if (success) {
                 this.args.gameScene.rebornTimes++;
@@ -81,7 +81,7 @@ export default class GameOverScene extends Scene {
         });
     }
 
-    static onClickDiamondRebornButton() {
+    onClickDiamondRebornButton() {
         let diamond = DataMgr.get(DataMgr.diamond, 0);
         if (diamond >= Config.diamondRebornCost) {
             diamond -= Config.diamondRebornCost;
