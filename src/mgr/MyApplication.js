@@ -32,6 +32,7 @@ import PreparationScene from "../scene/PreparationScene";
 import GiftScene from "../scene/GiftScene";
 import PrizeScene from "../scene/PrizeScene";
 import SignScene from "../scene/SignScene";
+import HelpHomeScene from "../scene/HelpHomeScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -89,6 +90,7 @@ export default class MyApplication extends Application {
             "GiftScene": GiftScene,
             "PrizeScene": PrizeScene,
             "SignScene": SignScene,
+            "HelpHomeScene": HelpHomeScene,
         };
 
         this.sceneTable = {};

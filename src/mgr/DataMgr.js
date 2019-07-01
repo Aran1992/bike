@@ -281,5 +281,6 @@ DataMgr.nextResetTime = "33";
 DataMgr.onlineTime = "34";
 DataMgr.receivedSignReward = "35";
 DataMgr.drawAdvertTimes = "36";
+DataMgr.hasShowHomeHelpScene = "37";
 
 export default DataMgr;

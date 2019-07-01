@@ -2,7 +2,6 @@ import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import OnlineMgr from "../mgr/OnlineMgr";
-import EventMgr from "../mgr/EventMgr";
 import {Graphics} from "../libs/pixi-wrapper";
 
 export default class GiftScene extends Scene {

@@ -36,6 +36,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.commonItemBtn, this.onClickCommonItemBtn.bind(this));
         this.onClick(this.ui.lockedItemBtn, this.onClickLockedItemBtn.bind(this));
         this.onClick(this.ui.returnRankBtn, HomeScene.onClickReturnRankButton);
+        this.onClick(this.ui.homeHelpButton, HomeScene.onClickHomeHelpButton);
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
 
         this.ui.showUIBtn.visible = false;
@@ -106,6 +107,10 @@ export default class HomeScene extends Scene {
     }
 
     onShow({bgID, floorID, spoilsList, petsList}, isSelf = true) {
+        if (!DataMgr.get(DataMgr.hasShowHomeHelpScene, false)) {
+            App.showScene("HelpHomeScene");
+            DataMgr.set(DataMgr.hasShowHomeHelpScene, true);
+        }
         this.selectedBgID = bgID;
         this.bgIndex = Config.home.backgrounds.findIndex(item => item.id === bgID);
         let bgConfig = Config.home.backgrounds[this.bgIndex];
@@ -704,6 +709,10 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
                 break;
             }
         }
+    }
+
+    static onClickHomeHelpButton() {
+        App.showScene("HelpHomeScene");
     }
 }
 
