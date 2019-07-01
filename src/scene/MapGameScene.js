@@ -21,9 +21,6 @@ export default class MapGameScene extends GameScene {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
         super.onShow();
-
-        this.args.gameScene.rebornTimes++;
-        App.hideScene("GameOverScene");
         TDGA.onEvent("竞技模式");
     }
 
