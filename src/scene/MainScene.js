@@ -1,7 +1,7 @@
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
-import {resources, Texture} from "../libs/pixi-wrapper";
+import { resources, Texture } from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
@@ -182,10 +182,12 @@ export default class MainScene extends Scene {
     }
 
     onClickAddDiamondButton() {
+        App.hideScene("MainScene");
         App.showScene("ShopScene", "Diamond");
     }
 
     onClickAddCoinButton() {
+        App.hideScene("MainScene");
         App.showScene("ShopScene", "Coin");
     }
 }
