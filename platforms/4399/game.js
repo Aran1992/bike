@@ -1,6 +1,7 @@
 import {main} from "../../src/main";
 import NetworkMgr from "../../src/mgr/NetworkMgr";
 import * as md5 from "md5";
+import MusicMgr from "../../src/mgr/MusicMgr";
 
 window.PlatformHelper = {
     canLogout: false,
@@ -8,7 +9,22 @@ window.PlatformHelper = {
         window.H5API.callPlayAd(data => {
             if (data.canPlayAd) {
                 window.H5API.playAd(data => {
-                    callback(data.code === 10001);
+                    switch (data.code) {
+                        case 10000: {
+                            MusicMgr.muteBGM(true);
+                            break;
+                        }
+                        case 10001: {
+                            MusicMgr.muteBGM(false);
+                            callback(true);
+                            break;
+                        }
+                        case 10010: {
+                            MusicMgr.muteBGM(false);
+                            callback(false);
+                            break;
+                        }
+                    }
                 });
             } else {
                 callback(true);
