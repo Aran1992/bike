@@ -15,6 +15,7 @@ export default class MapGameScene extends GameScene {
         this.ui.surrenderButton.visible = true;
         this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
         this.ui.matchRacetrack.visible = true;
+        this.ui.coinPanel.visible = false;
     }
 
     onShow(mapIndex) {
