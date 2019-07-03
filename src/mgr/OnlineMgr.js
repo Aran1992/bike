@@ -31,8 +31,9 @@ class OnlineMgr_ {
                     if (oldMinutes !== newMinutes) {
                         DataMgr.set(DataMgr.remainGiftOnlineMinutes, newMinutes);
                     }
-                    if (this.giftRemainTime === 0) {
+                    if (this.giftRemainTime <= 0) {
                         clearInterval(this.giftCountDownTimer);
+                        DataMgr.set(DataMgr.remainGiftOnlineMinutes, 0);
                     }
                 }, 1000);
             }
