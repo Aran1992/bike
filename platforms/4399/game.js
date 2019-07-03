@@ -2,6 +2,7 @@ import {main} from "../../src/main";
 import NetworkMgr from "../../src/mgr/NetworkMgr";
 import * as md5 from "md5";
 import MusicMgr from "../../src/mgr/MusicMgr";
+import DataMgr from "../../src/mgr/DataMgr";
 
 window.PlatformHelper = {
     canLogout: false,
@@ -15,12 +16,16 @@ window.PlatformHelper = {
                             break;
                         }
                         case 10001: {
-                            MusicMgr.muteBGM(false);
+                            if (DataMgr.get(DataMgr.bgmOn, true)) {
+                                MusicMgr.muteBGM(false);
+                            }
                             callback(true);
                             break;
                         }
                         case 10010: {
-                            MusicMgr.muteBGM(false);
+                            if (DataMgr.get(DataMgr.bgmOn, true)) {
+                                MusicMgr.muteBGM(false);
+                            }
                             callback(false);
                             break;
                         }
