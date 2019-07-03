@@ -8,13 +8,20 @@ window.PlatformHelper = {
         window.H5API.callPlayAd(data => {
             if (data.canPlayAd) {
                 window.H5API.playAd(data => {
-                    callback(data.code === 10000);
+                    callback(data.code === 10001);
                 });
             } else {
                 callback(true);
             }
         });
     },
+    closeLogoScene() {
+        if (window.logoScene && window.logoScene.parentNode) {
+            setTimeout(() => {
+                window.logoScene.parentNode.removeChild(window.logoScene);
+            }, 2);
+        }
+    }
 };
 
 const CALLBACK_KEY = "36ffbe82a8c58d24237b42a91c7f6cc3";

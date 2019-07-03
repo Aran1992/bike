@@ -66,7 +66,7 @@ export default class MainScene extends Scene {
         this.ui.userImage.children[0].texture = Texture.from(DataMgr.get(DataMgr.headurl, Config.defaultEnemyHeadImagePath));
         this.ui.userNameText.text = DataMgr.getPlayerName();
 
-        GameUtils.closeLogoScene && GameUtils.closeLogoScene();
+        window.PlatformHelper.closeLogoScene();
     }
 
     onHide() {

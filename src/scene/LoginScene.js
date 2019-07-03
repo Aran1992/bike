@@ -18,7 +18,7 @@ export default class LoginScene extends Scene {
     onShow() {
         this.ui.usernameInput.text = "";
         this.ui.passwordInput.text = "";
-        GameUtils.closeLogoScene && GameUtils.closeLogoScene();
+        window.PlatformHelper.closeLogoScene();
     }
 
     onClickLoginBtn() {

@@ -108,6 +108,9 @@ class OnlineMgr_ {
     }
 
     isSignRewardReceivable(index) {
+        if (index === 0) {
+            return true;
+        }
         let createTime = new Date(DataMgr.createTime);
         createTime.setMilliseconds(0);
         createTime.setSeconds(0);
