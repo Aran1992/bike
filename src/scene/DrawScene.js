@@ -36,7 +36,10 @@ export default class DrawScene extends Scene {
 
     onShow() {
         this.onTick();
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
     }
 
     onHide() {

@@ -5,7 +5,6 @@ import { resources, Texture } from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
-import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
 

@@ -42,8 +42,7 @@ export default class ShopScene extends Scene {
     }
 
     onShow(tab) {
-        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
-        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
+        this.onRefreshRankData();
         this.onClickRadio(this.radio.selectedIndex);
         if (tab && this.infoList.indexOf(tab) !== -1) {
             this.radio.select(this.infoList.indexOf(tab));
@@ -419,6 +418,8 @@ export default class ShopScene extends Scene {
     }
 
     onRefreshRankData() {
+        this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
+        this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
     }

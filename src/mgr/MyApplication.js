@@ -339,31 +339,3 @@ export default class MyApplication extends Application {
         };
     }
 }
-
-function x(plist, callback) {
-    load(plist, () => {
-        let newplist = parse(res);
-        if (newplist) {
-            x(plist, callback);
-        } else {
-            callback();
-        }
-    });
-}
-
-function loadResources(plist, callback, progressCallback) {
-    load(plist, () => {
-        let newplist = parse(result);
-        if (newplist) {
-            load(plist, () => {
-            });
-        } else {
-            callback();
-        }
-    }, () => {
-        progressCallback(res);
-    });
-}
-
-// 第一遍加载就是百分之五十 第二遍加载就是百分之七十五 第三遍加载就是百分之87.5
-// 总只要有一个总的加载进度

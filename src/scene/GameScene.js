@@ -141,7 +141,11 @@ export default class GameScene extends Scene {
         this.rewards = DataMgr.get(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
 
         App.showScene("LoadingScene", this.getBikeID());
-        App.loadResources(this.getResPathList(), this.onLoadedGameRes.bind(this), (percent) => {
+        App.loadResources(this.getResPathList(), () => {
+            App.getScene("LoadingScene").goToPercent(100, () => {
+                this.onLoadedGameRes();
+            });
+        }, (percent) => {
             App.getScene("LoadingScene").goToPercent(percent);
         }, Config.minLoadingTime * 1000);
     }

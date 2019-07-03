@@ -30,8 +30,9 @@ export default class LoadingScene extends Scene {
         this.bikeSprite.stop();
     }
 
-    goToPercent(percent) {
+    goToPercent(percent, callback) {
         this.targetPercent = percent;
+        this.targetCallback = callback;
     }
 
     setPercent(percent) {
@@ -48,7 +49,6 @@ export default class LoadingScene extends Scene {
         );
         graphics.endFill();
         this.ui.percentImage.mask = graphics;
-        console.log(App.realWidth, App.sceneWidth);
         this.bikeSprite.setPosition(pos.x + width - (App.realWidth - App.sceneWidth) / 2, pos.y);
     }
 
@@ -56,6 +56,10 @@ export default class LoadingScene extends Scene {
         this.curPercent++;
         if (this.curPercent > this.targetPercent) {
             this.curPercent = this.targetPercent;
+            if (this.targetCallback) {
+                this.targetCallback();
+                this.targetCallback = undefined;
+            }
         }
         this.setPercent(this.curPercent);
         this.timer = requestAnimationFrame(this.onAnimationFrame.bind(this));
