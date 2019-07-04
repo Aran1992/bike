@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":2226,
+    "selecteID":2231,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":2227,
+    "maxID":2232,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -539,21 +539,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1928,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Lines",
-            "searchKey":"Lines,Road",
-            "props":{"y":46.75,"x":3844.75,"points":"321,332,796,235,1900,235","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
-            "nodeParent":1,
-            "label":"Road",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1929,
             "child":[
                 ]
         },
@@ -4159,6 +4144,21 @@
         {
             "x":15,
             "type":"Lines",
+            "searchKey":"Lines,Road",
+            "props":{"y":46,"x":3844,"points":"321,332,796,235,1900,235","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "nodeParent":1,
+            "label":"Road",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2228,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
             "searchKey":"Lines,Road//终点安全道路(一定要放在最后1位)",
             "props":{"y":-54,"x":38852,"points":"0,0,1500,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
@@ -4167,7 +4167,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":2226,
+            "compId":2231,
             "child":[
                 ]
         }],
