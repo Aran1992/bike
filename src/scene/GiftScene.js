@@ -29,6 +29,7 @@ export default class GiftScene extends Scene {
                 DataMgr.set(DataMgr.giftIndex, giftIndex + 1);
                 OnlineMgr.restartGiftCountDown();
                 App.hideScene("GiftScene");
+                TDGA.onEvent("广告礼包");
             }
         });
     }
