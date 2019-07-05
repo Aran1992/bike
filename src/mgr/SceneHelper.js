@@ -1,5 +1,5 @@
 import Config from "../config";
-import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle} from "../libs/pixi-wrapper";
+import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle, Texture} from "../libs/pixi-wrapper";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -100,7 +100,7 @@ function createImage(child, parent) {
 function createCommonImage(child, parent) {
     let data = child.props;
     let path = `myLaya/laya/assets/${data.skin}`;
-    let texture = resources[path] && resources[path].texture;
+    let texture = Texture.from(path);
     let width = texture ? getValue(data.width, texture.width) : 0;
     let height = texture ? getValue(data.height, texture.height) : 0;
     let scaleX = getValue(data.scaleX, 1);
@@ -150,7 +150,7 @@ function createCommonImage(child, parent) {
 function createScale9Image(child, parent) {
     let data = child.props;
     let path = `myLaya/laya/assets/${data.skin}`;
-    let texture = resources[path].texture;
+    let texture = Texture.from(path);
     let [top, right, bottom, left] = data.sizeGrid.split(",").map(str => parseInt(str));
     let sprite = new NineSlicePlane(texture, left, top, right, bottom);
     let width = getValue(data.width, texture.width);

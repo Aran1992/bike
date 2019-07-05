@@ -50,7 +50,7 @@ export default class HomeScene extends Scene {
             root: this.ui.radio,
             initItemFunc: HomeScene.initRadioButton,
             clickButtonFunc: this.onClickRadio.bind(this),
-            infoList: ["Backgrounds", "Floors", "Spoils", "Pets"]
+            infoList: [1,2,3,4]
         });
 
         this.itemList = new List({
@@ -323,7 +323,9 @@ export default class HomeScene extends Scene {
     }
 
     static initRadioButton(button, info) {
-        button.ui.name.text = App.getText(info);
+        for (let i = 1; i <= 4; i++) {
+            button.ui[`tab${i}Image`].visible = info === i;
+        }
     }
 
     onClickRadio(selectedIndex, lastIndex) {
