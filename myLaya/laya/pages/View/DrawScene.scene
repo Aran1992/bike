@@ -340,7 +340,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/english/draw.png","centerY":0,"centerX":0},
+                    "props":{"skin":"images/english/draw-2.png","centerY":0,"centerX":0},
                     "nodeParent":11,
                     "label":"Image",
                     "isDirectory":false,

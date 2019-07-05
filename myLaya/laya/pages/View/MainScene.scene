@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":81,
-    "selecteID":97,
+    "selectedBox":92,
+    "selecteID":95,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -382,7 +382,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":0,"x":0,"skin":"images/english/profile.png","centerX":0,"bottom":0},
+                            "props":{"x":0,"skin":"images/english/profile.png","centerX":0,"bottom":-5},
                             "nodeParent":92,
                             "label":"Image",
                             "isDirectory":false,
@@ -410,7 +410,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":0,"x":0,"skin":"images/english/shop.png","centerX":0,"bottom":0},
+                            "props":{"x":0,"skin":"images/english/shop.png","centerX":0,"bottom":-5},
                             "nodeParent":22,
                             "label":"Image",
                             "isDirectory":false,
@@ -453,7 +453,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/system.png","centerX":0,"bottom":0},
+                            "props":{"x":0,"skin":"images/english/system.png","centerX":0,"bottom":-5},
                             "nodeParent":23,
                             "label":"Image",
                             "isDirectory":false,
@@ -481,7 +481,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":0,"x":0,"skin":"images/english/home.png","centerX":0,"bottom":3},
+                            "props":{"x":0,"skin":"images/english/home.png","centerX":0,"bottom":-5},
                             "nodeParent":24,
                             "label":"Image",
                             "isDirectory":false,
@@ -526,7 +526,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":0,"x":0,"skin":"images/english/rank.png","centerX":0,"bottom":3},
+                            "props":{"x":0,"skin":"images/english/rank.png","centerX":0,"bottom":-5},
                             "nodeParent":25,
                             "label":"Image",
                             "isDirectory":false,
@@ -569,7 +569,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/draw.png","centerX":0,"bottom":3},
+                            "props":{"skin":"images/english/draw.png","centerX":0,"bottom":-5},
                             "nodeParent":26,
                             "label":"Image",
                             "isDirectory":false,
@@ -612,7 +612,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/bike.png","centerX":0,"bottom":3},
+                            "props":{"skin":"images/english/bike.png","centerX":0,"bottom":-5},
                             "nodeParent":27,
                             "label":"Image",
                             "isDirectory":false,
@@ -631,14 +631,13 @@
             "props":{"width":720,"skin":"images/bg-7.png","height":235,"centerX":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
                     "props":{"width":290,"var":"endlessModeButton","skin":"images/button-1.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"height":156,"bottom":30},
@@ -651,7 +650,6 @@
                     "compId":29,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Endless.png","scaleY":1,"scaleX":1,"centerY":0,"centerX":0},
@@ -665,7 +663,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"visible":false,"top":-30,"skin":"images/icon-metre.png","centerX":0},
@@ -681,7 +678,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"width":290,"var":"mapModeButton","skin":"images/button-1.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"height":156,"bottom":30},
@@ -694,7 +690,6 @@
                     "compId":30,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Match.png","scaleY":1,"scaleX":1,"centerY":0,"centerX":0},
@@ -708,7 +703,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"visible":false,"top":-30,"skin":"images/icon-metre.png","centerX":0},
@@ -723,7 +717,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -739,7 +732,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessHelpButton",
                     "props":{"skin":"images/btn_setting_help.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"endlessHelpButton","left":300,"bottom":160},
@@ -754,7 +746,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapHelpButton",
                     "props":{"skin":"images/btn_setting_help.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"mapHelpButton","left":635,"bottom":160},
