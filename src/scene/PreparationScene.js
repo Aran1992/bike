@@ -62,6 +62,19 @@ export default class PreparationScene extends Scene {
             if (success) {
                 this.rewards[index - 1].received = true;
                 DataMgr.set(DataMgr.preparationData, this.rewards);
+                if (this.mode === "Map") {
+                    if (index === 3) {
+                        TDGA.onEvent("广告竞技模式自行车");
+                    } else {
+                        TDGA.onEvent("广告竞技模式道具");
+                    }
+                } else if (this.mode === "Endless") {
+                    if (index === 3) {
+                        TDGA.onEvent("广告无尽模式自行车");
+                    } else {
+                        TDGA.onEvent("广告无尽模式道具");
+                    }
+                }
                 this.onShow(this.mode);
             }
         });
