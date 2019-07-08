@@ -4,6 +4,12 @@
     "selectedBox":16,
     "selecteID":41,
     "searchKey":"Scene",
+    "referenceLines":[
+        {
+            "value":67,
+            "type":1,
+            "id":1
+        }],
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
     "maxID":84,
@@ -339,10 +345,10 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,closeButton",
-                    "props":{"top":-39,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-10,"name":"closeButton"},
+                    "searchKey":"Image,returnButton",
+                    "props":{"var":"returnButton","top":-39,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-10},
                     "nodeParent":16,
-                    "label":"closeButton",
+                    "label":"returnButton",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,

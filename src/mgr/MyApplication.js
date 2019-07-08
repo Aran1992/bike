@@ -34,6 +34,8 @@ import PrizeScene from "../scene/PrizeScene";
 import SignScene from "../scene/SignScene";
 import HelpHomeScene from "../scene/HelpHomeScene";
 import LoadingScene from "../scene/LoadingScene";
+import HelpEndlessScene from "../scene/HelpEndlessScene";
+import HelpMatchScene from "../scene/HelpMatchScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -95,6 +97,8 @@ export default class MyApplication extends Application {
             "SignScene": SignScene,
             "HelpHomeScene": HelpHomeScene,
             "LoadingScene": LoadingScene,
+            "HelpEndlessScene": HelpEndlessScene,
+            "HelpMatchScene": HelpMatchScene,
         };
 
         this.sceneTable = {};

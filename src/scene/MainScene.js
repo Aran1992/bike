@@ -1,7 +1,7 @@
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
-import { resources, Texture } from "../libs/pixi-wrapper";
+import {resources, Texture} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
@@ -21,6 +21,8 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.giftButton, this.onClickGiftButton.bind(this));
         this.onClick(this.ui.addDiamondButton, this.onClickAddDiamondButton.bind(this));
         this.onClick(this.ui.addCoinButton, this.onClickAddCoinButton.bind(this));
+        this.onClick(this.ui.endlessHelpButton, this.onClickEndlessHelpButton.bind(this));
+        this.onClick(this.ui.mapHelpButton, this.onClickMapHelpButton.bind(this));
         this.ui.signButton.visible = OnlineMgr.hasSignReward();
         this.onClick(this.ui.signButton, this.onClickSignButton.bind(this));
         if (window.PlatformHelper.canLogout) {
@@ -188,6 +190,14 @@ export default class MainScene extends Scene {
     onClickAddCoinButton() {
         App.hideScene("MainScene");
         App.showScene("ShopScene", "Coin");
+    }
+
+    onClickEndlessHelpButton() {
+        App.showScene("HelpEndlessScene");
+    }
+
+    onClickMapHelpButton() {
+        App.showScene("HelpMatchScene");
     }
 }
 

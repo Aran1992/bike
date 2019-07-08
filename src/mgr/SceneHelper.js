@@ -1,5 +1,6 @@
 import Config from "../config";
 import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle, Texture} from "../libs/pixi-wrapper";
+import ScrollView from "../ui/ScrollView";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -15,10 +16,12 @@ function createScene(path, sceneContainer) {
     sceneContainer.myheight = App.sceneHeight;
     sceneContainer.interactive = true;
     sceneContainer.ui = {};
-    sceneData.child.forEach(child => sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui)));
+    let callbackList = [];
+    sceneData.child.forEach(child => sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui, callbackList)));
+    callbackList.forEach(callback => callback());
 }
 
-function createSceneChild(child, parent, root) {
+function createSceneChild(child, parent, root, callbackList) {
     let data = child.props;
     let item;
     switch (child.type) {
@@ -45,12 +48,17 @@ function createSceneChild(child, parent, root) {
     if (data.var !== undefined) {
         root[data.var] = item;
     }
-    child.child.forEach(child => item.addChild(createSceneChild(child, item, root)));
     if (data.name) {
         item.uiname = data.name;
     }
     if (data.runtime) {
         item.clickSoundPath = data.runtime.replace("../", "myLaya/");
+    }
+    child.child.forEach(child => item.addChild(createSceneChild(child, item, root, callbackList)));
+    if (data.layoutEnabled !== undefined) {
+        callbackList.push((() => {
+            item.scrollView = new ScrollView({root: item, isHorizontal: data.layoutEnabled});
+        }));
     }
     return item;
 }
@@ -73,12 +81,6 @@ function createPanel(child, parent) {
     panel.alpha = baseInfo.alpha;
 
     panel.visible = baseInfo.visible;
-
-    // let mask = new Graphics();
-    // mask.beginFill();
-    // mask.drawRect(baseInfo.x, baseInfo.y, baseInfo.width, baseInfo.height);
-    // mask.endFill();
-    // panel.mask = mask;
 
     return panel;
 }
