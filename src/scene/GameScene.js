@@ -6,7 +6,17 @@ import MusicMgr from "../mgr/MusicMgr";
 import DataMgr from "../mgr/DataMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
-import {Container, Emitter, Graphics, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {
+    Container,
+    Emitter,
+    Graphics,
+    Rectangle,
+    resources,
+    Sprite,
+    Text,
+    TextStyle,
+    Texture
+} from "../libs/pixi-wrapper";
 
 import Road from "../item/Road";
 import Item from "../item/Item";
@@ -76,7 +86,12 @@ export default class GameScene extends Scene {
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
         this.ui.rebornPanel.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
-        this.portableItemButtonList.forEach((button, i) => this.onClick(button, () => this.onClickPortableItem(i)));
+        this.portableItemButtonList.forEach((button, i) => {
+            let child = button.getChildAt(1);
+            button.hitArea = new Rectangle(child.x, child.y, child.mywidth, child.myheight);
+            button.removeChildAt(1);
+            this.onClick(button, () => this.onClickPortableItem(i));
+        });
 
         this.gameStatus = "end";
         this.gameLoopFunc = this.pause.bind(this);
