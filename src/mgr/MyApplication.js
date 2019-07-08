@@ -316,8 +316,8 @@ export default class MyApplication extends Application {
         }, Config.notice.duration);
     }
 
-    showTip(tip, confirmCallback, cancelCallback) {
-        App.showScene("TipScene", {tip, confirmCallback, cancelCallback});
+    showTip(tip, confirmCallback, cancelCallback, hideConfirmButton) {
+        App.showScene("TipScene", {tip, confirmCallback, cancelCallback, hideConfirmButton});
     }
 
     getText(id, args) {

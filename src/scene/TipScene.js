@@ -24,6 +24,8 @@ export default class TipScene extends Scene {
         this.ui.confirmButton.y = this.ui.tipText.y + this.ui.tipText.height + 25;
         this.ui.cancelButton = this.ui.confirmButton.y;
 
+        this.ui.confirmButton.visible = !args.hideConfirmButton;
+
         this.args = args;
     }
 

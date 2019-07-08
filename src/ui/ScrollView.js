@@ -81,7 +81,6 @@ export default class ScrollView {
         } else {
             this.moveAxis = "y";
             this.minOffset = this.root.myheight - this.container.myheight;
-            console.log(this.minOffset);
         }
     }
 

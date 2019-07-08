@@ -680,7 +680,8 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
                 () => {
                 },
                 () => {
-                }
+                },
+                true
             );
         }
     }
