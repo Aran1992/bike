@@ -7288,24 +7288,16 @@ Config.item = {
     // 小火墙
     smallFireWall: {
         // 实际区域宽度
-        bodyWidth: 88,
+        bodyWidth: 40,
         // 实际区域高度
-        bodyHeight: 672,
-        // 实际区域X轴偏移
-        bodyOffsetX: 20,
-        // 实际区域Y轴偏移
-        bodyOffsetY: 40,
+        bodyHeight: 350,
     },
     // 大火墙
     bigFireWall: {
         // 实际区域宽度
-        bodyWidth: 88,
+        bodyWidth: 40,
         // 实际区域高度
-        bodyHeight: 1192,
-        // 实际区域X轴偏移
-        bodyOffsetX: 20,
-        // 实际区域Y轴偏移
-        bodyOffsetY: 40,
+        bodyHeight: 610,
     },
     // 小鸟
     bird: {

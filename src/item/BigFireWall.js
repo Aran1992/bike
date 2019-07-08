@@ -12,7 +12,5 @@ export default class BigFireWall extends AniItem {
         this.animationSpeed = 0.25;
         this.bodyWidth = Config.item.bigFireWall.bodyWidth;
         this.bodyHeight = Config.item.bigFireWall.bodyHeight;
-        this.bodyOffsetX = Config.item.bigFireWall.bodyOffsetX;
-        this.bodyOffsetY = Config.item.bigFireWall.bodyOffsetY;
     }
 }

@@ -2,7 +2,7 @@ import Config from "../config";
 import Item from "./Item";
 import GameUtils from "../mgr/GameUtils";
 import {AnimatedSprite} from "../libs/pixi-wrapper";
-import {Box} from "../libs/planck-wrapper";
+import {Box, Vec2} from "../libs/planck-wrapper";
 
 export default class AniItem extends Item {
     create() {
@@ -16,15 +16,13 @@ export default class AniItem extends Item {
         let body = this.world.createBody();
         this.body = body;
         let texture = this.frames[0];
-        let halfWidth = (this.bodyWidth !== undefined ? this.bodyWidth : texture.width) / 2 * this.sprite.scale.x;
-        let halfHeight = (this.bodyHeight !== undefined ? this.bodyHeight : texture.height) / 2 * this.sprite.scale.y;
-        body.createFixture(Box(halfWidth * Config.pixel2meter, halfHeight * Config.pixel2meter),
-            {density: 0, friction: 1,});
-        let offsetX = this.bodyOffsetX || 0;
-        let offsetY = this.bodyOffsetY || 0;
-        let x = this.config.props.x + offsetX * this.sprite.scale.x + halfWidth;
-        let y = this.config.props.y + offsetY * this.sprite.scale.y + halfHeight;
-        body.setPosition(GameUtils.renderPos2PhysicsPos({x, y}));
+        let x = texture.width * this.config.props.scaleX / 2 * Config.pixel2meter;
+        let y = -texture.height * this.config.props.scaleY / 2 * Config.pixel2meter;
+        let halfWidth = this.bodyWidth * Config.pixel2meter / 2;
+        let halfHeight = this.bodyHeight * Config.pixel2meter / 2;
+        let shape = Box(halfWidth, halfHeight, Vec2(x, y));
+        body.createFixture(shape, {density: 0, friction: 1,});
+        body.setPosition(GameUtils.renderPos2PhysicsPos(this.config.props));
         this.type = GameUtils.getItemType(this.config);
         body.setUserData(this);
     }
