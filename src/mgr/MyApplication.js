@@ -36,6 +36,7 @@ import HelpHomeScene from "../scene/HelpHomeScene";
 import LoadingScene from "../scene/LoadingScene";
 import HelpEndlessScene from "../scene/HelpEndlessScene";
 import HelpMatchScene from "../scene/HelpMatchScene";
+import EventMgr from "./EventMgr";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -102,6 +103,8 @@ export default class MyApplication extends Application {
         };
 
         this.sceneTable = {};
+
+        this.listenGameRunStatus();
     }
 
     showScene(sceneName, ...args) {
@@ -341,5 +344,48 @@ export default class MyApplication extends Application {
             x: x - this.root.x,
             y: y - this.root.y
         };
+    }
+
+    listenGameRunStatus() {
+        function getHiddenProp() {
+            let prefixes = ["webkit", "moz", "ms", "o"];
+
+            // if 'hidden' is natively supported just return it
+            if ("hidden" in document) return "hidden";
+
+            // otherwise loop over all the known prefixes until we find one
+            for (let i = 0; i < prefixes.length; i++) {
+                if ((prefixes[i] + "Hidden") in document)
+                    return prefixes[i] + "Hidden";
+            }
+
+            // otherwise it's not supported
+            return null;
+        }
+
+        // 获取document.visibilityState属性
+        function getVisibilityState() {
+            let prefixes = ["webkit", "moz", "ms", "o"];
+            if ("visibilityState" in document) return "visibilityState";
+            for (let i = 0; i < prefixes.length; i++) {
+                if ((prefixes[i] + "VisibilityState") in document)
+                    return prefixes[i] + "VisibilityState";
+            }
+            // otherwise it's not supported
+            return null;
+        }
+
+        // 给document添加事件
+        let visProp = getHiddenProp();
+        if (visProp) {
+            let evtname = visProp.replace(/[H|h]idden/, "") + "visibilitychange";
+            document.addEventListener(evtname, function () {
+                if (document[getVisibilityState()] === "visible") {
+                    EventMgr.dispatchEvent("GameStart");
+                } else {
+                    EventMgr.dispatchEvent("GameStop");
+                }
+            }, false);
+        }
     }
 }

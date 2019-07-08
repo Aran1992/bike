@@ -38,6 +38,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.returnRankBtn, HomeScene.onClickReturnRankButton);
         this.onClick(this.ui.homeHelpButton, HomeScene.onClickHomeHelpButton);
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
+        EventMgr.registerEvent("GameStop", this.onGameStop.bind(this));
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
@@ -717,6 +718,13 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
 
     static onClickHomeHelpButton() {
         App.showScene("HelpHomeScene");
+    }
+
+    onGameStop() {
+        if (this.touchingSprite) {
+            this.touchingSprite.destroy();
+            this.touchingSprite = undefined;
+        }
     }
 }
 

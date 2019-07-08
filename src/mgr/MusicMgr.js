@@ -1,5 +1,6 @@
 import Utils from "./Utils";
 import DataMgr from "./DataMgr";
+import EventMgr from "./EventMgr";
 
 class BufferLoader {
     constructor(context, urlList, callback) {
@@ -53,6 +54,8 @@ class MusicMgr_ {
         this.context = new AudioContext();
         this.bufferTable = {};
         this.soundList = [];
+        EventMgr.registerEvent("GameStop", this.onGameStop.bind(this));
+        EventMgr.registerEvent("GameStart", this.onGameStart.bind(this));
     }
 
     loadAudioRes(pathList, callback) {
@@ -140,7 +143,18 @@ class MusicMgr_ {
             this.soundList.forEach(bs => bs.disconnect());
         }
     }
+
+    onGameStop() {
+        this.muteBGM(true);
+    }
+
+    onGameStart() {
+        if (DataMgr.get(DataMgr.bgmOn, true)) {
+            this.muteBGM(false);
+        }
+    }
 }
+
 
 const MusicMgr = new MusicMgr_();
 
