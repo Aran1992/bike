@@ -838,7 +838,7 @@ export default class GameScene extends Scene {
         this.bikeFrame = 0;
         this.bikeSprite.texture = this.bikeFrames[this.bikeFrame];
 
-        this.bikeAccSprite = this.underBikeContianer.addChild(new Sprite());
+        this.bikeAccSprite = this.bikeContainer.addChild(new Sprite());
         this.bikeAccSprite.anchor.set(0.5, 1);
         this.bikeAccSprite.visible = false;
 
@@ -985,32 +985,6 @@ export default class GameScene extends Scene {
                 this.bikeAccSprite.visible = true;
                 this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeFloatFrame / Config.fps)}.png`];
                 this.bikeAccSprite.position.set(this.bikeOutterContainer.x, this.bikeOutterContainer.y - this.bikeSelfContainer.height / 2);
-            } else if (this.hasEffect("Accelerate")) {
-                this.bikeAccSprite.visible = true;
-                let frame = this.effectRemainFrame.Accelerate;
-                if (frame <= 5 * Config.fps) {
-                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(frame / Config.fps)}.png`];
-                    this.bikeAccSprite.position.set(this.bikeOutterContainer.x, this.bikeOutterContainer.y - this.bikeSelfContainer.height / 2);
-                } else {
-                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures["speed-up.png"];
-                    this.bikeAccSprite.position.set(this.bikeOutterContainer.x + 32, this.bikeOutterContainer.y - this.bikeSelfContainer.height / 2);
-                }
-            } else {
-                let minRemainFrame = undefined;
-                for (let type in this.effectRemainFrame) {
-                    if (this.effectRemainFrame.hasOwnProperty(type)) {
-                        if (minRemainFrame === undefined || this.effectRemainFrame[type] < minRemainFrame) {
-                            minRemainFrame = this.effectRemainFrame[type];
-                        }
-                    }
-                }
-                if (minRemainFrame !== undefined && minRemainFrame < 5 * Config.fps) {
-                    this.bikeAccSprite.visible = true;
-                    this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(minRemainFrame / Config.fps)}.png`];
-                    this.bikeAccSprite.position.set(this.bikeOutterContainer.x, this.bikeOutterContainer.y - this.bikeOutterContainer.height / 2);
-                } else {
-                    this.bikeAccSprite.visible = false;
-                }
             }
             if (this.jumping) {
                 if (this.jumpingAnimationFrames) {
