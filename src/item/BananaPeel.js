@@ -118,11 +118,16 @@ export default class BananaPeel {
         this.fixture.setUserData({isFatal: true});
 
         let bikePhysicalPosition = this.thrower.getBikePhysicalPosition();
+        bikePhysicalPosition = Vec2(bikePhysicalPosition.x, bikePhysicalPosition.y + 1);
         this.body.setPosition(bikePhysicalPosition);
         let {x, y} = GameUtils.physicsPos2renderPos(bikePhysicalPosition);
         this.sprite.position.set(x, y);
 
         this.throwPhysicalY = bikePhysicalPosition.y;
+
+        if (this.thrower === this.gameMgr) {
+            this.sprite.alpha = 0.5;
+        }
     }
 
     destroy() {
