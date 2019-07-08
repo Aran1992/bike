@@ -78,7 +78,7 @@ export default class RankScene extends Scene {
     onClickTypeRadio(selectedIndex) {
         this.type = typeList[selectedIndex];
         if (this.rangeRadio) {
-            this.rangeRadio.select(0);
+            this.reset();
         }
     }
 
