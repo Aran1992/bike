@@ -28,6 +28,8 @@ export default class GameOverScene extends Scene {
 
         this.args = args;
 
+        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+
         this.refresh();
     }
 
