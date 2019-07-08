@@ -15,7 +15,7 @@ const PETS = 3;
 
 function randomPos() {
     let x = Math.random() * Config.home.homeWidth;
-    let y = Math.random() * Config.home.homeHeight;
+    let y = Config.home.floorStartY + Math.random() * (Config.home.homeHeight - Config.home.floorStartY);
     return {x, y};
 }
 
@@ -50,7 +50,7 @@ export default class HomeScene extends Scene {
             root: this.ui.radio,
             initItemFunc: HomeScene.initRadioButton,
             clickButtonFunc: this.onClickRadio.bind(this),
-            infoList: [1,2,3,4]
+            infoList: [1, 2, 3, 4]
         });
 
         this.itemList = new List({
@@ -482,12 +482,13 @@ export default class HomeScene extends Scene {
             this.touchingSprite.destroy();
             this.touchingSprite = undefined;
             let pos = this.homeContainer.getGlobalPosition();
-            if (Utils.isPointInRect(event.data.global, {
+            let rect = {
                 x: pos.x,
-                y: pos.y,
+                y: pos.y + Config.home.floorStartY,
                 width: this.homeContainer.mywidth,
-                height: this.homeContainer.myheight
-            })) {
+                height: this.homeContainer.myheight - Config.home.floorStartY
+            };
+            if (Utils.isPointInRect(event.data.global, rect)) {
                 let x = event.data.global.x - pos.x - this.homeInnerContainer.x;
                 let y = event.data.global.y - pos.y - this.homeInnerContainer.y;
                 let data = DataMgr.get(DataMgr.homeData);
