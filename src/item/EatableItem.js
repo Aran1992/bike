@@ -82,7 +82,7 @@ export default class EatableItem extends EditorItem {
         if (this.body.isKinematic()) {
             this.moveToPlayer();
         } else {
-            if (this.gameMgr.hasEffect("Magnet") && this.gameMgr.isItemXInView(this)) {
+            if (this.gameMgr.hasEffect("Magnet") && this.gameMgr.isItemXInView(this) && this.config.effect === "GoldCoin") {
                 this.body.setKinematic();
                 this.moveToPlayer();
             }
