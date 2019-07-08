@@ -1384,7 +1384,7 @@ export default class GameScene extends Scene {
             let newY = this.bikeOutterContainer.y + moveY;
             let rect = {
                 x: -this.cameraContainer.x,
-                y: GameUtils.physicsPos2renderPos(this.deadPos).y - Config.designHeight,
+                y: GameUtils.physicsPos2renderPos(this.dragBackPos).y - Config.designHeight - Config.rebornPosOffsetHeight,
                 width: Config.designWidth,
                 height: Config.designHeight
             };
