@@ -7941,8 +7941,6 @@ Config.effect = {
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
-        // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/TestAnimationEffect1.prefab.json",
         // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
