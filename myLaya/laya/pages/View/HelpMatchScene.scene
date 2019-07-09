@@ -6,7 +6,7 @@
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":190,
+    "maxID":193,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -73,7 +73,7 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"width":650,"top":150,"name":"list","layoutEnabled":false,"height":980,"centerX":0},
+                    "props":{"width":650,"top":150,"name":"list","layoutEnabled":false,"height":950,"centerX":0},
                     "nodeParent":16,
                     "label":"list",
                     "isOpen":true,
@@ -86,7 +86,7 @@
                             "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,list",
-                            "props":{"width":650,"name":"list","layoutEnabled":true,"height":600},
+                            "props":{"width":650,"name":"list","height":950},
                             "nodeParent":151,
                             "label":"list",
                             "isOpen":true,
@@ -566,14 +566,13 @@
                                     "props":{"width":650,"top":840,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help12","height":70,"centerX":0},
                                     "nodeParent":42,
                                     "label":"Help12",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
                                     "compId":104,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image",
                                             "props":{"y":63,"x":21,"skin":"images/line-1.png","scaleY":1,"scaleX":1,"centerX":20,"bottom":3},
@@ -587,7 +586,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image",
                                             "props":{"skin":"images/crystal_icon3_09.png","scaleY":0.5,"scaleX":0.5,"left":50,"centerY":0},
@@ -601,7 +599,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
                                             "props":{"text":"${MatchHelp12}","strokeColor":"#ffffff","left":100,"fontSize":30,"color":"#ffffff","centerY":0},

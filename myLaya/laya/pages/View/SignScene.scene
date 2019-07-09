@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":121,
-    "selecteID":241,
+    "selectedBox":171,
+    "selecteID":244,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":243,
+    "maxID":245,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -85,7 +85,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":26,"x":20,"skin":"images/advert.png","scaleY":1.5,"scaleX":1.5,"left":20,"centerY":0},
+                            "props":{"y":26,"x":20,"skin":"images/advert.png","scaleY":0.8,"scaleX":0.8,"left":20,"centerY":0},
                             "nodeParent":88,
                             "label":"Image",
                             "isOpen":true,
@@ -198,14 +198,13 @@
                                                     "props":{"x":0,"width":175,"skin":"images/bg-10.png","height":175,"centerX":0,"bottom":10},
                                                     "nodeParent":103,
                                                     "label":"Image",
-                                                    "isOpen":true,
+                                                    "isOpen":false,
                                                     "isDirectory":true,
                                                     "isAniNode":true,
                                                     "hasChild":true,
                                                     "compId":121,
                                                     "child":[
                                                         {
-                                                            "x":105,
                                                             "type":"Panel",
                                                             "searchKey":"Panel,bikeSpritePanel",
                                                             "props":{"width":0,"name":"bikeSpritePanel","height":0,"centerY":20,"centerX":0},
@@ -219,7 +218,6 @@
                                                                 ]
                                                         },
                                                         {
-                                                            "x":105,
                                                             "type":"Panel",
                                                             "searchKey":"Panel,itemIcon",
                                                             "props":{"y":88,"x":88,"width":0,"scaleY":2,"scaleX":2,"name":"itemIcon","height":0,"centerY":0,"centerX":0},
@@ -233,7 +231,6 @@
                                                                 ]
                                                         },
                                                         {
-                                                            "x":105,
                                                             "type":"Label",
                                                             "searchKey":"Label,numberText",
                                                             "props":{"y":145,"x":87,"text":"999999","strokeColor":"#000000","stroke":5,"right":5,"name":"numberText","fontSize":30,"color":"#ffffff","bottom":5},
@@ -268,7 +265,7 @@
                                                     "x":90,
                                                     "type":"Image",
                                                     "searchKey":"Image,receivedImage",
-                                                    "props":{"top":0,"skin":"images/moji_00014.png","right":0,"name":"receivedImage","left":0,"bottom":0,"alpha":0.5},
+                                                    "props":{"top":0,"right":0,"name":"receivedImage","left":0,"bottom":0},
                                                     "nodeParent":103,
                                                     "label":"receivedImage",
                                                     "isOpen":true,
@@ -279,18 +276,35 @@
                                                     "child":[
                                                         {
                                                             "x":105,
-                                                            "type":"Label",
-                                                            "searchKey":"Label",
-                                                            "props":{"y":0,"x":0,"text":"${Purchased}","strokeColor":"#000000","stroke":5,"fontSize":50,"color":"#ffffff","centerY":0,"centerX":0},
+                                                            "type":"Image",
+                                                            "searchKey":"Image",
+                                                            "props":{"width":175,"skin":"images/moji_00014.png","height":175,"centerY":25,"centerX":0,"alpha":0.5},
                                                             "nodeParent":171,
-                                                            "label":"Label",
+                                                            "label":"Image",
                                                             "isOpen":true,
                                                             "isDirectory":false,
                                                             "isAniNode":true,
                                                             "hasChild":false,
-                                                            "compId":242,
+                                                            "compId":243,
                                                             "child":[
-                                                                ]
+                                                                ],
+                                                            "$HIDDEN":false
+                                                        },
+                                                        {
+                                                            "x":105,
+                                                            "type":"Image",
+                                                            "searchKey":"Image",
+                                                            "props":{"top":45,"skin":"images/receivedv.png","left":10},
+                                                            "nodeParent":171,
+                                                            "label":"Image",
+                                                            "isOpen":true,
+                                                            "isDirectory":false,
+                                                            "isAniNode":true,
+                                                            "hasChild":false,
+                                                            "compId":244,
+                                                            "child":[
+                                                                ],
+                                                            "$HIDDEN":false
                                                         }],
                                                     "$HIDDEN":false
                                                 }],

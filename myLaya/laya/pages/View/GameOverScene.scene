@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":53,
-    "selecteID":56,
+    "selectedBox":38,
+    "selecteID":39,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -90,13 +90,14 @@
                     "props":{"var":"diamondRebornButton","skin":"images/button-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":180,"centerX":-160},
                     "nodeParent":16,
                     "label":"diamondRebornButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":24,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
                             "props":{"width":200,"height":50,"centerY":-30,"centerX":0},
@@ -109,9 +110,10 @@
                             "compId":38,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"skin":"images/icon-diamond.png","scaleY":1,"scaleX":1,"centerY":0,"centerX":-30},
+                                    "props":{"skin":"images/icon-diamond.png","scaleY":0.8,"scaleX":0.8,"centerY":0,"centerX":-40},
                                     "nodeParent":38,
                                     "label":"Image",
                                     "isDirectory":false,
@@ -122,9 +124,10 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,diamondRebornCostText",
-                                    "props":{"var":"diamondRebornCostText","text":"999","fontSize":40,"color":"#ffffff","centerY":0,"centerX":20},
+                                    "props":{"var":"diamondRebornCostText","text":"999","fontSize":40,"color":"#ffffff","centerY":0,"centerX":30},
                                     "nodeParent":38,
                                     "label":"diamondRebornCostText",
                                     "isDirectory":false,
@@ -138,6 +141,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"x":0,"text":"${Reborn}","fontSize":50,"color":"#ffffff","centerY":30,"centerX":0},
@@ -158,16 +162,17 @@
                     "props":{"var":"advertRebornButton","skin":"images/button-1.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":180,"centerX":160},
                     "nodeParent":16,
                     "label":"advertRebornButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":41,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/advert.png","scaleY":1.5,"scaleX":1.5,"left":20,"centerY":0},
+                            "props":{"skin":"images/advert.png","left":20,"centerY":0},
                             "nodeParent":41,
                             "label":"Image",
                             "isOpen":true,
@@ -179,9 +184,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"text":"${Free}","fontSize":50,"color":"#ffffff","centerY":-30,"centerX":0},
+                            "props":{"text":"${Free}","fontSize":50,"color":"#ffffff","centerY":-30,"centerX":20},
                             "nodeParent":41,
                             "label":"Label",
                             "isDirectory":false,
@@ -192,9 +198,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"text":"${Reborn}","fontSize":50,"color":"#ffffff","centerY":30,"centerX":0},
+                            "props":{"text":"${Reborn}","fontSize":50,"color":"#ffffff","centerY":30,"centerX":20},
                             "nodeParent":41,
                             "label":"Label",
                             "isDirectory":false,
@@ -251,7 +258,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":200,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
+                    "props":{"top":180,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
                     "isOpen":false,
@@ -291,7 +298,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":450,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
+                    "props":{"top":400,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
                     "isOpen":false,
@@ -373,16 +380,17 @@
                     "props":{"var":"advertDoubleButton","skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":340,"centerX":0},
                     "nodeParent":16,
                     "label":"advertDoubleButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":46,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":26,"x":20,"skin":"images/advert.png","scaleY":1.5,"scaleX":1.5,"left":20,"centerY":0},
+                            "props":{"y":26,"x":20,"skin":"images/advert.png","scaleY":0.8,"scaleX":0.8,"left":20,"centerY":0},
                             "nodeParent":46,
                             "label":"Image",
                             "isOpen":true,
@@ -394,6 +402,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"${DoubleReward}","left":90,"fontSize":50,"color":"#ffffff","centerY":0},
@@ -426,7 +435,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerX":0,"bottom":460},
+                    "props":{"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"centerY":60,"centerX":0},
                     "nodeParent":16,
                     "label":"Image",
                     "isOpen":true,
@@ -452,7 +461,7 @@
                                     "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"x":5,"skin":"images/icon-diamond.png","scaleY":1.7,"scaleX":1.7,"centerY":2},
+                                    "props":{"skin":"images/icon-diamond.png","scaleY":0.9,"scaleX":0.9,"centerY":0,"centerX":0},
                                     "nodeParent":54,
                                     "label":"Image",
                                     "isOpen":true,

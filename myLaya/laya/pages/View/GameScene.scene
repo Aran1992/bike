@@ -495,7 +495,7 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
-                    "props":{"width":500,"name":"hitArea","height":500},
+                    "props":{"width":230,"top":0,"right":0,"name":"hitArea","height":135},
                     "nodeParent":14,
                     "label":"hitArea",
                     "isDirectory":false,
@@ -523,7 +523,7 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
-                    "props":{"name":"hitArea"},
+                    "props":{"width":236,"right":0,"name":"hitArea","height":135,"bottom":0},
                     "nodeParent":13,
                     "label":"hitArea",
                     "isDirectory":false,
@@ -711,14 +711,13 @@
             "props":{"visible":false,"var":"guidePanel","right":0,"left":0,"height":600,"bottom":0},
             "nodeParent":1,
             "label":"guidePanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":100,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","right":5,"left":5,"height":260,"bottom":280},
@@ -731,7 +730,6 @@
                     "compId":67,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"x":350,"text":"${LearnJump}","strokeColor":"#ffffff","fontSize":50,"color":"#ffffff","centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},
@@ -748,7 +746,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"visible":true,"skin":"images/bg-12.png","sizeGrid":"50,50,50,50","right":5,"left":5,"height":260,"bottom":10},
@@ -761,7 +758,6 @@
                     "compId":70,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":-133,"x":380,"text":"${LearnItem}","strokeColor":"#ffffff","fontSize":35,"color":"#ffffff","centerX":50,"bottom":110,"anchorY":0.5,"anchorX":0.5},
