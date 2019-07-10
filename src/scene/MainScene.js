@@ -184,12 +184,12 @@ export default class MainScene extends Scene {
 
     onClickAddDiamondButton() {
         App.hideScene("MainScene");
-        App.showScene("ShopScene", "Diamond");
+        App.showScene("ShopScene", 1);
     }
 
     onClickAddCoinButton() {
         App.hideScene("MainScene");
-        App.showScene("ShopScene", "Coin");
+        App.showScene("ShopScene", 2);
     }
 
     onClickEndlessHelpButton() {
