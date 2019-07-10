@@ -697,7 +697,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,speedUpNotice",
-            "props":{"width":0,"var":"speedUpNotice","top":300,"height":0,"centerX":0},
+            "props":{"width":0,"var":"speedUpNotice","top":240,"height":0,"centerX":0},
             "nodeParent":1,
             "label":"speedUpNotice",
             "isOpen":true,
