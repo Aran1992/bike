@@ -206,6 +206,7 @@ Config.imagePath = {
     start2: "myLaya/laya/assets/images/start-2.png",
     start3: "myLaya/laya/assets/images/start-3.png",
     startGo: "myLaya/laya/assets/images/start-go.png",
+    randomItem:"myLaya/laya/assets/animations/Random.json"
 };
 
 Config.emitterPath = {

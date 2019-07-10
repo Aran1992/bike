@@ -19,6 +19,12 @@ export default class EatableItem extends EditorItem {
     onCreate() {
         super.onCreate();
 
+        if (this.config.effect === "Random") {
+            this.textureIndex = 0;
+            this.textures = GameUtils.getFrames(Config.imagePath.randomItem);
+            this.sprite.texture = this.textures[this.textureIndex];
+        }
+
         this.body = this.world.createBody();
         this.body.setUserData(this);
         let sd = {};
@@ -78,6 +84,14 @@ export default class EatableItem extends EditorItem {
 
     update() {
         super.update();
+
+        if (this.textures) {
+            this.textureIndex++;
+            if (this.textures[this.textureIndex] === undefined) {
+                this.textureIndex = 0;
+            }
+            this.sprite.texture = this.textures[this.textureIndex];
+        }
 
         if (this.body.isKinematic()) {
             this.moveToPlayer();
