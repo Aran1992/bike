@@ -1720,6 +1720,7 @@ export default class GameScene extends Scene {
         createText(App.getText("使用了"), Config.itemUseHistory.commonTextColor);
         let icon = container.addChild(Sprite.from(Config.effect[effect].imagePath));
         icon.anchor.set(0, 0.5);
+        icon.scale.set(Config.itemUseHistory.iconSale, Config.itemUseHistory.iconSale);
         icon.x = lastX;
         return container;
     }
