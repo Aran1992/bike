@@ -9474,15 +9474,10 @@ Config.rankRefreshInterval = 60 * 10;
 
 // 玩家自行车排名文本相关配置
 Config.bike.rankText = {
-    // 字体样式
-    style: {
-        // 颜色
-        fill: "white",
-        // 字体大小
-        fontSize: 50,
-    },
+    // X轴位置
+    positionX: 50,
     // Y轴位置
-    positionY: -50
+    positionY: -50,
 };
 
 // 敌人自行车名字文本相关配置
