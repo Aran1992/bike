@@ -131,6 +131,9 @@ class MusicMgr_ {
     }
 
     muteBGM(muted) {
+        if (!this.bgmSource) {
+            return;
+        }
         if (muted) {
             this.bgmSource.disconnect();
         } else {
