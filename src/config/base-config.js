@@ -206,7 +206,11 @@ Config.imagePath = {
     start2: "myLaya/laya/assets/images/start-2.png",
     start3: "myLaya/laya/assets/images/start-3.png",
     startGo: "myLaya/laya/assets/images/start-go.png",
-    randomItem:"myLaya/laya/assets/animations/Random.json"
+    randomItem:"myLaya/laya/assets/animations/Random.json",
+    rankText1:"myLaya/laya/assets/images/no-1.png",
+    rankText2:"myLaya/laya/assets/images/no-2.png",
+    rankText3:"myLaya/laya/assets/images/no-3.png",
+    rankText4:"myLaya/laya/assets/images/no-4.png",
 };
 
 Config.emitterPath = {

@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {resources, Sprite, Texture} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
@@ -91,9 +91,9 @@ export default class MapGameScene extends GameScene {
 
     createBike(pp) {
         super.createBike(pp);
-        this.bikeRankText = this.bikeOutterContainer.addChild(new Text("", new TextStyle(Config.bike.rankText.style)));
-        this.bikeRankText.anchor.set(0.5, 1);
-        this.bikeRankText.position.set(0, Config.bike.rankText.positionY);
+        this.bikeRankText = this.bikeOutterContainer.addChild(new Sprite(resources[Config.imagePath.rankText]));
+        this.bikeRankText.anchor.set(0.5, 0.5);
+        this.bikeRankText.position.set(Config.bike.rankText.positionX, Config.bike.rankText.positionY);
     }
 
     createEnemy(pp) {
@@ -266,7 +266,7 @@ export default class MapGameScene extends GameScene {
         super.play();
         this.updateRacetrackPlayer();
         this.updateNextPlayerInfo();
-        this.bikeRankText.text = this.getRank(this);
+        this.bikeRankText.texture = Texture.from(Config.imagePath[`rankText${this.getRank(this)}`]);
     }
 
     onDead() {
