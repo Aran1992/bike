@@ -8141,6 +8141,8 @@ Config.itemUseHistory = {
     stroke: "black",
     // 描边宽度
     strokeThickness: 1,
+    // 图标缩放比例
+    iconSale: 0.9,
 };
 
 // buff相关配置
