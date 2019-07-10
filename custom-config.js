@@ -8121,8 +8121,27 @@ Config.bike.scorePercent = [
 // 敌人挣脱蜘蛛网每次跳跃之间的时间间隔（单位：帧数（每秒大概60帧））
 Config.enemy.spiderWebBreakIntervalFrame = 12;
 
-// 使用道具提示消失的时间（单位：秒）
-Config.itemUseHistoryDuration = 5;
+// 使用道具相关配置
+Config.itemUseHistory = {
+    // 使用道具提示消失的时间（单位：秒）
+    duration: 5,
+    // 提示字体大小
+    fontSize: 40,
+    // 每行高度
+    lineHeight: 75,
+    // 每隔部分之间的距离
+    partSpace: 5,
+    // 自己名字的颜色（可以直接写一些常见颜色的英文名，如："red"/"blue"/"black"，也可以使用"#ab01cd"这样的颜色代码）
+    selfNameColor: "blue",
+    // 敌人名字的颜色
+    enemyNameColor: "red",
+    // 其他文字的颜色
+    commonTextColor: "white",
+    // 描边颜色
+    stroke: "black",
+    // 描边宽度
+    strokeThickness: 1,
+};
 
 // buff相关配置
 Config.buff = {

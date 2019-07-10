@@ -1,7 +1,6 @@
 ﻿ID,备注【排版要把字体改为黑体】,对应界面（策划内部看的）,简中,英语,日语
 id,comments,scene,sc,en,jp
 NetworkBusy,,,网络繁忙，请稍后重试。,The network is busy. Please try again later.,ネットワークがビジー状態で、少し時間をおいて再度お試しください。
-UseItem,,GameScene.scene.json,${player1} 对 ${player2} 使用了 ${item},${player1} used ${item} for ${player2}.,${player1} は ${player2} に ${item} を使いました。
 Unlocked,,"BikeScene.scene.json
 HomeScene.scene.json",未解锁,Unlocked,アンロックしていません。
 Enable,,"HomeScene.scene.json
@@ -359,3 +358,5 @@ OnlineSay,,,骑士大人，再过 ${time} 就可以领取了,,
 GotToday,,,今天已领取,,
 HasDoubleReward,,,已经获得了双倍奖励,,
 HasNoRebornTimes,,,已经没有复活次数了,,
+对,,,对,,
+使用了,,,使用了,,

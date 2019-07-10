@@ -4,7 +4,7 @@ import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
-import {AnimatedSprite, resources} from "../libs/pixi-wrapper";
+import {resources} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 
 export default class EatableItem extends EditorItem {

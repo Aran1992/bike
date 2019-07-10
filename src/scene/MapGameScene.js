@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {resources, Sprite, Texture} from "../libs/pixi-wrapper";
+import {Container, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";

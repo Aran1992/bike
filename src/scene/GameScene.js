@@ -100,7 +100,7 @@ export default class GameScene extends Scene {
         this.ui.matchRacetrack.visible = false;
         this.ui.nextPlayerInfo.visible = false;
 
-        this.ui.itemUseHistoryLabel.text = "";
+        this.ui.itemUseHistoryPanel.removeChildren();
     }
 
     onShow() {
@@ -140,12 +140,11 @@ export default class GameScene extends Scene {
 
         this.effectRemainFrame = {};
 
-        this.itemUseHistory = [];
         if (this.itemUseHistoryDisappearTimer) {
             this.itemUseHistoryDisappearTimer.forEach(timer => clearTimeout(timer));
         }
         this.itemUseHistoryDisappearTimer = [];
-        this.ui.itemUseHistoryLabel.text = "";
+        this.ui.itemUseHistoryPanel.removeChildren();
 
         this.targetCameraPos = undefined;
 
@@ -349,7 +348,7 @@ export default class GameScene extends Scene {
                             this.setContactFatalEdge(true);
                             ud = anotherFixture.getBody().getUserData();
                             if (ud && ud.thrower) {
-                                EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaEffect");
+                                EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaPeel");
                             }
                         }
                     }
@@ -1549,16 +1548,17 @@ export default class GameScene extends Scene {
     }
 
     onUseItem(user, receiver, effect) {
-        this.itemUseHistory.push(App.getText("UseItem", {
-            player1: user.getName(),
-            player2: receiver.getName(),
-            item: effect
-        }));
-        this.ui.itemUseHistoryLabel.text = this.itemUseHistory.join("\n");
+        let itemHeight = Config.itemUseHistory.lineHeight;
+        let info = this.createUseItemInfo(user, receiver, effect);
+        info.y = this.ui.itemUseHistoryPanel.children.length * itemHeight;
+        this.ui.itemUseHistoryPanel.addChild(info);
         this.itemUseHistoryDisappearTimer.push(setTimeout(() => {
-            this.itemUseHistory.shift();
-            this.ui.itemUseHistoryLabel.text = this.itemUseHistory.join("\n");
-        }, Config.itemUseHistoryDuration * 1000));
+            this.ui.itemUseHistoryPanel.removeChildAt(0);
+            for (let i = 0; i < this.ui.itemUseHistoryPanel.children.length; i++) {
+                let child = this.ui.itemUseHistoryPanel.children[0];
+                child.y = i * itemHeight;
+            }
+        }, Config.itemUseHistory.duration * 1000));
     }
 
     getName() {
@@ -1695,6 +1695,31 @@ export default class GameScene extends Scene {
         });
         effectContainer.addChild(effect.sprite);
         this.effectList.push(effect);
+    }
+
+    createUseItemInfo(user, sufferer, effect) {
+        let container = new Container();
+        let lastX = 0;
+        let createText = (string, color) => {
+            let text = new Text(string, new TextStyle({
+                fill: color,
+                fontSize: Config.itemUseHistory.fontSize,
+                stroke: Config.itemUseHistory.stroke,
+                strokeThickness: Config.itemUseHistory.strokeThickness,
+            }));
+            text.anchor.set(0, 0.5);
+            text.x = lastX;
+            container.addChild(text);
+            lastX += text.width + Config.itemUseHistory.partSpace;
+        };
+        createText(`【${user.getName()}】`, user === this ? Config.itemUseHistory.selfNameColor : Config.itemUseHistory.enemyNameColor);
+        createText(App.getText("对"), Config.itemUseHistory.commonTextColor);
+        createText(`【${sufferer.getName()}】`, sufferer === this ? Config.itemUseHistory.selfNameColor : Config.itemUseHistory.enemyNameColor);
+        createText(App.getText("使用了"), Config.itemUseHistory.commonTextColor);
+        let icon = container.addChild(Sprite.from(Config.effect[effect].imagePath));
+        icon.anchor.set(0, 0.5);
+        icon.x = lastX;
+        return container;
     }
 }
 

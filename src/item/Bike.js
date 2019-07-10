@@ -189,7 +189,7 @@ export default class Bike {
                     this.setContactFatalEdge(true);
                     ud = anotherFixture.getBody().getUserData();
                     if (ud && ud.thrower) {
-                        EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaEffect");
+                        EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaPeel");
                     }
                 }
             }
