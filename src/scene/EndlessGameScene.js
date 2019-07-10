@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {resources, Sprite, Texture} from "../libs/pixi-wrapper";
+import {AnimatedSprite, resources, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import {Vec2} from "../libs/planck-wrapper";
@@ -94,6 +94,7 @@ export default class EndlessGameScene extends GameScene {
         this.diffIndex = -1;
         this.roadSectionList = this.sceneConfig.roadSectionList;
         this.preparePartList();
+        this.createSpeedUpNotice();
     }
 
     createRoadSection(json, offsetX, offsetY) {
@@ -130,6 +131,10 @@ export default class EndlessGameScene extends GameScene {
         let rsList = Config.roadSections[rsListID].map(name =>
             Utils.clone(resources[`${Config.endlessMode.baseScenePath}${name}.scene.json`].data));
 
+        if (roadSection.velocity > this.player.velocity.getBasicValueRate()) {
+            this.speedUpNotice.visible = true;
+            this.speedUpNotice.gotoAndPlay(0);
+        }
         this.player.velocity.setBasicValueRate(roadSection.velocity);
         this.bikeBody.setLinearVelocity(Vec2(this.player.velocity.value, this.bikeBody.getLinearVelocity().y));
 
@@ -354,5 +359,18 @@ export default class EndlessGameScene extends GameScene {
     actionCallback(handler) {
         handler();
         this.onActionEnded();
+    }
+
+    createSpeedUpNotice() {
+        if (this.speedUpNotice) {
+            return;
+        }
+        this.speedUpNotice = new AnimatedSprite(GameUtils.getFrames(Config.imagePath.speedUpNotice));
+        this.speedUpNotice.loop = false;
+        this.speedUpNotice.animationSpeed = Config.animationSpeed.speedUpNotice;
+        this.speedUpNotice.onComplete = () => this.speedUpNotice.visible = false;
+        this.speedUpNotice.anchor.set(0.5, 0.5);
+        this.speedUpNotice.visible = false;
+        this.ui.speedUpNotice.addChild(this.speedUpNotice);
     }
 }

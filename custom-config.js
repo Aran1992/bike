@@ -9653,4 +9653,12 @@ Config.minLoadingTime = 2;
 // 进入关卡前的加载界面的提示数量
 Config.tipCount = 9;
 
+// 各个动画的速度（1表示画面渲染一帧，动画播放一帧，0.5表示画面渲染两帧，动画播放一帧）
+Config.animationSpeed = {
+    // 速度提升提示
+    speedUpNotice: 1,
+    // 随机道具
+    randomItem: 1,
+};
+
 export default Config;

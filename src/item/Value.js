@@ -16,6 +16,10 @@ export default class Value {
         return this.calcFinalValue();
     }
 
+    getBasicValueRate() {
+        return this.basicValueRate;
+    }
+
     increaseValueByRate(rate) {
         this.rate += rate;
         return this.calcFinalValue();

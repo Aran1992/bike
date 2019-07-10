@@ -1,6 +1,6 @@
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
-import {resources, Sprite} from "../libs/pixi-wrapper";
+import {AnimatedSprite, resources, Sprite} from "../libs/pixi-wrapper";
 import Config from "../config";
 
 export default class EditorItem {
@@ -38,8 +38,15 @@ export default class EditorItem {
     }
 
     onCreate() {
-        this.sprite = this.parent.addChild(new Sprite());
-        this.sprite.texture = resources[this.config.imagePath].texture;
+        if (this.config.effect === "Random") {
+            this.sprite = this.parent.addChild(new AnimatedSprite(GameUtils.getFrames(Config.imagePath.randomItem)));
+            this.sprite.loop = true;
+            this.sprite.animationSpeed = Config.animationSpeed.randomItem;
+            this.sprite.play();
+        } else {
+            this.sprite = this.parent.addChild(new Sprite());
+            this.sprite.texture = resources[this.config.imagePath].texture;
+        }
         this.sprite.anchor.set(0.5, 0.5);
         this.sprite.scale.set(this.config.scaleX, this.config.scaleY);
         this.sprite.rotation = this.config.rotation;
