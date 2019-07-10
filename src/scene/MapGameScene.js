@@ -333,5 +333,6 @@ export default class MapGameScene extends GameScene {
         DataMgr.add(DataMgr.rankTotalScore, score);
         DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
         this.gameLoopFunc = this.pause.bind(this);
+        this.stopSounds();
     }
 }

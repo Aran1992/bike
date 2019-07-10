@@ -176,6 +176,14 @@ export default class GameScene extends Scene {
     }
 
     onHide() {
+        this.stopSounds();
+    }
+
+    onDestroy() {
+        this.stopSounds();
+    }
+
+    stopSounds() {
         if (this.bubbleFloatSound) {
             MusicMgr.stopLoopSound(this.bubbleFloatSound);
             this.bubbleFloatSound = undefined;
@@ -499,10 +507,7 @@ export default class GameScene extends Scene {
             if (this.startFloat) {
                 this.startFloat = false;
                 this.bikeBubbleSprite.visible = false;
-                if (this.bubbleFloatSound) {
-                    MusicMgr.stopLoopSound(this.bubbleFloatSound);
-                    this.bubbleFloatSound = undefined;
-                }
+                this.stopSounds();
                 MusicMgr.playSound(Config.soundPath.bubbleDestroy);
             } else if (this.hasEffect("SpiderWeb")) {
                 this.bikeBody.applyForceToCenter(Vec2(0, Config.effect.SpiderWeb.jumpForce));
@@ -1135,10 +1140,7 @@ export default class GameScene extends Scene {
             if (this.startFloat) {
                 if (this.bikeFloatFrame === 0) {
                     this.startFloat = false;
-                    if (this.bubbleFloatSound) {
-                        MusicMgr.stopLoopSound(this.bubbleFloatSound);
-                        this.bubbleFloatSound = undefined;
-                    }
+                    this.stopSounds();
                     MusicMgr.playSound(Config.soundPath.bubbleDestroy);
                     this.bikeBubbleSprite.visible = false;
                 } else {
@@ -1384,10 +1386,7 @@ export default class GameScene extends Scene {
         this.bikeArrowList.forEach(sprite => sprite.visible = false);
         this.bikeFloatFrame = Config.rebornFloatFrame;
         MusicMgr.playSound(Config.soundPath.rebornButton);
-        if (this.bubbleFloatSound) {
-            MusicMgr.stopLoopSound(this.bubbleFloatSound);
-            this.bubbleFloatSound = undefined;
-        }
+        this.stopSounds();
         this.bubbleFloatSound = MusicMgr.playLoopSound(Config.soundPath.bubbleFloat);
     }
 
