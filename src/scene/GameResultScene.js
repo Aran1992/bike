@@ -27,6 +27,8 @@ export default class GameResultScene extends Scene {
         this.args = args;
 
         this.refresh();
+
+        App.getScene("MapGameScene").stopSounds();
     }
 
     static onClickMainButton() {

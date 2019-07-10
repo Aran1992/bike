@@ -989,6 +989,8 @@ export default class GameScene extends Scene {
                 this.bikeAccSprite.visible = true;
                 this.bikeAccSprite.texture = resources[Config.startImagePath.ui].textures[`cd-${Math.ceil(this.bikeFloatFrame / Config.fps)}.png`];
                 this.bikeAccSprite.position.set(this.bikeOutterContainer.x, this.bikeOutterContainer.y - this.bikeSelfContainer.height / 2);
+            } else {
+                this.bikeAccSprite.visible = false;
             }
             if (this.jumping) {
                 if (this.jumpingAnimationFrames) {
