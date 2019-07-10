@@ -22,7 +22,9 @@ class OnlineMgr_ {
         let gift = Config.giftList[giftIndex];
         if (gift) {
             this.giftRemainTime = DataMgr.get(DataMgr.remainGiftOnlineMinutes, 0) * 60;
-            if (this.giftRemainTime !== 0) {
+            if (this.giftRemainTime < 0) {
+                this.giftRemainTime = 0;
+            } else if (this.giftRemainTime > 0) {
                 clearInterval(this.giftCountDownTimer);
                 this.giftCountDownTimer = setInterval(() => {
                     this.giftRemainTime--;
