@@ -1250,17 +1250,6 @@ Config.endlessMode.sceneList = [
         name: "Select Map1",
         // 免费解锁所需总距离
         unlockDistance: 0,
-        // 解锁显示内容（有配置就显示，没配置就不显示）
-        unlockInfo: {
-            // 解锁内容标题
-            title: "xxx",
-            // 解锁描述
-            dsc: "xxx",
-            // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
-            // 解锁图片缩放
-            imageScale: 1,
-        },
         // 花费解锁所需钻石
         unlockCostDiamond: 0,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -1670,6 +1659,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map2",
         // 免费解锁所需总距离
         unlockDistance: 12000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle2",
+            // 解锁描述
+            dsc: "MapUnlockDescribe2",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 10,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -2079,6 +2079,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map3",
         // 免费解锁所需总距离
         unlockDistance: 36000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle3",
+            // 解锁描述
+            dsc: "MapUnlockDescribe3",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 50,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -2488,6 +2499,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map4",
         // 免费解锁所需总距离
         unlockDistance: 72000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle4",
+            // 解锁描述
+            dsc: "MapUnlockDescribe4",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 100,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -2897,11 +2919,12 @@ Config.endlessMode.sceneList = [
         name: "Select Map5",
         // 免费解锁所需总距离
         unlockDistance: 144000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
-            title: "xxx",
+            title: "MapUnlockTitle5",
             // 解锁描述
-            dsc: "xxx",
+            dsc: "MapUnlockDescribe5",
             // 解锁图片
             image: "myLaya/laya/assets/images/Bird01.png",
             // 解锁图片缩放
@@ -3316,6 +3339,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map6",
         // 免费解锁所需总距离
         unlockDistance: 216000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle6",
+            // 解锁描述
+            dsc: "MapUnlockDescribe6",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 200,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -3725,6 +3759,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map7",
         // 免费解锁所需总距离
         unlockDistance: 432000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle7",
+            // 解锁描述
+            dsc: "MapUnlockDescribe7",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 250,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -4134,6 +4179,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map8",
         // 免费解锁所需总距离
         unlockDistance: 864000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle8",
+            // 解锁描述
+            dsc: "MapUnlockDescribe8",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -4543,6 +4599,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map9",
         // 免费解锁所需总距离
         unlockDistance: 1728000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle9",
+            // 解锁描述
+            dsc: "MapUnlockDescribe9",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -4952,6 +5019,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map10",
         // 免费解锁所需总距离
         unlockDistance: 3456000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle10",
+            // 解锁描述
+            dsc: "MapUnlockDescribe10",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -5361,6 +5439,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map11",
         // 免费解锁所需总距离
         unlockDistance: 5184000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle11",
+            // 解锁描述
+            dsc: "MapUnlockDescribe11",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -5770,6 +5859,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map12",
         // 免费解锁所需总距离
         unlockDistance: 6912000,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "MapUnlockTitle12",
+            // 解锁描述
+            dsc: "MapUnlockDescribe12",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -8246,9 +8346,9 @@ Config.home = {
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "xxx",
+                title: "BackgroundUnlockTitle2",
                 // 解锁描述
-                dsc: "xxx",
+                dsc: "BackgroundUnlockDescribe2",
                 // 解锁图片
                 image: "myLaya/laya/assets/images/Bird01.png",
                 // 解锁图片缩放
@@ -8272,7 +8372,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle3",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe3",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 4,
@@ -8291,7 +8402,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle4",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe4",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 5,
@@ -8310,7 +8432,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle5",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe5",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 6,
@@ -8329,7 +8462,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle6",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe6",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 7,
@@ -8348,7 +8492,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle7",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe7",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 8,
@@ -8367,7 +8522,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle8",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe8",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 9,
@@ -8386,7 +8552,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle9",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe9",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 10,
@@ -8405,7 +8582,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle10",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe10",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 11,
@@ -8424,7 +8612,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle11",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe11",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 12,
@@ -8443,7 +8642,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "BackgroundUnlockTitle12",
+                // 解锁描述
+                dsc: "BackgroundUnlockDescribe12",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
     ],
     // 地板相关配置 最少要有一个id为1的
@@ -8475,9 +8685,9 @@ Config.home = {
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "xxx",
+                title: "FloorUnlockTitle2",
                 // 解锁描述
-                dsc: "xxx",
+                dsc: "FloorUnlockDescribe2",
                 // 解锁图片
                 image: "myLaya/laya/assets/images/Bird01.png",
                 // 解锁图片缩放
@@ -8501,7 +8711,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "FloorUnlockTitle3",
+                // 解锁描述
+                dsc: "FloorUnlockDescribe3",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 4,
@@ -8520,7 +8741,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "FloorUnlockTitle4",
+                // 解锁描述
+                dsc: "FloorUnlockDescribe4",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 5,
@@ -8539,7 +8771,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "FloorUnlockTitle5",
+                // 解锁描述
+                dsc: "FloorUnlockDescribe5",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 6,
@@ -8558,7 +8801,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "FloorUnlockTitle6",
+                // 解锁描述
+                dsc: "FloorUnlockDescribe6",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 7,
@@ -8577,7 +8831,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "FloorUnlockTitle7",
+                // 解锁描述
+                dsc: "FloorUnlockDescribe7",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
     ],
     // 战利品板相关配置 最少要有一个id为1的
@@ -8605,9 +8870,9 @@ Config.home = {
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "xxx",
+                title: "SpoilUnlockTitle1",
                 // 解锁描述
-                dsc: "xxx",
+                dsc: "SpoilUnlockDescribe1",
                 // 解锁图片
                 image: "myLaya/laya/assets/images/Bird01.png",
                 // 解锁图片缩放
@@ -8633,7 +8898,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle2",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe2",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 22,
@@ -8654,7 +8930,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle3",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe3",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 31,
@@ -8675,7 +8962,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle4",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe4",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 32,
@@ -8696,7 +8994,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle5",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe5",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 33,
@@ -8717,7 +9026,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle6",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe6",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 41,
@@ -8738,7 +9058,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle7",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe7",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 42,
@@ -8759,7 +9090,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle8",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe8",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 51,
@@ -8780,7 +9122,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle9",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe9",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 52,
@@ -8801,7 +9154,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle10",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe10",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 53,
@@ -8822,7 +9186,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle11",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe11",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 54,
@@ -8843,7 +9218,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle12",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe12",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 55,
@@ -8864,7 +9250,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle13",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe13",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 61,
@@ -8885,7 +9282,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle14",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe14",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 62,
@@ -8906,7 +9314,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle15",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe15",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 71,
@@ -8927,7 +9346,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle16",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe16",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 72,
@@ -8948,7 +9378,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle17",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe17",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 73,
@@ -8969,7 +9410,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle18",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe18",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 74,
@@ -8990,7 +9442,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle19",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe19",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 81,
@@ -9011,7 +9474,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle20",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe20",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 82,
@@ -9032,7 +9506,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle21",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe21",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 91,
@@ -9053,7 +9538,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle22",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe22",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 92,
@@ -9074,7 +9570,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle23",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe23",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 101,
@@ -9095,7 +9602,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle24",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe24",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 102,
@@ -9116,7 +9634,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle25",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe25",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 111,
@@ -9138,7 +9667,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle26",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe26",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
     ],
     // 宠物板相关配置 最少要有一个id为1的
@@ -9172,9 +9712,9 @@ Config.home = {
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "xxx",
+                title: "PetUnlockTitle1",
                 // 解锁描述
-                dsc: "xxx",
+                dsc: "PetUnlockDescribe1",
                 // 解锁图片
                 image: "myLaya/laya/assets/images/Bird01.png",
                 // 解锁图片缩放
@@ -9206,7 +9746,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle2",
+                // 解锁描述
+                dsc: "PetUnlockDescribe2",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 11,
@@ -9233,7 +9784,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle3",
+                // 解锁描述
+                dsc: "PetUnlockDescribe3",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 21,
@@ -9260,7 +9822,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle4",
+                // 解锁描述
+                dsc: "PetUnlockDescribe4",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 41,
@@ -9287,7 +9860,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle5",
+                // 解锁描述
+                dsc: "PetUnlockDescribe5",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 42,
@@ -9314,7 +9898,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle6",
+                // 解锁描述
+                dsc: "PetUnlockDescribe6",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 51,
@@ -9341,7 +9936,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle7",
+                // 解锁描述
+                dsc: "PetUnlockDescribe7",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 52,
@@ -9368,7 +9974,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle8",
+                // 解锁描述
+                dsc: "PetUnlockDescribe8",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 53,
@@ -9395,7 +10012,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle9",
+                // 解锁描述
+                dsc: "PetUnlockDescribe9",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 61,
@@ -9423,7 +10051,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle10",
+                // 解锁描述
+                dsc: "PetUnlockDescribe10",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 91,
@@ -9451,7 +10090,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle11",
+                // 解锁描述
+                dsc: "PetUnlockDescribe11",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 101,
@@ -9479,7 +10129,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle12",
+                // 解锁描述
+                dsc: "PetUnlockDescribe12",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 102,
@@ -9507,7 +10168,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle13",
+                // 解锁描述
+                dsc: "PetUnlockDescribe13",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
     ]
 };
@@ -9758,9 +10430,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [4, 1000],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle1",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe1",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放
@@ -9771,9 +10443,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [4, 10000],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle11",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe11",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放
@@ -9784,9 +10456,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [4, 10000],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle12",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe12",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放
@@ -9797,9 +10469,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [4, 10000],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle13",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe13",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放
@@ -9810,9 +10482,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [4, 10000],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle2",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe2",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放
@@ -9823,9 +10495,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [10, 1],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle3",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe3",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放
@@ -9836,9 +10508,9 @@ Config.lockSystems = {
         // 解锁条件
         condition: [10, 5],
         // 解锁内容标题
-        title: "xxx",
+        title: "SystemUnlockTitle4",
         // 解锁描述
-        dsc: "xxx",
+        dsc: "SystemUnlockDescribe4",
         // 解锁图片
         image: "myLaya/laya/assets/images/Bird01.png",
         // 解锁图片缩放

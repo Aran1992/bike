@@ -364,3 +364,225 @@ HasNoRebornTimes,,,已经没有复活次数了,,
 LockNotice,,,"这个内容未解锁
 解锁条件：
 ${condition}",,
+SystemUnlockTitle1,,,扭蛋 解锁,,
+SystemUnlockTitle2,,,排名竞赛 解锁,,
+SystemUnlockTitle3,,,排行 解锁,,
+SystemUnlockTitle4,,,家园 解锁,,
+SystemUnlockTitle11,,,签到 解锁,,
+SystemUnlockTitle12,,,礼包 解锁,,
+SystemUnlockTitle13,,,福利 解锁,,
+SystemUnlockDescribe1,,,"恭喜骑士大人
+将扭蛋解锁了",,
+SystemUnlockDescribe2,,,"恭喜骑士大人
+将排名竞赛解锁了",,
+SystemUnlockDescribe3,,,"恭喜骑士大人
+将排行解锁了",,
+SystemUnlockDescribe4,,,"恭喜骑士大人
+将家园解锁了",,
+SystemUnlockDescribe11,,,"恭喜骑士大人
+将签到解锁了",,
+SystemUnlockDescribe12,,,"恭喜骑士大人
+将礼包解锁了",,
+SystemUnlockDescribe13,,,"恭喜骑士大人
+将福利解锁了",,
+MapUnlockTitle2,,,地图2 解锁,,
+MapUnlockTitle3,,,地图3 解锁,,
+MapUnlockTitle4,,,地图4 解锁,,
+MapUnlockTitle5,,,地图5 解锁,,
+MapUnlockTitle6,,,地图6 解锁,,
+MapUnlockTitle7,,,地图7 解锁,,
+MapUnlockTitle8,,,地图8 解锁,,
+MapUnlockTitle9,,,地图9 解锁,,
+MapUnlockTitle10,,,地图10 解锁,,
+MapUnlockTitle11,,,地图11 解锁,,
+MapUnlockTitle12,,,地图12 解锁,,
+MapUnlockDescribe2,,,"恭喜骑士大人
+将地图2解锁了",,
+MapUnlockDescribe3,,,"恭喜骑士大人
+将地图3解锁了",,
+MapUnlockDescribe4,,,"恭喜骑士大人
+将地图4解锁了",,
+MapUnlockDescribe5,,,"恭喜骑士大人
+将地图5解锁了",,
+MapUnlockDescribe6,,,"恭喜骑士大人
+将地图6解锁了",,
+MapUnlockDescribe7,,,"恭喜骑士大人
+将地图7解锁了",,
+MapUnlockDescribe8,,,"恭喜骑士大人
+将地图8解锁了",,
+MapUnlockDescribe9,,,"恭喜骑士大人
+将地图9解锁了",,
+MapUnlockDescribe10,,,"恭喜骑士大人
+将地图10解锁了",,
+MapUnlockDescribe11,,,"恭喜骑士大人
+将地图11解锁了",,
+MapUnlockDescribe12,,,"恭喜骑士大人
+将地图12解锁了",,
+BackgroundUnlockTitle2,,,背景2 解锁,,
+BackgroundUnlockTitle3,,,背景3 解锁,,
+BackgroundUnlockTitle4,,,背景4 解锁,,
+BackgroundUnlockTitle5,,,背景5 解锁,,
+BackgroundUnlockTitle6,,,背景6 解锁,,
+BackgroundUnlockTitle7,,,背景7 解锁,,
+BackgroundUnlockTitle8,,,背景8 解锁,,
+BackgroundUnlockTitle9,,,背景9 解锁,,
+BackgroundUnlockTitle10,,,背景10 解锁,,
+BackgroundUnlockTitle11,,,背景11 解锁,,
+BackgroundUnlockTitle12,,,背景12 解锁,,
+BackgroundUnlockDescribe2,,,"恭喜骑士大人
+将背景2解锁了",,
+BackgroundUnlockDescribe3,,,"恭喜骑士大人
+将背景3解锁了",,
+BackgroundUnlockDescribe4,,,"恭喜骑士大人
+将背景4解锁了",,
+BackgroundUnlockDescribe5,,,"恭喜骑士大人
+将背景5解锁了",,
+BackgroundUnlockDescribe6,,,"恭喜骑士大人
+将背景6解锁了",,
+BackgroundUnlockDescribe7,,,"恭喜骑士大人
+将背景7解锁了",,
+BackgroundUnlockDescribe8,,,"恭喜骑士大人
+将背景8解锁了",,
+BackgroundUnlockDescribe9,,,"恭喜骑士大人
+将背景9解锁了",,
+BackgroundUnlockDescribe10,,,"恭喜骑士大人
+将背景10解锁了",,
+BackgroundUnlockDescribe11,,,"恭喜骑士大人
+将背景11解锁了",,
+BackgroundUnlockDescribe12,,,"恭喜骑士大人
+将背景12解锁了",,
+FloorUnlockTitle2,,,地面2 解锁,,
+FloorUnlockTitle3,,,地面3 解锁,,
+FloorUnlockTitle4,,,地面4 解锁,,
+FloorUnlockTitle5,,,地面5 解锁,,
+FloorUnlockTitle6,,,地面6 解锁,,
+FloorUnlockTitle7,,,地面7 解锁,,
+FloorUnlockDescribe2,,,"恭喜骑士大人
+将地面2解锁了",,
+FloorUnlockDescribe3,,,"恭喜骑士大人
+将地面3解锁了",,
+FloorUnlockDescribe4,,,"恭喜骑士大人
+将地面4解锁了",,
+FloorUnlockDescribe5,,,"恭喜骑士大人
+将地面5解锁了",,
+FloorUnlockDescribe6,,,"恭喜骑士大人
+将地面6解锁了",,
+FloorUnlockDescribe7,,,"恭喜骑士大人
+将地面7解锁了",,
+SpoilUnlockTitle1,,,战力品1 解锁,,
+SpoilUnlockTitle2,,,战力品2 解锁,,
+SpoilUnlockTitle3,,,战力品3 解锁,,
+SpoilUnlockTitle4,,,战力品4 解锁,,
+SpoilUnlockTitle5,,,战力品5 解锁,,
+SpoilUnlockTitle6,,,战力品6 解锁,,
+SpoilUnlockTitle7,,,战力品7 解锁,,
+SpoilUnlockTitle8,,,战力品8 解锁,,
+SpoilUnlockTitle9,,,战力品9 解锁,,
+SpoilUnlockTitle10,,,战力品10 解锁,,
+SpoilUnlockTitle11,,,战力品11 解锁,,
+SpoilUnlockTitle12,,,战力品12 解锁,,
+SpoilUnlockTitle13,,,战力品13 解锁,,
+SpoilUnlockTitle14,,,战力品14 解锁,,
+SpoilUnlockTitle15,,,战力品15 解锁,,
+SpoilUnlockTitle16,,,战力品16 解锁,,
+SpoilUnlockTitle17,,,战力品17 解锁,,
+SpoilUnlockTitle18,,,战力品18 解锁,,
+SpoilUnlockTitle19,,,战力品19 解锁,,
+SpoilUnlockTitle20,,,战力品20 解锁,,
+SpoilUnlockTitle21,,,战力品21 解锁,,
+SpoilUnlockTitle22,,,战力品22 解锁,,
+SpoilUnlockTitle23,,,战力品23 解锁,,
+SpoilUnlockTitle24,,,战力品24 解锁,,
+SpoilUnlockTitle25,,,战力品25 解锁,,
+SpoilUnlockTitle26,,,战力品26 解锁,,
+SpoilUnlockDescribe1,,,"恭喜骑士大人
+将战力品1解锁了",,
+SpoilUnlockDescribe2,,,"恭喜骑士大人
+将战力品2解锁了",,
+SpoilUnlockDescribe3,,,"恭喜骑士大人
+将战力品3解锁了",,
+SpoilUnlockDescribe4,,,"恭喜骑士大人
+将战力品4解锁了",,
+SpoilUnlockDescribe5,,,"恭喜骑士大人
+将战力品5解锁了",,
+SpoilUnlockDescribe6,,,"恭喜骑士大人
+将战力品6解锁了",,
+SpoilUnlockDescribe7,,,"恭喜骑士大人
+将战力品7解锁了",,
+SpoilUnlockDescribe8,,,"恭喜骑士大人
+将战力品8解锁了",,
+SpoilUnlockDescribe9,,,"恭喜骑士大人
+将战力品9解锁了",,
+SpoilUnlockDescribe10,,,"恭喜骑士大人
+将战力品10解锁了",,
+SpoilUnlockDescribe11,,,"恭喜骑士大人
+将战力品11解锁了",,
+SpoilUnlockDescribe12,,,"恭喜骑士大人
+将战力品12解锁了",,
+SpoilUnlockDescribe13,,,"恭喜骑士大人
+将战力品13解锁了",,
+SpoilUnlockDescribe14,,,"恭喜骑士大人
+将战力品14解锁了",,
+SpoilUnlockDescribe15,,,"恭喜骑士大人
+将战力品15解锁了",,
+SpoilUnlockDescribe16,,,"恭喜骑士大人
+将战力品16解锁了",,
+SpoilUnlockDescribe17,,,"恭喜骑士大人
+将战力品17解锁了",,
+SpoilUnlockDescribe18,,,"恭喜骑士大人
+将战力品18解锁了",,
+SpoilUnlockDescribe19,,,"恭喜骑士大人
+将战力品19解锁了",,
+SpoilUnlockDescribe20,,,"恭喜骑士大人
+将战力品20解锁了",,
+SpoilUnlockDescribe21,,,"恭喜骑士大人
+将战力品21解锁了",,
+SpoilUnlockDescribe22,,,"恭喜骑士大人
+将战力品22解锁了",,
+SpoilUnlockDescribe23,,,"恭喜骑士大人
+将战力品23解锁了",,
+SpoilUnlockDescribe24,,,"恭喜骑士大人
+将战力品24解锁了",,
+SpoilUnlockDescribe25,,,"恭喜骑士大人
+将战力品25解锁了",,
+SpoilUnlockDescribe26,,,"恭喜骑士大人
+将战力品26解锁了",,
+PetUnlockTitle1,,,宠物1 解锁,,
+PetUnlockTitle2,,,宠物2 解锁,,
+PetUnlockTitle3,,,宠物3 解锁,,
+PetUnlockTitle4,,,宠物4 解锁,,
+PetUnlockTitle5,,,宠物5 解锁,,
+PetUnlockTitle6,,,宠物6 解锁,,
+PetUnlockTitle7,,,宠物7 解锁,,
+PetUnlockTitle8,,,宠物8 解锁,,
+PetUnlockTitle9,,,宠物9 解锁,,
+PetUnlockTitle10,,,宠物10 解锁,,
+PetUnlockTitle11,,,宠物11 解锁,,
+PetUnlockTitle12,,,宠物12 解锁,,
+PetUnlockTitle13,,,宠物13 解锁,,
+PetUnlockDescribe1,,,"恭喜骑士大人
+将宠物1解锁了",,
+PetUnlockDescribe2,,,"恭喜骑士大人
+将宠物2解锁了",,
+PetUnlockDescribe3,,,"恭喜骑士大人
+将宠物3解锁了",,
+PetUnlockDescribe4,,,"恭喜骑士大人
+将宠物4解锁了",,
+PetUnlockDescribe5,,,"恭喜骑士大人
+将宠物5解锁了",,
+PetUnlockDescribe6,,,"恭喜骑士大人
+将宠物6解锁了",,
+PetUnlockDescribe7,,,"恭喜骑士大人
+将宠物7解锁了",,
+PetUnlockDescribe8,,,"恭喜骑士大人
+将宠物8解锁了",,
+PetUnlockDescribe9,,,"恭喜骑士大人
+将宠物9解锁了",,
+PetUnlockDescribe10,,,"恭喜骑士大人
+将宠物10解锁了",,
+PetUnlockDescribe11,,,"恭喜骑士大人
+将宠物11解锁了",,
+PetUnlockDescribe12,,,"恭喜骑士大人
+将宠物12解锁了",,
+PetUnlockDescribe13,,,"恭喜骑士大人
+将宠物13解锁了",,
