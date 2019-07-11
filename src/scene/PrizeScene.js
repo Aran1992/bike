@@ -40,7 +40,8 @@ export default class PrizeScene extends Scene {
             } else if (reward.rewardDiamond) {
                 DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + reward.rewardDiamond);
             } else if (reward.rewardBike) {
-                DataMgr.plusBike(reward.rewardBike);
+                let {levelUp, highestLevel} = DataMgr.plusBike(reward.rewardBike);
+                App.showScene("BikeDetailScene", reward.rewardBike, levelUp, highestLevel);
             }
         });
         EventMgr.dispatchEvent("RefreshRankData");
