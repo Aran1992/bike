@@ -643,7 +643,8 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
                 () => {
                     let coin = DataMgr.get(DataMgr.coin, 0);
                     let diamond = DataMgr.get(DataMgr.diamond, 0);
-                    let conditions = Config.home[type].find(item => item.id === id).unlockConditions;
+                    let config = Config.home[type].find(item => item.id === id);
+                    let conditions = config.unlockConditions;
                     let coinCondition = conditions.find(list => list[0] === Config.conditionsEnum.costCoin);
                     let costCoin = coinCondition ? coinCondition[1] : 0;
                     let diamondCondition = conditions.find(list => list[0] === Config.conditionsEnum.costDiamond);
@@ -658,6 +659,7 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
                         DataMgr.set(DataMgr.homeData, data);
                         this.refreshPlayerBasicInfo();
                         this.refreshCurItemInfo();
+                        config.unlockInfo && App.showScene("NewContentScene", config.unlockInfo);
                     }
                 },
                 () => {

@@ -8242,7 +8242,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 3,
@@ -8460,7 +8471,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 3,
@@ -8579,7 +8601,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 21,
@@ -9135,7 +9168,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 2,
