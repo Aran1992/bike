@@ -38,6 +38,7 @@ import HelpEndlessScene from "../scene/HelpEndlessScene";
 import HelpMatchScene from "../scene/HelpMatchScene";
 import EventMgr from "./EventMgr";
 import NewContentScene from "../scene/NewContentScene";
+import BikeDetailScene from "../scene/BikeDetailScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -102,6 +103,7 @@ export default class MyApplication extends Application {
             "HelpEndlessScene": HelpEndlessScene,
             "HelpMatchScene": HelpMatchScene,
             "NewContentScene": NewContentScene,
+            "BikeDetailScene": BikeDetailScene,
         };
 
         this.sceneTable = {};

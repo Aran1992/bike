@@ -239,6 +239,8 @@ class DataMgr_ {
     }
 
     plusBike(id) {
+        let levelUp = false;
+        let highestLevel = false;
         let ownedBikeList = DataMgr.get(DataMgr.ownedBikeList, []);
         let bikeLevelMap = DataMgr.get(DataMgr.bikeLevelMap, {});
         let config = Config.bikeList.find(item => item.id === id);
@@ -247,13 +249,17 @@ class DataMgr_ {
             DataMgr.set(DataMgr.ownedBikeList, ownedBikeList);
             bikeLevelMap[id] = 0;
             DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
-
-        } else {
-            if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[id] + 1] !== undefined) {
-                bikeLevelMap[id]++;
-                DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
+        } else if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[id] + 1] !== undefined) {
+            bikeLevelMap[id]++;
+            DataMgr.set(DataMgr.bikeLevelMap, bikeLevelMap);
+            levelUp = true;
+            if ((config.coinPercent || Config.bike.coinPercent)[bikeLevelMap[id] + 1] === undefined) {
+                highestLevel = true;
             }
+        } else {
+            highestLevel = true;
         }
+        return {levelUp, highestLevel};
     }
 }
 
