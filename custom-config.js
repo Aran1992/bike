@@ -9488,8 +9488,8 @@ if (window.ipConfig && window.ipConfig.innerHTML.length) {
     Config.serverUrl = "http://212.64.21.238:10001";
 }
 
-// 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）
-Config.rankStartTime = new Date(2019, 7, 1, 0, 0, 0);
+// 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）（月份：0为1月份、11为12月份）
+Config.rankStartTime = new Date(2019, 6, 1, 0, 0, 0);
 // 排行榜刷新时间间隔（单位：秒）
 Config.rankRefreshInterval = 7 * 24* 60 * 60;
 
