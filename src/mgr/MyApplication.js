@@ -37,6 +37,7 @@ import LoadingScene from "../scene/LoadingScene";
 import HelpEndlessScene from "../scene/HelpEndlessScene";
 import HelpMatchScene from "../scene/HelpMatchScene";
 import EventMgr from "./EventMgr";
+import NewContentScene from "../scene/NewContentScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -100,6 +101,7 @@ export default class MyApplication extends Application {
             "LoadingScene": LoadingScene,
             "HelpEndlessScene": HelpEndlessScene,
             "HelpMatchScene": HelpMatchScene,
+            "NewContentScene": NewContentScene,
         };
 
         this.sceneTable = {};

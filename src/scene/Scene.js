@@ -80,4 +80,8 @@ export default class Scene extends Container {
     onClick(...args) {
         UIHelper.onClick(...args);
     }
+
+    isShowed() {
+        return this.visible;
+    }
 }

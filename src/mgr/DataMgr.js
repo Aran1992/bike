@@ -168,7 +168,12 @@ class DataMgr_ {
             if (Config.lockSystems.hasOwnProperty(system)) {
                 let [id, ...values] = Config.lockSystems[system];
                 if (id === conditionID && this.checkCondition(id, ...values)) {
-                    EventMgr.dispatchEvent("UnlockSystem", system);
+                    let list = DataMgr.get(DataMgr.unlockSystems, []);
+                    if (list.indexOf(system) === -1) {
+                        list.push(system);
+                        DataMgr.set(DataMgr.unlockSystems, list);
+                        EventMgr.dispatchEvent("UnlockSystem", system);
+                    }
                 }
             }
         }
@@ -297,5 +302,6 @@ DataMgr.receivedSignReward = "35";
 DataMgr.drawAdvertTimes = "36";
 DataMgr.hasShowHomeHelpScene = "37";
 DataMgr.mapGameTimes = "38";
+DataMgr.unlockSystems = "39";
 
 export default DataMgr;

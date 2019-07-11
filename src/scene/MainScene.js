@@ -41,6 +41,8 @@ export default class MainScene extends Scene {
         this.refreshEndlessMode();
 
         this.initGift();
+
+        this.waitShowNotice = [];
     }
 
     onRefreshRankData() {
@@ -75,6 +77,7 @@ export default class MainScene extends Scene {
         window.PlatformHelper.closeLogoScene();
 
         this.refreshLockStatus();
+        this.checkWaitShowNotice();
     }
 
     onHide() {
@@ -106,7 +109,13 @@ export default class MainScene extends Scene {
     onClickEndlessModeButton() {
         this.mode = "Endless";
         this.refreshEndlessMode();
-        App.showScene("PreparationScene", this.mode);
+        if (DataMgr.get(DataMgr.unlockSystems, []).indexOf("preparationScene") === -1) {
+            App.hideScene("MainScene");
+            App.hideScene("PreparationScene");
+            App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
+        } else {
+            App.showScene("PreparationScene", this.mode);
+        }
     }
 
     refreshEndlessMode() {
@@ -244,10 +253,27 @@ export default class MainScene extends Scene {
 
     onUnlockSystem(system) {
         this.refreshLockStatus();
-        this.showUnlockNotice();
+        if (this.isShowed() && this.waitShowNotice.length === 0) {
+            this.showUnlockNotice(system);
+        } else {
+            this.waitShowNotice.push(system);
+        }
     }
 
-    showUnlockNotice() {
+    showUnlockNotice(system) {
+        if (Config.lockSystems[system].title) {
+            App.showScene("NewContentScene", Config.lockSystems[system], () => {
+                this.checkWaitShowNotice();
+            });
+        } else {
+            this.checkWaitShowNotice();
+        }
+    }
+
+    checkWaitShowNotice() {
+        if (this.waitShowNotice.length) {
+            this.showUnlockNotice(this.waitShowNotice.shift());
+        }
     }
 }
 
