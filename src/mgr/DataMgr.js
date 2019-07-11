@@ -172,7 +172,9 @@ class DataMgr_ {
                     if (list.indexOf(system) === -1) {
                         list.push(system);
                         DataMgr.set(DataMgr.unlockSystems, list);
-                        EventMgr.dispatchEvent("UnlockSystem", system);
+                        if (Config.lockSystems[system].title) {
+                            EventMgr.dispatchEvent("UnlockSystem", Config.lockSystems[system]);
+                        }
                     }
                 }
             }

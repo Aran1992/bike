@@ -1399,7 +1399,17 @@ export default class GameScene extends Scene {
             distance *= 2;
         }
         DataMgr.add(DataMgr.coin, coin);
-        DataMgr.add(DataMgr.distance, distance);
+        let newDistance = DataMgr.add(DataMgr.distance, distance);
+        Config.endlessMode.sceneList.forEach(item => {
+            if (newDistance >= item.unlockDistance) {
+                let list = DataMgr.get(DataMgr.unlockEndlessSceneIDList, []);
+                if (list.indexOf(item.id) === -1) {
+                    list.push(item.id);
+                    DataMgr.set(DataMgr.unlockEndlessSceneIDList, list);
+                    item.unlockInfo && EventMgr.dispatchEvent("UnlockSystem", item.unlockInfo);
+                }
+            }
+        });
         DataMgr.add(DataMgr.rankDistance, distance);
         DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
         this.gameLoopFunc = this.pause.bind(this);

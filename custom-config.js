@@ -1250,6 +1250,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map1",
         // 免费解锁所需总距离
         unlockDistance: 0,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "xxx",
+            // 解锁描述
+            dsc: "xxx",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 0,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -2886,6 +2897,16 @@ Config.endlessMode.sceneList = [
         name: "Select Map5",
         // 免费解锁所需总距离
         unlockDistance: 144000,
+        unlockInfo: {
+            // 解锁内容标题
+            title: "xxx",
+            // 解锁描述
+            dsc: "xxx",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 150,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）

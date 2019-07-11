@@ -6,12 +6,14 @@ export default class NewContentScene extends Scene {
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
     }
 
-    onShow(args, closeCallback) {
+    onShow(info, closeCallback) {
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
+
         this.closeCallback = closeCallback;
-        this.ui.title.text = args.title;
-        this.ui.image.texture = Texture.from(args.image);
-        this.ui.image.scale.set(args.imageScale, args.imageScale);
-        this.ui.dsc.text = args.dsc;
+        this.ui.title.text = info.title;
+        this.ui.image.texture = Texture.from(info.image);
+        this.ui.image.scale.set(info.imageScale, info.imageScale);
+        this.ui.dsc.text = info.dsc;
     }
 
     onClickReturnButton() {

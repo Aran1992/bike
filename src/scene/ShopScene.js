@@ -263,6 +263,7 @@ export default class ShopScene extends Scene {
             list.push(config.id);
             DataMgr.set(DataMgr.unlockEndlessSceneIDList, list);
             this.mapList.refresh();
+            config.unlockInfo && App.showScene("NewContentScene", config.unlockInfo);
         } else {
             App.showNotice(App.getText("DiamondIsNotEnough"));
         }

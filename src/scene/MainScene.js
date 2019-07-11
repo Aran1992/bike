@@ -251,23 +251,19 @@ export default class MainScene extends Scene {
         return !DataMgr.checkCondition(id, ...values);
     }
 
-    onUnlockSystem(system) {
+    onUnlockSystem(lockInfo) {
         this.refreshLockStatus();
         if (this.isShowed() && this.waitShowNotice.length === 0) {
-            this.showUnlockNotice(system);
+            this.showUnlockNotice(lockInfo);
         } else {
-            this.waitShowNotice.push(system);
+            this.waitShowNotice.push(lockInfo);
         }
     }
 
-    showUnlockNotice(system) {
-        if (Config.lockSystems[system].title) {
-            App.showScene("NewContentScene", Config.lockSystems[system], () => {
-                this.checkWaitShowNotice();
-            });
-        } else {
+    showUnlockNotice(unlockInfo) {
+        App.showScene("NewContentScene", unlockInfo, () => {
             this.checkWaitShowNotice();
-        }
+        });
     }
 
     checkWaitShowNotice() {
