@@ -166,7 +166,7 @@ class DataMgr_ {
     checkConditions(conditionID) {
         for (let system in Config.lockSystems) {
             if (Config.lockSystems.hasOwnProperty(system)) {
-                let [id, ...values] = Config.lockSystems[system];
+                let [id, ...values] = Config.lockSystems[system].condition;
                 if (id === conditionID && this.checkCondition(id, ...values)) {
                     let list = DataMgr.get(DataMgr.unlockSystems, []);
                     if (list.indexOf(system) === -1) {

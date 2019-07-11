@@ -241,13 +241,13 @@ export default class MainScene extends Scene {
     }
 
     getLockNotice(name) {
-        let [id, ...values] = Config.lockSystems[name];
+        let [id, ...values] = Config.lockSystems[name].condition;
         let condition = App.getText(Config.conditions[id], values);
         return App.getText("LockNotice", {condition: condition});
     }
 
     isLockableButtonLocked(item) {
-        let [id, ...values] = Config.lockSystems[item.var];
+        let [id, ...values] = Config.lockSystems[item.var].condition;
         return !DataMgr.checkCondition(id, ...values);
     }
 
