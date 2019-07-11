@@ -222,7 +222,7 @@ export default class MainScene extends Scene {
             GameUtils.greySprite(item, lock);
             GameUtils.findChildByName(item, "lockedImage").visible = lock;
         });
-        let unlock = DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") !== -1;
+        let unlock = DataMgr.get(DataMgr.unlockSystems, []).indexOf("shopButton") !== -1;
         this.ui.addCoinButton.visible = unlock;
         this.ui.addDiamondButton.visible = unlock;
     }
