@@ -7751,6 +7751,7 @@ Config.item = {
             0: {
                 portable: 0,
                 effect: "GoldCoin",
+                value: 1,
             },
             // 5金币
             55555: {
