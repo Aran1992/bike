@@ -255,7 +255,7 @@ export default class GameScene extends Scene {
     }
 
     onLoadedGameRes() {
-        window.App.hideScene("LoadingScene");
+        App.hideScene("LoadingScene");
 
         this.world = new World({gravity: Vec2(0, this.gravity)});
 

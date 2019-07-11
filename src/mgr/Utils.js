@@ -201,4 +201,8 @@ export default class Utils {
     static clone(object) {
         return JSON.parse(JSON.stringify(object));
     }
+
+    static formatName(name) {
+        return name[0].toUpperCase() + name.substring(1);
+    }
 }

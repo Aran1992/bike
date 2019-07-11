@@ -67,6 +67,7 @@ Score required to reach ${0},,,历史积分需达 ${0},Score required to reach $
 Need to rank ${0}st in total distance,,,需闯入历史累计里程排行第${0}名,Need to rank ${0}st in total distance,
 Need to rank ${0}st in farthest distance,,,需闯入历史最大里程排行第${0}名,Need to rank ${0}st in farthest distance,
 Need to rank ${0}st in score,,,需闯入历史积分排行第${0}名,Need to rank ${0}st in score,
+Need to takes ${0} times map game,,,需要进行${0}次排名竞赛,,
 Highest Level,,,最高等级,Highest Level,
 You have ridden ${distance} meters,,,报告骑士大人，您已骑行${distance}m啦,You have ridden ${distance} meters,
 Air,,,空气,Air,
@@ -360,3 +361,6 @@ HasDoubleReward,,,已经获得了双倍奖励,,
 HasNoRebornTimes,,,已经没有复活次数了,,
 对,,,对,,
 使用了,,,使用了,,
+LockNotice,,,"这个内容未解锁
+解锁条件：
+${condition}",,

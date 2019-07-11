@@ -47,6 +47,7 @@ function createSceneChild(child, parent, root, callbackList) {
     }
     if (data.var !== undefined) {
         root[data.var] = item;
+        item.var = data.var;
     }
     if (data.name) {
         item.uiname = data.name;

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":49,
+    "selectedBox":81,
+    "selecteID":82,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -358,14 +358,13 @@
             "props":{"width":105,"left":20,"height":831,"bottom":240},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,playerinfoButton",
                     "props":{"width":101,"visible":false,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":0,"height":101,"bottom":720},
@@ -378,7 +377,6 @@
                     "compId":92,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/profile.png","centerX":0,"bottom":-5},
@@ -393,7 +391,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,shopButton",
                     "props":{"y":10,"x":0,"width":101,"var":"shopButton","skin":"images/ButtonShop.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":600},
@@ -406,7 +403,6 @@
                     "compId":22,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/shop.png","centerX":0,"bottom":-5},
@@ -420,7 +416,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -436,7 +431,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,systemButton",
                     "props":{"width":101,"var":"systemButton","skin":"images/ButtonSetting_Green.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":480},
@@ -449,7 +443,6 @@
                     "compId":23,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/system.png","centerX":0,"bottom":-5},
@@ -464,7 +457,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,homeButton",
                     "props":{"width":101,"var":"homeButton","skin":"images/ButtonSocial_Blue.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":360},
@@ -477,7 +469,6 @@
                     "compId":24,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/home.png","centerX":0,"bottom":-5},
@@ -491,7 +482,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -509,7 +499,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rankButton",
                     "props":{"x":0,"width":101,"var":"rankButton","skin":"images/ButtonRanking_Orange.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":240},
@@ -522,7 +511,6 @@
                     "compId":25,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/rank.png","centerX":0,"bottom":-5},
@@ -536,7 +524,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -552,7 +539,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,drawButton",
                     "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":120},
@@ -565,7 +551,6 @@
                     "compId":26,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/draw.png","centerX":0,"bottom":-5},
@@ -579,7 +564,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -595,7 +579,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"width":101,"var":"bikeButton","skin":"images/button-bike-scene.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":0},
@@ -608,7 +591,6 @@
                     "compId":27,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/bike.png","centerX":0,"bottom":-5},
@@ -797,10 +779,10 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,giftLockedImage",
-                    "props":{"y":0,"x":0,"visible":false,"var":"giftLockedImage","top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"centerX":0},
+                    "searchKey":"Image,lockedImage,giftLockedImage",
+                    "props":{"y":0,"x":0,"visible":false,"var":"giftLockedImage","top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
                     "nodeParent":81,
-                    "label":"giftLockedImage",
+                    "label":"lockedImage",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,

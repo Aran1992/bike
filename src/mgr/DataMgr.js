@@ -2,6 +2,7 @@ import Config from "../config";
 import NetworkMgr from "./NetworkMgr";
 import Utils from "./Utils";
 import OnlineMgr from "./OnlineMgr";
+import EventMgr from "./EventMgr";
 
 class DataMgr_ {
     constructor() {
@@ -24,6 +25,8 @@ class DataMgr_ {
             8: value => this.data.farestMileageBoardBestRanking !== 0 && this.data.farestMileageBoardBestRanking <= value,
             //需要积分排名达到过第 #### 名
             9: value => this.data.scoreBoardBestRanking !== 0 && this.data.scoreBoardBestRanking <= value,
+            //需要进行 #### 次排名竞赛
+            10: value => DataMgr.get(DataMgr.mapGameTimes, 0) >= value,
         };
     }
 
@@ -107,6 +110,9 @@ class DataMgr_ {
         if (key === DataMgr.totalScore) {
             this.checkConditions(Config.conditionsEnum.totalScore);
         }
+        if (key === DataMgr.mapGameTimes) {
+            this.checkConditions(Config.conditionsEnum.mapGameTimes);
+        }
         if (key === DataMgr.homeData) {
             NetworkMgr.requestSaveSocialData({home: value});
         }
@@ -158,6 +164,14 @@ class DataMgr_ {
     }
 
     checkConditions(conditionID) {
+        for (let system in Config.lockSystems) {
+            if (Config.lockSystems.hasOwnProperty(system)) {
+                let [id, ...values] = Config.lockSystems[system];
+                if (id === conditionID && this.checkCondition(id, ...values)) {
+                    EventMgr.dispatchEvent("UnlockSystem", system);
+                }
+            }
+        }
         Config.home.types.forEach(type => {
             Config.home[type].forEach(item => {
                 if (DataMgr.isHomeItemLocked(type, item.id)
@@ -282,5 +296,6 @@ DataMgr.onlineTime = "34";
 DataMgr.receivedSignReward = "35";
 DataMgr.drawAdvertTimes = "36";
 DataMgr.hasShowHomeHelpScene = "37";
+DataMgr.mapGameTimes = "38";
 
 export default DataMgr;

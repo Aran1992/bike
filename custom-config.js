@@ -9468,6 +9468,8 @@ Config.conditions = {
     8: "Need to rank ${0}st in farthest distance",
     //需要积分排名达到过第 #### 名
     9: "Need to rank ${0}st in score",
+    //需要进行 #### 次排名竞赛
+    10: "Need to takes ${0} times map game",
 };
 
 Config.conditionsEnum = {
@@ -9480,6 +9482,7 @@ Config.conditionsEnum = {
     totalDistanceRank: 7,
     farthestDistanceRank: 8,
     scoreRank: 9,
+    mapGameTimes: 10,
 };
 
 if (window.ipConfig && window.ipConfig.innerHTML.length) {
@@ -9680,6 +9683,17 @@ Config.animationSpeed = {
     speedUpNotice: 0.2,
     // 随机道具
     randomItem: 0.1,
+};
+
+// 需解锁系统
+Config.lockSystems = {
+    drawButton: [4, 1000],
+    signButton: [4, 10000],
+    giftButton: [4, 10000],
+    shopButton: [4, 10000],
+    mapModeButton: [4, 10000],
+    rankButton: [10, 1],
+    homeButton: [10, 5],
 };
 
 export default Config;

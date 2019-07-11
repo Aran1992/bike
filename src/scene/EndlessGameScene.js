@@ -233,7 +233,7 @@ export default class EndlessGameScene extends GameScene {
     showGuideAnimation() {
         this.gaSprite = this.addChild(new Sprite());
         this.gaSprite.anchor.set(0.5, 0.5);
-        this.gaSprite.x = window.App.sceneWidth / 2;
+        this.gaSprite.x = App.sceneWidth / 2;
         this.gaStep = -1;
         this.gaSpriteTextureList = [
             Config.imagePath.start3,
@@ -247,7 +247,7 @@ export default class EndlessGameScene extends GameScene {
         this.guideActionList = [
             () => this.actionCallback(() => {
                 this.ui.guidePanel.visible = true;
-                window.App.showMask();
+                App.showMask();
             }),
             () => this.actionMove(),
             () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
@@ -268,7 +268,7 @@ export default class EndlessGameScene extends GameScene {
                 this.gaSprite.destroy();
                 this.gaSprite = undefined;
                 this.ui.guidePanel.visible = false;
-                window.App.hideMask();
+                App.hideMask();
             }),
         ];
         this.onActionEnded();

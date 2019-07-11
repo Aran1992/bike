@@ -2,7 +2,10 @@ import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
 import DataMgr from "./DataMgr";
 import Utils from "./Utils";
-import {resources} from "../libs/pixi-wrapper";
+import {filters, resources} from "../libs/pixi-wrapper";
+
+let grayFilter = new filters.ColorMatrixFilter();
+grayFilter.greyscale(0.5);
 
 export default class GameUtils {
     static physicsPos2renderPos(pp) {
@@ -115,5 +118,27 @@ export default class GameUtils {
             highJump: App.getText(config.highJump),
             size: App.getText(config.size),
         });
+    }
+
+    static greySprite(sprite, grey) {
+        if (grey) {
+            sprite.filters = [grayFilter];
+        } else {
+            sprite.filters = [];
+        }
+    }
+
+    static findChildByName(item, name) {
+        for (let i = 0; i < item.children.length; i++) {
+            let child = item.children[i];
+            if (child.uiname === name) {
+                return child;
+            } else {
+                let find = GameUtils.findChildByName(child, name);
+                if (find) {
+                    return find;
+                }
+            }
+        }
     }
 }
