@@ -587,14 +587,14 @@ export default class GameScene extends Scene {
         }
     }
 
-    onAteItem(type, effect, texture) {
+    onAteItem(type, effect, texture, value) {
         switch (type) {
             case "PortableItem": {
                 this.showPortableItem(effect, texture);
                 break;
             }
             case "GoldCoin": {
-                this.updateCoinText(this.coin + 1);
+                this.updateCoinText(this.coin + value);
                 MusicMgr.playSound(Config.soundPath.eatGoldCoin);
                 break;
             }

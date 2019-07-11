@@ -60,6 +60,10 @@ export default class BikeSprite {
     destroy() {
         this.bikeSprite.destroy();
     }
+
+    setGray(gray) {
+        GameUtils.greySprite(this.bikeSprite, gray);
+    }
 }
 
 BikeSprite.resPathList = [Config.bikeAtlasPath, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];

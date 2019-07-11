@@ -7851,6 +7851,13 @@ Config.item = {
             0: {
                 portable: 0,
                 effect: "GoldCoin",
+                value: 1,
+            },
+            // 5金币
+            55555: {
+                portable: 0,
+                effect: "GoldCoin",
+                value: 5,
             },
             // 陷阱：减速
             1: {
