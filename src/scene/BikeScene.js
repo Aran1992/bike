@@ -20,6 +20,7 @@ export default class BikeScene extends Scene {
 
     onShow() {
         this.onClickItem({index: 0});
+        this.ui.drawButton.visible = DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") !== -1;
     }
 
     initItem(item) {
