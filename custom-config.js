@@ -8134,7 +8134,7 @@ Config.itemUseHistory = {
     // 自己名字的颜色（可以直接写一些常见颜色的英文名，如："red"/"blue"/"black"，也可以使用"#ab01cd"这样的颜色代码）
     selfNameColor: "#bfd5ed",
     // 敌人名字的颜色
-    enemyNameColor: "#e16a42",
+    enemyNameColor: "#f6b8af",
     // 其他文字的颜色
     commonTextColor: "white",
     // 描边颜色
@@ -9489,9 +9489,9 @@ if (window.ipConfig && window.ipConfig.innerHTML.length) {
 }
 
 // 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）
-Config.rankStartTime = new Date(2019, 4, 11, 0, 0, 0);
+Config.rankStartTime = new Date(2019, 7, 1, 0, 0, 0);
 // 排行榜刷新时间间隔（单位：秒）
-Config.rankRefreshInterval = 60 * 10;
+Config.rankRefreshInterval = 7 * 24* 60 * 60;
 
 // 玩家自行车排名文本相关配置
 Config.bike.rankText = {
