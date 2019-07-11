@@ -7,6 +7,7 @@ import Radio from "../ui/Radio";
 import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
 import EventMgr from "../mgr/EventMgr";
+import GameUtils from "../mgr/GameUtils";
 
 export default class ShopScene extends Scene {
     onCreate() {
@@ -225,7 +226,9 @@ export default class ShopScene extends Scene {
         let path = config.texture.shopCover;
         item.backgroundImage.texture = resources[path].texture;
         item.mapDescriptionText.text = config.name ? App.getText(config.name) : (App.getText("Map") + config.id);
-        if (DataMgr.isEndlessSceneLocked(config.id)) {
+        let locked = DataMgr.isEndlessSceneLocked(config.id);
+        GameUtils.greySprite(item.backgroundImage, locked);
+        if (locked) {
             item.commonImage.visible = false;
             item.selectedImage.visible = false;
             item.lockedImage.visible = true;

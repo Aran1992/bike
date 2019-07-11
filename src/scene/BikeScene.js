@@ -32,7 +32,9 @@ export default class BikeScene extends Scene {
     updateItem(item, index) {
         item.index = index;
         let config = Config.bikeList[index];
+        let lock = !this.hasOwnedBike(config.id);
         item.bikeSprite.setBikeID(config.id);
+        item.bikeSprite.setGray(lock);
         if (this.selectedIndex === index) {
             item.bikeSprite.play();
             item.ui.selectedImage.visible = true;
@@ -40,7 +42,8 @@ export default class BikeScene extends Scene {
             item.bikeSprite.stop();
             item.ui.selectedImage.visible = false;
         }
-        item.ui.lostMaskImage.visible = !this.hasOwnedBike(config.id);
+        item.ui.lostMaskImage.visible = lock;
+        item.ui.lockedImage.visible = lock;
         item.ui.fightMaskImage.visible = DataMgr.get(DataMgr.selectedBike, 0) === config.id;
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
         item.ui.levelText.text = level !== undefined ? `${App.getText("LV")}${level + 1}` : "";

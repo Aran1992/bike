@@ -406,8 +406,9 @@ export default class HomeScene extends Scene {
         let scale = config.iconScale || Config.home.defaultIconItemScale;
         item.ui.icon.children[0].scale.set(scale, scale);
         item.itemConfig = config;
-
-        GameUtils.greySprite(sprite, DataMgr.isHomeItemLocked(type, config.id));
+        let locked = DataMgr.isHomeItemLocked(type, config.id);
+        GameUtils.greySprite(sprite, locked);
+        item.ui.lockedImage.visible = locked;
     }
 
     onTouchHomeStart(event) {
