@@ -31,7 +31,7 @@ Confirm,,TipScene.scene.json,确认,Confirm,確認
 RequestingRankData,,RankScene.scene.json,排行榜数据加载中,Requesting rank data,
 NotListed,,RankScene.scene.json,"差一点就上榜啦
 骑士大人加油啊",Not Listed,
-RestartAfterTime,,RankScene.scene.json,在 ${time} 之后周一凌晨重新开始,Restart after ${time},
+RestartAfterTime,,RankScene.scene.json,在 ${time} 之后重新开始,Restart after ${time},
 UnlockAllBike,,ShopScene.scene.json,解锁所有的自行车,Unlock All Bike,
 UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽旅程地图,Unlock All Endless Scene,
 Money2DCPresentDsc,,ShopScene.scene.json,"${money} 钱
@@ -67,6 +67,7 @@ Score required to reach ${0},,,历史积分需达 ${0},Score required to reach $
 Need to rank ${0}st in total distance,,,需闯入历史累计里程排行第${0}名,Need to rank ${0}st in total distance,
 Need to rank ${0}st in farthest distance,,,需闯入历史最大里程排行第${0}名,Need to rank ${0}st in farthest distance,
 Need to rank ${0}st in score,,,需闯入历史积分排行第${0}名,Need to rank ${0}st in score,
+Need to takes ${0} times map game,,,需要进行${0}次排名竞赛,,
 Highest Level,,,最高等级,Highest Level,
 You have ridden ${distance} meters,,,报告骑士大人，您已骑行${distance}m啦,You have ridden ${distance} meters,
 Air,,,空气,Air,
@@ -360,3 +361,6 @@ HasDoubleReward,,,已经获得了双倍奖励,,
 HasNoRebornTimes,,,已经没有复活次数了,,
 对,,,对,,
 使用了,,,使用了,,
+LockNotice,,,"这个内容未解锁
+解锁条件：
+${condition}",,

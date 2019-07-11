@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {Container, resources, Sprite, Text, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {resources, Sprite, Texture} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import Enemy from "../item/Enemy";
@@ -334,5 +334,6 @@ export default class MapGameScene extends GameScene {
         DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
         this.gameLoopFunc = this.pause.bind(this);
         this.stopSounds();
+        DataMgr.add(DataMgr.mapGameTimes, 1);
     }
 }

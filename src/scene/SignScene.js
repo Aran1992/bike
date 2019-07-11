@@ -104,7 +104,7 @@ export default class SignScene extends Scene {
                     if (reward.bike) {
                         list.push({rewardBike: reward.bike});
                     }
-                    window.App.showScene("PrizeScene", list);
+                    App.showScene("PrizeScene", list);
                     DataMgr.set(DataMgr.receivedSignReward, index);
                     if (!OnlineMgr.hasSignReward()) {
                         App.hideScene("SignScene");

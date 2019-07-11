@@ -1250,6 +1250,17 @@ Config.endlessMode.sceneList = [
         name: "Select Map1",
         // 免费解锁所需总距离
         unlockDistance: 0,
+        // 解锁显示内容（有配置就显示，没配置就不显示）
+        unlockInfo: {
+            // 解锁内容标题
+            title: "xxx",
+            // 解锁描述
+            dsc: "xxx",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 0,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -2886,6 +2897,16 @@ Config.endlessMode.sceneList = [
         name: "Select Map5",
         // 免费解锁所需总距离
         unlockDistance: 144000,
+        unlockInfo: {
+            // 解锁内容标题
+            title: "xxx",
+            // 解锁描述
+            dsc: "xxx",
+            // 解锁图片
+            image: "myLaya/laya/assets/images/Bird01.png",
+            // 解锁图片缩放
+            imageScale: 1,
+        },
         // 花费解锁所需钻石
         unlockCostDiamond: 150,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -8221,7 +8242,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 3,
@@ -8439,7 +8471,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 3,
@@ -8558,7 +8601,18 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 21,
@@ -9114,7 +9168,18 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
-            }
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "xxx",
+                // 解锁描述
+                dsc: "xxx",
+                // 解锁图片
+                image: "myLaya/laya/assets/images/Bird01.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
         },
         {
             id: 2,
@@ -9468,6 +9533,8 @@ Config.conditions = {
     8: "Need to rank ${0}st in farthest distance",
     //需要积分排名达到过第 #### 名
     9: "Need to rank ${0}st in score",
+    //需要进行 #### 次排名竞赛
+    10: "Need to takes ${0} times map game",
 };
 
 Config.conditionsEnum = {
@@ -9480,6 +9547,7 @@ Config.conditionsEnum = {
     totalDistanceRank: 7,
     farthestDistanceRank: 8,
     scoreRank: 9,
+    mapGameTimes: 10,
 };
 
 if (window.ipConfig && window.ipConfig.innerHTML.length) {
@@ -9491,7 +9559,7 @@ if (window.ipConfig && window.ipConfig.innerHTML.length) {
 // 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）（月份：0为1月份、11为12月份）
 Config.rankStartTime = new Date(2019, 6, 1, 0, 0, 0);
 // 排行榜刷新时间间隔（单位：秒）
-Config.rankRefreshInterval = 7 * 24* 60 * 60;
+Config.rankRefreshInterval = 7 * 24 * 60 * 60;
 
 // 玩家自行车排名文本相关配置
 Config.bike.rankText = {
@@ -9680,6 +9748,107 @@ Config.animationSpeed = {
     speedUpNotice: 0.2,
     // 随机道具
     randomItem: 0.1,
+};
+
+// 需解锁系统
+// 如果不配置title，image，dsc的话 那么解锁的时候就不会显示解锁提示
+Config.lockSystems = {
+    // 扭蛋
+    drawButton: {
+        // 解锁条件
+        condition: [4, 1000],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 签到
+    signButton: {
+        // 解锁条件
+        condition: [4, 10000],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 礼物
+    giftButton: {
+        // 解锁条件
+        condition: [4, 10000],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 商店
+    shopButton: {
+        // 解锁条件
+        condition: [4, 10000],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 排名竞赛
+    mapModeButton: {
+        // 解锁条件
+        condition: [4, 10000],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 排行榜
+    rankButton: {
+        // 解锁条件
+        condition: [10, 1],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 家园
+    homeButton: {
+        // 解锁条件
+        condition: [10, 5],
+        // 解锁内容标题
+        title: "xxx",
+        // 解锁描述
+        dsc: "xxx",
+        // 解锁图片
+        image: "myLaya/laya/assets/images/Bird01.png",
+        // 解锁图片缩放
+        imageScale: 1,
+    },
+    // 准备界面
+    preparationScene: {
+        // 解锁条件
+        condition: [4, 5000],
+    },
 };
 
 export default Config;

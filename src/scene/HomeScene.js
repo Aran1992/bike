@@ -2,7 +2,7 @@ import Config from "../config";
 import Scene from "./Scene";
 import Radio from "../ui/Radio";
 import List from "../ui/List";
-import {Container, filters, Graphics, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
+import {Container, Graphics, Rectangle, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
@@ -43,9 +43,6 @@ export default class HomeScene extends Scene {
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
         this.ui.removeAllItemBtn.visible = false;
-
-        this.grayFilter = new filters.ColorMatrixFilter();
-        this.grayFilter.greyscale(0.5);
 
         this.radio = new Radio({
             root: this.ui.radio,
@@ -410,11 +407,7 @@ export default class HomeScene extends Scene {
         item.ui.icon.children[0].scale.set(scale, scale);
         item.itemConfig = config;
 
-        if (DataMgr.isHomeItemLocked(type, config.id)) {
-            sprite.filters = [this.grayFilter];
-        } else {
-            sprite.filters = [];
-        }
+        GameUtils.greySprite(sprite, DataMgr.isHomeItemLocked(type, config.id));
     }
 
     onTouchHomeStart(event) {
@@ -650,7 +643,8 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
                 () => {
                     let coin = DataMgr.get(DataMgr.coin, 0);
                     let diamond = DataMgr.get(DataMgr.diamond, 0);
-                    let conditions = Config.home[type].find(item => item.id === id).unlockConditions;
+                    let config = Config.home[type].find(item => item.id === id);
+                    let conditions = config.unlockConditions;
                     let coinCondition = conditions.find(list => list[0] === Config.conditionsEnum.costCoin);
                     let costCoin = coinCondition ? coinCondition[1] : 0;
                     let diamondCondition = conditions.find(list => list[0] === Config.conditionsEnum.costDiamond);
@@ -665,6 +659,7 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
                         DataMgr.set(DataMgr.homeData, data);
                         this.refreshPlayerBasicInfo();
                         this.refreshCurItemInfo();
+                        config.unlockInfo && App.showScene("NewContentScene", config.unlockInfo);
                     }
                 },
                 () => {

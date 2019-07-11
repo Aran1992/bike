@@ -7,28 +7,33 @@ import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
+import GameUtils from "../mgr/GameUtils";
 
 export default class MainScene extends Scene {
     onCreate() {
+        this.lockableButtonList = [
+            this.ui.shopButton,
+            this.ui.homeButton,
+            this.ui.rankButton,
+            this.ui.drawButton,
+            this.ui.signButton,
+            this.ui.giftButton,
+            this.ui.mapModeButton,
+        ];
+        this.bindLockableButton();
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
-        this.onClick(this.ui.mapModeButton, this.onClickMapModeButton.bind(this));
-        this.onClick(this.ui.homeButton, this.onClickHomeButton.bind(this));
-        this.onClick(this.ui.shopButton, this.onClickShopButton.bind(this));
-        this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
-        this.onClick(this.ui.rankButton, this.onClickRankButton.bind(this));
-        this.onClick(this.ui.giftButton, this.onClickGiftButton.bind(this));
         this.onClick(this.ui.addDiamondButton, this.onClickAddDiamondButton.bind(this));
         this.onClick(this.ui.addCoinButton, this.onClickAddCoinButton.bind(this));
         this.onClick(this.ui.endlessHelpButton, this.onClickEndlessHelpButton.bind(this));
         this.onClick(this.ui.mapHelpButton, this.onClickMapHelpButton.bind(this));
         this.ui.signButton.visible = OnlineMgr.hasSignReward();
-        this.onClick(this.ui.signButton, this.onClickSignButton.bind(this));
         if (window.PlatformHelper.canLogout) {
             this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
         }
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
+        EventMgr.registerEvent("UnlockSystem", this.onUnlockSystem.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
@@ -36,6 +41,8 @@ export default class MainScene extends Scene {
         this.refreshEndlessMode();
 
         this.initGift();
+
+        this.waitShowNotice = [];
     }
 
     onRefreshRankData() {
@@ -68,6 +75,9 @@ export default class MainScene extends Scene {
         this.ui.userNameText.text = DataMgr.getPlayerName();
 
         window.PlatformHelper.closeLogoScene();
+
+        this.refreshLockStatus();
+        this.checkWaitShowNotice();
     }
 
     onHide() {
@@ -99,7 +109,13 @@ export default class MainScene extends Scene {
     onClickEndlessModeButton() {
         this.mode = "Endless";
         this.refreshEndlessMode();
-        App.showScene("PreparationScene", this.mode);
+        if (DataMgr.get(DataMgr.unlockSystems, []).indexOf("preparationScene") === -1) {
+            App.hideScene("MainScene");
+            App.hideScene("PreparationScene");
+            App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
+        } else {
+            App.showScene("PreparationScene", this.mode);
+        }
     }
 
     refreshEndlessMode() {
@@ -198,6 +214,62 @@ export default class MainScene extends Scene {
 
     onClickMapHelpButton() {
         App.showScene("HelpMatchScene");
+    }
+
+    refreshLockStatus() {
+        this.lockableButtonList.forEach(item => {
+            let lock = this.isLockableButtonLocked(item);
+            GameUtils.greySprite(item, lock);
+            GameUtils.findChildByName(item, "lockedImage").visible = lock;
+        });
+    }
+
+    bindLockableButton() {
+        this.lockableButtonList.forEach(item => {
+            this.onClick(item, this.getLockableHandler(item, this[`onClick${Utils.formatName(item.var)}`].bind(this)));
+        });
+    }
+
+    getLockableHandler(item, handler) {
+        return () => {
+            if (this.isLockableButtonLocked(item)) {
+                App.showTip(this.getLockNotice(item.var), undefined, undefined, true);
+            } else {
+                handler();
+            }
+        };
+    }
+
+    getLockNotice(name) {
+        let [id, ...values] = Config.lockSystems[name].condition;
+        let condition = App.getText(Config.conditions[id], values);
+        return App.getText("LockNotice", {condition: condition});
+    }
+
+    isLockableButtonLocked(item) {
+        let [id, ...values] = Config.lockSystems[item.var].condition;
+        return !DataMgr.checkCondition(id, ...values);
+    }
+
+    onUnlockSystem(lockInfo) {
+        this.refreshLockStatus();
+        if (this.isShowed() && this.waitShowNotice.length === 0) {
+            this.showUnlockNotice(lockInfo);
+        } else {
+            this.waitShowNotice.push(lockInfo);
+        }
+    }
+
+    showUnlockNotice(unlockInfo) {
+        App.showScene("NewContentScene", unlockInfo, () => {
+            this.checkWaitShowNotice();
+        });
+    }
+
+    checkWaitShowNotice() {
+        if (this.waitShowNotice.length) {
+            this.showUnlockNotice(this.waitShowNotice.shift());
+        }
     }
 }
 

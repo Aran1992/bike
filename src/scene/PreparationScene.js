@@ -89,9 +89,9 @@ export default class PreparationScene extends Scene {
                 App.hideScene("MainScene");
                 App.hideScene("PreparationScene");
                 if (RunOption.fixedMapID === undefined || RunOption.fixedMapID === -1) {
-                    App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene), this.rewards);
+                    App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
                 } else {
-                    App.showScene("MapGameScene", RunOption.fixedMapID, this.rewards);
+                    App.showScene("MapGameScene", RunOption.fixedMapID);
                 }
             } else {
                 App.showNotice(App.getText("Gold Coin is not enough!"));
@@ -99,7 +99,7 @@ export default class PreparationScene extends Scene {
         } else if (this.mode === "Endless") {
             App.hideScene("MainScene");
             App.hideScene("PreparationScene");
-            App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0), this.rewards);
+            App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
         }
     }
 }
