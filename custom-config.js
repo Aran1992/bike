@@ -1666,9 +1666,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe2",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 10,
@@ -2086,9 +2086,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe3",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 50,
@@ -2506,9 +2506,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe4",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 100,
@@ -2926,9 +2926,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe5",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 150,
@@ -3346,9 +3346,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe6",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 200,
@@ -3766,9 +3766,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe7",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 250,
@@ -4186,9 +4186,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe8",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -4606,9 +4606,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe9",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -5026,9 +5026,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe10",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -5446,9 +5446,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe11",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -5866,9 +5866,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe12",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -7331,25 +7331,25 @@ Config.presentList = [
 Config.rewardGoldList = [
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 1000,
+        rewardCoin: 3000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 0,
     },
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 2000,
+        rewardCoin: 3000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 10,
     },
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 5000,
+        rewardCoin: 3000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 30,
     },
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 10000,
+        rewardCoin: 3000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 60,
     },
@@ -7359,13 +7359,13 @@ Config.rewardGoldList = [
 Config.rewardDiamondList = [
     {
         // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        rewardDiamond: 10,
+        rewardDiamond: 50,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 0,
     },
     {
         // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        rewardDiamond: 20,
+        rewardDiamond: 50,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 10,
     },
@@ -7377,7 +7377,7 @@ Config.rewardDiamondList = [
     },
     {
         // 获得的钻石数量（金币物品此项设置为零或者去掉）
-        rewardDiamond: 100,
+        rewardDiamond: 50,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 60,
     },
@@ -8192,13 +8192,13 @@ Config.rankScore = [
 // 排行模式相关配置
 Config.rankMode = {
     // 入场消费金币
-    costCoin: 1000,
+    costCoin: 2000,
 };
 
 // 钻石扭蛋花费
 Config.diamondDrawCost = 50;
 // 钻石复活花费
-Config.diamondRebornCost = 100;
+Config.diamondRebornCost = 50;
 
 // 实时赛道的初始点位置
 Config.racetrack = {
@@ -8325,7 +8325,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 1],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8341,9 +8341,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8355,7 +8355,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 2],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8371,9 +8371,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8385,7 +8385,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 3],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8401,9 +8401,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8415,7 +8415,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 4],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8431,9 +8431,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8445,7 +8445,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8461,9 +8461,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8475,7 +8475,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 6],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8491,9 +8491,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8505,7 +8505,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8521,9 +8521,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe8",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8535,7 +8535,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 8],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8551,9 +8551,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe9",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8565,7 +8565,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 9],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8581,9 +8581,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe10",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8595,7 +8595,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 10],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8611,9 +8611,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe11",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8625,7 +8625,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [3, 11],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8641,9 +8641,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe12",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
     ],
@@ -8664,7 +8664,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [4, 12000],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8680,9 +8680,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor002.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8694,7 +8694,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [4, 72000],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8710,9 +8710,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor003.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8724,7 +8724,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [4, 216000],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8740,9 +8740,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor004.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8754,7 +8754,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [4, 864000],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8770,9 +8770,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor005.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8784,7 +8784,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [4, 3456000],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8800,9 +8800,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor006.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8814,7 +8814,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 400],
                 [4, 6912000],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8830,9 +8830,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor007.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
     ],
@@ -8848,8 +8848,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 4],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8865,7 +8865,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe1",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aquarius-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8880,8 +8880,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8897,7 +8897,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Cancer-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8912,8 +8912,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8929,7 +8929,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Cancer-103.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8944,8 +8944,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 2],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8961,7 +8961,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Capricorn-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8976,8 +8976,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 2],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -8993,7 +8993,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Capricorn-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9008,9 +9008,10 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 2],
+                [5, 9000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -9025,9 +9026,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Capricorn-102.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.8,
             },
         },
         {
@@ -9040,8 +9041,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 6],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9057,7 +9058,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9072,8 +9073,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 6],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9089,7 +9090,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe8",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9104,8 +9105,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9121,7 +9122,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe9",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9136,8 +9137,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9153,7 +9154,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe10",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9168,8 +9169,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9185,7 +9186,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe11",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-103.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9200,8 +9201,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9217,7 +9218,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe12",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-104.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9232,8 +9233,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9249,7 +9250,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe13",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-105.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9264,8 +9265,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 8],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9281,7 +9282,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe14",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Libra-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9296,8 +9297,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 8],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9313,7 +9314,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe15",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Libra-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9328,8 +9329,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 9],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9345,7 +9346,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe16",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9360,8 +9361,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 9],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9377,7 +9378,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe17",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9392,8 +9393,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 9],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9409,7 +9410,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe18",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9424,9 +9425,10 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 9],
+                [5, 9000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -9441,9 +9443,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe19",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-102.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.8,
             },
         },
         {
@@ -9456,9 +9458,10 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 10],
+                [5, 9000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -9473,9 +9476,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe20",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Sagittarius-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.8,
             },
         },
         {
@@ -9488,9 +9491,10 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 10],
+                [5, 9000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -9505,7 +9509,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe21",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Sagittarius-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9520,8 +9524,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 3],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9537,7 +9541,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe22",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Scorpius-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9552,8 +9556,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 3],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9569,7 +9573,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe23",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Scorpius-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9584,8 +9588,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 0],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9601,7 +9605,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe24",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9616,8 +9620,8 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 0],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9633,7 +9637,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe25",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9648,10 +9652,10 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 10000],
-                [2, 30],
+                [1, 20000],
+                [2, 200],
                 [3, 11],
-                [5, 9000],
+                [5, 5000],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -9666,7 +9670,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe26",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Virgo-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9691,7 +9695,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 4],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9707,7 +9711,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe1",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aquarius-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9729,7 +9733,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 4],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9745,7 +9749,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aquarius-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9767,7 +9771,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 1],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9783,7 +9787,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aries-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9805,7 +9809,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9821,7 +9825,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Cancer-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9843,7 +9847,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 6],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9859,7 +9863,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9881,7 +9885,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 6],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9897,7 +9901,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9919,7 +9923,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9935,7 +9939,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-4.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9957,7 +9961,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -9973,7 +9977,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe8",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-5.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9995,7 +9999,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 7],
             ],
             // 解锁奖励 填入对应的奖励比率
@@ -10011,7 +10015,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe9",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-6.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10033,7 +10037,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 8],
                 [6, 100000],
             ],
@@ -10050,9 +10054,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe10",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Libra-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.3,
             },
         },
         {
@@ -10072,7 +10076,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 3],
                 [7, 10],
             ],
@@ -10089,7 +10093,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe11",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Scorpius-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10111,7 +10115,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 0],
                 [8, 10],
             ],
@@ -10128,7 +10132,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe12",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10150,7 +10154,7 @@ Config.home = {
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
                 [1, 50000],
-                [2, 50],
+                [2, 500],
                 [3, 0],
                 [9, 10],
             ],
@@ -10167,7 +10171,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe13",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10342,39 +10346,39 @@ Config.giftList = [
         // 奖励金币
         rewardCoin: 1000,
         // 奖励钻石
-        rewardDiamond: 10,
+        rewardDiamond: 20,
     },
     {
         // 在线分钟数
         onlineMinutes: 5,
         // 奖励金币
-        rewardCoin: 2000,
-        // 奖励钻石
-        rewardDiamond: 20,
-    },
-    {
-        // 在线分钟数
-        onlineMinutes: 10,
-        // 奖励金币
         rewardCoin: 3000,
-        // 奖励钻石
-        rewardDiamond: 30,
-    },
-    {
-        // 在线分钟数
-        onlineMinutes: 15,
-        // 奖励金币
-        rewardCoin: 4000,
         // 奖励钻石
         rewardDiamond: 40,
     },
     {
         // 在线分钟数
-        onlineMinutes: 30,
+        onlineMinutes: 10,
         // 奖励金币
         rewardCoin: 5000,
         // 奖励钻石
-        rewardDiamond: 50,
+        rewardDiamond: 60,
+    },
+    {
+        // 在线分钟数
+        onlineMinutes: 15,
+        // 奖励金币
+        rewardCoin: 7000,
+        // 奖励钻石
+        rewardDiamond: 80,
+    },
+    {
+        // 在线分钟数
+        onlineMinutes: 30,
+        // 奖励金币
+        rewardCoin: 9000,
+        // 奖励钻石
+        rewardDiamond: 100,
     },
 ];
 
@@ -10384,13 +10388,13 @@ Config.resetRewardHour = 0;
 // 签到奖励列表
 // 按顺序从上往下是第一天到第七天
 Config.signRewardList = [
-    {coin: 1000},
+    {coin: 2000},
     {bike: 2},
-    {diamond: 100},
+    {diamond: 200},
     {bike: 51},
     {coin: 15000},
-    {diamond: 200},
-    {bike: 3, coin: 20000, diamond: 200},
+    {diamond: 400},
+    {bike: 3, coin: 20000, diamond: 400},
 ];
 
 // 每天广告扭蛋的次数
@@ -10425,9 +10429,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe1",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/button-draw-scene.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 签到
     signButton: {
@@ -10438,9 +10442,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe11",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/icon-sign.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 礼物
     giftButton: {
@@ -10451,9 +10455,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe12",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/icon-gift.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 商店
     shopButton: {
@@ -10464,9 +10468,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe13",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/ButtonShop.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 排名竞赛
     mapModeButton: {
@@ -10477,9 +10481,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe2",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/english/Match.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 1.5,
     },
     // 排行榜
     rankButton: {
@@ -10490,9 +10494,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe3",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/ButtonRanking_Orange.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 家园
     homeButton: {
@@ -10503,9 +10507,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe4",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/ButtonSocial_Blue.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 准备界面
     preparationScene: {
