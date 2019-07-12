@@ -1666,9 +1666,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe2",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 10,
@@ -2086,9 +2086,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe3",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 50,
@@ -2506,9 +2506,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe4",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 100,
@@ -2926,9 +2926,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe5",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 150,
@@ -3346,9 +3346,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe6",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 200,
@@ -3766,9 +3766,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe7",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 250,
@@ -4186,9 +4186,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe8",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -4606,9 +4606,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe9",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -5026,9 +5026,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe10",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -5446,9 +5446,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe11",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -5866,9 +5866,9 @@ Config.endlessMode.sceneList = [
             // 解锁描述
             dsc: "MapUnlockDescribe12",
             // 解锁图片
-            image: "myLaya/laya/assets/images/Bird01.png",
+            image: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1,
+            imageScale: 1.2,
         },
         // 花费解锁所需钻石
         unlockCostDiamond: 300,
@@ -8341,9 +8341,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8371,9 +8371,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8401,9 +8401,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8431,9 +8431,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8461,9 +8461,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8491,9 +8491,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8521,9 +8521,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe8",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8551,9 +8551,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe9",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8581,9 +8581,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe10",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8611,9 +8611,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe11",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
         {
@@ -8641,9 +8641,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe12",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 1.2,
             },
         },
     ],
@@ -8680,9 +8680,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor002.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8710,9 +8710,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor003.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8740,9 +8740,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor004.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8770,9 +8770,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor005.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8800,9 +8800,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor006.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
         {
@@ -8830,9 +8830,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "FloorUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/floor/floor007.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.27,
             },
         },
     ],
@@ -8865,7 +8865,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe1",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aquarius-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8897,7 +8897,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Cancer-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8929,7 +8929,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Cancer-103.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8961,7 +8961,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Capricorn-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -8993,7 +8993,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Capricorn-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9025,9 +9025,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Capricorn-102.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.8,
             },
         },
         {
@@ -9057,7 +9057,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9089,7 +9089,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe8",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9121,7 +9121,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe9",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9153,7 +9153,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe10",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9185,7 +9185,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe11",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-103.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9217,7 +9217,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe12",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-104.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9249,7 +9249,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe13",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-105.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9281,7 +9281,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe14",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Libra-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9313,7 +9313,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe15",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Libra-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9345,7 +9345,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe16",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9377,7 +9377,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe17",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9409,7 +9409,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe18",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9441,9 +9441,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe19",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Pisces-102.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.8,
             },
         },
         {
@@ -9473,9 +9473,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe20",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Sagittarius-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.8,
             },
         },
         {
@@ -9505,7 +9505,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe21",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Sagittarius-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9537,7 +9537,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe22",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Scorpius-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9569,7 +9569,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe23",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Scorpius-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9601,7 +9601,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe24",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9633,7 +9633,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe25",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9666,7 +9666,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe26",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Virgo-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9707,7 +9707,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe1",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aquarius-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9745,7 +9745,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe2",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aquarius-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9783,7 +9783,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe3",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Aries-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9821,7 +9821,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe4",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Cancer-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9859,7 +9859,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe5",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9897,7 +9897,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe6",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Gemini-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9935,7 +9935,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe7",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-4.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -9973,7 +9973,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe8",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-5.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10011,7 +10011,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe9",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Leo-6.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10050,9 +10050,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe10",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Libra-1.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.3,
             },
         },
         {
@@ -10089,7 +10089,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe11",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Scorpius-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10128,7 +10128,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe12",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10167,7 +10167,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe13",
                 // 解锁图片
-                image: "myLaya/laya/assets/images/Bird01.png",
+                image: "images/home/item/decoDX2_Taurus-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -10425,9 +10425,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe1",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/button-draw-scene.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 签到
     signButton: {
@@ -10438,9 +10438,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe11",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/icon-sign.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 礼物
     giftButton: {
@@ -10451,9 +10451,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe12",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/icon-gift.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 商店
     shopButton: {
@@ -10464,9 +10464,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe13",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/ButtonShop.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 排名竞赛
     mapModeButton: {
@@ -10477,9 +10477,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe2",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/english/Match.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 1.5,
     },
     // 排行榜
     rankButton: {
@@ -10490,9 +10490,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe3",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/ButtonRanking_Orange.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 家园
     homeButton: {
@@ -10503,9 +10503,9 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe4",
         // 解锁图片
-        image: "myLaya/laya/assets/images/Bird01.png",
+        image: "myLaya/laya/assets/images/ButtonSocial_Blue.png",
         // 解锁图片缩放
-        imageScale: 1,
+        imageScale: 2,
     },
     // 准备界面
     preparationScene: {
