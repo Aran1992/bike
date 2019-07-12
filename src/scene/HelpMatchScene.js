@@ -12,8 +12,13 @@ export default class HelpMatchScene extends Scene {
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
     }
 
+    onShow(closeCallback) {
+        this.closeCallback = closeCallback;
+    }
+
     onClickReturnButton() {
         App.hideScene("HelpMatchScene");
+        this.closeCallback && this.closeCallback();
     }
 }
 

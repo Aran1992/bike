@@ -12,8 +12,13 @@ export default class HelpEndlessScene extends Scene {
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
     }
 
+    onShow(closeCallback) {
+        this.closeCallback = closeCallback;
+    }
+
     onClickReturnButton() {
         App.hideScene("HelpEndlessScene");
+        this.closeCallback && this.closeCallback();
     }
 }
 

@@ -314,5 +314,6 @@ DataMgr.drawAdvertTimes = "36";
 DataMgr.hasShowHomeHelpScene = "37";
 DataMgr.mapGameTimes = "38";
 DataMgr.unlockSystems = "39";
+DataMgr.endlessGameTimes = "40";
 
 export default DataMgr;

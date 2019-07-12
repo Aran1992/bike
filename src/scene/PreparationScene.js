@@ -85,13 +85,20 @@ export default class PreparationScene extends Scene {
             let coin = DataMgr.get(DataMgr.coin, 0);
             let costCoin = Config.rankMode.costCoin;
             if (coin >= costCoin) {
-                DataMgr.set(DataMgr.coin, coin - costCoin);
-                App.hideScene("MainScene");
-                App.hideScene("PreparationScene");
-                if (RunOption.fixedMapID === undefined || RunOption.fixedMapID === -1) {
-                    App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+                let func = () => {
+                    DataMgr.set(DataMgr.coin, coin - costCoin);
+                    App.hideScene("MainScene");
+                    App.hideScene("PreparationScene");
+                    if (RunOption.fixedMapID === undefined || RunOption.fixedMapID === -1) {
+                        App.showScene("MapGameScene", DataMgr.get(DataMgr.currentMapScene));
+                    } else {
+                        App.showScene("MapGameScene", RunOption.fixedMapID);
+                    }
+                };
+                if (DataMgr.get(DataMgr.mapGameTimes, 0) === 0) {
+                    App.showScene("HelpMatchScene", func);
                 } else {
-                    App.showScene("MapGameScene", RunOption.fixedMapID);
+                    func();
                 }
             } else {
                 App.showNotice(App.getText("Gold Coin is not enough!"));

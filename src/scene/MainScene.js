@@ -109,10 +109,18 @@ export default class MainScene extends Scene {
     onClickEndlessModeButton() {
         this.mode = "Endless";
         this.refreshEndlessMode();
+
         if (DataMgr.get(DataMgr.unlockSystems, []).indexOf("preparationScene") === -1) {
-            App.hideScene("MainScene");
-            App.hideScene("PreparationScene");
-            App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
+            let func = () => {
+                App.hideScene("MainScene");
+                App.hideScene("PreparationScene");
+                App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
+            };
+            if (DataMgr.get(DataMgr.endlessGameTimes, 0) === 0) {
+                App.showScene("HelpEndlessScene", func);
+            } else {
+                func();
+            }
         } else {
             App.showScene("PreparationScene", this.mode);
         }

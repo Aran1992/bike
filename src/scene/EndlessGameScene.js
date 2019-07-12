@@ -5,6 +5,7 @@ import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import {Vec2} from "../libs/planck-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
+import DataMgr from "../mgr/DataMgr";
 
 export default class EndlessGameScene extends GameScene {
     onCreate() {
@@ -372,5 +373,10 @@ export default class EndlessGameScene extends GameScene {
         this.speedUpNotice.anchor.set(0.5, 0.5);
         this.speedUpNotice.visible = false;
         this.ui.speedUpNotice.addChild(this.speedUpNotice);
+    }
+
+    settle() {
+        super.settle();
+        DataMgr.add(DataMgr.endlessGameTimes, 1);
     }
 }
