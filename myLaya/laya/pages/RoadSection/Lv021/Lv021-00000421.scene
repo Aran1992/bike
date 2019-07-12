@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":123,
+    "selecteID":137,
     "searchKey":"Scene",
     "props":{"width":1000,"sceneColor":"#000000","height":-200},
     "nodeParent":-1,
-    "maxID":124,
+    "maxID":138,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -24,7 +24,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":14,
+            "compId":124,
             "child":[
                 ]
         },
@@ -38,7 +38,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":111,
+            "compId":125,
             "child":[
                 ]
         },
@@ -46,13 +46,13 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road",
-            "props":{"y":-68,"x":286.25,"points":"118,-15,167,-44,274,-62,337,-46","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":-68,"x":286,"points":"118,-15,167,-44,274,-62,337,-46","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":112,
+            "compId":126,
             "child":[
                 ]
         },
@@ -66,7 +66,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":113,
+            "compId":127,
             "child":[
                 ]
         },
@@ -80,7 +80,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":114,
+            "compId":128,
             "child":[
                 ]
         },
@@ -94,7 +94,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":115,
+            "compId":129,
             "child":[
                 ]
         },
@@ -102,13 +102,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-217,"x":633.75,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-217,"x":633,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":117,
+            "compId":130,
             "child":[
                 ]
         },
@@ -122,7 +122,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":118,
+            "compId":131,
             "child":[
                 ]
         },
@@ -136,7 +136,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":119,
+            "compId":132,
             "child":[
                 ]
         },
@@ -144,13 +144,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-131,"x":131.25,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-81,"x":130,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":120,
+            "compId":133,
             "child":[
                 ]
         },
@@ -158,13 +158,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-122,"x":180,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-69,"x":190,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":121,
+            "compId":134,
             "child":[
                 ]
         },
@@ -172,13 +172,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-223.5,"x":846,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-169,"x":846,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":122,
+            "compId":135,
             "child":[
                 ]
         },
@@ -186,13 +186,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-233,"x":895,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-186,"x":906,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":123,
+            "compId":136,
             "child":[
                 ]
         }],

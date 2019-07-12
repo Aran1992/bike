@@ -228,7 +228,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//可携带物品//ID:99990",
-            "props":{"y":-187.5,"x":546.25,"skin":"images/crystal_rabbit_03.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//可携带物品//ID:99990","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-202.5,"x":546.25,"skin":"images/crystal_rabbit_03.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//可携带物品//ID:99990","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//可携带物品//ID:99990",
             "isDirectory":false,
