@@ -62,7 +62,7 @@ export default class GameUtils {
             id = DataMgr.get(DataMgr.selectedBike, 0);
         }
         if (level === undefined) {
-            level = DataMgr.get(DataMgr.bikeLevelMap, {})[id];
+            level = DataMgr.get(DataMgr.bikeLevelMap, {})[id] || 0;
         }
         let config = Config.bikeList.find(bike => bike.id === id);
         let value = (config[key] || Config.bike[key])[level];
