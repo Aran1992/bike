@@ -1,5 +1,5 @@
 import Scene from "./Scene";
-import {Texture} from "../libs/pixi-wrapper";
+import {Sprite} from "../libs/pixi-wrapper";
 
 export default class NewContentScene extends Scene {
     onCreate() {
@@ -11,8 +11,11 @@ export default class NewContentScene extends Scene {
 
         this.closeCallback = closeCallback;
         this.ui.title.text = App.getText(info.title);
-        this.ui.image.children[0].texture = Texture.from(info.image);
-        this.ui.image.scale.set(info.imageScale, info.imageScale);
+        this.ui.image.removeChildren();
+        let sprite = Sprite.from(info.image);
+        sprite.anchor.set(0.5, 0.5);
+        sprite.scale.set(info.imageScale, info.imageScale);
+        this.ui.image.addChild(sprite);
         this.ui.dsc.text = App.getText(info.dsc);
     }
 
