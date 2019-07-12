@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":16,
-    "selecteID":91,
+    "selectedBox":89,
+    "selecteID":93,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":93,
+    "maxID":94,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -100,15 +100,15 @@
                     "child":[
                         {
                             "x":45,
-                            "type":"Image",
-                            "searchKey":"Image,image",
-                            "props":{"var":"image","skin":"images/Rock.png","centerY":0,"centerX":0},
+                            "type":"Panel",
+                            "searchKey":"Panel,image",
+                            "props":{"width":0,"var":"image","height":0,"centerY":0,"centerX":0},
                             "nodeParent":89,
                             "label":"image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":92,
+                            "compId":93,
                             "child":[
                                 ]
                         }]
