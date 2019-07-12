@@ -1,8 +1,14 @@
 import Scene from "./Scene";
-import {Sprite} from "../libs/pixi-wrapper";
+import {Graphics, Sprite} from "../libs/pixi-wrapper";
 
 export default class NewContentScene extends Scene {
     onCreate() {
+        let mask = new Graphics()
+            .beginFill(0x000000, 0.5)
+            .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
+            .endFill();
+        this.addChildAt(mask, 0);
+
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
     }
 
