@@ -36,6 +36,9 @@ class DataMgr_ {
 
     init(dataTable, periodIdx, createTime) {
         this.dataTable = dataTable;
+        if (typeof this.dataTable[DataMgr.coin] !== "number") {
+            this.dataTable[DataMgr.coin] = 0;
+        }
         this.createTime = new Date(createTime);
 
         if (DataMgr.get(DataMgr.periodIdx) !== periodIdx) {

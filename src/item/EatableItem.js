@@ -62,7 +62,7 @@ export default class EatableItem extends EditorItem {
         } else {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible) {
-                    EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, this.config.value);
+                    EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value);
                     this.sprite.visible = false;
                     if (this.gameMgr.dynamicCreateRoad) {
                         this.gameMgr.removeItem(this);
