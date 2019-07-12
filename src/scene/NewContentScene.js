@@ -11,7 +11,7 @@ export default class NewContentScene extends Scene {
 
         this.closeCallback = closeCallback;
         this.ui.title.text = App.getText(info.title);
-        this.ui.image.texture = Texture.from(info.image);
+        this.ui.image.children[0].texture = Texture.from(info.image);
         this.ui.image.scale.set(info.imageScale, info.imageScale);
         this.ui.dsc.text = App.getText(info.dsc);
     }
