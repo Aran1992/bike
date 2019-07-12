@@ -10404,7 +10404,7 @@ Config.advertDrawBikeTime = 3;
 Config.rebornTimes = 3;
 
 // 进入关卡的最短加载时间（单位：秒）
-Config.minLoadingTime = 2;
+Config.minLoadingTime = 3;
 
 // 进入关卡前的加载界面的提示数量
 Config.tipCount = 9;
