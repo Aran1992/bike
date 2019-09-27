@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":21,
+    "selectedBox":98,
+    "selecteID":193,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":182,
+    "maxID":194,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -870,13 +870,14 @@
             "props":{"width":500,"height":700,"centerY":-50,"centerX":0},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":98,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road1",
                     "props":{"visible":true,"skin":"images/bg_root02-2.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road1","centerY":36,"centerX":-13},
@@ -891,6 +892,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road2",
                     "props":{"visible":true,"skin":"images/bg_root03-2.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road2","centerY":-13,"centerX":143},
@@ -905,6 +907,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road3",
                     "props":{"visible":true,"skin":"images/bg_root04-2.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road3","centerY":-106,"centerX":99},
@@ -919,6 +922,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road4",
                     "props":{"visible":true,"skin":"images/bg_root05-2.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road4","centerY":-133,"centerX":-59},
@@ -933,18 +937,20 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Button1",
                     "props":{"visible":true,"skin":"images/icon_mapbtn.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Button1","centerY":39,"centerX":-102},
                     "nodeParent":98,
                     "label":"Button1",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":117,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"99-1","strokeColor":"#000000","stroke":5,"scaleY":2,"scaleX":2,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":-55},
@@ -958,61 +964,66 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
-                            "props":{"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"name":"1","left":4,"bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","name":"1","left":4,"bottom":20},
                             "nodeParent":117,
                             "label":"1",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":136,
+                            "compId":191,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
-                            "props":{"y":113,"x":37,"skin":"images/icon-coin.png","scaleY":0.65,"scaleX":0.65,"name":"2","centerX":0,"bottom":4},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","scaleY":1.1,"scaleX":1.1,"name":"2","centerX":0,"bottom":8},
                             "nodeParent":117,
                             "label":"2",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":135,
+                            "compId":192,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,3",
-                            "props":{"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"right":4,"name":"3","bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","right":4,"name":"3","bottom":20},
                             "nodeParent":117,
                             "label":"3",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":137,
+                            "compId":193,
                             "child":[
                                 ]
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Button2",
                     "props":{"visible":true,"skin":"images/icon_mapbtn.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Button2","centerY":19,"centerX":75},
                     "nodeParent":98,
                     "label":"Button2",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":119,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"99-2","strokeColor":"#000000","stroke":5,"scaleY":2,"scaleX":2,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":-55},
@@ -1026,61 +1037,66 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"name":"1","left":4,"bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","name":"1","left":4,"bottom":20},
                             "nodeParent":119,
                             "label":"1",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":138,
+                            "compId":188,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
-                            "props":{"y":113,"x":37,"skin":"images/icon-coin.png","scaleY":0.65,"scaleX":0.65,"name":"2","centerX":0,"bottom":4},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","scaleY":1.1,"scaleX":1.1,"name":"2","centerX":0,"bottom":8},
                             "nodeParent":119,
                             "label":"2",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":139,
+                            "compId":189,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,3",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"right":4,"name":"3","bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","right":4,"name":"3","bottom":20},
                             "nodeParent":119,
                             "label":"3",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":140,
+                            "compId":190,
                             "child":[
                                 ]
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Button3",
                     "props":{"visible":true,"skin":"images/icon_mapbtn.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Button3","centerY":-91,"centerX":188},
                     "nodeParent":98,
                     "label":"Button3",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":120,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"99-3","strokeColor":"#000000","stroke":5,"scaleY":2,"scaleX":2,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":-55},
@@ -1094,61 +1110,66 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"name":"1","left":4,"bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","name":"1","left":4,"bottom":20},
                             "nodeParent":120,
                             "label":"1",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":141,
+                            "compId":185,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
-                            "props":{"y":113,"x":37,"skin":"images/icon-coin.png","scaleY":0.65,"scaleX":0.65,"name":"2","centerX":0,"bottom":4},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","scaleY":1.1,"scaleX":1.1,"name":"2","centerX":0,"bottom":8},
                             "nodeParent":120,
                             "label":"2",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":142,
+                            "compId":186,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,3",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"right":4,"name":"3","bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","right":4,"name":"3","bottom":20},
                             "nodeParent":120,
                             "label":"3",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":143,
+                            "compId":187,
                             "child":[
                                 ]
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Button4",
                     "props":{"visible":true,"skin":"images/icon_mapbtn.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Button4","centerY":-125,"centerX":24},
                     "nodeParent":98,
                     "label":"Button4",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":121,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"99-4","strokeColor":"#000000","stroke":5,"scaleY":2,"scaleX":2,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":-55},
@@ -1162,49 +1183,53 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"name":"1","left":4,"bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","name":"1","left":4,"bottom":20},
                             "nodeParent":121,
                             "label":"1",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":144,
+                            "compId":182,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
-                            "props":{"y":113,"x":37,"skin":"images/icon-coin.png","scaleY":0.65,"scaleX":0.65,"name":"2","centerX":0,"bottom":4},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","scaleY":1.1,"scaleX":1.1,"name":"2","centerX":0,"bottom":8},
                             "nodeParent":121,
                             "label":"2",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":145,
+                            "compId":183,
                             "child":[
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,3",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"right":4,"name":"3","bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","right":4,"name":"3","bottom":20},
                             "nodeParent":121,
                             "label":"3",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":146,
+                            "compId":184,
                             "child":[
                                 ]
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Button5",
                     "props":{"visible":true,"skin":"images/icon_mapbtn.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Button5","centerY":-160,"centerX":-141},
@@ -1232,7 +1257,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,1",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"name":"1","left":4,"bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","name":"1","left":4,"bottom":20},
                             "nodeParent":123,
                             "label":"1",
                             "isOpen":true,
@@ -1246,7 +1271,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,2",
-                            "props":{"y":113,"x":37,"skin":"images/icon-coin.png","scaleY":0.65,"scaleX":0.65,"name":"2","centerX":0,"bottom":4},
+                            "props":{"skin":"images/balance_centerx4.png","scaleY":1.1,"scaleX":1.1,"name":"2","centerX":0,"bottom":8},
                             "nodeParent":123,
                             "label":"2",
                             "isOpen":true,
@@ -1260,7 +1285,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,3",
-                            "props":{"y":0,"x":0,"skin":"images/icon-coin.png","scaleY":0.5,"scaleX":0.5,"right":4,"name":"3","bottom":20},
+                            "props":{"y":0,"x":0,"skin":"images/balance_centerx4.png","right":4,"name":"3","bottom":20},
                             "nodeParent":123,
                             "label":"3",
                             "isOpen":true,
@@ -1273,6 +1298,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,mapDescriptionText",
                     "props":{"top":20,"text":"Map Description","strokeColor":"#000000","stroke":5,"name":"mapDescriptionText","fontSize":50,"color":"#ffffff","centerX":1},
@@ -1286,6 +1312,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/button-lastBtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":270,"centerX":-150},
@@ -1301,6 +1328,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/button-nextBtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":270,"centerX":150},
@@ -1316,6 +1344,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bg_lockmedal.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":155,"centerX":0},
@@ -1343,6 +1372,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":131,"skin":"images/bg-8.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":43,"centerY":280,"centerX":9},
@@ -1355,9 +1385,10 @@
                     "compId":157,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":-20,"x":-25,"skin":"images/icon-coin.png","scaleY":1,"scaleX":1},
+                            "props":{"y":-23,"x":-27,"skin":"images/balance_centerx4.png","scaleY":2,"scaleX":2},
                             "nodeParent":157,
                             "label":"Image",
                             "isOpen":false,
@@ -1369,6 +1400,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"9999","fontSize":30,"color":"#ffffff","centerY":-1,"centerX":18,"align":"center"},
