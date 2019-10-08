@@ -161,10 +161,14 @@ class NetworkMgr_ {
             let interval = Config.rankRefreshInterval * 1000;
             let nextRefreshTime = start + Math.ceil((cur - start) / interval) * interval;
             let boards;
-            if (data.response.boards) {
-                boards = data.response.boards;
+            if (data.response) {
+                if (data.response.boards) {
+                    boards = data.response.boards;
+                } else {
+                    boards = JSON.parse(data.response);
+                }
             } else {
-                boards = JSON.parse(data.response);
+                boards = [];
             }
             scb(boards, nextRefreshTime);
         }, fcb);
