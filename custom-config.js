@@ -20,7 +20,7 @@ Config.defaultItemRandomTable = {
 Config.mapList = [
     {
         // scene文件的路径
-        scenePath: "Test001",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -105,7 +105,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test002",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -190,7 +190,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test003",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -275,7 +275,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test004",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -360,7 +360,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test005",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -445,7 +445,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test006",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -530,7 +530,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test007",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -615,7 +615,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test008",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -700,7 +700,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test009",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -785,7 +785,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test010",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -870,7 +870,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test011",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -955,7 +955,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test012",
+        scenePath: "Test1",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -7843,6 +7843,12 @@ Config.item = {
                 effect: "GoldCoin",
                 value: 5,
             },
+            // 经验
+            2000: {
+                portable: 0,
+                effect: "GoldCoin",
+                value: 2,
+            },
             // 陷阱：减速
             1: {
                 portable: 0,
@@ -10344,9 +10350,9 @@ Config.giftList = [
         // 在线分钟数
         onlineMinutes: 0,
         // 奖励金币
-        rewardCoin: 1000,
+        rewardCoin: 1000000,
         // 奖励钻石
-        rewardDiamond: 20,
+        rewardDiamond: 2000000,
     },
     {
         // 在线分钟数
@@ -10423,7 +10429,7 @@ Config.lockSystems = {
     // 扭蛋
     drawButton: {
         // 解锁条件
-        condition: [4, 1000],
+        condition: [4, 100],
         // 解锁内容标题
         title: "SystemUnlockTitle1",
         // 解锁描述
@@ -10436,7 +10442,7 @@ Config.lockSystems = {
     // 签到
     signButton: {
         // 解锁条件
-        condition: [4, 10000],
+        condition: [4, 100],
         // 解锁内容标题
         title: "SystemUnlockTitle11",
         // 解锁描述
@@ -10449,7 +10455,7 @@ Config.lockSystems = {
     // 礼物
     giftButton: {
         // 解锁条件
-        condition: [4, 10000],
+        condition: [4, 100],
         // 解锁内容标题
         title: "SystemUnlockTitle12",
         // 解锁描述
@@ -10462,7 +10468,7 @@ Config.lockSystems = {
     // 商店
     shopButton: {
         // 解锁条件
-        condition: [4, 10000],
+        condition: [4, 100],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -10475,7 +10481,7 @@ Config.lockSystems = {
     // 排名竞赛
     mapModeButton: {
         // 解锁条件
-        condition: [4, 10000],
+        condition: [4, 100],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -10488,7 +10494,7 @@ Config.lockSystems = {
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 1],
+        condition: [10, 0],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
@@ -10501,7 +10507,7 @@ Config.lockSystems = {
     // 家园
     homeButton: {
         // 解锁条件
-        condition: [10, 5],
+        condition: [10, 0],
         // 解锁内容标题
         title: "SystemUnlockTitle4",
         // 解锁描述
@@ -10514,7 +10520,7 @@ Config.lockSystems = {
     // 准备界面
     preparationScene: {
         // 解锁条件
-        condition: [4, 5000],
+        condition: [4, 100],
     },
 };
 
