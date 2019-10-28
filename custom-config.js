@@ -10524,4 +10524,35 @@ Config.lockSystems = {
     },
 };
 
+// 关卡模式相关配置
+Config.gameLevelMode = {
+    // 大地图列表
+    mapList: [
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 0,
+            // 地图描述
+            dsc: "MapUnlockDescribe2",
+        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 10,
+            // 地图描述
+            dsc: "MapUnlockDescribe2",
+        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 25,
+            // 地图描述
+            dsc: "MapUnlockDescribe2",
+        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 45,
+            // 地图描述
+            dsc: "MapUnlockDescribe2",
+        },
+    ],
+};
+
 export default Config;

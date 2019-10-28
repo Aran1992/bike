@@ -22,12 +22,20 @@ export default class MainScene extends Scene {
         ];
         this.bindLockableButton();
         this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
+        this.onClick(this.ui.gamelevelModeButton, this.onClickGamelevelModeButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
         this.onClick(this.ui.addDiamondButton, this.onClickAddDiamondButton.bind(this));
         this.onClick(this.ui.addCoinButton, this.onClickAddCoinButton.bind(this));
         this.onClick(this.ui.endlessHelpButton, this.onClickEndlessHelpButton.bind(this));
         this.onClick(this.ui.mapHelpButton, this.onClickMapHelpButton.bind(this));
+        this.onClick(this.ui.lastLevelButton, this.onClickLastLevelButton.bind(this));
+        this.onClick(this.ui.nextLevelButton, this.onClickNextLevelButton.bind(this));
+        for (let i = 1; i <= 5; i++) {
+            const button = this.ui[`glBtn${i}`];
+            button.index = i - 1;
+            this.onClick(button, this.onClickGameLevel.bind(this));
+        }
         this.ui.signButton.visible = OnlineMgr.hasSignReward();
         if (window.PlatformHelper.canLogout) {
             this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
@@ -38,11 +46,13 @@ export default class MainScene extends Scene {
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
         this.mode = "Endless";
-        this.refreshEndlessMode();
+        this.refreshMode();
 
         this.initGift();
 
         this.waitShowNotice = [];
+
+        this.gameLevel = 0;
     }
 
     onRefreshRankData() {
@@ -58,11 +68,7 @@ export default class MainScene extends Scene {
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
 
-        if (this.mode === "Map") {
-            this.refreshMapMode();
-        } else {
-            this.refreshEndlessMode();
-        }
+        this.refreshMode();
 
         MusicMgr.playBGM(Config.mainBgmPath);
 
@@ -96,7 +102,7 @@ export default class MainScene extends Scene {
 
     onClickMapModeButton() {
         this.mode = "Map";
-        this.refreshMapMode();
+        this.refreshMode();
         App.showScene("PreparationScene", this.mode);
     }
 
@@ -108,7 +114,7 @@ export default class MainScene extends Scene {
 
     onClickEndlessModeButton() {
         this.mode = "Endless";
-        this.refreshEndlessMode();
+        this.refreshMode();
 
         if (DataMgr.get(DataMgr.unlockSystems, []).indexOf("preparationScene") === -1) {
             let func = () => {
@@ -280,6 +286,65 @@ export default class MainScene extends Scene {
     checkWaitShowNotice() {
         if (this.waitShowNotice.length) {
             this.showUnlockNotice(this.waitShowNotice.shift());
+        }
+    }
+
+    onClickGamelevelModeButton() {
+        this.mode = "GameLevel";
+        this.refreshMode();
+    }
+
+    onClickLastLevelButton() {
+        this.gameLevel--;
+        if (this.gameLevel < 0) {
+            this.gameLevel = 0;
+        }
+        this.refreshMode();
+    }
+
+    onClickNextLevelButton() {
+        this.gameLevel++;
+        const max = Config.gameLevelMode.mapList.length - 1;
+        if (this.gameLevel > max) {
+            this.gameLevel = max;
+        }
+        this.refreshMode();
+    }
+
+    refreshGameLevelMode() {
+        let path = Config.mapList[this.gameLevel].texture.mainCover;
+        this.ui.sceneImage.children[0].texture = resources[path].texture;
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 3; j++) {
+                const star = GameUtils.findChildByName(this.ui[`glBtn${i}`], j + "");
+                star.visible = false;
+            }
+        }
+        const total = DataMgr.getGameLevelStarTotalCount();
+        const glConfig = Config.gameLevelMode.mapList[this.gameLevel];
+        const needed = glConfig.starCountUnlockNeeded;
+        this.ui.totalStarCount.text = total;
+        this.ui.gameLevelMapDsc.text = App.getText(glConfig.dsc);
+        this.ui.gameLevelLocked.visible = needed > total;
+        this.ui.glUnlockStarCount.text = needed;
+    }
+
+    onClickGameLevel(button) {
+        console.log(button.index);
+    }
+
+    refreshMode() {
+        this.ui.gameLevelPanel.visible = this.mode === "GameLevel";
+        switch (this.mode) {
+            case "Map":
+                this.refreshMapMode();
+                break;
+            case "GameLevel":
+                this.refreshGameLevelMode();
+                break;
+            case "Endless":
+                this.refreshEndlessMode();
+                break;
         }
     }
 }

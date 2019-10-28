@@ -264,6 +264,11 @@ class DataMgr_ {
         }
         return {levelUp, highestLevel};
     }
+
+    // todo
+    getGameLevelStarTotalCount() {
+        return 0;
+    }
 }
 
 const DataMgr = new DataMgr_();
