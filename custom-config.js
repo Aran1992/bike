@@ -10304,7 +10304,7 @@ Config.gameLevelMode = {
             // 解锁需要的星星数
             starCountUnlockNeeded: 0,
             // 地图描述
-            dsc: "MapUnlockDescribe3",
+            dsc: "Select Map1",
             // 主页封面图
             mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
             // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -10342,51 +10342,50 @@ Config.gameLevelMode = {
             bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
             // 道具随机表
             itemRandomTableList: {
-                BlockSight: 1,
-                BananaPeel: 4,
-                Accelerate: 1,
-                PowerJump: 1,
-                UnlimitedJump: 1,
+				Accelerate: 1,
+				PowerJump: 1,
+				UnlimitedJump: 1,
+				Magnet: 1,
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Test1.scene.json",
-                "myLaya/laya/pages/Map/Test2.scene.json",
-                "myLaya/laya/pages/Map/Test3.scene.json",
-                "myLaya/laya/pages/Map/Test4.scene.json",
-                "myLaya/laya/pages/Map/Test5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-2.scene.json",
+                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+                "myLaya/laya/pages/Map/Map-1-4.scene.json",
+                "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ]
         },
         {
             // 解锁需要的星星数
             starCountUnlockNeeded: 10,
             // 地图描述
-            dsc: "MapUnlockDescribe2",
+            dsc: "Select Map2",
             // 主页封面图
-            mainCover: "images/map/DX2_Gemini/TextureDX2_GeminiMap.png",
+            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
             // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
             texture: {
-                // 侧边
-                side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
-                // 底部
-                top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
-                // 侧边
-                side2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02SideSkin.png",
-                // 底部
-                top2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02TopSkin.png",
-                // 背景 有多少层背景就配置多少张
-                bg: [
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
-                ],
+				// 侧边
+				side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
+				// 底部
+				top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
+				// 侧边
+				side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
+				// 底部
+				top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
+				// 背景 有多少层背景就配置多少张
+				bg: [
+					"images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
+					"images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
+					"images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+				],
             },
             // 视差背景系数：左右
             horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
             // 视差背景系数：上下
             verticalParallaxDepth: [1, 0.95, 0.9, 0],
             // 背景的Y轴位置
-            bgY: [0, 256, 256],
+			bgY: [0, 128, 256],
             // 背景缩放系数
             bgScale: [1, 1, 1],
             // 自行车速度（基础：20）
@@ -10396,18 +10395,17 @@ Config.gameLevelMode = {
             // 跳跃爆发力（基础：12800）
             jumpForce: 12800,
             // BGM路径
-            bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
+            bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
             // 道具随机表
             itemRandomTableList: {
-                BlockSight: 1,
-                BananaPeel: 4,
-                Accelerate: 1,
-                PowerJump: 1,
-                UnlimitedJump: 1,
+				Accelerate: 1,
+				PowerJump: 1,
+				UnlimitedJump: 1,
+				Magnet: 1,
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Test1.scene.json",
+                "myLaya/laya/pages/Map/Map-2-1.scene.json",
                 "myLaya/laya/pages/Map/Test2.scene.json",
                 "myLaya/laya/pages/Map/Test3.scene.json",
                 "myLaya/laya/pages/Map/Test4.scene.json",
