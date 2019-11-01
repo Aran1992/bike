@@ -1,0 +1,182 @@
+import Config from "../config";
+import GameScene from "./GameScene";
+import {resources, Sprite} from "../libs/pixi-wrapper";
+import Utils from "../mgr/Utils";
+import GameUtils from "../mgr/GameUtils";
+import DataMgr from "../mgr/DataMgr";
+import MusicMgr from "../mgr/MusicMgr";
+
+export default class StaticGameScene extends GameScene {
+    onCreate() {
+        super.onCreate();
+        this.ui.surrenderButton.visible = true;
+        this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
+        this.ui.matchRacetrack.visible = true;
+    }
+
+    initEnvironment() {
+        this.bikeCommonVelocity = this.mapConfig.bikeVelocity || Config.bikeVelocity;
+        this.gravity = this.mapConfig.gravity || Config.gravity;
+        this.jumpForce = this.mapConfig.jumpForce || Config.jumpForce;
+        this.bgTextureList = this.mapConfig.texture.bg;
+        this.sideTexture = this.mapConfig.texture.side;
+        this.topTexture = this.mapConfig.texture.top;
+        this.sideTexture2 = this.mapConfig.texture.side2;
+        this.topTexture2 = this.mapConfig.texture.top2;
+        this.horizontalParallaxDepth = this.mapConfig.horizontalParallaxDepth;
+        this.verticalParallaxDepth = this.mapConfig.verticalParallaxDepth;
+        this.bgY = this.mapConfig.bgY || Config.bgY;
+        this.bgmPath = this.mapConfig.bgmPath || Config.defaultBgmPath;
+        this.bgScale = this.mapConfig.bgScale || Config.defaultBgScale;
+    }
+
+    getResPathList() {
+        return super.getResPathList()
+            .concat(this.mapConfig.texture.bg)
+            .concat([
+                this.mapConfig.texture.side,
+                this.mapConfig.texture.top,
+                this.mapConfig.texture.side2,
+                this.mapConfig.texture.top2,
+                this.mapScenePath,
+            ]);
+    }
+
+    onLoadedGameRes() {
+        super.onLoadedGameRes();
+        MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
+            MusicMgr.playBGM(this.bgmPath, true);
+        });
+    }
+
+    initGameContent() {
+        let pathList = this.getRoadPathList();
+
+        let lastPath = Utils.getLast(pathList);
+        this.finalPoint = {
+            x: (lastPath[lastPath.length - 6] + lastPath[lastPath.length - 4]) / 2,
+            y: (lastPath[lastPath.length - 5] + lastPath[lastPath.length - 3]) / 2,
+        };
+        this.finalPointPhysicX = GameUtils.renderPos2PhysicsPos(this.finalPoint).x;
+
+        this.createMap();
+
+        this.createFinalFlag();
+
+        let pp = GameUtils.renderPos2PhysicsPos({x: pathList[0][2] + Config.bikeLeftMargin, y: pathList[0][3]});
+        pp.x += Config.bikeRadius;
+        pp.y += Config.bikeRadius;
+        this.bikeStarPos = pp;
+        this.createBike(pp);
+        this.createRacetrackPlayer();
+        this.enemyList = [];
+    }
+
+    getRoadPathList() {
+        let json = resources[this.mapScenePath].data;
+        return json.child
+            .filter(data => data.label.split("//").find(str => str === "Road"))
+            .map(data => {
+                let path = data.props.points.split(",").map((intStr, i) => {
+                    let value = parseInt(intStr);
+                    if (i % 2 === 0) {
+                        value += data.props.x;
+                    } else {
+                        value += data.props.y;
+                    }
+                    return value;
+                });
+                let maxY = path[1];
+                for (let i = 1; i < path.length; i += 2) {
+                    if (path[i] > maxY) {
+                        maxY = path[i];
+                    }
+                }
+                let bottomY = maxY + App.sceneHeight / 3 * 2;
+                path = [path[0], bottomY].concat(path);
+                path = path.concat([path[path.length - 2], bottomY]);
+                return path;
+            });
+    }
+
+    createMap() {
+        let json = resources[this.mapScenePath].data;
+        json.child.forEach(data => this.createPart(data));
+        this.roadList.sort((a, b) => a.getLeftBorderX() - b.getLeftBorderX());
+    }
+
+    createFinalFlag() {
+        let sprite = new Sprite(resources[Config.finalFlagImagePath].texture);
+        sprite.anchor.set(0.5, 1);
+        sprite.scale.set(0.5, 0.5);
+        sprite.position.set(this.finalPoint.x, this.finalPoint.y);
+        this.underBikeContianer.addChild(sprite);
+    }
+
+    createRacetrackPlayer() {
+        for (let i = this.ui.matchRacetrack.children.length - 1; i >= 1; i--) {
+            this.ui.matchRacetrack.removeChildAt(i);
+        }
+
+        this.racetrackPlayer = this.ui.matchRacetrack.addChild(new Sprite(resources[Config.imagePath.racetrackPlayer].texture));
+        this.racetrackPlayer.anchor.set(0.5, 0);
+        this.racetrackPlayer.position.set(Config.racetrack.startX, Config.racetrack.startY);
+
+        this.bikeStartX = this.bikeBody.getPosition().x;
+        this.totalDistance = (this.finalPoint.x - this.bikeSprite.x) * Config.pixel2meter;
+    }
+
+    updateRacetrackPlayer() {
+        this.racetrackPlayer.x = this.calcRacetrackPlayerPositionX(this.bikeBody);
+    }
+
+    calcRacetrackPlayerPositionX(body) {
+        let distance = body.getPosition().x - this.bikeStartX;
+        if (distance > this.totalDistance) {
+            distance = this.totalDistance;
+        }
+        return (distance / this.totalDistance) * Config.racetrack.totalLength + Config.racetrack.startX;
+    }
+
+    play() {
+        super.play();
+        this.updateRacetrackPlayer();
+    }
+
+    onDead() {
+        super.onDead();
+        this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
+    }
+
+    randomEffect(player) {
+        let itemRandomTable = this.getItemRandomTableList(player);
+        let weights = [];
+        let effects = [];
+        for (let effect in itemRandomTable) {
+            if (itemRandomTable.hasOwnProperty(effect)) {
+                weights.push(itemRandomTable[effect]);
+                effects.push(effect);
+            }
+        }
+        return effects[Utils.randomWithWeight(weights)];
+    }
+
+    isPlayerInScreen(player) {
+        return player.bikeOutterContainer.x < Config.designWidth - this.cameraContainer.x;
+    }
+
+    settle() {
+        this.stopSounds();
+        this.gameLoopFunc = this.pause.bind(this);
+        let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
+        let score = Math.floor(Config.rankScore[this.rank || 0] * GameUtils.getBikeConfig("scorePercent"));
+        if (this.doubleReward) {
+            score *= 2;
+            distance *= 2;
+        }
+        DataMgr.add(DataMgr.distance, distance);
+        DataMgr.add(DataMgr.rankDistance, distance);
+        DataMgr.add(DataMgr.totalScore, score);
+        DataMgr.add(DataMgr.rankTotalScore, score);
+    }
+}

@@ -269,6 +269,16 @@ class DataMgr_ {
     getGameLevelStarTotalCount() {
         return 0;
     }
+
+    // todo
+    getGameLevelStarCount(map, level) {
+        return 2;
+    }
+
+    // todo
+    isGameLevelIsLocked(map, level) {
+        return false;
+    }
 }
 
 const DataMgr = new DataMgr_();
@@ -320,5 +330,6 @@ DataMgr.hasShowHomeHelpScene = "37";
 DataMgr.mapGameTimes = "38";
 DataMgr.unlockSystems = "39";
 DataMgr.endlessGameTimes = "40";
+DataMgr.preparationDataGameLevel = "41";
 
 export default DataMgr;

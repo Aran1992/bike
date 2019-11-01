@@ -13,6 +13,7 @@ import {
 } from "../libs/pixi-wrapper";
 import MapGameScene from "../scene/MapGameScene";
 import EndlessGameScene from "../scene/EndlessGameScene";
+import LevelGameScene from "../scene/LevelGameScene";
 import GameOverScene from "../scene/GameOverScene";
 import PauseScene from "../scene/PauseScene";
 import MainScene from "../scene/MainScene";
@@ -82,6 +83,7 @@ export default class MyApplication extends Application {
             "MainScene": MainScene,
             "MapGameScene": MapGameScene,
             "EndlessGameScene": EndlessGameScene,
+            "LevelGameScene": LevelGameScene,
             "GameOverScene": GameOverScene,
             "PauseScene": PauseScene,
             "HomeScene": HomeScene,

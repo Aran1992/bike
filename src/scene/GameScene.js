@@ -83,6 +83,8 @@ export default class GameScene extends Scene {
 
         this.ui.pauseButton.visible = false;
         this.ui.surrenderButton.visible = false;
+        this.ui.starPanel.visible = false;
+        this.ui.coinPanel.visible = false;
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
         this.ui.rebornPanel.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":135,
-    "selecteID":136,
+    "selectedBox":1,
+    "selecteID":31,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -260,13 +260,14 @@
             "props":{"y":0,"x":0,"width":720,"skin":"images/bg-7.png","height":76},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,pauseButton",
                     "props":{"y":0,"x":0,"var":"pauseButton","top":0,"skin":"images/button-pause.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
@@ -280,6 +281,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,surrenderButton",
                     "props":{"var":"surrenderButton","top":0,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
@@ -290,9 +292,11 @@
                     "hasChild":false,
                     "compId":40,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":10,"x":75,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
@@ -346,6 +350,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":290,"visible":false,"top":-100,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
@@ -399,6 +404,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,coinPanel",
                     "props":{"y":10,"x":505,"var":"coinPanel","top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
@@ -452,6 +458,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expPanel",
                     "props":{"y":0,"x":290,"visible":true,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"name":"expPanel"},
@@ -829,10 +836,10 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":150,"top":76,"skin":"images/bg-7.png","right":1,"height":50},
+            "searchKey":"Image,starPanel",
+            "props":{"width":150,"var":"starPanel","top":76,"skin":"images/bg-7.png","right":1,"height":50},
             "nodeParent":1,
-            "label":"Image",
+            "label":"starPanel",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
@@ -855,10 +862,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"width":40,"skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
+                            "searchKey":"Image,star0",
+                            "props":{"width":40,"var":"star0","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
                             "nodeParent":114,
-                            "label":"Image",
+                            "label":"star0",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -884,10 +891,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"width":40,"skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
+                            "searchKey":"Image,star1",
+                            "props":{"width":40,"var":"star1","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
                             "nodeParent":133,
-                            "label":"Image",
+                            "label":"star1",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -913,10 +920,10 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"width":40,"skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
+                            "searchKey":"Image,star2",
+                            "props":{"width":40,"var":"star2","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
                             "nodeParent":135,
-                            "label":"Image",
+                            "label":"star2",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,

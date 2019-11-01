@@ -212,6 +212,9 @@ Config.imagePath = {
     rankText3: "myLaya/laya/assets/images/no-3.png",
     rankText4: "myLaya/laya/assets/images/no-4.png",
     speedUpNotice: "myLaya/laya/assets/animations/speed-up.json",
+    lockedLevel: "myLaya/laya/assets/images/icon_mapbtn_lock.png",
+    enabledLevel: "myLaya/laya/assets/images/icon_mapbtn.png",
+    selectedLevel: "myLaya/laya/assets/images/icon_mapbtn_select.png",
 };
 
 Config.emitterPath = {

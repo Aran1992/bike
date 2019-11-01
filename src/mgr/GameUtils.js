@@ -5,7 +5,7 @@ import Utils from "./Utils";
 import {filters, resources} from "../libs/pixi-wrapper";
 
 let grayFilter = new filters.ColorMatrixFilter();
-grayFilter.greyscale(0.5);
+grayFilter.greyscale(0.4);
 
 export default class GameUtils {
     static physicsPos2renderPos(pp) {

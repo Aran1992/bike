@@ -36,6 +36,7 @@ export default class MainScene extends Scene {
             button.index = i - 1;
             this.onClick(button, this.onClickGameLevel.bind(this));
         }
+        this.selectedLevel = 0;
         this.ui.signButton.visible = OnlineMgr.hasSignReward();
         if (window.PlatformHelper.canLogout) {
             this.onClick(this.ui.userImage, this.onClickUserImage.bind(this));
@@ -312,29 +313,57 @@ export default class MainScene extends Scene {
     }
 
     refreshGameLevelMode() {
+        this.selectedLevel = 0;
         let path = Config.mapList[this.gameLevel].texture.mainCover;
+        this.refreshGameLevelSelectedState();
         this.ui.sceneImage.children[0].texture = resources[path].texture;
-        for (let i = 1; i <= 5; i++) {
-            for (let j = 1; j <= 3; j++) {
-                const star = GameUtils.findChildByName(this.ui[`glBtn${i}`], j + "");
-                star.visible = false;
-            }
-        }
         const total = DataMgr.getGameLevelStarTotalCount();
         const glConfig = Config.gameLevelMode.mapList[this.gameLevel];
         const needed = glConfig.starCountUnlockNeeded;
+        const locked = needed > total;
         this.ui.totalStarCount.text = total;
         this.ui.gameLevelMapDsc.text = App.getText(glConfig.dsc);
-        this.ui.gameLevelLocked.visible = needed > total;
+        this.ui.gameLevelLocked.visible = locked;
         this.ui.glUnlockStarCount.text = needed;
+        GameUtils.greySprite(this.ui.sceneImage.children[0], locked);
+        this.ui.lastLevelButton.visible = this.gameLevel > 0;
+        this.ui.nextLevelButton.visible = this.gameLevel < Config.gameLevelMode.mapList.length - 1;
+    }
+
+    refreshGameLevelSelectedState() {
+        for (let i = 1; i <= 5; i++) {
+            const count = DataMgr.getGameLevelStarCount(this.gameLevel, i - 1);
+            const isLocked = DataMgr.isGameLevelIsLocked(this.gameLevel, i - 1);
+            const btn = this.ui[`glBtn${i}`];
+            if (isLocked) {
+                btn.children[0].texture = Texture.from(Config.imagePath.lockedLevel);
+                btn.interactive = false;
+            } else if (i - 1 === this.selectedLevel) {
+                btn.children[0].texture = Texture.from(Config.imagePath.selectedLevel);
+                btn.interactive = true;
+            } else {
+                btn.children[0].texture = Texture.from(Config.imagePath.enabledLevel);
+                btn.interactive = true;
+            }
+            const nameLabel = GameUtils.findChildByName(btn, "nameLabel");
+            nameLabel.text = `${this.gameLevel + 1}-${i}`;
+            for (let j = 1; j <= 3; j++) {
+                const star = GameUtils.findChildByName(btn, j + "");
+                star.visible = count >= j;
+            }
+        }
     }
 
     onClickGameLevel(button) {
-        console.log(button.index);
+        this.selectedLevel = button.index;
+        this.refreshGameLevelSelectedState();
+        App.hideScene("MainScene");
+        App.showScene("LevelGameScene", this.gameLevel, this.selectedLevel);
     }
 
     refreshMode() {
         this.ui.gameLevelPanel.visible = this.mode === "GameLevel";
+        GameUtils.greySprite(this.ui.sceneImage.children[0], false);
         switch (this.mode) {
             case "Map":
                 this.refreshMapMode();

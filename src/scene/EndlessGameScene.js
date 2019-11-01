@@ -11,6 +11,7 @@ export default class EndlessGameScene extends GameScene {
     onCreate() {
         super.onCreate();
         this.registerEvent("Continue", this.onContinue);
+        this.ui.coinPanel.visible = true;
         this.ui.pauseButton.visible = true;
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
