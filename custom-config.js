@@ -10406,7 +10406,7 @@ Config.gameLevelMode = {
             // 每一关的地图配置
             levelList: [
                 "myLaya/laya/pages/Map/Map-2-1.scene.json",
-                "myLaya/laya/pages/Map/Test2.scene.json",
+                "myLaya/laya/pages/Map/Map-2-2.scene.json",
                 "myLaya/laya/pages/Map/Test3.scene.json",
                 "myLaya/laya/pages/Map/Test4.scene.json",
                 "myLaya/laya/pages/Map/Test5.scene.json",
