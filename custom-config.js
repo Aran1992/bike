@@ -10407,9 +10407,65 @@ Config.gameLevelMode = {
             levelList: [
                 "myLaya/laya/pages/Map/Map-2-1.scene.json",
                 "myLaya/laya/pages/Map/Map-2-2.scene.json",
-                "myLaya/laya/pages/Map/Test3.scene.json",
-                "myLaya/laya/pages/Map/Test4.scene.json",
-                "myLaya/laya/pages/Map/Test5.scene.json",
+                "myLaya/laya/pages/Map/Map-2-3.scene.json",
+                "myLaya/laya/pages/Map/Map-2-4.scene.json",
+                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+            ]
+        },
+		{
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 0,
+            // 地图描述
+            dsc: "Select Map3",
+            // 主页封面图
+            mainCover: "images/map/DX2_Capricorn/TextureDX2_CapricornMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+				// 侧边
+				side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
+				// 底部
+				top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
+				// 侧边
+				side2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02SideSkin.png",
+				// 底部
+				top2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02TopSkin.png",
+				// 背景 有多少层背景就配置多少张
+				bg: [
+					"images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
+					"images/map/DX2_Capricorn/TextureDX2_CapricornBackground02.png",
+					"images/map/DX2_Capricorn/TextureDX2_CapricornBackground03.png",
+				],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 0.95, 0.9, 0],
+            // 背景的Y轴位置
+            bgY: [0, 256, 256],
+            // 背景缩放系数
+            bgScale: [1, 1, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/09_yagiza.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+				Accelerate: 1,
+				PowerJump: 1,
+				UnlimitedJump: 1,
+				Magnet: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-3-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-2.scene.json",
+                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+                "myLaya/laya/pages/Map/Map-1-4.scene.json",
+                "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ]
         },
     ],
