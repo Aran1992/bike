@@ -20,7 +20,7 @@ Config.defaultItemRandomTable = {
 Config.mapList = [
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Example",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边

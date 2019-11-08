@@ -165,7 +165,7 @@ class NetworkMgr_ {
                 if (data.response.boards) {
                     boards = data.response.boards;
                 } else {
-                    boards = JSON.parse(data.response);
+                    boards = [];
                 }
             } else {
                 boards = [];

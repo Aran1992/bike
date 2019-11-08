@@ -63,13 +63,13 @@ export default class StaticGameScene extends GameScene {
 
         this.createFinalFlag();
 
+        this.enemyList = [];
         let pp = GameUtils.renderPos2PhysicsPos({x: pathList[0][2] + Config.bikeLeftMargin, y: pathList[0][3]});
         pp.x += Config.bikeRadius;
         pp.y += Config.bikeRadius;
         this.bikeStarPos = pp;
         this.createBike(pp);
         this.createRacetrackPlayer();
-        this.enemyList = [];
     }
 
     getRoadPathList() {

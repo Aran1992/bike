@@ -195,12 +195,6 @@ function createScale9Image(child, parent) {
 function createLabel(child, parent) {
     let data = child.props;
 
-    let textContent = getValue(data.text, "").replace(/\${.*?}/g, id => resources[Config.i18nPath].data[id.substring(2, id.length - 1)]);
-    let fill = getValue(data.color, "black");
-    let fontSize = getValue(data.fontSize, 10);
-    let fontFamily = getValue(data.font);
-    let width = getValue(data.width);
-
     let x = getValue(data.x, 0);
     let y = getValue(data.y, 0);
 
@@ -244,28 +238,7 @@ function createLabel(child, parent) {
         y = parent.myheight / 2 + data.centerY;
     }
 
-    let textStyle = {
-        fill: fill,
-        fontFamily: "arial",
-        fontSize: fontSize,
-        wordWrap: false,
-        leading: getValue(data.leading, 0),
-        padding: 5,
-    };
-    if (getValue(data.strokeColor) !== undefined) {
-        textStyle.stroke = getValue(data.strokeColor);
-    }
-    if (getValue(data.stroke) !== undefined) {
-        textStyle.strokeThickness = getValue(data.stroke);
-    }
-    if (fontFamily) {
-        textStyle.fontFamily = fontFamily;
-    }
-    if (width !== undefined) {
-        textStyle.wordWrap = true;
-        textStyle.wordWrapWidth = width;
-    }
-    let text = new Text(textContent, new TextStyle(textStyle));
+    let text = createTextFromData(data);
 
     text.anchor.set(anchorX, anchorY);
 
@@ -374,5 +347,35 @@ function getPanelBaseInfo(child, parent, defaultInfo) {
     };
 }
 
-export default {createScene};
+function createTextFromData(data) {
+    let textContent = getValue(data.text, "").replace(/\${.*?}/g, id => resources[Config.i18nPath].data[id.substring(2, id.length - 1)]);
+    let fill = getValue(data.color, "black");
+    let fontSize = getValue(data.fontSize, 10);
+    let fontFamily = getValue(data.font);
+    let width = getValue(data.width);
+    let textStyle = {
+        fill: fill,
+        fontFamily: "arial",
+        fontSize: fontSize,
+        wordWrap: false,
+        leading: getValue(data.leading, 0),
+        padding: 5,
+    };
+    if (getValue(data.strokeColor) !== undefined) {
+        textStyle.stroke = getValue(data.strokeColor);
+    }
+    if (getValue(data.stroke) !== undefined) {
+        textStyle.strokeThickness = getValue(data.stroke);
+    }
+    if (fontFamily) {
+        textStyle.fontFamily = fontFamily;
+    }
+    if (width !== undefined) {
+        textStyle.wordWrap = true;
+        textStyle.wordWrapWidth = width;
+    }
+    return new Text(textContent, new TextStyle(textStyle));
+}
+
+export default {createScene, createTextFromData};
 

@@ -36,6 +36,22 @@ import BikeEffect from "../item/BikeEffect";
 import Value from "../item/Value";
 import BaseEffect from "../item/BaseEffect";
 import MapGameScene from "./MapGameScene";
+import SceneHelper from "../mgr/SceneHelper";
+
+function getValue(value, defaultValue) {
+    if (value === undefined) {
+        return defaultValue;
+    } else {
+        return value;
+    }
+}
+
+function handleDisplayObjectWithData(displayObject, data) {
+    displayObject.position.set(getValue(data.props.x, 0), getValue(data.props.y, 0));
+    displayObject.anchor.set(getValue(data.props.anchorX, 0), getValue(data.props.anchorY, 0));
+    displayObject.scale.set(getValue(data.props.scaleX, 1), getValue(data.props.scaleY, 1));
+    displayObject.rotation = Utils.angle2radius(getValue(data.props.rotation, 0));
+}
 
 export default class GameScene extends Scene {
     onCreate() {
@@ -744,6 +760,18 @@ export default class GameScene extends Scene {
             }
             case "EatableItem": {
                 this.itemList.push(new EatableItem(this, this.underBikeContianer, this.world, data));
+                break;
+            }
+            case "Sprite": {
+                const sprite = Sprite.from(`myLaya/laya/assets/${data.props.skin}`);
+                this.underBikeContianer.addChild(sprite);
+                handleDisplayObjectWithData(sprite, data);
+                break;
+            }
+            case "Text": {
+                const text = SceneHelper.createTextFromData(data.props);
+                this.underBikeContianer.addChild(text);
+                handleDisplayObjectWithData(text, data);
                 break;
             }
             default : {

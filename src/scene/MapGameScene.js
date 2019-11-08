@@ -35,6 +35,9 @@ export default class MapGameScene extends StaticGameScene {
     initGameContent() {
         super.initGameContent();
         this.createEnemy(this.bikeStarPos);
+        this.bikeRankText = this.bikeOutterContainer.addChild(new Sprite(resources[Config.imagePath.rankText]));
+        this.bikeRankText.anchor.set(0.5, 0.5);
+        this.bikeRankText.position.set(Config.bike.rankText.positionX, Config.bike.rankText.positionY);
     }
 
     createEnemy(pp) {
