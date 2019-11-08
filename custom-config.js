@@ -20,7 +20,7 @@ Config.defaultItemRandomTable = {
 Config.mapList = [
     {
         // scene文件的路径
-        scenePath: "Example",
+        scenePath: "Test001",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -105,7 +105,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test002",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -190,7 +190,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test003",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -275,7 +275,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -360,7 +360,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test005",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -445,7 +445,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test006",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -530,7 +530,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test007",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -615,7 +615,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test008",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -700,7 +700,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test009",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -785,7 +785,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test010",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -870,7 +870,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test011",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -955,7 +955,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test1",
+        scenePath: "Test012",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1240,9 +1240,9 @@ Config.roadSections = {
         "Lv031/Lv031-00800701",
         "Lv031/Lv031-00800721",
     ],
-    // 固定关卡（Normal-1）（每个路段为1000像素）
+    // 固定关卡（Normal-1）
     "101-1": [
-        // 关卡（每个路段为3000像素）
+        // 关卡（每个路段为1000像素）
         "Normal/Normal011-00000101",
     ],
     "101-11": [
@@ -1250,13 +1250,27 @@ Config.roadSections = {
         "Normal/Normal011-00000111",
     ],
     "101-21": [
-        // 关卡（每个路段为3000像素）
+        // 关卡（每个路段为2000像素）
         "Normal/Normal011-00000121",
     ],
     "101-31": [
-        // 关卡（每个路段为3000像素）
+        // 关卡（每个路段为2000像素）
         "Normal/Normal011-00000131",
     ],
+    "101-41": [
+        // 关卡（每个路段为2000像素）
+        "Normal/Normal011-00000141",
+    ],
+    "101-51": [
+        // 关卡（每个路段为2000像素）
+        "Normal/Normal011-00000151",
+    ],
+    "101-61": [
+        // 关卡（每个路段为4000像素）
+        "Normal/Normal011-00000161",
+    ],
+
+
 };
 
 // 无尽模式配置
@@ -1315,7 +1329,7 @@ Config.endlessMode.sceneList = [
             // 第1阶段
             {
                 list: ["101-1",],
-                length: 3000,
+                length: 1000,
                 velocity: 1,
             },
             // 第2阶段
@@ -1327,15 +1341,35 @@ Config.endlessMode.sceneList = [
             // 第3阶段
             {
                 list: ["101-21",],
-                length: 3000,
+                length: 2000,
                 velocity: 1,
             },
             // 第4阶段
             {
                 list: ["101-31",],
-                length: 3000,
+                length: 2000,
                 velocity: 1,
             },
+            // 第5阶段
+            {
+                list: ["101-41",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第6阶段
+            {
+                list: ["101-51",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第7阶段
+            {
+                list: ["101-61",],
+                length: 4000,
+                velocity: 1,
+            },
+
+
         ],
         // 无限循环旅程
         infiniteRoadSectionList: [
@@ -10233,7 +10267,7 @@ Config.gameLevelMode = {
             // 解锁需要的星星数
             starCountUnlockNeeded: 0,
             // 地图描述
-            dsc: "MapUnlockDescribe3",
+            dsc: "Select Map1",
             // 主页封面图
             mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
             // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -10271,43 +10305,98 @@ Config.gameLevelMode = {
             bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
             // 道具随机表
             itemRandomTableList: {
-                BlockSight: 1,
-                BananaPeel: 4,
                 Accelerate: 1,
                 PowerJump: 1,
                 UnlimitedJump: 1,
+                Magnet: 1,
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Test1.scene.json",
-                "myLaya/laya/pages/Map/Test2.scene.json",
-                "myLaya/laya/pages/Map/Test3.scene.json",
-                "myLaya/laya/pages/Map/Test4.scene.json",
-                "myLaya/laya/pages/Map/Test5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-2.scene.json",
+                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+                "myLaya/laya/pages/Map/Map-1-4.scene.json",
+                "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ]
         },
         {
             // 解锁需要的星星数
             starCountUnlockNeeded: 10,
             // 地图描述
-            dsc: "MapUnlockDescribe2",
+            dsc: "Select Map2",
             // 主页封面图
-            mainCover: "images/map/DX2_Gemini/TextureDX2_GeminiMap.png",
+            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
             // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
             texture: {
                 // 侧边
-                side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
+                side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
                 // 底部
-                top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
+                top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
                 // 侧边
-                side2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02SideSkin.png",
+                side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
                 // 底部
-                top2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02TopSkin.png",
+                top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
                 // 背景 有多少层背景就配置多少张
                 bg: [
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
+                    "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
+                    "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
+                    "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+                ],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 0.95, 0.9, 0],
+            // 背景的Y轴位置
+            bgY: [0, 128, 256],
+            // 背景缩放系数
+            bgScale: [1, 1, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+                Accelerate: 1,
+                PowerJump: 1,
+                UnlimitedJump: 1,
+                Magnet: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-2-1.scene.json",
+                "myLaya/laya/pages/Map/Map-2-2.scene.json",
+                "myLaya/laya/pages/Map/Map-2-3.scene.json",
+                "myLaya/laya/pages/Map/Map-2-4.scene.json",
+                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+            ]
+        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 0,
+            // 地图描述
+            dsc: "Select Map3",
+            // 主页封面图
+            mainCover: "images/map/DX2_Capricorn/TextureDX2_CapricornMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+                // 侧边
+                side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
+                // 底部
+                top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
+                // 侧边
+                side2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02SideSkin.png",
+                // 底部
+                top2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02TopSkin.png",
+                // 背景 有多少层背景就配置多少张
+                bg: [
+                    "images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
+                    "images/map/DX2_Capricorn/TextureDX2_CapricornBackground02.png",
+                    "images/map/DX2_Capricorn/TextureDX2_CapricornBackground03.png",
                 ],
             },
             // 视差背景系数：左右
@@ -10325,22 +10414,21 @@ Config.gameLevelMode = {
             // 跳跃爆发力（基础：12800）
             jumpForce: 12800,
             // BGM路径
-            bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
+            bgmPath: "myLaya/laya/assets/sounds/09_yagiza.mp3",
             // 道具随机表
             itemRandomTableList: {
-                BlockSight: 1,
-                BananaPeel: 4,
                 Accelerate: 1,
                 PowerJump: 1,
                 UnlimitedJump: 1,
+                Magnet: 1,
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Test1.scene.json",
-                "myLaya/laya/pages/Map/Test2.scene.json",
-                "myLaya/laya/pages/Map/Test3.scene.json",
-                "myLaya/laya/pages/Map/Test4.scene.json",
-                "myLaya/laya/pages/Map/Test5.scene.json",
+                "myLaya/laya/pages/Map/Map-3-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-2.scene.json",
+                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+                "myLaya/laya/pages/Map/Map-1-4.scene.json",
+                "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ]
         },
     ],
