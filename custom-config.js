@@ -1240,7 +1240,7 @@ Config.roadSections = {
         "Lv031/Lv031-00800701",
         "Lv031/Lv031-00800721",
     ],
-    // 固定关卡（Normal-1）
+    // 固定关卡（Normal）
     "101-1": [
         // 关卡（每个路段为1000像素）
         "Normal/Normal011-00000101",
@@ -1269,6 +1269,32 @@ Config.roadSections = {
         // 关卡（每个路段为4000像素）
         "Normal/Normal011-00000161",
     ],
+
+
+
+
+
+
+
+
+
+    // 奖励关卡（Special）
+    "0-1": [
+        // 关卡（每个路段为10000像素）
+        "Special/Special111-00000101",
+    ],
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 };
@@ -1328,7 +1354,7 @@ Config.endlessMode.sceneList = [
             // 对普通玩家可过阶段
             // 第1阶段
             {
-                list: ["101-1",],
+                list: ["0-1",],
                 length: 1000,
                 velocity: 1,
             },
@@ -10425,7 +10451,7 @@ Config.gameLevelMode = {
             // 每一关的地图配置
             levelList: [
                 "myLaya/laya/pages/Map/Map-3-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-2.scene.json",
+                "myLaya/laya/pages/Map/Map-3-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
