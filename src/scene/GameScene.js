@@ -130,7 +130,8 @@ export default class GameScene extends Scene {
 
         this.distance = 0;
         this.ui.diamondText.text = 0;
-        this.updateCoinText(0);
+        this.updateCoin(0);
+        this.updateStar(0);
 
         this.setContactFatalEdge(false);
 
@@ -612,8 +613,13 @@ export default class GameScene extends Scene {
                 break;
             }
             case "GoldCoin": {
-                this.updateCoinText(this.coin + value);
+                this.updateCoin(this.coin + value);
                 MusicMgr.playSound(Config.soundPath.eatGoldCoin);
+                break;
+            }
+            case "Star": {
+                this.updateStar(this.star + 1);
+                MusicMgr.playSound(Config.soundPath.eatStar);
                 break;
             }
             case "Thunder": {
@@ -1003,9 +1009,16 @@ export default class GameScene extends Scene {
     pause() {
     }
 
-    updateCoinText(score) {
+    updateCoin(score) {
         this.coin = score;
         this.ui.coinText.text = this.coin;
+    }
+
+    updateStar(star) {
+        this.star = star;
+        for (let i = 0; i < Config.starCount; i++) {
+            this.ui[`star${i}`].visible = i < this.star;
+        }
     }
 
     syncBikeSprite(velocity, bikePhysicsPos) {

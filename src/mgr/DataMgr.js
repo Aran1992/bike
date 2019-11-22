@@ -265,19 +265,44 @@ class DataMgr_ {
         return {levelUp, highestLevel};
     }
 
-    // todo
     getGameLevelStarTotalCount() {
-        return 0;
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        let star = 0;
+        for (const map in table) {
+            if (table.hasOwnProperty(map)) {
+                for (const level in table[map]) {
+                    if (table[map].hasOwnProperty(level)) {
+                        star += table[map][level];
+                    }
+                }
+            }
+        }
+        return star;
     }
 
     // todo
     getGameLevelStarCount(map, level) {
-        return 2;
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        return (table[map] && table[map][level]) || 0;
     }
 
     // todo
     isGameLevelIsLocked(map, level) {
-        return false;
+        if (this.isGameLevelMapLocked(map)) {
+            return true;
+        }
+        if (level === 0) {
+            return false;
+        }
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        return table[map] === undefined || table[map][level - 1] === undefined;
+    }
+
+    isGameLevelMapLocked(map) {
+        const total = DataMgr.getGameLevelStarTotalCount();
+        const glConfig = Config.gameLevelMode.mapList[map];
+        const needed = glConfig.starCountUnlockNeeded;
+        return total < needed;
     }
 }
 
@@ -331,5 +356,6 @@ DataMgr.mapGameTimes = "38";
 DataMgr.unlockSystems = "39";
 DataMgr.endlessGameTimes = "40";
 DataMgr.preparationDataGameLevel = "41";
+DataMgr.gameLevelData = "42";
 
 export default DataMgr;

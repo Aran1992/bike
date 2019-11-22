@@ -7604,6 +7604,11 @@ Config.item = {
                 effect: "GoldCoin",
                 value: 5,
             },
+            // 星星
+            333: {
+                portable: 0,
+                effect: "Star",
+            },
             // 经验
             2000: {
                 portable: 0,
@@ -7734,6 +7739,11 @@ Config.defaultItemImagePath = "myLaya/laya/assets/images/crystal_grider_09.png";
 Config.effect = {
     // 金币
     GoldCoin: {
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 0,
+    },
+    // 星星
+    Star: {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
     },
@@ -10035,6 +10045,7 @@ Config.soundPath = {
     secondJump: "myLaya/laya/assets/sounds/SoundSE102.mp3",
     extraJump: "myLaya/laya/assets/sounds/SoundSE103.mp3",
     eatGoldCoin: "myLaya/laya/assets/sounds/SoundSE319.mp3",
+    eatStar: "myLaya/laya/assets/sounds/SoundSE319.mp3",
     eatAccGem: "myLaya/laya/assets/sounds/SE202.mp3",
     die: "myLaya/laya/assets/sounds/SE104.mp3",
     throughFlag: "myLaya/laya/assets/sounds/SoundBGM202.mp3",
@@ -10459,5 +10470,7 @@ Config.gameLevelMode = {
         },
     ],
 };
+
+Config.starCount = 3;
 
 export default Config;

@@ -37,6 +37,18 @@ export default class LevelGameScene extends StaticGameScene {
     }
 
     settle() {
+        if (this.gameStatus === "win") {
+            const table = DataMgr.get(DataMgr.gameLevelData, {});
+            const map = this.mapIndex;
+            const level = this.levelIndex;
+            if (table[map] === undefined) {
+                table[map] = {};
+            }
+            if (table[map][level] === undefined || table[map][level] < this.star) {
+                table[map][level] = this.star;
+            }
+            DataMgr.set(DataMgr.gameLevelData, table);
+        }
         super.settle();
         DataMgr.refreshPreparationRewards(DataMgr.preparationDataGameLevel);
     }
