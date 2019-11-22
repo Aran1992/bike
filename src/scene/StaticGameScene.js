@@ -5,6 +5,7 @@ import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import DataMgr from "../mgr/DataMgr";
 import MusicMgr from "../mgr/MusicMgr";
+import MatchRacetrack from "../ui/MatchRacetrack";
 
 export default class StaticGameScene extends GameScene {
     onCreate() {
@@ -12,6 +13,8 @@ export default class StaticGameScene extends GameScene {
         this.ui.surrenderButton.visible = true;
         this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
         this.ui.matchRacetrack.visible = true;
+        this.matchRacetrack = new MatchRacetrack(this.ui.matchRacetrack);
+        this.enemyCount = 0;
     }
 
     initEnvironment() {
@@ -114,38 +117,26 @@ export default class StaticGameScene extends GameScene {
     }
 
     createRacetrackPlayer() {
-        for (let i = this.ui.matchRacetrack.children.length - 1; i >= 1; i--) {
-            this.ui.matchRacetrack.removeChildAt(i);
-        }
-
-        this.racetrackPlayer = this.ui.matchRacetrack.addChild(new Sprite(resources[Config.imagePath.racetrackPlayer].texture));
-        this.racetrackPlayer.anchor.set(0.5, 0);
-        this.racetrackPlayer.position.set(Config.racetrack.startX, Config.racetrack.startY);
-
+        this.matchRacetrack.create(this.enemyCount);
         this.bikeStartX = this.bikeBody.getPosition().x;
         this.totalDistance = (this.finalPoint.x - this.bikeSprite.x) * Config.pixel2meter;
     }
 
     updateRacetrackPlayer() {
-        this.racetrackPlayer.x = this.calcRacetrackPlayerPositionX(this.bikeBody);
+        this.matchRacetrack.update(this.calcRacetrackPlayerRate(this.bikeBody), this.enemyList.map(enemy => this.calcRacetrackPlayerRate(enemy.bikeBody)));
     }
 
-    calcRacetrackPlayerPositionX(body) {
+    calcRacetrackPlayerRate(body) {
         let distance = body.getPosition().x - this.bikeStartX;
         if (distance > this.totalDistance) {
             distance = this.totalDistance;
         }
-        return (distance / this.totalDistance) * Config.racetrack.totalLength + Config.racetrack.startX;
+        return distance / this.totalDistance;
     }
 
     play() {
         super.play();
         this.updateRacetrackPlayer();
-    }
-
-    onDead() {
-        super.onDead();
-        this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
     }
 
     randomEffect(player) {

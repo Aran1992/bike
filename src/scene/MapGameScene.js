@@ -10,6 +10,11 @@ import StaticGameScene from "./StaticGameScene";
 import MusicMgr from "../mgr/MusicMgr";
 
 export default class MapGameScene extends StaticGameScene {
+    onCreate() {
+        super.onCreate();
+        this.enemCount = Config.enemy.count;
+    }
+
     onShow(mapIndex) {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
@@ -90,26 +95,8 @@ export default class MapGameScene extends StaticGameScene {
         });
     }
 
-    createRacetrackPlayer() {
-        super.createRacetrackPlayer();
-        this.racetrackEnemies = this.enemyList.map((enemy, index) => {
-            let image = this.ui.matchRacetrack.addChildAt(new Sprite(resources[Config.imagePath.racetrackEnemy].texture), 1);
-            image.anchor.set(0.5, 0);
-            image.position.set(Config.racetrack.startX, Config.racetrack.startY - (index + 1) * Config.racetrack.playerYInterval);
-            return image;
-        });
-    }
-
-    updateRacetrackPlayer() {
-        super.updateRacetrackPlayer();
-        this.racetrackEnemies.forEach((image, index) => {
-            image.x = this.calcRacetrackPlayerPositionX(this.enemyList[index].bikeBody);
-        });
-    }
-
     play() {
         super.play();
-        this.updateRacetrackPlayer();
         this.updateNextPlayerInfo();
         this.bikeRankText.texture = Texture.from(Config.imagePath[`rankText${this.getRank(this)}`]);
     }
@@ -190,5 +177,10 @@ export default class MapGameScene extends StaticGameScene {
             playerNameList: playerNameList,
             gameScene: this,
         });
+    }
+
+    onDead() {
+        super.onDead();
+        this.deadCompleteTimer = setTimeout(this.onReborn.bind(this), Config.bike.deadCompleteTime);
     }
 }

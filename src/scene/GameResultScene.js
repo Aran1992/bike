@@ -7,6 +7,14 @@ import {Graphics} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 
 export default class GameResultScene extends Scene {
+    static onClickMainButton() {
+        App.hideScene("GameResultScene");
+        App.getScene("MapGameScene").pauseGame();
+        App.getScene("MapGameScene").settle();
+        App.destroyScene("MapGameScene");
+        App.showScene("MainScene");
+    }
+
     onCreate() {
         let mask = new Graphics()
             .beginFill(0x000000, 0.5)
@@ -29,14 +37,6 @@ export default class GameResultScene extends Scene {
         this.refresh();
 
         App.getScene("MapGameScene").stopSounds();
-    }
-
-    static onClickMainButton() {
-        App.hideScene("GameResultScene");
-        App.getScene("MapGameScene").pauseGame();
-        App.getScene("MapGameScene").settle();
-        App.destroyScene("MapGameScene");
-        App.showScene("MainScene");
     }
 
     updateResultItem(item, index) {

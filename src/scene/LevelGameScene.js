@@ -62,4 +62,9 @@ export default class LevelGameScene extends StaticGameScene {
             App.showScene("MainScene");
         }, 3000);
     }
+
+    onDead() {
+        super.onDead();
+        App.showScene("GameLevelFailedScene", (this.deadPos.x - this.bikeStartX) / this.totalDistance);
+    }
 }

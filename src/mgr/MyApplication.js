@@ -40,6 +40,7 @@ import HelpMatchScene from "../scene/HelpMatchScene";
 import EventMgr from "./EventMgr";
 import NewContentScene from "../scene/NewContentScene";
 import BikeDetailScene from "../scene/BikeDetailScene";
+import GameLevelFailedScene from "../scene/GameLevelFailedScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -106,6 +107,7 @@ export default class MyApplication extends Application {
             "HelpMatchScene": HelpMatchScene,
             "NewContentScene": NewContentScene,
             "BikeDetailScene": BikeDetailScene,
+            "GameLevelFailedScene": GameLevelFailedScene,
         };
 
         this.sceneTable = {};
