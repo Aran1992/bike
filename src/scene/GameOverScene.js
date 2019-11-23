@@ -2,11 +2,24 @@ import EventMgr from "../mgr/EventMgr";
 import Scene from "./Scene";
 import {Graphics} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
-import List from "../ui/List";
 import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
+import ResultList from "../ui/ResultList";
 
 export default class GameOverScene extends Scene {
+    static onClickMainButton() {
+        App.getScene("EndlessGameScene").settle();
+        App.hideScene("GameOverScene");
+        App.destroyScene("EndlessGameScene");
+        App.showScene("MainScene");
+    }
+
+    static onClickRestartButton() {
+        App.getScene("EndlessGameScene").settle();
+        App.hideScene("GameOverScene");
+        EventMgr.dispatchEvent("Restart");
+    }
+
     onCreate() {
         let mask = new Graphics()
             .beginFill(0x000000, 0.5)
@@ -21,6 +34,8 @@ export default class GameOverScene extends Scene {
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
         this.ui.diamondRebornCostText.text = Config.diamondRebornCost;
+
+        this.resultList = new ResultList(this.ui.resultList);
     }
 
     onShow(args) {
@@ -33,55 +48,6 @@ export default class GameOverScene extends Scene {
         this.refresh();
     }
 
-    updateResultItem(item, index) {
-        let name = "";
-        let originValue = 0;
-        let multiple = 0;
-        switch (index) {
-            case 0: {
-                name = "Distance";
-                originValue = Math.floor(this.args.distance);
-                multiple = GameUtils.getBikeConfig("distancePercent");
-                break;
-            }
-            case 1: {
-                name = "Coin";
-                originValue = this.args.coin;
-                multiple = GameUtils.getBikeConfig("coinPercent");
-                break;
-            }
-        }
-        let finalValue = originValue * multiple;
-        if (this.args.gameScene.doubleReward) {
-            finalValue *= 2;
-        }
-        item.children[0].text = `${App.getText(name)}\t${originValue}`;
-        item.children[1].text = `x${multiple}${this.args.gameScene.doubleReward ? " x2" : ""}->`;
-        item.children[2].text = `${App.getText(name)}\t${Math.floor(finalValue)}`;
-    }
-
-    static onClickMainButton() {
-        App.getScene("EndlessGameScene").settle();
-        App.hideScene("GameOverScene");
-        App.destroyScene("EndlessGameScene");
-        App.showScene("MainScene");
-    }
-
-    static onClickRestartButton() {
-        App.getScene("EndlessGameScene").settle();
-        App.hideScene("GameOverScene");
-        EventMgr.dispatchEvent("Restart");
-    }
-
-    onClickAdvertRebornButton() {
-        window.PlatformHelper.showAd(success => {
-            if (success) {
-                this.reborn();
-                TDGA.onEvent("广告无尽模式复活");
-            }
-        });
-    }
-
     onClickDiamondRebornButton() {
         let diamond = DataMgr.get(DataMgr.diamond, 0);
         if (diamond >= Config.diamondRebornCost) {
@@ -91,6 +57,15 @@ export default class GameOverScene extends Scene {
         } else {
             App.showNotice(App.getText("DiamondIsNotEnough"));
         }
+    }
+
+    onClickAdvertRebornButton() {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                this.reborn();
+                TDGA.onEvent("广告无尽模式复活");
+            }
+        });
     }
 
     onClickAdvertDoubleButton() {
@@ -137,16 +112,20 @@ export default class GameOverScene extends Scene {
             DataMgr.set(DataMgr.distanceRecord, finalDistance);
         }
 
-        if (this.resultList) {
-            this.resultList.refresh();
-        } else {
-            this.resultList = new List({
-                root: this.ui.resultList,
-                updateItemFunc: this.updateResultItem.bind(this),
-                count: 2,
-                isStatic: true,
-            });
-        }
+        this.resultList.update([
+            {
+                name: "Distance",
+                originValue: Math.floor(this.args.distance),
+                multiple: GameUtils.getBikeConfig("distancePercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
+            {
+                name: "Coin",
+                originValue: this.args.coin,
+                multiple: GameUtils.getBikeConfig("coinPercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
+        ]);
 
         this.ui.hasDoubleRewardText.visible = !!this.args.gameScene.doubleReward;
         this.ui.advertDoubleButton.visible = !this.args.gameScene.doubleReward;

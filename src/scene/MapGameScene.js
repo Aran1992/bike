@@ -12,7 +12,10 @@ import MusicMgr from "../mgr/MusicMgr";
 export default class MapGameScene extends StaticGameScene {
     onCreate() {
         super.onCreate();
-        this.enemCount = Config.enemy.count;
+        this.rewardType = DataMgr.preparationDataMap;
+        this.ui.surrenderButton.visible = true;
+        this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
+        this.enemyCount = Config.enemy.count;
     }
 
     onShow(mapIndex) {
@@ -155,7 +158,6 @@ export default class MapGameScene extends StaticGameScene {
         if (rank === undefined) {
             rank = this.enemyList.reduce((count, enemy) => {
                 if (enemy.completeGame) {
-
                     return count + 1;
                 } else {
                     return count;

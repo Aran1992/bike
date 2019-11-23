@@ -1271,30 +1271,11 @@ Config.roadSections = {
     ],
 
 
-
-
-
-
-
-
-
     // 奖励关卡（Special）
     "0-1": [
         // 关卡（每个路段为10000像素）
         "Special/Special111-00000101",
     ],
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 };
@@ -10097,6 +10078,19 @@ Config.preparationRandomEffectList = {
         "Accelerate",
         "PowerJump",
         "UnlimitedJump",
+    ],
+    // 闯关模式
+    gameLevel: [
+        "Decelerate",
+        "WeakenJump",
+        "BlockSight",
+        "SpiderWeb",
+        "Seal",
+        "Thunder",
+        "BananaPeel",
+        "Accelerate",
+        "PowerJump",
+        "UnlimitedJump",
     ]
 };
 
@@ -10110,6 +10104,12 @@ Config.preparationRandomBikeList = {
     ],
     // 排名模式
     map: [
+        9, 24, 18,
+        14, 16, 17,
+        3, 52, 25
+    ],
+    // 闯关模式
+    gameLevel: [
         9, 24, 18,
         14, 16, 17,
         3, 52, 25
@@ -10354,7 +10354,14 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
-            ]
+            ],
+            rewardList: [
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+            ],
         },
         {
             // 解锁需要的星星数
@@ -10410,7 +10417,14 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-2-3.scene.json",
                 "myLaya/laya/pages/Map/Map-2-4.scene.json",
                 "myLaya/laya/pages/Map/Map-2-5.scene.json",
-            ]
+            ],
+            rewardList: [
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+            ],
         },
         {
             // 解锁需要的星星数
@@ -10466,7 +10480,14 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
-            ]
+            ],
+            rewardList: [
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+                {bike: 3, coin: 20000},
+            ],
         },
     ],
 };

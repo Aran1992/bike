@@ -10,8 +10,6 @@ import MatchRacetrack from "../ui/MatchRacetrack";
 export default class StaticGameScene extends GameScene {
     onCreate() {
         super.onCreate();
-        this.ui.surrenderButton.visible = true;
-        this.onClick(this.ui.surrenderButton, this.onClickSurrenderButton.bind(this));
         this.ui.matchRacetrack.visible = true;
         this.matchRacetrack = new MatchRacetrack(this.ui.matchRacetrack);
         this.enemyCount = 0;

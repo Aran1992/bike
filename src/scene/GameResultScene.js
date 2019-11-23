@@ -5,6 +5,7 @@ import Config from "../config";
 import MusicMgr from "../mgr/MusicMgr";
 import {Graphics} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
+import ResultList from "../ui/ResultList";
 
 export default class GameResultScene extends Scene {
     static onClickMainButton() {
@@ -24,6 +25,8 @@ export default class GameResultScene extends Scene {
 
         this.onClick(this.ui.mainButton, GameResultScene.onClickMainButton);
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
+
+        this.resultList = new ResultList(this.ui.resultList);
     }
 
     onShow(args) {
@@ -37,33 +40,6 @@ export default class GameResultScene extends Scene {
         this.refresh();
 
         App.getScene("MapGameScene").stopSounds();
-    }
-
-    updateResultItem(item, index) {
-        let name = "";
-        let originValue = 0;
-        let multiple = 0;
-        switch (index) {
-            case 0: {
-                name = "Score";
-                originValue = Config.rankScore[this.args.rank];
-                multiple = GameUtils.getBikeConfig("scorePercent");
-                break;
-            }
-            case 1: {
-                name = "Distance";
-                originValue = Math.floor(this.args.distance);
-                multiple = GameUtils.getBikeConfig("distancePercent");
-                break;
-            }
-        }
-        let finalValue = originValue * multiple;
-        if (this.args.gameScene.doubleReward) {
-            finalValue *= 2;
-        }
-        item.children[0].text = `${App.getText(name)}\t${originValue}`;
-        item.children[1].text = `x${multiple}${this.args.gameScene.doubleReward ? " x2" : ""}->`;
-        item.children[2].text = `${App.getText(name)}\t${Math.floor(finalValue)}`;
     }
 
     updateRankItem(item, index) {
@@ -121,16 +97,20 @@ export default class GameResultScene extends Scene {
             score: totalScore,
         });
 
-        if (this.resultList === undefined) {
-            this.resultList = new List({
-                root: this.ui.resultList,
-                updateItemFunc: this.updateResultItem.bind(this),
-                count: 2,
-                isStatic: true,
-            });
-        } else {
-            this.resultList.refresh();
-        }
+        this.resultList.update([
+            {
+                name: "Score",
+                originValue: Config.rankScore[this.args.rank],
+                multiple: GameUtils.getBikeConfig("scorePercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
+            {
+                name: "Distance",
+                originValue: Math.floor(this.args.distance),
+                multiple: GameUtils.getBikeConfig("distancePercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
+        ]);
 
         if (this.rankList === undefined) {
             this.rankList = new List({

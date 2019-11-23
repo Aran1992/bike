@@ -1,9 +1,10 @@
 import Scene from "./Scene";
-import {Graphics, Texture} from "../libs/pixi-wrapper";
+import {Graphics, Sprite, Texture} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import BikeSprite from "../item/BikeSprite";
 import RunOption from "../../run-option";
+import UIHelper from "../ui/UIHelper";
 
 export default class PreparationScene extends Scene {
     onCreate() {
@@ -22,22 +23,36 @@ export default class PreparationScene extends Scene {
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
         this.bikeSprite = new BikeSprite(this.ui.itemIcon3, 0);
         this.bikeSprite.play();
+        for (let i = 0; i < 2; i++) {
+            const item = this.ui[`firstTimeReward${i}`];
+            UIHelper.initUIRoot(item);
+            item.ui.itemIcon = item.ui.itemIcon.addChild(new Sprite());
+            item.ui.itemIcon.anchor.set(0.5, 0.5);
+            item.ui.bikeSprite = new BikeSprite(item.ui.bikeSpritePanel);
+            item.ui.bikeSprite.play();
+        }
     }
 
     onShow(mode) {
         this.mode = mode;
         this.ui.endlessModeImage.visible = false;
         this.ui.mapModeImage.visible = false;
+        this.ui.gameLevelModeImage.visible = false;
+        this.ui.coinPanel.visible = false;
         if (this.mode === "Map") {
             this.ui.mapModeImage.visible = true;
             this.ui.coinPanel.visible = true;
             this.ui.costCoinText.text = Config.rankMode.costCoin;
-            this.rewards = DataMgr.get(DataMgr.preparationDataMap);
-        } else {
+            this.rewardType = DataMgr.preparationDataMap;
+        } else if (this.mode === "GameLevel") {
+            this.ui.gameLevelModeImage.visible = true;
+            this.rewardType = DataMgr.preparationDataGameLevel;
+            this.updateGameLevelInfo();
+        } else if (this.mode === "Endless") {
             this.ui.endlessModeImage.visible = true;
-            this.ui.coinPanel.visible = false;
-            this.rewards = DataMgr.get(DataMgr.preparationDataEndless);
+            this.rewardType = DataMgr.preparationDataEndless;
         }
+        this.rewards = DataMgr.get(this.rewardType);
 
         this.ui.itemIcon1.children[0].texture = Texture.from(Config.effect[this.rewards[0].effect].imagePath);
         this.ui.itemIcon2.children[0].texture = Texture.from(Config.effect[this.rewards[1].effect].imagePath);
@@ -61,7 +76,7 @@ export default class PreparationScene extends Scene {
         window.PlatformHelper.showAd(success => {
             if (success) {
                 this.rewards[index - 1].received = true;
-                DataMgr.set(DataMgr.preparationData, this.rewards);
+                DataMgr.set(this.rewardType, this.rewards);
                 if (this.mode === "Map") {
                     if (index === 3) {
                         TDGA.onEvent("广告竞技模式自行车");
@@ -73,6 +88,12 @@ export default class PreparationScene extends Scene {
                         TDGA.onEvent("广告无尽模式自行车");
                     } else {
                         TDGA.onEvent("广告无尽模式道具");
+                    }
+                } else if (this.mode === "GameLevel") {
+                    if (index === 3) {
+                        TDGA.onEvent("广告闯关模式自行车");
+                    } else {
+                        TDGA.onEvent("广告闯关模式道具");
                     }
                 }
                 this.onShow(this.mode);
@@ -107,6 +128,57 @@ export default class PreparationScene extends Scene {
             App.hideScene("MainScene");
             App.hideScene("PreparationScene");
             App.showScene("EndlessGameScene", DataMgr.get(DataMgr.selectedEndlessScene, 0));
+        } else if (this.mode === "GameLevel") {
+            App.hideScene("MainScene");
+            App.hideScene("PreparationScene");
+            const mainScene = App.getScene("MainScene");
+            App.showScene("LevelGameScene", mainScene.gameLevel, mainScene.selectedLevel);
+        }
+    }
+
+    updateGameLevelInfo() {
+        const mainScene = App.getScene("MainScene");
+        if (DataMgr.isFirstPlayGameLevel(mainScene.gameLevel, mainScene.selectedLevel)) {
+            this.ui.firstTimePanel.visible = true;
+            const rewardTable = Config.gameLevelMode.mapList[mainScene.gameLevel].rewardList[mainScene.selectedLevel];
+            const typeList = ["coin", "diamond", "bike"];
+            let rewardIndex = 0;
+            for (let typeIndex = 0; typeIndex < typeList.length; typeIndex++) {
+                const type = typeList[typeIndex];
+                const reward = rewardTable[type];
+                if (reward) {
+                    const item = this.ui[`firstTimeReward${rewardIndex}`];
+                    if (item) {
+                        item.ui.itemIcon.visible = false;
+                        item.ui.numberText.visible = false;
+                        item.ui.bikeSpritePanel.visible = false;
+                        switch (type) {
+                            case "coin": {
+                                item.ui.itemIcon.visible = true;
+                                item.ui.itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-coin.png");
+                                item.ui.numberText.visible = true;
+                                item.ui.numberText.text = reward;
+                                break;
+                            }
+                            case "diamond": {
+                                item.ui.itemIcon.visible = true;
+                                item.ui.itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-diamond.png");
+                                item.ui.numberText.visible = true;
+                                item.ui.numberText.text = reward;
+                                break;
+                            }
+                            case "bike": {
+                                item.ui.bikeSpritePanel.visible = true;
+                                item.ui.bikeSprite.setBikeID(reward);
+                                break;
+                            }
+                        }
+                    }
+                    rewardIndex++;
+                }
+            }
+        } else {
+            this.ui.firstTimePanel.visible = false;
         }
     }
 }

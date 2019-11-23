@@ -5,7 +5,11 @@ import StaticGameScene from "./StaticGameScene";
 export default class LevelGameScene extends StaticGameScene {
     onCreate() {
         super.onCreate();
+        this.rewardType = DataMgr.preparationDataGameLevel;
+        this.registerEvent("Continue", this.onContinue.bind(this));
         this.ui.starPanel.visible = true;
+        this.ui.pauseButton.visible = true;
+        this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
 
     onShow(mapIndex, levelIndex) {
@@ -21,15 +25,20 @@ export default class LevelGameScene extends StaticGameScene {
         this.onShow(this.mapIndex, this.levelIndex);
     }
 
-    onClickSurrenderButton() {
-        App.showScene("TipScene", {
-            tip: App.getText("You only get the last prize after surrender, are you sure?"),
-            confirmCallback: () => {
-                this.gameWin(Config.enemy.count);
-            },
-            cancelCallback: () => {
-            },
-        });
+    onClickPauseButton() {
+        if (this.gameStatus === "play") {
+            this.gameLoopFunc = this.pause.bind(this);
+            this.gameStatus = "pause";
+            App.showScene("PauseScene", {
+                gameSceneName: "LevelGameScene",
+                clickMainTip: "Are you sure you want to quit the game?  The current game data will be saved automatically after exit.",
+                clickRestartTip: "Are you sure to restart the game? The current game data will be saved automatically after exit."
+            });
+        } else if (this.gameStatus === "pause") {
+            this.gameLoopFunc = this.play.bind(this);
+            this.gameStatus = "play";
+            App.hideScene("PauseScene");
+        }
     }
 
     getItemRandomTableList() {
@@ -37,6 +46,7 @@ export default class LevelGameScene extends StaticGameScene {
     }
 
     settle() {
+        super.settle();
         if (this.gameStatus === "win") {
             const table = DataMgr.get(DataMgr.gameLevelData, {});
             const map = this.mapIndex;
@@ -49,22 +59,27 @@ export default class LevelGameScene extends StaticGameScene {
             }
             DataMgr.set(DataMgr.gameLevelData, table);
         }
-        super.settle();
         DataMgr.refreshPreparationRewards(DataMgr.preparationDataGameLevel);
     }
 
     gameWin() {
         this.gameStatus = "win";
-        setTimeout(() => {
-            App.getScene("LevelGameScene").pauseGame();
-            App.getScene("LevelGameScene").settle();
-            App.destroyScene("LevelGameScene");
-            App.showScene("MainScene");
-        }, 3000);
+        App.showScene("GameLevelResultScene", {gameScene: this});
     }
 
     onDead() {
         super.onDead();
-        App.showScene("GameLevelFailedScene", (this.deadPos.x - this.bikeStartX) / this.totalDistance);
+        this.deadCompleteTimer = setTimeout(() => {
+            this.gameLoopFunc = this.pause.bind(this);
+            App.showScene("GameLevelFailedScene", {
+                gameScene: this,
+                distance: this.distance,
+                playerRate: (this.deadPos.x - this.bikeStartX) / this.totalDistance,
+            });
+        }, Config.bike.deadCompleteTime);
+    }
+
+    onContinue() {
+        this.onClickPauseButton();
     }
 }

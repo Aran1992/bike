@@ -27,6 +27,7 @@ export default class List {
 
         this.countPerLine = Math.ceil(this.lineLength / this.itemLineLength);
         this.maxOffset = 0;
+        count = count || 0;
         this.setItemCount(count);
 
         this.update();

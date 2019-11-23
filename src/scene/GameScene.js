@@ -35,7 +35,6 @@ import BananaPeel from "../item/BananaPeel";
 import BikeEffect from "../item/BikeEffect";
 import Value from "../item/Value";
 import BaseEffect from "../item/BaseEffect";
-import MapGameScene from "./MapGameScene";
 import SceneHelper from "../mgr/SceneHelper";
 
 function getValue(value, defaultValue) {
@@ -63,7 +62,8 @@ export default class GameScene extends Scene {
         this.registerEvent("AteItem", this.onAteItem);
         this.registerEvent("UseItem", this.onUseItem);
 
-        window.addEventListener("keydown", this.onKeydown.bind(this));
+        this.keyDownHandler = this.onKeydown.bind(this);
+        window.addEventListener("keydown", this.keyDownHandler);
 
         this.gameContainer = new Container();
         this.addChildAt(this.gameContainer, 0);
@@ -171,7 +171,7 @@ export default class GameScene extends Scene {
 
         this.initEnvironment();
 
-        this.rewards = DataMgr.get(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
+        this.rewards = DataMgr.get(this.rewardType);
 
         App.showScene("LoadingScene", this.getBikeID());
         App.loadResources(this.getResPathList(), () => {
@@ -199,6 +199,8 @@ export default class GameScene extends Scene {
 
     onDestroy() {
         this.stopSounds();
+        window.removeEventListener("keydown", this.keyDownHandler);
+        super.onDestroy();
     }
 
     stopSounds() {
@@ -1454,7 +1456,7 @@ export default class GameScene extends Scene {
             }
         });
         DataMgr.add(DataMgr.rankDistance, distance);
-        DataMgr.refreshPreparationRewards(this instanceof MapGameScene ? DataMgr.preparationDataMap : DataMgr.preparationDataEndless);
+        DataMgr.refreshPreparationRewards(this.rewardType);
         this.gameLoopFunc = this.pause.bind(this);
     }
 

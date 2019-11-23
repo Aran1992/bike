@@ -59,7 +59,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,matchRacetrack",
-                    "props":{"y":180,"x":22,"width":654,"var":"matchRacetrack","top":180,"skin":"images/racetrack.png","height":210,"centerX":0},
+                    "props":{"var":"matchRacetrack","top":180,"skin":"images/racetrack.png","scaleY":1.3,"scaleX":1.3,"centerX":0},
                     "nodeParent":16,
                     "label":"matchRacetrack",
                     "isOpen":true,

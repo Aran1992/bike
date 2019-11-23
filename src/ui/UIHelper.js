@@ -19,6 +19,17 @@ export default class UIHelper {
         return displayObject_;
     }
 
+    static initUIRoot(displayObject, root) {
+        if (root === undefined) {
+            root = displayObject;
+            root.ui = {};
+        }
+        if (displayObject.uiname) {
+            root.ui[displayObject.uiname] = displayObject;
+        }
+        displayObject.children.forEach(child => UIHelper.initUIRoot(child, root));
+    }
+
     static clone(displayObject) {
         let displayObject_ = UIHelper.copy(displayObject);
         displayObject.children.forEach(child => {

@@ -357,8 +357,7 @@ export default class MainScene extends Scene {
     onClickGameLevel(button) {
         this.selectedLevel = button.index;
         this.refreshGameLevelSelectedState();
-        App.hideScene("MainScene");
-        App.showScene("LevelGameScene", this.gameLevel, this.selectedLevel);
+        App.showScene("PreparationScene", this.mode);
     }
 
     refreshMode() {

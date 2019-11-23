@@ -91,6 +91,9 @@ class DataMgr_ {
         if (DataMgr.get(DataMgr.preparationDataEndless) === undefined) {
             this.refreshPreparationRewards(DataMgr.preparationDataEndless);
         }
+        if (DataMgr.get(DataMgr.preparationDataGameLevel) === undefined) {
+            this.refreshPreparationRewards(DataMgr.preparationDataGameLevel);
+        }
 
         OnlineMgr.start();
     }
@@ -228,6 +231,9 @@ class DataMgr_ {
         if (key === DataMgr.preparationDataMap) {
             l1 = Config.preparationRandomEffectList.map;
             l2 = Config.preparationRandomBikeList.map;
+        } else if (key === DataMgr.preparationDataGameLevel) {
+            l1 = Config.preparationRandomEffectList.gameLevel;
+            l2 = Config.preparationRandomBikeList.gameLevel;
         } else {
             l1 = Config.preparationRandomEffectList.endless;
             l2 = Config.preparationRandomBikeList.endless;
@@ -303,6 +309,11 @@ class DataMgr_ {
         const glConfig = Config.gameLevelMode.mapList[map];
         const needed = glConfig.starCountUnlockNeeded;
         return total < needed;
+    }
+
+    isFirstPlayGameLevel(map, level) {
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        return table[map] === undefined || table[map][level] === undefined;
     }
 }
 
