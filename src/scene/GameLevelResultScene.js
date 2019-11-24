@@ -4,6 +4,7 @@ import Config from "../config";
 import ResultList from "../ui/ResultList";
 import GameUtils from "../mgr/GameUtils";
 import Scene from "./Scene";
+import DataMgr from "../mgr/DataMgr";
 
 export default class GameLevelResultScene extends Scene {
     static onClickMainButton() {
@@ -44,6 +45,22 @@ export default class GameLevelResultScene extends Scene {
         }
 
         this.refresh();
+
+        const isFirstTime = DataMgr.isFirstPlayGameLevel(this.args.gameScene.mapIndex, this.args.gameScene.levelIndex);
+        if (isFirstTime) {
+            const reward = Config.gameLevelMode.mapList[this.args.gameScene.mapIndex].rewardList[this.args.gameScene.levelIndex];
+            let list = [];
+            if (reward.coin) {
+                list.push({rewardCoin: reward.coin});
+            }
+            if (reward.diamond) {
+                list.push({rewardDiamond: reward.diamond});
+            }
+            if (reward.bike) {
+                list.push({rewardBike: reward.bike});
+            }
+            App.showScene("PrizeScene", list);
+        }
     }
 
     onClickAdvertDoubleButton() {
