@@ -1006,6 +1006,10 @@ export default class GameScene extends Scene {
                 }
             }
         }
+
+        if (this.gaSprite) {
+            this.onGuideAnimation();
+        }
     }
 
     pause() {
@@ -1778,6 +1782,137 @@ export default class GameScene extends Scene {
         icon.scale.set(Config.itemUseHistory.iconSale, Config.itemUseHistory.iconSale);
         icon.x = lastX;
         return container;
+    }
+
+    showGuideAnimation() {
+        this.gaSprite = this.addChild(new Sprite());
+        this.gaSprite.anchor.set(0.5, 0.5);
+        this.gaSprite.x = App.sceneWidth / 2;
+        this.gaStep = -1;
+        this.gaSpriteTextureList = [
+            Config.imagePath.start3,
+            Config.imagePath.start2,
+            Config.imagePath.start1,
+        ];
+        this.startAction();
+    }
+
+    startAction() {
+        this.guideActionList = [
+            () => this.actionCallback(() => {
+                this.ui.guidePanel.visible = true;
+                App.showMask();
+            }),
+            () => this.actionMove(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
+            () => this.actionDelay(),
+            () => this.actionMove(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
+            () => this.actionDelay(),
+            () => this.actionMove(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideCountDown)),
+            () => this.actionDelay(),
+            () => this.actionScale(),
+            () => this.actionCallback(() => MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
+                MusicMgr.playBGM(this.bgmPath, true);
+            })),
+            () => this.actionDelay(),
+            () => this.actionFadeout(),
+            () => this.actionCallback(() => {
+                this.gaSprite.destroy();
+                this.gaSprite = undefined;
+                this.ui.guidePanel.visible = false;
+                App.hideMask();
+            }),
+        ];
+        this.onActionEnded();
+    }
+
+    onGuideAnimation() {
+        switch (this.action) {
+            case "move": {
+                this.onMoveAction();
+                break;
+            }
+            case "scale": {
+                this.onScaleAction();
+                break;
+            }
+            case "delay": {
+                this.onDelayAction();
+                break;
+            }
+            case "fadeout": {
+                this.onFadeoutAction();
+                break;
+            }
+        }
+    }
+
+    onMoveAction() {
+        this.gaSprite.y += this.gaVelocity;
+        if (this.gaSprite.y >= App.sceneHeight / 2) {
+            this.onActionEnded();
+        }
+    }
+
+    onScaleAction() {
+        this.gaSprite.scale.x -= this.gaVelocity;
+        this.gaSprite.scale.y -= this.gaVelocity;
+        if (this.gaSprite.scale.x <= 1) {
+            this.onActionEnded();
+        }
+    }
+
+    onDelayAction() {
+        this.delay++;
+        if (this.delay > Config.guideAction.delayFrame) {
+            this.onActionEnded();
+        }
+    }
+
+    onFadeoutAction() {
+        this.gaSprite.alpha -= this.gaVelocity;
+        if (this.gaSprite.alpha <= 0) {
+            this.onActionEnded();
+        }
+    }
+
+    onActionEnded() {
+        let action = this.guideActionList.shift();
+        if (action) {
+            action();
+        }
+    }
+
+    actionMove() {
+        this.action = "move";
+        this.gaStep++;
+        this.gaSprite.texture = Texture.from(this.gaSpriteTextureList[this.gaStep]);
+        this.gaSprite.y = -this.gaSprite.height / 2;
+        this.gaVelocity = App.sceneHeight / 2 / (Config.fps - Config.guideAction.delayFrame);
+    }
+
+    actionScale() {
+        this.action = "scale";
+        this.gaSprite.texture = Texture.from(Config.imagePath.startGo);
+        this.gaSprite.scale.set(Config.guideAction.startScale, Config.guideAction.startScale);
+        this.gaVelocity = (Config.guideAction.startScale - 1) / (Config.fps - Config.guideAction.delayFrame);
+    }
+
+    actionFadeout() {
+        this.action = "fadeout";
+        this.gaVelocity = 1 / (Config.fps - Config.guideAction.delayFrame);
+    }
+
+    actionDelay() {
+        this.action = "delay";
+        this.delay = 0;
+    }
+
+    actionCallback(handler) {
+        handler();
+        this.onActionEnded();
     }
 }
 

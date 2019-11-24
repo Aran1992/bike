@@ -25,6 +25,11 @@ export default class LevelGameScene extends StaticGameScene {
         this.onShow(this.mapIndex, this.levelIndex);
     }
 
+    onLoadedGameRes() {
+        super.onLoadedGameRes();
+        this.showGuideAnimation();
+    }
+
     onClickPauseButton() {
         if (this.gameStatus === "play") {
             this.gameLoopFunc = this.pause.bind(this);
