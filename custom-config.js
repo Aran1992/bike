@@ -1335,7 +1335,7 @@ Config.endlessMode.sceneList = [
             // 对普通玩家可过阶段
             // 第1阶段
             {
-                list: ["0-1",],
+                list: ["101-1",],
                 length: 1000,
                 velocity: 1,
             },
@@ -1378,14 +1378,54 @@ Config.endlessMode.sceneList = [
 
 
         ],
+
         // 无限循环旅程
         infiniteRoadSectionList: [
-            // 第1阶段
+            // 奖励阶段
             {
-                list: ["0-0",],
-                length: 1000,
-                velocity: 1.1,
+                list: ["0-1",],
+                length: 5000,
+                velocity: 1,
             },
+
+
+            // 第2阶段
+            {
+                list: ["101-11",],
+                length: 3000,
+                velocity: 1,
+            },
+            // 第3阶段
+            {
+                list: ["101-21",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第4阶段
+            {
+                list: ["101-31",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第5阶段
+            {
+                list: ["101-41",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第6阶段
+            {
+                list: ["101-51",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第7阶段
+            {
+                list: ["101-61",],
+                length: 4000,
+                velocity: 1,
+            },
+
         ],
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
@@ -10471,9 +10511,9 @@ Config.gameLevelMode = {
             levelList: [
                 "myLaya/laya/pages/Map/Map-3-1.scene.json",
                 "myLaya/laya/pages/Map/Map-3-2.scene.json",
-                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-                "myLaya/laya/pages/Map/Map-1-4.scene.json",
-                "myLaya/laya/pages/Map/Map-1-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
             ],
             rewardList: [
                 {diamond: 40, 	coin: 20000},
