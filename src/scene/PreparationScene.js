@@ -39,6 +39,7 @@ export default class PreparationScene extends Scene {
         this.ui.mapModeImage.visible = false;
         this.ui.gameLevelModeImage.visible = false;
         this.ui.coinPanel.visible = false;
+        this.ui.firstTimePanel.visible = false;
         if (this.mode === "Map") {
             this.ui.mapModeImage.visible = true;
             this.ui.coinPanel.visible = true;

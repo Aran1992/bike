@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":31,
+    "selecteID":103,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -260,14 +260,13 @@
             "props":{"y":0,"x":0,"width":720,"skin":"images/bg-7.png","height":76},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,pauseButton",
                     "props":{"y":0,"x":0,"var":"pauseButton","top":0,"skin":"images/button-pause.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
@@ -281,7 +280,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,surrenderButton",
                     "props":{"var":"surrenderButton","top":0,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
@@ -296,7 +294,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":10,"x":75,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
@@ -350,7 +347,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":290,"visible":false,"top":-100,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
@@ -404,7 +400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,coinPanel",
                     "props":{"y":10,"x":505,"var":"coinPanel","top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
@@ -458,7 +453,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expPanel",
                     "props":{"y":0,"x":290,"visible":true,"top":10,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9,"name":"expPanel"},
@@ -514,18 +508,167 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image,matchRacetrack",
-            "props":{"y":1119,"x":217,"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
+            "type":"Panel",
+            "searchKey":"Panel,itemUseHistoryPanel",
+            "props":{"y":100,"x":0,"width":500,"var":"itemUseHistoryPanel","top":100,"left":0,"height":300},
             "nodeParent":1,
-            "label":"matchRacetrack",
-            "isOpen":true,
+            "label":"itemUseHistoryPanel",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":36,
+            "compId":108,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,starPanel",
+            "props":{"y":76,"x":569,"width":150,"var":"starPanel","top":76,"skin":"images/bg-7.png","right":1,"height":50},
+            "nodeParent":1,
+            "label":"starPanel",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":113,
+            "child":[
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"width":50,"skin":"images/bottom-num-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":50,"centerY":0},
+                    "nodeParent":113,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":114,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,star0",
+                            "props":{"width":40,"var":"star0","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
+                            "nodeParent":114,
+                            "label":"star0",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":132,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":0,"x":0,"width":50,"skin":"images/bottom-num-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerY":0,"centerX":0},
+                    "nodeParent":113,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":133,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,star1",
+                            "props":{"width":40,"var":"star1","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
+                            "nodeParent":133,
+                            "label":"star1",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":134,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"y":0,"width":50,"skin":"images/bottom-num-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"height":50,"centerY":0},
+                    "nodeParent":113,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":135,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,star2",
+                            "props":{"width":40,"var":"star2","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
+                            "nodeParent":135,
+                            "label":"star2",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":136,
+                            "child":[
+                                ]
+                        }]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "searchKey":"Panel,nextPlayerInfo",
+            "props":{"y":200,"x":520,"width":200,"var":"nextPlayerInfo","top":200,"right":0,"height":70},
+            "nodeParent":1,
+            "label":"nextPlayerInfo",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":62,
+            "child":[
+                {
+                    "type":"Image",
+                    "searchKey":"Image,nextPlayerHead",
+                    "props":{"width":60,"var":"nextPlayerHead","skin":"images/UserIconDefault.png","scaleY":1,"scaleX":1,"right":0,"height":60,"centerY":0},
+                    "nodeParent":62,
+                    "label":"nextPlayerHead",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":59,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "searchKey":"Label,nextPlayerName",
+                    "props":{"y":200,"x":599,"var":"nextPlayerName","top":0,"text":"npc1","strokeColor":"#000000","stroke":5,"right":70,"fontSize":30,"color":"#ffffff"},
+                    "nodeParent":62,
+                    "label":"nextPlayerName",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":61,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "searchKey":"Label,nextPlayerDistance",
+                    "props":{"y":173,"x":590,"var":"nextPlayerDistance","text":"231m","strokeColor":"#000000","stroke":5,"right":70,"fontSize":30,"color":"#ffffff","bottom":0},
+                    "nodeParent":62,
+                    "label":"nextPlayerDistance",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":60,
+                    "child":[
+                        ]
+                }]
         },
         {
             "x":15,
@@ -624,15 +767,16 @@
         },
         {
             "x":15,
-            "type":"Panel",
-            "searchKey":"Panel,itemUseHistoryPanel",
-            "props":{"width":500,"var":"itemUseHistoryPanel","top":100,"left":0,"height":300},
+            "type":"Image",
+            "searchKey":"Image,matchRacetrack",
+            "props":{"y":1119,"x":217,"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
             "nodeParent":1,
-            "label":"itemUseHistoryPanel",
+            "label":"matchRacetrack",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":108,
+            "compId":36,
             "child":[
                 ]
         },
@@ -690,61 +834,6 @@
                         }]
                 }],
             "$HIDDEN":true
-        },
-        {
-            "x":15,
-            "type":"Panel",
-            "searchKey":"Panel,nextPlayerInfo",
-            "props":{"width":200,"var":"nextPlayerInfo","top":200,"right":0,"height":70},
-            "nodeParent":1,
-            "label":"nextPlayerInfo",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":62,
-            "child":[
-                {
-                    "type":"Image",
-                    "searchKey":"Image,nextPlayerHead",
-                    "props":{"width":60,"var":"nextPlayerHead","skin":"images/UserIconDefault.png","scaleY":1,"scaleX":1,"right":0,"height":60,"centerY":0},
-                    "nodeParent":62,
-                    "label":"nextPlayerHead",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":59,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Label",
-                    "searchKey":"Label,nextPlayerName",
-                    "props":{"y":200,"x":599,"var":"nextPlayerName","top":0,"text":"npc1","strokeColor":"#000000","stroke":5,"right":70,"fontSize":30,"color":"#ffffff"},
-                    "nodeParent":62,
-                    "label":"nextPlayerName",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":61,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Label",
-                    "searchKey":"Label,nextPlayerDistance",
-                    "props":{"y":173,"x":590,"var":"nextPlayerDistance","text":"231m","strokeColor":"#000000","stroke":5,"right":70,"fontSize":30,"color":"#ffffff","bottom":0},
-                    "nodeParent":62,
-                    "label":"nextPlayerDistance",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":60,
-                    "child":[
-                        ]
-                }]
         },
         {
             "x":15,
@@ -831,108 +920,7 @@
                         }],
                     "$HIDDEN":false
                 }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,starPanel",
-            "props":{"width":150,"var":"starPanel","top":76,"skin":"images/bg-7.png","right":1,"height":50},
-            "nodeParent":1,
-            "label":"starPanel",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":113,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"width":50,"skin":"images/bottom-num-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":50,"centerY":0},
-                    "nodeParent":113,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":114,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image,star0",
-                            "props":{"width":40,"var":"star0","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
-                            "nodeParent":114,
-                            "label":"star0",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":132,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":0,"x":0,"width":50,"skin":"images/bottom-num-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerY":0,"centerX":0},
-                    "nodeParent":113,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":133,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image,star1",
-                            "props":{"width":40,"var":"star1","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
-                            "nodeParent":133,
-                            "label":"star1",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":134,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":0,"width":50,"skin":"images/bottom-num-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"height":50,"centerY":0},
-                    "nodeParent":113,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":135,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image,star2",
-                            "props":{"width":40,"var":"star2","skin":"images/balance_centerx4.png","height":40,"centerY":0,"centerX":0},
-                            "nodeParent":135,
-                            "label":"star2",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":136,
-                            "child":[
-                                ]
-                        }]
-                }]
+            "$HIDDEN":true
         }],
     "animations":[
         {

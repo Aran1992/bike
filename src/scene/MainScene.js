@@ -320,7 +320,7 @@ export default class MainScene extends Scene {
         const total = DataMgr.getGameLevelStarTotalCount();
         const glConfig = Config.gameLevelMode.mapList[this.gameLevel];
         const needed = glConfig.starCountUnlockNeeded;
-        const locked = needed > total;
+        const locked = DataMgr.isGameLevelMapLocked(this.gameLevel);
         this.ui.totalStarCount.text = total;
         this.ui.gameLevelMapDsc.text = App.getText(glConfig.dsc);
         this.ui.gameLevelLocked.visible = locked;
