@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":282,
-    "selecteID":288,
+    "selectedBox":16,
+    "selecteID":294,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":294,
+    "maxID":295,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -620,18 +620,18 @@
                 },
                 {
                     "x":30,
-                    "type":"Image",
-                    "searchKey":"Image,gameLevelModeImage",
-                    "props":{"var":"gameLevelModeImage","top":170,"skin":"images/english/Match.png","centerX":0},
+                    "type":"Label",
+                    "searchKey":"Label,gameLevelTitleLabel",
+                    "props":{"var":"gameLevelTitleLabel","top":180,"text":"闯关模式标题","strokeColor":"#ffffff","stroke":1,"fontSize":50,"color":"#ffffff","centerX":0,"bold":true},
                     "nodeParent":16,
-                    "label":"gameLevelModeImage",
+                    "label":"gameLevelTitleLabel",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":293,
+                    "compId":294,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 },
                 {
                     "x":30,
