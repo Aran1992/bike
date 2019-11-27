@@ -120,7 +120,7 @@ class DataMgr_ {
             this.checkConditions(Config.conditionsEnum.mapGameTimes);
         }
         if (key === DataMgr.homeData) {
-            NetworkMgr.requestSaveSocialData({home: value});
+            NetworkMgr.requestSaveSocialData({ home: value });
         }
         if (key === DataMgr.rankDistance && value !== 0) {
             NetworkMgr.requestUpdateTotalMileage(value);
@@ -241,9 +241,9 @@ class DataMgr_ {
         let effectList = Utils.randomChooseMulti(l1, 2);
         let bike = Utils.randomChoose(l2);
         DataMgr.set(key, [
-            {effect: effectList[0]},
-            {effect: effectList[1]},
-            {bike: bike}
+            { effect: effectList[0] },
+            { effect: effectList[1] },
+            { bike: bike }
         ]);
     }
 
@@ -268,7 +268,7 @@ class DataMgr_ {
         } else {
             highestLevel = true;
         }
-        return {levelUp, highestLevel};
+        return { levelUp, highestLevel };
     }
 
     getGameLevelStarTotalCount() {
@@ -314,7 +314,7 @@ class DataMgr_ {
         const lastMap = map - 1;
         const lastMapConfig = Config.gameLevelMode.mapList[lastMap];
         if (lastMapConfig) {
-            return DataMgr.isGameLevelIsLocked(lastMap, lastMapConfig.levelList.length - 1);
+            return DataMgr.isFirstPlayGameLevel(lastMap, lastMapConfig.levelList.length - 1);
         }
         return false;
     }
