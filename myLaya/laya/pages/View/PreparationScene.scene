@@ -621,10 +621,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label,gameLevelTItle",
-                    "props":{"var":"gameLevelTItle","top":180,"text":"闯关模式地图名","strokeColor":"#ffffff","fontSize":50,"color":"#ffffff","centerX":0},
+                    "searchKey":"Label,gameLevelTitle",
+                    "props":{"var":"gameLevelTitle","top":180,"text":"闯关模式地图名","strokeColor":"#ffffff","fontSize":50,"color":"#ffffff","centerX":0},
                     "nodeParent":16,
-                    "label":"gameLevelTItle",
+                    "label":"gameLevelTitle",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
