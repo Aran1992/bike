@@ -308,7 +308,15 @@ class DataMgr_ {
         const total = DataMgr.getGameLevelStarTotalCount();
         const glConfig = Config.gameLevelMode.mapList[map];
         const needed = glConfig.starCountUnlockNeeded;
-        return total < needed;
+        if (total < needed) {
+            return true;
+        }
+        const lastMap = map - 1;
+        const lastMapConfig = Config.gameLevelMode.mapList[lastMap];
+        if (lastMapConfig) {
+            return DataMgr.isGameLevelIsLocked(lastMap, lastMapConfig.levelList.length - 1);
+        }
+        return false;
     }
 
     isFirstPlayGameLevel(map, level) {
