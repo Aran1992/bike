@@ -1335,7 +1335,7 @@ Config.endlessMode.sceneList = [
             // 对普通玩家可过阶段
             // 第1阶段
             {
-                list: ["0-1",],
+                list: ["101-1",],
                 length: 1000,
                 velocity: 1,
             },
@@ -1378,14 +1378,54 @@ Config.endlessMode.sceneList = [
 
 
         ],
+
         // 无限循环旅程
         infiniteRoadSectionList: [
-            // 第1阶段
+            // 奖励阶段
             {
-                list: ["0-0",],
-                length: 1000,
-                velocity: 1.1,
+                list: ["0-1",],
+                length: 5000,
+                velocity: 1,
             },
+
+
+            // 第2阶段
+            {
+                list: ["101-11",],
+                length: 3000,
+                velocity: 1,
+            },
+            // 第3阶段
+            {
+                list: ["101-21",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第4阶段
+            {
+                list: ["101-31",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第5阶段
+            {
+                list: ["101-41",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第6阶段
+            {
+                list: ["101-51",],
+                length: 2000,
+                velocity: 1,
+            },
+            // 第7阶段
+            {
+                list: ["101-61",],
+                length: 4000,
+                velocity: 1,
+            },
+
         ],
         // 道具随机权重表（无尽模式-随机道具-模块1）
         itemRandomTable: {
@@ -10081,16 +10121,10 @@ Config.preparationRandomEffectList = {
     ],
     // 闯关模式
     gameLevel: [
-        "Decelerate",
-        "WeakenJump",
-        "BlockSight",
-        "SpiderWeb",
-        "Seal",
-        "Thunder",
-        "BananaPeel",
         "Accelerate",
         "PowerJump",
         "UnlimitedJump",
+        "Magnet",
     ]
 };
 
@@ -10110,8 +10144,8 @@ Config.preparationRandomBikeList = {
     ],
     // 闯关模式
     gameLevel: [
-        9, 24, 18,
-        14, 16, 17,
+        21, 22, 23,
+        7, 42, 43,
         3, 52, 25
     ]
 };
@@ -10356,11 +10390,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {bike: 1, 		coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {bike: 4, 		coin: 20000},
             ],
         },
         {
@@ -10419,16 +10453,16 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-2-5.scene.json",
             ],
             rewardList: [
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {bike: 2, 		coin: 20000},
             ],
         },
         {
             // 解锁需要的星星数
-            starCountUnlockNeeded: 0,
+            starCountUnlockNeeded: 20,
             // 地图描述
             dsc: "Select Map3",
             // 主页封面图
@@ -10477,21 +10511,22 @@ Config.gameLevelMode = {
             levelList: [
                 "myLaya/laya/pages/Map/Map-3-1.scene.json",
                 "myLaya/laya/pages/Map/Map-3-2.scene.json",
-                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-                "myLaya/laya/pages/Map/Map-1-4.scene.json",
-                "myLaya/laya/pages/Map/Map-1-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
             ],
             rewardList: [
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
-                {bike: 3, coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {diamond: 40, 	coin: 20000},
+                {bike: 20, 		coin: 20000},
             ],
         },
     ],
 };
 
+// 一关有多少颗星星（策划别改）
 Config.starCount = 3;
 
 export default Config;

@@ -37,7 +37,7 @@ export default class PreparationScene extends Scene {
         this.mode = mode;
         this.ui.endlessModeImage.visible = false;
         this.ui.mapModeImage.visible = false;
-        this.ui.gameLevelTitleLabel.visible = false;
+        this.ui.gameLevelTitle.visible = false;
         this.ui.coinPanel.visible = false;
         this.ui.firstTimePanel.visible = false;
         if (this.mode === "Map") {
@@ -46,9 +46,9 @@ export default class PreparationScene extends Scene {
             this.ui.costCoinText.text = Config.rankMode.costCoin;
             this.rewardType = DataMgr.preparationDataMap;
         } else if (this.mode === "GameLevel") {
-            this.ui.gameLevelTitleLabel.visible = true;
+            this.ui.gameLevelTitle.visible = true;
             const mainScene = App.getScene("MainScene");
-            this.ui.gameLevelTitleLabel.text = App.getText(Config.gameLevelMode.mapList[mainScene.gameLevel].dsc);
+            this.ui.gameLevelTitle.text = App.getText(Config.gameLevelMode.mapList[mainScene.gameLevel].dsc);
             this.rewardType = DataMgr.preparationDataGameLevel;
             this.updateGameLevelInfo();
         } else if (this.mode === "Endless") {
