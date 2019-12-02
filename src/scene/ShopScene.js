@@ -1,6 +1,6 @@
 import List from "../ui/List";
 import Scene from "./Scene";
-import {resources, Texture} from "../libs/pixi-wrapper";
+import { resources, Texture } from "../libs/pixi-wrapper";
 import Config from "../config";
 import DataMgr from "../mgr/DataMgr";
 import Radio from "../ui/Radio";
@@ -24,14 +24,9 @@ export default class ShopScene extends Scene {
                 init: this.initGoldPanel.bind(this),
                 show: this.showGoldPanel.bind(this),
             },
-            {
-                panel: this.ui.mapPanel,
-                init: this.initMapPanel.bind(this),
-                show: this.showMapPanel.bind(this),
-            },
         ];
         this.panelList.forEach(panelMgr => panelMgr.panel.visible = false);
-        this.infoList = [1, 2, 3,];
+        this.infoList = [1, 2];
         this.radio = new Radio({
             root: this.ui.tab,
             initItemFunc: this.initRadioButton.bind(this),
@@ -103,10 +98,10 @@ export default class ShopScene extends Scene {
             item.ui.advertButton.visible = true;
         } else {
             item.ui.onlineText.visible = true;
-            item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
+            item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
             item.timer = setInterval(() => {
                 let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
-                item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
+                item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
                 if (countdown <= 0) {
                     item.ui.onlineText.visible = false;
                     item.ui.advertButton.visible = true;
@@ -123,7 +118,7 @@ export default class ShopScene extends Scene {
     onClickCoinAdvertButton(button) {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                App.showScene("PrizeScene", [{rewardCoin: button.rewardCoin}]);
+                App.showScene("PrizeScene", [{ rewardCoin: button.rewardCoin }]);
                 let list = DataMgr.get(DataMgr.receivedCoinList, []);
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedCoinList, list);
@@ -162,10 +157,10 @@ export default class ShopScene extends Scene {
             item.ui.advertButton.visible = true;
         } else {
             item.ui.onlineText.visible = true;
-            item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
+            item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
             item.timer = setInterval(() => {
                 let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
-                item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
+                item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
                 if (countdown <= 0) {
                     item.ui.onlineText.visible = false;
                     item.ui.advertButton.visible = true;
@@ -182,7 +177,7 @@ export default class ShopScene extends Scene {
     onClickDiamondAdvertButton(button) {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                App.showScene("PrizeScene", [{rewardDiamond: button.rewardDiamond}]);
+                App.showScene("PrizeScene", [{ rewardDiamond: button.rewardDiamond }]);
                 let list = DataMgr.get(DataMgr.receivedDiamondList, []);
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedDiamondList, list);
@@ -235,7 +230,7 @@ export default class ShopScene extends Scene {
             item.unlockButton.visible = true;
             item.unlockCostText.text = config.unlockCostDiamond;
             item.unlockCondition.visible = true;
-            item.unlockConditionText.text = App.getText("TotalDistanceReach", {distance: config.unlockDistance});
+            item.unlockConditionText.text = App.getText("TotalDistanceReach", { distance: config.unlockDistance });
             item.interactive = false;
             item.unlockButton.id = config.id;
         } else {

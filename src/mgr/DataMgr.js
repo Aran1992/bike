@@ -70,6 +70,9 @@ class DataMgr_ {
         if (DataMgr.get(DataMgr.currentMapScene) === undefined) {
             DataMgr.set(DataMgr.currentMapScene, Math.floor(Math.random() * Config.mapList.length));
         }
+        if (DataMgr.get(DataMgr.selectedEndlessScene) === undefined) {
+            DataMgr.set(DataMgr.selectedEndlessScene, Math.floor(Math.random() * Config.endlessMode.sceneList.length));
+        }
         if (DataMgr.get(DataMgr.homeData) === undefined) {
             DataMgr.set(DataMgr.homeData, {
                 bgID: 1,

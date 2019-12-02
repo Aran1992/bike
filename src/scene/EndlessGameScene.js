@@ -242,5 +242,13 @@ export default class EndlessGameScene extends GameScene {
     settle() {
         super.settle();
         DataMgr.add(DataMgr.endlessGameTimes, 1);
+        let id = Math.floor(Math.random() * Config.endlessMode.sceneList.length);
+        if (id === DataMgr.get(DataMgr.selectedEndlessScene)) {
+            id = id + 1;
+            if (Config.endlessMode.sceneList[id] === undefined) {
+                id = 0;
+            }
+        }
+        DataMgr.set(DataMgr.selectedEndlessScene, id);
     }
 }
