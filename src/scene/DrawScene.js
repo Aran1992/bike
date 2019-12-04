@@ -4,9 +4,11 @@ import Utils from "../mgr/Utils";
 import DataMgr from "../mgr/DataMgr";
 import BikeSprite from "../item/BikeSprite";
 import MusicMgr from "../mgr/MusicMgr";
+import EventMgr from "../mgr/EventMgr";
 
 export default class DrawScene extends Scene {
     onCreate() {
+        EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
         this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
@@ -24,8 +26,7 @@ export default class DrawScene extends Scene {
         this.onTick();
         this.ui.distanceText.text = `${Math.floor(DataMgr.get(DataMgr.rankDistance, 0))}m`;
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
-        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
-        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
+        this.onRefreshRankData();
     }
 
     onHide() {
@@ -33,6 +34,11 @@ export default class DrawScene extends Scene {
             MusicMgr.stopLoopSound(this.drawSound);
             this.drawSound = undefined;
         }
+    }
+
+    onRefreshRankData() {
+        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
     }
 
     onClickReturnButton() {
@@ -117,10 +123,24 @@ export default class DrawScene extends Scene {
 
         this.ballImage.visible = false;
 
-        let index = Utils.randomWithWeight(Config.bikeList.map(item => item.weight));
-        let id = Config.bikeList[index].id;
-        let {levelUp, highestLevel} = DataMgr.plusBike(id);
-        App.showScene("BikeDetailScene", id, levelUp, highestLevel);
+        let index = Utils.randomWithWeight(Config.drawWeightList.map(item => item.weight));
+        let reward = Config.drawWeightList[index];
+        switch (reward.type) {
+            case "bike": {
+                const id = reward.id;
+                let {levelUp, highestLevel} = DataMgr.plusBike(id);
+                App.showScene("BikeDetailScene", id, levelUp, highestLevel);
+                break;
+            }
+            case "coin": {
+                App.showScene("PrizeScene", [{rewardCoin: reward.number}]);
+                break;
+            }
+            case "diamond": {
+                App.showScene("PrizeScene", [{rewardDiamond: reward.number}]);
+                break;
+            }
+        }
 
         this.onTick();
     }

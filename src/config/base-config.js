@@ -256,4 +256,6 @@ Config.loadingImagePathList = [
 
 Config.i18nPath = "dist/i18n.json";
 
+Config.starCount = 3;
+
 export default Config;
