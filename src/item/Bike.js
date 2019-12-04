@@ -599,6 +599,10 @@ export default class Bike {
                     this.jumpForce.increaseValueByRate(-Config.effect.PowerJump.rate);
                 },
             },
+            Invincible: {
+                start: () => {
+                }
+            }
         };
     }
 

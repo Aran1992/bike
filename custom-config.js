@@ -8000,6 +8000,11 @@ Config.item = {
                 portable: 1,
                 effect: "Random",
             },
+            // 无敌道具
+            666: {
+                portable: 0,
+                effect: "Invincible",
+            }
         }
     },
 };
@@ -8225,7 +8230,26 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff1041.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0041.mp3",
-    }
+    },
+    // 无敌
+    Invincible: {
+        // 持续时间（单位：秒）
+        duration: 3,
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
+        // 变大倍数
+        scale: 2,
+        // 闪烁间隔（单位：秒）
+        twinkleInterval: 0.5,
+        // 道具栏显示的道具图标
+        imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
+        // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
+        // 持续效果ICON路径
+        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_01.png",
+        // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
+        sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
+    },
 };
 
 // 排行榜分数（按照1/2/3/4名往下配置）
@@ -10775,6 +10799,7 @@ Config.gameLevelMode = {
     ],
 };
 
+// 抽奖相关配置
 Config.drawWeightList = [
     {
         "type": "bike",
@@ -10937,18 +10962,27 @@ Config.drawWeightList = [
         "weight": 2
     },
     {
+        // 自行车奖励
         "type": "bike",
+        // 自行车ID
         "id": 25,
+        // 随机权重
         "weight": 2
     },
     {
+        // 金币奖励
         "type": "coin",
+        // 数量
         "number": 1000,
+        // 随机权重
         "weight": 200
     },
     {
+        // 钻石奖励
         "type": "diamond",
+        // 数量
         "number": 1000,
+        // 随机权重
         "weight": 200
     },
 ];
