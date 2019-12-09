@@ -6148,16 +6148,21 @@ Config.rebornFloatVelocity = 10;
 // 自行车列表 自行车在列表里面的排序就是在界面上显示的顺序
 Config.bikeList = [
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 0,
+        // 覆盖其上的图片路径
         "imagePath": "",
+        // 缩放倍数
         "scale": [
             0,
             0
         ],
+        // 图片的锚点
         "anchor": [
             0.5,
             0.5
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6165,8 +6170,11 @@ Config.bikeList = [
         "index": 1,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6175,6 +6183,7 @@ Config.bikeList = [
             12,
             10
         ],
+        // 结算金币倍率（不填的话就使用默认值）
         "coinPercent": [
             1,
             1.05,
@@ -6198,6 +6207,7 @@ Config.bikeList = [
             1.95,
             2
         ],
+        // 结算里程倍率（不填的话就使用默认值）
         "distancePercent": [
             1,
             1.05,
@@ -6221,6 +6231,7 @@ Config.bikeList = [
             1.95,
             2
         ],
+        // 结算积分倍率（不填的话就使用默认值）
         "scorePercent": [
             1,
             1.05,
@@ -6246,16 +6257,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 1,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike1.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.63,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6263,8 +6279,11 @@ Config.bikeList = [
         "index": 2,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6275,16 +6294,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 4,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike4.png",
+        // 缩放倍数
         "scale": [
             0.4,
             0.4
         ],
+        // 图片的锚点
         "anchor": [
             0.62,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6292,8 +6316,11 @@ Config.bikeList = [
         "index": 3,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6304,16 +6331,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 11,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike11.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.6,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6321,8 +6353,11 @@ Config.bikeList = [
         "index": 8,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6333,16 +6368,21 @@ Config.bikeList = [
         ]
     },
     {
+       // 自行车ID 必须要和别的自行车不一样
         "id": 13,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike13.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             1,
             0.5
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6350,8 +6390,11 @@ Config.bikeList = [
         "index": 5,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6362,16 +6405,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 15,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike15.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+      // 图片的锚点
         "anchor": [
             0.5,
             0.8
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6379,8 +6427,11 @@ Config.bikeList = [
         "index": 6,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6391,16 +6442,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 2,
+       // 覆盖其上的图片路径
         "imagePath": "images/bike/bike2.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.63,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6408,8 +6464,11 @@ Config.bikeList = [
         "index": 7,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.9,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6420,16 +6479,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 5,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike5.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.63,
             0.7
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6437,8 +6501,11 @@ Config.bikeList = [
         "index": 8,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.9,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6449,16 +6516,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 6,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike6.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+       // 图片的锚点
         "anchor": [
             0.63,
             0.7
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6466,8 +6538,11 @@ Config.bikeList = [
         "index": 9,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.9,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6478,16 +6553,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 20,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike20.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.5,
             0.6
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6495,8 +6575,11 @@ Config.bikeList = [
         "index": 10,
         "highJump": "Normal",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.09,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6507,16 +6590,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 8,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike8.png",
+        // 缩放倍数
         "scale": [
             0.45,
             0.45
         ],
+        // 图片的锚点
         "anchor": [
             0.5,
             0.5
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6524,8 +6612,11 @@ Config.bikeList = [
         "index": 11,
         "highJump": "Normal",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.09,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6536,16 +6627,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 41,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike41.png",
+        // 缩放倍数
         "scale": [
             0.4,
             0.4
         ],
+        // 图片的锚点
         "anchor": [
             0.45,
             0.68
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6553,8 +6649,11 @@ Config.bikeList = [
         "index": 12,
         "highJump": "Normal",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.2,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.09,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6565,16 +6664,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 21,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike21.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.5,
             0.86
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6582,8 +6686,11 @@ Config.bikeList = [
         "index": 13,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.8,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6594,16 +6701,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 22,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike22.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.48,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6611,8 +6723,11 @@ Config.bikeList = [
         "index": 14,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.8,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6623,16 +6738,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 23,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike23.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.77,
             0.7
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6640,8 +6760,11 @@ Config.bikeList = [
         "index": 15,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.8,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -6652,16 +6775,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 7,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike7.png",
+        // 缩放倍数
         "scale": [
             0.4,
             0.4
         ],
+        // 图片的锚点
         "anchor": [
             0.63,
             0.7
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6669,8 +6797,11 @@ Config.bikeList = [
         "index": 16,
         "highJump": "Easy",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             22,
             20,
@@ -6681,16 +6812,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 42,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike42.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.28,
             1.1
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6698,8 +6834,11 @@ Config.bikeList = [
         "index": 17,
         "highJump": "Easy",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             22,
             20,
@@ -6710,16 +6849,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 43,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike43.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.46,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6727,8 +6871,11 @@ Config.bikeList = [
         "index": 18,
         "highJump": "Easy",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 0.8,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             22,
             20,
@@ -6739,16 +6886,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 51,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike51.png",
+        // 缩放倍数
         "scale": [
             0.35,
             0.35
         ],
+        // 图片的锚点
         "anchor": [
             0.71,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6756,8 +6908,11 @@ Config.bikeList = [
         "index": 19,
         "highJump": "Hard",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.8,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -6768,16 +6923,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 53,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike53.png",
+        // 缩放倍数
         "scale": [
             0.35,
             0.35
         ],
+        // 图片的锚点
         "anchor": [
             0.71,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6785,8 +6945,11 @@ Config.bikeList = [
         "index": 20,
         "highJump": "Hard",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.8,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -6797,16 +6960,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 54,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike54.png",
+        // 缩放倍数
         "scale": [
             0.35,
             0.35
         ],
+        // 图片的锚点
         "anchor": [
             0.71,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6814,8 +6982,11 @@ Config.bikeList = [
         "index": 21,
         "highJump": "Hard",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 0.8,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -6826,16 +6997,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 19,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike19.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.5,
             1.25
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6843,8 +7019,11 @@ Config.bikeList = [
         "index": 22,
         "highJump": "Easy",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             22,
             20,
@@ -6855,16 +7034,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 10,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike10.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.71,
             0.65
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6872,8 +7056,11 @@ Config.bikeList = [
         "index": 23,
         "highJump": "Easy",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             22,
             20,
@@ -6884,16 +7071,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 12,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike12.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.71,
             0.6
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6901,8 +7093,11 @@ Config.bikeList = [
         "index": 24,
         "highJump": "Easy",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.1,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             22,
             20,
@@ -6913,16 +7108,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 9,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike9.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.45,
             0.35
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6930,8 +7130,11 @@ Config.bikeList = [
         "index": 25,
         "highJump": "Hard",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.3,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -6942,16 +7145,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 24,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike24.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.55,
             0.3
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6959,8 +7167,11 @@ Config.bikeList = [
         "index": 26,
         "highJump": "Hard",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.3,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -6971,16 +7182,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 18,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike18.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.5,
             0.6
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -6988,8 +7204,11 @@ Config.bikeList = [
         "index": 27,
         "highJump": "Hard",
         "size": "Middle",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.3,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -7000,16 +7219,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 14,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike14.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             1.05,
             1.08
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -7017,8 +7241,11 @@ Config.bikeList = [
         "index": 28,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.3,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -7029,16 +7256,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 16,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike16.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.59,
             0.71
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -7046,8 +7278,11 @@ Config.bikeList = [
         "index": 29,
         "highJump": "Normal",
         "size": "Big",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.3,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -7058,16 +7293,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 17,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike17.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.69,
             0.8
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -7075,8 +7315,11 @@ Config.bikeList = [
         "index": 30,
         "highJump": "Normal",
         "size": "Small",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.3,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             20,
             18,
@@ -7087,16 +7330,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 3,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike3.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.52,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -7104,8 +7352,11 @@ Config.bikeList = [
         "index": 31,
         "highJump": "Hard",
         "size": "Big",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.5,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -7116,16 +7367,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 52,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike52.png",
+        // 缩放倍数
         "scale": [
             0.35,
             0.35
         ],
+        // 图片的锚点
         "anchor": [
             0.71,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -7133,8 +7389,11 @@ Config.bikeList = [
         "index": 32,
         "highJump": "Hard",
         "size": "Big",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.5,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -7145,16 +7404,21 @@ Config.bikeList = [
         ]
     },
     {
+        // 自行车ID 必须要和别的自行车不一样
         "id": 25,
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike25.png",
+        // 缩放倍数
         "scale": [
             0.5,
             0.5
         ],
+        // 图片的锚点
         "anchor": [
             0.6,
             0.73
         ],
+        // 图片在自行车内的位置 (0,0)就是在中心点
         "position": [
             0,
             0
@@ -7162,8 +7426,11 @@ Config.bikeList = [
         "index": 33,
         "highJump": "Hard",
         "size": "Big",
+        // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1.5,
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
         "densityPercent": 1.2,
+        // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
             18,
             16,
@@ -10973,7 +11240,7 @@ Config.drawWeightList = [
         // 金币奖励
         "type": "coin",
         // 数量
-        "number": 1000,
+        "number": 5000,
         // 随机权重
         "weight": 200
     },
@@ -10981,7 +11248,7 @@ Config.drawWeightList = [
         // 钻石奖励
         "type": "diamond",
         // 数量
-        "number": 1000,
+        "number": 100,
         // 随机权重
         "weight": 200
     },
