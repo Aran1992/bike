@@ -40,14 +40,27 @@ export default class FireBall extends EditorItem {
             this.body.setKinematic();
             this.body.setLinearVelocity(Vec2(this.config.velocity, 0));
         }
+
+        if (this.contactedByInvincible) {
+            this.gameMgr.removeItem(this);
+        }
     }
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            this.gameMgr.setContactFatalEdge(true);
+            if (this.gameMgr.hasEffect("Invincible")) {
+                this.contactedByInvincible = true;
+            } else {
+                this.gameMgr.setContactFatalEdge(true);
+            }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
-                anotherFixture.getBody().getUserData().setContactFatalEdge(true);
+            const enemy = anotherFixture.getBody().getUserData();
+            if (enemy.hasEffect("Invincible")) {
+                this.contactedByInvincible = true;
+            } else {
+                if (enemy.selfFixture === anotherFixture) {
+                    enemy.setContactFatalEdge(true);
+                }
             }
         }
     }

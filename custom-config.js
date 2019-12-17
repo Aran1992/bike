@@ -6368,7 +6368,7 @@ Config.bikeList = [
         ]
     },
     {
-       // 自行车ID 必须要和别的自行车不一样
+        // 自行车ID 必须要和别的自行车不一样
         "id": 13,
         // 覆盖其上的图片路径
         "imagePath": "images/bike/bike13.png",
@@ -6414,7 +6414,7 @@ Config.bikeList = [
             0.5,
             0.5
         ],
-      // 图片的锚点
+        // 图片的锚点
         "anchor": [
             0.5,
             0.8
@@ -6444,7 +6444,7 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 2,
-       // 覆盖其上的图片路径
+        // 覆盖其上的图片路径
         "imagePath": "images/bike/bike2.png",
         // 缩放倍数
         "scale": [
@@ -6525,7 +6525,7 @@ Config.bikeList = [
             0.5,
             0.5
         ],
-       // 图片的锚点
+        // 图片的锚点
         "anchor": [
             0.63,
             0.7
@@ -8282,12 +8282,12 @@ Config.effect = {
     // 金币
     GoldCoin: {
         // 是否有益（1为有益，0为陷阱/害人）
-        isHelpful: 0,
+        isHelpful: 1,
     },
     // 星星
     Star: {
         // 是否有益（1为有益，0为陷阱/害人）
-        isHelpful: 0,
+        isHelpful: 1,
     },
     // 减速（可做：害人减速道具、减速物件区域、减速带）
     Decelerate: {
@@ -8501,13 +8501,15 @@ Config.effect = {
     // 无敌
     Invincible: {
         // 持续时间（单位：秒）
-        duration: 3,
+        duration: 100,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 变大倍数
         scale: 2,
-        // 闪烁间隔（单位：秒）
-        twinkleInterval: 0.5,
+        // 闪烁间隔（单位：帧）
+        twinkleInterval: 30,
+        // 闪烁透明度（0-1，越低的话越透明）
+        twinkleAlpha: 0.5,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）

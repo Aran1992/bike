@@ -8,6 +8,9 @@ import EventMgr from "../mgr/EventMgr";
 import BananaPeel from "./BananaPeel";
 import BikeEffect from "./BikeEffect";
 import Value from "./Value";
+import GroundStab from "./GroundStab";
+import SmallFireWall from "./SmallFireWall";
+import BigFireWall from "./BigFireWall";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -87,7 +90,7 @@ export default class Bike {
         this.bikeHeadImage.position.set(0, Config.bike.enemyHeadImage.positionY);
 
         this.bikeBody = this.world.createDynamicBody();
-        let density = Config.bikeDensity * (config.densityPercent || 1);
+        let density = Config.bikeDensity * (config.densityPercent || Config.bikeDensity);
         this.selfFixture = this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1});
         this.bikeBody.setUserData(this);
         if (config.velocityPercent) {
@@ -158,6 +161,10 @@ export default class Bike {
                     contact.setEnabled(false);
                 }
             }
+            let ud = anotherFixture.getUserData();
+            if (this.hasEffect("Invincible") && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
+                contact.setEnabled(false);
+            }
         }
     }
 
@@ -186,7 +193,9 @@ export default class Bike {
                 this.setContactFatalEdge(true);
             } else {
                 if (ud && ud.isFatal) {
-                    this.setContactFatalEdge(true);
+                    if (!this.hasEffect("Invincible")) {
+                        this.setContactFatalEdge(true);
+                    }
                     ud = anotherFixture.getBody().getUserData();
                     if (ud && ud.thrower) {
                         EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaPeel");
@@ -197,6 +206,10 @@ export default class Bike {
     }
 
     update() {
+        if (this.eatEffect) {
+            this.startEffect(this.eatEffect);
+            delete this.eatEffect;
+        }
         this.frameIndex++;
         if (this.frameIndex >= this.frames.length) {
             this.frameIndex = 0;
@@ -293,7 +306,7 @@ export default class Bike {
         }
         this.isGoToJump = false;
 
-        this.reduceEffect();
+        this.updateEffect();
         this.jumpExtraCountdown--;
         this.updateBuffIcon();
         this.effectList.forEach(effect => effect.update());
@@ -490,16 +503,24 @@ export default class Bike {
                 this.portableItemList.push(effect);
                 break;
             }
-            case "GoldCoin": {
+            case "GoldCoin":
+            case "Star": {
                 break;
             }
             case "Thunder": {
-                this.setContactFatalEdge(true);
+                if (!this.hasEffect("Invincible")) {
+                    this.setContactFatalEdge(true);
+                }
                 this.gameScene.addEffect(this, Config.effect.Thunder.bearerSufferedEffectPath);
                 break;
             }
-            default:
-                this.startEffect(type);
+            default: {
+                const effectConfig = Config.effect[type];
+                if (this.hasEffect("Invincible") && effectConfig && !effectConfig.isHelpful) {
+                    return;
+                }
+                this.eatEffect = type;
+            }
         }
     }
 
@@ -533,7 +554,7 @@ export default class Bike {
         this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
     }
 
-    reduceEffect() {
+    updateEffect() {
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
                 this.effectRemainFrame[type]--;
@@ -547,6 +568,10 @@ export default class Bike {
                         this.durationEffectTable[type].destroy();
                         delete this.durationEffectTable[type];
                     }
+                }
+            } else {
+                if (this.effectTable[type] && this.effectTable[type].update) {
+                    this.effectTable[type].update();
                 }
             }
         }
@@ -589,7 +614,10 @@ export default class Bike {
                 },
                 cover: () => {
                     this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
-                }
+                },
+                end: () => {
+                    this.spiderWebRemainBreakTimes = 0;
+                },
             },
             PowerJump: {
                 start: () => {
@@ -601,9 +629,32 @@ export default class Bike {
             },
             Invincible: {
                 start: () => {
-                }
-            }
+                    this.setBikeScale(Config.effect.Invincible.scale);
+                    this.removeAllEffects(true);
+                },
+                end: () => {
+                    this.setBikeScale(1);
+                    this.bikeSprite.alpha = 1;
+                },
+                update: () => {
+                    const light = Math.floor(this.effectRemainFrame.Invincible / Config.effect.Invincible.twinkleInterval) % 2 === 0;
+                    this.bikeSprite.alpha = light ? 1 : Config.effect.Invincible.twinkleAlpha;
+                },
+            },
         };
+    }
+
+    setBikeScale(scale) {
+        // todo 同时修改ai探测器？
+        let id = this.id;
+        let config = Config.bikeList.find(config => config.id === id);
+        let density = Config.bikeDensity * (config.densityPercent || Config.bikeDensity) / scale / scale;
+        let radius = Config.bikeRadius * scale;
+        this.bikeSprite.scale.set(scale, scale);
+        if (this.selfFixture) {
+            this.bikeBody.destroyFixture(this.selfFixture);
+        }
+        this.selfFixture = this.bikeBody.createFixture(Circle(radius), {density: density, friction: 1});
     }
 
     calcJumpRadius(vx, vy, a) {
@@ -619,8 +670,12 @@ export default class Bike {
 
         this.setContactFatalEdge(false);
 
+        this.removeAllEffects();
+    }
+
+    removeAllEffects(onlyHarmful) {
         for (let type in this.effectRemainFrame) {
-            if (this.effectRemainFrame.hasOwnProperty(type)) {
+            if (this.effectRemainFrame.hasOwnProperty(type) && (onlyHarmful ? !Config.effect[type].isHelpful : true)) {
                 delete this.effectRemainFrame[type];
                 if (this.effectTable[type] && this.effectTable[type].end) {
                     this.effectTable[type].end();
@@ -629,7 +684,7 @@ export default class Bike {
             }
         }
         for (let type in this.durationEffectTable) {
-            if (this.durationEffectTable.hasOwnProperty(type)) {
+            if (this.durationEffectTable.hasOwnProperty(type) && (onlyHarmful ? !Config.effect[type].isHelpful : true)) {
                 this.durationEffectTable[type].destroy();
                 delete this.durationEffectTable[type];
             }

@@ -351,6 +351,10 @@ export default class GameScene extends Scene {
                             contact.setEnabled(false);
                         }
                     }
+                    let ud = anotherFixture.getUserData();
+                    if (this.hasEffect("Invincible") && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
+                        contact.setEnabled(false);
+                    }
                 },
                 beginContact(contact, anotherFixture,) {
                     let item = anotherFixture.getBody().getUserData();
@@ -366,7 +370,9 @@ export default class GameScene extends Scene {
                     } else {
                         let ud = anotherFixture.getUserData();
                         if (ud && ud.isFatal) {
-                            this.setContactFatalEdge(true);
+                            if (!this.hasEffect("Invincible")) {
+                                this.setContactFatalEdge(true);
+                            }
                             ud = anotherFixture.getBody().getUserData();
                             if (ud && ud.thrower) {
                                 EventMgr.dispatchEvent("UseItem", ud.thrower, this, "BananaPeel");
@@ -415,6 +421,10 @@ export default class GameScene extends Scene {
                         || (this.chtable.enemy.is(anotherFixture) && anotherFixture.getBody().getUserData().selfFixture === anotherFixture)) {
                         let bikeBody = anotherFixture.getBody();
                         let bike = bikeBody.getUserData();
+                        if (bike.hasEffect("Invincible")) {
+                            bird.contactedByInvincible = true;
+                            return;
+                        }
                         if (bikeBody.getPosition().y < bird.body.getPosition().y) {
                             bike.setContactFatalEdge(true);
                         } else {
@@ -625,13 +635,20 @@ export default class GameScene extends Scene {
                 break;
             }
             case "Thunder": {
-                this.setContactFatalEdge(true);
+                if (!this.hasEffect("Invincible")) {
+                    this.setContactFatalEdge(true);
+                }
                 MusicMgr.playSound(Config.effect.Thunder.sufferSound);
                 this.addEffect(this, Config.effect.Thunder.bearerSufferedEffectPath);
                 break;
             }
-            default:
-                this.startEffect(type);
+            default: {
+                const effectConfig = Config.effect[type];
+                if (this.hasEffect("Invincible") && effectConfig && !effectConfig.isHelpful) {
+                    return;
+                }
+                this.eatEffect = type;
+            }
         }
     }
 
@@ -818,12 +835,7 @@ export default class GameScene extends Scene {
         if (config.velocityPercent) {
             this.player.velocity.setBasicValue(this.bikeCommonVelocity * config.velocityPercent);
         }
-        let density;
-        if (config.densityPercent) {
-            density = Config.bikeDensity * config.densityPercent;
-        } else {
-            density = Config.bikeDensity;
-        }
+        let density = Config.bikeDensity * (config.densityPercent || Config.bikeDensity);
 
         let bubbleTexture = resources[Config.imagePath.bubble].texture;
         this.bikeBubbleSprite = this.bikeOutterContainer.addChild(new Sprite(bubbleTexture));
@@ -847,7 +859,7 @@ export default class GameScene extends Scene {
 
         this.bikeBody = this.world.createDynamicBody();
         this.bikeBody.setUserData(this);
-        this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1,});
+        this.bikeFixture = this.bikeBody.createFixture(Circle(Config.bikeRadius), {density: density, friction: 1,});
         this.bikeBody.setPosition(pp);
         this.bikeBody.setLinearVelocity(Vec2(this.player.velocity.value, 0));
 
@@ -887,9 +899,9 @@ export default class GameScene extends Scene {
         this.removeAllEffects();
     }
 
-    removeAllEffects() {
+    removeAllEffects(onlyHarmful) {
         for (let type in this.effectRemainFrame) {
-            if (this.effectRemainFrame.hasOwnProperty(type)) {
+            if (this.effectRemainFrame.hasOwnProperty(type) && (onlyHarmful ? !Config.effect[type].isHelpful : true)) {
                 delete this.effectRemainFrame[type];
                 if (this.effectTable[type] && this.effectTable[type].end) {
                     this.effectTable[type].end();
@@ -898,7 +910,7 @@ export default class GameScene extends Scene {
             }
         }
         for (let type in this.durationEffectTable) {
-            if (this.durationEffectTable.hasOwnProperty(type)) {
+            if (this.durationEffectTable.hasOwnProperty(type) && (onlyHarmful ? !Config.effect[type].isHelpful : true)) {
                 this.durationEffectTable[type].destroy();
                 delete this.durationEffectTable[type];
             }
@@ -910,6 +922,11 @@ export default class GameScene extends Scene {
     }
 
     play(delta) {
+        if (this.eatEffect) {
+            this.startEffect(this.eatEffect);
+            delete this.eatEffect;
+        }
+
         if (this.fpsText) {
             this.fpsText.text = `FPS:${Math.floor(delta * Config.fps)}`;
         }
@@ -969,7 +986,7 @@ export default class GameScene extends Scene {
             this.keepEnemyMove();
         }
 
-        this.reduceEffect();
+        this.updateEffect();
         this.jumpExtraCountdown--;
         this.updateBuffIcon();
         this.effectList.forEach(effect => effect.update());
@@ -1214,28 +1231,31 @@ export default class GameScene extends Scene {
     }
 
     keepBirdMove() {
-        this.birdList.forEach(bird => {
-            if (bird.isDead) {
-                return;
+        for (let i = 0; i < this.birdList.length; i++) {
+            let bird = this.birdList[i];
+            if (bird.contactedByInvincible) {
+                this.removeItem(bird);
+                this.birdList.splice(i, 1);
+                i--;
+            } else if (!bird.isDead) {
+                let rp = bird.sprite.position;
+                if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
+                    if (!bird.showed) {
+                        bird.showed = true;
+                        bird.createBody();
+                    }
+                    if (!bird.upDown) {
+                        bird.body.setLinearVelocity(Vec2(-20, bird.body.getLinearVelocity().y));
+                    }
+                    let gravity = -2.5 * this.gravity;
+                    if (bird.body.getPosition().y < bird.baseY) {
+                        bird.body.applyForceToCenter(Vec2(0, gravity * 5));
+                    } else {
+                        bird.body.applyForceToCenter(Vec2(0, gravity * 0.75));
+                    }
+                }
             }
-
-            let rp = bird.sprite.position;
-            if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
-                if (!bird.showed) {
-                    bird.showed = true;
-                    bird.createBody();
-                }
-                if (!bird.upDown) {
-                    bird.body.setLinearVelocity(Vec2(-20, bird.body.getLinearVelocity().y));
-                }
-                let gravity = -2.5 * this.gravity;
-                if (bird.body.getPosition().y < bird.baseY) {
-                    bird.body.applyForceToCenter(Vec2(0, gravity * 5));
-                } else {
-                    bird.body.applyForceToCenter(Vec2(0, gravity * 0.75));
-                }
-            }
-        });
+        }
     }
 
     initGameContent() {
@@ -1512,7 +1532,7 @@ export default class GameScene extends Scene {
         this.effectRemainFrame[type] = Config.effect[type].duration * Config.fps;
     }
 
-    reduceEffect() {
+    updateEffect() {
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
                 this.effectRemainFrame[type]--;
@@ -1525,6 +1545,10 @@ export default class GameScene extends Scene {
                     if (this.durationEffectTable[type]) {
                         this.durationEffectTable[type].destroy();
                         delete this.durationEffectTable[type];
+                    }
+                } else {
+                    if (this.effectTable[type] && this.effectTable[type].update) {
+                        this.effectTable[type].update();
                     }
                 }
             }
@@ -1584,6 +1608,9 @@ export default class GameScene extends Scene {
                 cover: () => {
                     this.spiderWebRemainBreakTimes = Config.effect.SpiderWeb.breakTimes;
                 },
+                end: () => {
+                    this.spiderWebRemainBreakTimes = 0;
+                },
             },
             Seal: {
                 start: () => {
@@ -1593,7 +1620,33 @@ export default class GameScene extends Scene {
                     this.ui.sealMask.visible = false;
                 },
             },
+            Invincible: {
+                start: () => {
+                    this.setBikeScale(Config.effect.Invincible.scale);
+                    this.removeAllEffects(true);
+                },
+                end: () => {
+                    this.setBikeScale(1);
+                    this.bikeSprite.alpha = 1;
+                },
+                update: () => {
+                    const light = Math.floor(this.effectRemainFrame.Invincible / Config.effect.Invincible.twinkleInterval) % 2 === 0;
+                    this.bikeSprite.alpha = light ? 1 : Config.effect.Invincible.twinkleAlpha;
+                },
+            },
         };
+    }
+
+    setBikeScale(scale) {
+        let id = this.getBikeID();
+        let config = Config.bikeList.find(config => config.id === id);
+        let density = Config.bikeDensity * (config.densityPercent || Config.bikeDensity) / scale / scale;
+        let radius = Config.bikeRadius * scale;
+        this.bikeSprite.scale.set(scale, scale);
+        if (this.bikeFixture) {
+            this.bikeBody.destroyFixture(this.bikeFixture);
+        }
+        this.bikeFixture = this.bikeBody.createFixture(Circle(radius), {density: density, friction: 1});
     }
 
     hasEffect(type) {

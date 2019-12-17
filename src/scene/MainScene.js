@@ -8,6 +8,7 @@ import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
 import GameUtils from "../mgr/GameUtils";
+import RunOption from "../../run-option";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -265,6 +266,9 @@ export default class MainScene extends Scene {
     }
 
     isLockableButtonLocked(item) {
+        if (RunOption.unlockAllSystem) {
+            return false;
+        }
         let [id, ...values] = Config.lockSystems[item.var].condition;
         return !DataMgr.checkCondition(id, ...values);
     }

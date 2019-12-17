@@ -33,6 +33,10 @@ export default class RollingStone extends EditorItem {
             this.body.setDynamic();
             this.body.setAngularVelocity(this.config.angularVelocity);
         }
+
+        if (this.contactedByInvincible) {
+            this.gameMgr.removeItem(this);
+        }
     }
 
     onPreSolve(contact) {
@@ -43,18 +47,26 @@ export default class RollingStone extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            if (this.gameMgr.bikeOutterContainer.y > this.sprite.y) {
-                this.gameMgr.setContactFatalEdge(true);
+            if (this.gameMgr.hasEffect("Invincible")) {
+                this.contactedByInvincible = true;
             } else {
-                this.gameMgr.resetJumpStatus();
+                if (this.gameMgr.bikeOutterContainer.y > this.sprite.y) {
+                    this.gameMgr.setContactFatalEdge(true);
+                } else {
+                    this.gameMgr.resetJumpStatus();
+                }
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             let enemy = anotherFixture.getBody().getUserData();
-            if (enemy.selfFixture === anotherFixture) {
-                if (enemy.bikeOutterContainer.y > this.sprite.y) {
-                    enemy.setContactFatalEdge(true);
-                } else {
-                    enemy.resetJumpStatus();
+            if (enemy.hasEffect("Invincible")) {
+                this.contactedByInvincible = true;
+            } else {
+                if (enemy.selfFixture === anotherFixture) {
+                    if (enemy.bikeOutterContainer.y > this.sprite.y) {
+                        enemy.setContactFatalEdge(true);
+                    } else {
+                        enemy.resetJumpStatus();
+                    }
                 }
             }
         }
