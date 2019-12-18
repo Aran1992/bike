@@ -8202,6 +8202,11 @@ Config.item = {
                 portable: 0,
                 effect: "Magnet",
             },
+            // 增益：无敌
+            131: {
+                portable: 0,
+                effect: "Invincible",
+            },
             // 随机效果（机会命运）（还需要程序支持）
             9999: {
                 portable: 0,
@@ -8262,15 +8267,15 @@ Config.item = {
                 portable: 1,
                 effect: "Magnet",
             },
+            // 增益道具：无敌
+            1310: {
+                portable: 1,
+                effect: "Invincible",
+            },
             // 随机道具
             99990: {
                 portable: 1,
                 effect: "Random",
-            },
-            // 无敌道具
-            666: {
-                portable: 0,
-                effect: "Invincible",
             }
         }
     },
@@ -8501,13 +8506,13 @@ Config.effect = {
     // 无敌
     Invincible: {
         // 持续时间（单位：秒）
-        duration: 100,
+        duration: 3,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 变大倍数
         scale: 2,
         // 闪烁间隔（单位：帧）
-        twinkleInterval: 30,
+        twinkleInterval: 5,
         // 闪烁透明度（0-1，越低的话越透明）
         twinkleAlpha: 0.5,
         // 道具栏显示的道具图标
