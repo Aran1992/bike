@@ -1049,6 +1049,9 @@ Config.bikeScale = 0.4;
 // 自行车物理半径
 Config.bikeRadius = 1.175;
 
+// 自行车超级冲刺物理半径
+Config.bikeSprintRadius = 3;
+
 // 自行车密度
 Config.bikeDensity = 1;
 
