@@ -11,7 +11,7 @@ const RunOption = {
     showBikeState: 0,
     // 镜头跟随敌方自行车（1就跟随 为0就不跟随）
     cameraFollowEnemy: 0,
-    // 是否解除所有系统的限制（1就解除 为0就限制）
+    // 是否解除所有系统的限制（1就解除 为0就限制）（测试用，设置这个之后类似的限制都不会有了）
     unlockAllSystem: 0,
 };
 export default RunOption;
