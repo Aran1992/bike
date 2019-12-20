@@ -48,14 +48,14 @@ export default class FireBall extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            if (this.gameMgr.hasEffect("Invincible")) {
+            if (this.gameMgr.isInvincible()) {
                 this.contactedByInvincible = true;
             } else {
                 this.gameMgr.setContactFatalEdge(true);
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             const enemy = anotherFixture.getBody().getUserData();
-            if (enemy.hasEffect("Invincible")) {
+            if (enemy.isInvincible()) {
                 this.contactedByInvincible = true;
             } else {
                 if (enemy.selfFixture === anotherFixture) {

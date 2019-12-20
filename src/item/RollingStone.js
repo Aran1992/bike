@@ -47,7 +47,7 @@ export default class RollingStone extends EditorItem {
 
     onBeginContact(contact, anotherFixture) {
         if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            if (this.gameMgr.hasEffect("Invincible")) {
+            if (this.gameMgr.isInvincible()) {
                 this.contactedByInvincible = true;
             } else {
                 if (this.gameMgr.bikeOutterContainer.y > this.sprite.y) {
@@ -58,7 +58,7 @@ export default class RollingStone extends EditorItem {
             }
         } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
             let enemy = anotherFixture.getBody().getUserData();
-            if (enemy.hasEffect("Invincible")) {
+            if (enemy.isInvincible()) {
                 this.contactedByInvincible = true;
             } else {
                 if (enemy.selfFixture === anotherFixture) {

@@ -352,7 +352,7 @@ export default class GameScene extends Scene {
                         }
                     }
                     let ud = anotherFixture.getUserData();
-                    if (this.hasEffect("Invincible") && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
+                    if (this.isInvincible() && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
                         contact.setEnabled(false);
                     }
                 },
@@ -370,7 +370,7 @@ export default class GameScene extends Scene {
                     } else {
                         let ud = anotherFixture.getUserData();
                         if (ud && ud.isFatal) {
-                            if (!this.hasEffect("Invincible")) {
+                            if (!this.isInvincible()) {
                                 this.setContactFatalEdge(true);
                             }
                             ud = anotherFixture.getBody().getUserData();
@@ -421,7 +421,7 @@ export default class GameScene extends Scene {
                         || (this.chtable.enemy.is(anotherFixture) && anotherFixture.getBody().getUserData().selfFixture === anotherFixture)) {
                         let bikeBody = anotherFixture.getBody();
                         let bike = bikeBody.getUserData();
-                        if (bike.hasEffect("Invincible")) {
+                        if (bike.isInvincible()) {
                             bird.contactedByInvincible = true;
                             return;
                         }
@@ -534,6 +534,10 @@ export default class GameScene extends Scene {
 
     onClickGameContainer(event) {
         if (this.gameStatus === "play") {
+            // 无敌冲刺期间不能操作
+            if (this.hasEffect("Sprint")) {
+                return;
+            }
             if (this.startFloat) {
                 this.startFloat = false;
                 this.bikeBubbleSprite.visible = false;
@@ -635,7 +639,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "Thunder": {
-                if (!this.hasEffect("Invincible")) {
+                if (!this.isInvincible()) {
                     this.setContactFatalEdge(true);
                 }
                 MusicMgr.playSound(Config.effect.Thunder.sufferSound);
@@ -644,7 +648,7 @@ export default class GameScene extends Scene {
             }
             default: {
                 const effectConfig = Config.effect[type];
-                if (this.hasEffect("Invincible") && effectConfig && !effectConfig.isHelpful) {
+                if (this.isInvincible() && effectConfig && !effectConfig.isHelpful) {
                     return;
                 }
                 this.eatEffect = type;
@@ -1177,6 +1181,31 @@ export default class GameScene extends Scene {
         return lowestRoadTopY;
     }
 
+    findRoadHighestY(viewLeft) {
+        let list = this.roadList;
+        let viewRight = viewLeft + Config.designWidth;
+        let highestPoint;
+        for (let i = 0; i < list.length; i++) {
+            let item = list[i];
+            if (item.getRightBorderX() > viewLeft) {
+                highestPoint = item.getHighestTopPoint();
+                for (i++; i < list.length; i++) {
+                    item = list[i];
+                    if (item.getLeftBorderX() >= viewRight) {
+                        break;
+                    } else {
+                        let point = item.getHighestTopPoint();
+                        if (point.y < highestPoint.y) {
+                            highestPoint = point;
+                        }
+                    }
+                }
+                break;
+            }
+        }
+        return {highestY: highestPoint.y, distance: Config.designWidth};
+    }
+
     findAdjustHeight(viewLeft) {
         let list = this.roadList;
         for (let i = 0; i < list.length; i++) {
@@ -1204,7 +1233,14 @@ export default class GameScene extends Scene {
 
     keepBikeMove(velocity) {
         if (this.gameStatus === "play") {
-            if (this.startFloat) {
+            if (this.hasEffect("Sprint")) {
+                const {highestY, distance} = this.findRoadHighestY(this.bikeOutterContainer.x);
+                const angle = Math.atan((this.bikeOutterContainer.y - (highestY - Config.bikeSprintRadius * Config.meter2pixel)) / distance);
+                let v = Config.effect.Sprint.velocity * Config.pixel2meter;
+                const vx = Math.cos(angle) * v;
+                const vy = Math.sin(angle) * v;
+                this.bikeBody.setLinearVelocity(Vec2(vx, vy));
+            } else if (this.startFloat) {
                 if (this.bikeFloatFrame === 0) {
                     this.startFloat = false;
                     this.stopSounds();
@@ -1634,15 +1670,29 @@ export default class GameScene extends Scene {
                     this.bikeSprite.alpha = light ? 1 : Config.effect.Invincible.twinkleAlpha;
                 },
             },
+            Sprint: {
+                start: () => {
+                    this.setBikeScale(2, true);
+                    this.bikeBody.setKinematic();
+                    this.effectRemainFrame.Magnet = Config.effect.Magnet.duration * Config.fps;
+                    this.resetJumpStatus();
+                },
+                end: () => {
+                    this.setBikeScale(1, true);
+                    this.bikeBody.setDynamic();
+                }
+            },
         };
     }
 
-    setBikeScale(scale) {
+    setBikeScale(scale, onlyChangeFixture) {
         let id = this.getBikeID();
         let config = Config.bikeList.find(config => config.id === id);
         let density = Config.bikeDensity * (config.densityPercent || Config.bikeDensity) / scale / scale;
         let radius = Config.bikeRadius * scale;
-        this.bikeSprite.scale.set(scale, scale);
+        if (!onlyChangeFixture) {
+            this.bikeSprite.scale.set(scale, scale);
+        }
         if (this.bikeFixture) {
             this.bikeBody.destroyFixture(this.bikeFixture);
         }
@@ -1966,6 +2016,10 @@ export default class GameScene extends Scene {
     actionCallback(handler) {
         handler();
         this.onActionEnded();
+    }
+
+    isInvincible() {
+        return this.hasEffect("Invincible") || this.hasEffect("Sprint");
     }
 }
 

@@ -23,7 +23,6 @@ class NetworkMgr_ {
             if (request.readyState === 4) {
                 App.hideMask();
                 if (request.status === 200) {
-                    console.log(url, request.responseText);
                     let data;
                     try {
                         data = JSON.parse(request.responseText);

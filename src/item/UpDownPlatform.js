@@ -41,7 +41,7 @@ export default class UpDownPlatform extends EditorItem {
         // 平台移动到最低点计算出来的bounds
         this.lowestTopY = bounds.y + bounds.height + this.config.bottomOffset;
         // 平台移动到最高点计算出来的bounds
-        this.highestTopY = bounds.y - this.config.topOffset;
+        this.highestTopPoint = {x: this.leftBorderX, y: bounds.y - this.config.topOffset};
     }
 
     update() {
@@ -66,6 +66,10 @@ export default class UpDownPlatform extends EditorItem {
     getLowestTopY() {
         // todo 先简单返回最底部就好
         return this.lowestTopY;
+    }
+
+    getHighestTopPoint() {
+        return this.highestTopPoint;
     }
 
     getTopPosInTargetX(x) {

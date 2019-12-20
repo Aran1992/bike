@@ -14,6 +14,8 @@ let Config = {
     bikeScale: 0.25,
     // 自行车物理半径
     bikeRadius: 0.734375,
+    // 自行车超级无敌冲刺半径
+    bikeSprintRadius: 1.5,
     // 自行车密度
     bikeDensity: 1,
     // 自行车跳跃的时候的旋转角度 顺时针旋转是正数

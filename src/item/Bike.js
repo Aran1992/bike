@@ -162,7 +162,7 @@ export default class Bike {
                 }
             }
             let ud = anotherFixture.getUserData();
-            if (this.hasEffect("Invincible") && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
+            if (this.isInvincible() && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
                 contact.setEnabled(false);
             }
         }
@@ -193,7 +193,7 @@ export default class Bike {
                 this.setContactFatalEdge(true);
             } else {
                 if (ud && ud.isFatal) {
-                    if (!this.hasEffect("Invincible")) {
+                    if (!this.isInvincible()) {
                         this.setContactFatalEdge(true);
                     }
                     ud = anotherFixture.getBody().getUserData();
@@ -508,7 +508,7 @@ export default class Bike {
                 break;
             }
             case "Thunder": {
-                if (!this.hasEffect("Invincible")) {
+                if (!this.isInvincible()) {
                     this.setContactFatalEdge(true);
                 }
                 this.gameScene.addEffect(this, Config.effect.Thunder.bearerSufferedEffectPath);
@@ -516,7 +516,7 @@ export default class Bike {
             }
             default: {
                 const effectConfig = Config.effect[type];
-                if (this.hasEffect("Invincible") && effectConfig && !effectConfig.isHelpful) {
+                if (this.isInvincible() && effectConfig && !effectConfig.isHelpful) {
                     return;
                 }
                 this.eatEffect = type;
@@ -780,5 +780,9 @@ export default class Bike {
         if (!this.startFloat) {
             this.isContactFatalEdge = flag;
         }
+    }
+
+    isInvincible() {
+        return this.hasEffect("Invincible") || this.hasEffect("Sprint");
     }
 }

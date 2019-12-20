@@ -20,6 +20,12 @@ export default class Road {
             }
             return max;
         }, path[1]);
+        this.highestTopPoint = path.reduce((minPoint, y, i) => {
+            if (i % 2 === 1 && y < minPoint.y) {
+                return {x: path[i - 1], y: path[i]};
+            }
+            return minPoint;
+        }, {x: path[0], y: path[1]});
 
         let maxY = path[1];
         for (let i = 1; i < path.length; i += 2) {
@@ -45,6 +51,19 @@ export default class Road {
         this.sprite.cacheAsBitmap = true;
         this.sprite.position.set(rect.x, rect.y);
         this.createPhysicsBody(world, path);
+    }
+
+    static isFatalEdge(sp, ep) {
+        let x, y;
+        if (sp.y > ep.y) {
+            y = sp.y - ep.y;
+            x = sp.x - ep.x;
+        } else {
+            y = ep.y - sp.y;
+            x = ep.x - sp.x;
+        }
+        let angle = Math.atan(y / x);
+        return Config.fatalEdgeAngleRange[0] <= angle && angle <= Config.fatalEdgeAngleRange[1];
     }
 
     createSide(texturePath, width, height) {
@@ -138,19 +157,6 @@ export default class Road {
         }
     }
 
-    static isFatalEdge(sp, ep) {
-        let x, y;
-        if (sp.y > ep.y) {
-            y = sp.y - ep.y;
-            x = sp.x - ep.x;
-        } else {
-            y = ep.y - sp.y;
-            x = ep.x - sp.x;
-        }
-        let angle = Math.atan(y / x);
-        return Config.fatalEdgeAngleRange[0] <= angle && angle <= Config.fatalEdgeAngleRange[1];
-    }
-
     getRightBorderX() {
         return this.rect.x + this.rect.width;
     }
@@ -169,6 +175,10 @@ export default class Road {
 
     getLowestTopY() {
         return this.lowestTopY;
+    }
+
+    getHighestTopPoint() {
+        return this.highestTopPoint;
     }
 
     getLeftTopPoint() {

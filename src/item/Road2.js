@@ -43,6 +43,12 @@ export default class Road2 {
             }
             return max;
         }, this.config.path[1]);
+        this.highestTopPoint = this.config.path.reduce((minPoint, y, i) => {
+            if (i % 2 === 1 && y < minPoint.y) {
+                return {x: this.config.path[i - 1], y: this.config.path[i]};
+            }
+            return minPoint;
+        }, {x: this.config.path[0], y: this.config.path[1]});
         this.leftTopPoint = {x: this.config.path[0], y: this.config.path[1]};
 
         let pathInRoad = this.config.path.map((p, i) => i % 2 === 0 ? p - rect.x : p - rect.y);
@@ -116,6 +122,10 @@ export default class Road2 {
 
     getLowestTopY() {
         return this.lowestTopY;
+    }
+
+    getHighestTopPoint() {
+        return this.highestTopPoint;
     }
 
     getLeftTopPoint() {
