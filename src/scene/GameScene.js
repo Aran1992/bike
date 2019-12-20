@@ -1237,9 +1237,8 @@ export default class GameScene extends Scene {
                 const {highestY, distance} = this.findRoadHighestY(this.bikeOutterContainer.x);
                 const angle = Math.atan((this.bikeOutterContainer.y - (highestY - Config.bikeSprintRadius * Config.meter2pixel)) / distance);
                 let v = Config.effect.Sprint.velocity * Config.pixel2meter;
-                const vx = Math.cos(angle) * v;
-                const vy = Math.sin(angle) * v;
-                this.bikeBody.setLinearVelocity(Vec2(vx, vy));
+                const vy = Math.tan(angle) * v;
+                this.bikeBody.setLinearVelocity(Vec2(v, vy));
             } else if (this.startFloat) {
                 if (this.bikeFloatFrame === 0) {
                     this.startFloat = false;
