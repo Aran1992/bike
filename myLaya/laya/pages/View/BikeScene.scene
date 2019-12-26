@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":21,
-    "selecteID":22,
+    "selectedBox":15,
+    "selecteID":68,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":162,
+    "maxID":163,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -46,7 +46,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":615,"top":125,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","centerX":0,"bottom":10},
+            "props":{"top":70,"skin":"images/bg-main-scene-11.png","centerX":0,"bottom":-50},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -59,7 +59,7 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"width":560,"var":"list","top":20,"centerX":0,"bottom":330},
+                    "props":{"width":560,"var":"list","top":70,"centerX":0,"bottom":330},
                     "nodeParent":15,
                     "label":"list",
                     "isOpen":false,
@@ -94,8 +94,23 @@
                                     "child":[
                                         {
                                             "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"width":150,"skin":"images/bg-31.png","height":150,"centerY":0,"centerX":0},
+                                            "nodeParent":20,
+                                            "label":"Image",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":162,
+                                            "child":[
+                                                ],
+                                            "$HIDDEN":false
+                                        },
+                                        {
+                                            "type":"Image",
                                             "searchKey":"Image,selectedImage",
-                                            "props":{"skin":"images/bg-selected-bike.png","name":"selectedImage","centerY":0,"centerX":0},
+                                            "props":{"width":150,"skin":"images/bg-32.png","name":"selectedImage","height":150,"centerY":0,"centerX":0},
                                             "nodeParent":20,
                                             "label":"selectedImage",
                                             "isOpen":true,
@@ -110,7 +125,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,lostMaskImage",
-                                            "props":{"width":150,"skin":"images/bg-2.png","sizeGrid":"20,20,20,20","name":"lostMaskImage","height":150,"centerY":0,"centerX":0,"alpha":0.5},
+                                            "props":{"width":150,"name":"lostMaskImage","height":150,"centerY":0,"centerX":0,"alpha":0.5},
                                             "nodeParent":20,
                                             "label":"lostMaskImage",
                                             "isOpen":true,
@@ -125,7 +140,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,fightMaskImage",
-                                            "props":{"y":0,"x":0,"top":0,"skin":"images/english/fight.png","name":"fightMaskImage","left":0},
+                                            "props":{"top":4,"skin":"images/english/fight.png","name":"fightMaskImage","left":2},
                                             "nodeParent":20,
                                             "label":"fightMaskImage",
                                             "isOpen":true,
@@ -140,7 +155,7 @@
                                         {
                                             "type":"Label",
                                             "searchKey":"Label,levelText",
-                                            "props":{"top":0,"text":"${LV}","strokeColor":"#000000","stroke":5,"right":0,"name":"levelText","fontSize":25,"color":"#ffffff"},
+                                            "props":{"text":"${LV}","strokeColor":"#000000","stroke":5,"right":20,"name":"levelText","fontSize":25,"color":"#ffffff","bottom":20},
                                             "nodeParent":20,
                                             "label":"levelText",
                                             "isDirectory":false,
@@ -153,7 +168,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,lockedImage",
-                                            "props":{"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                                            "props":{"visible":false,"top":20,"skin":"images/key_lock-2.png","name":"lockedImage","left":20},
                                             "nodeParent":20,
                                             "label":"lockedImage",
                                             "isDirectory":false,
@@ -171,7 +186,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":585,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","height":310,"centerX":0,"bottom":15},
+                    "props":{"skin":"images/bg-main-scene-12.png","height":350,"centerX":0,"bottom":50},
                     "nodeParent":15,
                     "label":"Image",
                     "isOpen":true,
@@ -184,7 +199,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,drawButton",
-                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":13,"height":101,"bottom":39},
+                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":62},
                             "nodeParent":21,
                             "label":"drawButton",
                             "isOpen":true,
@@ -212,7 +227,7 @@
                             "x":45,
                             "type":"Label",
                             "searchKey":"Label,bikeDscText",
-                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":0,"centerX":30},
+                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":10,"centerX":30},
                             "nodeParent":21,
                             "label":"bikeDscText",
                             "isDirectory":false,
@@ -226,7 +241,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":101,"visible":false,"top":60,"skin":"images/skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":13,"height":101},
+                            "props":{"width":101,"visible":false,"top":60,"skin":"images/skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
                             "nodeParent":21,
                             "label":"Image",
                             "isOpen":false,
@@ -258,14 +273,13 @@
                     "props":{"width":585,"visible":false,"top":20,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","centerX":0,"bottom":330},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":68,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"width":570,"top":50,"skin":"images/bg-11.png","height":100,"centerX":0},
@@ -463,7 +477,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":8,"width":570,"top":170,"skin":"images/bg-11.png","height":100,"centerX":0},
@@ -661,7 +674,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":8,"width":570,"top":290,"skin":"images/bg-11.png","height":100,"centerX":0},
@@ -859,7 +871,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":8,"width":570,"top":410,"skin":"images/bg-11.png","height":100,"centerX":0},
@@ -1057,7 +1068,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":608,"x":132,"width":321,"visible":false,"skin":"images/button-shop-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":87,"centerX":0,"bottom":100},
@@ -1070,7 +1080,6 @@
                             "compId":77,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"玩家99级才能继续升级","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -1087,7 +1096,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":100},
@@ -1116,7 +1124,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
                             "props":{"x":0,"width":200,"height":70,"centerX":0,"bottom":30},
@@ -1159,7 +1166,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"已升级99次","fontSize":40,"color":"#ffffff","centerX":0,"bottom":200},
@@ -1174,7 +1180,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"x":0,"width":570,"top":50,"skin":"images/bg-12.png","sizeGrid":"50,50,50,50","height":100,"centerX":0},
