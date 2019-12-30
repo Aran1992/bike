@@ -1049,8 +1049,8 @@ Config.bikeScale = 0.4;
 // 自行车物理半径
 Config.bikeRadius = 1.175;
 
-// 自行车超级冲刺物理半径
-Config.bikeSprintRadius = 3;
+// 自行车超级无敌冲刺物理半径
+Config.bikeSprintRadius = 11;
 
 // 自行车密度
 Config.bikeDensity = 1;
@@ -8306,6 +8306,11 @@ Config.item = {
                 portable: 0,
                 effect: "Invincible",
             },
+            // 增益：超级无敌冲刺
+            141: {
+                portable: 0,
+                effect: "Sprint",
+            },
             // 随机效果（机会命运）（还需要程序支持）
             9999: {
                 portable: 0,
@@ -8370,6 +8375,11 @@ Config.item = {
             1310: {
                 portable: 1,
                 effect: "Invincible",
+            },
+            // 增益道具：超级无敌冲刺
+            1410: {
+                portable: 1,
+                effect: "Sprint",
             },
             // 随机道具
             99990: {
@@ -8626,7 +8636,7 @@ Config.effect = {
     // 超级无敌冲刺
     Sprint: {
         // 持续时间（单位：秒）
-        duration: 100,
+        duration: 3,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 飞行速度（单位：像素/秒）
