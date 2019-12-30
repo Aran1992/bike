@@ -1,10 +1,9 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {AnimatedSprite, resources, Sprite, Texture} from "../libs/pixi-wrapper";
+import {AnimatedSprite, resources} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import {Vec2} from "../libs/planck-wrapper";
-import MusicMgr from "../mgr/MusicMgr";
 import DataMgr from "../mgr/DataMgr";
 
 export default class EndlessGameScene extends GameScene {
@@ -20,6 +19,13 @@ export default class EndlessGameScene extends GameScene {
     onShow(sceneIndex) {
         this.sceneIndex = sceneIndex;
         this.sceneConfig = Config.endlessMode.sceneList[sceneIndex];
+        // 没有配置的话 就用默认配置
+        if (this.sceneConfig.roadSectionList.length === 0) {
+            this.sceneConfig.roadSectionList = Config.endlessMode.default.roadSectionList;
+        }
+        if (this.sceneConfig.infiniteRoadSectionList.length === 0) {
+            this.sceneConfig.infiniteRoadSectionList = Config.endlessMode.default.infiniteRoadSectionList;
+        }
         this.nextDistanceIndex = 0;
         let config = this.sceneConfig.distanceNotice;
         this.nextNoticeDistance = config && config[this.nextDistanceIndex];

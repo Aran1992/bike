@@ -1378,10 +1378,7 @@ Config.endlessMode.sceneList = [
                 length: 4000,
                 velocity: 1,
             },
-
-
         ],
-
         // 无限循环旅程
         infiniteRoadSectionList: [
             // 奖励阶段
@@ -6059,6 +6056,105 @@ Config.endlessMode.sceneList = [
         },
     },
 ];
+
+// 无尽模式默认配置
+Config.endlessMode.default = {
+    // 每个难度的长度（单位像素）（1米=16像素）
+    // 一次性旅程
+    roadSectionList: [
+        // 对普通玩家可过阶段
+        // 第1阶段
+        {
+            list: ["101-1",],
+            length: 1000,
+            velocity: 1,
+        },
+        // 第2阶段
+        {
+            list: ["101-11",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 第3阶段
+        {
+            list: ["101-21",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第4阶段
+        {
+            list: ["101-31",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第5阶段
+        {
+            list: ["101-41",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第6阶段
+        {
+            list: ["101-51",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第7阶段
+        {
+            list: ["101-61",],
+            length: 4000,
+            velocity: 1,
+        },
+    ],
+    // 无限循环旅程
+    infiniteRoadSectionList: [
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1,
+        },
+
+
+        // 第2阶段
+        {
+            list: ["101-11",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 第3阶段
+        {
+            list: ["101-21",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第4阶段
+        {
+            list: ["101-31",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第5阶段
+        {
+            list: ["101-41",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第6阶段
+        {
+            list: ["101-51",],
+            length: 2000,
+            velocity: 1,
+        },
+        // 第7阶段
+        {
+            list: ["101-61",],
+            length: 4000,
+            velocity: 1,
+        },
+
+    ],
+};
 
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
 Config.bgY = [0, 0, 256];
