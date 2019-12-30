@@ -504,7 +504,8 @@ export default class Bike {
                 break;
             }
             case "GoldCoin":
-            case "Star": {
+            case "Star":
+            case "Exp": {
                 break;
             }
             case "Thunder": {

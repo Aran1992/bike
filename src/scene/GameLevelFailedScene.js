@@ -87,6 +87,12 @@ export default class GameLevelFailedScene extends Scene {
                 multiple: GameUtils.getBikeConfig("coinPercent"),
                 doubleReward: this.args.gameScene.doubleReward,
             },
+            {
+                name: "Exp",
+                originValue: this.args.gameScene.exp,
+                multiple: GameUtils.getBikeConfig("expPercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
         ]);
 
         let a = this.args.gameScene.rebornTimes < Config.rebornTimes;

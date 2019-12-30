@@ -66,7 +66,7 @@ export default class BikeScene extends Scene {
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
         let isHighestLevel = (config.coinPercent || Config.bike.coinPercent)[level + 1] === undefined;
         let dsc = GameUtils.getBikeDsc(config);
-        let coin, distance, score;
+        let coin, distance, score, exp;
         if (this.hasOwnedBike(config.id)) {
             let get = (config, key, level) => {
                 let list = config[key] || Config.bike[key];
@@ -78,6 +78,7 @@ export default class BikeScene extends Scene {
             coin = get(config, "coinPercent", level);
             distance = get(config, "distancePercent", level);
             score = get(config, "scorePercent", level);
+            exp = get(config, "expPercent", level);
         } else {
             let get = (config, key, level) => {
                 let list = config[key] || Config.bike[key];
@@ -89,8 +90,9 @@ export default class BikeScene extends Scene {
             coin = get(config, "coinPercent", level);
             distance = get(config, "distancePercent", level);
             score = get(config, "scorePercent", level);
+            exp = get(config, "expPercent", level);
         }
-        dsc += "\n" + App.getText("BonusDsc", {coin, distance, score});
+        dsc += "\n" + App.getText("BonusDsc", {coin, distance, score, exp});
         this.ui.bikeDscText.text = dsc;
 
         let hasOwned = this.hasOwnedBike(config.id);

@@ -6353,6 +6353,30 @@ Config.bikeList = [
             1.9,
             1.95,
             2
+        ],
+        // 结算经验倍率（不填的话就使用默认值）
+        "expPercent": [
+            1,
+            1.05,
+            1.1,
+            1.15,
+            1.2,
+            1.25,
+            1.3,
+            1.35,
+            1.4,
+            1.45,
+            1.5,
+            1.55,
+            1.6,
+            1.65,
+            1.7,
+            1.75,
+            1.8,
+            1.85,
+            1.9,
+            1.95,
+            2
         ]
     },
     {
@@ -8246,6 +8270,12 @@ Config.item = {
                 effect: "Star",
             },
             // 经验
+            444: {
+                portable: 0,
+                effect: "Exp",
+                value: 5,
+            },
+            // 经验
             2000: {
                 portable: 0,
                 effect: "GoldCoin",
@@ -8400,6 +8430,11 @@ Config.effect = {
     },
     // 星星
     Star: {
+        // 是否有益（1为有益，0为陷阱/害人）
+        isHelpful: 1,
+    },
+    // 星星
+    Exp: {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
     },
@@ -8700,6 +8735,12 @@ Config.bike.scorePercent = [
     1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
     2
 ];
+// 默认结算积分倍率
+Config.bike.expPercent = [
+    1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45,
+    1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95,
+    2
+];
 
 // 敌人挣脱蜘蛛网每次跳跃之间的时间间隔（单位：帧数（每秒大概60帧））
 Config.enemy.spiderWebBreakIntervalFrame = 12;
@@ -8804,6 +8845,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -8834,6 +8876,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -8864,6 +8907,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -8894,6 +8938,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -8924,6 +8969,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -8954,6 +9000,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -8984,6 +9031,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9014,6 +9062,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9044,6 +9093,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9074,6 +9124,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9104,6 +9155,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9143,6 +9195,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9173,6 +9226,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9203,6 +9257,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9233,6 +9288,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9263,6 +9319,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9293,6 +9350,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9328,6 +9386,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9360,6 +9419,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9392,6 +9452,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9424,6 +9485,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9456,6 +9518,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9489,6 +9552,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9521,6 +9585,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9553,6 +9618,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9585,6 +9651,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9617,6 +9684,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9649,6 +9717,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9681,6 +9750,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9713,6 +9783,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9745,6 +9816,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9777,6 +9849,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9809,6 +9882,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9841,6 +9915,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9873,6 +9948,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9906,6 +9982,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9939,6 +10016,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -9972,6 +10050,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10004,6 +10083,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10036,6 +10116,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10068,6 +10149,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10100,6 +10182,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10133,6 +10216,7 @@ Config.home = {
                 coinPercent: 0.05,
                 distancePercent: 0.05,
                 scorePercent: 0.05,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10174,6 +10258,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10212,6 +10297,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10250,6 +10336,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10288,6 +10375,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10326,6 +10414,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10364,6 +10453,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10402,6 +10492,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10440,6 +10531,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10478,6 +10570,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10517,6 +10610,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10556,6 +10650,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10595,6 +10690,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10634,6 +10730,7 @@ Config.home = {
                 coinPercent: 0.1,
                 distancePercent: 0.1,
                 scorePercent: 0.1,
+                expPercent: 0.1,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -10673,6 +10770,8 @@ Config.conditions = {
     9: "Need to rank ${0}st in score",
     //需要进行 #### 次排名竞赛
     10: "Need to takes ${0} times map game",
+    //需要达到 ### 等级
+    11: "Need to reach level ${0}",
 };
 
 Config.conditionsEnum = {
@@ -10686,6 +10785,7 @@ Config.conditionsEnum = {
     farthestDistanceRank: 8,
     scoreRank: 9,
     mapGameTimes: 10,
+    level: 11,
 };
 
 if (window.ipConfig && window.ipConfig.innerHTML.length) {
@@ -10740,6 +10840,7 @@ Config.soundPath = {
     extraJump: "myLaya/laya/assets/sounds/SoundSE103.mp3",
     eatGoldCoin: "myLaya/laya/assets/sounds/SoundSE319.mp3",
     eatStar: "myLaya/laya/assets/sounds/SoundSE319.mp3",
+    eatExp: "myLaya/laya/assets/sounds/SoundSE319.mp3",
     eatAccGem: "myLaya/laya/assets/sounds/SE202.mp3",
     die: "myLaya/laya/assets/sounds/SE104.mp3",
     throughFlag: "myLaya/laya/assets/sounds/SoundBGM202.mp3",
@@ -11385,6 +11486,11 @@ Config.drawWeightList = [
         // 随机权重
         "weight": 200
     },
+];
+
+// 玩家等级所需经验
+Config.playerLevelNeededExp = [
+    0, 10, 20, 30, 40, 50, 60
 ];
 
 export default Config;

@@ -12,6 +12,7 @@ export default class EndlessGameScene extends GameScene {
         this.rewardType = DataMgr.preparationDataEndless;
         this.registerEvent("Continue", this.onContinue.bind(this));
         this.ui.coinPanel.visible = true;
+        this.ui.expPanel.visible = true;
         this.ui.pauseButton.visible = true;
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
@@ -248,6 +249,11 @@ export default class EndlessGameScene extends GameScene {
     settle() {
         super.settle();
         DataMgr.add(DataMgr.endlessGameTimes, 1);
+        let exp = Math.floor(Math.floor(this.exp) * GameUtils.getBikeConfig("expPercent"));
+        if (this.doubleReward) {
+            exp *= 2;
+        }
+        DataMgr.add(DataMgr.exp, exp);
         let id = Math.floor(Math.random() * Config.endlessMode.sceneList.length);
         if (id === DataMgr.get(DataMgr.selectedEndlessScene)) {
             id = id + 1;

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":49,
+    "selectedBox":15,
+    "selecteID":166,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -65,19 +65,20 @@
             "props":{"width":720,"top":0,"skin":"images/bg-7.png","left":0,"height":150},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":5,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":4},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -139,12 +140,13 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":5,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":242},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -206,12 +208,13 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":75,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":5},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -259,12 +262,13 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":75,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":242},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -312,18 +316,20 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"x":56,"var":"userImage","top":5,"skin":"images/UserIconDefault.png"},
                     "nodeParent":15,
                     "label":"userImage",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":60,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,userNameText",
                             "props":{"var":"userNameText","text":"Player","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerX":0,"bottom":0},
@@ -338,9 +344,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,levelText",
-                    "props":{"top":2,"text":"${LV}","strokeColor":"#000000","stroke":5,"name":"levelText","left":2,"fontSize":30,"color":"#ffffff"},
+                    "props":{"var":"levelText","top":2,"text":"${LevelDsc}","strokeColor":"#000000","stroke":5,"left":2,"fontSize":30,"color":"#ffffff"},
                     "nodeParent":15,
                     "label":"levelText",
                     "isDirectory":false,
@@ -349,7 +356,8 @@
                     "compId":166,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -1483,39 +1491,43 @@
             "props":{"skin":"images/shop-title-11.png","name":"exp","bottom":-20},
             "nodeParent":1,
             "label":"exp",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":167,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"skin":"images/shop-title-12.png","bottom":-3},
+                    "searchKey":"Image,expProgress",
+                    "props":{"var":"expProgress","skin":"images/shop-title-12.png","bottom":-3},
                     "nodeParent":167,
-                    "label":"Image",
+                    "label":"expProgress",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":180,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"text":"88888888 / 99999999","strokeColor":"#000000","stroke":2,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":50,"align":"center"},
+                    "searchKey":"Label,expRate",
+                    "props":{"var":"expRate","text":"88888888 / 99999999","strokeColor":"#000000","stroke":2,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":50,"align":"center"},
                     "nodeParent":167,
-                    "label":"Label",
+                    "label":"expRate",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":179,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         }],
     "animations":[
         {

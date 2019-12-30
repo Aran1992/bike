@@ -8,6 +8,8 @@ ShopScene.scene.json",可选择,Enable,選択可能
 Select,,BikeScene.scene.json,可选择,Select,選択可能
 Selected,,HomeScene.scene.json,已选择,Selected,選択済み
 LV,,BikeScene.scene.json,等级,LV,レベル
+Exp,,,经验,Exp,
+LevelDsc,,,等级${level},Lv. ${level},
 Unlock,,DrawScene.scene.json,恭喜骑士大人解锁自行车,Unlock,アンロックしていました。
 LvUp,,DrawScene.scene.json,恭喜骑士大人等级提升,LV UP,レベル　アップ
 Free,,"DrawScene.scene.json
@@ -68,6 +70,7 @@ Need to rank ${0}st in total distance,,,需闯入历史累计里程排行第${0}
 Need to rank ${0}st in farthest distance,,,需闯入历史最大里程排行第${0}名,Need to rank ${0}st in farthest distance,
 Need to rank ${0}st in score,,,需闯入历史积分排行第${0}名,Need to rank ${0}st in score,
 Need to takes ${0} times map game,,,需要进行${0}次排名竞赛,,
+Need to reach level ${0},,,需要等级达到${0},Need to reach level ${0},
 Highest Level,,,最高等级,Highest Level,
 You have ridden ${distance} meters,,,报告骑士大人，您已骑行${distance}m啦,You have ridden ${distance} meters,
 Air,,,空气,Air,
@@ -103,9 +106,11 @@ Size      ${size}",
 LevelDsc,,,等级          ${level},LV        ${level},
 BonusDsc,,,"金币          ${coin}
 里程          ${distance}
-积分          ${score}","Gold Coin ${coin}
+积分          ${score}
+经验          ${exp}","Gold Coin ${coin}
 Distance  ${distance}
-Score     ${score}",
+Score     ${score}
+Exp     ${exp}",
 Easy,,,简单,Easy,
 Normal,,,普通,Normal,
 Hard,,,困难,Hard,

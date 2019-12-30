@@ -125,6 +125,12 @@ export default class GameOverScene extends Scene {
                 multiple: GameUtils.getBikeConfig("coinPercent"),
                 doubleReward: this.args.gameScene.doubleReward,
             },
+            {
+                name: "Exp",
+                originValue: this.args.gameScene.exp,
+                multiple: GameUtils.getBikeConfig("expPercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
         ]);
 
         this.ui.hasDoubleRewardText.visible = !!this.args.gameScene.doubleReward;

@@ -101,6 +101,7 @@ export default class GameScene extends Scene {
         this.ui.surrenderButton.visible = false;
         this.ui.starPanel.visible = false;
         this.ui.coinPanel.visible = false;
+        this.ui.expPanel.visible = false;
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
         this.ui.rebornPanel.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
@@ -132,6 +133,7 @@ export default class GameScene extends Scene {
         this.ui.diamondText.text = 0;
         this.updateCoin(0);
         this.updateStar(0);
+        this.updateExp(0);
 
         this.setContactFatalEdge(false);
 
@@ -638,6 +640,11 @@ export default class GameScene extends Scene {
                 MusicMgr.playSound(Config.soundPath.eatStar);
                 break;
             }
+            case "Exp": {
+                this.updateExp(this.exp + value);
+                MusicMgr.playSound(Config.soundPath.eatExp);
+                break;
+            }
             case "Thunder": {
                 if (!this.isInvincible()) {
                     this.setContactFatalEdge(true);
@@ -1046,6 +1053,11 @@ export default class GameScene extends Scene {
         for (let i = 0; i < Config.starCount; i++) {
             this.ui[`star${i}`].visible = i < this.star;
         }
+    }
+
+    updateExp(exp) {
+        this.exp = exp;
+        this.ui.expText.text = this.exp;
     }
 
     syncBikeSprite(velocity, bikePhysicsPos) {

@@ -87,6 +87,12 @@ export default class GameLevelResultScene extends Scene {
                 multiple: GameUtils.getBikeConfig("coinPercent"),
                 doubleReward: this.args.gameScene.doubleReward,
             },
+            {
+                name: "Exp",
+                originValue: this.args.gameScene.exp,
+                multiple: GameUtils.getBikeConfig("expPercent"),
+                doubleReward: this.args.gameScene.doubleReward,
+            },
         ]);
 
         if (this.args.gameScene.doubleReward) {

@@ -24,6 +24,26 @@ function get(v, dv) {
 }
 
 export default class HomeScene extends Scene {
+    static onClickReturnButton() {
+        App.hideScene("HomeScene");
+        App.showScene("MainScene");
+    }
+
+    static onClickReturnRankButton() {
+        App.hideScene("HomeScene");
+        App.showScene("RankScene");
+    }
+
+    static initRadioButton(button, info) {
+        for (let i = 1; i <= 4; i++) {
+            button.ui[`tab${i}Image`].visible = info === i;
+        }
+    }
+
+    static onClickHomeHelpButton() {
+        App.showScene("HelpHomeScene");
+    }
+
     onCreate() {
         this.onClick(this.ui.returnBtn, HomeScene.onClickReturnButton);
         this.onClick(this.ui.hideUIBtn, this.onClickHideUIButton.bind(this));
@@ -152,6 +172,7 @@ export default class HomeScene extends Scene {
             `${App.getText("Coin")}: ${Math.floor(GameUtils.getHomeConfig("coinPercent") * 100)}%`,
             `${App.getText("Distance")}: ${Math.floor(GameUtils.getHomeConfig("distancePercent") * 100)}%`,
             `${App.getText("Score")}: ${Math.floor(GameUtils.getHomeConfig("scorePercent") * 100)}%`,
+            `${App.getText("Exp")}: ${Math.floor(GameUtils.getHomeConfig("expPercent") * 100)}%`,
         ].join("\n");
     }
 
@@ -201,16 +222,6 @@ export default class HomeScene extends Scene {
                 targetPos = randomPos();
             }
         };
-    }
-
-    static onClickReturnButton() {
-        App.hideScene("HomeScene");
-        App.showScene("MainScene");
-    }
-
-    static onClickReturnRankButton() {
-        App.hideScene("HomeScene");
-        App.showScene("RankScene");
     }
 
     onClickHideUIButton() {
@@ -318,12 +329,6 @@ export default class HomeScene extends Scene {
             id = Config.home.floors[this.floorIndex].id;
         }
         this.showLockedInfo(this.getSelectedType(), id);
-    }
-
-    static initRadioButton(button, info) {
-        for (let i = 1; i <= 4; i++) {
-            button.ui[`tab${i}Image`].visible = info === i;
-        }
     }
 
     onClickRadio(selectedIndex, lastIndex) {
@@ -612,6 +617,7 @@ export default class HomeScene extends Scene {
                 `${App.getText("Coin")}: ${Math.floor(config.unlockRewards.coinPercent * 100)}%`,
                 `${App.getText("Distance")}: ${Math.floor(config.unlockRewards.distancePercent * 100)}%`,
                 `${App.getText("Score")}: ${Math.floor(config.unlockRewards.scorePercent * 100)}%`,
+                `${App.getText("Exp")}: ${Math.floor(config.unlockRewards.expPercent * 100)}%`,
             ];
         } else {
             return [];
@@ -710,10 +716,6 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
                 break;
             }
         }
-    }
-
-    static onClickHomeHelpButton() {
-        App.showScene("HelpHomeScene");
     }
 
     onGameStop() {

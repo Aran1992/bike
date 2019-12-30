@@ -1,6 +1,7 @@
 import Config from "../config";
 import DataMgr from "../mgr/DataMgr";
 import StaticGameScene from "./StaticGameScene";
+import GameUtils from "../mgr/GameUtils";
 
 export default class LevelGameScene extends StaticGameScene {
     onCreate() {
@@ -8,6 +9,8 @@ export default class LevelGameScene extends StaticGameScene {
         this.rewardType = DataMgr.preparationDataGameLevel;
         this.registerEvent("Continue", this.onContinue.bind(this));
         this.ui.starPanel.visible = true;
+        this.ui.expPanel.visible = true;
+        this.ui.coinPanel.visible = true;
         this.ui.pauseButton.visible = true;
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
@@ -52,6 +55,11 @@ export default class LevelGameScene extends StaticGameScene {
 
     settle() {
         super.settle();
+        let exp = Math.floor(Math.floor(this.exp) * GameUtils.getBikeConfig("expPercent"));
+        if (this.doubleReward) {
+            exp *= 2;
+        }
+        DataMgr.add(DataMgr.exp, exp);
         if (this.gameStatus === "win") {
             const table = DataMgr.get(DataMgr.gameLevelData, {});
             const map = this.mapIndex;

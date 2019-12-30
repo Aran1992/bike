@@ -27,6 +27,8 @@ class DataMgr_ {
             9: value => this.data.scoreBoardBestRanking !== 0 && this.data.scoreBoardBestRanking <= value,
             //需要进行 #### 次排名竞赛
             10: value => DataMgr.get(DataMgr.mapGameTimes, 0) >= value,
+            //需要达到 ### 等级
+            11: value => DataMgr.getPlayerLevel().level >= value,
         };
     }
 
@@ -122,8 +124,11 @@ class DataMgr_ {
         if (key === DataMgr.mapGameTimes) {
             this.checkConditions(Config.conditionsEnum.mapGameTimes);
         }
+        if (key === DataMgr.level) {
+            this.checkConditions(Config.conditionsEnum.level);
+        }
         if (key === DataMgr.homeData) {
-            NetworkMgr.requestSaveSocialData({ home: value });
+            NetworkMgr.requestSaveSocialData({home: value});
         }
         if (key === DataMgr.rankDistance && value !== 0) {
             NetworkMgr.requestUpdateTotalMileage(value);
@@ -244,9 +249,9 @@ class DataMgr_ {
         let effectList = Utils.randomChooseMulti(l1, 2);
         let bike = Utils.randomChoose(l2);
         DataMgr.set(key, [
-            { effect: effectList[0] },
-            { effect: effectList[1] },
-            { bike: bike }
+            {effect: effectList[0]},
+            {effect: effectList[1]},
+            {bike: bike}
         ]);
     }
 
@@ -271,7 +276,7 @@ class DataMgr_ {
         } else {
             highestLevel = true;
         }
-        return { levelUp, highestLevel };
+        return {levelUp, highestLevel};
     }
 
     getGameLevelStarTotalCount() {
@@ -323,6 +328,24 @@ class DataMgr_ {
     isFirstPlayGameLevel(map, level) {
         const table = DataMgr.get(DataMgr.gameLevelData, {});
         return table[map] === undefined || table[map][level] === undefined;
+    }
+
+    getPlayerLevel() {
+        const exp = DataMgr.get(DataMgr.exp, 0);
+        for (let i = 0; i < Config.playerLevelNeededExp.length; i++) {
+            if (exp >= Config.playerLevelNeededExp[i]
+                && (Config.playerLevelNeededExp[i + 1] === undefined || exp < Config.playerLevelNeededExp[i + 1])) {
+                const level = i + 1;
+                let totalExp, curExp;
+                if (Config.playerLevelNeededExp[i + 1] === undefined) {
+                    totalExp = curExp = Config.playerLevelNeededExp[i] - Config.playerLevelNeededExp[i - 1];
+                } else {
+                    totalExp = Config.playerLevelNeededExp[i + 1] - Config.playerLevelNeededExp[i];
+                    curExp = exp - Config.playerLevelNeededExp[i];
+                }
+                return {level, totalExp, curExp};
+            }
+        }
     }
 }
 
@@ -377,5 +400,6 @@ DataMgr.unlockSystems = "39";
 DataMgr.endlessGameTimes = "40";
 DataMgr.preparationDataGameLevel = "41";
 DataMgr.gameLevelData = "42";
+DataMgr.exp = "43";
 
 export default DataMgr;

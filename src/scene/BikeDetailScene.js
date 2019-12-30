@@ -35,6 +35,7 @@ export default class BikeDetailScene extends Scene {
             coin: Math.floor(GameUtils.getBikeConfig("coinPercent", id, level,) * 100) + "%",
             distance: Math.floor(GameUtils.getBikeConfig("distancePercent", id, level,) * 100) + "%",
             score: Math.floor(GameUtils.getBikeConfig("scorePercent", id, level,) * 100) + "%",
+            exp: Math.floor(GameUtils.getBikeConfig("expPercent", id, level,) * 100) + "%",
         });
         let levelDsc = App.getText("LevelDsc", {level: `${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}`});
         this.ui.bikeDsc.text = `${GameUtils.getBikeDsc(config)}
