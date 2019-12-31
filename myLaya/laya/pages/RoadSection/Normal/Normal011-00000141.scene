@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":348,
+    "selecteID":398,
     "searchKey":"Scene",
     "props":{"width":2000,"sceneColor":"#000000","height":50},
     "nodeParent":-1,
-    "maxID":398,
+    "maxID":399,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -137,20 +137,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":348,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//ID:121",
-            "props":{"y":-150,"x":50,"skin":"images/crystal_dragon_00.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:121","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//ID:121",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":378,
             "child":[
                 ]
         },
@@ -389,6 +375,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":397,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//ID:131",
+            "props":{"y":-150,"x":50,"skin":"images/crystal_invincible_00.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:131","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//ID:131",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":398,
             "child":[
                 ]
         }],
