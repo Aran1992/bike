@@ -124,7 +124,7 @@ class DataMgr_ {
         if (key === DataMgr.mapGameTimes) {
             this.checkConditions(Config.conditionsEnum.mapGameTimes);
         }
-        if (key === DataMgr.level) {
+        if (key === DataMgr.exp) {
             this.checkConditions(Config.conditionsEnum.level);
         }
         if (key === DataMgr.homeData) {
