@@ -141,4 +141,10 @@ export default class GameUtils {
             }
         }
     }
+
+    static getLockNotice(name) {
+        let [id, ...values] = Config.lockSystems[name].condition;
+        let condition = App.getText(Config.conditions[id], values);
+        return App.getText("LockNotice", {condition: condition});
+    }
 }

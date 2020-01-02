@@ -253,17 +253,11 @@ export default class MainScene extends Scene {
     getLockableHandler(item, handler) {
         return () => {
             if (this.isLockableButtonLocked(item)) {
-                App.showTip(this.getLockNotice(item.var), undefined, undefined, true);
+                App.showTip(GameUtils.getLockNotice(item.var), undefined, undefined, true);
             } else {
                 handler();
             }
         };
-    }
-
-    getLockNotice(name) {
-        let [id, ...values] = Config.lockSystems[name].condition;
-        let condition = App.getText(Config.conditions[id], values);
-        return App.getText("LockNotice", {condition: condition});
     }
 
     isLockableButtonLocked(item) {

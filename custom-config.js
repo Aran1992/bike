@@ -1286,10 +1286,6 @@ Config.roadSections = {
     ],
 
 
-
-
-
-
     // 奖励关卡（Special）
     "0-1": [
         // 关卡（每个路段为10000像素）
@@ -1354,7 +1350,7 @@ Config.endlessMode.sceneList = [
         // 无限循环旅程
         infiniteRoadSectionList: [],
         // 道具随机权重表（无尽模式-随机道具-模块1）
-		
+
         itemRandomTable: {
             Accelerate: 1,
             PowerJump: 1,
@@ -2211,12 +2207,6 @@ Config.endlessMode.default = {
             length: 6000,
             velocity: 1,
         },
-
-
-
-
-
-
 
 
     ],
@@ -7554,8 +7544,8 @@ Config.drawWeightList = [
 
 // 玩家等级所需总经验(范例：1级=0,2级=10，3级=30，也就是2级升3级需要30-10=20经验)
 Config.playerLevelNeededExp = [
-      0,  10,  30,  60, 100,
-	150, 210, 280, 360, 450
+    0, 10, 30, 60, 100,
+    150, 210, 280, 360, 450
 ];
 
 export default Config;

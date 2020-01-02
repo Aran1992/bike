@@ -20,7 +20,9 @@ export default class BikeScene extends Scene {
 
     onShow() {
         this.onClickItem({index: 0});
-        this.ui.drawButton.visible = DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") !== -1;
+        let lock = DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") === -1;
+        GameUtils.greySprite(this.ui.drawButton, lock);
+        GameUtils.findChildByName(this.ui.drawButton, "lockedImage").visible = lock;
     }
 
     initItem(item) {
@@ -55,6 +57,9 @@ export default class BikeScene extends Scene {
     }
 
     onClickDrawButton() {
+        if (DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") === -1) {
+            return App.showTip(GameUtils.getLockNotice("drawButton"), undefined, undefined, true);
+        }
         App.hideScene("BikeScene");
         App.showScene("DrawScene");
     }
