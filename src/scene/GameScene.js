@@ -1508,13 +1508,14 @@ export default class GameScene extends Scene {
     }
 
     settle() {
-        let coin = Math.floor(this.coin * GameUtils.getBikeConfig("coinPercent"));
-        let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
+        let coin = this.coin * GameUtils.getBikeConfig("coinPercent");
+        let distance = this.distance * GameUtils.getBikeConfig("distancePercent");
         if (this.doubleReward) {
             coin *= 2;
             distance *= 2;
         }
-        DataMgr.add(DataMgr.coin, coin);
+        distance = Math.floor(distance);
+        DataMgr.add(DataMgr.coin, Math.floor(coin));
         let newDistance = DataMgr.add(DataMgr.distance, distance);
         Config.endlessMode.sceneList.forEach(item => {
             if (newDistance >= item.unlockDistance) {

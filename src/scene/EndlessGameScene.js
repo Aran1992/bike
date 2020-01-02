@@ -249,11 +249,11 @@ export default class EndlessGameScene extends GameScene {
     settle() {
         super.settle();
         DataMgr.add(DataMgr.endlessGameTimes, 1);
-        let exp = Math.floor(Math.floor(this.exp) * GameUtils.getBikeConfig("expPercent"));
+        let exp = this.exp * GameUtils.getBikeConfig("expPercent");
         if (this.doubleReward) {
             exp *= 2;
         }
-        DataMgr.add(DataMgr.exp, exp);
+        DataMgr.add(DataMgr.exp, Math.floor(exp));
         let id = Math.floor(Math.random() * Config.endlessMode.sceneList.length);
         if (id === DataMgr.get(DataMgr.selectedEndlessScene)) {
             id = id + 1;

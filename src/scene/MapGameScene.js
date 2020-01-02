@@ -140,10 +140,11 @@ export default class MapGameScene extends StaticGameScene {
         super.settle();
         DataMgr.refreshPreparationRewards(DataMgr.preparationDataMap);
         DataMgr.add(DataMgr.mapGameTimes, 1);
-        let score = Math.floor(Config.rankScore[this.rank || 0] * GameUtils.getBikeConfig("scorePercent"));
+        let score = Config.rankScore[this.rank || 0] * GameUtils.getBikeConfig("scorePercent");
         if (this.doubleReward) {
             score *= 2;
         }
+        score = Math.floor(score);
         DataMgr.add(DataMgr.totalScore, score);
         DataMgr.add(DataMgr.rankTotalScore, score);
     }

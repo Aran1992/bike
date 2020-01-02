@@ -157,10 +157,11 @@ export default class StaticGameScene extends GameScene {
     settle() {
         this.stopSounds();
         this.gameLoopFunc = this.pause.bind(this);
-        let distance = Math.floor(Math.floor(this.distance) * GameUtils.getBikeConfig("distancePercent"));
+        let distance = this.distance * GameUtils.getBikeConfig("distancePercent");
         if (this.doubleReward) {
             distance *= 2;
         }
+        distance = Math.floor(distance);
         DataMgr.add(DataMgr.distance, distance);
         DataMgr.add(DataMgr.rankDistance, distance);
     }

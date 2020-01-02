@@ -55,11 +55,11 @@ export default class LevelGameScene extends StaticGameScene {
 
     settle() {
         super.settle();
-        let exp = Math.floor(Math.floor(this.exp) * GameUtils.getBikeConfig("expPercent"));
+        let exp = this.exp * GameUtils.getBikeConfig("expPercent");
         if (this.doubleReward) {
             exp *= 2;
         }
-        DataMgr.add(DataMgr.exp, exp);
+        DataMgr.add(DataMgr.exp,Math.floor(exp) );
         if (this.gameStatus === "win") {
             const table = DataMgr.get(DataMgr.gameLevelData, {});
             const map = this.mapIndex;
