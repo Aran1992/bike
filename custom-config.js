@@ -1301,12 +1301,12 @@ Config.roadSections = {
 
 
 
-    // 随机关卡（Normal）
+    // 随机关卡（Random）
     "201-1": [
         // 关卡（每个路段为3000像素）
-        "Normal/Normal011-00000111",
-        "Normal/Normal011-00000181",
-        "Normal/Normal011-00000201",
+        "Random/Random011-00000111",
+        "Random/Random011-00000181",
+        "Random/Random011-00000201",
     ],
 
 
@@ -7457,7 +7457,7 @@ Config.signRewardList = [
 Config.advertDrawBikeTime = 3;
 
 // 每局能够进行的复活总次数（包括广告和钻石）
-Config.rebornTimes = 113;
+Config.rebornTimes = 3;
 
 // 进入关卡的最短加载时间（单位：秒）
 Config.minLoadingTime = 3;
@@ -7479,7 +7479,7 @@ Config.lockSystems = {
     // 扭蛋
     drawButton: {
         // 解锁条件
-        condition: [11, 2],
+        condition: [4, 4300],
         // 解锁内容标题
         title: "SystemUnlockTitle1",
         // 解锁描述
@@ -7492,7 +7492,7 @@ Config.lockSystems = {
     // 签到
     signButton: {
         // 解锁条件
-        condition: [11, 3],
+        condition: [4, 6000],
         // 解锁内容标题
         title: "SystemUnlockTitle11",
         // 解锁描述
@@ -7502,10 +7502,10 @@ Config.lockSystems = {
         // 解锁图片缩放
         imageScale: 2,
     },
-    // 礼物
+    // 礼包
     giftButton: {
         // 解锁条件
-        condition: [11, 3],
+        condition: [4, 2000],
         // 解锁内容标题
         title: "SystemUnlockTitle12",
         // 解锁描述
@@ -7515,10 +7515,10 @@ Config.lockSystems = {
         // 解锁图片缩放
         imageScale: 2,
     },
-    // 商店
+    // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [11, 4],
+        condition: [4, 12000],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -7531,7 +7531,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [5, 1500],
+        condition: [4, 18000],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -7544,7 +7544,7 @@ Config.lockSystems = {
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 0],
+        condition: [10, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
@@ -7557,7 +7557,7 @@ Config.lockSystems = {
     // 家园
     homeButton: {
         // 解锁条件
-        condition: [10, 0],
+        condition: [10, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle4",
         // 解锁描述
@@ -7627,7 +7627,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-3-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -7706,7 +7706,7 @@ Config.gameLevelMode = {
         },
         {
             // 解锁需要的星星数
-            starCountUnlockNeeded: 20,
+            starCountUnlockNeeded: 22,
             // 地图描述
             dsc: "Select Map3",
             // 主页封面图
@@ -7952,7 +7952,7 @@ Config.drawWeightList = [
         // 钻石奖励
         "type": "diamond",
         // 数量
-        "number": 100,
+        "number": 75,
         // 随机权重
         "weight": 200
     },
@@ -7960,8 +7960,26 @@ Config.drawWeightList = [
 
 // 玩家等级所需总经验(范例：1级=0,2级=10，3级=30，也就是2级升3级需要30-10=20经验)
 Config.playerLevelNeededExp = [
-      0,  10,  30,  60, 100,
-	150, 210, 280, 360, 450
+	0, 10, 30, 60, 100, 
+	150, 210, 280, 360, 450, 
+	550, 660, 780, 910, 1050, 
+	1200, 1360, 1530, 1710, 1900, 
+	2100, 2310, 2530, 2760, 3000, 
+	3250, 3510, 3780, 4060, 4350, 
+	4650, 4960, 5280, 5610, 5950, 
+	6300, 6660, 7030, 7410, 7800, 
+	8200, 8610, 9030, 9460, 9900, 
+	10350, 10810, 11280, 11760, 12250, 
+	12750, 13260, 13780, 14310, 14850, 
+	15400, 15960, 16530, 17110, 17700, 
+	18300, 18910, 19530, 20160, 20800, 
+	21450, 22110, 22780, 23460, 24150, 
+	24850, 25560, 26280, 27010, 27750, 
+	28500, 29260, 30030, 30810, 31600, 
+	32400, 33210, 34030, 34860, 35700, 
+	36550, 37410, 38280, 39160, 40050, 
+	40950, 41860, 42780, 43710, 44650, 
+	45600, 46560, 47530, 48510
 ];
 
 export default Config;
