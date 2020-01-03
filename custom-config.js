@@ -1381,9 +1381,9 @@ Config.endlessMode.sceneList = [
         id: 0,
         // 地图名称
         name: "Select Map1",
-        // 免费解锁所需总距离
+        // 免费解锁所需总距离（改版后这个不用了）
         unlockDistance: 0,
-        // 花费解锁所需钻石
+        // 花费解锁所需钻石（改版后这个不用了）
         unlockCostDiamond: 0,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1442,8 +1442,10 @@ Config.endlessMode.sceneList = [
         id: 1,
         // 地图名称
         name: "Select Map2",
-        // 免费解锁所需总距离
-        unlockDistance: 12000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1455,8 +1457,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 10,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1513,8 +1513,10 @@ Config.endlessMode.sceneList = [
         id: 2,
         // 地图名称
         name: "Select Map3",
-        // 免费解锁所需总距离
-        unlockDistance: 36000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1526,8 +1528,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 50,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1584,8 +1584,10 @@ Config.endlessMode.sceneList = [
         id: 3,
         // 地图名称
         name: "Select Map4",
-        // 免费解锁所需总距离
-        unlockDistance: 72000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1597,8 +1599,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 100,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1655,8 +1655,10 @@ Config.endlessMode.sceneList = [
         id: 4,
         // 地图名称
         name: "Select Map5",
-        // 免费解锁所需总距离
-        unlockDistance: 144000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1668,8 +1670,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 150,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1726,8 +1726,10 @@ Config.endlessMode.sceneList = [
         id: 5,
         // 地图名称
         name: "Select Map6",
-        // 免费解锁所需总距离
-        unlockDistance: 216000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1739,8 +1741,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 200,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1797,8 +1797,10 @@ Config.endlessMode.sceneList = [
         id: 6,
         // 地图名称
         name: "Select Map7",
-        // 免费解锁所需总距离
-        unlockDistance: 432000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1810,8 +1812,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 250,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1868,8 +1868,10 @@ Config.endlessMode.sceneList = [
         id: 7,
         // 地图名称
         name: "Select Map8",
-        // 免费解锁所需总距离
-        unlockDistance: 864000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1881,8 +1883,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1939,8 +1939,10 @@ Config.endlessMode.sceneList = [
         id: 8,
         // 地图名称
         name: "Select Map9",
-        // 免费解锁所需总距离
-        unlockDistance: 1728000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1952,8 +1954,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2010,8 +2010,10 @@ Config.endlessMode.sceneList = [
         id: 9,
         // 地图名称
         name: "Select Map10",
-        // 免费解锁所需总距离
-        unlockDistance: 3456000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -2023,8 +2025,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2081,8 +2081,10 @@ Config.endlessMode.sceneList = [
         id: 10,
         // 地图名称
         name: "Select Map11",
-        // 免费解锁所需总距离
-        unlockDistance: 5184000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -2094,8 +2096,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -2152,8 +2152,10 @@ Config.endlessMode.sceneList = [
         id: 11,
         // 地图名称
         name: "Select Map12",
-        // 免费解锁所需总距离
-        unlockDistance: 6912000,
+        // 免费解锁所需总距离（改版后这个不用了）
+        unlockDistance: 0,
+        // 花费解锁所需钻石（改版后这个不用了）
+        unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -2165,8 +2167,6 @@ Config.endlessMode.sceneList = [
             // 解锁图片缩放
             imageScale: 1.2,
         },
-        // 花费解锁所需钻石
-        unlockCostDiamond: 300,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
