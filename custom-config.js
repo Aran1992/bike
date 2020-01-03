@@ -1243,6 +1243,12 @@ Config.roadSections = {
         "Lv031/Lv031-00800701",
         "Lv031/Lv031-00800721",
     ],
+
+
+
+
+
+
     // 固定关卡（Normal）
     "101-1": [
         // 关卡（每个路段为1000像素）
@@ -1281,16 +1287,90 @@ Config.roadSections = {
         "Normal/Normal011-00000181",
     ],
     "101-91": [
-        // 关卡（每个路段为6000像素）
+        // 关卡（每个路段为9000像素）
         "Normal/Normal011-00000191",
     ],
+    "101-101": [
+        // 关卡（每个路段为3000像素）
+        "Normal/Normal011-00000201",
+    ],
+
+
+
+
+
+
+
+    // 随机关卡（Normal）
+    "201-1": [
+        // 关卡（每个路段为3000像素）
+        "Normal/Normal011-00000111",
+        "Normal/Normal011-00000181",
+        "Normal/Normal011-00000201",
+    ],
+
+
+
+
+
+
 
 
     // 奖励关卡（Special）
     "0-1": [
-        // 关卡（每个路段为10000像素）
+        // 关卡（每个路段为5000像素）
         "Special/Special111-00000101",
     ],
+
+
+
+
+
+
+
+
+
+    // 随机道具（Item）
+    "9999-1": [
+        // 关卡（每个路段为500像素）
+        "Item/Item011-00000101",
+
+        "Item/Item011-00000111",
+        "Item/Item011-00000111",
+        "Item/Item011-00000111",
+
+        "Item/Item011-00000121",
+        "Item/Item011-00000121",
+        "Item/Item011-00000121",
+
+        "Item/Item011-00000131",
+        "Item/Item011-00000131",
+        "Item/Item011-00000131",
+
+        "Item/Item011-00000141",
+        "Item/Item011-00000141",
+        "Item/Item011-00000141",
+
+        "Item/Item011-00000151",
+    ],
+    // 随机道具（Item）
+    "9999-11": [
+        // 关卡（每个路段为500像素）
+        "Item/Item011-00000101",
+        "Item/Item011-00000111",
+    ],
+    // 随机道具（Item）
+    "9999-21": [
+        // 关卡（每个路段为500像素）
+        "Item/Item011-00000101",
+        "Item/Item011-00000111",
+    ],
+
+
+
+
+
+
 
 
 };
@@ -1350,7 +1430,7 @@ Config.endlessMode.sceneList = [
         // 无限循环旅程
         infiniteRoadSectionList: [],
         // 道具随机权重表（无尽模式-随机道具-模块1）
-
+		
         itemRandomTable: {
             Accelerate: 1,
             PowerJump: 1,
@@ -2147,66 +2227,330 @@ Config.endlessMode.default = {
     // 一次性旅程
     roadSectionList: [
         // 对普通玩家可过阶段
+
         // 第1阶段
+        //路段1
         {
             list: ["101-1",],
             length: 1000,
             velocity: 1,
         },
-        // 第2阶段
+        //路段2
         {
-            list: ["101-91",],
-            length: 6000,
+            list: ["101-11",],
+            length: 3000,
             velocity: 1,
         },
-        // 第3阶段
+        //路段3
         {
             list: ["101-21",],
             length: 2000,
             velocity: 1,
         },
-        // 第4阶段
+        //路段4
         {
             list: ["101-31",],
             length: 2000,
             velocity: 1,
         },
-        // 第5阶段
+        //路段5
         {
             list: ["101-41",],
             length: 2000,
             velocity: 1,
         },
-        // 第6阶段
+        //路段6
         {
             list: ["101-51",],
             length: 2000,
             velocity: 1,
         },
-        // 第7阶段
+        //路段7
         {
             list: ["101-61",],
             length: 4000,
             velocity: 1,
         },
-        // 第8阶段
+        //路段8
         {
             list: ["101-71",],
             length: 2000,
             velocity: 1,
         },
-        // 第9阶段
+        //路段9
         {
             list: ["101-81",],
             length: 3000,
             velocity: 1,
         },
-        // 第10阶段
+        //路段10
         {
             list: ["101-91",],
-            length: 6000,
+            length: 9000,
             velocity: 1,
         },
+        //路段11
+        {
+            list: ["101-101",],
+            length: 3000,
+            velocity: 1,
+        },
+
+
+
+
+
+
+        // 第2阶段
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段1
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段2
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段3
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段4
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段5
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段6
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段7
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段8
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1,
+        },
+        //路段9
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1,
+        },
+
+
+
+
+
+        // 第3阶段
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段1
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段2
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段3
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段4
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段5
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段6
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段7
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段8
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.2,
+        },
+        //路段9
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.2,
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     ],
@@ -2216,46 +2560,118 @@ Config.endlessMode.default = {
         {
             list: ["0-1",],
             length: 5000,
-            velocity: 1,
+            velocity: 1.4,
         },
-
-
-        // 第2阶段
+        // 道具
         {
-            list: ["101-11",],
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段1
+        {
+            list: ["201-1",],
             length: 3000,
-            velocity: 1,
+            velocity: 1.4,
         },
-        // 第3阶段
+        // 道具
         {
-            list: ["101-21",],
-            length: 2000,
-            velocity: 1,
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
         },
-        // 第4阶段
+        //路段2
         {
-            list: ["101-31",],
-            length: 2000,
-            velocity: 1,
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
         },
-        // 第5阶段
+        // 道具
         {
-            list: ["101-41",],
-            length: 2000,
-            velocity: 1,
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
         },
-        // 第6阶段
+        //路段3
         {
-            list: ["101-51",],
-            length: 2000,
-            velocity: 1,
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
         },
-        // 第7阶段
+        // 道具
         {
-            list: ["101-61",],
-            length: 4000,
-            velocity: 1,
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
         },
+        //路段4
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段5
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段6
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段7
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段8
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段9
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+
+
 
     ],
 };
@@ -7041,7 +7457,7 @@ Config.signRewardList = [
 Config.advertDrawBikeTime = 3;
 
 // 每局能够进行的复活总次数（包括广告和钻石）
-Config.rebornTimes = 3;
+Config.rebornTimes = 113;
 
 // 进入关卡的最短加载时间（单位：秒）
 Config.minLoadingTime = 3;
@@ -7076,7 +7492,7 @@ Config.lockSystems = {
     // 签到
     signButton: {
         // 解锁条件
-        condition: [4, 1400],
+        condition: [11, 3],
         // 解锁内容标题
         title: "SystemUnlockTitle11",
         // 解锁描述
@@ -7089,7 +7505,7 @@ Config.lockSystems = {
     // 礼物
     giftButton: {
         // 解锁条件
-        condition: [4, 1500],
+        condition: [11, 3],
         // 解锁内容标题
         title: "SystemUnlockTitle12",
         // 解锁描述
@@ -7115,7 +7531,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [11, 2],
+        condition: [5, 1500],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -7151,10 +7567,10 @@ Config.lockSystems = {
         // 解锁图片缩放
         imageScale: 2,
     },
-    // 准备界面
+    // 战前准备界面（目前可能默认开启比较合适）
     preparationScene: {
         // 解锁条件
-        condition: [11, 3],
+        condition: [11, 1],
     },
 };
 
@@ -7544,8 +7960,8 @@ Config.drawWeightList = [
 
 // 玩家等级所需总经验(范例：1级=0,2级=10，3级=30，也就是2级升3级需要30-10=20经验)
 Config.playerLevelNeededExp = [
-    0, 10, 30, 60, 100,
-    150, 210, 280, 360, 450
+      0,  10,  30,  60, 100,
+	150, 210, 280, 360, 450
 ];
 
 export default Config;
