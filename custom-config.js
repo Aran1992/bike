@@ -7627,7 +7627,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-4-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -7643,7 +7643,7 @@ Config.gameLevelMode = {
         },
         {
             // 解锁需要的星星数
-            starCountUnlockNeeded: 10,
+            starCountUnlockNeeded: 8,
             // 地图描述
             dsc: "Select Map2",
             // 主页封面图
@@ -7706,7 +7706,7 @@ Config.gameLevelMode = {
         },
         {
             // 解锁需要的星星数
-            starCountUnlockNeeded: 22,
+            starCountUnlockNeeded: 20,
             // 地图描述
             dsc: "Select Map3",
             // 主页封面图
@@ -7765,6 +7765,132 @@ Config.gameLevelMode = {
                 {diamond: 40, coin: 20000},
                 {diamond: 40, coin: 20000},
                 {bike: 20, coin: 20000},
+            ],
+        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 35,
+            // 地图描述
+            dsc: "Select Map4",
+            // 主页封面图
+            mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+                // 侧边
+                side: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01SideSkin.png",
+                // 底部
+                top: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01TopSkin.png",
+                // 侧边
+                side2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02SideSkin.png",
+                // 底部
+                top2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02TopSkin.png",
+                // 背景 有多少层背景就配置多少张
+                bg: [
+                    "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground01.png",
+                    "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground02.png",
+                    "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground03.png",
+                ],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 1, 0.9, 0],
+            // 背景的Y轴位置
+            bgY: [0, 0, 256],
+            // 背景缩放系数
+            bgScale: [1, 1, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/04_sasori.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+                Accelerate: 1,
+                PowerJump: 1,
+                UnlimitedJump: 1,
+                Magnet: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-4-1.scene.json",
+                "myLaya/laya/pages/Map/Map-4-2.scene.json",
+                "myLaya/laya/pages/Map/Map-2-3.scene.json",
+                "myLaya/laya/pages/Map/Map-2-4.scene.json",
+                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+            ],
+            rewardList: [
+                {diamond: 40, coin: 20000},
+                {diamond: 40, coin: 20000},
+                {diamond: 40, coin: 20000},
+                {diamond: 40, coin: 20000},
+                {bike: 21, coin: 20000},
+            ],
+        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 50,
+            // 地图描述
+            dsc: "Select Map5",
+            // 主页封面图
+            mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+                // 侧边
+                side: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01SideSkin.png",
+                // 底部
+                top: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad01TopSkin.png",
+                // 侧边
+                side2: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad02SideSkin.png",
+                // 底部
+                top2: "images/map/DX2_Aquarius/TextureDX2_AquariusRoad02TopSkin.png",
+                // 背景 有多少层背景就配置多少张
+                bg: [
+                    "images/map/DX2_Aquarius/TextureDX2_AquariusBackground01.png",
+                    "images/map/DX2_Aquarius/TextureDX2_AquariusBackground02.png",
+                    "images/map/DX2_Aquarius/TextureDX2_AquariusBackground03.png",
+                ],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 1, 0.9, 0],
+            // 背景的Y轴位置
+            bgY: [0, 0, 256],
+            // 背景缩放系数
+            bgScale: [1, 1.7, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/03_mizugameza.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+                Accelerate: 1,
+                PowerJump: 1,
+                UnlimitedJump: 1,
+                Magnet: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-2-1.scene.json",
+                "myLaya/laya/pages/Map/Map-2-2.scene.json",
+                "myLaya/laya/pages/Map/Map-2-3.scene.json",
+                "myLaya/laya/pages/Map/Map-2-4.scene.json",
+                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+            ],
+            rewardList: [
+                {diamond: 40, coin: 20000},
+                {diamond: 40, coin: 20000},
+                {diamond: 40, coin: 20000},
+                {diamond: 40, coin: 20000},
+                {bike: 7, coin: 20000},
             ],
         },
     ],
