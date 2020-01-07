@@ -7479,7 +7479,7 @@ Config.lockSystems = {
     // 扭蛋
     drawButton: {
         // 解锁条件
-        condition: [4, 4300],
+        condition: [4, 43],
         // 解锁内容标题
         title: "SystemUnlockTitle1",
         // 解锁描述
@@ -7492,7 +7492,7 @@ Config.lockSystems = {
     // 签到
     signButton: {
         // 解锁条件
-        condition: [4, 6000],
+        condition: [4, 60],
         // 解锁内容标题
         title: "SystemUnlockTitle11",
         // 解锁描述
@@ -7505,7 +7505,7 @@ Config.lockSystems = {
     // 礼包
     giftButton: {
         // 解锁条件
-        condition: [4, 2000],
+        condition: [4, 20],
         // 解锁内容标题
         title: "SystemUnlockTitle12",
         // 解锁描述
@@ -7518,7 +7518,7 @@ Config.lockSystems = {
     // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [4, 12000],
+        condition: [4, 120],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -7531,7 +7531,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [4, 18000],
+        condition: [4, 180],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -7544,7 +7544,7 @@ Config.lockSystems = {
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 1],
+        condition: [10, 0],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
@@ -7557,7 +7557,7 @@ Config.lockSystems = {
     // 家园
     homeButton: {
         // 解锁条件
-        condition: [10, 5],
+        condition: [10, 0],
         // 解锁内容标题
         title: "SystemUnlockTitle4",
         // 解锁描述
@@ -7627,7 +7627,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-4-2.scene.json",
+                "myLaya/laya/pages/Map/Map-4-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -7818,7 +7818,7 @@ Config.gameLevelMode = {
             levelList: [
                 "myLaya/laya/pages/Map/Map-4-1.scene.json",
                 "myLaya/laya/pages/Map/Map-4-2.scene.json",
-                "myLaya/laya/pages/Map/Map-2-3.scene.json",
+                "myLaya/laya/pages/Map/Map-4-3.scene.json",
                 "myLaya/laya/pages/Map/Map-2-4.scene.json",
                 "myLaya/laya/pages/Map/Map-2-5.scene.json",
             ],
@@ -8064,7 +8064,7 @@ Config.drawWeightList = [
         // 自行车ID
         "id": 25,
         // 随机权重
-        "weight": 2
+        "weight": 200
     },
     {
         // 金币奖励
@@ -8072,7 +8072,7 @@ Config.drawWeightList = [
         // 数量
         "number": 5000,
         // 随机权重
-        "weight": 200
+        "weight": 20
     },
     {
         // 钻石奖励
