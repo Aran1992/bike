@@ -74,11 +74,11 @@ export default class UpDownPlatform extends EditorItem {
 
     getTopPosInTargetX(x) {
         // todo 先简单返回最顶部就好
-        return {x: x, y: this.highestTopY};
+        return {x: x, y: this.highestTopPoint.y};
     }
 
     getLeftTopPoint() {
         // todo 先简单返回最顶部就好
-        return {x: this.leftBorderX, y: this.highestTopY};
+        return {x: this.leftBorderX, y: this.highestTopPoint.y};
     }
 }
