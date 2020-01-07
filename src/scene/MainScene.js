@@ -313,7 +313,7 @@ export default class MainScene extends Scene {
 
     refreshGameLevelMode() {
         this.selectedLevel = 0;
-        let path = Config.mapList[this.gameLevel].texture.mainCover;
+        let path = Config.gameLevelMode.mapList[this.gameLevel].mainCover;
         this.refreshGameLevelSelectedState();
         this.ui.sceneImage.children[0].texture = resources[path].texture;
         const total = DataMgr.getGameLevelStarTotalCount();
