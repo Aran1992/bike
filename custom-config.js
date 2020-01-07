@@ -4726,6 +4726,10 @@ Config.item = {
                 portable: 0,
                 effect: "GoldCoin",
                 value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 5金币
             55555: {
@@ -4743,12 +4747,20 @@ Config.item = {
                 portable: 0,
                 effect: "Exp",
                 value: 5,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 经验
             2000: {
                 portable: 0,
                 effect: "Exp",
                 value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 陷阱：减速
             1: {

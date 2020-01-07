@@ -1686,7 +1686,6 @@ export default class GameScene extends Scene {
                 start: () => {
                     this.setBikeScale(2, true);
                     this.bikeBody.setKinematic();
-                    this.effectRemainFrame.Magnet = Config.effect.Magnet.duration * Config.fps;
                     this.resetJumpStatus();
                 },
                 end: () => {

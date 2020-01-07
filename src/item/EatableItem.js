@@ -79,12 +79,18 @@ export default class EatableItem extends EditorItem {
     update() {
         super.update();
 
-        if (this.body.isKinematic()) {
+        if (this.isAttracted) {
             this.moveToPlayer();
         } else {
-            if (this.gameMgr.hasEffect("Magnet") && this.gameMgr.isItemXInView(this) && this.config.effect === "GoldCoin") {
-                this.body.setKinematic();
-                this.moveToPlayer();
+            if (this.gameMgr.isItemXInView(this)) {
+                ["Magnet", "Sprint"].some(key => {
+                    if (this.gameMgr.hasEffect(key) && this.config[`attractedBy${key}`]) {
+                        this.isAttracted = true;
+                        this.body.setDynamic();
+                        this.moveToPlayer();
+                        return true;
+                    }
+                });
             }
         }
     }
