@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":185,
-    "selecteID":195,
+    "selectedBox":13,
+    "selecteID":179,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":202,
+    "maxID":210,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -35,14 +35,13 @@
             "props":{"y":5,"x":243,"width":270,"top":5,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":4},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":184,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-num-12.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -55,7 +54,6 @@
                     "compId":188,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-diamond.png","scaleY":0.9,"scaleX":0.9,"centerY":0,"centerX":0},
@@ -71,7 +69,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,diamondText",
                     "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
@@ -92,14 +89,13 @@
             "props":{"y":5,"x":481,"width":270,"top":5,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":242},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":185,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"skin":"images/bottom-num-12.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -112,7 +108,6 @@
                     "compId":192,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-coin.png","scaleY":0.9,"scaleX":0.9,"centerY":0,"centerX":0},
@@ -128,7 +123,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,coinText",
                     "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
@@ -149,14 +143,13 @@
             "props":{"y":75,"x":244,"width":270,"top":75,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":5},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":186,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-num-12.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -169,7 +162,6 @@
                     "compId":196,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.8,"scaleX":0.8,"centerY":-3,"centerX":2},
@@ -185,7 +177,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,distanceText",
                     "props":{"var":"distanceText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
@@ -206,14 +197,13 @@
             "props":{"y":75,"x":481,"width":270,"top":75,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":242},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":187,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-num-12.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -226,7 +216,6 @@
                     "compId":199,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-mark.png","scaleY":0.9,"scaleX":0.9,"centerY":-2,"centerX":-1},
@@ -242,7 +231,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,totalScoreText",
                     "props":{"var":"totalScoreText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
@@ -274,19 +262,20 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,tab",
-            "props":{"width":700,"var":"tab","top":160,"left":5,"height":78},
+            "props":{"width":632,"var":"tab","top":160,"height":78,"centerX":0},
             "nodeParent":1,
             "label":"tab",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":24,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,radio",
-                    "props":{"y":0,"x":0,"width":95,"var":"radio","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":78},
+                    "props":{"width":208,"var":"radio","top":0,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":59},
                     "nodeParent":24,
                     "label":"radio",
                     "isOpen":true,
@@ -296,9 +285,10 @@
                     "compId":13,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,common",
-                            "props":{"width":95,"top":0,"skin":"images/button-tab-1.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"common","height":78},
+                            "props":{"width":208,"skin":"images/button-shop-12.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"common","height":59,"centerY":5,"centerX":0},
                             "nodeParent":13,
                             "label":"common",
                             "isDirectory":false,
@@ -309,9 +299,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selected",
-                            "props":{"width":95,"visible":false,"top":0,"skin":"images/button-tab-2.png","name":"selected","left":0,"height":78},
+                            "props":{"width":208,"visible":false,"skin":"images/button-shop-11.png","name":"selected","height":59,"centerY":5,"centerX":0},
                             "nodeParent":13,
                             "label":"selected",
                             "isDirectory":false,
@@ -323,9 +314,10 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,tab1Image",
-                            "props":{"skin":"images/english/Diamond.png","name":"tab1Image","centerY":0,"centerX":0},
+                            "props":{"skin":"images/english/Diamond.png","name":"tab1Image","centerY":5,"centerX":0},
                             "nodeParent":13,
                             "label":"tab1Image",
                             "isDirectory":false,
@@ -337,9 +329,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,tab2Image",
-                            "props":{"skin":"images/english/Gold.png","name":"tab2Image","centerY":0,"centerX":0},
+                            "props":{"skin":"images/english/Gold.png","name":"tab2Image","centerY":5,"centerX":0},
                             "nodeParent":13,
                             "label":"tab2Image",
                             "isDirectory":false,
@@ -351,9 +344,10 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,tab3Image",
-                            "props":{"y":0,"x":0,"skin":"images/english/World.png","name":"tab3Image","centerY":0,"centerX":0},
+                            "props":{"skin":"images/english/World.png","name":"tab3Image","centerY":0,"centerX":0},
                             "nodeParent":13,
                             "label":"tab3Image",
                             "isDirectory":false,
@@ -364,6 +358,21 @@
                                 ],
                             "$HIDDEN":false
                         }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/bg-56.png","left":0,"centerY":0},
+                    "nodeParent":24,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":206,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -686,7 +695,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,mapPanel",
-            "props":{"var":"mapPanel","top":240,"right":0,"left":0,"bottom":0},
+            "props":{"visible":false,"var":"mapPanel","top":240,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"mapPanel",
             "isOpen":false,
@@ -936,16 +945,17 @@
             "props":{"var":"goldPanel","top":240,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"goldPanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":128,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,goldList",
-                    "props":{"width":704,"var":"goldList","top":30,"height":1020,"centerX":0},
+                    "props":{"width":632,"var":"goldList","top":30,"centerX":0,"bottom":0},
                     "nodeParent":128,
                     "label":"goldList",
                     "isOpen":true,
@@ -955,9 +965,10 @@
                     "compId":129,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
-                            "props":{"width":704,"top":0,"left":0,"height":115},
+                            "props":{"width":632,"top":0,"left":0,"height":200},
                             "nodeParent":129,
                             "label":"Panel",
                             "isOpen":true,
@@ -967,9 +978,10 @@
                             "compId":130,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,goldItem",
-                                    "props":{"width":704,"var":"goldItem","skin":"images/bg-8.png","sizeGrid":"40,40,40,40","height":110},
+                                    "props":{"width":632,"var":"goldItem","skin":"images/bg-51.png","sizeGrid":"40,40,40,40","height":156},
                                     "nodeParent":130,
                                     "label":"goldItem",
                                     "isOpen":true,
@@ -979,6 +991,51 @@
                                     "compId":131,
                                     "child":[
                                         {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"skin":"images/bottom-num-21.png","left":101,"centerY":0},
+                                            "nodeParent":131,
+                                            "label":"Image",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":207,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"skin":"images/bottom-num-22.png","left":101,"centerY":0},
+                                            "nodeParent":131,
+                                            "label":"Image",
+                                            "isOpen":true,
+                                            "isDirectory":true,
+                                            "isAniNode":true,
+                                            "hasChild":true,
+                                            "compId":208,
+                                            "child":[
+                                                {
+                                                    "x":90,
+                                                    "type":"Image",
+                                                    "searchKey":"Image",
+                                                    "props":{"skin":"images/icon-coin.png","scaleY":0.8,"scaleX":0.8,"centerY":0,"centerX":0},
+                                                    "nodeParent":208,
+                                                    "label":"Image",
+                                                    "isOpen":true,
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":209,
+                                                    "child":[
+                                                        ]
+                                                }]
+                                        },
+                                        {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,itemIcon",
                                             "props":{"skin":"images/money-icon/MainMenuItemCourseNum01.png","name":"itemIcon","left":25,"centerY":0},
@@ -994,9 +1051,10 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,dsc",
-                                            "props":{"text":"somethingsomething","name":"dsc","left":75,"fontSize":30,"color":"#ffffff","centerY":0},
+                                            "props":{"text":"somethingsomething","name":"dsc","left":170,"fontSize":30,"color":"#ffffff","centerY":0},
                                             "nodeParent":131,
                                             "label":"dsc",
                                             "isDirectory":false,
@@ -1007,9 +1065,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,buyText",
-                                            "props":{"width":170,"skin":"images/button-shop-3.png","right":25,"name":"buyText","height":50,"centerY":0},
+                                            "props":{"width":191,"skin":"images/button-start-3.png","right":25,"name":"buyText","height":61,"centerY":0},
                                             "nodeParent":131,
                                             "label":"buyText",
                                             "isOpen":true,
@@ -1019,9 +1078,10 @@
                                             "compId":140,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Label",
                                                     "searchKey":"Label",
-                                                    "props":{"text":"${GotToday}","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                                                    "props":{"text":"${GotToday}","fontSize":25,"color":"#ffffff","centerY":-5,"centerX":0},
                                                     "nodeParent":140,
                                                     "label":"Label",
                                                     "isDirectory":false,
@@ -1035,9 +1095,10 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,advertButton",
-                                            "props":{"width":170,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"name":"advertButton","height":50,"centerY":0},
+                                            "props":{"width":191,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"name":"advertButton","height":61,"centerY":0},
                                             "nodeParent":131,
                                             "label":"advertButton",
                                             "isOpen":true,
@@ -1047,9 +1108,10 @@
                                             "compId":142,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Image",
                                                     "searchKey":"Image",
-                                                    "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":10,"centerY":0},
+                                                    "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":-5},
                                                     "nodeParent":142,
                                                     "label":"Image",
                                                     "isOpen":true,
@@ -1061,9 +1123,10 @@
                                                         ]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Label",
                                                     "searchKey":"Label",
-                                                    "props":{"text":"${FreeCollection}","left":50,"fontSize":25,"color":"#ffffff","centerY":0},
+                                                    "props":{"text":"${FreeCollection}","left":60,"fontSize":25,"color":"#ffffff","centerY":-5},
                                                     "nodeParent":142,
                                                     "label":"Label",
                                                     "isDirectory":false,
@@ -1073,38 +1136,25 @@
                                                     "child":[
                                                         ]
                                                 }]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "searchKey":"Label,onlineText",
+                                            "props":{"text":"on-line time","right":30,"name":"onlineText","fontSize":25,"color":"#ffffff","centerY":0},
+                                            "nodeParent":131,
+                                            "label":"onlineText",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":168,
+                                            "child":[
+                                                ]
                                         }],
                                     "$HIDDEN":false
-                                },
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label,onlineText",
-                                    "props":{"text":"on-line time","right":40,"name":"onlineText","fontSize":25,"color":"#ffffff","centerY":0},
-                                    "nodeParent":130,
-                                    "label":"onlineText",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":168,
-                                    "child":[
-                                        ]
                                 }]
                         }]
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":0,"x":0,"width":720,"skin":"images/shop-title-1.png","height":20},
-                    "nodeParent":128,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":139,
-                    "child":[
-                        ]
                 }],
             "$HIDDEN":false
         },
@@ -1115,16 +1165,17 @@
             "props":{"var":"diamondPanel","top":240,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"diamondPanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":145,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,diamondList",
-                    "props":{"width":704,"var":"diamondList","top":30,"height":1020,"centerX":0},
+                    "props":{"width":632,"var":"diamondList","top":30,"centerX":0,"bottom":0},
                     "nodeParent":145,
                     "label":"diamondList",
                     "isOpen":true,
@@ -1134,9 +1185,10 @@
                     "compId":146,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
-                            "props":{"width":704,"top":0,"left":0,"height":115},
+                            "props":{"width":632,"top":0,"left":0,"height":200},
                             "nodeParent":146,
                             "label":"Panel",
                             "isOpen":true,
@@ -1146,9 +1198,10 @@
                             "compId":147,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,diamondItem",
-                                    "props":{"width":704,"var":"diamondItem","skin":"images/bg-8.png","sizeGrid":"40,40,40,40","height":110},
+                                    "props":{"width":632,"var":"diamondItem","skin":"images/bg-51.png","sizeGrid":"40,40,40,40","height":156},
                                     "nodeParent":147,
                                     "label":"diamondItem",
                                     "isOpen":true,
@@ -1158,6 +1211,50 @@
                                     "compId":148,
                                     "child":[
                                         {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"skin":"images/bottom-num-21.png","left":101,"centerY":0},
+                                            "nodeParent":148,
+                                            "label":"Image",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":202,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"skin":"images/bottom-num-22.png","left":101,"centerY":0},
+                                            "nodeParent":148,
+                                            "label":"Image",
+                                            "isOpen":false,
+                                            "isDirectory":true,
+                                            "isAniNode":true,
+                                            "hasChild":true,
+                                            "compId":203,
+                                            "child":[
+                                                {
+                                                    "type":"Image",
+                                                    "searchKey":"Image",
+                                                    "props":{"skin":"images/icon-diamond.png","scaleY":0.8,"scaleX":0.8,"centerY":0,"centerX":0},
+                                                    "nodeParent":203,
+                                                    "label":"Image",
+                                                    "isOpen":true,
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":204,
+                                                    "child":[
+                                                        ]
+                                                }]
+                                        },
+                                        {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,itemIcon",
                                             "props":{"skin":"images/money-icon/MainMenuItemCourseNum01.png","name":"itemIcon","left":25,"centerY":0},
@@ -1173,9 +1270,10 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,dsc",
-                                            "props":{"text":"somethingsomething","name":"dsc","left":75,"fontSize":30,"color":"#ffffff","centerY":0},
+                                            "props":{"text":"somethingsomething","name":"dsc","left":190,"fontSize":30,"color":"#ffffff","centerY":0},
                                             "nodeParent":148,
                                             "label":"dsc",
                                             "isDirectory":false,
@@ -1186,9 +1284,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,buyText",
-                                            "props":{"width":170,"visible":true,"skin":"images/button-shop-3.png","right":25,"name":"buyText","height":50,"centerY":0},
+                                            "props":{"width":191,"visible":true,"skin":"images/button-start-3.png","right":25,"name":"buyText","height":61,"centerY":0},
                                             "nodeParent":148,
                                             "label":"buyText",
                                             "isOpen":true,
@@ -1198,9 +1297,10 @@
                                             "compId":151,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Label",
                                                     "searchKey":"Label",
-                                                    "props":{"text":"${GotToday}","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                                                    "props":{"text":"${GotToday}","fontSize":25,"color":"#ffffff","centerY":-5,"centerX":0},
                                                     "nodeParent":151,
                                                     "label":"Label",
                                                     "isDirectory":false,
@@ -1214,9 +1314,10 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,advertButton",
-                                            "props":{"width":170,"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"name":"advertButton","height":50,"centerY":0},
+                                            "props":{"width":191,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"name":"advertButton","height":61,"centerY":0},
                                             "nodeParent":148,
                                             "label":"advertButton",
                                             "isOpen":true,
@@ -1226,9 +1327,10 @@
                                             "compId":153,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Image",
                                                     "searchKey":"Image",
-                                                    "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":10,"centerY":0},
+                                                    "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":-5},
                                                     "nodeParent":153,
                                                     "label":"Image",
                                                     "isOpen":true,
@@ -1240,9 +1342,10 @@
                                                         ]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Label",
                                                     "searchKey":"Label",
-                                                    "props":{"text":"${FreeCollection}","left":50,"fontSize":25,"color":"#ffffff","centerY":0},
+                                                    "props":{"text":"${FreeCollection}","left":60,"fontSize":25,"color":"#ffffff","centerY":-5},
                                                     "nodeParent":153,
                                                     "label":"Label",
                                                     "isDirectory":false,
@@ -1252,38 +1355,25 @@
                                                     "child":[
                                                         ]
                                                 }]
+                                        },
+                                        {
+                                            "x":75,
+                                            "type":"Label",
+                                            "searchKey":"Label,onlineText",
+                                            "props":{"text":"on-line time","right":30,"name":"onlineText","fontSize":25,"color":"#ffffff","centerY":0,"align":"right"},
+                                            "nodeParent":148,
+                                            "label":"onlineText",
+                                            "isOpen":true,
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":157,
+                                            "child":[
+                                                ]
                                         }],
                                     "$HIDDEN":false
-                                },
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label,onlineText",
-                                    "props":{"text":"on-line time","right":40,"name":"onlineText","fontSize":25,"color":"#ffffff","centerY":0},
-                                    "nodeParent":147,
-                                    "label":"onlineText",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":157,
-                                    "child":[
-                                        ]
                                 }]
                         }]
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":0,"x":0,"width":720,"skin":"images/shop-title-2.png","height":20},
-                    "nodeParent":145,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":156,
-                    "child":[
-                        ]
                 }],
             "$HIDDEN":true
         }],

@@ -10,8 +10,8 @@ Selected,,HomeScene.scene.json,已选择,Selected,選択済み
 LV,,BikeScene.scene.json,等级,LV,レベル
 Exp,,,经验,Exp,
 LevelDsc,,,等级${level},Lv. ${level},
-Unlock,,DrawScene.scene.json,恭喜骑士大人解锁自行车,Unlock,アンロックしていました。
-LvUp,,DrawScene.scene.json,恭喜骑士大人等级提升,LV UP,レベル　アップ
+Unlock,,DrawScene.scene.json,• 恭喜骑士大人解锁自行车 •,Unlock,アンロックしていました。
+LvUp,,DrawScene.scene.json,• 恭喜骑士大人等级提升 •,LV UP,レベル　アップ
 Free,,"DrawScene.scene.json
 GameOverScene.scene.json",免费,Free,無料
 Draw,,DrawScene.scene.json,幸运扭蛋,Draw,くじ引き
@@ -103,7 +103,6 @@ Speed     ${speed}%
 Jump      ${jump}%
 HighJump  ${highJump}
 Size      ${size}",
-LevelDsc,,,等级          ${level},LV        ${level},
 BonusDsc,,,"金币          ${coin}
 里程          ${distance}
 积分          ${score}
@@ -121,12 +120,12 @@ Loading,,,加载中 ...,Loading ...,
 LearnJump,,,点击画面可以进行跳跃,,
 LearnItem,,,点击左边两个道具栏可以使用道具,,
 NewContent,,,新的内容已解锁,,
-GiftTitle,,,● 看视频领礼包 ●,,
+GiftTitle,,,• 看视频领礼包 •,,
 GiftContent,,,观看视频，获得超值奖励,,
-SignTitle,,,● 签到看视频领奖励 ●,,
+SignTitle,,,• 签到看视频领奖励 •,,
 PrizeTitle,,,恭喜获得,,
 PlayerInfoTitle,,,玩家成就内容,,
-PreparationTitle,,,开战前额外准备,,
+PreparationTitle,,,• 开战前额外准备 •,,
 FreeCollection,,,免费领取,,
 DoubleReward,,,双倍奖励,,
 PreparationItem1,,,随机道具,,
@@ -360,7 +359,7 @@ say5010,,,无限循环 进入排名竞赛关卡 随机10,,
 say5011,,,无限循环 进入排名竞赛关卡 随机11,,
 ThereIsNoGiftToday,,,真可惜，今天的礼包领完了呢,,
 领取礼包的时间还没到,,,抱歉骑士大人，还未到礼包领取时间哦,,
-OnlineSay,,,骑士大人，再过 ${time} 就可以领取了,,
+OnlineSay,,,${time} 后就可以领取了,,
 GotToday,,,今天已领取,,
 HasDoubleReward,,,已经获得了双倍奖励,,
 HasNoRebornTimes,,,已经没有复活次数了,,
@@ -606,3 +605,6 @@ TextMap-3-2-1,,,小骑士！ 多层地形是可以跳上去的！ 别怕呀！,,
 TextMap-3-3-1,,,小骑士！ 来劲情享受跳跳乐吧！ 看看你的弹跳能力如何呢！,,
 TextMap-3-4-1,,,小骑士！ 高高低低的多层地形就像是迷宫一样！ 你准备好了吗！,,
 TextMap-3-5-1,,,小骑士！ 进行抉择吧！ 看看你的运气是否足够强大！ 当然你也可以再来一次！,,
+TextMap-4-1-1,,,小骑士！ 磁铁道具在手！ 自动吃掉有没有！ 别客气多吃点呀！,,
+TextMap-4-2-1,,,小骑士！ 看！ 前面有小鸟！ 跳上去踩一踩有惊喜哟！,,
+TextMap-4-3-1,,,小骑士！ 送你一堆的磁铁！ 看你的本事搞定它们吧！,,

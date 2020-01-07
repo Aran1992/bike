@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":3,
+    "selectedBox":8,
+    "selecteID":9,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":11,
+    "maxID":19,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -14,6 +14,51 @@
     "hasChild":true,
     "compId":2,
     "child":[
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"y":0,"x":0,"top":0,"skin":"images/bg-main-scene-2.png","right":0,"left":0,"bottom":0},
+            "nodeParent":2,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"width":650,"top":350,"skin":"images/bg-21.png","height":750,"centerX":0},
+            "nodeParent":2,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":12,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"top":300,"skin":"images/bg-61.png","centerX":0},
+            "nodeParent":2,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":14,
+            "child":[
+                ]
+        },
         {
             "x":15,
             "type":"Panel",
@@ -31,7 +76,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":614,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":550,"centerY":0,"centerX":0},
+                    "props":{"width":614,"sizeGrid":"50,50,50,50","height":750,"centerY":200,"centerX":0},
                     "nodeParent":3,
                     "label":"Image",
                     "isOpen":true,
@@ -43,8 +88,23 @@
                         {
                             "x":45,
                             "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-main-scene-21.png","centerY":0,"centerX":0},
+                            "nodeParent":4,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":13,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
                             "searchKey":"Image,returnButton",
-                            "props":{"var":"returnButton","top":-39,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-39},
+                            "props":{"var":"returnButton","top":-144,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-45},
                             "nodeParent":4,
                             "label":"returnButton",
                             "isDirectory":false,
@@ -58,7 +118,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,levelUpIcon",
-                            "props":{"var":"levelUpIcon","top":-150,"skin":"images/LvUp.png","left":0},
+                            "props":{"var":"levelUpIcon","top":-120,"centerX":0},
                             "nodeParent":4,
                             "label":"levelUpIcon",
                             "isOpen":true,
@@ -71,7 +131,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"text":"${LvUp}","strokeColor":"#000000","stroke":5,"left":120,"fontSize":50,"color":"#ffffff","centerY":0,"align":"center"},
+                                    "props":{"text":"${LvUp}","strokeColor":"#000000","fontSize":35,"color":"#ffffff","centerY":5,"centerX":0,"align":"center"},
                                     "nodeParent":6,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -80,13 +140,28 @@
                                     "compId":7,
                                     "child":[
                                         ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"skin":"images/LvUp.png","centerY":-100,"centerX":0},
+                                    "nodeParent":6,
+                                    "label":"Image",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":15,
+                                    "child":[
+                                        ]
                                 }]
                         },
                         {
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,unlockIcon",
-                            "props":{"var":"unlockIcon","top":-130,"skin":"images/key_unlock.png","left":0},
+                            "props":{"var":"unlockIcon","top":-120,"centerX":0},
                             "nodeParent":4,
                             "label":"unlockIcon",
                             "isOpen":true,
@@ -99,7 +174,7 @@
                                     "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"text":"${Unlock}","strokeColor":"#000000","stroke":5,"left":70,"fontSize":50,"color":"#ffffff","centerY":0,"align":"center"},
+                                    "props":{"text":"${Unlock}","strokeColor":"#000000","fontSize":35,"color":"#ffffff","centerY":5,"centerX":0,"align":"center"},
                                     "nodeParent":8,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -108,13 +183,28 @@
                                     "compId":9,
                                     "child":[
                                         ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"skin":"images/key_unlock.png","scaleY":2,"scaleX":2,"centerY":-100,"centerX":0},
+                                    "nodeParent":8,
+                                    "label":"Image",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":17,
+                                    "child":[
+                                        ]
                                 }]
                         },
                         {
                             "x":45,
                             "type":"Label",
                             "searchKey":"Label,bikeDsc",
-                            "props":{"y":170,"var":"bikeDsc","text":"12345678901234567890","leading":5,"fontSize":30,"color":"#ffffff","centerX":0,"align":"center"},
+                            "props":{"var":"bikeDsc","text":"12345678901234567890","leading":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"align":"center"},
                             "nodeParent":4,
                             "label":"bikeDsc",
                             "isDirectory":false,
