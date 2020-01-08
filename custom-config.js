@@ -4728,7 +4728,7 @@ Config.item = {
                 value: 1,
                 // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedByMagnet: 1,
-                // 是否会被冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
             },
             // 5金币
@@ -4736,11 +4736,21 @@ Config.item = {
                 portable: 0,
                 effect: "GoldCoin",
                 value: 5,
+                value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 星星
             333: {
                 portable: 0,
                 effect: "Star",
+                value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 经验
             444: {
@@ -4749,7 +4759,7 @@ Config.item = {
                 value: 5,
                 // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedByMagnet: 1,
-                // 是否会被冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
             },
             // 经验
@@ -4759,7 +4769,7 @@ Config.item = {
                 value: 1,
                 // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedByMagnet: 1,
-                // 是否会被冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
             },
             // 陷阱：减速
@@ -4796,106 +4806,191 @@ Config.item = {
             101: {
                 portable: 0,
                 effect: "Accelerate",
+                value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益：强化跳跃
             106: {
                 portable: 0,
                 effect: "PowerJump",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益：无限跳跃
             111: {
                 portable: 0,
                 effect: "UnlimitedJump",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
             121: {
                 portable: 0,
                 effect: "Magnet",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益：无敌
             131: {
                 portable: 0,
                 effect: "Invincible",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益：超级无敌冲刺
             141: {
                 portable: 0,
                 effect: "Sprint",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
-            // 随机效果（机会命运）（还需要程序支持）
+            // 随机效果（机会命运）（还需要程序支持）（现在不能用用了会出错）
             9999: {
                 portable: 0,
                 effect: "Random",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：减速
             10: {
                 portable: 1,
                 effect: "Decelerate",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：削弱跳跃
             60: {
                 portable: 1,
                 effect: "WeakenJump",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：遮挡视线
             210: {
                 portable: 1,
                 effect: "BlockSight",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：束缚
             260: {
                 portable: 1,
                 effect: "SpiderWeb",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：封印
             1031: {
                 portable: 1,
                 effect: "Seal",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：落雷
             1036: {
                 portable: 1,
                 effect: "Thunder",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 害人道具：香蕉皮炸弹
             1041: {
                 portable: 1,
                 effect: "BananaPeel",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益道具：加速
             1010: {
                 portable: 1,
                 effect: "Accelerate",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益道具：强化跳跃
             1060: {
                 portable: 1,
                 effect: "PowerJump",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益道具：无限跳跃
             1110: {
                 portable: 1,
                 effect: "UnlimitedJump",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益道具：磁铁（只能用于无尽模式，排名竞赛用会当机）
             1210: {
                 portable: 1,
                 effect: "Magnet",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益道具：无敌
             1310: {
                 portable: 1,
                 effect: "Invincible",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 增益道具：超级无敌冲刺
             1410: {
                 portable: 1,
                 effect: "Sprint",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             },
             // 随机道具
             99990: {
                 portable: 1,
                 effect: "Random",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
             }
         }
     },
@@ -7418,7 +7513,7 @@ Config.signRewardList = [
 Config.advertDrawBikeTime = 3;
 
 // 每局能够进行的复活总次数（包括广告和钻石）
-Config.rebornTimes = 3;
+Config.rebornTimes = 1;
 
 // 进入关卡的最短加载时间（单位：秒）
 Config.minLoadingTime = 3;
@@ -7588,7 +7683,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-4-3.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -7734,7 +7829,7 @@ Config.gameLevelMode = {
             // 地图描述
             dsc: "Select Map4",
             // 主页封面图
-            mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
+            mainCover: "images/map/DX2_Scorpius/TextureDX2_ScorpiusMap.png",
             // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
             texture: {
                 // 侧边
@@ -7780,7 +7875,7 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-4-1.scene.json",
                 "myLaya/laya/pages/Map/Map-4-2.scene.json",
                 "myLaya/laya/pages/Map/Map-4-3.scene.json",
-                "myLaya/laya/pages/Map/Map-2-4.scene.json",
+                "myLaya/laya/pages/Map/Map-4-4.scene.json",
                 "myLaya/laya/pages/Map/Map-2-5.scene.json",
             ],
             rewardList: [

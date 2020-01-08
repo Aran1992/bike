@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":15,
-    "selecteID":68,
+    "selectedBox":1,
+    "selecteID":54,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":167,
+    "maxID":273,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -49,14 +49,13 @@
             "props":{"top":70,"skin":"images/bg-main-scene-11.png","centerX":0,"bottom":-50},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
                     "props":{"width":560,"var":"list","top":70,"centerX":0,"bottom":330},
@@ -183,123 +182,21 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-main-scene-12.png","height":350,"centerX":0,"bottom":50},
+                    "props":{"width":620,"visible":false,"top":40,"skin":"images/bg-21.png","sizeGrid":"20,20,20,20","height":884,"centerX":0,"bottom":336},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":21,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image,drawButton",
-                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":62},
-                            "nodeParent":21,
-                            "label":"drawButton",
-                            "isOpen":true,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":22,
-                            "child":[
-                                {
-                                    "x":60,
-                                    "type":"Image",
-                                    "searchKey":"Image",
-                                    "props":{"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":-40},
-                                    "nodeParent":22,
-                                    "label":"Image",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":60,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "x":60,
-                                    "type":"Image",
-                                    "searchKey":"Image,lockedImage",
-                                    "props":{"y":0,"x":35,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
-                                    "nodeParent":22,
-                                    "label":"lockedImage",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":166,
-                                    "child":[
-                                        ],
-                                    "$HIDDEN":false
-                                }],
-                            "$HIDDEN":false
-                        },
-                        {
-                            "x":45,
-                            "type":"Label",
-                            "searchKey":"Label,bikeDscText",
-                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":10,"centerX":30},
-                            "nodeParent":21,
-                            "label":"bikeDscText",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":51,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"width":101,"visible":false,"top":60,"skin":"images/skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
-                            "nodeParent":21,
-                            "label":"Image",
-                            "isOpen":false,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":65,
-                            "child":[
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label",
-                                    "props":{"text":"能力","stroke":5,"leading":5,"fontSize":30,"color":"#ffffff","centerY":30,"centerX":0},
-                                    "nodeParent":65,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":67,
-                                    "child":[
-                                        ]
-                                }]
-                        }],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"width":585,"visible":false,"top":20,"skin":"images/bg-1.png","sizeGrid":"20,20,20,20","centerX":0,"bottom":330},
-                    "nodeParent":15,
-                    "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":68,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":570,"top":50,"skin":"images/bg-11.png","height":100,"centerX":0},
+                            "props":{"width":570,"top":50,"skin":"images/bg-51.png","height":100,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":false,
@@ -338,10 +235,10 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"x":250,"width":290,"skin":"images/bg-1.png","height":60,"centerY":0},
+                                    "props":{"width":280,"skin":"images/bottom-num-21.png","right":20,"height":60,"centerY":0},
                                     "nodeParent":74,
                                     "label":"Image",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
@@ -350,7 +247,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,1",
-                                            "props":{"width":25,"skin":"images/shop-title-3.png","name":"1","left":10,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"1","left":20,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"1",
                                             "isDirectory":false,
@@ -363,7 +260,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,2",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"2","left":37,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"2","left":40,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"2",
                                             "isDirectory":false,
@@ -376,7 +273,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,3",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"3","left":64,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"3","left":60,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"3",
                                             "isDirectory":false,
@@ -389,7 +286,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,4",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"4","left":91,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"4","left":80,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"4",
                                             "isDirectory":false,
@@ -402,7 +299,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,5",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"5","left":118,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"5","left":100,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"5",
                                             "isDirectory":false,
@@ -415,7 +312,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,6",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"6","left":145,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"6","left":120,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"6",
                                             "isDirectory":false,
@@ -428,7 +325,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,7",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"7","left":172,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"7","left":140,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"7",
                                             "isDirectory":false,
@@ -441,7 +338,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,8",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"8","left":199,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"8","left":160,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"8",
                                             "isDirectory":false,
@@ -454,7 +351,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,9",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"9","left":226,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"9","left":180,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"9",
                                             "isDirectory":false,
@@ -467,7 +364,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,10",
-                                            "props":{"y":6,"width":25,"skin":"images/shop-title-3.png","name":"10","left":253,"height":50,"centerY":1},
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"10","left":200,"height":50,"centerY":0},
                                             "nodeParent":85,
                                             "label":"10",
                                             "isDirectory":false,
@@ -478,9 +375,191 @@
                                                 ]
                                         },
                                         {
+                                            "type":"Image",
+                                            "searchKey":"Image,11",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"11","left":220,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"11",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":179,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,12",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"12","left":240,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"12",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":180,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,21",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"21","left":20,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"21",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":181,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,22",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"22","left":40,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"22",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":182,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,23",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"23","left":60,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"23",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":183,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,24",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"24","left":80,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"24",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":184,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,25",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"25","left":100,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"25",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":185,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,26",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"26","left":120,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"26",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":186,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,27",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"27","left":140,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"27",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":187,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,28",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"28","left":160,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"28",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":188,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,29",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"29","left":180,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"29",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":189,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,30",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"30","left":200,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"30",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":190,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,31",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"31","left":220,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"31",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":191,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,32",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"32","left":240,"height":50,"centerY":0},
+                                            "nodeParent":85,
+                                            "label":"32",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":192,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"y":10,"x":54,"text":"0.1秒 / 5秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
+                                            "props":{"y":10,"x":44,"text":"0.5秒 / 6秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
                                             "nodeParent":85,
                                             "label":"Label",
                                             "isOpen":true,
@@ -494,10 +573,9 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":8,"width":570,"top":170,"skin":"images/bg-11.png","height":100,"centerX":0},
+                            "props":{"width":570,"top":170,"skin":"images/bg-51.png","height":100,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":false,
@@ -536,166 +614,347 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"x":250,"width":290,"skin":"images/bg-1.png","height":60,"centerY":0},
+                                    "props":{"y":0,"x":0,"width":280,"skin":"images/bottom-num-21.png","right":20,"height":60,"centerY":0},
                                     "nodeParent":100,
                                     "label":"Image",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":103,
+                                    "compId":193,
                                     "child":[
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,1",
-                                            "props":{"width":25,"skin":"images/shop-title-3.png","name":"1","left":10,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"1","left":20,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"1",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":104,
+                                            "compId":194,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,2",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"2","left":37,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"2","left":40,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"2",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":105,
+                                            "compId":195,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,3",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"3","left":64,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"3","left":60,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"3",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":106,
+                                            "compId":196,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,4",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"4","left":91,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"4","left":80,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"4",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":107,
+                                            "compId":197,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,5",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"5","left":118,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"5","left":100,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"5",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":108,
+                                            "compId":198,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,6",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"6","left":145,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"6","left":120,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"6",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":109,
+                                            "compId":199,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,7",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"7","left":172,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"7","left":140,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"7",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":110,
+                                            "compId":200,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,8",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"8","left":199,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"8","left":160,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"8",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":111,
+                                            "compId":201,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,9",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"9","left":226,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"9","left":180,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"9",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":112,
+                                            "compId":202,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,10",
-                                            "props":{"y":6,"width":25,"skin":"images/shop-title-3.png","name":"10","left":253,"height":50,"centerY":1},
-                                            "nodeParent":103,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"10","left":200,"height":50,"centerY":0},
+                                            "nodeParent":193,
                                             "label":"10",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":113,
+                                            "compId":203,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,11",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"11","left":220,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"11",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":204,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,12",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"12","left":240,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"12",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":205,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,21",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"21","left":20,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"21",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":206,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,22",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"22","left":40,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"22",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":207,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,23",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"23","left":60,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"23",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":208,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,24",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"24","left":80,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"24",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":209,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,25",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"25","left":100,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"25",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":210,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,26",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"26","left":120,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"26",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":211,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,27",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"27","left":140,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"27",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":212,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,28",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"28","left":160,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"28",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":213,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,29",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"29","left":180,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"29",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":214,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,30",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"30","left":200,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"30",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":215,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,31",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"31","left":220,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"31",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":216,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,32",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"32","left":240,"height":50,"centerY":0},
+                                            "nodeParent":193,
+                                            "label":"32",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":217,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"y":10,"x":54,"text":"0.1秒 / 5秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
-                                            "nodeParent":103,
+                                            "props":{"y":10,"x":44,"text":"0.5秒 / 6秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
+                                            "nodeParent":193,
                                             "label":"Label",
                                             "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":114,
+                                            "compId":218,
                                             "child":[
                                                 ]
                                         }]
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":8,"width":570,"top":290,"skin":"images/bg-11.png","height":100,"centerX":0},
+                            "props":{"x":8,"width":570,"top":290,"skin":"images/bg-51.png","height":100,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":false,
@@ -734,166 +993,347 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"x":250,"width":290,"skin":"images/bg-1.png","height":60,"centerY":0},
+                                    "props":{"y":0,"x":0,"width":280,"skin":"images/bottom-num-21.png","right":20,"height":60,"centerY":0},
                                     "nodeParent":115,
                                     "label":"Image",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":118,
+                                    "compId":219,
                                     "child":[
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,1",
-                                            "props":{"width":25,"skin":"images/shop-title-3.png","name":"1","left":10,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"1","left":20,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"1",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":119,
+                                            "compId":220,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,2",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"2","left":37,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"2","left":40,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"2",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":120,
+                                            "compId":221,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,3",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"3","left":64,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"3","left":60,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"3",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":121,
+                                            "compId":222,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,4",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"4","left":91,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"4","left":80,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"4",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":122,
+                                            "compId":223,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,5",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"5","left":118,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"5","left":100,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"5",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":123,
+                                            "compId":224,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,6",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"6","left":145,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"6","left":120,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"6",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":124,
+                                            "compId":225,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,7",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"7","left":172,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"7","left":140,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"7",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":125,
+                                            "compId":226,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,8",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"8","left":199,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"8","left":160,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"8",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":126,
+                                            "compId":227,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,9",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"9","left":226,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"9","left":180,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"9",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":127,
+                                            "compId":228,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,10",
-                                            "props":{"y":6,"width":25,"skin":"images/shop-title-3.png","name":"10","left":253,"height":50,"centerY":1},
-                                            "nodeParent":118,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"10","left":200,"height":50,"centerY":0},
+                                            "nodeParent":219,
                                             "label":"10",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":128,
+                                            "compId":229,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,11",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"11","left":220,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"11",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":230,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,12",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"12","left":240,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"12",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":231,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,21",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"21","left":20,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"21",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":232,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,22",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"22","left":40,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"22",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":233,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,23",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"23","left":60,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"23",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":234,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,24",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"24","left":80,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"24",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":235,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,25",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"25","left":100,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"25",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":236,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,26",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"26","left":120,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"26",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":237,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,27",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"27","left":140,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"27",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":238,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,28",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"28","left":160,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"28",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":239,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,29",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"29","left":180,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"29",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":240,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,30",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"30","left":200,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"30",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":241,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,31",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"31","left":220,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"31",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":242,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,32",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"32","left":240,"height":50,"centerY":0},
+                                            "nodeParent":219,
+                                            "label":"32",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":243,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"y":10,"x":54,"text":"0.1秒 / 5秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
-                                            "nodeParent":118,
+                                            "props":{"y":10,"x":44,"text":"0.5秒 / 6秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
+                                            "nodeParent":219,
                                             "label":"Label",
                                             "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":129,
+                                            "compId":244,
                                             "child":[
                                                 ]
                                         }]
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":8,"width":570,"top":410,"skin":"images/bg-11.png","height":100,"centerX":0},
+                            "props":{"x":8,"width":570,"top":410,"skin":"images/bg-51.png","height":100,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":false,
@@ -932,166 +1372,347 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"x":250,"width":290,"skin":"images/bg-1.png","height":60,"centerY":0},
+                                    "props":{"y":0,"x":0,"width":280,"skin":"images/bottom-num-21.png","right":20,"height":60,"centerY":0},
                                     "nodeParent":130,
                                     "label":"Image",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
-                                    "compId":133,
+                                    "compId":245,
                                     "child":[
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,1",
-                                            "props":{"width":25,"skin":"images/shop-title-3.png","name":"1","left":10,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"1","left":20,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"1",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":134,
+                                            "compId":246,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,2",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"2","left":37,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"2","left":40,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"2",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":135,
+                                            "compId":247,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,3",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"3","left":64,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"3","left":60,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"3",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":136,
+                                            "compId":248,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,4",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"4","left":91,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"4","left":80,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"4",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":137,
+                                            "compId":249,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,5",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"5","left":118,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"5","left":100,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"5",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":138,
+                                            "compId":250,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,6",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"6","left":145,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"6","left":120,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"6",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":139,
+                                            "compId":251,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,7",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"7","left":172,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"7","left":140,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"7",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":140,
+                                            "compId":252,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,8",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"8","left":199,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"8","left":160,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"8",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":141,
+                                            "compId":253,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,9",
-                                            "props":{"y":0,"width":25,"skin":"images/shop-title-3.png","name":"9","left":226,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"9","left":180,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"9",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":142,
+                                            "compId":254,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,10",
-                                            "props":{"y":6,"width":25,"skin":"images/shop-title-3.png","name":"10","left":253,"height":50,"centerY":1},
-                                            "nodeParent":133,
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"10","left":200,"height":50,"centerY":0},
+                                            "nodeParent":245,
                                             "label":"10",
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":143,
+                                            "compId":255,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,11",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"11","left":220,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"11",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":256,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,12",
+                                            "props":{"width":18,"skin":"images/bg-96.png","name":"12","left":240,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"12",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":257,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,21",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"21","left":20,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"21",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":258,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,22",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"22","left":40,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"22",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":259,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,23",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"23","left":60,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"23",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":260,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,24",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"24","left":80,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"24",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":261,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,25",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"25","left":100,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"25",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":262,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,26",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"26","left":120,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"26",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":263,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,27",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"27","left":140,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"27",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":264,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,28",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"28","left":160,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"28",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":265,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,29",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"29","left":180,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"29",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":266,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,30",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"30","left":200,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"30",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":267,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,31",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"31","left":220,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"31",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":268,
+                                            "child":[
+                                                ]
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image,32",
+                                            "props":{"width":18,"skin":"images/bg-97.png","name":"32","left":240,"height":50,"centerY":0},
+                                            "nodeParent":245,
+                                            "label":"32",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":269,
                                             "child":[
                                                 ]
                                         },
                                         {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"y":10,"x":54,"text":"0.1秒 / 5秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
-                                            "nodeParent":133,
+                                            "props":{"y":10,"x":44,"text":"0.5秒 / 6秒","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerY":0,"centerX":0},
+                                            "nodeParent":245,
                                             "label":"Label",
                                             "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
-                                            "compId":144,
+                                            "compId":270,
                                             "child":[
                                                 ]
                                         }]
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":608,"x":132,"width":321,"visible":false,"skin":"images/button-shop-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":87,"centerX":0,"bottom":100},
+                            "props":{"width":330,"visible":false,"top":650,"skin":"images/button-start-3.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":85,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":false,
@@ -1103,7 +1724,7 @@
                                 {
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"text":"玩家99级才能继续升级","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"text":"玩家99级才能继续升级","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":-5,"centerX":0},
                                     "nodeParent":77,
                                     "label":"Label",
                                     "isOpen":true,
@@ -1117,10 +1738,9 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":100},
+                            "props":{"width":330,"top":650,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":85,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":false,
@@ -1130,26 +1750,25 @@
                             "compId":160,
                             "child":[
                                 {
-                                    "type":"Label",
-                                    "searchKey":"Label",
-                                    "props":{"text":"升级","strokeColor":"#000000","stroke":5,"fontSize":50,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"skin":"images/english/LevelUp.png","centerY":-5,"centerX":0},
                                     "nodeParent":160,
-                                    "label":"Label",
+                                    "label":"Image",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
-                                    "compId":161,
+                                    "compId":167,
                                     "child":[
                                         ]
                                 }],
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
-                            "props":{"x":0,"width":200,"height":70,"centerX":0,"bottom":30},
+                            "props":{"x":0,"width":200,"top":750,"height":70,"centerX":0},
                             "nodeParent":68,
                             "label":"Panel",
                             "isOpen":false,
@@ -1189,10 +1808,9 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"text":"已升级99次","fontSize":40,"color":"#ffffff","centerX":0,"bottom":200},
+                            "props":{"top":570,"text":"已升级99次","fontSize":40,"color":"#ffffff","centerX":0},
                             "nodeParent":68,
                             "label":"Label",
                             "isDirectory":false,
@@ -1204,10 +1822,9 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":0,"x":0,"width":570,"top":50,"skin":"images/bg-12.png","sizeGrid":"50,50,50,50","height":100,"centerX":0},
+                            "props":{"width":570,"top":50,"skin":"images/bg-91.png","height":100,"centerX":0},
                             "nodeParent":68,
                             "label":"Image",
                             "isOpen":true,
@@ -1219,6 +1836,100 @@
                                 ]
                         }],
                     "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/bg-main-scene-12.png","height":350,"centerX":0,"bottom":50},
+                    "nodeParent":15,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":21,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,drawButton",
+                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":62},
+                            "nodeParent":21,
+                            "label":"drawButton",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":22,
+                            "child":[
+                                {
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":-40},
+                                    "nodeParent":22,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":60,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Image",
+                                    "searchKey":"Image,lockedImage",
+                                    "props":{"y":0,"x":35,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                                    "nodeParent":22,
+                                    "label":"lockedImage",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":166,
+                                    "child":[
+                                        ],
+                                    "$HIDDEN":false
+                                }],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Label",
+                            "searchKey":"Label,bikeDscText",
+                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":10,"centerX":30},
+                            "nodeParent":21,
+                            "label":"bikeDscText",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":51,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"width":101,"visible":false,"top":60,"skin":"images/skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
+                            "nodeParent":21,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":65,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"text":"能力","stroke":5,"leading":5,"fontSize":30,"color":"#ffffff","centerY":70,"centerX":0},
+                                    "nodeParent":65,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":67,
+                                    "child":[
+                                        ]
+                                }]
+                        }],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":false
         },
@@ -1226,25 +1937,27 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,selectBikeButton",
-            "props":{"width":200,"var":"selectBikeButton","top":29,"skin":"images/button-enabled-scene.png","sizeGrid":"0,50,0,50","runtime":"../laya/assets/sounds/SE312.mp3","right":56,"height":70},
+            "props":{"width":200,"var":"selectBikeButton","top":29,"skin":"images/button-31.png","sizeGrid":"0,50,0,50","runtime":"../laya/assets/sounds/SE312.mp3","right":56,"height":70},
             "nodeParent":1,
             "label":"selectBikeButton",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":53,
             "child":[
                 {
-                    "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"text":"${Select} ","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/english/Enable.png","centerY":-5,"centerX":0},
                     "nodeParent":53,
-                    "label":"Label",
+                    "label":"Image",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":54,
+                    "compId":272,
                     "child":[
                         ]
                 }],
@@ -1254,28 +1967,29 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,unlockBikeImage",
-            "props":{"width":200,"visible":false,"var":"unlockBikeImage","top":29,"skin":"images/button-disabled-scene.png","sizeGrid":"0,50,0,50","right":56,"height":70},
+            "props":{"width":200,"visible":false,"var":"unlockBikeImage","top":29,"skin":"images/button-32.png","right":56,"height":70},
             "nodeParent":1,
             "label":"unlockBikeImage",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":55,
             "child":[
                 {
-                    "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"text":"${Unlocked}","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/english/Unlocked.png","centerY":-5,"centerX":0},
                     "nodeParent":55,
-                    "label":"Label",
+                    "label":"Image",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":57,
+                    "compId":271,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        ]
                 }],
             "$HIDDEN":false
         }],
