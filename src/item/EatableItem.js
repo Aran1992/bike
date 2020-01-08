@@ -46,7 +46,7 @@ export default class EatableItem extends EditorItem {
                     }
                     this.sprite.visible = false;
                     if (this.gameMgr.dynamicCreateRoad) {
-                        this.gameMgr.removeItem(this);
+                        this.willDestroyed = true;
                     }
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
@@ -65,7 +65,7 @@ export default class EatableItem extends EditorItem {
                     EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value);
                     this.sprite.visible = false;
                     if (this.gameMgr.dynamicCreateRoad) {
-                        this.gameMgr.removeItem(this);
+                        this.willDestroyed = true;
                     }
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {

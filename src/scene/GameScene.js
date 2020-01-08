@@ -953,16 +953,22 @@ export default class GameScene extends Scene {
 
         this.syncBirdSprite();
 
-        this.itemList.forEach(item => {
-            item.update && item.update();
-            let itemType = item.itemType;
-            if (!item.itemShowed && this.isItemXEnterView(item)) {
-                item.itemShowed = true;
-                if (Config.item[itemType] && Config.item[itemType].appearSoundPath) {
-                    MusicMgr.playSound(Config.item[itemType].appearSoundPath);
+        for (let i = 0; i < this.itemList.length; i++) {
+            let item = this.itemList[i];
+            if (item.willDestroyed) {
+                this.removeItem(item);
+                i--;
+            } else {
+                item.update && item.update();
+                let itemType = item.itemType;
+                if (!item.itemShowed && this.isItemXEnterView(item)) {
+                    item.itemShowed = true;
+                    if (Config.item[itemType] && Config.item[itemType].appearSoundPath) {
+                        MusicMgr.playSound(Config.item[itemType].appearSoundPath);
+                    }
                 }
             }
-        });
+        }
 
         if (this.syncEnemySprite) {
             this.syncEnemySprite();
