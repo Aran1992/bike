@@ -10,11 +10,18 @@ export default class BikeScene extends Scene {
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.selectBikeButton, this.onClickSelectedBikeButton.bind(this));
+        this.onClick(this.ui.upgradePanelButton, this.onClickUpgradePanelButton.bind(this));
+        this.onClick(this.ui.upgradeButton, this.onClickUpgradeButton.bind(this));
         this.list = new List({
             root: this.ui.list,
             initItemFunc: this.initItem.bind(this),
             updateItemFunc: this.updateItem.bind(this),
             count: Config.bikeList.length,
+        });
+        this.upgradeList = new List({
+            root: this.ui.upgradeList,
+            updateItemFunc: this.updateUpgradeItem.bind(this),
+            count: Config.upgradeList.length,
         });
     }
 
@@ -23,6 +30,8 @@ export default class BikeScene extends Scene {
         let lock = DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") === -1;
         GameUtils.greySprite(this.ui.drawButton, lock);
         GameUtils.findChildByName(this.ui.drawButton, "lockedImage").visible = lock;
+        this.ui.upgradePanel.visible = false;
+        this.ui.list.visible = true;
     }
 
     initItem(item) {
@@ -49,6 +58,24 @@ export default class BikeScene extends Scene {
         item.ui.fightMaskImage.visible = DataMgr.get(DataMgr.selectedBike, 0) === config.id;
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
         item.ui.levelText.text = level !== undefined ? `${App.getText("LV")}${level + 1}` : "";
+    }
+
+    updateUpgradeItem(item, index) {
+        Config.upgradeList.forEach((upgrade, i) => {
+            item.ui[`itemPanel${index}`].visible = index === i;
+        });
+        item.ui.selectedIcon.visible = index === this.selectedUpgradeIndex;
+        const cur = 0.5;
+        const max = 5;
+        item.ui.upgradeProgressLabel.text = App.getText("UpgradeItemDsc", {cur, max});
+        for (let i = 1; i <= 12; i++) {
+            const step = i / 24 * max;
+            this.ui[i].visible = cur >= step;
+        }
+        for (let i = 21; i <= 32; i++) {
+            const step = (i - 20 + 12) / 24;
+            this.ui[i].visible = cur >= step;
+        }
     }
 
     onClickReturnButton() {
@@ -113,6 +140,12 @@ export default class BikeScene extends Scene {
         DataMgr.set(DataMgr.selectedBike, Config.bikeList[this.selectedIndex].id);
         this.list.refresh();
         this.onClickItem({index: this.selectedIndex});
+    }
+
+    onClickUpgradePanelButton() {
+    }
+
+    onClickUpgradeButton() {
     }
 }
 
