@@ -45,7 +45,7 @@ export default class EatableItem extends EditorItem {
                         EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
                     }
                     this.sprite.visible = false;
-                    if (this.gameMgr.dynamicCreateRoad) {
+                    if (this.gameMgr.enemyList.length === 0) {
                         this.willDestroyed = true;
                     }
                 }
@@ -64,7 +64,7 @@ export default class EatableItem extends EditorItem {
                 if (this.sprite.visible) {
                     EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value);
                     this.sprite.visible = false;
-                    if (this.gameMgr.dynamicCreateRoad) {
+                    if (this.gameMgr.enemyList.length === 0) {
                         this.willDestroyed = true;
                     }
                 }

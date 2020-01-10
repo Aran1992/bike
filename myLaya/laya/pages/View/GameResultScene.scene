@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":54,
-    "selecteID":55,
+    "selectedBox":1,
+    "selecteID":2,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":59,
+    "maxID":64,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -17,8 +17,23 @@
         {
             "x":15,
             "type":"Image",
+            "searchKey":"Image",
+            "props":{"top":0,"skin":"images/bg-main-scene-2.png","right":0,"left":0,"bottom":0},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":59,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
             "searchKey":"Image,panel",
-            "props":{"y":10,"x":10,"var":"panel","skin":"images/bg-9.png","centerY":0,"centerX":0},
+            "props":{"width":697,"var":"panel","skin":"images/bg-21.png","height":1050,"centerY":0,"centerX":0},
             "nodeParent":1,
             "label":"panel",
             "isOpen":true,
@@ -31,46 +46,45 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":50,"x":6,"width":678,"skin":"images/bg-10.png","height":89},
+                    "props":{"top":-40,"skin":"images/bg-22.png","centerX":0},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":12,
+                    "compId":60,
                     "child":[
                         {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"skin":"images/english/COUNT.png","centerY":-2,"centerX":0},
-                            "nodeParent":12,
-                            "label":"Image",
-                            "isOpen":false,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"text":"${Count}","fontSize":40,"color":"#ffffff","centerY":-10,"centerX":0},
+                            "nodeParent":60,
+                            "label":"Label",
+                            "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":13,
+                            "compId":61,
                             "child":[
-                                ]
+                                ],
+                            "$HIDDEN":false
                         }]
                 },
                 {
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":175,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","height":100,"centerX":0},
+                    "props":{"top":150,"centerX":0},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":14,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
                             "props":{"var":"totalScoreText","text":"JAMES 当前总积分 1000","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"align":"center"},
@@ -88,17 +102,16 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":300,"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","centerX":0},
+                    "props":{"width":650,"top":250,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","height":150,"centerX":0},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":15,
                     "child":[
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,resultList",
                             "props":{"width":600,"var":"resultList","height":150,"centerY":0,"centerX":0},
@@ -111,10 +124,9 @@
                             "compId":34,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,resultItem",
-                                    "props":{"width":600,"var":"resultItem","top":0,"left":0,"height":50},
+                                    "props":{"width":600,"var":"resultItem","top":0,"height":75,"centerX":0},
                                     "nodeParent":34,
                                     "label":"resultItem",
                                     "isOpen":true,
@@ -124,10 +136,9 @@
                                     "compId":35,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,originScoreText",
-                                            "props":{"width":200,"var":"originScoreText","top":10,"text":"积分 500","left":20,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"var":"originScoreText","text":"积分 500","left":20,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":35,
                                             "label":"originScoreText",
                                             "isDirectory":false,
@@ -138,10 +149,9 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,scoreMultipleText",
-                                            "props":{"width":200,"var":"scoreMultipleText","top":10,"text":"*2倍->","left":250,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"var":"scoreMultipleText","text":"*2倍->","left":250,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":35,
                                             "label":"scoreMultipleText",
                                             "isDirectory":false,
@@ -152,10 +162,9 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,finalScoreText",
-                                            "props":{"width":200,"var":"finalScoreText","top":10,"text":"积分 1000","left":430,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"var":"finalScoreText","text":"积分 1000","left":430,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":35,
                                             "label":"finalScoreText",
                                             "isDirectory":false,
@@ -172,17 +181,16 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-11.png","sizeGrid":"50,50,50,50","height":300,"centerY":95,"centerX":0},
+                    "props":{"width":650,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","height":300,"centerX":0,"bottom":330},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":16,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,rankNameText",
                             "props":{"var":"rankNameText","top":25,"text":"本次排名","fontSize":30,"color":"#ffffff","centerX":0,"align":"center"},
@@ -196,7 +204,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,rankList",
                             "props":{"width":600,"var":"rankList","top":75,"height":200,"centerX":0},
@@ -209,7 +216,6 @@
                             "compId":48,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,rankItem",
                                     "props":{"width":600,"var":"rankItem","top":0,"left":0,"height":50},
@@ -222,7 +228,6 @@
                                     "compId":49,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
                                             "props":{"width":150,"top":5,"text":"第一名","left":0,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
@@ -236,7 +241,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
                                             "props":{"width":200,"top":5,"text":"玩家名","left":125,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
@@ -250,7 +254,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
                                             "props":{"width":200,"top":5,"text":"奖励积分","left":350,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
@@ -264,7 +267,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
                                             "props":{"width":200,"top":5,"text":"1000","left":500,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
@@ -283,27 +285,41 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,mainButton",
-                    "props":{"x":290,"var":"mainButton","skin":"images/button-main.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":50},
+                    "searchKey":"Image,advertDoubleButton",
+                    "props":{"var":"advertDoubleButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":190},
                     "nodeParent":2,
-                    "label":"mainButton",
-                    "isOpen":true,
+                    "label":"advertDoubleButton",
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":4,
+                    "compId":54,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/Main.png","centerX":0,"bottom":-17},
-                            "nodeParent":4,
+                            "props":{"y":0,"x":0,"skin":"images/advert.png","scaleY":0.8,"scaleX":0.8,"left":25,"centerY":-5},
+                            "nodeParent":54,
                             "label":"Image",
+                            "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":58,
+                            "compId":62,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"x":0,"skin":"images/english/double.png","left":95,"centerY":-5},
+                            "nodeParent":54,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":63,
                             "child":[
                                 ]
                         }]
@@ -312,7 +328,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,hasDoubleRewardText",
-                    "props":{"var":"hasDoubleRewardText","text":"${HasDoubleReward}","fontSize":50,"color":"#ffffff","centerY":340,"centerX":0},
+                    "props":{"var":"hasDoubleRewardText","text":"${HasDoubleReward}","fontSize":50,"color":"#ffffff","centerX":0,"bottom":220},
                     "nodeParent":2,
                     "label":"hasDoubleRewardText",
                     "isDirectory":false,
@@ -325,43 +341,26 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,advertDoubleButton",
-                    "props":{"var":"advertDoubleButton","skin":"images/button-start.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":340,"centerX":0},
+                    "searchKey":"Image,mainButton",
+                    "props":{"var":"mainButton","skin":"images/button-main.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerX":0,"bottom":70},
                     "nodeParent":2,
-                    "label":"advertDoubleButton",
-                    "isOpen":true,
+                    "label":"mainButton",
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":54,
+                    "compId":4,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":26,"x":20,"skin":"images/advert.png","scaleY":0.8,"scaleX":0.8,"left":20,"centerY":0},
-                            "nodeParent":54,
+                            "props":{"x":0,"skin":"images/english/Main.png","centerX":0,"bottom":-50},
+                            "nodeParent":4,
                             "label":"Image",
-                            "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":55,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"text":"${DoubleReward}","left":90,"fontSize":50,"color":"#ffffff","centerY":0},
-                            "nodeParent":54,
-                            "label":"Label",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":56,
+                            "compId":58,
                             "child":[
                                 ]
                         }]
