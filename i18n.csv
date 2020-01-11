@@ -1,613 +1,613 @@
-ID,±¸×¢¡¾ÅÅ°æÒª°Ñ×ÖÌå¸ÄÎªºÚÌå¡¿,¶ÔÓ¦½çÃæ£¨²ß»®ÄÚ²¿¿´µÄ£©,¼òÖĞ,Ó¢Óï,ÈÕÓï
+ï»¿ID,å¤‡æ³¨ã€æ’ç‰ˆè¦æŠŠå­—ä½“æ”¹ä¸ºé»‘ä½“ã€‘,å¯¹åº”ç•Œé¢ï¼ˆç­–åˆ’å†…éƒ¨çœ‹çš„ï¼‰,ç®€ä¸­,è‹±è¯­,æ—¥è¯­
 id,comments,scene,sc,en,jp
-NetworkBusy,,,ÍøÂç·±Ã¦£¬ÇëÉÔºóÖØÊÔ¡£,The network is busy. Please try again later.,¥Í¥Ã¥È¥ï©`¥¯¤¬¥Ó¥¸©`×´‘B¤Ç¡¢ÉÙ¤·•rég¤ò¤ª¤¤¤ÆÔÙ¶È¤ªÔ‡¤·¤¯¤À¤µ¤¤¡£
+NetworkBusy,,,ç½‘ç»œç¹å¿™ï¼Œè¯·ç¨åé‡è¯•ã€‚,The network is busy. Please try again later.,ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ãŒãƒ“ã‚¸ãƒ¼çŠ¶æ…‹ã§ã€å°‘ã—æ™‚é–“ã‚’ãŠã„ã¦å†åº¦ãŠè©¦ã—ãã ã•ã„ã€‚
 Unlocked,,"BikeScene.scene.json
-HomeScene.scene.json",Î´½âËø,Unlocked,¥¢¥ó¥í¥Ã¥¯¤·¤Æ¤¤¤Ş¤»¤ó¡£
+HomeScene.scene.json",æœªè§£é”,Unlocked,ã‚¢ãƒ³ãƒ­ãƒƒã‚¯ã—ã¦ã„ã¾ã›ã‚“ã€‚
 Enable,,"HomeScene.scene.json
-ShopScene.scene.json",¿ÉÑ¡Ôñ,Enable,ßx’k¿ÉÄÜ
-Select,,BikeScene.scene.json,¿ÉÑ¡Ôñ,Select,ßx’k¿ÉÄÜ
-Selected,,HomeScene.scene.json,ÒÑÑ¡Ôñ,Selected,ßx’kœg¤ß
-LV,,BikeScene.scene.json,µÈ¼¶,LV,¥ì¥Ù¥ë
-UpgradeItemDsc,,BikeScene.scene.json,${cur}Ãë/${max}Ãë,,
-Exp,,,¾­Ñé,Exp,
-LevelDsc,,,µÈ¼¶${level},Lv. ${level},
-Count,,,? ½áËã ?,Count,
-Unlock,,DrawScene.scene.json,? ¹§Ï²ÆïÊ¿´óÈË½âËø×ÔĞĞ³µ ?,Unlock,¥¢¥ó¥í¥Ã¥¯¤·¤Æ¤¤¤Ş¤·¤¿¡£
-LvUp,,DrawScene.scene.json,? ¹§Ï²ÆïÊ¿´óÈËµÈ¼¶ÌáÉı ?,LV UP,¥ì¥Ù¥ë¡¡¥¢¥Ã¥×
+ShopScene.scene.json",å¯é€‰æ‹©,Enable,é¸æŠå¯èƒ½
+Select,,BikeScene.scene.json,å¯é€‰æ‹©,Select,é¸æŠå¯èƒ½
+Selected,,HomeScene.scene.json,å·²é€‰æ‹©,Selected,é¸æŠæ¸ˆã¿
+LV,,BikeScene.scene.json,ç­‰çº§,LV,ãƒ¬ãƒ™ãƒ«
+UpgradeItemDsc,,BikeScene.scene.json,${cur}ç§’/${max}ç§’,,
+Exp,,,ç»éªŒ,Exp,
+LevelDsc,,,ç­‰çº§${level},Lv. ${level},
+Count,,,â€¢ ç»“ç®— â€¢,Count,
+Unlock,,DrawScene.scene.json,â€¢ æ­å–œéª‘å£«å¤§äººè§£é”è‡ªè¡Œè½¦ â€¢,Unlock,ã‚¢ãƒ³ãƒ­ãƒƒã‚¯ã—ã¦ã„ã¾ã—ãŸã€‚
+LvUp,,DrawScene.scene.json,â€¢ æ­å–œéª‘å£«å¤§äººç­‰çº§æå‡ â€¢,LV UP,ãƒ¬ãƒ™ãƒ«ã€€ã‚¢ãƒƒãƒ—
 Free,,"DrawScene.scene.json
-GameOverScene.scene.json",Ãâ·Ñ,Free,ŸoÁÏ
-Draw,,DrawScene.scene.json,ĞÒÔËÅ¤µ°,Draw,¤¯¤¸Òı¤­
-Reborn,,GameOverScene.scene.json,¸´»î,Reborn,Í»î
-ResurrectionPosition,,GameScene.scene.json,¿ÉÉÏÏÂÒÆ¶¯£¬Ñ¡Ôñ¸´»îÎ»ÖÃÅ¶,Sliding Up and Down to Adjust Resurrection Position,ÉÏ¤äÏÂ¤ËÒÆ„Ó¤·¤ÆÍ»î¤ÎÎ»ÖÃ¤òÕ{Õû¤¹¤ë¤³¤È¤¬¤Ç¤­¤Ş¤¹¡£
-ShowUI,,HomeScene.scene.json,ÏÔÊ¾½çÃæ,ShowUI,»­Ãæ¤¬±íÊ¾¤µ¤ì¤Ş¤¹¡£
-HideUI,,HomeScene.scene.json,Òş²Ø½çÃæ,HideUI,»­Ãæ¤¬ëL¤µ¤ì¤Ş¤¹¡£
-StartRemove,,HomeScene.scene.json,¿ªÆôÉ¾³ıÄ£Ê½,StartRemove,¡¸Ï÷³ı¡¹¥â©`¥É¡¡¥ª¥ó
-EndRemove,,HomeScene.scene.json,¹Ø±ÕÉ¾³ıÄ£Ê½,EndRemove,¡¸Ï÷³ı¡¹¥â©`¥É¡¡¥ª¥Õ
-RemoveAll,,HomeScene.scene.json,Çå¿ÕÊı¾İ,RemoveAll,È«²¿¥ê¥»¥Ã¥È
-TotalDistance,,RankScene.scene.json,ÀÛ¼ÆÀï³Ì,Total Distance,ÀÛÓ‹¤Î¥Ş¥¤¥ì©`¥¸
-FarthestDistance,,RankScene.scene.json,×îÔ¶Àï³Ì,Farthest Distance,×îéL¤Î¾àëx
-Score,,RankScene.scene.json,»ı·Ö,Score,¥İ¥¤¥ó¥È
-Now,,RankScene.scene.json,µ±Ç°ÅÅĞĞ,Now,¬FÔÚ¤Î¥é¥ó¥­¥ó¥°
-LastTime,,RankScene.scene.json,ÉÏ´ÎÅÅĞĞ,Last Time,Ç°»Ø¤Î¥é¥ó¥­¥ó¥°
-MyRank,,RankScene.scene.json,¡¾ÆïÊ¿´óÈËµ±Ç°µÄÅÅĞĞ¡¿,My Rank,×Ô·Ö¤Î¥é¥ó¥¯
-Purchased,,ShopScene.scene.json,ÒÑÓµÓĞ,Purchased,³Ö¤Ã¤Æ¤¤¤ë¤â¤Î
-Confirm,,TipScene.scene.json,È·ÈÏ,Confirm,´_ÕJ
-RequestingRankData,,RankScene.scene.json,ÅÅĞĞ°ñÊı¾İ¼ÓÔØÖĞ,Requesting rank data,
-NotListed,,RankScene.scene.json,"²îÒ»µã¾ÍÉÏ°ñÀ²
-ÆïÊ¿´óÈË¼ÓÓÍ°¡",Not Listed,
-RestartAfterTime,,RankScene.scene.json,${time} Ö®ºóÖØĞÂ¿ªÊ¼,Restart after ${time},
-UnlockAllBike,,ShopScene.scene.json,½âËøËùÓĞµÄ×ÔĞĞ³µ,Unlock All Bike,
-UnlockAllEndlessScene,,ShopScene.scene.json,½âËøËùÓĞµÄÎŞ¾¡ÂÃ³ÌµØÍ¼,Unlock All Endless Scene,
-Money2DCPresentDsc,,ShopScene.scene.json,"${money} Ç®
-= ${diamond} ×êÊ¯ + ${coin} ½ğ±Ò","${money} Money
+GameOverScene.scene.json",å…è´¹,Free,ç„¡æ–™
+Draw,,DrawScene.scene.json,å¹¸è¿æ‰­è›‹,Draw,ãã˜å¼•ã
+Reborn,,GameOverScene.scene.json,å¤æ´»,Reborn,å¾©æ´»
+ResurrectionPosition,,GameScene.scene.json,å¯ä¸Šä¸‹ç§»åŠ¨ï¼Œé€‰æ‹©å¤æ´»ä½ç½®å“¦,Sliding Up and Down to Adjust Resurrection Position,ä¸Šã‚„ä¸‹ã«ç§»å‹•ã—ã¦å¾©æ´»ã®ä½ç½®ã‚’èª¿æ•´ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
+ShowUI,,HomeScene.scene.json,æ˜¾ç¤ºç•Œé¢,ShowUI,ç”»é¢ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚
+HideUI,,HomeScene.scene.json,éšè—ç•Œé¢,HideUI,ç”»é¢ãŒéš ã•ã‚Œã¾ã™ã€‚
+StartRemove,,HomeScene.scene.json,å¼€å¯åˆ é™¤æ¨¡å¼,StartRemove,ã€Œå‰Šé™¤ã€ãƒ¢ãƒ¼ãƒ‰ã€€ã‚ªãƒ³
+EndRemove,,HomeScene.scene.json,å…³é—­åˆ é™¤æ¨¡å¼,EndRemove,ã€Œå‰Šé™¤ã€ãƒ¢ãƒ¼ãƒ‰ã€€ã‚ªãƒ•
+RemoveAll,,HomeScene.scene.json,æ¸…ç©ºæ•°æ®,RemoveAll,å…¨éƒ¨ãƒªã‚»ãƒƒãƒˆ
+TotalDistance,,RankScene.scene.json,ç´¯è®¡é‡Œç¨‹,Total Distance,ç´¯è¨ˆã®ãƒã‚¤ãƒ¬ãƒ¼ã‚¸
+FarthestDistance,,RankScene.scene.json,æœ€è¿œé‡Œç¨‹,Farthest Distance,æœ€é•·ã®è·é›¢
+Score,,RankScene.scene.json,ç§¯åˆ†,Score,ãƒã‚¤ãƒ³ãƒˆ
+Now,,RankScene.scene.json,å½“å‰æ’è¡Œ,Now,ç¾åœ¨ã®ãƒ©ãƒ³ã‚­ãƒ³ã‚°
+LastTime,,RankScene.scene.json,ä¸Šæ¬¡æ’è¡Œ,Last Time,å‰å›ã®ãƒ©ãƒ³ã‚­ãƒ³ã‚°
+MyRank,,RankScene.scene.json,ã€éª‘å£«å¤§äººå½“å‰çš„æ’è¡Œã€‘,My Rank,è‡ªåˆ†ã®ãƒ©ãƒ³ã‚¯
+Purchased,,ShopScene.scene.json,å·²æ‹¥æœ‰,Purchased,æŒã£ã¦ã„ã‚‹ã‚‚ã®
+Confirm,,TipScene.scene.json,ç¡®è®¤,Confirm,ç¢ºèª
+RequestingRankData,,RankScene.scene.json,æ’è¡Œæ¦œæ•°æ®åŠ è½½ä¸­,Requesting rank data,
+NotListed,,RankScene.scene.json,"å·®ä¸€ç‚¹å°±ä¸Šæ¦œå•¦
+éª‘å£«å¤§äººåŠ æ²¹å•Š",Not Listed,
+RestartAfterTime,,RankScene.scene.json,${time} ä¹‹åé‡æ–°å¼€å§‹,Restart after ${time},
+UnlockAllBike,,ShopScene.scene.json,è§£é”æ‰€æœ‰çš„è‡ªè¡Œè½¦,Unlock All Bike,
+UnlockAllEndlessScene,,ShopScene.scene.json,è§£é”æ‰€æœ‰çš„æ— å°½æ—…ç¨‹åœ°å›¾,Unlock All Endless Scene,
+Money2DCPresentDsc,,ShopScene.scene.json,"${money} é’±
+= ${diamond} é’»çŸ³ + ${coin} é‡‘å¸","${money} Money
 = ${diamond} Diamond + ${coin} Gold Coins",
-Present,,ShopScene.scene.json,ÀñÎï,Present,
-Money,,ShopScene.scene.json,²Æ±¦,Money,
-Map,,ShopScene.scene.json,µØÍ¼,Map,
-Diamond,,,×êÊ¯,Diamond,
-Coin,,,½ğ±Ò,Gold Coin,
-DiamondIsNotEnough,,ShopScene.scene.json,×êÊ¯²»×ã£¡,Diamond is not enough!,
-TotalDistanceReach,,ShopScene.scene.json,×ÜÀï³Ì´ïµ½ ${distance}m ¿ÉÃâ·Ñ½âËøÓ´,Total distance reached ${distance}m,
-Backgrounds,,HomeScene.scene.json,±³¾°,Backgrounds,
-Floors,,HomeScene.scene.json,µØÃæ,Floors,
-Spoils,,HomeScene.scene.json,Õ½ÀûÆ·,Spoils,
-Pets,,HomeScene.scene.json,³èÎï,Pets,
-Distance,,,Àï³Ì,Distance,
-ConfirmDeleteHomeItem,,HomeScene.scene.json,ÄúÈ·¶¨ÒªÉ¾³ı¸Ã×°ÊÎÂğ£¿,Are you sure you want to delete this item?,
-ConfirmDeleteAllHomeItem,,HomeScene.scene.json,ÄúÈ·¶¨ÒªÉ¾³ıËùÓĞ×°ÊÎÂğ£¿,Are you sure you want to delete all items?,
-ConfirmDeleteAllHomeItemAgain,,HomeScene.scene.json,È·ÊµÒªÉ¾³ıËùÓĞ×°ÊÎÂğ£¿,Are you really sure you want to DELETE ALL ITEMS?,
-ItemIsAbleToUnlock,,,±¨¸æÆïÊ¿´óÈË£¬Äú¿ÉÒÔ½âËøĞÂÎïÆ·À²£¡,This item is able to unlock.,
-UnlockConditions,,,¡¾½âËøÌõ¼ş¡¿,Unlock condition(s):,
-UnlockRewards,,,¡¾½âËø½±Àø¡¿,Unlock Reward(s):,
-Would you like to cost the following items to unlock this item?,,,ÄúÊÇ·ñÏë»¨·ÑÒÔÏÂÕâĞ©À´½âËø¸ÃÎïÆ·£¿,Would you like to cost the following items to unlock this item?,
-Cost is not enough!,,,Ã»ÓĞ×ã¹»µÄ½ğ±Ò»ò×êÊ¯£¡,Cost is not enough!,
-This item is locked.,,,¸ÃÎïÆ·Î´½âËø¡£,This item is locked.,
-${0} Gold Coins,,,${0} ½ğ±Ò,${0} Gold Coins,
-${0} Diamonds,,,${0} ×êÊ¯,${0} Diamonds,
-Need to unlock Map: ${0},              ,                                               ,ĞèÒª½âËøµØÍ¼£º${0}                                                                        ,Need to unlock Map: ${0},
-Total distance required to reach ${0}m,,,×ÜÀï³ÌĞè´ï ${0}m,Total distance required to reach ${0}m,
-Total farthest distance required to reach ${0}m,,,ÀúÊ·×î´óÀï³ÌĞè´ï ${0}m,Total farthest distance required to reach ${0}m,
-Score required to reach ${0},,,ÀúÊ·»ı·ÖĞè´ï ${0},Score required to reach ${0},
-Need to rank ${0}st in total distance,,,Ğè´³ÈëÀúÊ·ÀÛ¼ÆÀï³ÌÅÅĞĞµÚ${0}Ãû,Need to rank ${0}st in total distance,
-Need to rank ${0}st in farthest distance,,,Ğè´³ÈëÀúÊ·×î´óÀï³ÌÅÅĞĞµÚ${0}Ãû,Need to rank ${0}st in farthest distance,
-Need to rank ${0}st in score,,,Ğè´³ÈëÀúÊ·»ı·ÖÅÅĞĞµÚ${0}Ãû,Need to rank ${0}st in score,
-Need to takes ${0} times map game,,,ĞèÒª½øĞĞ${0}´ÎÅÅÃû¾ºÈü,,
-Need to reach level ${0},,,ĞèÒªµÈ¼¶´ïµ½${0},Need to reach level ${0},
-Highest Level,,,×î¸ßµÈ¼¶,Highest Level,
-You have ridden ${distance} meters,,,±¨¸æÆïÊ¿´óÈË£¬ÄúÒÑÆïĞĞ${distance}mÀ²,You have ridden ${distance} meters,
-Air,,,¿ÕÆø,Air,
-${player} Record: ${record}m,,,±¨¸æ${player}ÆïÊ¿£¬Äúµ±Ç°¼ÍÂ¼£º${record}m,${player} Record: ${record}m,
-Leveling with the highest record,,,ÓëÄúµÄ×î¸ß¼ÍÂ¼³ÖÆ½,Leveling with the highest record,
-${player} New Record: ${distance}m,,,¹§Ï²${player}ÆïÊ¿£¬ÄúÒÑ´´ÔìĞÂ¼ÍÂ¼£º${distance}m,${player} New Record: ${distance}m,
-${diff} meters more to go beyond yourself,,,»¹²î${diff}m¾ÍÄÜ³¬Ô½×Ô¼ºµÄ¼ÍÂ¼À²,${diff} meters more to go beyond yourself,
-${player} current rank total score: ${score},,,¹§Ï²${player}ÆïÊ¿£¬Äúµ±Ç°×Ü»ı·Ö£º${score},${player} current rank total score: ${score},
-"You only get the last prize after surrender, are you sure?",,,"ÏÖÔÚÍË³ö£¬
-Äú½«Ö»ÄÜ»ñµÃ×îºóÒ»ÃûµÄ½±Àø£¬
-È·¶¨ÒªÍË³öÓÎÏ·Âğ£¿","You only get the last prize after surrender, are you sure?",
-Are you sure you want to quit the game?  The current game data will be saved automatically after exit.,,,"ÄúÈ·¶¨ÒªÍË³öÓÎÏ·Âğ£¿
-ÍË³öºó£¬µ±Ç°ÓÎÏ·Êı¾İ½«×Ô¶¯±£´æ¡£",Are you sure you want to quit the game?  The current game data will be saved automatically after exit.,
-Are you sure to restart the game? The current game data will be saved automatically after exit.,,,"ÄúÈ·¶¨ÒªÖØĞÂ¿ªÊ¼ÓÎÏ·Âğ£¿
-·ÅĞÄ£¬µ±Ç°µÄÓÎÏ·Êı¾İ»á×Ô¶¯±£´æ¡£",Are you sure to restart the game? The current game data will be saved automatically after exit.,
-Do you want log out?,,,ÄúÈ·¶¨ÍË³öµ±Ç°ÕËºÅÂğ£¿,Do you want log out?,
-double reward no Reborn,,,"È·¶¨½øĞĞË«±¶½±Àø½áËãÂğ£¿
-ÕâÑù¾ÍÎŞ·¨ÔÙ¸´»îÁËÓ´£¡",,
-quit the game no double reward,,,"È·¶¨ÍË³öÓÎÏ·Âğ£¿
-Ë«±¶½±Àø»¹Ã»ÁìÈ¡Ó´£¡",,
-restart the game no double reward,,,"È·¶¨ÖØĞÂ¿ªÊ¼ÓÎÏ·Âğ£¿
-Ë«±¶½±Àø»¹Ã»ÁìÈ¡Ó´£¡",,
-Gold Coin is not enough!,,,½ğ±Ò²»×ã£¡,Gold Coin is not enough!,
-BikeDsc,,,"¡¾No.${index} ×ÔĞĞ³µ¡¿
-ËÙ¶È          ${speed}%
-ÌøÔ¾Á¦      ${jump}%
-Á¬ĞøÌøÔ¾   ${highJump}
-Ìå»ı          ${size}","¡¾No.${index} bike¡¿
+Present,,ShopScene.scene.json,ç¤¼ç‰©,Present,
+Money,,ShopScene.scene.json,è´¢å®,Money,
+Map,,ShopScene.scene.json,åœ°å›¾,Map,
+Diamond,,,é’»çŸ³,Diamond,
+Coin,,,é‡‘å¸,Gold Coin,
+DiamondIsNotEnough,,ShopScene.scene.json,é’»çŸ³ä¸è¶³ï¼,Diamond is not enough!,
+TotalDistanceReach,,ShopScene.scene.json,æ€»é‡Œç¨‹è¾¾åˆ° ${distance}m å¯å…è´¹è§£é”å“Ÿ,Total distance reached ${distance}m,
+Backgrounds,,HomeScene.scene.json,èƒŒæ™¯,Backgrounds,
+Floors,,HomeScene.scene.json,åœ°é¢,Floors,
+Spoils,,HomeScene.scene.json,æˆ˜åˆ©å“,Spoils,
+Pets,,HomeScene.scene.json,å® ç‰©,Pets,
+Distance,,,é‡Œç¨‹,Distance,
+ConfirmDeleteHomeItem,,HomeScene.scene.json,æ‚¨ç¡®å®šè¦åˆ é™¤è¯¥è£…é¥°å—ï¼Ÿ,Are you sure you want to delete this item?,
+ConfirmDeleteAllHomeItem,,HomeScene.scene.json,æ‚¨ç¡®å®šè¦åˆ é™¤æ‰€æœ‰è£…é¥°å—ï¼Ÿ,Are you sure you want to delete all items?,
+ConfirmDeleteAllHomeItemAgain,,HomeScene.scene.json,ç¡®å®è¦åˆ é™¤æ‰€æœ‰è£…é¥°å—ï¼Ÿ,Are you really sure you want to DELETE ALL ITEMS?,
+ItemIsAbleToUnlock,,,æŠ¥å‘Šéª‘å£«å¤§äººï¼Œæ‚¨å¯ä»¥è§£é”æ–°ç‰©å“å•¦ï¼,This item is able to unlock.,
+UnlockConditions,,,ã€è§£é”æ¡ä»¶ã€‘,Unlock condition(s):,
+UnlockRewards,,,ã€è§£é”å¥–åŠ±ã€‘,Unlock Reward(s):,
+Would you like to cost the following items to unlock this item?,,,æ‚¨æ˜¯å¦æƒ³èŠ±è´¹ä»¥ä¸‹è¿™äº›æ¥è§£é”è¯¥ç‰©å“ï¼Ÿ,Would you like to cost the following items to unlock this item?,
+Cost is not enough!,,,æ²¡æœ‰è¶³å¤Ÿçš„é‡‘å¸æˆ–é’»çŸ³ï¼,Cost is not enough!,
+This item is locked.,,,è¯¥ç‰©å“æœªè§£é”ã€‚,This item is locked.,
+${0} Gold Coins,,,${0} é‡‘å¸,${0} Gold Coins,
+${0} Diamonds,,,${0} é’»çŸ³,${0} Diamonds,
+Need to unlock Map: ${0},              ,                                               ,éœ€è¦è§£é”åœ°å›¾ï¼š${0}                                                                        ,Need to unlock Map: ${0},
+Total distance required to reach ${0}m,,,æ€»é‡Œç¨‹éœ€è¾¾ ${0}m,Total distance required to reach ${0}m,
+Total farthest distance required to reach ${0}m,,,å†å²æœ€å¤§é‡Œç¨‹éœ€è¾¾ ${0}m,Total farthest distance required to reach ${0}m,
+Score required to reach ${0},,,å†å²ç§¯åˆ†éœ€è¾¾ ${0},Score required to reach ${0},
+Need to rank ${0}st in total distance,,,éœ€é—¯å…¥å†å²ç´¯è®¡é‡Œç¨‹æ’è¡Œç¬¬${0}å,Need to rank ${0}st in total distance,
+Need to rank ${0}st in farthest distance,,,éœ€é—¯å…¥å†å²æœ€å¤§é‡Œç¨‹æ’è¡Œç¬¬${0}å,Need to rank ${0}st in farthest distance,
+Need to rank ${0}st in score,,,éœ€é—¯å…¥å†å²ç§¯åˆ†æ’è¡Œç¬¬${0}å,Need to rank ${0}st in score,
+Need to takes ${0} times map game,,,éœ€è¦è¿›è¡Œ${0}æ¬¡æ’åç«èµ›,,
+Need to reach level ${0},,,éœ€è¦ç­‰çº§è¾¾åˆ°${0},Need to reach level ${0},
+Highest Level,,,æœ€é«˜ç­‰çº§,Highest Level,
+You have ridden ${distance} meters,,,æŠ¥å‘Šéª‘å£«å¤§äººï¼Œæ‚¨å·²éª‘è¡Œ${distance}må•¦,You have ridden ${distance} meters,
+Air,,,ç©ºæ°”,Air,
+${player} Record: ${record}m,,,æŠ¥å‘Š${player}éª‘å£«ï¼Œæ‚¨å½“å‰çºªå½•ï¼š${record}m,${player} Record: ${record}m,
+Leveling with the highest record,,,ä¸æ‚¨çš„æœ€é«˜çºªå½•æŒå¹³,Leveling with the highest record,
+${player} New Record: ${distance}m,,,æ­å–œ${player}éª‘å£«ï¼Œæ‚¨å·²åˆ›é€ æ–°çºªå½•ï¼š${distance}m,${player} New Record: ${distance}m,
+${diff} meters more to go beyond yourself,,,è¿˜å·®${diff}må°±èƒ½è¶…è¶Šè‡ªå·±çš„çºªå½•å•¦,${diff} meters more to go beyond yourself,
+${player} current rank total score: ${score},,,æ­å–œ${player}éª‘å£«ï¼Œæ‚¨å½“å‰æ€»ç§¯åˆ†ï¼š${score},${player} current rank total score: ${score},
+"You only get the last prize after surrender, are you sure?",,,"ç°åœ¨é€€å‡ºï¼Œ
+æ‚¨å°†åªèƒ½è·å¾—æœ€åä¸€åçš„å¥–åŠ±ï¼Œ
+ç¡®å®šè¦é€€å‡ºæ¸¸æˆå—ï¼Ÿ","You only get the last prize after surrender, are you sure?",
+Are you sure you want to quit the game?  The current game data will be saved automatically after exit.,,,"æ‚¨ç¡®å®šè¦é€€å‡ºæ¸¸æˆå—ï¼Ÿ
+é€€å‡ºåï¼Œå½“å‰æ¸¸æˆæ•°æ®å°†è‡ªåŠ¨ä¿å­˜ã€‚",Are you sure you want to quit the game?  The current game data will be saved automatically after exit.,
+Are you sure to restart the game? The current game data will be saved automatically after exit.,,,"æ‚¨ç¡®å®šè¦é‡æ–°å¼€å§‹æ¸¸æˆå—ï¼Ÿ
+æ”¾å¿ƒï¼Œå½“å‰çš„æ¸¸æˆæ•°æ®ä¼šè‡ªåŠ¨ä¿å­˜ã€‚",Are you sure to restart the game? The current game data will be saved automatically after exit.,
+Do you want log out?,,,æ‚¨ç¡®å®šé€€å‡ºå½“å‰è´¦å·å—ï¼Ÿ,Do you want log out?,
+double reward no Reborn,,,"ç¡®å®šè¿›è¡ŒåŒå€å¥–åŠ±ç»“ç®—å—ï¼Ÿ
+è¿™æ ·å°±æ— æ³•å†å¤æ´»äº†å“Ÿï¼",,
+quit the game no double reward,,,"ç¡®å®šé€€å‡ºæ¸¸æˆå—ï¼Ÿ
+åŒå€å¥–åŠ±è¿˜æ²¡é¢†å–å“Ÿï¼",,
+restart the game no double reward,,,"ç¡®å®šé‡æ–°å¼€å§‹æ¸¸æˆå—ï¼Ÿ
+åŒå€å¥–åŠ±è¿˜æ²¡é¢†å–å“Ÿï¼",,
+Gold Coin is not enough!,,,é‡‘å¸ä¸è¶³ï¼,Gold Coin is not enough!,
+BikeDsc,,,"ã€No.${index} è‡ªè¡Œè½¦ã€‘
+é€Ÿåº¦          ${speed}%
+è·³è·ƒåŠ›      ${jump}%
+è¿ç»­è·³è·ƒ   ${highJump}
+ä½“ç§¯          ${size}","ã€No.${index} bikeã€‘
 Speed     ${speed}%
 Jump      ${jump}%
 HighJump  ${highJump}
 Size      ${size}",
-BonusDsc,,,"½ğ±Ò          ${coin}
-Àï³Ì          ${distance}
-»ı·Ö          ${score}
-¾­Ñé          ${exp}","Gold Coin ${coin}
+BonusDsc,,,"é‡‘å¸          ${coin}
+é‡Œç¨‹          ${distance}
+ç§¯åˆ†          ${score}
+ç»éªŒ          ${exp}","Gold Coin ${coin}
 Distance  ${distance}
 Score     ${score}
 Exp     ${exp}",
-Easy,,,¼òµ¥,Easy,
-Normal,,,ÆÕÍ¨,Normal,
-Hard,,,À§ÄÑ,Hard,
-Small,,,Ğ¡,Small,
-Middle,,,ÖĞ,Middle,
-Big,,,´ó,Big,
-Loading,,,¼ÓÔØÖĞ ...,Loading ...,
-LearnJump,,,µã»÷»­Ãæ¿ÉÒÔ½øĞĞÌøÔ¾,,
-LearnItem,,,µã»÷×ó±ßÁ½¸öµÀ¾ßÀ¸¿ÉÒÔÊ¹ÓÃµÀ¾ß,,
-NewContent,,,ĞÂµÄÄÚÈİÒÑ½âËø,,
-GiftTitle,,,? ¿´ÊÓÆµÁìÀñ°ü ?,,
-GiftContent,,,¹Û¿´ÊÓÆµ£¬»ñµÃ³¬Öµ½±Àø,,
-SignTitle,,,? Ç©µ½¿´ÊÓÆµÁì½±Àø ?,,
-PrizeTitle,,,¹§Ï²»ñµÃ,,
-PlayerInfoTitle,,,Íæ¼Ò³É¾ÍÄÚÈİ,,
-PreparationTitle,,,? ¿ªÕ½Ç°¶îÍâ×¼±¸ ?,,
-FreeCollection,,,Ãâ·ÑÁìÈ¡,,
-DoubleReward,,,Ë«±¶½±Àø,,
-PreparationItem1,,,Ëæ»úµÀ¾ß,,
-PreparationItem2,,,Ëæ»úµÀ¾ß,,
-PreparationItem3,,,Ëæ»ú×ÔĞĞ³µ,,
-PreparationItemContent1,,,»ñµÃµÀ¾ß,,
-PreparationItemContent2,,,»ñµÃµÀ¾ß,,
-PreparationItemContent3,,,ÌåÑéÌØÊâ×ÔĞĞ³µ,,
-PreparationDone,,,×¼±¸Íê³É,,
-day1,,,µÚ1Ìì,,
-day2,,,µÚ2Ìì,,
-day3,,,µÚ3Ìì,,
-day4,,,µÚ4Ìì,,
-day5,,,µÚ5Ìì,,
-day6,,,µÚ6Ìì,,
-day7,,,µÚ7Ìì,,
-EndlessHelp1,,,"ÎŞ¾¡Ä£Ê½£ºÎŞ¾¡ÂÃ³Ì£¬³ıÁËËÀÍö£¬
-                  Ë­¶¼ÎŞ·¨×èÖ¹ÆïÊ¿ÃÇµÄ
-                  ´³µ´£¡",,
-EndlessHelp2,,,"ÃÎ»Ã°ü¹ü£º¿ÉËæ»ú»ñµÃÄ³ÖÖÖúÁ¦£¬µ«ÈçºÎ
-                  Ê¹ÓÃ¹Ø¼ü¿´Äú×Ô¼ºÓ´£¡",,
-EndlessHelp3,,,´ÅÌúµÀ¾ß£º×Ô¶¯Îü½ğ£¬ÍşÁ¦ÎŞ±È£¡,,
-EndlessHelp4,,,¼ÓËÙµÀ¾ß£º×·¸ÏºÍ³¬Ô½¶ÔÊÖµÄºÃ°ïÊÖ£¡,,
-EndlessHelp5,,,"Ç¿»¯ÌøÔ¾£ºÊ¹ÓÃ¹ıµÄÆïÊ¿¶¼Ëµ£¬ÌøÔ¾Ğ§¹û
-                  ·Ç³£ºÃ¡£",,
-EndlessHelp6,,,"ÎŞÏŞÌøÔ¾£ºÓĞÁËËü£¬É½ÔÙ¸ß¡¢Â·ÔÙ¶¸£¬Ò²
-                  ²»ÅÂ²»ÅÂÀ²~",,
-MatchHelp1,,,"¾º¼¼Ä£Ê½£º¿ìËÙÆ¥Åä¿ª¾Ö£¬ÓëÆäËû
-                  ÆïÊ¿Õù¶áÍ·Ãû½±Àø¡£",,
-MatchHelp2,,,"ÃÎ»Ã°ü¹ü£º¿ÉËæ»ú»ñµÃÄ³ÖÖÖúÁ¦£¬µ«ÈçºÎ
-                  Ê¹ÓÃ¹Ø¼ü¿´Äú×Ô¼ºÓ´£¡",,
-MatchHelp3,,,¼ÓËÙµÀ¾ß£º×·¸ÏºÍ³¬Ô½¶ÔÊÖµÄºÃ°ïÊÖ£¡,,
-MatchHelp4,,,"Ç¿»¯ÌøÔ¾£ºÊ¹ÓÃ¹ıµÄÆïÊ¿¶¼Ëµ£¬ÌøÔ¾Ğ§¹û
-                  ·Ç³£ºÃ¡£",,
-MatchHelp5,,,"ÎŞÏŞÌøÔ¾£ºÓĞÁËËü£¬É½ÔÙ¸ß¡¢Â·ÔÙ¶¸£¬Ò²
-                  ²»ÅÂ²»ÅÂÀ²~",,
-MatchHelp6,,,"ÎÏÅ£µÀ¾ß£ºÏëÈÃÇ°Ò»Ãû¶ÔÊÖÅÜµÃ±ÈÎÚ¹ê»¹
-                  Âı£¿ÓÃÕâ¸ö¾Í¶ÔÀ²£¡",,
-MatchHelp7,,,"Ï÷ÈõÌøÔ¾£ºÊ¹ÓÃËü£¬¿ÉÔİÊ±¼õÈõÇ°Ò»Ãû¶Ô
-                  ÊÖ¡°°®±ÄÛQ¡±µÄ»µÃ«²¡Ó´¡£",,
-MatchHelp8,,,"ÖëÍøµÀ¾ß£ºÁîËùÓĞÆïÊ¿¶¼º¦ÅÂµÄÊø¸¿Ä§·¨
-                  £¬Ö»ÄÜÏòÇ°Ò»Ãû¶ÔÊÖÊ¹ÓÃÅ¶£¡",,
-MatchHelp9,,,"·âÓ¡µÀ¾ß£º¿ÉÈÃÄúµÄÇ°Ò»Ãû¶ÔÊÖ£¬ÔİÊ±ÎŞ
-                  ·¨Ê¹ÓÃÈÎºÎµÀ¾ßÅ¶¡£",,
-MatchHelp10,,,"Ä«ÓãµÀ¾ß£º°¡£¡ÊÇË­Í»È»¹ØÁËµÆ£¿¡ª¡ª¿É
-                  Ëæ»úÈÃÒ»Ãû¶ÔÊÖÔİÊ±Ê§Ã÷¡£",,
-MatchHelp11,,,"ÂäÀ×µÀ¾ß£º´òÀ×À²£¡Ğ¡ĞÄ´¥µçÑ½~¡ª¡ª±ä
-                  Ì¬Èº¹¥£¬¿ÉÀ×»÷ËùÓĞ¶ÔÊÖ¡£",,
-MatchHelp12,,,"Õ¨µ¯µÀ¾ß£ºµã»÷Ê¹ÓÃ£¬Õ¨µ¯½«ÏòÇ°Å×Éä
-                  £¬Ë­Åöµ½Ë­µ¹Ã¹Ó´¡£",,
-HomeHelp1,,,"ÆïÊ¿´óÈËµÄ¼ÒÔ°£¬
-ÓĞ4´óÀà×°ÊÎ¿É×ÔÓÉÉè¼Æ²¼¾Ö¡£",,
-HomeHelp2,,,"Õ½Á¦Æ·¡¢³èÎï£¬½âËøºó£¬
-¿ÉÍÏ¶¯µ½µØÃæÉÏËæÒâ°Ú·ÅÓ´¡£",,
-HomeHelp3,,,"±³¾°¡¢µØÃæ£¬½âËøºó£¬
-¿ÉÑ¡ÔñÏëÒªµÄÀ´Õ¹ÏÖÓ´¡£",,
-Select Map1,,,µØÍ¼1 ©¤ ¾øÃü»ÄÄ®,Map1,
-Select Map2,,,µØÍ¼2 ©¤ ÔÆáÛÖ®ÉÏ,Map2,
-Select Map3,,,µØÍ¼3 ©¤ »ğÑæÉ½¹ú,Map3,
-Select Map4,,,µØÍ¼4 ©¤ ĞÂØ¬ÃÎµº,Map4,
-Select Map5,,,µØÍ¼5 ©¤ º£µ×ÊÀ½ç,Map5,
-Select Map6,,,µØÍ¼6 ©¤ ¹¤³§ÖØµØ,Map6,
-Select Map7,,,µØÍ¼7 ©¤ Éú»¯ĞÇÇò,Map7,
-Select Map8,,,µØÍ¼8 ©¤ ¹ÅÄ¹ÃÕ³Ç,Map8,
-Select Map9,,,µØÍ¼9 ©¤ µÁÃÎÊ±¼ä,Map9,
-Select Map10,,,µØÍ¼10 ©¤ º½º£Íõ³¯,Map10,
-Select Map11,,,µØÍ¼11 ©¤ Á÷ÀËÓîÖæ,Map11,
-Select Map12,,,µØÍ¼12 ©¤ Ä§»ÃÀÖÔ°,Map12,
-Select Bike1,,,±©×ß»ğ²ñ,Bike1,
-Select Bike2,,,´òÂëÈü¿Ë,Bike2,
-Select Bike3,,,ĞÇ°Ö°Ö,Bike3,
-Select Bike4,,,ÏòÈÕ¿û×Ğ,Bike4,
-Select Bike5,,,ÂíÍ°³µX3,Bike5,
-Select Bike6,,,´«ÆæÓ¾Ê¿,Bike6,
-Select Bike7,,,ÂíÃæÀŞÉñ,Bike7,
-Select Bike8,,,´óÍ·Å®¶ù,Bike8,
-Select Bike9,,,´ô¸ö¼¦Í·,Bike9,
-Select Bike10,,,·¹Äã¸ç,Bike10,
-Select Bike11,,,Ë®¹ÜÂêÀö,Bike11,
-Select Bike12,,,Í°×°³µ66,Bike12,
-Select Bike13,,,ÓêÒÂ¹Ö¿§,Bike13,
-Select Bike14,,,Ä§·¨°¢‹°,Bike14,
-Select Bike15,,,´øÃÃ´óÉñ,Bike15,
-Select Bike16,,,±±¼«ĞÜÈË,Bike16,
-Select Bike17,,,³¤¾±Â¹¾ı,Bike17,
-Select Bike18,,,±ùÑ©ÆæÈË,Bike18,
-Select Bike19,,,Áåîõß÷Äï,Bike19,
-Select Bike20,,,×··çÉÙÄê,Bike20,
-Select Bike21,,,Á¹¹¬´ºÒ¹,Bike21,
-Select Bike22,,,ÊÙË¾¾ı,Bike22,
-Select Bike23,,,ÍÅ×Ó½´,Bike23,
-Select Bike24,,,ÖñÂÖÉ£,Bike24,
-Select Bike25,,,ĞÜÃ¨³µM2,Bike25,
-Select Bike26,,,¼²·çì­Éñ,Bike26,
-Select Bike27,,,Ğ¡ÌğÌğ,Bike27,
-Select Bike28,,,ÔÓ¼¼Ò»¸ç,Bike28,
-Select Bike29,,,Ìú°üÆ¤Éñ,Bike29,
-Select Bike30,,,ÍâËÍ¸ßÊÖ,Bike30,
-Select Bike31,,,ÃÈÃÈĞ¡Çà,Bike31,
-Select Bike32,,,¿áÅÜ³õÒô,Bike32,
-Select Bike33,,,¿×È¸¿ªÆÁ,Bike33,
-Random role1,,,µ­µ­×Ï¶¡Ïã¤Ø,NPC1,
-Random role2,,,o§°ÂÌÃ±ÏÀ,NPC2,
-Random role3,,,½ãÓë×÷ÒµË®ÍÁ²»·ş¤Å,NPC3,
-Random role4,,,±¡ºÉ½ÖµÄÍÃ±ÈÏÈÉú¡£,NPC4,
-Random role5,,,³õÎÇ¸øÁËÑÌ,NPC5,
-Random role6,,,Ğ¡Ğ¡µÄ»úÇ¹¡¤ßÕßÕßÕ,NPC6,
-Random role7,,,ÇéÊŞ¡£,NPC7,
-Random role8,,,²É¹ÃÄïµÄĞ¡Ä¢¹½,NPC8,
-Random role9,,,Ìú´òµÄÉí×Ó²»Ğâ¸ÖµÄĞÄ,NPC9,
-Random role10,,,‡å‡å¡¢¿ªĞÄ,NPC10,
-Random role11,,,¿´ÎÒµç²»ËÀÄãØ¼,NPC11,
-Random role12,,,©nÆ¶É®ÊÇÀ´»¯æ¤µÎ,NPC12,
-Random role13,,,ÀÏñÄÂúÍ·Ğã·¢,NPC13,
-Random role14,,,ÀÏñÄ·¨ºÅÇéÊ¥,NPC14,
-Random role15,,,Í¦Ö±Ñü¸Ë,NPC15,
-Random role16,,,Ìõ×Ó»á·¢¹âi,NPC16,
-Random role17,,,¿Ú´üÀïÓĞÌÇ@,NPC17,
-Random role18,,,Ñ¼ÀæÉ½´ó,NPC18,
-Random role19,,,×ÏÉ´÷È»óÑıÈË»ê,NPC19,
-Random role20,,,·¸¶şµÄÉ§Äê²»ÓÇÉË¨q,NPC20,
-Random role21,,,ÆğÃûÍøyw11.com,NPC21,
-Random role22,,,ÃÏÆÅÀ´±­ÓÅÀÖÃÀ,NPC22,
-Random role23,,,ÎÒÓĞÎÒµÄ×°±ÆÃÎi,NPC23,
-Random role24,,,ÀÁ°©ÍíÆÚi,NPC24,
-Random role25,,,¹Ù·½ÈÏÖ¤Â¹·òÈË,NPC25,
-Random role26,,,ÄãÓëÑõÆø¹²´æ,NPC26,
-Random role27,,,»®³öÄÇÒ»µÀêÏÑÕ¡ã,NPC27,
-Random role28,,,´ø»¤ÒíµÄÌìÊ¹,NPC28,
-Random role29,,,Ë¼Ç®Ïëºñ,NPC29,
-Random role30,,,¸ÃÓÃ»§Ì«ÀÁ»¹Ã»ÏëºÃÍøÃû,NPC30,
-Tip1,,,"ÌøÔ¾ºóÎ´ÂäµØÊ±£¬ÔÙ´Îµã»÷»­Ãæ£¬
-¿É½øĞĞ¶ş¶ÎÌøÅ¶£¡",,
-Tip2,,,"Èı¶ÎÌø£¨º¬µÚ3´ÎÁ¬Ìø£©ºó£¬Ã¿´ÎÌøÔ¾£¬
-Ê±¼ä²»ÄÜ¼ä¸ôÌ«¾Ã£¡",,
-Tip3,,,"±¨¸æÆïÊ¿´óÈË£¬Ò»°ãÇé¿öÏÂ£¬
-Äú¿É½øĞĞ7´ÎÁ¬ÌøÓ´£¡",,
-Tip4,,,ËÀÍöÔÙ¸´»îºó£¬¿ÉÉÏÏÂÒÆ¶¯Ñ¡Ôñ¸´»îÎ»ÖÃÅ¶£¡,,
-Tip5,,,"Çë¼°Ê±ÌÚ³öµÀ¾ßÀ¸Å¶£¬·ñÔò£¬
-¾ÍÎŞ·¨ÔÙ×°ÆäËûµÀ¾ßÀ²£¡",,
-Tip6,,,Óöµ½Ğ¡Äñ±ğÅÂ£¬²ÈÉÏÈ¥¾Í¶ÔÀ²£¡,,
-Tip7,,,ºÍĞ¡ÄñÒ»Ñù£¬¹öÊ¯Ò²ÊÇÄÜ²ÈµÄÅ¶£¡,,
-Tip8,,,ÖëÍøµÀ¾ßÌ«¿ÉÅÂ£¿ÆäÊµÌøÔ¾3´Î£¬¾ÍÄÜÕõÍÑÁËÅ¶£¡,,
-Tip9,,,±¨¸æÆïÊ¿´óÈË£¬ÅİÅİ×´Ì¬ÏÂµÄÄú£¬·ÀÓùÎŞµĞÅ¶£¡,,
-say2,,,µÚ1´ÎÊ¹ÓÃ 2ºÅ³µ,,
-say3,,,µÚ1´ÎÊ¹ÓÃ 3ºÅ³µ,,
-say4,,,µÚ1´ÎÊ¹ÓÃ 4ºÅ³µ,,
-say5,,,µÚ1´ÎÊ¹ÓÃ 5ºÅ³µ,,
-say6,,,µÚ1´ÎÊ¹ÓÃ 6ºÅ³µ,,
-say7,,,µÚ1´ÎÊ¹ÓÃ 7ºÅ³µ,,
-say8,,,µÚ1´ÎÊ¹ÓÃ 8ºÅ³µ,,
-say9,,,µÚ1´ÎÊ¹ÓÃ 9ºÅ³µ,,
-say10,,,µÚ1´ÎÊ¹ÓÃ 10ºÅ³µ,,
-say11,,,µÚ1´ÎÊ¹ÓÃ 11ºÅ³µ,,
-say12,,,µÚ1´ÎÊ¹ÓÃ 12ºÅ³µ,,
-say13,,,µÚ1´ÎÊ¹ÓÃ 13ºÅ³µ,,
-say14,,,µÚ1´ÎÊ¹ÓÃ 14ºÅ³µ,,
-say15,,,µÚ1´ÎÊ¹ÓÃ 15ºÅ³µ,,
-say16,,,µÚ1´ÎÊ¹ÓÃ 16ºÅ³µ,,
-say17,,,µÚ1´ÎÊ¹ÓÃ 17ºÅ³µ,,
-say18,,,µÚ1´ÎÊ¹ÓÃ 18ºÅ³µ,,
-say19,,,µÚ1´ÎÊ¹ÓÃ 19ºÅ³µ,,
-say20,,,µÚ1´ÎÊ¹ÓÃ 20ºÅ³µ,,
-say21,,,µÚ1´ÎÊ¹ÓÃ 21ºÅ³µ,,
-say22,,,µÚ1´ÎÊ¹ÓÃ 22ºÅ³µ,,
-say23,,,µÚ1´ÎÊ¹ÓÃ 23ºÅ³µ,,
-say24,,,µÚ1´ÎÊ¹ÓÃ 24ºÅ³µ,,
-say25,,,µÚ1´ÎÊ¹ÓÃ 25ºÅ³µ,,
-say26,,,µÚ1´ÎÊ¹ÓÃ 26ºÅ³µ,,
-say27,,,µÚ1´ÎÊ¹ÓÃ 27ºÅ³µ,,
-say28,,,µÚ1´ÎÊ¹ÓÃ 28ºÅ³µ,,
-say29,,,µÚ1´ÎÊ¹ÓÃ 29ºÅ³µ,,
-say30,,,µÚ1´ÎÊ¹ÓÃ 30ºÅ³µ,,
-say31,,,µÚ1´ÎÊ¹ÓÃ 31ºÅ³µ,,
-say32,,,µÚ1´ÎÊ¹ÓÃ 32ºÅ³µ,,
-say33,,,µÚ1´ÎÊ¹ÓÃ 33ºÅ³µ,,
-say1001,,,µÚ1´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨,,
-say1002,,,µÚ2´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1003,,,µÚ3´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1004,,,µÚ4´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1005,,,µÚ5´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1006,,,µÚ6´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1007,,,µÚ7´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1008,,,µÚ8´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1009,,,µÚ9´Î  ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1010,,,µÚ10´Î ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say1011,,,µÚ11´Î ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£©,,
-say2001,,,µÚ1´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2002,,,µÚ2´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2003,,,µÚ3´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2004,,,µÚ4´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2005,,,µÚ5´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2006,,,µÚ6´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2007,,,µÚ7´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2008,,,µÚ8´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2009,,,µÚ9´Î  ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2010,,,µÚ10´Î ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say2011,,,µÚ11´Î ½øÈëÅÅÃû¾ºÈü¹Ø¿¨,,
-say3001,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú1,,
-say3002,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú2,,
-say3003,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú3,,
-say3004,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú4,,
-say3005,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú5,,
-say3006,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú6,,
-say3007,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú7,,
-say3008,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú8,,
-say3009,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú9,,
-say3010,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú10,,
-say3011,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³ÌÃ»ÓĞ¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú11,,
-say4001,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú1,,
-say4002,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú2,,
-say4003,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú3,,
-say4004,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú4,,
-say4005,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú5,,
-say4006,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú6,,
-say4007,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú7,,
-say4008,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú8,,
-say4009,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú9,,
-say4010,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú10,,
-say4011,,,ÎŞÏŞÑ­»· ½øÈëÎŞ¾¡Ä£Ê½¹Ø¿¨ Ö®Ç°ÎŞ¾¡Ä£Ê½Àï³Ì³¬¹ı600M£¨²»Ëã¼Ó³É£© Ëæ»ú11,,
-say5001,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú1,,
-say5002,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú2,,
-say5003,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú3,,
-say5004,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú4,,
-say5005,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú5,,
-say5006,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú6,,
-say5007,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú7,,
-say5008,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú8,,
-say5009,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú9,,
-say5010,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú10,,
-say5011,,,ÎŞÏŞÑ­»· ½øÈëÅÅÃû¾ºÈü¹Ø¿¨ Ëæ»ú11,,
-ThereIsNoGiftToday,,,Õæ¿ÉÏ§£¬½ñÌìµÄÀñ°üÁìÍêÁËÄØ,,
-ÁìÈ¡Àñ°üµÄÊ±¼ä»¹Ã»µ½,,,±§Ç¸ÆïÊ¿´óÈË£¬»¹Î´µ½Àñ°üÁìÈ¡Ê±¼äÅ¶,,
-OnlineSay,,,${time} ºó¾Í¿ÉÒÔÁìÈ¡ÁË,,
-GotToday,,,½ñÌìÒÑÁìÈ¡,,
-HasDoubleReward,,,ÒÑ¾­»ñµÃÁËË«±¶½±Àø,,
-HasNoRebornTimes,,,ÒÑ¾­Ã»ÓĞ¸´»î´ÎÊıÁË,,
-¶Ô,,,¶Ô,,
-Ê¹ÓÃÁË,,,Ê¹ÓÃÁË,,
-LockNotice,,,"Õâ¸öÄÚÈİÎ´½âËø
-½âËøÌõ¼ş£º
+Easy,,,ç®€å•,Easy,
+Normal,,,æ™®é€š,Normal,
+Hard,,,å›°éš¾,Hard,
+Small,,,å°,Small,
+Middle,,,ä¸­,Middle,
+Big,,,å¤§,Big,
+Loading,,,åŠ è½½ä¸­ ...,Loading ...,
+LearnJump,,,ç‚¹å‡»ç”»é¢å¯ä»¥è¿›è¡Œè·³è·ƒ,,
+LearnItem,,,ç‚¹å‡»å·¦è¾¹ä¸¤ä¸ªé“å…·æ å¯ä»¥ä½¿ç”¨é“å…·,,
+NewContent,,,æ–°çš„å†…å®¹å·²è§£é”,,
+GiftTitle,,,â€¢ çœ‹è§†é¢‘é¢†ç¤¼åŒ… â€¢,,
+GiftContent,,,è§‚çœ‹è§†é¢‘ï¼Œè·å¾—è¶…å€¼å¥–åŠ±,,
+SignTitle,,,â€¢ ç­¾åˆ°çœ‹è§†é¢‘é¢†å¥–åŠ± â€¢,,
+PrizeTitle,,,æ­å–œè·å¾—,,
+PlayerInfoTitle,,,ç©å®¶æˆå°±å†…å®¹,,
+PreparationTitle,,,â€¢ å¼€æˆ˜å‰é¢å¤–å‡†å¤‡ â€¢,,
+FreeCollection,,,å…è´¹é¢†å–,,
+DoubleReward,,,åŒå€å¥–åŠ±,,
+PreparationItem1,,,éšæœºé“å…·,,
+PreparationItem2,,,éšæœºé“å…·,,
+PreparationItem3,,,éšæœºè‡ªè¡Œè½¦,,
+PreparationItemContent1,,,è·å¾—é“å…·,,
+PreparationItemContent2,,,è·å¾—é“å…·,,
+PreparationItemContent3,,,ä½“éªŒç‰¹æ®Šè‡ªè¡Œè½¦,,
+PreparationDone,,,å‡†å¤‡å®Œæˆ,,
+day1,,,ç¬¬1å¤©,,
+day2,,,ç¬¬2å¤©,,
+day3,,,ç¬¬3å¤©,,
+day4,,,ç¬¬4å¤©,,
+day5,,,ç¬¬5å¤©,,
+day6,,,ç¬¬6å¤©,,
+day7,,,ç¬¬7å¤©,,
+EndlessHelp1,,,"æ— å°½æ¨¡å¼ï¼šæ— å°½æ—…ç¨‹ï¼Œé™¤äº†æ­»äº¡ï¼Œ
+                  è°éƒ½æ— æ³•é˜»æ­¢éª‘å£«ä»¬çš„
+                  é—¯è¡ï¼",,
+EndlessHelp2,,,"æ¢¦å¹»åŒ…è£¹ï¼šå¯éšæœºè·å¾—æŸç§åŠ©åŠ›ï¼Œä½†å¦‚ä½•
+                  ä½¿ç”¨å…³é”®çœ‹æ‚¨è‡ªå·±å“Ÿï¼",,
+EndlessHelp3,,,ç£é“é“å…·ï¼šè‡ªåŠ¨å¸é‡‘ï¼Œå¨åŠ›æ— æ¯”ï¼,,
+EndlessHelp4,,,åŠ é€Ÿé“å…·ï¼šè¿½èµ¶å’Œè¶…è¶Šå¯¹æ‰‹çš„å¥½å¸®æ‰‹ï¼,,
+EndlessHelp5,,,"å¼ºåŒ–è·³è·ƒï¼šä½¿ç”¨è¿‡çš„éª‘å£«éƒ½è¯´ï¼Œè·³è·ƒæ•ˆæœ
+                  éå¸¸å¥½ã€‚",,
+EndlessHelp6,,,"æ— é™è·³è·ƒï¼šæœ‰äº†å®ƒï¼Œå±±å†é«˜ã€è·¯å†é™¡ï¼Œä¹Ÿ
+                  ä¸æ€•ä¸æ€•å•¦~",,
+MatchHelp1,,,"ç«æŠ€æ¨¡å¼ï¼šå¿«é€ŸåŒ¹é…å¼€å±€ï¼Œä¸å…¶ä»–
+                  éª‘å£«äº‰å¤ºå¤´åå¥–åŠ±ã€‚",,
+MatchHelp2,,,"æ¢¦å¹»åŒ…è£¹ï¼šå¯éšæœºè·å¾—æŸç§åŠ©åŠ›ï¼Œä½†å¦‚ä½•
+                  ä½¿ç”¨å…³é”®çœ‹æ‚¨è‡ªå·±å“Ÿï¼",,
+MatchHelp3,,,åŠ é€Ÿé“å…·ï¼šè¿½èµ¶å’Œè¶…è¶Šå¯¹æ‰‹çš„å¥½å¸®æ‰‹ï¼,,
+MatchHelp4,,,"å¼ºåŒ–è·³è·ƒï¼šä½¿ç”¨è¿‡çš„éª‘å£«éƒ½è¯´ï¼Œè·³è·ƒæ•ˆæœ
+                  éå¸¸å¥½ã€‚",,
+MatchHelp5,,,"æ— é™è·³è·ƒï¼šæœ‰äº†å®ƒï¼Œå±±å†é«˜ã€è·¯å†é™¡ï¼Œä¹Ÿ
+                  ä¸æ€•ä¸æ€•å•¦~",,
+MatchHelp6,,,"èœ—ç‰›é“å…·ï¼šæƒ³è®©å‰ä¸€åå¯¹æ‰‹è·‘å¾—æ¯”ä¹Œé¾Ÿè¿˜
+                  æ…¢ï¼Ÿç”¨è¿™ä¸ªå°±å¯¹å•¦ï¼",,
+MatchHelp7,,,"å‰Šå¼±è·³è·ƒï¼šä½¿ç”¨å®ƒï¼Œå¯æš‚æ—¶å‡å¼±å‰ä¸€åå¯¹
+                  æ‰‹â€œçˆ±è¹¦è·¶â€çš„åæ¯›ç—…å“Ÿã€‚",,
+MatchHelp8,,,"è››ç½‘é“å…·ï¼šä»¤æ‰€æœ‰éª‘å£«éƒ½å®³æ€•çš„æŸç¼šé­”æ³•
+                  ï¼Œåªèƒ½å‘å‰ä¸€åå¯¹æ‰‹ä½¿ç”¨å“¦ï¼",,
+MatchHelp9,,,"å°å°é“å…·ï¼šå¯è®©æ‚¨çš„å‰ä¸€åå¯¹æ‰‹ï¼Œæš‚æ—¶æ— 
+                  æ³•ä½¿ç”¨ä»»ä½•é“å…·å“¦ã€‚",,
+MatchHelp10,,,"å¢¨é±¼é“å…·ï¼šå•Šï¼æ˜¯è°çªç„¶å…³äº†ç¯ï¼Ÿâ€”â€”å¯
+                  éšæœºè®©ä¸€åå¯¹æ‰‹æš‚æ—¶å¤±æ˜ã€‚",,
+MatchHelp11,,,"è½é›·é“å…·ï¼šæ‰“é›·å•¦ï¼å°å¿ƒè§¦ç”µå‘€~â€”â€”å˜
+                  æ€ç¾¤æ”»ï¼Œå¯é›·å‡»æ‰€æœ‰å¯¹æ‰‹ã€‚",,
+MatchHelp12,,,"ç‚¸å¼¹é“å…·ï¼šç‚¹å‡»ä½¿ç”¨ï¼Œç‚¸å¼¹å°†å‘å‰æŠ›å°„
+                  ï¼Œè°ç¢°åˆ°è°å€’éœ‰å“Ÿã€‚",,
+HomeHelp1,,,"éª‘å£«å¤§äººçš„å®¶å›­ï¼Œ
+æœ‰4å¤§ç±»è£…é¥°å¯è‡ªç”±è®¾è®¡å¸ƒå±€ã€‚",,
+HomeHelp2,,,"æˆ˜åŠ›å“ã€å® ç‰©ï¼Œè§£é”åï¼Œ
+å¯æ‹–åŠ¨åˆ°åœ°é¢ä¸Šéšæ„æ‘†æ”¾å“Ÿã€‚",,
+HomeHelp3,,,"èƒŒæ™¯ã€åœ°é¢ï¼Œè§£é”åï¼Œ
+å¯é€‰æ‹©æƒ³è¦çš„æ¥å±•ç°å“Ÿã€‚",,
+Select Map1,,,åœ°å›¾1 â”€ ç»å‘½è’æ¼ ,Map1,
+Select Map2,,,åœ°å›¾2 â”€ äº‘å·…ä¹‹ä¸Š,Map2,
+Select Map3,,,åœ°å›¾3 â”€ ç«ç„°å±±å›½,Map3,
+Select Map4,,,åœ°å›¾4 â”€ æ–°å™©æ¢¦å²›,Map4,
+Select Map5,,,åœ°å›¾5 â”€ æµ·åº•ä¸–ç•Œ,Map5,
+Select Map6,,,åœ°å›¾6 â”€ å·¥å‚é‡åœ°,Map6,
+Select Map7,,,åœ°å›¾7 â”€ ç”ŸåŒ–æ˜Ÿçƒ,Map7,
+Select Map8,,,åœ°å›¾8 â”€ å¤å¢“è°œåŸ,Map8,
+Select Map9,,,åœ°å›¾9 â”€ ç›—æ¢¦æ—¶é—´,Map9,
+Select Map10,,,åœ°å›¾10 â”€ èˆªæµ·ç‹æœ,Map10,
+Select Map11,,,åœ°å›¾11 â”€ æµæµªå®‡å®™,Map11,
+Select Map12,,,åœ°å›¾12 â”€ é­”å¹»ä¹å›­,Map12,
+Select Bike1,,,æš´èµ°ç«æŸ´,Bike1,
+Select Bike2,,,æ‰“ç èµ›å…‹,Bike2,
+Select Bike3,,,æ˜Ÿçˆ¸çˆ¸,Bike3,
+Select Bike4,,,å‘æ—¥è‘µä»”,Bike4,
+Select Bike5,,,é©¬æ¡¶è½¦X3,Bike5,
+Select Bike6,,,ä¼ å¥‡æ³³å£«,Bike6,
+Select Bike7,,,é©¬é¢æ“‚ç¥,Bike7,
+Select Bike8,,,å¤§å¤´å¥³å„¿,Bike8,
+Select Bike9,,,å‘†ä¸ªé¸¡å¤´,Bike9,
+Select Bike10,,,é¥­ä½ å“¥,Bike10,
+Select Bike11,,,æ°´ç®¡ç›ä¸½,Bike11,
+Select Bike12,,,æ¡¶è£…è½¦66,Bike12,
+Select Bike13,,,é›¨è¡£æ€ªå’–,Bike13,
+Select Bike14,,,é­”æ³•é˜¿å«²,Bike14,
+Select Bike15,,,å¸¦å¦¹å¤§ç¥,Bike15,
+Select Bike16,,,åŒ—æç†Šäºº,Bike16,
+Select Bike17,,,é•¿é¢ˆé¹¿å›,Bike17,
+Select Bike18,,,å†°é›ªå¥‡äºº,Bike18,
+Select Bike19,,,é“ƒé“›å–µå¨˜,Bike19,
+Select Bike20,,,è¿½é£å°‘å¹´,Bike20,
+Select Bike21,,,å‡‰å®«æ˜¥å¤œ,Bike21,
+Select Bike22,,,å¯¿å¸å›,Bike22,
+Select Bike23,,,å›¢å­é…±,Bike23,
+Select Bike24,,,ç«¹è½®æ¡‘,Bike24,
+Select Bike25,,,ç†ŠçŒ«è½¦M2,Bike25,
+Select Bike26,,,ç–¾é£é£™ç¥,Bike26,
+Select Bike27,,,å°ç”œç”œ,Bike27,
+Select Bike28,,,æ‚æŠ€ä¸€å“¥,Bike28,
+Select Bike29,,,é“åŒ…çš®ç¥,Bike29,
+Select Bike30,,,å¤–é€é«˜æ‰‹,Bike30,
+Select Bike31,,,èŒèŒå°é’,Bike31,
+Select Bike32,,,é…·è·‘åˆéŸ³,Bike32,
+Select Bike33,,,å­”é›€å¼€å±,Bike33,
+Random role1,,,æ·¡æ·¡ç´«ä¸é¦™ã¸,NPC1,
+Random role2,,,oĞç»¿å¸½ä¾ ,NPC2,
+Random role3,,,å§ä¸ä½œä¸šæ°´åœŸä¸æœã¥,NPC3,
+Random role4,,,è–„è·è¡—çš„å…”æ¯”å…ˆç”Ÿã€‚,NPC4,
+Random role5,,,åˆå»ç»™äº†çƒŸ,NPC5,
+Random role6,,,å°å°çš„æœºæªÂ·å“’å“’å“’,NPC6,
+Random role7,,,æƒ…å…½ã€‚,NPC7,
+Random role8,,,é‡‡å§‘å¨˜çš„å°è˜‘è‡,NPC8,
+Random role9,,,é“æ‰“çš„èº«å­ä¸é”ˆé’¢çš„å¿ƒ,NPC9,
+Random role10,,,å›§å›§ã€å¼€å¿ƒ,NPC10,
+Random role11,,,çœ‹æˆ‘ç”µä¸æ­»ä½ ä¸¶,NPC11,
+Random role12,,,ï¹è´«åƒ§æ˜¯æ¥åŒ–å¦æ»´,NPC12,
+Random role13,,,è€è¡²æ»¡å¤´ç§€å‘,NPC13,
+Random role14,,,è€è¡²æ³•å·æƒ…åœ£,NPC14,
+Random role15,,,æŒºç›´è…°æ†,NPC15,
+Random role16,,,æ¡å­ä¼šå‘å…‰i,NPC16,
+Random role17,,,å£è¢‹é‡Œæœ‰ç³–@,NPC17,
+Random role18,,,é¸­æ¢¨å±±å¤§,NPC18,
+Random role19,,,ç´«çº±é­…æƒ‘å¦–äººé­‚,NPC19,
+Random role20,,,çŠ¯äºŒçš„éªšå¹´ä¸å¿§ä¼¤â•­,NPC20,
+Random role21,,,èµ·åç½‘yw11.com,NPC21,
+Random role22,,,å­Ÿå©†æ¥æ¯ä¼˜ä¹ç¾,NPC22,
+Random role23,,,æˆ‘æœ‰æˆ‘çš„è£…é€¼æ¢¦i,NPC23,
+Random role24,,,æ‡’ç™Œæ™šæœŸi,NPC24,
+Random role25,,,å®˜æ–¹è®¤è¯é¹¿å¤«äºº,NPC25,
+Random role26,,,ä½ ä¸æ°§æ°”å…±å­˜,NPC26,
+Random role27,,,åˆ’å‡ºé‚£ä¸€é“æ™—é¢œÂ°,NPC27,
+Random role28,,,å¸¦æŠ¤ç¿¼çš„å¤©ä½¿,NPC28,
+Random role29,,,æ€é’±æƒ³åš,NPC29,
+Random role30,,,è¯¥ç”¨æˆ·å¤ªæ‡’è¿˜æ²¡æƒ³å¥½ç½‘å,NPC30,
+Tip1,,,"è·³è·ƒåæœªè½åœ°æ—¶ï¼Œå†æ¬¡ç‚¹å‡»ç”»é¢ï¼Œ
+å¯è¿›è¡ŒäºŒæ®µè·³å“¦ï¼",,
+Tip2,,,"ä¸‰æ®µè·³ï¼ˆå«ç¬¬3æ¬¡è¿è·³ï¼‰åï¼Œæ¯æ¬¡è·³è·ƒï¼Œ
+æ—¶é—´ä¸èƒ½é—´éš”å¤ªä¹…ï¼",,
+Tip3,,,"æŠ¥å‘Šéª‘å£«å¤§äººï¼Œä¸€èˆ¬æƒ…å†µä¸‹ï¼Œ
+æ‚¨å¯è¿›è¡Œ7æ¬¡è¿è·³å“Ÿï¼",,
+Tip4,,,æ­»äº¡å†å¤æ´»åï¼Œå¯ä¸Šä¸‹ç§»åŠ¨é€‰æ‹©å¤æ´»ä½ç½®å“¦ï¼,,
+Tip5,,,"è¯·åŠæ—¶è…¾å‡ºé“å…·æ å“¦ï¼Œå¦åˆ™ï¼Œ
+å°±æ— æ³•å†è£…å…¶ä»–é“å…·å•¦ï¼",,
+Tip6,,,é‡åˆ°å°é¸Ÿåˆ«æ€•ï¼Œè¸©ä¸Šå»å°±å¯¹å•¦ï¼,,
+Tip7,,,å’Œå°é¸Ÿä¸€æ ·ï¼Œæ»šçŸ³ä¹Ÿæ˜¯èƒ½è¸©çš„å“¦ï¼,,
+Tip8,,,è››ç½‘é“å…·å¤ªå¯æ€•ï¼Ÿå…¶å®è·³è·ƒ3æ¬¡ï¼Œå°±èƒ½æŒ£è„±äº†å“¦ï¼,,
+Tip9,,,æŠ¥å‘Šéª‘å£«å¤§äººï¼Œæ³¡æ³¡çŠ¶æ€ä¸‹çš„æ‚¨ï¼Œé˜²å¾¡æ— æ•Œå“¦ï¼,,
+say2,,,ç¬¬1æ¬¡ä½¿ç”¨ 2å·è½¦,,
+say3,,,ç¬¬1æ¬¡ä½¿ç”¨ 3å·è½¦,,
+say4,,,ç¬¬1æ¬¡ä½¿ç”¨ 4å·è½¦,,
+say5,,,ç¬¬1æ¬¡ä½¿ç”¨ 5å·è½¦,,
+say6,,,ç¬¬1æ¬¡ä½¿ç”¨ 6å·è½¦,,
+say7,,,ç¬¬1æ¬¡ä½¿ç”¨ 7å·è½¦,,
+say8,,,ç¬¬1æ¬¡ä½¿ç”¨ 8å·è½¦,,
+say9,,,ç¬¬1æ¬¡ä½¿ç”¨ 9å·è½¦,,
+say10,,,ç¬¬1æ¬¡ä½¿ç”¨ 10å·è½¦,,
+say11,,,ç¬¬1æ¬¡ä½¿ç”¨ 11å·è½¦,,
+say12,,,ç¬¬1æ¬¡ä½¿ç”¨ 12å·è½¦,,
+say13,,,ç¬¬1æ¬¡ä½¿ç”¨ 13å·è½¦,,
+say14,,,ç¬¬1æ¬¡ä½¿ç”¨ 14å·è½¦,,
+say15,,,ç¬¬1æ¬¡ä½¿ç”¨ 15å·è½¦,,
+say16,,,ç¬¬1æ¬¡ä½¿ç”¨ 16å·è½¦,,
+say17,,,ç¬¬1æ¬¡ä½¿ç”¨ 17å·è½¦,,
+say18,,,ç¬¬1æ¬¡ä½¿ç”¨ 18å·è½¦,,
+say19,,,ç¬¬1æ¬¡ä½¿ç”¨ 19å·è½¦,,
+say20,,,ç¬¬1æ¬¡ä½¿ç”¨ 20å·è½¦,,
+say21,,,ç¬¬1æ¬¡ä½¿ç”¨ 21å·è½¦,,
+say22,,,ç¬¬1æ¬¡ä½¿ç”¨ 22å·è½¦,,
+say23,,,ç¬¬1æ¬¡ä½¿ç”¨ 23å·è½¦,,
+say24,,,ç¬¬1æ¬¡ä½¿ç”¨ 24å·è½¦,,
+say25,,,ç¬¬1æ¬¡ä½¿ç”¨ 25å·è½¦,,
+say26,,,ç¬¬1æ¬¡ä½¿ç”¨ 26å·è½¦,,
+say27,,,ç¬¬1æ¬¡ä½¿ç”¨ 27å·è½¦,,
+say28,,,ç¬¬1æ¬¡ä½¿ç”¨ 28å·è½¦,,
+say29,,,ç¬¬1æ¬¡ä½¿ç”¨ 29å·è½¦,,
+say30,,,ç¬¬1æ¬¡ä½¿ç”¨ 30å·è½¦,,
+say31,,,ç¬¬1æ¬¡ä½¿ç”¨ 31å·è½¦,,
+say32,,,ç¬¬1æ¬¡ä½¿ç”¨ 32å·è½¦,,
+say33,,,ç¬¬1æ¬¡ä½¿ç”¨ 33å·è½¦,,
+say1001,,,ç¬¬1æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡,,
+say1002,,,ç¬¬2æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1003,,,ç¬¬3æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1004,,,ç¬¬4æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1005,,,ç¬¬5æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1006,,,ç¬¬6æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1007,,,ç¬¬7æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1008,,,ç¬¬8æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1009,,,ç¬¬9æ¬¡  è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1010,,,ç¬¬10æ¬¡ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say1011,,,ç¬¬11æ¬¡ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰,,
+say2001,,,ç¬¬1æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2002,,,ç¬¬2æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2003,,,ç¬¬3æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2004,,,ç¬¬4æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2005,,,ç¬¬5æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2006,,,ç¬¬6æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2007,,,ç¬¬7æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2008,,,ç¬¬8æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2009,,,ç¬¬9æ¬¡  è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2010,,,ç¬¬10æ¬¡ è¿›å…¥æ’åç«èµ›å…³å¡,,
+say2011,,,ç¬¬11æ¬¡ è¿›å…¥æ’åç«èµ›å…³å¡,,
+say3001,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº1,,
+say3002,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº2,,
+say3003,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº3,,
+say3004,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº4,,
+say3005,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº5,,
+say3006,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº6,,
+say3007,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº7,,
+say3008,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº8,,
+say3009,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº9,,
+say3010,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº10,,
+say3011,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹æ²¡æœ‰è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº11,,
+say4001,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº1,,
+say4002,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº2,,
+say4003,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº3,,
+say4004,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº4,,
+say4005,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº5,,
+say4006,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº6,,
+say4007,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº7,,
+say4008,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº8,,
+say4009,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº9,,
+say4010,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº10,,
+say4011,,,æ— é™å¾ªç¯ è¿›å…¥æ— å°½æ¨¡å¼å…³å¡ ä¹‹å‰æ— å°½æ¨¡å¼é‡Œç¨‹è¶…è¿‡600Mï¼ˆä¸ç®—åŠ æˆï¼‰ éšæœº11,,
+say5001,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº1,,
+say5002,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº2,,
+say5003,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº3,,
+say5004,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº4,,
+say5005,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº5,,
+say5006,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº6,,
+say5007,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº7,,
+say5008,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº8,,
+say5009,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº9,,
+say5010,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº10,,
+say5011,,,æ— é™å¾ªç¯ è¿›å…¥æ’åç«èµ›å…³å¡ éšæœº11,,
+ThereIsNoGiftToday,,,çœŸå¯æƒœï¼Œä»Šå¤©çš„ç¤¼åŒ…é¢†å®Œäº†å‘¢,,
+é¢†å–ç¤¼åŒ…çš„æ—¶é—´è¿˜æ²¡åˆ°,,,æŠ±æ­‰éª‘å£«å¤§äººï¼Œè¿˜æœªåˆ°ç¤¼åŒ…é¢†å–æ—¶é—´å“¦,,
+OnlineSay,,,${time} åå°±å¯ä»¥é¢†å–äº†,,
+GotToday,,,ä»Šå¤©å·²é¢†å–,,
+HasDoubleReward,,,å·²ç»è·å¾—äº†åŒå€å¥–åŠ±,,
+HasNoRebornTimes,,,å·²ç»æ²¡æœ‰å¤æ´»æ¬¡æ•°äº†,,
+å¯¹,,,å¯¹,,
+ä½¿ç”¨äº†,,,ä½¿ç”¨äº†,,
+LockNotice,,,"è¿™ä¸ªå†…å®¹æœªè§£é”
+è§£é”æ¡ä»¶ï¼š
 ${condition}",,
-SystemUnlockTitle1,,,Å¤µ° ½âËø,,
-SystemUnlockTitle2,,,ÅÅÃû¾ºÈü ½âËø,,
-SystemUnlockTitle3,,,ÅÅĞĞ ½âËø,,
-SystemUnlockTitle4,,,¼ÒÔ° ½âËø,,
-SystemUnlockTitle11,,,Ç©µ½ ½âËø,,
-SystemUnlockTitle12,,,Àñ°ü ½âËø,,
-SystemUnlockTitle13,,,¸£Àû ½âËø,,
-SystemUnlockDescribe1,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Å¤µ°½âËøÁË",,
-SystemUnlockDescribe2,,,"¹§Ï²ÆïÊ¿´óÈË
-½«ÅÅÃû¾ºÈü½âËøÁË",,
-SystemUnlockDescribe3,,,"¹§Ï²ÆïÊ¿´óÈË
-½«ÅÅĞĞ½âËøÁË",,
-SystemUnlockDescribe4,,,"¹§Ï²ÆïÊ¿´óÈË
-½«¼ÒÔ°½âËøÁË",,
-SystemUnlockDescribe11,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Ç©µ½½âËøÁË",,
-SystemUnlockDescribe12,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Àñ°ü½âËøÁË",,
-SystemUnlockDescribe13,,,"¹§Ï²ÆïÊ¿´óÈË
-½«¸£Àû½âËøÁË",,
-MapUnlockTitle2,,,µØÍ¼2 ½âËø,,
-MapUnlockTitle3,,,µØÍ¼3 ½âËø,,
-MapUnlockTitle4,,,µØÍ¼4 ½âËø,,
-MapUnlockTitle5,,,µØÍ¼5 ½âËø,,
-MapUnlockTitle6,,,µØÍ¼6 ½âËø,,
-MapUnlockTitle7,,,µØÍ¼7 ½âËø,,
-MapUnlockTitle8,,,µØÍ¼8 ½âËø,,
-MapUnlockTitle9,,,µØÍ¼9 ½âËø,,
-MapUnlockTitle10,,,µØÍ¼10 ½âËø,,
-MapUnlockTitle11,,,µØÍ¼11 ½âËø,,
-MapUnlockTitle12,,,µØÍ¼12 ½âËø,,
-MapUnlockDescribe2,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼2½âËøÁË",,
-MapUnlockDescribe3,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼3½âËøÁË",,
-MapUnlockDescribe4,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼4½âËøÁË",,
-MapUnlockDescribe5,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼5½âËøÁË",,
-MapUnlockDescribe6,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼6½âËøÁË",,
-MapUnlockDescribe7,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼7½âËøÁË",,
-MapUnlockDescribe8,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼8½âËøÁË",,
-MapUnlockDescribe9,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼9½âËøÁË",,
-MapUnlockDescribe10,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼10½âËøÁË",,
-MapUnlockDescribe11,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼11½âËøÁË",,
-MapUnlockDescribe12,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÍ¼12½âËøÁË",,
-BackgroundUnlockTitle2,,,±³¾°2 ½âËø,,
-BackgroundUnlockTitle3,,,±³¾°3 ½âËø,,
-BackgroundUnlockTitle4,,,±³¾°4 ½âËø,,
-BackgroundUnlockTitle5,,,±³¾°5 ½âËø,,
-BackgroundUnlockTitle6,,,±³¾°6 ½âËø,,
-BackgroundUnlockTitle7,,,±³¾°7 ½âËø,,
-BackgroundUnlockTitle8,,,±³¾°8 ½âËø,,
-BackgroundUnlockTitle9,,,±³¾°9 ½âËø,,
-BackgroundUnlockTitle10,,,±³¾°10 ½âËø,,
-BackgroundUnlockTitle11,,,±³¾°11 ½âËø,,
-BackgroundUnlockTitle12,,,±³¾°12 ½âËø,,
-BackgroundUnlockDescribe2,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°2½âËøÁË",,
-BackgroundUnlockDescribe3,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°3½âËøÁË",,
-BackgroundUnlockDescribe4,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°4½âËøÁË",,
-BackgroundUnlockDescribe5,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°5½âËøÁË",,
-BackgroundUnlockDescribe6,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°6½âËøÁË",,
-BackgroundUnlockDescribe7,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°7½âËøÁË",,
-BackgroundUnlockDescribe8,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°8½âËøÁË",,
-BackgroundUnlockDescribe9,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°9½âËøÁË",,
-BackgroundUnlockDescribe10,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°10½âËøÁË",,
-BackgroundUnlockDescribe11,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°11½âËøÁË",,
-BackgroundUnlockDescribe12,,,"¹§Ï²ÆïÊ¿´óÈË
-½«±³¾°12½âËøÁË",,
-FloorUnlockTitle2,,,µØÃæ2 ½âËø,,
-FloorUnlockTitle3,,,µØÃæ3 ½âËø,,
-FloorUnlockTitle4,,,µØÃæ4 ½âËø,,
-FloorUnlockTitle5,,,µØÃæ5 ½âËø,,
-FloorUnlockTitle6,,,µØÃæ6 ½âËø,,
-FloorUnlockTitle7,,,µØÃæ7 ½âËø,,
-FloorUnlockDescribe2,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÃæ2½âËøÁË",,
-FloorUnlockDescribe3,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÃæ3½âËøÁË",,
-FloorUnlockDescribe4,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÃæ4½âËøÁË",,
-FloorUnlockDescribe5,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÃæ5½âËøÁË",,
-FloorUnlockDescribe6,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÃæ6½âËøÁË",,
-FloorUnlockDescribe7,,,"¹§Ï²ÆïÊ¿´óÈË
-½«µØÃæ7½âËøÁË",,
-SpoilUnlockTitle1,,,Õ½Á¦Æ·1 ½âËø,,
-SpoilUnlockTitle2,,,Õ½Á¦Æ·2 ½âËø,,
-SpoilUnlockTitle3,,,Õ½Á¦Æ·3 ½âËø,,
-SpoilUnlockTitle4,,,Õ½Á¦Æ·4 ½âËø,,
-SpoilUnlockTitle5,,,Õ½Á¦Æ·5 ½âËø,,
-SpoilUnlockTitle6,,,Õ½Á¦Æ·6 ½âËø,,
-SpoilUnlockTitle7,,,Õ½Á¦Æ·7 ½âËø,,
-SpoilUnlockTitle8,,,Õ½Á¦Æ·8 ½âËø,,
-SpoilUnlockTitle9,,,Õ½Á¦Æ·9 ½âËø,,
-SpoilUnlockTitle10,,,Õ½Á¦Æ·10 ½âËø,,
-SpoilUnlockTitle11,,,Õ½Á¦Æ·11 ½âËø,,
-SpoilUnlockTitle12,,,Õ½Á¦Æ·12 ½âËø,,
-SpoilUnlockTitle13,,,Õ½Á¦Æ·13 ½âËø,,
-SpoilUnlockTitle14,,,Õ½Á¦Æ·14 ½âËø,,
-SpoilUnlockTitle15,,,Õ½Á¦Æ·15 ½âËø,,
-SpoilUnlockTitle16,,,Õ½Á¦Æ·16 ½âËø,,
-SpoilUnlockTitle17,,,Õ½Á¦Æ·17 ½âËø,,
-SpoilUnlockTitle18,,,Õ½Á¦Æ·18 ½âËø,,
-SpoilUnlockTitle19,,,Õ½Á¦Æ·19 ½âËø,,
-SpoilUnlockTitle20,,,Õ½Á¦Æ·20 ½âËø,,
-SpoilUnlockTitle21,,,Õ½Á¦Æ·21 ½âËø,,
-SpoilUnlockTitle22,,,Õ½Á¦Æ·22 ½âËø,,
-SpoilUnlockTitle23,,,Õ½Á¦Æ·23 ½âËø,,
-SpoilUnlockTitle24,,,Õ½Á¦Æ·24 ½âËø,,
-SpoilUnlockTitle25,,,Õ½Á¦Æ·25 ½âËø,,
-SpoilUnlockTitle26,,,Õ½Á¦Æ·26 ½âËø,,
-SpoilUnlockDescribe1,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·1½âËøÁË",,
-SpoilUnlockDescribe2,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·2½âËøÁË",,
-SpoilUnlockDescribe3,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·3½âËøÁË",,
-SpoilUnlockDescribe4,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·4½âËøÁË",,
-SpoilUnlockDescribe5,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·5½âËøÁË",,
-SpoilUnlockDescribe6,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·6½âËøÁË",,
-SpoilUnlockDescribe7,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·7½âËøÁË",,
-SpoilUnlockDescribe8,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·8½âËøÁË",,
-SpoilUnlockDescribe9,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·9½âËøÁË",,
-SpoilUnlockDescribe10,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·10½âËøÁË",,
-SpoilUnlockDescribe11,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·11½âËøÁË",,
-SpoilUnlockDescribe12,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·12½âËøÁË",,
-SpoilUnlockDescribe13,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·13½âËøÁË",,
-SpoilUnlockDescribe14,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·14½âËøÁË",,
-SpoilUnlockDescribe15,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·15½âËøÁË",,
-SpoilUnlockDescribe16,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·16½âËøÁË",,
-SpoilUnlockDescribe17,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·17½âËøÁË",,
-SpoilUnlockDescribe18,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·18½âËøÁË",,
-SpoilUnlockDescribe19,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·19½âËøÁË",,
-SpoilUnlockDescribe20,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·20½âËøÁË",,
-SpoilUnlockDescribe21,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·21½âËøÁË",,
-SpoilUnlockDescribe22,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·22½âËøÁË",,
-SpoilUnlockDescribe23,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·23½âËøÁË",,
-SpoilUnlockDescribe24,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·24½âËøÁË",,
-SpoilUnlockDescribe25,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·25½âËøÁË",,
-SpoilUnlockDescribe26,,,"¹§Ï²ÆïÊ¿´óÈË
-½«Õ½Á¦Æ·26½âËøÁË",,
-PetUnlockTitle1,,,³èÎï1 ½âËø,,
-PetUnlockTitle2,,,³èÎï2 ½âËø,,
-PetUnlockTitle3,,,³èÎï3 ½âËø,,
-PetUnlockTitle4,,,³èÎï4 ½âËø,,
-PetUnlockTitle5,,,³èÎï5 ½âËø,,
-PetUnlockTitle6,,,³èÎï6 ½âËø,,
-PetUnlockTitle7,,,³èÎï7 ½âËø,,
-PetUnlockTitle8,,,³èÎï8 ½âËø,,
-PetUnlockTitle9,,,³èÎï9 ½âËø,,
-PetUnlockTitle10,,,³èÎï10 ½âËø,,
-PetUnlockTitle11,,,³èÎï11 ½âËø,,
-PetUnlockTitle12,,,³èÎï12 ½âËø,,
-PetUnlockTitle13,,,³èÎï13 ½âËø,,
-PetUnlockDescribe1,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï1½âËøÁË",,
-PetUnlockDescribe2,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï2½âËøÁË",,
-PetUnlockDescribe3,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï3½âËøÁË",,
-PetUnlockDescribe4,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï4½âËøÁË",,
-PetUnlockDescribe5,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï5½âËøÁË",,
-PetUnlockDescribe6,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï6½âËøÁË",,
-PetUnlockDescribe7,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï7½âËøÁË",,
-PetUnlockDescribe8,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï8½âËøÁË",,
-PetUnlockDescribe9,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï9½âËøÁË",,
-PetUnlockDescribe10,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï10½âËøÁË",,
-PetUnlockDescribe11,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï11½âËøÁË",,
-PetUnlockDescribe12,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï12½âËøÁË",,
-PetUnlockDescribe13,,,"¹§Ï²ÆïÊ¿´óÈË
-½«³èÎï13½âËøÁË",,
-TextMap-1-1-1,,,ĞÂ½øµÄĞ¡ÆïÊ¿Ó´£¡ »¶Ó­À´µ½ÎÒµÄÊÀ½ç£¡ ÏÈ½ÌÄã×î»ù±¾µÄ£¡ µã»÷ÆÁÄ»£¡ ¾Í¿ÉÒÔÌøÆğÀ´³ÔĞÇĞÇÓ´£¡,,
-TextMap-1-2-1,,,ÓĞ¹»¼òµ¥µÄ°É£¡ ½ÓÏÂÀ´½ÌÄã³Ô¾­Ñé£¡ ¿ÉÒÔÌáÉıµÈ¼¶µÄÓ´£¡,,
-TextMap-1-3-1,,,¿ªÊ¼ÎŞÁÄµ½Ïë´òºÇÇ·ÁË°É£¡ ±ğ¼±£¡ ÔÙ½ÌÄã³ÔÒ»ÏÂ½ğ±Ò£¡ ÏÂÒ»¹Ø¿ªÊ¼ÓĞÄÑ¶ÈÁËÓ´£¡,,
-TextMap-1-4-1,,,½ÓÏÂÀ´Òª½øĞĞ¶à´Î2¶ÎÌøÑµÁ·£¡ Ğ¡ÆïÊ¿ÄãÄÜĞĞ°É£¡ ¿´Äã±íÑİÓ´£¡,,
-TextMap-1-5-1,,,×îºóÀ´µãÓĞÄÑ¶ÈµÄ£¡ Á¬Ğøµã»÷×î¶à¿ÉÒÔ7¶ÎÌø£¡ ¿´¿´ÄãÄÜ²»ÄÜ±íÏÖ³öÀ´Ó´£¡,,
-TextMap-2-1-1,,,Ğ¡ÆïÊ¿£¡ ÏÖÔÚ¿ªÊ¼ÓĞ¿Ó³öÏÖÁË£¡ »ù±¾1¶ÎÌø¾ÍÄÜÌø¹ı£¡ ¿É±ğËÀÁËÑ½£¡,,
-TextMap-2-2-1,,,Ğ¡ÆïÊ¿£¡ ¸øÄã¼ÓËÙÔöÒæ×´Ì¬ÊÔÊÔ£¡ ¿´¿´ÄãÄÜ·ñ¼İÔ¦ËüÓ´£¡,,
-TextMap-2-3-1,,,Ğ¡ÆïÊ¿£¡ ´ó¿ÓÒ²¿ªÊ¼³öÏÖÁË£¡ 1¶ÎÌø¿É¹ı²»È¥£¡ 2¶ÎÌø¾ÍÄÜÌø¹ı£¡ ±ğÅÂÑ½£¡,,
-TextMap-2-4-1,,,Ğ¡ÆïÊ¿£¡ ÊÇÊ±ºòÀ´Ë¬Ò»°ÑÁË£¡ ¿´×¼Ê±»ú£¡ ´ÓÍ·³åµ½Î²°É£¡ ,,
-TextMap-2-5-1,,,Ğ¡ÆïÊ¿£¡ ÓĞÊ±ºòÏÈµôÂäÔÙÌø£¡ ÊÇÒ»ÖÖ¸ß¼¶¼¼ÇÉÓ´£¡,,
-TextMap-3-1-1,,,Ğ¡ÆïÊ¿£¡ µ¯ÌøÆ½Ì¨À´ÌåÑéÒ»ÏÂ£¡ ¿´ÎÒ°ÑÄãµ¯¸ß¸ßÓ´£¡,,
-TextMap-3-2-1,,,Ğ¡ÆïÊ¿£¡ ¶à²ãµØĞÎÊÇ¿ÉÒÔÌøÉÏÈ¥µÄ£¡ ±ğÅÂÑ½£¡,,
-TextMap-3-3-1,,,Ğ¡ÆïÊ¿£¡ À´¾¢ÇéÏíÊÜÌøÌøÀÖ°É£¡ ¿´¿´ÄãµÄµ¯ÌøÄÜÁ¦ÈçºÎÄØ£¡,,
-TextMap-3-4-1,,,Ğ¡ÆïÊ¿£¡ ¸ß¸ßµÍµÍµÄ¶à²ãµØĞÎ¾ÍÏñÊÇÃÔ¹¬Ò»Ñù£¡ Äã×¼±¸ºÃÁËÂğ£¡,,
-TextMap-3-5-1,,,Ğ¡ÆïÊ¿£¡ ½øĞĞ¾ñÔñ°É£¡ ¿´¿´ÄãµÄÔËÆøÊÇ·ñ×ã¹»Ç¿´ó£¡ µ±È»ÄãÒ²¿ÉÒÔÔÙÀ´Ò»´Î£¡,,
-TextMap-4-1-1,,,Ğ¡ÆïÊ¿£¡ ´ÅÌúµÀ¾ßÔÚÊÖ£¡ ×Ô¶¯³ÔµôÓĞÃ»ÓĞ£¡ ±ğ¿ÍÆø¶à³ÔµãÑ½£¡,,
-TextMap-4-2-1,,,Ğ¡ÆïÊ¿£¡ ¿´£¡ Ç°ÃæÓĞĞ¡Äñ£¡ ÌøÉÏÈ¥²ÈÒ»²ÈÓĞ¾ªÏ²Ó´£¡,,
-TextMap-4-3-1,,,Ğ¡ÆïÊ¿£¡ ËÍÄãÒ»¶Ñ´ÅÌú£¡ ¿´ÄãµÄ±¾ÊÂ¸ã¶¨ËüÃÇ°É£¡,,
-TextMap-4-4-1,,,Ğ¡ÆïÊ¿£¡ ,,
+SystemUnlockTitle1,,,æ‰­è›‹ è§£é”,,
+SystemUnlockTitle2,,,æ’åç«èµ› è§£é”,,
+SystemUnlockTitle3,,,æ’è¡Œ è§£é”,,
+SystemUnlockTitle4,,,å®¶å›­ è§£é”,,
+SystemUnlockTitle11,,,ç­¾åˆ° è§£é”,,
+SystemUnlockTitle12,,,ç¤¼åŒ… è§£é”,,
+SystemUnlockTitle13,,,ç¦åˆ© è§£é”,,
+SystemUnlockDescribe1,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æ‰­è›‹è§£é”äº†",,
+SystemUnlockDescribe2,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æ’åç«èµ›è§£é”äº†",,
+SystemUnlockDescribe3,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æ’è¡Œè§£é”äº†",,
+SystemUnlockDescribe4,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å®¶å›­è§£é”äº†",,
+SystemUnlockDescribe11,,,"æ­å–œéª‘å£«å¤§äºº
+å°†ç­¾åˆ°è§£é”äº†",,
+SystemUnlockDescribe12,,,"æ­å–œéª‘å£«å¤§äºº
+å°†ç¤¼åŒ…è§£é”äº†",,
+SystemUnlockDescribe13,,,"æ­å–œéª‘å£«å¤§äºº
+å°†ç¦åˆ©è§£é”äº†",,
+MapUnlockTitle2,,,åœ°å›¾2 è§£é”,,
+MapUnlockTitle3,,,åœ°å›¾3 è§£é”,,
+MapUnlockTitle4,,,åœ°å›¾4 è§£é”,,
+MapUnlockTitle5,,,åœ°å›¾5 è§£é”,,
+MapUnlockTitle6,,,åœ°å›¾6 è§£é”,,
+MapUnlockTitle7,,,åœ°å›¾7 è§£é”,,
+MapUnlockTitle8,,,åœ°å›¾8 è§£é”,,
+MapUnlockTitle9,,,åœ°å›¾9 è§£é”,,
+MapUnlockTitle10,,,åœ°å›¾10 è§£é”,,
+MapUnlockTitle11,,,åœ°å›¾11 è§£é”,,
+MapUnlockTitle12,,,åœ°å›¾12 è§£é”,,
+MapUnlockDescribe2,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾2è§£é”äº†",,
+MapUnlockDescribe3,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾3è§£é”äº†",,
+MapUnlockDescribe4,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾4è§£é”äº†",,
+MapUnlockDescribe5,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾5è§£é”äº†",,
+MapUnlockDescribe6,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾6è§£é”äº†",,
+MapUnlockDescribe7,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾7è§£é”äº†",,
+MapUnlockDescribe8,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾8è§£é”äº†",,
+MapUnlockDescribe9,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾9è§£é”äº†",,
+MapUnlockDescribe10,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾10è§£é”äº†",,
+MapUnlockDescribe11,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾11è§£é”äº†",,
+MapUnlockDescribe12,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°å›¾12è§£é”äº†",,
+BackgroundUnlockTitle2,,,èƒŒæ™¯2 è§£é”,,
+BackgroundUnlockTitle3,,,èƒŒæ™¯3 è§£é”,,
+BackgroundUnlockTitle4,,,èƒŒæ™¯4 è§£é”,,
+BackgroundUnlockTitle5,,,èƒŒæ™¯5 è§£é”,,
+BackgroundUnlockTitle6,,,èƒŒæ™¯6 è§£é”,,
+BackgroundUnlockTitle7,,,èƒŒæ™¯7 è§£é”,,
+BackgroundUnlockTitle8,,,èƒŒæ™¯8 è§£é”,,
+BackgroundUnlockTitle9,,,èƒŒæ™¯9 è§£é”,,
+BackgroundUnlockTitle10,,,èƒŒæ™¯10 è§£é”,,
+BackgroundUnlockTitle11,,,èƒŒæ™¯11 è§£é”,,
+BackgroundUnlockTitle12,,,èƒŒæ™¯12 è§£é”,,
+BackgroundUnlockDescribe2,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯2è§£é”äº†",,
+BackgroundUnlockDescribe3,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯3è§£é”äº†",,
+BackgroundUnlockDescribe4,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯4è§£é”äº†",,
+BackgroundUnlockDescribe5,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯5è§£é”äº†",,
+BackgroundUnlockDescribe6,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯6è§£é”äº†",,
+BackgroundUnlockDescribe7,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯7è§£é”äº†",,
+BackgroundUnlockDescribe8,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯8è§£é”äº†",,
+BackgroundUnlockDescribe9,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯9è§£é”äº†",,
+BackgroundUnlockDescribe10,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯10è§£é”äº†",,
+BackgroundUnlockDescribe11,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯11è§£é”äº†",,
+BackgroundUnlockDescribe12,,,"æ­å–œéª‘å£«å¤§äºº
+å°†èƒŒæ™¯12è§£é”äº†",,
+FloorUnlockTitle2,,,åœ°é¢2 è§£é”,,
+FloorUnlockTitle3,,,åœ°é¢3 è§£é”,,
+FloorUnlockTitle4,,,åœ°é¢4 è§£é”,,
+FloorUnlockTitle5,,,åœ°é¢5 è§£é”,,
+FloorUnlockTitle6,,,åœ°é¢6 è§£é”,,
+FloorUnlockTitle7,,,åœ°é¢7 è§£é”,,
+FloorUnlockDescribe2,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°é¢2è§£é”äº†",,
+FloorUnlockDescribe3,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°é¢3è§£é”äº†",,
+FloorUnlockDescribe4,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°é¢4è§£é”äº†",,
+FloorUnlockDescribe5,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°é¢5è§£é”äº†",,
+FloorUnlockDescribe6,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°é¢6è§£é”äº†",,
+FloorUnlockDescribe7,,,"æ­å–œéª‘å£«å¤§äºº
+å°†åœ°é¢7è§£é”äº†",,
+SpoilUnlockTitle1,,,æˆ˜åŠ›å“1 è§£é”,,
+SpoilUnlockTitle2,,,æˆ˜åŠ›å“2 è§£é”,,
+SpoilUnlockTitle3,,,æˆ˜åŠ›å“3 è§£é”,,
+SpoilUnlockTitle4,,,æˆ˜åŠ›å“4 è§£é”,,
+SpoilUnlockTitle5,,,æˆ˜åŠ›å“5 è§£é”,,
+SpoilUnlockTitle6,,,æˆ˜åŠ›å“6 è§£é”,,
+SpoilUnlockTitle7,,,æˆ˜åŠ›å“7 è§£é”,,
+SpoilUnlockTitle8,,,æˆ˜åŠ›å“8 è§£é”,,
+SpoilUnlockTitle9,,,æˆ˜åŠ›å“9 è§£é”,,
+SpoilUnlockTitle10,,,æˆ˜åŠ›å“10 è§£é”,,
+SpoilUnlockTitle11,,,æˆ˜åŠ›å“11 è§£é”,,
+SpoilUnlockTitle12,,,æˆ˜åŠ›å“12 è§£é”,,
+SpoilUnlockTitle13,,,æˆ˜åŠ›å“13 è§£é”,,
+SpoilUnlockTitle14,,,æˆ˜åŠ›å“14 è§£é”,,
+SpoilUnlockTitle15,,,æˆ˜åŠ›å“15 è§£é”,,
+SpoilUnlockTitle16,,,æˆ˜åŠ›å“16 è§£é”,,
+SpoilUnlockTitle17,,,æˆ˜åŠ›å“17 è§£é”,,
+SpoilUnlockTitle18,,,æˆ˜åŠ›å“18 è§£é”,,
+SpoilUnlockTitle19,,,æˆ˜åŠ›å“19 è§£é”,,
+SpoilUnlockTitle20,,,æˆ˜åŠ›å“20 è§£é”,,
+SpoilUnlockTitle21,,,æˆ˜åŠ›å“21 è§£é”,,
+SpoilUnlockTitle22,,,æˆ˜åŠ›å“22 è§£é”,,
+SpoilUnlockTitle23,,,æˆ˜åŠ›å“23 è§£é”,,
+SpoilUnlockTitle24,,,æˆ˜åŠ›å“24 è§£é”,,
+SpoilUnlockTitle25,,,æˆ˜åŠ›å“25 è§£é”,,
+SpoilUnlockTitle26,,,æˆ˜åŠ›å“26 è§£é”,,
+SpoilUnlockDescribe1,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“1è§£é”äº†",,
+SpoilUnlockDescribe2,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“2è§£é”äº†",,
+SpoilUnlockDescribe3,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“3è§£é”äº†",,
+SpoilUnlockDescribe4,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“4è§£é”äº†",,
+SpoilUnlockDescribe5,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“5è§£é”äº†",,
+SpoilUnlockDescribe6,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“6è§£é”äº†",,
+SpoilUnlockDescribe7,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“7è§£é”äº†",,
+SpoilUnlockDescribe8,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“8è§£é”äº†",,
+SpoilUnlockDescribe9,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“9è§£é”äº†",,
+SpoilUnlockDescribe10,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“10è§£é”äº†",,
+SpoilUnlockDescribe11,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“11è§£é”äº†",,
+SpoilUnlockDescribe12,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“12è§£é”äº†",,
+SpoilUnlockDescribe13,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“13è§£é”äº†",,
+SpoilUnlockDescribe14,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“14è§£é”äº†",,
+SpoilUnlockDescribe15,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“15è§£é”äº†",,
+SpoilUnlockDescribe16,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“16è§£é”äº†",,
+SpoilUnlockDescribe17,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“17è§£é”äº†",,
+SpoilUnlockDescribe18,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“18è§£é”äº†",,
+SpoilUnlockDescribe19,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“19è§£é”äº†",,
+SpoilUnlockDescribe20,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“20è§£é”äº†",,
+SpoilUnlockDescribe21,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“21è§£é”äº†",,
+SpoilUnlockDescribe22,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“22è§£é”äº†",,
+SpoilUnlockDescribe23,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“23è§£é”äº†",,
+SpoilUnlockDescribe24,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“24è§£é”äº†",,
+SpoilUnlockDescribe25,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“25è§£é”äº†",,
+SpoilUnlockDescribe26,,,"æ­å–œéª‘å£«å¤§äºº
+å°†æˆ˜åŠ›å“26è§£é”äº†",,
+PetUnlockTitle1,,,å® ç‰©1 è§£é”,,
+PetUnlockTitle2,,,å® ç‰©2 è§£é”,,
+PetUnlockTitle3,,,å® ç‰©3 è§£é”,,
+PetUnlockTitle4,,,å® ç‰©4 è§£é”,,
+PetUnlockTitle5,,,å® ç‰©5 è§£é”,,
+PetUnlockTitle6,,,å® ç‰©6 è§£é”,,
+PetUnlockTitle7,,,å® ç‰©7 è§£é”,,
+PetUnlockTitle8,,,å® ç‰©8 è§£é”,,
+PetUnlockTitle9,,,å® ç‰©9 è§£é”,,
+PetUnlockTitle10,,,å® ç‰©10 è§£é”,,
+PetUnlockTitle11,,,å® ç‰©11 è§£é”,,
+PetUnlockTitle12,,,å® ç‰©12 è§£é”,,
+PetUnlockTitle13,,,å® ç‰©13 è§£é”,,
+PetUnlockDescribe1,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©1è§£é”äº†",,
+PetUnlockDescribe2,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©2è§£é”äº†",,
+PetUnlockDescribe3,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©3è§£é”äº†",,
+PetUnlockDescribe4,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©4è§£é”äº†",,
+PetUnlockDescribe5,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©5è§£é”äº†",,
+PetUnlockDescribe6,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©6è§£é”äº†",,
+PetUnlockDescribe7,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©7è§£é”äº†",,
+PetUnlockDescribe8,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©8è§£é”äº†",,
+PetUnlockDescribe9,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©9è§£é”äº†",,
+PetUnlockDescribe10,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©10è§£é”äº†",,
+PetUnlockDescribe11,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©11è§£é”äº†",,
+PetUnlockDescribe12,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©12è§£é”äº†",,
+PetUnlockDescribe13,,,"æ­å–œéª‘å£«å¤§äºº
+å°†å® ç‰©13è§£é”äº†",,
+TextMap-1-1-1,,,æ–°è¿›çš„å°éª‘å£«å“Ÿï¼ æ¬¢è¿æ¥åˆ°æˆ‘çš„ä¸–ç•Œï¼ å…ˆæ•™ä½ æœ€åŸºæœ¬çš„ï¼ ç‚¹å‡»å±å¹•ï¼ å°±å¯ä»¥è·³èµ·æ¥åƒæ˜Ÿæ˜Ÿå“Ÿï¼,,
+TextMap-1-2-1,,,æœ‰å¤Ÿç®€å•çš„å§ï¼ æ¥ä¸‹æ¥æ•™ä½ åƒç»éªŒï¼ å¯ä»¥æå‡ç­‰çº§çš„å“Ÿï¼,,
+TextMap-1-3-1,,,å¼€å§‹æ— èŠåˆ°æƒ³æ‰“å‘µæ¬ äº†å§ï¼ åˆ«æ€¥ï¼ å†æ•™ä½ åƒä¸€ä¸‹é‡‘å¸ï¼ ä¸‹ä¸€å…³å¼€å§‹æœ‰éš¾åº¦äº†å“Ÿï¼,,
+TextMap-1-4-1,,,æ¥ä¸‹æ¥è¦è¿›è¡Œå¤šæ¬¡2æ®µè·³è®­ç»ƒï¼ å°éª‘å£«ä½ èƒ½è¡Œå§ï¼ çœ‹ä½ è¡¨æ¼”å“Ÿï¼,,
+TextMap-1-5-1,,,æœ€åæ¥ç‚¹æœ‰éš¾åº¦çš„ï¼ è¿ç»­ç‚¹å‡»æœ€å¤šå¯ä»¥7æ®µè·³ï¼ çœ‹çœ‹ä½ èƒ½ä¸èƒ½è¡¨ç°å‡ºæ¥å“Ÿï¼,,
+TextMap-2-1-1,,,å°éª‘å£«ï¼ ç°åœ¨å¼€å§‹æœ‰å‘å‡ºç°äº†ï¼ åŸºæœ¬1æ®µè·³å°±èƒ½è·³è¿‡ï¼ å¯åˆ«æ­»äº†å‘€ï¼,,
+TextMap-2-2-1,,,å°éª‘å£«ï¼ ç»™ä½ åŠ é€Ÿå¢ç›ŠçŠ¶æ€è¯•è¯•ï¼ çœ‹çœ‹ä½ èƒ½å¦é©¾é©­å®ƒå“Ÿï¼,,
+TextMap-2-3-1,,,å°éª‘å£«ï¼ å¤§å‘ä¹Ÿå¼€å§‹å‡ºç°äº†ï¼ 1æ®µè·³å¯è¿‡ä¸å»ï¼ 2æ®µè·³å°±èƒ½è·³è¿‡ï¼ åˆ«æ€•å‘€ï¼,,
+TextMap-2-4-1,,,å°éª‘å£«ï¼ æ˜¯æ—¶å€™æ¥çˆ½ä¸€æŠŠäº†ï¼ çœ‹å‡†æ—¶æœºï¼ ä»å¤´å†²åˆ°å°¾å§ï¼ ,,
+TextMap-2-5-1,,,å°éª‘å£«ï¼ æœ‰æ—¶å€™å…ˆæ‰è½å†è·³ï¼ æ˜¯ä¸€ç§é«˜çº§æŠ€å·§å“Ÿï¼,,
+TextMap-3-1-1,,,å°éª‘å£«ï¼ å¼¹è·³å¹³å°æ¥ä½“éªŒä¸€ä¸‹ï¼ çœ‹æˆ‘æŠŠä½ å¼¹é«˜é«˜å“Ÿï¼,,
+TextMap-3-2-1,,,å°éª‘å£«ï¼ å¤šå±‚åœ°å½¢æ˜¯å¯ä»¥è·³ä¸Šå»çš„ï¼ åˆ«æ€•å‘€ï¼,,
+TextMap-3-3-1,,,å°éª‘å£«ï¼ æ¥åŠ²æƒ…äº«å—è·³è·³ä¹å§ï¼ çœ‹çœ‹ä½ çš„å¼¹è·³èƒ½åŠ›å¦‚ä½•å‘¢ï¼,,
+TextMap-3-4-1,,,å°éª‘å£«ï¼ é«˜é«˜ä½ä½çš„å¤šå±‚åœ°å½¢å°±åƒæ˜¯è¿·å®«ä¸€æ ·ï¼ ä½ å‡†å¤‡å¥½äº†å—ï¼,,
+TextMap-3-5-1,,,å°éª‘å£«ï¼ è¿›è¡ŒæŠ‰æ‹©å§ï¼ çœ‹çœ‹ä½ çš„è¿æ°”æ˜¯å¦è¶³å¤Ÿå¼ºå¤§ï¼ å½“ç„¶ä½ ä¹Ÿå¯ä»¥å†æ¥ä¸€æ¬¡ï¼,,
+TextMap-4-1-1,,,å°éª‘å£«ï¼ ç£é“é“å…·åœ¨æ‰‹ï¼ è‡ªåŠ¨åƒæ‰æœ‰æ²¡æœ‰ï¼ åˆ«å®¢æ°”å¤šåƒç‚¹å‘€ï¼,,
+TextMap-4-2-1,,,å°éª‘å£«ï¼ çœ‹ï¼ å‰é¢æœ‰å°é¸Ÿï¼ è·³ä¸Šå»è¸©ä¸€è¸©æœ‰æƒŠå–œå“Ÿï¼,,
+TextMap-4-3-1,,,å°éª‘å£«ï¼ é€ä½ ä¸€å †ç£é“ï¼ çœ‹ä½ çš„æœ¬äº‹æå®šå®ƒä»¬å§ï¼,,
+TextMap-4-4-1,,,å°éª‘å£«ï¼ ,,
