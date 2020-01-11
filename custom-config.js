@@ -4736,7 +4736,6 @@ Config.item = {
                 portable: 0,
                 effect: "GoldCoin",
                 value: 5,
-                value: 1,
                 // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedByMagnet: 1,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
@@ -8163,5 +8162,7 @@ Config.playerLevelNeededExp = [
     40950, 41860, 42780, 43710, 44650,
     45600, 46560, 47530, 48510
 ];
+
+Config.upgradeList = [];
 
 export default Config;

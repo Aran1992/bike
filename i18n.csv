@@ -8,6 +8,7 @@ ShopScene.scene.json",可选择,Enable,選択可能
 Select,,BikeScene.scene.json,可选择,Select,選択可能
 Selected,,HomeScene.scene.json,已选择,Selected,選択済み
 LV,,BikeScene.scene.json,等级,LV,レベル
+UpgradeItemDsc,,BikeScene.scene.json,${cur}秒/${max}秒,,
 Exp,,,经验,Exp,
 LevelDsc,,,等级${level},Lv. ${level},
 Count,,,• 结算 •,Count,
@@ -609,4 +610,4 @@ TextMap-3-5-1,,,小骑士！ 进行抉择吧！ 看看你的运气是否足够�
 TextMap-4-1-1,,,小骑士！ 磁铁道具在手！ 自动吃掉有没有！ 别客气多吃点呀！,,
 TextMap-4-2-1,,,小骑士！ 看！ 前面有小鸟！ 跳上去踩一踩有惊喜哟！,,
 TextMap-4-3-1,,,小骑士！ 送你一堆磁铁！ 看你的本事搞定它们吧！,,
-TextMap-4-4-1,,,小骑士！ ,,
+TextMap-4-4-1,,,小骑士！ 前方出现大量鸟群！ 小心跳太高踩小鸟！ 可别踩滑掉下去哟！,,
