@@ -7512,7 +7512,7 @@ Config.signRewardList = [
 Config.advertDrawBikeTime = 3;
 
 // 每局能够进行的复活总次数（包括广告和钻石）
-Config.rebornTimes = 1;
+Config.rebornTimes = 111;
 
 // 进入关卡的最短加载时间（单位：秒）
 Config.minLoadingTime = 3;
@@ -7682,7 +7682,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-4-5.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -7875,7 +7875,7 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-4-2.scene.json",
                 "myLaya/laya/pages/Map/Map-4-3.scene.json",
                 "myLaya/laya/pages/Map/Map-4-4.scene.json",
-                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+                "myLaya/laya/pages/Map/Map-4-5.scene.json",
             ],
             rewardList: [
                 {diamond: 40, coin: 20000},
