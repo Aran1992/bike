@@ -347,6 +347,52 @@ class DataMgr_ {
             }
         }
     }
+
+    getBikeUpgradeTimes(id) {
+        const table = DataMgr.get(DataMgr.bikeUpgrade, {});
+        const bike = table[id] || {};
+        return bike.times || 0;
+    }
+
+    getBikeUpgradeItem(id, index) {
+        const table = DataMgr.get(DataMgr.bikeUpgrade, {});
+        const bike = table[id] || {};
+        const cur = bike[index] || 0;
+        return [cur, Config.upgradeBike.maxValue];
+    }
+
+    setBikeUpgradeItem(id, index, value) {
+        const table = DataMgr.get(DataMgr.bikeUpgrade, {});
+        const bike = table[id] || {};
+        bike[index] = value;
+        bike.times = bike.times || 0;
+        bike.times++;
+        table[id] = bike;
+        DataMgr.set(DataMgr.bikeUpgrade, table);
+    }
+
+    upgradeBikeItem(id) {
+        const upgradeAbleItems = Config.upgradeBike.items
+            .map((item, index) => index)
+            .filter((item, index) => {
+                const [cur, max] = this.getBikeUpgradeItem(id, index);
+                return cur < max;
+            });
+        const upgradeIndex = Utils.randomChoose(upgradeAbleItems);
+        const [cur] = DataMgr.getBikeUpgradeItem(id, upgradeIndex);
+        DataMgr.setBikeUpgradeItem(id, upgradeIndex, cur + Config.upgradeBike.addedValueEachTime);
+        return upgradeIndex;
+    }
+
+    getEffectDuration(bikeId, effect) {
+        let base = Config.effect[effect].duration;
+        const index = Config.upgradeBike.items.indexOf(effect);
+        if (index !== -1) {
+            const [cur] = DataMgr.getBikeUpgradeItem(bikeId, index);
+            base += cur;
+        }
+        return base;
+    }
 }
 
 const DataMgr = new DataMgr_();
@@ -401,5 +447,6 @@ DataMgr.endlessGameTimes = "40";
 DataMgr.preparationDataGameLevel = "41";
 DataMgr.gameLevelData = "42";
 DataMgr.exp = "43";
+DataMgr.bikeUpgrade = "44";
 
 export default DataMgr;

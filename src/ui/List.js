@@ -196,6 +196,7 @@ export default class List {
     }
 
     reset(count) {
+        count = count === undefined ? this.itemCount : count;
         this.container[this.moveAxis] = 0;
         this.setItemCount(count);
         for (let index in this.itemTable) {
@@ -231,5 +232,13 @@ export default class List {
 
     getViewLineCount() {
         return Math.floor(this.viewLength / this.itemLength);
+    }
+
+    updateItems(updateFunc) {
+        for (let index in this.itemTable) {
+            if (this.itemTable.hasOwnProperty(index)) {
+                updateFunc(this.itemTable[index], index);
+            }
+        }
     }
 }

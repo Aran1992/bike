@@ -8163,6 +8163,29 @@ Config.playerLevelNeededExp = [
     45600, 46560, 47530, 48510
 ];
 
-Config.upgradeList = [];
+// 升级自行车相关配置
+Config.upgradeBike = {
+    // 每次升级消耗金币
+    costCoin: 1000,
+    // 每次升级增加的值
+    addedValueEachTime: 0.1,
+    // 每项最大值
+    maxValue: 5,
+    // 每个玩家级别最多能升级多少次自行车（按顺序多用每个级别的次数）
+    playerLevelLimitTimes: [
+        1, 2, 3, 4, 5, 6, 7, 8
+    ],
+    // 跑马灯动画帧数
+    animationSelectingFrame: 180,
+    // 选中动画帧数
+    animationSelectedFrame: 60,
+    // 升级项目
+    items: [
+        "Magnet",
+        "UnlimitedJump",
+        "Invincible",
+        "Sprint",
+    ],
+};
 
 export default Config;

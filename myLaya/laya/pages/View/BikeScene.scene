@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":15,
-    "selecteID":68,
+    "selectedBox":68,
+    "selecteID":277,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -74,7 +74,7 @@
                             "props":{"width":190,"runtime":"../laya/assets/sounds/SE312.mp3","name":"item","height":190},
                             "nodeParent":3,
                             "label":"item",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -190,7 +190,7 @@
                     "props":{"width":620,"visible":false,"var":"upgradePanel","top":40,"skin":"images/bg-21.png","sizeGrid":"20,20,20,20","height":884,"centerX":0,"bottom":336},
                     "nodeParent":15,
                     "label":"upgradePanel",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -199,10 +199,10 @@
                         {
                             "x":45,
                             "type":"Panel",
-                            "searchKey":"Panel",
-                            "props":{"width":570,"top":50,"height":480,"centerX":0},
+                            "searchKey":"Panel,upgradeList",
+                            "props":{"width":570,"var":"upgradeList","top":50,"height":480,"centerX":0},
                             "nodeParent":68,
-                            "label":"Panel",
+                            "label":"upgradeList",
                             "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
@@ -229,13 +229,14 @@
                                             "props":{"width":570,"skin":"images/bg-51.png","height":100},
                                             "nodeParent":278,
                                             "label":"Image",
-                                            "isOpen":false,
+                                            "isOpen":true,
                                             "isDirectory":true,
                                             "isAniNode":true,
                                             "hasChild":true,
                                             "compId":74,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,itemPanel0",
                                                     "props":{"y":0,"x":0,"top":0,"right":0,"name":"itemPanel0","left":0,"bottom":0},
@@ -276,6 +277,7 @@
                                                         }]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,itemPanel1",
                                                     "props":{"y":0,"x":0,"top":0,"right":0,"name":"itemPanel1","left":0,"bottom":0},
@@ -316,6 +318,7 @@
                                                         }]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,itemPanel2",
                                                     "props":{"y":0,"x":0,"top":0,"right":0,"name":"itemPanel2","left":0,"bottom":0},
@@ -356,6 +359,7 @@
                                                         }]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,itemPanel3",
                                                     "props":{"y":0,"x":0,"top":0,"right":0,"name":"itemPanel3","left":0,"bottom":0},
@@ -396,6 +400,7 @@
                                                         }]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Image",
                                                     "searchKey":"Image",
                                                     "props":{"width":280,"skin":"images/bottom-num-21.png","right":20,"height":60,"centerY":0},
@@ -738,6 +743,7 @@
                                                         }]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Image",
                                                     "searchKey":"Image,selectedIcon",
                                                     "props":{"width":570,"skin":"images/bg-91.png","name":"selectedIcon","height":100,"centerY":0,"centerX":0},
@@ -947,7 +953,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,upgradePanelButton",
-                            "props":{"width":101,"visible":false,"var":"upgradePanelButton","top":60,"skin":"images/skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
+                            "props":{"width":101,"var":"upgradePanelButton","top":60,"skin":"images/skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
                             "nodeParent":21,
                             "label":"upgradePanelButton",
                             "isOpen":true,

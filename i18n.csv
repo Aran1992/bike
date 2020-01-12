@@ -9,6 +9,7 @@ Select,,BikeScene.scene.json,可选择,Select,選択可能
 Selected,,HomeScene.scene.json,已选择,Selected,選択済み
 LV,,BikeScene.scene.json,等级,LV,レベル
 UpgradeItemDsc,,BikeScene.scene.json,${cur}秒/${max}秒,,
+已升级${times}次,,BikeScene.scene.json,已升级${times}次,,
 Exp,,,经验,Exp,
 LevelDsc,,,等级${level},Lv. ${level},
 Count,,,• 结算 •,Count,

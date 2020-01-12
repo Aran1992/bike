@@ -4,6 +4,7 @@ import List from "../ui/List";
 import DataMgr from "../mgr/DataMgr";
 import BikeSprite from "../item/BikeSprite";
 import GameUtils from "../mgr/GameUtils";
+import Utils from "../mgr/Utils";
 
 export default class BikeScene extends Scene {
     onCreate() {
@@ -21,7 +22,8 @@ export default class BikeScene extends Scene {
         this.upgradeList = new List({
             root: this.ui.upgradeList,
             updateItemFunc: this.updateUpgradeItem.bind(this),
-            count: Config.upgradeList.length,
+            count: Config.upgradeBike.items.length,
+            isStatic: true,
         });
     }
 
@@ -61,20 +63,21 @@ export default class BikeScene extends Scene {
     }
 
     updateUpgradeItem(item, index) {
-        Config.upgradeList.forEach((upgrade, i) => {
-            item.ui[`itemPanel${index}`].visible = index === i;
+        Config.upgradeBike.items.forEach((upgrade, i) => {
+            item.ui[`itemPanel${i}`].visible = index === i;
         });
-        item.ui.selectedIcon.visible = index === this.selectedUpgradeIndex;
-        const cur = 0.5;
-        const max = 5;
-        item.ui.upgradeProgressLabel.text = App.getText("UpgradeItemDsc", {cur, max});
-        for (let i = 1; i <= 12; i++) {
-            const step = i / 24 * max;
-            this.ui[i].visible = cur >= step;
-        }
-        for (let i = 21; i <= 32; i++) {
-            const step = (i - 20 + 12) / 24;
-            this.ui[i].visible = cur >= step;
+        item.ui.selectedIcon.visible = false;
+        if (this.selectedIndex !== undefined) {
+            const [cur, max] = DataMgr.getBikeUpgradeItem(Config.bikeList[this.selectedIndex].id, index);
+            item.ui.upgradeProgressLabel.text = App.getText("UpgradeItemDsc", {cur, max});
+            for (let i = 1; i <= 12; i++) {
+                const step = i / 24 * max;
+                item.ui[i].visible = cur >= step;
+            }
+            for (let i = 21; i <= 32; i++) {
+                const step = (i - 20 + 12) / 24;
+                item.ui[i].visible = cur >= step;
+            }
         }
     }
 
@@ -143,9 +146,88 @@ export default class BikeScene extends Scene {
     }
 
     onClickUpgradePanelButton() {
+        this.ui.upgradePanel.visible = !this.ui.upgradePanel.visible;
+        this.ui.list.visible = !this.ui.list.visible;
+        if (this.ui.upgradePanel.visible) {
+            this.refreshUpgradePanel();
+        }
     }
 
     onClickUpgradeButton() {
+        const owned = DataMgr.get(DataMgr.coin, 0);
+        const cost = Config.upgradeBike.costCoin;
+        if (owned < cost) {
+            return App.showNotice(App.getText("Gold Coin is not enough!"));
+        }
+        this.upgradeBike();
+    }
+
+    refreshUpgradePanel() {
+        const upgradeTimes = DataMgr.getBikeUpgradeTimes(Config.bikeList[this.selectedIndex].id);
+        const maxTimes = Utils.getLast(Config.upgradeBike.playerLevelLimitTimes);
+        if (upgradeTimes >= maxTimes) {
+            this.ui.lvLimitPanel.visible = true;
+            this.ui.lvLimitLabel.text = App.getText("Highest Level");
+            this.ui.upgradeButton.visible = false;
+            this.ui.upgradeCostPanel.visible = false;
+        } else if (upgradeTimes >= (Config.upgradeBike.playerLevelLimitTimes[DataMgr.getPlayerLevel().level - 1] || maxTimes)) {
+            this.ui.lvLimitPanel.visible = true;
+            this.ui.lvLimitLabel.text = App.getText("玩家${level}级才能继续升级", {level: DataMgr.getPlayerLevel().level});
+            this.ui.upgradeButton.visible = false;
+            this.ui.upgradeCostPanel.visible = false;
+        } else {
+            this.ui.upgradeButton.visible = true;
+            this.ui.upgradeCostPanel.visible = true;
+            this.ui.lvLimitPanel.visible = false;
+        }
+
+        this.ui.upgradeCostLabel.text = Config.upgradeBike.costCoin;
+        this.ui.upgradeTimesLabel.text = App.getText("已升级${times}次", {times: upgradeTimes});
+
+        this.upgradeList.refresh();
+    }
+
+    upgradeBike() {
+        App.showMask(this.onUpgradeEnded);
+        DataMgr.add(DataMgr.coin, -Config.upgradeBike.costCoin);
+        this.upgradeItemIndex = DataMgr.upgradeBikeItem(Config.bikeList[this.selectedIndex].id);
+        this.animationIndex = 0;
+        this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
+    }
+
+    onAnimation() {
+        this.animationIndex++;
+        if (this.animationIndex >= Config.upgradeBike.animationSelectedFrame + Config.upgradeBike.animationSelectingFrame) {
+            this.onUpgradeEnded();
+        } else if (this.animationIndex >= Config.upgradeBike.animationSelectingFrame) {
+            this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
+            this.upgradeList.updateItems((item, index) => {
+                if (index === this.upgradeItemIndex) {
+                    item.ui.selectedIcon.visible = !item.ui.selectedIcon.visible;
+                }
+            });
+        } else {
+            let selectedIndex = Math.floor(Utils.randomInRange(0, Config.upgradeBike.items.length - 1));
+            if (selectedIndex >= this.lastSelectedUpgradeItemIndex) {
+                selectedIndex++;
+            }
+            this.lastSelectedUpgradeItemIndex = selectedIndex;
+            this.upgradeList.updateItems((item, index) => {
+                item.ui.selectedIcon.visible = index === selectedIndex;
+            });
+            this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
+        }
+    }
+
+    onUpgradeEnded() {
+        this.upgradeList.updateItems((item, index) => {
+            if (index === this.upgradeItemIndex) {
+                this.updateUpgradeItem(item, index);
+                item.ui.selectedIcon.visible = true;
+            }
+        });
+        cancelAnimationFrame(this.animationID);
+        App.hideMask();
     }
 }
 
