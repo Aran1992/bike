@@ -1354,9 +1354,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map1",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1416,9 +1416,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map2",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1489,9 +1489,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map3",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1562,9 +1562,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map4",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1635,9 +1635,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map5",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1708,9 +1708,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map6",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1781,9 +1781,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map7",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1854,9 +1854,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map8",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -1927,9 +1927,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map9",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -2000,9 +2000,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map10",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -2073,9 +2073,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map11",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
@@ -2146,9 +2146,9 @@ Config.endlessMode.sceneList = [
         // 地图名称
         name: "Select Map12",
         // 免费解锁所需总距离（改版后这个不用了）
-        unlockDistance: 0,
+        //unlockDistance: 0,
         // 花费解锁所需钻石（改版后这个不用了）
-        unlockCostDiamond: 0,
+        //unlockCostDiamond: 0,
         // 解锁显示内容（有配置就显示，没配置就不显示）
         unlockInfo: {
             // 解锁内容标题
