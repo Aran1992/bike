@@ -16,7 +16,7 @@ Config.defaultItemRandomTable = {
     UnlimitedJump: 1,
 };
 
-// 地图配置
+// 排名竞赛模式地图配置
 Config.mapList = [
     {
         // scene文件的路径
@@ -1347,7 +1347,7 @@ Config.roadSections = {
 
 };
 
-// 无尽模式配置
+// 无尽模式地图配置
 Config.endlessMode.sceneList = [
     {
         id: 0,
@@ -1401,13 +1401,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
-
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1473,12 +1474,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1544,12 +1547,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1615,12 +1620,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1686,12 +1693,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1757,12 +1766,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1828,12 +1839,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1899,12 +1912,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -1970,12 +1985,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -2041,12 +2058,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -2112,12 +2131,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
     {
@@ -2183,12 +2204,14 @@ Config.endlessMode.sceneList = [
         roadSectionList: [],
         // 无限循环旅程
         infiniteRoadSectionList: [],
-        // 道具随机权重表（无尽模式-随机道具-模块1）
+        // 道具随机权重表（无尽模式-随机道具）
         itemRandomTable: {
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
-            Magnet: 1,
+            Accelerate: 2,
+            PowerJump: 2,
+            UnlimitedJump: 2,
+            Magnet: 2,
+			Invincible: 2,
+			Sprint: 1,
         },
     },
 ];
@@ -4746,10 +4769,6 @@ Config.item = {
                 portable: 0,
                 effect: "Star",
                 value: 1,
-                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
-                attractedByMagnet: 0,
-                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
-                attractedBySprint: 1,
             },
             // 经验
             444: {
@@ -5030,7 +5049,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_04.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_grider_00.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0010.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -5053,7 +5072,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect2.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_03.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_frog_00.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0060.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -5074,7 +5093,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BlockSightEffect2.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_06.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_ninja_00.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0210.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -5099,7 +5118,7 @@ Config.effect = {
         // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_07.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_propeller_00.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff0260.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -5120,7 +5139,7 @@ Config.effect = {
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
         bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect2.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_11.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_icon2_00.png",
         // 使用音效
         useSound: "myLaya/laya/assets/sounds/Buff1031.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -5156,7 +5175,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_05.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_jet_00.png",
     },
     // 强化跳跃（可做：增益强化跳跃道具、强化跳跃物件区域）
     PowerJump: {
@@ -5171,7 +5190,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_02.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_drill_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0106.mp3",
     },
@@ -5186,7 +5205,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_09.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_wing_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0111.mp3",
     },
@@ -5203,7 +5222,7 @@ Config.effect = {
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_01.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_dragon_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
     },
@@ -5235,11 +5254,11 @@ Config.effect = {
         // 闪烁透明度（0-1，越低的话越透明）
         twinkleAlpha: 0.5,
         // 道具栏显示的道具图标
-        imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
+        imagePath: "myLaya/laya/assets/images/crystal_invincible_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_01.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_invincible_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
     },
@@ -5252,11 +5271,11 @@ Config.effect = {
         // 飞行速度（单位：像素/秒）（参考：最高1.5倍速，吃2倍加速，1秒跑960像素）
         velocity: 1000,
         // 道具栏显示的道具图标
-        imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
+        imagePath: "myLaya/laya/assets/images/crystal_super_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
         // 持续效果ICON路径
-        buffIconImagePath: "myLaya/laya/assets/images/buff/buff_icon_01.png",
+        buffIconImagePath: "myLaya/laya/assets/images/crystal_super_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
     },
@@ -7404,6 +7423,8 @@ Config.preparationRandomEffectList = {
         "PowerJump",
         "UnlimitedJump",
         "Magnet",
+		"Invincible",
+		"Sprint",
     ],
     // 排名模式
     map: [
@@ -7424,6 +7445,8 @@ Config.preparationRandomEffectList = {
         "PowerJump",
         "UnlimitedJump",
         "Magnet",
+		"Invincible",
+		"Sprint",
     ]
 };
 
@@ -7629,7 +7652,7 @@ Config.lockSystems = {
     },
 };
 
-// 闯关模式相关配置
+// 闯关模式地图配置
 Config.gameLevelMode = {
     // 大地图列表
     mapList: [
