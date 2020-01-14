@@ -136,7 +136,7 @@ export default class GameOverScene extends Scene {
         this.ui.hasDoubleRewardText.visible = !!this.args.gameScene.doubleReward;
         this.ui.advertDoubleButton.visible = !this.args.gameScene.doubleReward;
 
-        let a = this.args.gameScene.rebornTimes < Config.rebornTimes;
+        let a = this.args.gameScene.rebornTimes < Config.endlessMode.rebornTimes;
         this.ui.advertRebornButton.visible = a;
         this.ui.diamondRebornButton.visible = a;
         this.ui.hasNoRebornTimesText.visible = !a;

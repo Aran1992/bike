@@ -2648,6 +2648,9 @@ Config.endlessMode.default = {
     ],
 };
 
+// 无尽模式复活次数
+Config.endlessMode.rebornTimes = 3;
+
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
 Config.bgY = [0, 0, 256];
 
@@ -7534,9 +7537,6 @@ Config.signRewardList = [
 // 每天广告扭蛋的次数
 Config.advertDrawBikeTime = 3;
 
-// 每局能够进行的复活总次数（包括广告和钻石）
-Config.rebornTimes = 111;
-
 // 进入关卡的最短加载时间（单位：秒）
 Config.minLoadingTime = 3;
 
@@ -7654,6 +7654,8 @@ Config.lockSystems = {
 
 // 闯关模式地图配置
 Config.gameLevelMode = {
+    // 复活次数
+    rebornTimes: 1,
     // 大地图列表
     mapList: [
         {

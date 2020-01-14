@@ -95,7 +95,7 @@ export default class GameLevelFailedScene extends Scene {
             },
         ]);
 
-        let a = this.args.gameScene.rebornTimes < Config.rebornTimes;
+        let a = this.args.gameScene.rebornTimes < Config.gameLevelMode.rebornTimes;
         this.ui.advertRebornButton.visible = a;
         this.ui.diamondRebornButton.visible = a;
         this.ui.hasNoRebornTimesText.visible = !a;
