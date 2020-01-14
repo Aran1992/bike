@@ -140,9 +140,9 @@ class NetworkMgr_ {
         this.request(Config.serverUrl + "/board/update_score", "POST", formData, scb, fcb);
     }
 
-    requestSaveSocialData({home = DataMgr.get(DataMgr.homeData), playername = DataMgr.get(DataMgr.playername), headurl = DataMgr.get(DataMgr.headurl)}, scb, fcb) {
+    requestSaveSocialData({home = DataMgr.get(DataMgr.homeData), playername = DataMgr.get(DataMgr.playername), headurl = DataMgr.get(DataMgr.headurl), exp = DataMgr.get(DataMgr.exp)}, scb, fcb) {
         let formData = new FormData();
-        let data = {home, playername, headurl};
+        let data = {home, playername, headurl, exp};
         formData.append("data", JSON.stringify(data));
         this.request(Config.serverUrl + "/player/save_social_data", "POST", formData, scb, fcb);
     }

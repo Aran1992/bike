@@ -126,6 +126,7 @@ class DataMgr_ {
         }
         if (key === DataMgr.exp) {
             this.checkConditions(Config.conditionsEnum.level);
+            NetworkMgr.requestSaveSocialData({exp: value});
         }
         if (key === DataMgr.homeData) {
             NetworkMgr.requestSaveSocialData({home: value});
@@ -330,8 +331,8 @@ class DataMgr_ {
         return table[map] === undefined || table[map][level] === undefined;
     }
 
-    getPlayerLevel() {
-        const exp = DataMgr.get(DataMgr.exp, 0);
+    getPlayerLevel(exp) {
+        exp = exp === undefined ? DataMgr.get(DataMgr.exp, 0) : exp;
         for (let i = 0; i < Config.playerLevelNeededExp.length; i++) {
             if (exp >= Config.playerLevelNeededExp[i]
                 && (Config.playerLevelNeededExp[i + 1] === undefined || exp < Config.playerLevelNeededExp[i + 1])) {

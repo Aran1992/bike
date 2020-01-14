@@ -4,6 +4,7 @@ import List from "../ui/List";
 import NetworkMgr from "../mgr/NetworkMgr";
 import Utils from "../mgr/Utils";
 import {Texture} from "../libs/pixi-wrapper";
+import DataMgr from "../mgr/DataMgr";
 
 let TOTAL_DISTANCE = 1;
 let FARTHEST_DISTANCE = 2;
@@ -14,6 +15,19 @@ let HISTORY = 2;
 let rangeList = [CURRENT, HISTORY];
 
 export default class RankScene extends Scene {
+    static onClickReturnButton() {
+        App.hideScene("RankScene");
+        App.showScene("MainScene");
+    }
+
+    static initTypeRadioButton(button, info) {
+        typeList.forEach(type => button.ui[type].visible = info === type);
+    }
+
+    static initRangeRadioButton(button, info) {
+        rangeList.forEach(type => button.ui[type].visible = info === type);
+    }
+
     onCreate() {
         this.onClick(this.ui.returnButton, RankScene.onClickReturnButton);
 
@@ -43,11 +57,6 @@ export default class RankScene extends Scene {
         this.reset();
     }
 
-    static onClickReturnButton() {
-        App.hideScene("RankScene");
-        App.showScene("MainScene");
-    }
-
     initListItem(item) {
         this.onClick(item, this.onClickItem.bind(this));
     }
@@ -63,16 +72,17 @@ export default class RankScene extends Scene {
         item.username = username;
         NetworkMgr.requestLoadSocialData(username, (data) => {
             if (item.username === username) {
-                let playername = JSON.parse(data.response).playername;
-                let headurl = JSON.parse(data.response).headurl;
-                item.ui.userNameText.text = playername;
-                item.ui.userImage.children[0].texture = Texture.from(headurl);
+                const info = JSON.parse(data.response);
+                item.ui.userNameText.text = info.playername;
+                item.ui.userImage.children[0].texture = Texture.from(info.headurl);
+                if (info.exp === undefined) {
+                    item.ui.levelText.visible = false;
+                } else {
+                    item.ui.levelText.visible = true;
+                    item.ui.levelText.text = DataMgr.getPlayerLevel(info.exp).level;
+                }
             }
         });
-    }
-
-    static initTypeRadioButton(button, info) {
-        typeList.forEach(type => button.ui[type].visible = info === type);
     }
 
     onClickTypeRadio(selectedIndex) {
@@ -80,10 +90,6 @@ export default class RankScene extends Scene {
         if (this.rangeRadio) {
             this.reset();
         }
-    }
-
-    static initRangeRadioButton(button, info) {
-        rangeList.forEach(type => button.ui[type].visible = info === type);
     }
 
     onClickRangeRadio(selectedIndex) {
