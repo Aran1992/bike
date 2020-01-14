@@ -97,7 +97,7 @@ quit the game no double reward,,,"确定退出游戏吗？
 restart the game no double reward,,,"确定重新开始游戏吗？
 双倍奖励还没领取哟！",,
 Gold Coin is not enough!,,,金币不足！,Gold Coin is not enough!,
-BikeDsc,,,"【No.${index} 自行车】
+BikeDsc,,,"【No.${index} ${name}】
 速度          ${speed}%
 跳跃力      ${jump}%
 连续跳跃   ${highJump}

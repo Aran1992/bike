@@ -113,6 +113,7 @@ export default class GameUtils {
     static getBikeDsc(config) {
         return App.getText("BikeDsc", {
             index: config.index,
+            name: App.getText(config.name),
             speed: Math.floor(config.velocityPercent * 100),
             jump: Math.floor((2 - config.densityPercent) * 100),
             highJump: App.getText(config.highJump),

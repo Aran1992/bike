@@ -2762,6 +2762,8 @@ Config.bikeList = [
             0
         ],
         "index": 1,
+        // 自行车名
+        "name": "Select Bike1",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
