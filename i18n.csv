@@ -106,6 +106,7 @@ Speed     ${speed}%
 Jump      ${jump}%
 HighJump  ${highJump}
 Size      ${size}",
+LevelDsc2,,,等级          ${level},LV        ${level},
 BonusDsc,,,"金币          ${coin}
 里程          ${distance}
 积分          ${score}
