@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":68,
-    "selecteID":277,
+    "selectedBox":74,
+    "selecteID":276,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -324,16 +324,17 @@
                                                     "props":{"y":0,"x":0,"top":0,"right":0,"name":"itemPanel2","left":0,"bottom":0},
                                                     "nodeParent":74,
                                                     "label":"itemPanel2",
-                                                    "isOpen":false,
+                                                    "isOpen":true,
                                                     "isDirectory":true,
                                                     "isAniNode":true,
                                                     "hasChild":true,
                                                     "compId":275,
                                                     "child":[
                                                         {
+                                                            "x":105,
                                                             "type":"Image",
                                                             "searchKey":"Image",
-                                                            "props":{"y":253,"x":20,"skin":"images/crystal_icon2_09.png","left":20,"centerY":0},
+                                                            "props":{"y":253,"x":20,"skin":"images/crystal_invincible_09.png","left":20,"centerY":0},
                                                             "nodeParent":275,
                                                             "label":"Image",
                                                             "isDirectory":false,
@@ -344,6 +345,7 @@
                                                                 ]
                                                         },
                                                         {
+                                                            "x":105,
                                                             "type":"Label",
                                                             "searchKey":"Label",
                                                             "props":{"y":273,"x":100,"text":"无敌加时","strokeColor":"#ffffff","left":100,"fontSize":35,"color":"#ffffff","centerY":0},
@@ -365,16 +367,17 @@
                                                     "props":{"y":0,"x":0,"top":0,"right":0,"name":"itemPanel3","left":0,"bottom":0},
                                                     "nodeParent":74,
                                                     "label":"itemPanel3",
-                                                    "isOpen":false,
+                                                    "isOpen":true,
                                                     "isDirectory":true,
                                                     "isAniNode":true,
                                                     "hasChild":true,
                                                     "compId":276,
                                                     "child":[
                                                         {
+                                                            "x":105,
                                                             "type":"Image",
                                                             "searchKey":"Image",
-                                                            "props":{"y":373,"x":20,"skin":"images/crystal_icon2_09.png","left":20,"centerY":0},
+                                                            "props":{"y":373,"x":20,"skin":"images/crystal_super_09.png","left":20,"centerY":0},
                                                             "nodeParent":276,
                                                             "label":"Image",
                                                             "isDirectory":false,
@@ -385,6 +388,7 @@
                                                                 ]
                                                         },
                                                         {
+                                                            "x":105,
                                                             "type":"Label",
                                                             "searchKey":"Label",
                                                             "props":{"y":393,"x":100,"text":"冲刺加时","strokeColor":"#ffffff","left":100,"fontSize":35,"color":"#ffffff","centerY":0},
