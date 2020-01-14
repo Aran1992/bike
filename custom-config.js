@@ -1395,7 +1395,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1407,8 +1407,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1468,7 +1468,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1480,8 +1480,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1541,7 +1541,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/09_yagiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1553,8 +1553,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1614,7 +1614,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/04_sasori.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1626,8 +1626,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1687,7 +1687,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/03_mizugameza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1699,8 +1699,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1760,7 +1760,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/11_kaniza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1772,8 +1772,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1833,7 +1833,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/06_futagoza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1845,8 +1845,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1906,7 +1906,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/12_shishiza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1918,8 +1918,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -1979,7 +1979,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/08_tenbinza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -1991,8 +1991,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -2052,7 +2052,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/10_uoza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -2064,8 +2064,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -2125,7 +2125,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/02_iteza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -2137,8 +2137,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
     {
@@ -2198,7 +2198,7 @@ Config.endlessMode.sceneList = [
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/07_otomeza.mp3",
         // 里程提示（单位米）（10秒大约走200米）
-        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000,  95000, 100000],
+        distanceNotice: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
         // 一次性旅程
         roadSectionList: [],
@@ -2210,8 +2210,8 @@ Config.endlessMode.sceneList = [
             PowerJump: 2,
             UnlimitedJump: 2,
             Magnet: 2,
-			Invincible: 2,
-			Sprint: 1,
+            Invincible: 2,
+            Sprint: 1,
         },
     },
 ];
@@ -7423,8 +7423,8 @@ Config.preparationRandomEffectList = {
         "PowerJump",
         "UnlimitedJump",
         "Magnet",
-		"Invincible",
-		"Sprint",
+        "Invincible",
+        "Sprint",
     ],
     // 排名模式
     map: [
@@ -7445,8 +7445,8 @@ Config.preparationRandomEffectList = {
         "PowerJump",
         "UnlimitedJump",
         "Magnet",
-		"Invincible",
-		"Sprint",
+        "Invincible",
+        "Sprint",
     ]
 };
 
@@ -8202,6 +8202,8 @@ Config.upgradeBike = {
     animation: {
         // 加速阶段初始移动一次所需帧数
         startSpeed: 50,
+        // 加速阶段需要遍历几轮所有道具
+        startTurns: 1,
         // 匀速运动阶段移动一次所需帧数
         uniformSpeed: 5,
         // 匀速运动需要遍历几轮所有道具

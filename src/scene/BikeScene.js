@@ -151,11 +151,11 @@ export default class BikeScene extends Scene {
     }
 
     onClickUpgradeButton() {
-        // const owned = DataMgr.get(DataMgr.coin, 0);
-        // const cost = Config.upgradeBike.costCoin;
-        // if (owned < cost) {
-        //     return App.showNotice(App.getText("Gold Coin is not enough!"));
-        // }
+        const owned = DataMgr.get(DataMgr.coin, 0);
+        const cost = Config.upgradeBike.costCoin;
+        if (owned < cost) {
+            return App.showNotice(App.getText("Gold Coin is not enough!"));
+        }
         this.upgradeBike();
     }
 
@@ -209,7 +209,8 @@ export default class BikeScene extends Scene {
         this.indexInFrame = [];
         const animationConfig = Config.upgradeBike.animation;
         const itemCount = Config.upgradeBike.items.length;
-        const startStepSpeed = (animationConfig.startSpeed - animationConfig.uniformSpeed) / (itemCount - 1);
+        const startStep = animationConfig.startTurns * itemCount;
+        const startStepSpeed = (animationConfig.startSpeed - animationConfig.uniformSpeed) / startStep;
         for (let i = 0; i < itemCount; i++) {
             const frameCount = Math.ceil(animationConfig.startSpeed - startStepSpeed * i);
             this.createIndexFrames(i, frameCount);
@@ -251,6 +252,9 @@ export default class BikeScene extends Scene {
                 item.ui.selectedIcon.visible = index === this.selectedItemIndex;
             });
             this.animationID = requestAnimationFrame(this.onFrame.bind(this));
+            if (this.selectedItemIndex === -1) {
+                this.refreshUpgradeInfo();
+            }
         }
     }
 }
