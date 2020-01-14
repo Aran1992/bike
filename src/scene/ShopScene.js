@@ -32,7 +32,7 @@ export default class ShopScene extends Scene {
             initItemFunc: this.initRadioButton.bind(this),
             clickButtonFunc: this.onClickRadio.bind(this),
             infoList: this.infoList,
-            buttonDistance: 100
+            buttonDistance: 208
         });
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
     }
@@ -51,7 +51,7 @@ export default class ShopScene extends Scene {
     }
 
     initRadioButton(button, info) {
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= 2; i++) {
             button.ui[`tab${i}Image`].visible = i === info;
         }
     }

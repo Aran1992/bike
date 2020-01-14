@@ -105,7 +105,7 @@ export default class BikeScene extends Scene {
                 let nextValue = list[level + 1];
                 return `${Math.floor(curValue * 100)}%` + (nextValue !== undefined ? ` -> ${Math.floor(nextValue * 100)}%` : "");
             };
-            dsc += "\n" + App.getText("LevelDsc", {level: `${level + 1} ${isHighestLevel ? App.getText("Highest Level") : `-> ${level + 2}`}`});
+            dsc += "\n" + App.getText("LevelDsc2", {level: `${level + 1} ${isHighestLevel ? App.getText("Highest Level") : `-> ${level + 2}`}`});
             coin = get(config, "coinPercent", level);
             distance = get(config, "distancePercent", level);
             score = get(config, "scorePercent", level);
@@ -117,7 +117,7 @@ export default class BikeScene extends Scene {
                 return `${Math.floor(curValue * 100)}%`;
             };
             level = 0;
-            dsc += "\n" + App.getText("LevelDsc", {level: level + 1});
+            dsc += "\n" + App.getText("LevelDsc2", {level: level + 1});
             coin = get(config, "coinPercent", level);
             distance = get(config, "distancePercent", level);
             score = get(config, "scorePercent", level);
