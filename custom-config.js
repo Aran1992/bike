@@ -8166,7 +8166,7 @@ Config.playerLevelNeededExp = [
 // 升级自行车相关配置
 Config.upgradeBike = {
     // 每次升级消耗金币
-    costCoin: 1000,
+    costCoin: [1000, 2000, 3000],
     // 每次升级增加的值
     addedValueEachTime: 0.1,
     // 每项最大值
@@ -8175,10 +8175,16 @@ Config.upgradeBike = {
     playerLevelLimitTimes: [
         1, 2, 3, 4, 5, 6, 7, 8
     ],
-    // 跑马灯动画帧数
-    animationSelectingFrame: 180,
-    // 选中动画帧数
-    animationSelectedFrame: 60,
+    // 随机动画相关配置
+    animation: {
+        startSpeed: 50,
+        uniformSpeed: 5,
+        uniformTurns: 3,
+        endTurns: 2,
+        endSpeed: 50,
+        twinkleSpeed: 5,
+        twinkleTurn: 5,
+    },
     // 升级项目
     items: [
         "Magnet",

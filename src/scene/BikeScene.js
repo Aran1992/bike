@@ -70,12 +70,8 @@ export default class BikeScene extends Scene {
         if (this.selectedIndex !== undefined) {
             const [cur, max] = DataMgr.getBikeUpgradeItem(Config.bikeList[this.selectedIndex].id, index);
             item.ui.upgradeProgressLabel.text = App.getText("UpgradeItemDsc", {cur, max});
-            for (let i = 1; i <= 12; i++) {
-                const step = i / 24 * max;
-                item.ui[i].visible = cur >= step;
-            }
             for (let i = 21; i <= 32; i++) {
-                const step = (i - 20 + 12) / 24;
+                const step = (i - 20) / 12 * Config.upgradeBike.maxValue;
                 item.ui[i].visible = cur >= step;
             }
         }
@@ -149,20 +145,21 @@ export default class BikeScene extends Scene {
         this.ui.upgradePanel.visible = !this.ui.upgradePanel.visible;
         this.ui.list.visible = !this.ui.list.visible;
         if (this.ui.upgradePanel.visible) {
-            this.refreshUpgradePanel();
+            this.refreshUpgradeInfo();
+            this.upgradeList.refresh();
         }
     }
 
     onClickUpgradeButton() {
-        const owned = DataMgr.get(DataMgr.coin, 0);
-        const cost = Config.upgradeBike.costCoin;
-        if (owned < cost) {
-            return App.showNotice(App.getText("Gold Coin is not enough!"));
-        }
+        // const owned = DataMgr.get(DataMgr.coin, 0);
+        // const cost = Config.upgradeBike.costCoin;
+        // if (owned < cost) {
+        //     return App.showNotice(App.getText("Gold Coin is not enough!"));
+        // }
         this.upgradeBike();
     }
 
-    refreshUpgradePanel() {
+    refreshUpgradeInfo() {
         const upgradeTimes = DataMgr.getBikeUpgradeTimes(Config.bikeList[this.selectedIndex].id);
         const maxTimes = Utils.getLast(Config.upgradeBike.playerLevelLimitTimes);
         if (upgradeTimes >= maxTimes) {
@@ -172,7 +169,7 @@ export default class BikeScene extends Scene {
             this.ui.upgradeCostPanel.visible = false;
         } else if (upgradeTimes >= (Config.upgradeBike.playerLevelLimitTimes[DataMgr.getPlayerLevel().level - 1] || maxTimes)) {
             this.ui.lvLimitPanel.visible = true;
-            this.ui.lvLimitLabel.text = App.getText("玩家${level}级才能继续升级", {level: DataMgr.getPlayerLevel().level});
+            this.ui.lvLimitLabel.text = App.getText("玩家${level}级才能继续升级", {level: DataMgr.getPlayerLevel().level + 1});
             this.ui.upgradeButton.visible = false;
             this.ui.upgradeCostPanel.visible = false;
         } else {
@@ -181,53 +178,80 @@ export default class BikeScene extends Scene {
             this.ui.lvLimitPanel.visible = false;
         }
 
-        this.ui.upgradeCostLabel.text = Config.upgradeBike.costCoin;
+        this.ui.upgradeCostLabel.text = Config.upgradeBike.costCoin[upgradeTimes] || Utils.getLast(Config.upgradeBike.costCoin);
         this.ui.upgradeTimesLabel.text = App.getText("已升级${times}次", {times: upgradeTimes});
-
-        this.upgradeList.refresh();
     }
 
     upgradeBike() {
-        App.showMask(this.onUpgradeEnded);
+        App.showMask(this.onUpgradeEnded.bind(this));
         DataMgr.add(DataMgr.coin, -Config.upgradeBike.costCoin);
         this.upgradeItemIndex = DataMgr.upgradeBikeItem(Config.bikeList[this.selectedIndex].id);
-        this.animationIndex = 0;
-        this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
-    }
-
-    onAnimation() {
-        this.animationIndex++;
-        if (this.animationIndex >= Config.upgradeBike.animationSelectedFrame + Config.upgradeBike.animationSelectingFrame) {
-            this.onUpgradeEnded();
-        } else if (this.animationIndex >= Config.upgradeBike.animationSelectingFrame) {
-            this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
-            this.upgradeList.updateItems((item, index) => {
-                if (index === this.upgradeItemIndex) {
-                    item.ui.selectedIcon.visible = !item.ui.selectedIcon.visible;
-                }
-            });
-        } else {
-            let selectedIndex = Math.floor(Utils.randomInRange(0, Config.upgradeBike.items.length - 1));
-            if (selectedIndex >= this.lastSelectedUpgradeItemIndex) {
-                selectedIndex++;
-            }
-            this.lastSelectedUpgradeItemIndex = selectedIndex;
-            this.upgradeList.updateItems((item, index) => {
-                item.ui.selectedIcon.visible = index === selectedIndex;
-            });
-            this.animationID = requestAnimationFrame(this.onAnimation.bind(this));
-        }
+        this.initFrame();
+        this.frame = -1;
+        this.onFrame();
     }
 
     onUpgradeEnded() {
+        this.refreshUpgradeInfo();
         this.upgradeList.updateItems((item, index) => {
             if (index === this.upgradeItemIndex) {
                 this.updateUpgradeItem(item, index);
                 item.ui.selectedIcon.visible = true;
+            } else {
+                item.ui.selectedIcon.visible = false;
             }
         });
         cancelAnimationFrame(this.animationID);
         App.hideMask();
+    }
+
+    initFrame() {
+        this.indexInFrame = [];
+        const animationConfig = Config.upgradeBike.animation;
+        const itemCount = Config.upgradeBike.items.length;
+        const startStepSpeed = (animationConfig.startSpeed - animationConfig.uniformSpeed) / (itemCount - 1);
+        for (let i = 0; i < itemCount; i++) {
+            const frameCount = Math.ceil(animationConfig.startSpeed - startStepSpeed * i);
+            this.createIndexFrames(i, frameCount);
+        }
+        for (let j = 0; j < animationConfig.uniformTurns; j++) {
+            for (let i = 0; i < itemCount; i++) {
+                this.createIndexFrames(i, animationConfig.uniformSpeed);
+            }
+        }
+        const endStep = animationConfig.endTurns * itemCount + this.upgradeItemIndex;
+        const endStepSpeed = (animationConfig.startSpeed - animationConfig.uniformSpeed) / endStep;
+        for (let i = 0; i < endStep; i++) {
+            const frameCount = Math.ceil(animationConfig.uniformSpeed + endStepSpeed * i);
+            const index = i % itemCount;
+            this.createIndexFrames(index, frameCount);
+        }
+        for (let i = 0; i < animationConfig.twinkleTurn; i++) {
+            this.createIndexFrames(this.upgradeItemIndex, animationConfig.uniformSpeed);
+            this.createIndexFrames(-1, animationConfig.uniformSpeed);
+        }
+        this.indexInFrame.push(this.upgradeItemIndex);
+    }
+
+    createIndexFrames(index, frameCount) {
+        const arr = [];
+        for (let i = 0; i < frameCount; i++) {
+            arr.push(index);
+        }
+        this.indexInFrame = this.indexInFrame.concat(arr);
+    }
+
+    onFrame() {
+        this.frame++;
+        if (this.frame >= this.indexInFrame.length) {
+            this.onUpgradeEnded();
+        } else {
+            this.selectedItemIndex = this.indexInFrame[this.frame];
+            this.upgradeList.updateItems((item, index) => {
+                item.ui.selectedIcon.visible = index === this.selectedItemIndex;
+            });
+            this.animationID = requestAnimationFrame(this.onFrame.bind(this));
+        }
     }
 }
 

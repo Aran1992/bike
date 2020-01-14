@@ -237,7 +237,7 @@ export default class List {
     updateItems(updateFunc) {
         for (let index in this.itemTable) {
             if (this.itemTable.hasOwnProperty(index)) {
-                updateFunc(this.itemTable[index], index);
+                updateFunc(this.itemTable[index], parseInt(index));
             }
         }
     }

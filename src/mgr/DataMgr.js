@@ -380,7 +380,7 @@ class DataMgr_ {
             });
         const upgradeIndex = Utils.randomChoose(upgradeAbleItems);
         const [cur] = DataMgr.getBikeUpgradeItem(id, upgradeIndex);
-        DataMgr.setBikeUpgradeItem(id, upgradeIndex, cur + Config.upgradeBike.addedValueEachTime);
+        DataMgr.setBikeUpgradeItem(id, upgradeIndex, Math.floor((cur + Config.upgradeBike.addedValueEachTime) * 10) / 10);
         return upgradeIndex;
     }
 

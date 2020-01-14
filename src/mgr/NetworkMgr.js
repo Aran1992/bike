@@ -17,11 +17,9 @@ class NetworkMgr_ {
         });
         failedCallback = failedCallback || (() => {
         });
-        App.showMask();
         let request = new XMLHttpRequest();
         request.onreadystatechange = () => {
             if (request.readyState === 4) {
-                App.hideMask();
                 if (request.status === 200) {
                     let data;
                     try {
