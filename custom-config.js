@@ -2897,6 +2897,8 @@ Config.bikeList = [
             0
         ],
         "index": 2,
+        // 自行车名
+        "name": "Select Bike2",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -2934,6 +2936,8 @@ Config.bikeList = [
             0
         ],
         "index": 3,
+        // 自行车名
+        "name": "Select Bike3",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -2970,7 +2974,9 @@ Config.bikeList = [
             0,
             0
         ],
-        "index": 8,
+        "index": 4,
+        // 自行车名
+        "name": "Select Bike4",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3008,6 +3014,8 @@ Config.bikeList = [
             0
         ],
         "index": 5,
+        // 自行车名
+        "name": "Select Bike5",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3045,6 +3053,8 @@ Config.bikeList = [
             0
         ],
         "index": 6,
+        // 自行车名
+        "name": "Select Bike6",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3082,6 +3092,8 @@ Config.bikeList = [
             0
         ],
         "index": 7,
+        // 自行车名
+        "name": "Select Bike7",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3119,6 +3131,8 @@ Config.bikeList = [
             0
         ],
         "index": 8,
+        // 自行车名
+        "name": "Select Bike8",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3156,6 +3170,8 @@ Config.bikeList = [
             0
         ],
         "index": 9,
+        // 自行车名
+        "name": "Select Bike9",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3193,6 +3209,8 @@ Config.bikeList = [
             0
         ],
         "index": 10,
+        // 自行车名
+        "name": "Select Bike10",
         "highJump": "Normal",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3230,6 +3248,8 @@ Config.bikeList = [
             0
         ],
         "index": 11,
+        // 自行车名
+        "name": "Select Bike11",
         "highJump": "Normal",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3267,6 +3287,8 @@ Config.bikeList = [
             0
         ],
         "index": 12,
+        // 自行车名
+        "name": "Select Bike12",
         "highJump": "Normal",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3304,6 +3326,8 @@ Config.bikeList = [
             0
         ],
         "index": 13,
+        // 自行车名
+        "name": "Select Bike13",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3341,6 +3365,8 @@ Config.bikeList = [
             0
         ],
         "index": 14,
+        // 自行车名
+        "name": "Select Bike14",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3378,6 +3404,8 @@ Config.bikeList = [
             0
         ],
         "index": 15,
+        // 自行车名
+        "name": "Select Bike15",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3415,6 +3443,8 @@ Config.bikeList = [
             0
         ],
         "index": 16,
+        // 自行车名
+        "name": "Select Bike16",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3452,6 +3482,8 @@ Config.bikeList = [
             0
         ],
         "index": 17,
+        // 自行车名
+        "name": "Select Bike17",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3489,6 +3521,8 @@ Config.bikeList = [
             0
         ],
         "index": 18,
+        // 自行车名
+        "name": "Select Bike18",
         "highJump": "Easy",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3526,6 +3560,8 @@ Config.bikeList = [
             0
         ],
         "index": 19,
+        // 自行车名
+        "name": "Select Bike19",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3563,6 +3599,8 @@ Config.bikeList = [
             0
         ],
         "index": 20,
+        // 自行车名
+        "name": "Select Bike20",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3600,6 +3638,8 @@ Config.bikeList = [
             0
         ],
         "index": 21,
+        // 自行车名
+        "name": "Select Bike21",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3637,6 +3677,8 @@ Config.bikeList = [
             0
         ],
         "index": 22,
+        // 自行车名
+        "name": "Select Bike22",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3674,6 +3716,8 @@ Config.bikeList = [
             0
         ],
         "index": 23,
+        // 自行车名
+        "name": "Select Bike23",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3711,6 +3755,8 @@ Config.bikeList = [
             0
         ],
         "index": 24,
+        // 自行车名
+        "name": "Select Bike24",
         "highJump": "Easy",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3748,6 +3794,8 @@ Config.bikeList = [
             0
         ],
         "index": 25,
+        // 自行车名
+        "name": "Select Bike25",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3785,6 +3833,8 @@ Config.bikeList = [
             0
         ],
         "index": 26,
+        // 自行车名
+        "name": "Select Bike26",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3822,6 +3872,8 @@ Config.bikeList = [
             0
         ],
         "index": 27,
+        // 自行车名
+        "name": "Select Bike27",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3859,6 +3911,8 @@ Config.bikeList = [
             0
         ],
         "index": 28,
+        // 自行车名
+        "name": "Select Bike28",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3896,6 +3950,8 @@ Config.bikeList = [
             0
         ],
         "index": 29,
+        // 自行车名
+        "name": "Select Bike29",
         "highJump": "Normal",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3933,6 +3989,8 @@ Config.bikeList = [
             0
         ],
         "index": 30,
+        // 自行车名
+        "name": "Select Bike30",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3970,6 +4028,8 @@ Config.bikeList = [
             0
         ],
         "index": 31,
+        // 自行车名
+        "name": "Select Bike31",
         "highJump": "Hard",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4007,6 +4067,8 @@ Config.bikeList = [
             0
         ],
         "index": 32,
+        // 自行车名
+        "name": "Select Bike32",
         "highJump": "Hard",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4044,6 +4106,8 @@ Config.bikeList = [
             0
         ],
         "index": 33,
+        // 自行车名
+        "name": "Select Bike33",
         "highJump": "Hard",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -7656,7 +7720,7 @@ Config.lockSystems = {
 
 // 闯关模式地图配置
 Config.gameLevelMode = {
-    // 复活次数
+    // 闯关模式复活次数
     rebornTimes: 1,
     // 大地图列表
     mapList: [
