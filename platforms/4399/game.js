@@ -45,7 +45,7 @@ window.PlatformHelper = {
     }
 };
 
-const CALLBACK_KEY = "36ffbe82a8c58d24237b42a91c7f6cc3";
+const CALLBACK_KEY = "76ba21a51fd85f4de9bad17007956751";
 
 function getArgs(url) {
     let args = {};
