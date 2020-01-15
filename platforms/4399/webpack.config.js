@@ -20,5 +20,6 @@ module.exports = {
         path: path.resolve("./dist"),
         filename: "bundle.js"
     },
-    mode: "production"
+    mode: "production",
+    devtool: "source-map"
 };
