@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":15,
-    "selecteID":166,
+    "selectedBox":98,
+    "selecteID":153,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -969,13 +969,14 @@
             "props":{"width":500,"var":"gameLevelPanel","height":700,"centerY":0,"centerX":0},
             "nodeParent":1,
             "label":"gameLevelPanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":98,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road1",
                     "props":{"visible":true,"skin":"images/bg_root02-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road1","centerY":34,"centerX":-13},
@@ -990,6 +991,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road2",
                     "props":{"width":301,"visible":true,"skin":"images/bg_root03-2.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","rotation":8,"name":"road2","height":366,"centerY":-32,"centerX":152},
@@ -1004,6 +1006,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road3",
                     "props":{"width":148,"visible":true,"skin":"images/bg_root04-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road3","height":58,"centerY":-151,"centerX":105},
@@ -1018,6 +1021,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road4",
                     "props":{"visible":true,"skin":"images/bg_root05-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road4","centerY":-173,"centerX":-84},
@@ -1032,6 +1036,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn1",
                     "props":{"visible":true,"var":"glBtn1","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":16,"centerX":-94},
@@ -1100,6 +1105,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn2",
                     "props":{"visible":true,"var":"glBtn2","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":14,"centerX":74},
@@ -1168,6 +1174,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn3",
                     "props":{"visible":true,"var":"glBtn3","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-139,"centerX":186},
@@ -1236,6 +1243,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn4",
                     "props":{"visible":true,"var":"glBtn4","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-189,"centerX":16},
@@ -1304,6 +1312,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn5",
                     "props":{"visible":true,"var":"glBtn5","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-204,"centerX":-150},
@@ -1372,6 +1381,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,gameLevelMapDsc",
                     "props":{"var":"gameLevelMapDsc","top":10,"text":"Map Description","strokeColor":"#000000","stroke":5,"fontSize":50,"color":"#ffffff","centerX":1},
@@ -1385,6 +1395,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lastLevelButton",
                     "props":{"var":"lastLevelButton","skin":"images/button-lastBtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":-150},
@@ -1400,6 +1411,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,nextLevelButton",
                     "props":{"var":"nextLevelButton","skin":"images/button-nextBtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":150},
@@ -1415,21 +1427,23 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gameLevelLocked",
-                    "props":{"var":"gameLevelLocked","skin":"images/bg_lockmedal.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":130,"centerX":0},
+                    "props":{"var":"gameLevelLocked","skin":"images/bg_lockmedal.png","scaleY":0.5,"scaleX":0.5,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":130,"centerX":-13},
                     "nodeParent":98,
                     "label":"gameLevelLocked",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":153,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,glUnlockStarCount",
-                            "props":{"width":78,"var":"glUnlockStarCount","text":"999","height":30,"fontSize":30,"color":"#000000","centerY":35,"centerX":10,"align":"center"},
+                            "props":{"width":78,"var":"glUnlockStarCount","text":"999","height":30,"fontSize":30,"color":"#000000","centerY":23,"centerX":15,"align":"center"},
                             "nodeParent":153,
                             "label":"glUnlockStarCount",
                             "isDirectory":false,
@@ -1442,6 +1456,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bg-23.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":0},
