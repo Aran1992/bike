@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":282,
-    "selecteID":284,
+    "selecteID":298,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":298,
+    "maxID":299,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -689,36 +689,6 @@
                     "child":[
                         {
                             "x":45,
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"text":"首次","strokeColor":"#ffffff","left":80,"fontSize":50,"color":"#ffffff","centerY":-40},
-                            "nodeParent":282,
-                            "label":"Label",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":283,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"text":"通关奖励","strokeColor":"#ffffff","left":30,"fontSize":50,"color":"#ffffff","centerY":20},
-                            "nodeParent":282,
-                            "label":"Label",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":292,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,firstTimeReward0",
                             "props":{"x":0,"width":175,"var":"firstTimeReward0","skin":"images/bg-42.png","height":175,"centerY":0,"centerX":0},
@@ -829,6 +799,22 @@
                                     "child":[
                                         ]
                                 }],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/first-award.png","left":50,"centerY":0},
+                            "nodeParent":282,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":298,
+                            "child":[
+                                ],
                             "$HIDDEN":false
                         }]
                 }]
