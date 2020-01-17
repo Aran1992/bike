@@ -258,9 +258,10 @@ export default class HomeScene extends Scene {
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
                 this.bgSprite.scale.set(scale, scale);
                 this.ui.selectItemName.text = App.getText("Backgrounds") + config.id;
-                this.ui.commonItemBtn.visible = config.id !== this.selectedBgID;
-                this.ui.selectedItemBtn.visible = config.id === this.selectedBgID;
-                this.ui.lockedItemBtn.visible = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
+                const isLocked = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
+                this.ui.commonItemBtn.visible = !isLocked && config.id !== this.selectedBgID;
+                this.ui.selectedItemBtn.visible = !isLocked && config.id === this.selectedBgID;
+                this.ui.lockedItemBtn.visible = isLocked;
                 break;
             }
             case FLOORS: {
@@ -276,9 +277,10 @@ export default class HomeScene extends Scene {
                 let scale = config.itemScale || Config.home.defaultSceneItemScale;
                 this.floorSprite.scale.set(scale, scale);
                 this.ui.selectItemName.text = App.getText("Floors") + config.id;
-                this.ui.commonItemBtn.visible = config.id !== this.selectedFloorID;
-                this.ui.selectedItemBtn.visible = config.id === this.selectedFloorID;
-                this.ui.lockedItemBtn.visible = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
+                const isLocked = DataMgr.isHomeItemLocked(this.getSelectedType(), config.id);
+                this.ui.commonItemBtn.visible = !isLocked && config.id !== this.selectedFloorID;
+                this.ui.selectedItemBtn.visible = !isLocked && config.id === this.selectedFloorID;
+                this.ui.lockedItemBtn.visible = isLocked;
                 break;
             }
             case SPOILS:
