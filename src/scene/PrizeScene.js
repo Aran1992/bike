@@ -36,9 +36,11 @@ export default class PrizeScene extends Scene {
 
         rewards.forEach(reward => {
             if (reward.rewardCoin) {
-                DataMgr.set(DataMgr.coin, DataMgr.get(DataMgr.coin, 0) + reward.rewardCoin);
+                DataMgr.add(DataMgr.coin, reward.rewardCoin);
             } else if (reward.rewardDiamond) {
-                DataMgr.set(DataMgr.diamond, DataMgr.get(DataMgr.diamond, 0) + reward.rewardDiamond);
+                DataMgr.add(DataMgr.diamond, reward.rewardDiamond);
+            } else if (reward.rewardExp) {
+                DataMgr.add(DataMgr.exp, reward.rewardExp);
             } else if (reward.rewardBike) {
                 let {levelUp, highestLevel} = DataMgr.plusBike(reward.rewardBike);
                 App.showScene("BikeDetailScene", reward.rewardBike, levelUp, highestLevel);
@@ -67,6 +69,11 @@ export default class PrizeScene extends Scene {
                 numberText.visible = true;
                 itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-diamond.png");
                 numberText.text = reward.rewardDiamond;
+            } else if (reward.rewardExp) {
+                itemIcon.visible = true;
+                numberText.visible = true;
+                itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-exp.png");
+                numberText.text = reward.rewardExp;
             } else if (reward.rewardBike) {
                 item.bikePanel.visible = true;
                 item.bikeSprite.setBikeID(reward.rewardBike);

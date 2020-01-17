@@ -7780,7 +7780,7 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, coin: 20000},
+                {diamond: 40, exp: 10},
                 {diamond: 40, coin: 20000},
                 {bike: 1, coin: 20000},
                 {diamond: 40, coin: 20000},

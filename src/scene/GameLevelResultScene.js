@@ -56,6 +56,9 @@ export default class GameLevelResultScene extends Scene {
             if (reward.diamond) {
                 list.push({rewardDiamond: reward.diamond});
             }
+            if (reward.exp) {
+                list.push({rewardExp: reward.exp});
+            }
             if (reward.bike) {
                 list.push({rewardBike: reward.bike});
             }

@@ -144,7 +144,7 @@ export default class PreparationScene extends Scene {
         if (DataMgr.isFirstPlayGameLevel(mainScene.gameLevel, mainScene.selectedLevel)) {
             this.ui.firstTimePanel.visible = true;
             const rewardTable = Config.gameLevelMode.mapList[mainScene.gameLevel].rewardList[mainScene.selectedLevel];
-            const typeList = ["coin", "diamond", "bike"];
+            const typeList = ["coin", "diamond", "exp", "bike"];
             let rewardIndex = 0;
             for (let typeIndex = 0; typeIndex < typeList.length; typeIndex++) {
                 const type = typeList[typeIndex];
@@ -166,6 +166,13 @@ export default class PreparationScene extends Scene {
                             case "diamond": {
                                 item.ui.itemIcon.visible = true;
                                 item.ui.itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-diamond.png");
+                                item.ui.numberText.visible = true;
+                                item.ui.numberText.text = reward;
+                                break;
+                            }
+                            case "exp": {
+                                item.ui.itemIcon.visible = true;
+                                item.ui.itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-exp.png");
                                 item.ui.numberText.visible = true;
                                 item.ui.numberText.text = reward;
                                 break;
