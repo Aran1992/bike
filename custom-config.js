@@ -5501,6 +5501,8 @@ Config.home = {
             unlockConditions: [
                 [1, 50000],
                 [2, 400],
+                [12, 1, 2],
+                [13, 1],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -7385,6 +7387,10 @@ Config.conditions = {
     10: "Need to takes ${0} times map game",
     //需要达到 ### 等级
     11: "Need to reach level ${0}",
+    //闯通 ### 关卡
+    12: "Need to get through level ${0}-${1}",
+    //闯关模式星星总数达到 ###
+    13: "Need to get ${0} game level stars",
 };
 
 Config.conditionsEnum = {
@@ -7399,6 +7405,8 @@ Config.conditionsEnum = {
     scoreRank: 9,
     mapGameTimes: 10,
     level: 11,
+    gameLevel: 12,
+    gameLevelStar: 13,
 };
 
 if (window.ipConfig && window.ipConfig.innerHTML.length) {

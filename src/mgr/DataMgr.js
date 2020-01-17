@@ -29,6 +29,10 @@ class DataMgr_ {
             10: value => DataMgr.get(DataMgr.mapGameTimes, 0) >= value,
             //需要达到 ### 等级
             11: value => DataMgr.getPlayerLevel().level >= value,
+            //闯通 ### 关卡
+            12: (map, level) => !DataMgr.isFirstPlayGameLevel(map - 1, level - 1),
+            //闯关模式星星总数达到 ###
+            13: value => DataMgr.getGameLevelStarTotalCount() >= value,
         };
     }
 
