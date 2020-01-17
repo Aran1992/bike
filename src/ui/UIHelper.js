@@ -126,7 +126,7 @@ export default class UIHelper {
     static onClick(button, handler, noScale) {
         button.buttonMode = true;
         button.interactive = true;
-        button.on("pointerdown", (event) => {
+        button.on("touchstart", (event) => {
             button.clickPoint = {x: event.data.global.x, y: event.data.global.y};
             if (!noScale) {
                 button.originScaleX = button.scale.x;
@@ -138,7 +138,7 @@ export default class UIHelper {
                 button.position.set(x, y);
             }
         });
-        button.on("pointerup", (event) => {
+        button.on("touchend", (event) => {
             if (button.clickPoint) {
                 if (!noScale) {
                     button.scale.set(button.originScaleX, button.originScaleY);
@@ -163,7 +163,19 @@ export default class UIHelper {
                 button.clickPoint = undefined;
             }
         });
-        button.on("pointerupoutside", () => {
+        button.on("touchendoutside", () => {
+            if (button.clickPoint) {
+                button.clickPoint = undefined;
+                if (!noScale) {
+                    button.scale.set(button.originScaleX, button.originScaleY);
+                    let {moveX, moveY} = UIHelper.calcButtonMove(button);
+                    let x = button.x + moveX;
+                    let y = button.y + moveY;
+                    button.position.set(x, y);
+                }
+            }
+        });
+        button.on("touchcancel", () => {
             if (button.clickPoint) {
                 button.clickPoint = undefined;
                 if (!noScale) {

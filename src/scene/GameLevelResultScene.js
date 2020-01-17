@@ -5,6 +5,7 @@ import ResultList from "../ui/ResultList";
 import GameUtils from "../mgr/GameUtils";
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class GameLevelResultScene extends Scene {
     static onClickMainButton() {
@@ -64,6 +65,10 @@ export default class GameLevelResultScene extends Scene {
             }
             App.showScene("PrizeScene", list);
         }
+
+        App.getScene("LevelGameScene").stopSounds();
+        MusicMgr.pauseBGM();
+        MusicMgr.playSound(Config.soundPath.throughFlag);
     }
 
     onClickAdvertDoubleButton() {
