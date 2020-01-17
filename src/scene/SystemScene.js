@@ -12,7 +12,9 @@ export default class SystemScene extends Scene {
 
     onShow() {
         this.ui.bgmOnImage.visible = DataMgr.get(DataMgr.bgmOn, true);
+        this.ui.bgmOffImage.visible = !DataMgr.get(DataMgr.bgmOn, true);
         this.ui.soundOnImage.visible = DataMgr.get(DataMgr.soundOn, true);
+        this.ui.soundOffImage.visible = !DataMgr.get(DataMgr.soundOn, true);
     }
 
     onClickReturnButton() {
@@ -23,12 +25,14 @@ export default class SystemScene extends Scene {
     onClickBGMButton() {
         DataMgr.set(DataMgr.bgmOn, !DataMgr.get(DataMgr.bgmOn, true));
         this.ui.bgmOnImage.visible = DataMgr.get(DataMgr.bgmOn, true);
+        this.ui.bgmOffImage.visible = !DataMgr.get(DataMgr.bgmOn, true);
         MusicMgr.muteBGM(!DataMgr.get(DataMgr.bgmOn, true));
     }
 
     onClickSoundButton() {
         DataMgr.set(DataMgr.soundOn, !DataMgr.get(DataMgr.soundOn, true));
         this.ui.soundOnImage.visible = DataMgr.get(DataMgr.soundOn, true);
+        this.ui.soundOffImage.visible = !DataMgr.get(DataMgr.soundOn, true);
         MusicMgr.muteSound(!DataMgr.get(DataMgr.soundOn, true));
     }
 }
