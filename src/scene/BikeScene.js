@@ -130,6 +130,7 @@ export default class BikeScene extends Scene {
         let hasOwned = this.hasOwnedBike(config.id);
         this.ui.selectBikeButton.visible = hasOwned && DataMgr.get(DataMgr.selectedBike, 0) !== config.id;
         this.ui.unlockBikeImage.visible = !hasOwned;
+        GameUtils.greySprite(this.ui.upgradePanelButton, !hasOwned);
     }
 
     hasOwnedBike(id) {
@@ -143,6 +144,9 @@ export default class BikeScene extends Scene {
     }
 
     onClickUpgradePanelButton() {
+        if (!this.hasOwnedBike(Config.bikeList[this.selectedIndex].id)) {
+            return App.showNotice("该自行车未解锁");
+        }
         this.ui.upgradePanel.visible = !this.ui.upgradePanel.visible;
         this.ui.list.visible = !this.ui.list.visible;
         if (this.ui.upgradePanel.visible) {
