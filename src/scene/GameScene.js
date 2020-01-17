@@ -1690,6 +1690,7 @@ export default class GameScene extends Scene {
             },
             Sprint: {
                 start: () => {
+                    this.removeAllEffects(true);
                     this.setBikeScale(2, true);
                     this.bikeBody.setKinematic();
                     this.resetJumpStatus();
