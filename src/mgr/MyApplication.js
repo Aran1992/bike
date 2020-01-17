@@ -42,6 +42,7 @@ import NewContentScene from "../scene/NewContentScene";
 import BikeDetailScene from "../scene/BikeDetailScene";
 import GameLevelFailedScene from "../scene/GameLevelFailedScene";
 import GameLevelResultScene from "../scene/GameLevelResultScene";
+import HelpGameLevelScene from "../scene/HelpGameLevelScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -106,6 +107,7 @@ export default class MyApplication extends Application {
             "LoadingScene": LoadingScene,
             "HelpEndlessScene": HelpEndlessScene,
             "HelpMatchScene": HelpMatchScene,
+            "HelpGameLevelScene": HelpGameLevelScene,
             "NewContentScene": NewContentScene,
             "BikeDetailScene": BikeDetailScene,
             "GameLevelFailedScene": GameLevelFailedScene,

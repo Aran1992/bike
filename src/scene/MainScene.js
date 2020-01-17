@@ -30,6 +30,7 @@ export default class MainScene extends Scene {
         this.onClick(this.ui.addCoinButton, this.onClickAddCoinButton.bind(this));
         this.onClick(this.ui.endlessHelpButton, this.onClickEndlessHelpButton.bind(this));
         this.onClick(this.ui.mapHelpButton, this.onClickMapHelpButton.bind(this));
+        this.onClick(this.ui.gamelevelHelpButton, this.onClickGamelevelHelpButton.bind(this));
         this.onClick(this.ui.lastLevelButton, this.onClickLastLevelButton.bind(this));
         this.onClick(this.ui.nextLevelButton, this.onClickNextLevelButton.bind(this));
         for (let i = 1; i <= 5; i++) {
@@ -231,6 +232,10 @@ export default class MainScene extends Scene {
 
     onClickMapHelpButton() {
         App.showScene("HelpMatchScene");
+    }
+
+    onClickGamelevelHelpButton() {
+        App.showScene("HelpGameLevelScene");
     }
 
     refreshLockStatus() {
