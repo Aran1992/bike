@@ -8,6 +8,7 @@ import Utils from "../mgr/Utils";
 
 export default class BikeScene extends Scene {
     onCreate() {
+        this.selectedIndex = 0;
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
         this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.selectBikeButton, this.onClickSelectedBikeButton.bind(this));
@@ -152,7 +153,7 @@ export default class BikeScene extends Scene {
 
     onClickUpgradeButton() {
         const owned = DataMgr.get(DataMgr.coin, 0);
-        const cost = Config.upgradeBike.costCoin;
+        const cost = DataMgr.getBikeUpgradeCost(Config.bikeList[this.selectedIndex].id);
         if (owned < cost) {
             return App.showNotice(App.getText("Gold Coin is not enough!"));
         }
@@ -178,13 +179,13 @@ export default class BikeScene extends Scene {
             this.ui.lvLimitPanel.visible = false;
         }
 
-        this.ui.upgradeCostLabel.text = Config.upgradeBike.costCoin[upgradeTimes] || Utils.getLast(Config.upgradeBike.costCoin);
+        this.ui.upgradeCostLabel.text = DataMgr.getBikeUpgradeCost(Config.bikeList[this.selectedIndex].id);
         this.ui.upgradeTimesLabel.text = App.getText("已升级${times}次", {times: upgradeTimes});
     }
 
     upgradeBike() {
         App.showMask(this.onUpgradeEnded.bind(this));
-        DataMgr.add(DataMgr.coin, -Config.upgradeBike.costCoin);
+        DataMgr.add(DataMgr.coin, -DataMgr.getBikeUpgradeCost(Config.bikeList[this.selectedIndex].id));
         this.upgradeItemIndex = DataMgr.upgradeBikeItem(Config.bikeList[this.selectedIndex].id);
         this.initFrame();
         this.frame = -1;

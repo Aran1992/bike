@@ -394,6 +394,11 @@ class DataMgr_ {
         }
         return base;
     }
+
+    getBikeUpgradeCost(id) {
+        const upgradeTimes = DataMgr.getBikeUpgradeTimes(id);
+        return Config.upgradeBike.costCoin[upgradeTimes] || Utils.getLast(Config.upgradeBike.costCoin);
+    }
 }
 
 const DataMgr = new DataMgr_();

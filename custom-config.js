@@ -8258,9 +8258,9 @@ Config.playerLevelNeededExp = [
 Config.upgradeBike = {
     // 每次升级消耗金币
     costCoin: [
-		1000, 2000, 3000, 4000, 5000,
-		6000, 7000
-	],
+        1000, 2000, 3000, 4000, 5000,
+        6000, 7000
+    ],
     // 每次升级增加的值
     addedValueEachTime: 0.5,
     // 每项最大值
@@ -8268,7 +8268,7 @@ Config.upgradeBike = {
     // 每个玩家级别最多能升级多少次自行车（按顺序多用每个级别的次数）（对应玩家等级和可升级次数）
     playerLevelLimitTimes: [
         1, 2, 3, 4, 5,
-		6, 7, 48
+        6, 7, 48
     ],
     // 随机动画相关配置
     animation: {
