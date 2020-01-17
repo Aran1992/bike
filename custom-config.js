@@ -4167,6 +4167,12 @@ Config.drawScene = {
         drawSound: "myLaya/laya/assets/sounds/Sound0028.mp3"
     },
 };
+// 自行车界面相关配置
+Config.bikeScene = {
+    res: {
+        upgradeSound: "myLaya/laya/assets/sounds/Sound0028.mp3"
+    }
+};
 
 // 商店游戏币配置（目前关闭了不用）
 Config.moneyList = [

@@ -5,6 +5,7 @@ import DataMgr from "../mgr/DataMgr";
 import BikeSprite from "../item/BikeSprite";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
+import MusicMgr from "../mgr/MusicMgr";
 
 export default class BikeScene extends Scene {
     onCreate() {
@@ -35,6 +36,13 @@ export default class BikeScene extends Scene {
         GameUtils.findChildByName(this.ui.drawButton, "lockedImage").visible = lock;
         this.ui.upgradePanel.visible = false;
         this.ui.list.visible = true;
+    }
+
+    onHide() {
+        if (this.upgradeSound) {
+            MusicMgr.stopLoopSound(this.upgradeSound);
+            this.upgradeSound = undefined;
+        }
     }
 
     initItem(item) {
@@ -193,10 +201,15 @@ export default class BikeScene extends Scene {
         this.upgradeItemIndex = DataMgr.upgradeBikeItem(Config.bikeList[this.selectedIndex].id);
         this.initFrame();
         this.frame = -1;
+        this.upgradeSound = MusicMgr.playLoopSound(Config.bikeScene.res.upgradeSound);
         this.onFrame();
     }
 
     onUpgradeEnded() {
+        if (this.upgradeSound) {
+            MusicMgr.stopLoopSound(this.upgradeSound);
+            this.upgradeSound = undefined;
+        }
         this.refreshUpgradeInfo();
         this.upgradeList.updateItems((item, index) => {
             if (index === this.upgradeItemIndex) {
@@ -265,4 +278,4 @@ export default class BikeScene extends Scene {
 }
 
 BikeScene.sceneFilePath = "myLaya/laya/pages/View/BikeScene.scene.json";
-BikeScene.resPathList = BikeSprite.resPathList;
+BikeScene.resPathList = BikeSprite.resPathList.concat(Utils.values(Config.bikeScene.res));
