@@ -7418,7 +7418,7 @@ Config.conditionsEnum = {
 if (window.ipConfig && window.ipConfig.innerHTML.length) {
     Config.serverUrl = window.ipConfig.innerText;
 } else {
-    Config.serverUrl = "http://localhost:10001";
+    Config.serverUrl = "//localhost:10001";
 }
 
 // 排行榜起始时间（7个位置按顺序依次是 年 月 日 时 分 秒）（月份：0为1月份、11为12月份）
