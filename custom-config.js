@@ -293,7 +293,7 @@ Config.mapList = [
                 "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground03.png",
             ],
             // 主页封面图
-            mainCover: "images/map/DX2_Scorpius/TextureDX2_ScorpiusMap.png",
+            mainCover: "images/map/DX3_IceAge/TextureDX3_IceAgeMap.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
@@ -7735,7 +7735,7 @@ Config.lockSystems = {
 // 闯关模式地图配置
 Config.gameLevelMode = {
     // 闯关模式复活次数
-    rebornTimes: 1,
+    rebornTimes: 111,
     // 大地图列表
     mapList: [
         {
@@ -7787,7 +7787,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-4-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -7795,10 +7795,10 @@ Config.gameLevelMode = {
             ],
             rewardList: [
                 {diamond: 40, exp: 10},
-                {diamond: 40, coin: 20000},
-                {bike: 1, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {bike: 4, coin: 20000},
+                {diamond: 40, coin: 2000},
+                {bike: 1, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {bike: 4, coin: 2000},
             ],
         },
         {
@@ -7857,11 +7857,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-2-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {bike: 2, coin: 20000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {bike: 2, coin: 2000},
             ],
         },
         {
@@ -7869,132 +7869,6 @@ Config.gameLevelMode = {
             starCountUnlockNeeded: 20,
             // 地图描述
             dsc: "Select Map3",
-            // 主页封面图
-            mainCover: "images/map/DX2_Capricorn/TextureDX2_CapricornMap.png",
-            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
-            texture: {
-                // 侧边
-                side: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01SideSkin.png",
-                // 底部
-                top: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad01TopSkin.png",
-                // 侧边
-                side2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02SideSkin.png",
-                // 底部
-                top2: "images/map/DX2_Capricorn/TextureDX2_CapricornRoad02TopSkin.png",
-                // 背景 有多少层背景就配置多少张
-                bg: [
-                    "images/map/DX2_Capricorn/TextureDX2_CapricornBackground01.png",
-                    "images/map/DX2_Capricorn/TextureDX2_CapricornBackground02.png",
-                    "images/map/DX2_Capricorn/TextureDX2_CapricornBackground03.png",
-                ],
-            },
-            // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-            // 视差背景系数：上下
-            verticalParallaxDepth: [1, 0.95, 0.9, 0],
-            // 背景的Y轴位置
-            bgY: [0, 256, 256],
-            // 背景缩放系数
-            bgScale: [1, 1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
-            // 重力（基础：-175）
-            gravity: -175,
-            // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
-            // BGM路径
-            bgmPath: "myLaya/laya/assets/sounds/09_yagiza.mp3",
-            // 道具随机表
-            itemRandomTableList: {
-                Accelerate: 1,
-                PowerJump: 1,
-                UnlimitedJump: 1,
-                Magnet: 1,
-            },
-            // 每一关的地图配置
-            levelList: [
-                "myLaya/laya/pages/Map/Map-3-1.scene.json",
-                "myLaya/laya/pages/Map/Map-3-2.scene.json",
-                "myLaya/laya/pages/Map/Map-3-3.scene.json",
-                "myLaya/laya/pages/Map/Map-3-4.scene.json",
-                "myLaya/laya/pages/Map/Map-3-5.scene.json",
-            ],
-            rewardList: [
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {bike: 20, coin: 20000},
-            ],
-        },
-        {
-            // 解锁需要的星星数
-            starCountUnlockNeeded: 35,
-            // 地图描述
-            dsc: "Select Map4",
-            // 主页封面图
-            mainCover: "images/map/DX2_Scorpius/TextureDX2_ScorpiusMap.png",
-            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
-            texture: {
-                // 侧边
-                side: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01SideSkin.png",
-                // 底部
-                top: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad01TopSkin.png",
-                // 侧边
-                side2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02SideSkin.png",
-                // 底部
-                top2: "images/map/DX2_Scorpius/TextureDX2_ScorpiusRoad02TopSkin.png",
-                // 背景 有多少层背景就配置多少张
-                bg: [
-                    "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground01.png",
-                    "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground02.png",
-                    "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground03.png",
-                ],
-            },
-            // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-            // 视差背景系数：上下
-            verticalParallaxDepth: [1, 1, 0.9, 0],
-            // 背景的Y轴位置
-            bgY: [0, 0, 256],
-            // 背景缩放系数
-            bgScale: [1, 1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
-            // 重力（基础：-175）
-            gravity: -175,
-            // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
-            // BGM路径
-            bgmPath: "myLaya/laya/assets/sounds/04_sasori.mp3",
-            // 道具随机表
-            itemRandomTableList: {
-                Accelerate: 1,
-                PowerJump: 1,
-                UnlimitedJump: 1,
-                Magnet: 1,
-            },
-            // 每一关的地图配置
-            levelList: [
-                "myLaya/laya/pages/Map/Map-4-1.scene.json",
-                "myLaya/laya/pages/Map/Map-4-2.scene.json",
-                "myLaya/laya/pages/Map/Map-4-3.scene.json",
-                "myLaya/laya/pages/Map/Map-4-4.scene.json",
-                "myLaya/laya/pages/Map/Map-4-5.scene.json",
-            ],
-            rewardList: [
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {bike: 21, coin: 20000},
-            ],
-        },
-        {
-            // 解锁需要的星星数
-            starCountUnlockNeeded: 50,
-            // 地图描述
-            dsc: "Select Map5",
             // 主页封面图
             mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
             // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
@@ -8039,20 +7913,398 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-2-1.scene.json",
-                "myLaya/laya/pages/Map/Map-2-2.scene.json",
-                "myLaya/laya/pages/Map/Map-2-3.scene.json",
-                "myLaya/laya/pages/Map/Map-2-4.scene.json",
-                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+                "myLaya/laya/pages/Map/Map-3-1.scene.json",
+                "myLaya/laya/pages/Map/Map-3-2.scene.json",
+                "myLaya/laya/pages/Map/Map-3-3.scene.json",
+                "myLaya/laya/pages/Map/Map-3-4.scene.json",
+                "myLaya/laya/pages/Map/Map-3-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {diamond: 40, coin: 20000},
-                {bike: 7, coin: 20000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {bike: 20, coin: 2000},
             ],
         },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 35,
+            // 地图描述
+            dsc: "Select Map4",
+            // 主页封面图
+            mainCover: "images/map/DX3_IceAge/TextureDX3_IceAgeMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+                // 侧边
+                side: "images/map/DX3_IceAge/TextureDX3_IceAgeRoad01SideSkin.png",
+                // 底部
+                top: "images/map/DX3_IceAge/TextureDX3_IceAgeRoad01TopSkin.png",
+                // 侧边
+                side2: "images/map/DX3_IceAge/TextureDX3_IceAgeRoad02SideSkin.png",
+                // 底部
+                top2: "images/map/DX3_IceAge/TextureDX3_IceAgeRoad02TopSkin.png",
+                // 背景 有多少层背景就配置多少张
+                bg: [
+                    "images/map/DX3_IceAge/TextureDX3_IceAgeBackground01.png",
+                    "images/map/DX3_IceAge/TextureDX3_IceAgeBackground02.png",
+                    "images/map/DX3_IceAge/TextureDX3_IceAgeBackground03.png",
+                ],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 1, 0.9, 0],
+            // 背景的Y轴位置
+            bgY: [0, 0, 128],
+            // 背景缩放系数
+            bgScale: [1, 1, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/04_ice.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+                Accelerate: 1,
+                PowerJump: 1,
+                UnlimitedJump: 1,
+                Magnet: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-4-1.scene.json",
+                "myLaya/laya/pages/Map/Map-4-2.scene.json",
+                "myLaya/laya/pages/Map/Map-4-3.scene.json",
+                "myLaya/laya/pages/Map/Map-4-4.scene.json",
+                "myLaya/laya/pages/Map/Map-4-5.scene.json",
+            ],
+            rewardList: [
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {diamond: 40, coin: 2000},
+                {bike: 21, coin: 2000},
+            ],
+        },
+//卡5        {
+//卡5            // 解锁需要的星星数
+//卡5            starCountUnlockNeeded: 55,
+//卡5            // 地图描述
+//卡5            dsc: "Select Map5",
+//卡5            // 主页封面图
+//卡5            mainCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
+//卡5            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+//卡5            texture: {
+//卡5                // 侧边
+//卡5                side: "images/map/DX3_Rococo/TextureDX3_RococoRoad01SideSkin.png",
+//卡5                // 底部
+//卡5                top: "images/map/DX3_Rococo/TextureDX3_RococoRoad01TopSkin.png",
+//卡5                // 侧边
+//卡5                side2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02SideSkin.png",
+//卡5                // 底部
+//卡5                top2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02TopSkin.png",
+//卡5                // 背景 有多少层背景就配置多少张
+//卡5                bg: [
+//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground01.png",
+//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground02.png",
+//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground03.png",
+//卡5                ],
+//卡5            },
+//卡5            // 视差背景系数：左右
+//卡5            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+//卡5            // 视差背景系数：上下
+//卡5            verticalParallaxDepth: [1, 1, 1, 0],
+//卡5            // 背景的Y轴位置
+//卡5            bgY: [0, 128, 0],
+//卡5            // 背景缩放系数
+//卡5            bgScale: [1, 1, 1],
+//卡5            // 自行车速度（基础：20）
+//卡5            bikeVelocity: 20,
+//卡5            // 重力（基础：-175）
+//卡5            gravity: -175,
+//卡5            // 跳跃爆发力（基础：12800）
+//卡5            jumpForce: 12800,
+//卡5            // BGM路径
+//卡5            bgmPath: "myLaya/laya/assets/sounds/07_rococo.mp3",
+//卡5            // 道具随机表
+//卡5            itemRandomTableList: {
+//卡5                Accelerate: 1,
+//卡5                PowerJump: 1,
+//卡5                UnlimitedJump: 1,
+//卡5                Magnet: 1,
+//卡5            },
+//卡5            // 每一关的地图配置
+//卡5            levelList: [
+//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡5            ],
+//卡5            rewardList: [
+//卡5                {diamond: 40, coin: 2000},
+//卡5                {diamond: 40, coin: 2000},
+//卡5                {diamond: 40, coin: 2000},
+//卡5                {diamond: 40, coin: 2000},
+//卡5                {bike: 7, coin: 2000},
+//卡5            ],
+//卡5        },
+//卡6        {
+//卡6            // 解锁需要的星星数
+//卡6            starCountUnlockNeeded: 66,
+//卡6            // 地图描述
+//卡6            dsc: "Select Map6",
+//卡6            // 主页封面图
+//卡6            mainCover: "images/map/DX2_Pisces/TextureDX2_PiscesMap.png",
+//卡6            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+//卡6            texture: {
+//卡6                // 侧边
+//卡6                side: "images/map/DX2_Pisces/TextureDX2_PiscesRoad01SideSkin.png",
+//卡6                // 底部
+//卡6                top: "images/map/DX2_Pisces/TextureDX2_PiscesRoad01TopSkin.png",
+//卡6                // 侧边
+//卡6                side2: "images/map/DX2_Pisces/TextureDX2_PiscesRoad02SideSkin.png",
+//卡6                // 底部
+//卡6                top2: "images/map/DX2_Pisces/TextureDX2_PiscesRoad02TopSkin.png",
+//卡6                // 背景 有多少层背景就配置多少张
+//卡6                bg: [
+//卡6                    "images/map/DX2_Pisces/TextureDX2_PiscesBackground01.png",
+//卡6                    "images/map/DX2_Pisces/TextureDX2_PiscesBackground02.png",
+//卡6                    "images/map/DX2_Pisces/TextureDX2_PiscesBackground03.png",
+//卡6                ],
+//卡6            },
+//卡6            // 视差背景系数：左右
+//卡6            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+//卡6            // 视差背景系数：上下
+//卡6            verticalParallaxDepth: [1, 0.95, 0.9, 0],
+//卡6            // 背景的Y轴位置
+//卡6            bgY: [0, 0, 256],
+//卡6            // 背景缩放系数
+//卡6            bgScale: [1, 1, 1],
+//卡6            // 自行车速度（基础：20）
+//卡6            bikeVelocity: 20,
+//卡6            // 重力（基础：-175）
+//卡6            gravity: -175,
+//卡6            // 跳跃爆发力（基础：12800）
+//卡6            jumpForce: 12800,
+//卡6            // BGM路径
+//卡6            bgmPath: "myLaya/laya/assets/sounds/10_uoza.mp3",
+//卡6            // 道具随机表
+//卡6            itemRandomTableList: {
+//卡6                Accelerate: 1,
+//卡6                PowerJump: 1,
+//卡6                UnlimitedJump: 1,
+//卡6                Magnet: 1,
+//卡6            },
+//卡6            // 每一关的地图配置
+//卡6            levelList: [
+//卡6                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡6                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡6                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡6                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡6                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡6            ],
+//卡6            rewardList: [
+//卡6                {diamond: 40, coin: 2000},
+//卡6                {diamond: 40, coin: 2000},
+//卡6                {diamond: 40, coin: 2000},
+//卡6                {diamond: 40, coin: 2000},
+//卡6                {bike: 7, coin: 2000},
+//卡6            ],
+//卡6        },
+//卡7        {
+//卡7            // 解锁需要的星星数
+//卡7            starCountUnlockNeeded: 77,
+//卡7            // 地图描述
+//卡7            dsc: "Select Map7",
+//卡7            // 主页封面图
+//卡7            mainCover: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodMap.png",
+//卡7            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+//卡7            texture: {
+//卡7                // 侧边
+//卡7                side: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodRoad01SideSkin.png",
+//卡7                // 底部
+//卡7                top: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodRoad01TopSkin.png",
+//卡7                // 侧边
+//卡7                side2: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodRoad02SideSkin.png",
+//卡7                // 底部
+//卡7                top2: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodRoad02TopSkin.png",
+//卡7                // 背景 有多少层背景就配置多少张
+//卡7                bg: [
+//卡7                    "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground01.png",
+//卡7                    "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground02.png",
+//卡7                    "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground03.png",
+//卡7                ],
+//卡7            },
+//卡7            // 视差背景系数：左右
+//卡7            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+//卡7            // 视差背景系数：上下
+//卡7            verticalParallaxDepth: [1, 0.95, 0.9, 0],
+//卡7            // 背景的Y轴位置
+//卡7            bgY: [0, 0, 0],
+//卡7            // 背景缩放系数
+//卡7            bgScale: [1, 1, 1],
+//卡7            // 自行车速度（基础：20）
+//卡7            bikeVelocity: 20,
+//卡7            // 重力（基础：-175）
+//卡7            gravity: -175,
+//卡7            // 跳跃爆发力（基础：12800）
+//卡7            jumpForce: 12800,
+//卡7            // BGM路径
+//卡7            bgmPath: "myLaya/laya/assets/sounds/08_sengoku.mp3",
+//卡7            // 道具随机表
+//卡7            itemRandomTableList: {
+//卡7                Accelerate: 1,
+//卡7                PowerJump: 1,
+//卡7                UnlimitedJump: 1,
+//卡7                Magnet: 1,
+//卡7            },
+//卡7            // 每一关的地图配置
+//卡7            levelList: [
+//卡7                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡7                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡7                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡7                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡7                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡7            ],
+//卡7            rewardList: [
+//卡7                {diamond: 40, coin: 2000},
+//卡7                {diamond: 40, coin: 2000},
+//卡7                {diamond: 40, coin: 2000},
+//卡7                {diamond: 40, coin: 2000},
+//卡7                {bike: 7, coin: 2000},
+//卡7            ],
+//卡7        },
+//卡8        {
+//卡8            // 解锁需要的星星数
+//卡8            starCountUnlockNeeded: 88,
+//卡8            // 地图描述
+//卡8            dsc: "Select Map8",
+//卡8            // 主页封面图
+//卡8            mainCover: "images/map/DX1_Beijing/TextureDX1_BeijingMap.png",
+//卡8            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+//卡8            texture: {
+//卡8                // 侧边
+//卡8                side: "images/map/DX1_Beijing/TextureDX1_BeijingRoad01SideSkin.png",
+//卡8                // 底部
+//卡8                top: "images/map/DX1_Beijing/TextureDX1_BeijingRoad01TopSkin.png",
+//卡8                // 侧边
+//卡8                side2: "images/map/DX1_Beijing/TextureDX1_BeijingRoad02SideSkin.png",
+//卡8                // 底部
+//卡8                top2: "images/map/DX1_Beijing/TextureDX1_BeijingRoad02TopSkin.png",
+//卡8                // 背景 有多少层背景就配置多少张
+//卡8                bg: [
+//卡8                    "images/map/DX1_Beijing/TextureDX1_BeijingBackground01.png",
+//卡8                    "images/map/DX1_Beijing/TextureDX1_BeijingBackground02.png",
+//卡8                    "images/map/DX1_Beijing/TextureDX1_BeijingBackground03.png",
+//卡8                ],
+//卡8            },
+//卡8            // 视差背景系数：左右
+//卡8            horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+//卡8            // 视差背景系数：上下
+//卡8            verticalParallaxDepth: [1, 0.95, 0.9, 0],
+//卡8            // 背景的Y轴位置
+//卡8            bgY: [0, 0, 256],
+//卡8            // 背景缩放系数
+//卡8            bgScale: [1, 1, 1],
+//卡8            // 自行车速度（基础：20）
+//卡8            bikeVelocity: 20,
+//卡8            // 重力（基础：-175）
+//卡8            gravity: -175,
+//卡8            // 跳跃爆发力（基础：12800）
+//卡8            jumpForce: 12800,
+//卡8            // BGM路径
+//卡8            bgmPath: "myLaya/laya/assets/sounds/BGM_103.mp3",
+//卡8            // 道具随机表
+//卡8            itemRandomTableList: {
+//卡8                Accelerate: 1,
+//卡8                PowerJump: 1,
+//卡8                UnlimitedJump: 1,
+//卡8                Magnet: 1,
+//卡8            },
+//卡8            // 每一关的地图配置
+//卡8            levelList: [
+//卡8                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡8                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡8                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡8                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡8                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡8            ],
+//卡8            rewardList: [
+//卡8                {diamond: 40, coin: 2000},
+//卡8                {diamond: 40, coin: 2000},
+//卡8                {diamond: 40, coin: 2000},
+//卡8                {diamond: 40, coin: 2000},
+//卡8                {bike: 7, coin: 2000},
+//卡8            ],
+//卡8        },
+//卡9        {
+//卡9            // 解锁需要的星星数
+//卡9            starCountUnlockNeeded: 99,
+//卡9            // 地图描述
+//卡9            dsc: "Select Map9",
+//卡9            // 主页封面图
+//卡9            mainCover: "images/map/DX1_Newyork/TextureDX1_NewyorkMap.png",
+//卡9            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+//卡9            texture: {
+//卡9                // 侧边
+//卡9                side: "images/map/DX1_Newyork/TextureDX1_NewyorkRoad01SideSkin.png",
+//卡9                // 底部
+//卡9                top: "images/map/DX1_Newyork/TextureDX1_NewyorkRoad01TopSkin.png",
+//卡9                // 侧边
+//卡9                side2: "images/map/DX1_Newyork/TextureDX1_NewyorkRoad02SideSkin.png",
+//卡9                // 底部
+//卡9                top2: "images/map/DX1_Newyork/TextureDX1_NewyorkRoad02TopSkin.png",
+//卡9                // 背景 有多少层背景就配置多少张
+//卡9                bg: [
+//卡9                    "images/map/DX1_Newyork/TextureDX1_NewyorkBackground01.png",
+//卡9                    "images/map/DX1_Newyork/TextureDX1_NewyorkBackground02.png",
+//卡9                    "images/map/DX1_Newyork/TextureDX1_NewyorkBackground03.png",
+//卡9                ],
+//卡9            },
+//卡9            // 视差背景系数：左右
+//卡9            horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+//卡9            // 视差背景系数：上下
+//卡9            verticalParallaxDepth: [1, 0.95, 0.9, 0],
+//卡9            // 背景的Y轴位置
+//卡9            bgY: [0, 128, 256],
+//卡9            // 背景缩放系数
+//卡9            bgScale: [1, 1, 1],
+//卡9            // 自行车速度（基础：20）
+//卡9            bikeVelocity: 20,
+//卡9            // 重力（基础：-175）
+//卡9            gravity: -175,
+//卡9            // 跳跃爆发力（基础：12800）
+//卡9            jumpForce: 12800,
+//卡9            // BGM路径
+//卡9            bgmPath: "myLaya/laya/assets/sounds/BGM_105.mp3",
+//卡9            // 道具随机表
+//卡9            itemRandomTableList: {
+//卡9                Accelerate: 1,
+//卡9                PowerJump: 1,
+//卡9                UnlimitedJump: 1,
+//卡9                Magnet: 1,
+//卡9            },
+//卡9            // 每一关的地图配置
+//卡9            levelList: [
+//卡9                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡9                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡9                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡9                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡9                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+//卡9            ],
+//卡9            rewardList: [
+//卡9                {diamond: 40, coin: 2000},
+//卡9                {diamond: 40, coin: 2000},
+//卡9                {diamond: 40, coin: 2000},
+//卡9                {diamond: 40, coin: 2000},
+//卡9                {bike: 7, coin: 2000},
+//卡9            ],
+//卡9        },
     ],
 };
 
