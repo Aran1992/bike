@@ -636,7 +636,7 @@ Config.mapList = [
             mainCover: "images/map/DX1_Beijing/TextureDX1_BeijingMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
@@ -721,7 +721,7 @@ Config.mapList = [
             mainCover: "images/map/DX1_Newyork/TextureDX1_NewyorkMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
@@ -806,7 +806,7 @@ Config.mapList = [
             mainCover: "images/map/DX1_Tokyo/TextureDX1_TokyoMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
@@ -1890,7 +1890,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/DX1_Beijing/TextureDX1_BeijingMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
@@ -1963,7 +1963,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/DX1_Newyork/TextureDX1_NewyorkMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
@@ -2036,7 +2036,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/DX1_Tokyo/TextureDX1_TokyoMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.95, 0.9, 0],
         // 背景的Y轴位置
@@ -8204,7 +8204,7 @@ Config.gameLevelMode = {
 //卡8                ],
 //卡8            },
 //卡8            // 视差背景系数：左右
-//卡8            horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+//卡8            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
 //卡8            // 视差背景系数：上下
 //卡8            verticalParallaxDepth: [1, 0.95, 0.9, 0],
 //卡8            // 背景的Y轴位置
@@ -8267,7 +8267,7 @@ Config.gameLevelMode = {
 //卡9                ],
 //卡9            },
 //卡9            // 视差背景系数：左右
-//卡9            horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+//卡9            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
 //卡9            // 视差背景系数：上下
 //卡9            verticalParallaxDepth: [1, 0.95, 0.9, 0],
 //卡9            // 背景的Y轴位置
@@ -8330,7 +8330,7 @@ Config.gameLevelMode = {
 //卡10                ],
 //卡10            },
 //卡10            // 视差背景系数：左右
-//卡10            horizontalParallaxDepth: [0.9, 1, 0.5, 0],
+//卡10            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
 //卡10            // 视差背景系数：上下
 //卡10            verticalParallaxDepth: [1, 0.95, 0.9, 0],
 //卡10            // 背景的Y轴位置
