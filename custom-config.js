@@ -5331,7 +5331,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_invincible_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_invincible_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -5348,7 +5348,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_super_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
+        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_super_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
