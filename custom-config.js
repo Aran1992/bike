@@ -4169,8 +4169,9 @@ Config.drawScene = {
 };
 // 自行车界面相关配置
 Config.bikeScene = {
+	//自行车能力升级随机转动音效
     res: {
-        upgradeSound: "myLaya/laya/assets/sounds/Sound0028.mp3"
+        upgradeSound: "myLaya/laya/assets/sounds/se_icon_select.mp3"
     }
 };
 
@@ -7637,7 +7638,7 @@ Config.lockSystems = {
     // 扭蛋
     drawButton: {
         // 解锁条件
-        condition: [4, 43],
+        condition: [12, 2, 3],
         // 解锁内容标题
         title: "SystemUnlockTitle1",
         // 解锁描述
@@ -7650,7 +7651,7 @@ Config.lockSystems = {
     // 签到
     signButton: {
         // 解锁条件
-        condition: [4, 60],
+        condition: [12, 2, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle11",
         // 解锁描述
@@ -7663,7 +7664,7 @@ Config.lockSystems = {
     // 礼包
     giftButton: {
         // 解锁条件
-        condition: [4, 20],
+        condition: [12, 1, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle12",
         // 解锁描述
@@ -7676,7 +7677,7 @@ Config.lockSystems = {
     // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [4, 120],
+        condition: [12, 3, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -7689,7 +7690,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [4, 180],
+        condition: [11, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -7702,7 +7703,7 @@ Config.lockSystems = {
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 0],
+        condition: [10, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
@@ -7715,7 +7716,7 @@ Config.lockSystems = {
     // 家园
     homeButton: {
         // 解锁条件
-        condition: [10, 0],
+        condition: [10, 3],
         // 解锁内容标题
         title: "SystemUnlockTitle4",
         // 解锁描述
