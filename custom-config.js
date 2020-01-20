@@ -7690,7 +7690,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [11, 5],
+        condition: [11, 10],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -7736,7 +7736,7 @@ Config.lockSystems = {
 // 闯关模式地图配置
 Config.gameLevelMode = {
     // 闯关模式复活次数
-    rebornTimes: 111,
+    rebornTimes: 1,
     // 大地图列表
     mapList: [
         {
@@ -7795,7 +7795,7 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
-                {coin: 1000000, 	diamond: 200000},
+                {coin: 1000, 	diamond: 20},
                 {coin: 1000, 	diamond: 20},
                 {bike: 1, 		diamond: 20},
                 {coin: 1000, 	diamond: 20},
@@ -8503,7 +8503,7 @@ Config.drawWeightList = [
     {
         "type": "bike",
         "id": 0,
-        "weight": 8
+        "weight": 10
     },
     {
         "type": "bike",
@@ -8518,7 +8518,7 @@ Config.drawWeightList = [
     {
         "type": "bike",
         "id": 11,
-        "weight": 2
+        "weight": 8
     },
     {
         "type": "bike",
@@ -8682,7 +8682,7 @@ Config.drawWeightList = [
         // 数量
         "number": 75,
         // 随机权重
-        "weight": 200
+        "weight": 60
     },
 ];
 
