@@ -4316,35 +4316,35 @@ Config.presentList = [
     },
 ];
 
-// 商店广告金币配置
+// 商店（福利）广告金币配置
 Config.rewardGoldList = [
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 3000,
+        rewardCoin: 2000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 0,
     },
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 3000,
+        rewardCoin: 2000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 10,
     },
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 3000,
+        rewardCoin: 2000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 30,
     },
     {
         // 获得的金币数量（钻石物品此项设置为零或者去掉）
-        rewardCoin: 3000,
+        rewardCoin: 2000,
         // 所需在线时长（单位：分钟）
         onlineMinutes: 60,
     },
 ];
 
-// 商店广告钻石配置
+// 商店（福利）广告钻石配置
 Config.rewardDiamondList = [
     {
         // 获得的钻石数量（金币物品此项设置为零或者去掉）
@@ -7562,31 +7562,31 @@ Config.giftList = [
         // 在线分钟数
         onlineMinutes: 0,
         // 奖励金币
-        rewardCoin: 1000000,
+        rewardCoin: 2000,
         // 奖励钻石
-        rewardDiamond: 2000000,
+        rewardDiamond: 50,
     },
     {
         // 在线分钟数
         onlineMinutes: 5,
         // 奖励金币
-        rewardCoin: 3000,
-        // 奖励钻石
-        rewardDiamond: 40,
-    },
-    {
-        // 在线分钟数
-        onlineMinutes: 10,
-        // 奖励金币
-        rewardCoin: 5000,
+        rewardCoin: 2500,
         // 奖励钻石
         rewardDiamond: 60,
     },
     {
         // 在线分钟数
+        onlineMinutes: 10,
+        // 奖励金币
+        rewardCoin: 3000,
+        // 奖励钻石
+        rewardDiamond: 70,
+    },
+    {
+        // 在线分钟数
         onlineMinutes: 15,
         // 奖励金币
-        rewardCoin: 7000,
+        rewardCoin: 3500,
         // 奖励钻石
         rewardDiamond: 80,
     },
@@ -7594,9 +7594,9 @@ Config.giftList = [
         // 在线分钟数
         onlineMinutes: 30,
         // 奖励金币
-        rewardCoin: 9000,
+        rewardCoin: 4000,
         // 奖励钻石
-        rewardDiamond: 100,
+        rewardDiamond: 90,
     },
 ];
 
@@ -7606,12 +7606,12 @@ Config.resetRewardHour = 0;
 // 签到奖励列表
 // 按顺序从上往下是第一天到第七天
 Config.signRewardList = [
-    {coin: 2000},
-    {bike: 2},
     {diamond: 200},
+    {bike: 2},
+    {coin: 10000},
+    {diamond: 300},
     {bike: 51},
     {coin: 15000},
-    {diamond: 400},
     {bike: 3, coin: 20000, diamond: 400},
 ];
 
@@ -7795,11 +7795,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, exp: 10},
-                {diamond: 40, coin: 2000},
-                {bike: 1, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {bike: 4, coin: 2000},
+                {exp:  100, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 1, 		diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 4, 		diamond: 20},
             ],
         },
         {
@@ -7858,11 +7858,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-2-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {bike: 2, coin: 2000},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 2, 		diamond: 20},
             ],
         },
         {
@@ -7921,11 +7921,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-3-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {bike: 20, coin: 2000},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 20, 		diamond: 20},
             ],
         },
         {
@@ -7984,11 +7984,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-4-5.scene.json",
             ],
             rewardList: [
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {diamond: 40, coin: 2000},
-                {bike: 21, coin: 2000},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 21, 		diamond: 20},
             ],
         },
 //卡5        {
@@ -8047,11 +8047,11 @@ Config.gameLevelMode = {
 //卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡5            ],
 //卡5            rewardList: [
-//卡5                {diamond: 40, coin: 2000},
-//卡5                {diamond: 40, coin: 2000},
-//卡5                {diamond: 40, coin: 2000},
-//卡5                {diamond: 40, coin: 2000},
-//卡5                {bike: 7, coin: 2000},
+//卡5                {coin: 1000, 	diamond: 20},
+//卡5                {coin: 1000, 	diamond: 20},
+//卡5                {coin: 1000, 	diamond: 20},
+//卡5                {coin: 1000, 	diamond: 20},
+//卡5                {bike: 7, 		diamond: 20},
 //卡5            ],
 //卡5        },
 //卡6        {
@@ -8110,11 +8110,11 @@ Config.gameLevelMode = {
 //卡6                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡6            ],
 //卡6            rewardList: [
-//卡6                {diamond: 40, coin: 2000},
-//卡6                {diamond: 40, coin: 2000},
-//卡6                {diamond: 40, coin: 2000},
-//卡6                {diamond: 40, coin: 2000},
-//卡6                {bike: 7, coin: 2000},
+//卡6                {coin: 1000, 	diamond: 20},
+//卡6                {coin: 1000, 	diamond: 20},
+//卡6                {coin: 1000, 	diamond: 20},
+//卡6                {coin: 1000, 	diamond: 20},
+//卡6                {bike: 7, 		diamond: 20},
 //卡6            ],
 //卡6        },
 //卡7        {
@@ -8173,11 +8173,11 @@ Config.gameLevelMode = {
 //卡7                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡7            ],
 //卡7            rewardList: [
-//卡7                {diamond: 40, coin: 2000},
-//卡7                {diamond: 40, coin: 2000},
-//卡7                {diamond: 40, coin: 2000},
-//卡7                {diamond: 40, coin: 2000},
-//卡7                {bike: 7, coin: 2000},
+//卡7                {coin: 1000, 	diamond: 20},
+//卡7                {coin: 1000, 	diamond: 20},
+//卡7                {coin: 1000, 	diamond: 20},
+//卡7                {coin: 1000, 	diamond: 20},
+//卡7                {bike: 7, 		diamond: 20},
 //卡7            ],
 //卡7        },
 //卡8        {
@@ -8236,11 +8236,11 @@ Config.gameLevelMode = {
 //卡8                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡8            ],
 //卡8            rewardList: [
-//卡8                {diamond: 40, coin: 2000},
-//卡8                {diamond: 40, coin: 2000},
-//卡8                {diamond: 40, coin: 2000},
-//卡8                {diamond: 40, coin: 2000},
-//卡8                {bike: 7, coin: 2000},
+//卡8                {coin: 1000, 	diamond: 20},
+//卡8                {coin: 1000, 	diamond: 20},
+//卡8                {coin: 1000, 	diamond: 20},
+//卡8                {coin: 1000, 	diamond: 20},
+//卡8                {bike: 7, 		diamond: 20},
 //卡8            ],
 //卡8        },
 //卡9        {
@@ -8299,11 +8299,11 @@ Config.gameLevelMode = {
 //卡9                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡9            ],
 //卡9            rewardList: [
-//卡9                {diamond: 40, coin: 2000},
-//卡9                {diamond: 40, coin: 2000},
-//卡9                {diamond: 40, coin: 2000},
-//卡9                {diamond: 40, coin: 2000},
-//卡9                {bike: 7, coin: 2000},
+//卡9                {coin: 1000, 	diamond: 20},
+//卡9                {coin: 1000, 	diamond: 20},
+//卡9                {coin: 1000, 	diamond: 20},
+//卡9                {coin: 1000, 	diamond: 20},
+//卡9                {bike: 7, 		diamond: 20},
 //卡9            ],
 //卡9        },
 //卡10        {
@@ -8362,11 +8362,11 @@ Config.gameLevelMode = {
 //卡10                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡10            ],
 //卡10            rewardList: [
-//卡10                {diamond: 40, coin: 2000},
-//卡10                {diamond: 40, coin: 2000},
-//卡10                {diamond: 40, coin: 2000},
-//卡10                {diamond: 40, coin: 2000},
-//卡10                {bike: 7, coin: 2000},
+//卡10                {coin: 1000, 	diamond: 20},
+//卡10                {coin: 1000, 	diamond: 20},
+//卡10                {coin: 1000, 	diamond: 20},
+//卡10                {coin: 1000, 	diamond: 20},
+//卡10                {bike: 7, 		diamond: 20},
 //卡10            ],
 //卡10        },
 //卡11        {
@@ -8425,11 +8425,11 @@ Config.gameLevelMode = {
 //卡11                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡11            ],
 //卡11            rewardList: [
-//卡11                {diamond: 40, coin: 2000},
-//卡11                {diamond: 40, coin: 2000},
-//卡11                {diamond: 40, coin: 2000},
-//卡11                {diamond: 40, coin: 2000},
-//卡11                {bike: 7, coin: 2000},
+//卡11                {coin: 1000, 	diamond: 20},
+//卡11                {coin: 1000, 	diamond: 20},
+//卡11                {coin: 1000, 	diamond: 20},
+//卡11                {coin: 1000, 	diamond: 20},
+//卡11                {bike: 7, 		diamond: 20},
 //卡11            ],
 //卡11        },
 //卡12        {
@@ -8488,11 +8488,11 @@ Config.gameLevelMode = {
 //卡12                "myLaya/laya/pages/Map/Map-1-3.scene.json",
 //卡12            ],
 //卡12            rewardList: [
-//卡12                {diamond: 40, coin: 2000},
-//卡12                {diamond: 40, coin: 2000},
-//卡12                {diamond: 40, coin: 2000},
-//卡12                {diamond: 40, coin: 2000},
-//卡12                {bike: 7, coin: 2000},
+//卡12                {coin: 1000, 	diamond: 20},
+//卡12                {coin: 1000, 	diamond: 20},
+//卡12                {coin: 1000, 	diamond: 20},
+//卡12                {coin: 1000, 	diamond: 20},
+//卡12                {bike: 7, 		diamond: 20},
 //卡12            ],
 //卡12        },
     ],
@@ -8688,34 +8688,42 @@ Config.drawWeightList = [
 
 // 玩家等级所需总经验(范例：1级=0,2级=10，3级=30，也就是2级升3级需要30-10=20经验)
 Config.playerLevelNeededExp = [
-    0, 10, 30, 60, 100,
-    150, 210, 280, 360, 450,
-    550, 660, 780, 910, 1050,
-    1200, 1360, 1530, 1710, 1900,
-    2100, 2310, 2530, 2760, 3000,
-    3250, 3510, 3780, 4060, 4350,
-    4650, 4960, 5280, 5610, 5950,
-    6300, 6660, 7030, 7410, 7800,
-    8200, 8610, 9030, 9460, 9900,
-    10350, 10810, 11280, 11760, 12250,
-    12750, 13260, 13780, 14310, 14850,
-    15400, 15960, 16530, 17110, 17700,
-    18300, 18910, 19530, 20160, 20800,
-    21450, 22110, 22780, 23460, 24150,
-    24850, 25560, 26280, 27010, 27750,
-    28500, 29260, 30030, 30810, 31600,
-    32400, 33210, 34030, 34860, 35700,
-    36550, 37410, 38280, 39160, 40050,
-    40950, 41860, 42780, 43710, 44650,
-    45600, 46560, 47530, 48510
+	0, 50, 150, 300, 500, 
+	750, 1050, 1400, 1800, 2250, 
+	2750, 3300, 3900, 4550, 5250, 
+	6000, 6800, 7650, 8550, 9500, 
+	10500, 11550, 12650, 13800, 15000, 
+	16250, 17550, 18900, 20300, 21800, 
+	23400, 25100, 26900, 28800, 30800, 
+	32900, 35100, 37400, 39800, 42300, 
+	44900, 47600, 50400, 53300, 56300, 
+	59400, 62600, 65900, 69300, 72900, 
+	76700, 80700, 84900, 89300, 93900, 
+	98700, 103700, 108900, 114300, 120100, 
+	126300, 132900, 139900, 147300, 155100, 
+	163300, 171900, 180900, 190300, 200500, 
+	211500, 223300, 235900, 249300, 263500, 
+	278500, 294300, 310900, 328300, 347300, 
+	367900, 390100, 413900, 439300, 466300, 
+	494900, 525100, 556900, 590300, 626900, 
+	666700, 709700, 755900, 805300, 857900, 
+	913700, 972700, 1034900, 1100300
 ];
 
 // 升级自行车相关配置
 Config.upgradeBike = {
     // 每次升级消耗金币
     costCoin: [
-        1000, 2000, 3000, 4000, 5000,
-        6000, 7000
+		100, 150, 200, 250, 300, 
+		400, 500, 600, 700, 800, 
+		1000, 1200, 1400, 1600, 1800, 
+		2200, 2600, 3000, 3400, 3800, 
+		4600, 5400, 6200, 7000, 7800, 
+		9400, 11000, 12600, 14200, 15800, 
+		19000, 22200, 25400, 28600, 31800, 
+		38200, 44600, 51000, 57400, 63800, 
+		76600, 89400, 102200, 115000, 127800, 
+		153400, 179000, 204600
     ],
     // 每次升级增加的值
     addedValueEachTime: 0.5,
