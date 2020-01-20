@@ -175,14 +175,27 @@ export default class BikeScene extends Scene {
     refreshUpgradeInfo() {
         const upgradeTimes = DataMgr.getBikeUpgradeTimes(Config.bikeList[this.selectedIndex].id);
         const maxTimes = Utils.getLast(Config.upgradeBike.playerLevelLimitTimes);
+        const playerLevel = DataMgr.getPlayerLevel().level;
+        const curLevelTimes = Config.upgradeBike.playerLevelLimitTimes[playerLevel - 1];
         if (upgradeTimes >= maxTimes) {
             this.ui.lvLimitPanel.visible = true;
             this.ui.lvLimitLabel.text = App.getText("Highest Level");
             this.ui.upgradeButton.visible = false;
             this.ui.upgradeCostPanel.visible = false;
-        } else if (upgradeTimes >= (Config.upgradeBike.playerLevelLimitTimes[DataMgr.getPlayerLevel().level - 1] || maxTimes)) {
+        } else if (upgradeTimes >= (curLevelTimes === undefined ? maxTimes : curLevelTimes)) {
             this.ui.lvLimitPanel.visible = true;
-            this.ui.lvLimitLabel.text = App.getText("玩家${level}级才能继续升级", {level: DataMgr.getPlayerLevel().level + 1});
+            let nextUpgradableLevel;
+            if (curLevelTimes === undefined) {
+                nextUpgradableLevel = Config.upgradeBike.playerLevelLimitTimes.length + 1;
+            } else {
+                for (let i = playerLevel; i < Config.upgradeBike.playerLevelLimitTimes.length; i++) {
+                    if (Config.upgradeBike.playerLevelLimitTimes[i] > upgradeTimes) {
+                        nextUpgradableLevel = i + 1;
+                        break;
+                    }
+                }
+            }
+            this.ui.lvLimitLabel.text = App.getText("玩家${level}级才能继续升级", {level: nextUpgradableLevel});
             this.ui.upgradeButton.visible = false;
             this.ui.upgradeCostPanel.visible = false;
         } else {
