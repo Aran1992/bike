@@ -1373,8 +1373,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
                 "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
             // 主页封面图
             mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
         },
@@ -1446,8 +1446,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
                 "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
             // 主页封面图
             mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
         },
@@ -1519,8 +1519,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX2_Aquarius/TextureDX2_AquariusBackground02.png",
                 "images/map/DX2_Aquarius/TextureDX2_AquariusBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
             // 主页封面图
             mainCover: "images/map/DX2_Aquarius/TextureDX2_AquariusMap.png",
         },
@@ -1592,8 +1592,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX3_IceAge/TextureDX3_IceAgeBackground02.png",
                 "images/map/DX3_IceAge/TextureDX3_IceAgeBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX3_IceAge/TextureDX3_IceAgeBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX3_IceAge/TextureDX3_IceAgeMap.png",
             // 主页封面图
             mainCover: "images/map/DX3_IceAge/TextureDX3_IceAgeMap.png",
         },
@@ -1665,8 +1665,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX3_Rococo/TextureDX3_RococoBackground02.png",
                 "images/map/DX3_Rococo/TextureDX3_RococoBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX3_Rococo/TextureDX3_RococoBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
             // 主页封面图
             mainCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
         },
@@ -1738,8 +1738,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX2_Pisces/TextureDX2_PiscesBackground02.png",
                 "images/map/DX2_Pisces/TextureDX2_PiscesBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX2_Pisces/TextureDX2_PiscesMap.png",
             // 主页封面图
             mainCover: "images/map/DX2_Pisces/TextureDX2_PiscesMap.png",
         },
@@ -1811,8 +1811,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground02.png",
                 "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodMap.png",
             // 主页封面图
             mainCover: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodMap.png",
         },
@@ -1884,8 +1884,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX1_Beijing/TextureDX1_BeijingBackground02.png",
                 "images/map/DX1_Beijing/TextureDX1_BeijingBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX1_Beijing/TextureDX1_BeijingBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX1_Beijing/TextureDX1_BeijingMap.png",
             // 主页封面图
             mainCover: "images/map/DX1_Beijing/TextureDX1_BeijingMap.png",
         },
@@ -1957,8 +1957,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX1_Newyork/TextureDX1_NewyorkBackground02.png",
                 "images/map/DX1_Newyork/TextureDX1_NewyorkBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX1_Newyork/TextureDX1_NewyorkBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX1_Newyork/TextureDX1_NewyorkMap.png",
             // 主页封面图
             mainCover: "images/map/DX1_Newyork/TextureDX1_NewyorkMap.png",
         },
@@ -2030,8 +2030,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX1_Tokyo/TextureDX1_TokyoBackground02.png",
                 "images/map/DX1_Tokyo/TextureDX1_TokyoBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX1_Tokyo/TextureDX1_TokyoBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX1_Tokyo/TextureDX1_TokyoMap.png",
             // 主页封面图
             mainCover: "images/map/DX1_Tokyo/TextureDX1_TokyoMap.png",
         },
@@ -2103,8 +2103,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX3_TheJurassic/TextureDX3_TheJurassicBackground02.png",
                 "images/map/DX3_TheJurassic/TextureDX3_TheJurassicBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX3_TheJurassic/TextureDX3_TheJurassicBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX3_TheJurassic/TextureDX3_TheJurassicMap.png",
             // 主页封面图
             mainCover: "images/map/DX3_TheJurassic/TextureDX3_TheJurassicMap.png",
         },
@@ -2176,8 +2176,8 @@ Config.endlessMode.sceneList = [
                 "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeBackground02.png",
                 "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeBackground03.png",
             ],
-            // 商店显示的封面图
-            shopCover: "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeBackground-1.png",
+            // 商店显示的封面图（改版后这个不用了）
+            shopCover: "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeMap.png",
             // 主页封面图
             mainCover: "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeMap.png",
         },
