@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":65,
-    "selecteID":279,
+    "selectedBox":22,
+    "selecteID":166,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":280,
+    "maxID":282,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -910,9 +910,10 @@
                                     "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,lockedImage",
-                                    "props":{"y":0,"x":35,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                                    "props":{"y":0,"x":35,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
                                     "nodeParent":22,
                                     "label":"lockedImage",
+                                    "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
@@ -963,6 +964,21 @@
                                     "compId":279,
                                     "child":[
                                         ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image,lockedImage",
+                                    "props":{"y":0,"x":35,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                                    "nodeParent":65,
+                                    "label":"lockedImage",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":281,
+                                    "child":[
+                                        ],
+                                    "$HIDDEN":false
                                 }]
                         }],
                     "$HIDDEN":false

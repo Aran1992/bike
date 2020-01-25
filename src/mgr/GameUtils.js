@@ -3,6 +3,7 @@ import {Vec2} from "../libs/planck-wrapper";
 import DataMgr from "./DataMgr";
 import Utils from "./Utils";
 import {filters, resources} from "../libs/pixi-wrapper";
+import RunOption from "../../run-option";
 
 let grayFilter = new filters.ColorMatrixFilter();
 grayFilter.greyscale(0.4);
@@ -147,5 +148,13 @@ export default class GameUtils {
         let [id, ...values] = Config.lockSystems[name].condition;
         let condition = App.getText(Config.conditions[id], values);
         return App.getText("LockNotice", {condition: condition});
+    }
+
+    static isSystemLocked(system) {
+        if (RunOption.unlockAllSystem) {
+            return false;
+        }
+        let [id, ...values] = Config.lockSystems[system].condition;
+        return !DataMgr.checkCondition(id, ...values);
     }
 }

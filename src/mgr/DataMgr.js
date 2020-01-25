@@ -132,6 +132,10 @@ class DataMgr_ {
             this.checkConditions(Config.conditionsEnum.level);
             NetworkMgr.requestSaveSocialData({exp: value});
         }
+        if (key === DataMgr.gameLevelData) {
+            this.checkConditions(Config.conditionsEnum.gameLevel);
+            this.checkConditions(Config.conditionsEnum.gameLevelStar);
+        }
         if (key === DataMgr.homeData) {
             NetworkMgr.requestSaveSocialData({home: value});
         }

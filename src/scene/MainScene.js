@@ -8,11 +8,11 @@ import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
 import GameUtils from "../mgr/GameUtils";
-import RunOption from "../../run-option";
+import LockableButton from "../ui/LockableButton";
 
 export default class MainScene extends Scene {
     onCreate() {
-        this.lockableButtonList = [
+        [
             this.ui.shopButton,
             this.ui.homeButton,
             this.ui.rankButton,
@@ -20,11 +20,14 @@ export default class MainScene extends Scene {
             this.ui.signButton,
             this.ui.giftButton,
             this.ui.mapModeButton,
-        ];
-        this.bindLockableButton();
-        this.onClick(this.ui.endlessModeButton, this.onClickEndlessModeButton.bind(this));
+            this.ui.endlessModeButton,
+            this.ui.bikeButton,
+        ].forEach(button => new LockableButton({
+            button: button,
+            system: button.var,
+            handler: this[`onClick${Utils.formatName(button.var)}`].bind(this),
+        }));
         this.onClick(this.ui.gamelevelModeButton, this.onClickGamelevelModeButton.bind(this));
-        this.onClick(this.ui.bikeButton, this.onClickBikeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
         this.onClick(this.ui.addDiamondButton, this.onClickAddDiamondButton.bind(this));
         this.onClick(this.ui.addCoinButton, this.onClickAddCoinButton.bind(this));
@@ -48,14 +51,14 @@ export default class MainScene extends Scene {
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
-        this.mode = "Endless";
-        this.refreshMode();
-
-        this.initGift();
-
         this.waitShowNotice = [];
 
         this.gameLevel = 0;
+
+        this.mode = "GameLevel";
+        this.refreshMode();
+
+        this.initGift();
     }
 
     onRefreshRankData() {
@@ -72,7 +75,7 @@ export default class MainScene extends Scene {
     onShow() {
         this.onRefreshRankData();
 
-        this.refreshMode();
+        this.refreshMode(true);
 
         MusicMgr.playBGM(Config.mainBgmPath);
 
@@ -239,38 +242,9 @@ export default class MainScene extends Scene {
     }
 
     refreshLockStatus() {
-        this.lockableButtonList.forEach(item => {
-            let lock = this.isLockableButtonLocked(item);
-            GameUtils.greySprite(item, lock);
-            GameUtils.findChildByName(item, "lockedImage").visible = lock;
-        });
         let unlock = DataMgr.get(DataMgr.unlockSystems, []).indexOf("shopButton") !== -1;
         this.ui.addCoinButton.visible = unlock;
         this.ui.addDiamondButton.visible = unlock;
-    }
-
-    bindLockableButton() {
-        this.lockableButtonList.forEach(item => {
-            this.onClick(item, this.getLockableHandler(item, this[`onClick${Utils.formatName(item.var)}`].bind(this)));
-        });
-    }
-
-    getLockableHandler(item, handler) {
-        return () => {
-            if (this.isLockableButtonLocked(item)) {
-                App.showTip(GameUtils.getLockNotice(item.var), undefined, undefined, true);
-            } else {
-                handler();
-            }
-        };
-    }
-
-    isLockableButtonLocked(item) {
-        if (RunOption.unlockAllSystem) {
-            return false;
-        }
-        let [id, ...values] = Config.lockSystems[item.var].condition;
-        return !DataMgr.checkCondition(id, ...values);
     }
 
     onUnlockSystem(lockInfo) {
@@ -316,8 +290,12 @@ export default class MainScene extends Scene {
         this.refreshMode();
     }
 
-    refreshGameLevelMode() {
-        this.selectedLevel = 0;
+    refreshGameLevelMode(onlyStatus) {
+        if (onlyStatus) {
+            this.selectedLevel = this.selectedLevel || 0;
+        } else {
+            this.selectedLevel = 0;
+        }
         let path = Config.gameLevelMode.mapList[this.gameLevel].mainCover;
         this.refreshGameLevelSelectedState();
         this.ui.sceneImage.children[0].texture = resources[path].texture;
@@ -364,7 +342,7 @@ export default class MainScene extends Scene {
         App.showScene("PreparationScene", this.mode);
     }
 
-    refreshMode() {
+    refreshMode(onlyStatus) {
         this.ui.gameLevelPanel.visible = this.mode === "GameLevel";
         GameUtils.greySprite(this.ui.sceneImage.children[0], false);
         switch (this.mode) {
@@ -372,7 +350,7 @@ export default class MainScene extends Scene {
                 this.refreshMapMode();
                 break;
             case "GameLevel":
-                this.refreshGameLevelMode();
+                this.refreshGameLevelMode(onlyStatus);
                 break;
             case "Endless":
                 this.refreshEndlessMode();

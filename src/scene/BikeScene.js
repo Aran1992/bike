@@ -6,14 +6,13 @@ import BikeSprite from "../item/BikeSprite";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import MusicMgr from "../mgr/MusicMgr";
+import LockableButton from "../ui/LockableButton";
 
 export default class BikeScene extends Scene {
     onCreate() {
         this.selectedIndex = 0;
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
-        this.onClick(this.ui.drawButton, this.onClickDrawButton.bind(this));
         this.onClick(this.ui.selectBikeButton, this.onClickSelectedBikeButton.bind(this));
-        this.onClick(this.ui.upgradePanelButton, this.onClickUpgradePanelButton.bind(this));
         this.onClick(this.ui.upgradeButton, this.onClickUpgradeButton.bind(this));
         this.list = new List({
             root: this.ui.list,
@@ -27,13 +26,18 @@ export default class BikeScene extends Scene {
             count: Config.upgradeBike.items.length,
             isStatic: true,
         });
+        [
+            this.ui.drawButton,
+            this.ui.upgradePanelButton,
+        ].forEach(button => new LockableButton({
+            button: button,
+            system: button.var,
+            handler: this[`onClick${Utils.formatName(button.var)}`].bind(this),
+        }));
     }
 
     onShow() {
         this.onClickItem({index: 0});
-        let lock = DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") === -1;
-        GameUtils.greySprite(this.ui.drawButton, lock);
-        GameUtils.findChildByName(this.ui.drawButton, "lockedImage").visible = lock;
         this.ui.upgradePanel.visible = false;
         this.ui.list.visible = true;
     }
@@ -92,9 +96,6 @@ export default class BikeScene extends Scene {
     }
 
     onClickDrawButton() {
-        if (DataMgr.get(DataMgr.unlockSystems, []).indexOf("drawButton") === -1) {
-            return App.showTip(GameUtils.getLockNotice("drawButton"), undefined, undefined, true);
-        }
         App.hideScene("BikeScene");
         App.showScene("DrawScene");
     }
@@ -138,7 +139,7 @@ export default class BikeScene extends Scene {
         let hasOwned = this.hasOwnedBike(config.id);
         this.ui.selectBikeButton.visible = hasOwned && DataMgr.get(DataMgr.selectedBike, 0) !== config.id;
         this.ui.unlockBikeImage.visible = !hasOwned;
-        GameUtils.greySprite(this.ui.upgradePanelButton, !hasOwned);
+        GameUtils.greySprite(this.ui.upgradePanelButton, GameUtils.isSystemLocked("upgradePanelButton") || !hasOwned);
     }
 
     hasOwnedBike(id) {
