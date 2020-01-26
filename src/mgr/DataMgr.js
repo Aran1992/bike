@@ -3,6 +3,7 @@ import NetworkMgr from "./NetworkMgr";
 import Utils from "./Utils";
 import OnlineMgr from "./OnlineMgr";
 import EventMgr from "./EventMgr";
+import TimeMgr from "./TimeMgr";
 
 class DataMgr_ {
     constructor() {
@@ -105,6 +106,7 @@ class DataMgr_ {
         }
 
         OnlineMgr.start();
+        TimeMgr.init();
     }
 
     set(key, value) {
@@ -407,6 +409,14 @@ class DataMgr_ {
         const upgradeTimes = DataMgr.getBikeUpgradeTimes(id);
         return Config.upgradeBike.costCoin[upgradeTimes] || Utils.getLast(Config.upgradeBike.costCoin);
     }
+
+    getRankModeCostCoin() {
+        let cost = Config.rankMode.costInfo.coin[DataMgr.get(DataMgr.rankCostLevel, 0)];
+        if (cost === undefined) {
+            return Utils.getLast(Config.rankMode.costInfo.coin);
+        }
+        return cost;
+    }
 }
 
 const DataMgr = new DataMgr_();
@@ -462,5 +472,7 @@ DataMgr.preparationDataGameLevel = "41";
 DataMgr.gameLevelData = "42";
 DataMgr.exp = "43";
 DataMgr.bikeUpgrade = "44";
+DataMgr.rankCostLevel = "45";
+DataMgr.rankCostNextRefreshTime = "46";
 
 export default DataMgr;

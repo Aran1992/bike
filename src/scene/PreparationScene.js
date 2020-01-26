@@ -43,7 +43,7 @@ export default class PreparationScene extends Scene {
         if (this.mode === "Map") {
             this.ui.mapModeImage.visible = true;
             this.ui.coinPanel.visible = true;
-            this.ui.costCoinText.text = Config.rankMode.costCoin;
+            this.ui.costCoinText.text = DataMgr.getRankModeCostCoin();
             this.rewardType = DataMgr.preparationDataMap;
         } else if (this.mode === "GameLevel") {
             this.ui.gameLevelTitle.visible = true;
@@ -107,10 +107,11 @@ export default class PreparationScene extends Scene {
     onClickStartButton() {
         if (this.mode === "Map") {
             let coin = DataMgr.get(DataMgr.coin, 0);
-            let costCoin = Config.rankMode.costCoin;
+            let costCoin = DataMgr.getRankModeCostCoin();
             if (coin >= costCoin) {
                 let func = () => {
                     DataMgr.set(DataMgr.coin, coin - costCoin);
+                    DataMgr.set(DataMgr.rankCostLevel, DataMgr.get(DataMgr.rankCostLevel, 0) + 1);
                     App.hideScene("MainScene");
                     App.hideScene("PreparationScene");
                     if (RunOption.fixedMapID === undefined || RunOption.fixedMapID === -1) {
