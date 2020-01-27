@@ -296,11 +296,10 @@ export default class MainScene extends Scene {
         } else {
             this.selectedLevel = 0;
         }
-        let path = Config.gameLevelMode.mapList[this.gameLevel].mainCover;
         this.refreshGameLevelSelectedState();
-        this.ui.sceneImage.children[0].texture = resources[path].texture;
-        const total = DataMgr.getGameLevelStarTotalCount();
         const glConfig = Config.gameLevelMode.mapList[this.gameLevel];
+        this.ui.sceneImage.children[0].texture = resources[glConfig.mainCover].texture;
+        const total = DataMgr.getGameLevelStarTotalCount();
         const needed = glConfig.starCountUnlockNeeded;
         const locked = DataMgr.isGameLevelMapLocked(this.gameLevel);
         this.ui.totalStarCount.text = total;

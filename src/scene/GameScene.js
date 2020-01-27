@@ -353,8 +353,8 @@ export default class GameScene extends Scene {
                             contact.setEnabled(false);
                         }
                     }
-                    let ud = anotherFixture.getUserData();
-                    if (this.isInvincible() && [GroundStab, SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
+                    let ud = anotherFixture.getBody().getUserData();
+                    if (this.isInvincible() && [SmallFireWall, BigFireWall].some(ins => ud instanceof ins)) {
                         contact.setEnabled(false);
                     }
                 },
@@ -368,7 +368,9 @@ export default class GameScene extends Scene {
                         this.resetJumpStatus();
                     }
                     if (this.chtable.obstacle.is(anotherFixture)) {
-                        this.setContactFatalEdge(true);
+                        if (!this.isInvincible()) {
+                            this.setContactFatalEdge(true);
+                        }
                     } else {
                         let ud = anotherFixture.getUserData();
                         if (ud && ud.isFatal) {
