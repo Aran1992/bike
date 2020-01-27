@@ -43,13 +43,6 @@ export default class StaticGameScene extends GameScene {
             ]);
     }
 
-    onLoadedGameRes() {
-        super.onLoadedGameRes();
-        MusicMgr.playSound(Config.soundPath.guideStartGo, () => {
-            MusicMgr.playBGM(this.bgmPath, true);
-        });
-    }
-
     initGameContent() {
         let pathList = this.getRoadPathList();
 
