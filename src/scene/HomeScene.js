@@ -483,6 +483,18 @@ export default class HomeScene extends Scene {
         } else if (this.touchingSprite) {
             this.touchingSprite.destroy();
             this.touchingSprite = undefined;
+            let data = DataMgr.get(DataMgr.homeData);
+            if (this.radio.selectedIndex === SPOILS) {
+                if (data.spoilsList.length >= Config.home.spoilsMaxCount) {
+                    return App.showNotice(App.getText("骑士大人，战力品摆放已经超过总上限${count}个了哟！", {count: Config.home.spoilsMaxCount}));
+                }
+            } else if (this.radio.selectedIndex === PETS) {
+                if (data.petsList.length >= Config.home.petsMaxCount) {
+                    return App.showNotice(App.getText("骑士大人，宠物摆放已经超过总上限${count}个了哟！", {count: Config.home.petsMaxCount}));
+                } else if (data.petsList.filter(id => id === this.touchingItemID).length >= Config.home.petsOfTheSameKindMaxCount) {
+                    return App.showNotice(App.getText("骑士大人，这个宠物最多只能放出${count}个哟！", {count: Config.home.petsOfTheSameKindMaxCount}));
+                }
+            }
             let pos = this.homeContainer.getGlobalPosition();
             let rect = {
                 x: pos.x,
@@ -493,11 +505,10 @@ export default class HomeScene extends Scene {
             if (Utils.isPointInRect(event.data.global, rect)) {
                 let x = event.data.global.x - pos.x - this.homeInnerContainer.x;
                 let y = event.data.global.y - pos.y - this.homeInnerContainer.y;
-                let data = DataMgr.get(DataMgr.homeData);
                 if (this.radio.selectedIndex === SPOILS) {
-                    data.spoilsLength++;
-                    this.createSpoils(data.spoilsLength, this.touchingItemID, x, y);
-                    data.spoilsList.push([data.spoilsLength, this.touchingItemID, x, y]);
+                    const itemID = data.spoilsList.length + 1;
+                    this.createSpoils(itemID, this.touchingItemID, x, y);
+                    data.spoilsList.push([itemID, this.touchingItemID, x, y]);
                 } else {
                     this.createPet(this.touchingItemID, {x, y});
                     data.petsList.push(this.touchingItemID);

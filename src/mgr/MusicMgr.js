@@ -158,7 +158,6 @@ class MusicMgr_ {
     }
 }
 
-
 const MusicMgr = new MusicMgr_();
 
 export default MusicMgr;

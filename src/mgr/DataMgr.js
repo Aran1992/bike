@@ -85,7 +85,6 @@ class DataMgr_ {
                 bgID: 1,
                 floorID: 1,
                 spoilsList: [],
-                spoilsLength: 0,
                 petsList: [],
                 unlocked: {
                     backgrounds: [],

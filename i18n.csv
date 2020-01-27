@@ -25,6 +25,9 @@ HideUI,,HomeScene.scene.json,隐藏界面,HideUI,画面が隠されます。
 StartRemove,,HomeScene.scene.json,开启删除模式,StartRemove,「削除」モード　オン
 EndRemove,,HomeScene.scene.json,关闭删除模式,EndRemove,「削除」モード　オフ
 RemoveAll,,HomeScene.scene.json,清空数据,RemoveAll,全部リセット
+骑士大人，战力品摆放已经超过总上限${count}个了哟！,,HomeScene.scene.json,骑士大人，战力品摆放已经超过总上限${count}个了哟！,,
+骑士大人，宠物摆放已经超过总上限${count}个了哟！,,HomeScene.scene.json,骑士大人，宠物摆放已经超过总上限${count}个了哟！,,
+骑士大人，这个宠物最多只能放出${count}个哟！,,HomeScene.scene.json,骑士大人，这个宠物最多只能放出${count}个哟！,,
 TotalDistance,,RankScene.scene.json,累计里程,Total Distance,累計のマイレージ
 FarthestDistance,,RankScene.scene.json,最远里程,Farthest Distance,最長の距離
 Score,,RankScene.scene.json,积分,Score,ポイント

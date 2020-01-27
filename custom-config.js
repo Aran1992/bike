@@ -5496,6 +5496,12 @@ Config.home = {
         x: 5,
         y: 5
     },
+    // 战利品摆放上限
+    spoilsMaxCount: 2,
+    // 宠物摆放上限
+    petsMaxCount: 2,
+    // 同类宠物摆放上限
+    petsOfTheSameKindMaxCount: 1,
     types: ["backgrounds", "floors", "spoils", "pets"],
     // 背景相关配置 最少要有一个id为1的
     backgrounds: [
