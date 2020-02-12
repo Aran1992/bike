@@ -88,7 +88,7 @@ let Config = {
     verticalParallaxDepth: [0.75, 0.5, 0.25, 0],
     // 背景的Y轴位置
     bgY: [0, 280, 560],
-	//代表自行车低于当前路面的最低点多少就算死亡
+    //代表自行车低于当前路面的最低点多少就算死亡
     bikeGameOverOffsetHeight: 30,
     bikeAdjustHeightOffset: [-250, -100],
     // 最上层背景的补边高度

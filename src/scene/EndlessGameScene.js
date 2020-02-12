@@ -175,7 +175,7 @@ export default class EndlessGameScene extends GameScene {
         this.underBikeContianer.children.forEach(({part}) => {
             if (part && part.getRightBorderX() < -this.cameraContainer.x) {
                 part.destroy();
-                [this.roadList, this.birdList, this.itemList].forEach(list => {
+                [this.roadList, this.itemList].forEach(list => {
                     if (list.indexOf(part) !== -1) {
                         Utils.removeItemFromArray(list, part);
                     }

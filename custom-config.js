@@ -4403,6 +4403,8 @@ Config.item = {
         contactBikeImpulse: 250,
         // 触碰到的时候的小鸟受到的冲击力大小
         contactBirdImpulse: 125,
+        // 无敌状态下小鸟受到的冲击力大小
+        strikedBirdImpulse: 1250,
         // 出现音效
         appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
     },
@@ -5320,7 +5322,7 @@ Config.effect = {
     // 无敌
     Invincible: {
         // 持续时间（单位：秒）
-        duration: 3,
+        duration: 300,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 变大倍数

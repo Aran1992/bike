@@ -36,7 +36,7 @@ export default class EatableItem extends EditorItem {
     onBeginContact(contact, anotherFixture) {
         if (this.config.portable) {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
-                if (this.sprite.visible) {
+                if (this.sprite.visible && !this.animation) {
                     MusicMgr.playSound(Config.soundPath.eatRandomItem);
                     if (this.config.effect === "Random") {
                         let effect = this.gameMgr.randomEffect(this.gameMgr);
@@ -45,10 +45,7 @@ export default class EatableItem extends EditorItem {
                     } else {
                         EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
                     }
-                    this.sprite.visible = false;
-                    if (this.gameMgr.enemyList.length === 0) {
-                        this.willDestroyed = true;
-                    }
+                    this.playEatAnimation();
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
                 let enemy = anotherFixture.getBody().getUserData();
@@ -64,20 +61,7 @@ export default class EatableItem extends EditorItem {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible && !this.animation) {
                     EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value);
-                    this.animation = new TWEEN.Tween(this.sprite)
-                        .to({
-                            y: this.sprite.y - Config.eatItemAnimation.yOffset,
-                            alpha: 0
-                        }, Config.eatItemAnimation.duration)
-                        .easing(TWEEN.Easing.Quadratic.Out)
-                        .onComplete(() => {
-                            this.sprite.visible = false;
-                            delete this.animation;
-                            if (this.gameMgr.enemyList.length === 0) {
-                                this.willDestroyed = true;
-                            }
-                        })
-                        .start();
+                    this.playEatAnimation();
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
                 if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
@@ -85,6 +69,23 @@ export default class EatableItem extends EditorItem {
                 }
             }
         }
+    }
+
+    playEatAnimation() {
+        this.animation = new TWEEN.Tween(this.sprite)
+            .to({
+                y: this.sprite.y - Config.eatItemAnimation.yOffset,
+                alpha: 0
+            }, Config.eatItemAnimation.duration)
+            .easing(TWEEN.Easing.Quadratic.Out)
+            .onComplete(() => {
+                this.sprite.visible = false;
+                delete this.animation;
+                if (this.gameMgr.enemyList.length === 0) {
+                    this.willDestroyed = true;
+                }
+            })
+            .start();
     }
 
     update() {

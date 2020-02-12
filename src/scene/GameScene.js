@@ -23,7 +23,6 @@ import Road from "../item/Road";
 import Item from "../item/Item";
 import SmallFireWall from "../item/SmallFireWall";
 import BigFireWall from "../item/BigFireWall";
-import BlackBird from "../item/BlackBird";
 import GroundStab from "../item/GroundStab";
 import UpDownPlatform from "../item/UpDownPlatform";
 import Road2 from "../item/Road2";
@@ -37,6 +36,7 @@ import BikeEffect from "../item/BikeEffect";
 import Value from "../item/Value";
 import BaseEffect from "../item/BaseEffect";
 import SceneHelper from "../mgr/SceneHelper";
+import Bird from "../item/Bird";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -148,7 +148,6 @@ export default class GameScene extends Scene {
         this.cameraContainer.removeChildren();
         this.cameraContainer.position.set(0, 0);
 
-        this.birdList = [];
         this.roadList = [];
         this.itemList = [];
 
@@ -364,6 +363,14 @@ export default class GameScene extends Scene {
                     if (item && item instanceof BananaPeel && item.thrower === this) {
                         return;
                     }
+                    if (item && item instanceof Bird) {
+                        if (this.bikeBody.getPosition().y >= anotherFixture.getBody().getPosition().y) {
+                            this.bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), this.bikeBody.getPosition());
+                        } else if (!this.isInvincible()) {
+                            this.setContactFatalEdge(true);
+                        }
+                        return;
+                    }
                     let ud = anotherFixture.getUserData();
                     if (this.chtable.road.is(anotherFixture) || (ud && ud.resetJumpStatus)) {
                         this.resetJumpStatus();
@@ -399,47 +406,6 @@ export default class GameScene extends Scene {
                 beginContact(contact, anotherFixture, selfFixture) {
                     selfFixture.getBody().getUserData().onBeginContact(contact, anotherFixture, selfFixture);
                 }
-            },
-            npc: {
-                is: (fixture) => {
-                    let ud = fixture.getBody().getUserData();
-                    if (ud) {
-                        return ud.type === "BlackBird";
-                    }
-                },
-                preSolve: (contact, anotherFixture, selfFixture) => {
-                    if (this.chtable.player.is(anotherFixture)
-                        || this.chtable.enemy.is(anotherFixture)) {
-                        if (!selfFixture.getBody().getUserData().isDead) {
-                            contact.setEnabled(false);
-                        }
-                    } else {
-                        contact.setEnabled(false);
-                    }
-                },
-                beginContact: (contact, anotherFixture, selfFixture) => {
-                    let bird = selfFixture.getBody().getUserData();
-                    if (bird.isDead) {
-                        return;
-                    }
-                    if (this.chtable.player.is(anotherFixture)
-                        || (this.chtable.enemy.is(anotherFixture) && anotherFixture.getBody().getUserData().selfFixture === anotherFixture)) {
-                        let bikeBody = anotherFixture.getBody();
-                        let bike = bikeBody.getUserData();
-                        if (bike.isInvincible()) {
-                            bird.contactedByInvincible = true;
-                            return;
-                        }
-                        if (bikeBody.getPosition().y < bird.body.getPosition().y) {
-                            bike.setContactFatalEdge(true);
-                        } else {
-                            bike.jumpCount = 0;
-                            bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), bikeBody.getPosition());
-                            bird.body.applyLinearImpulse(Vec2(0, -Config.item.bird.contactBirdImpulse), bird.body.getPosition());
-                            bird.isDead = true;
-                        }
-                    }
-                },
             },
             road: {
                 is: (fixture) => {
@@ -764,10 +730,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "BlackBird": {
-                let item = new BlackBird(data, this.world);
-                this.birdList.push(item);
-                this.itemList.push(item);
-                this.underBikeContianer.addChild(item.sprite);
+                this.itemList.push(new Bird(this, this.underBikeContianer, this.world, data));
                 break;
             }
             case "GroundStab": {
@@ -954,8 +917,6 @@ export default class GameScene extends Scene {
 
         this.syncBikeSprite(velocity, bikePhysicsPos);
 
-        this.syncBirdSprite();
-
         for (let i = 0; i < this.itemList.length; i++) {
             let item = this.itemList[i];
             if (item.willDestroyed) {
@@ -999,8 +960,6 @@ export default class GameScene extends Scene {
         }
 
         this.keepBikeMove(velocity);
-
-        this.keepBirdMove();
 
         if (this.keepEnemyMove) {
             this.keepEnemyMove();
@@ -1275,43 +1234,6 @@ export default class GameScene extends Scene {
                 this.bikeBody.setLinearVelocity(Vec2(Config.rebornFloatVelocity, 0));
             } else {
                 this.bikeBody.setLinearVelocity(Vec2(this.player.velocity.value, velocity.y));
-            }
-        }
-    }
-
-    syncBirdSprite() {
-        this.birdList.forEach(bird => {
-            if (bird.body) {
-                let pos = GameUtils.physicsPos2renderPos(bird.body.getPosition());
-                bird.sprite.position.set(pos.x, pos.y);
-            }
-        });
-    }
-
-    keepBirdMove() {
-        for (let i = 0; i < this.birdList.length; i++) {
-            let bird = this.birdList[i];
-            if (bird.contactedByInvincible) {
-                this.removeItem(bird);
-                this.birdList.splice(i, 1);
-                i--;
-            } else if (!bird.isDead) {
-                let rp = bird.sprite.position;
-                if (-this.cameraContainer.x + Config.designWidth >= rp.x - bird.sprite.texture.width / 2) {
-                    if (!bird.showed) {
-                        bird.showed = true;
-                        bird.createBody();
-                    }
-                    if (!bird.upDown) {
-                        bird.body.setLinearVelocity(Vec2(-20, bird.body.getLinearVelocity().y));
-                    }
-                    let gravity = -2.5 * this.gravity;
-                    if (bird.body.getPosition().y < bird.baseY) {
-                        bird.body.applyForceToCenter(Vec2(0, gravity * 5));
-                    } else {
-                        bird.body.applyForceToCenter(Vec2(0, gravity * 0.75));
-                    }
-                }
             }
         }
     }
@@ -2043,6 +1965,10 @@ export default class GameScene extends Scene {
 
     isInvincible() {
         return this.hasEffect("Invincible") || this.hasEffect("Sprint");
+    }
+
+    isBike(gameObject) {
+        return gameObject === this || this.enemyList.indexOf(gameObject) !== -1;
     }
 }
 
