@@ -17,6 +17,7 @@ import {
     TextStyle,
     Texture
 } from "../libs/pixi-wrapper";
+import TWEEN from "@tweenjs/tween.js";
 
 import Road from "../item/Road";
 import Item from "../item/Item";
@@ -1046,6 +1047,8 @@ export default class GameScene extends Scene {
         if (this.gaSprite) {
             this.onGuideAnimation();
         }
+
+        TWEEN.update();
     }
 
     pause() {

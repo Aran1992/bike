@@ -6,6 +6,7 @@ import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
 import {resources} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
+import TWEEN from "@tweenjs/tween.js";
 
 export default class EatableItem extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -61,12 +62,22 @@ export default class EatableItem extends EditorItem {
             }
         } else {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
-                if (this.sprite.visible) {
+                if (this.sprite.visible && !this.animation) {
                     EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value);
-                    this.sprite.visible = false;
-                    if (this.gameMgr.enemyList.length === 0) {
-                        this.willDestroyed = true;
-                    }
+                    this.animation = new TWEEN.Tween(this.sprite)
+                        .to({
+                            y: this.sprite.y - Config.eatItemAnimation.yOffset,
+                            alpha: 0
+                        }, Config.eatItemAnimation.duration)
+                        .easing(TWEEN.Easing.Quadratic.Out)
+                        .onComplete(() => {
+                            this.sprite.visible = false;
+                            delete this.animation;
+                            if (this.gameMgr.enemyList.length === 0) {
+                                this.willDestroyed = true;
+                            }
+                        })
+                        .start();
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
                 if (anotherFixture.getBody().getUserData().selfFixture === anotherFixture) {
@@ -77,8 +88,6 @@ export default class EatableItem extends EditorItem {
     }
 
     update() {
-        super.update();
-
         if (this.isAttracted) {
             this.moveToPlayer();
         } else {
@@ -96,6 +105,9 @@ export default class EatableItem extends EditorItem {
     }
 
     moveToPlayer() {
+        if (this.animation) {
+            return;
+        }
         if (this.gameMgr.gameStatus === "play") {
             let radius = Utils.calcRadians(this.body.getPosition(), this.gameMgr.bikeBody.getPosition());
             let velocity = Config.effect.Magnet.velocity * Config.pixel2meter;
@@ -105,5 +117,13 @@ export default class EatableItem extends EditorItem {
         } else {
             this.body.setLinearVelocity(Vec2(0, 0));
         }
+        super.update();
+    }
+
+    destroy() {
+        if (this.animation) {
+            this.animation.stop();
+        }
+        super.destroy();
     }
 }

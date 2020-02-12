@@ -8827,4 +8827,12 @@ Config.upgradeBike = {
     ],
 };
 
+// 吃道具表现
+Config.eatItemAnimation = {
+    // 动画时长（单位：毫秒）
+    duration: 250,
+    // 弹起高度
+    yOffset: 100,
+};
+
 export default Config;
