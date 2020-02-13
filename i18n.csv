@@ -398,6 +398,9 @@ SystemUnlockTitle1,,,扭蛋 解锁,,
 SystemUnlockTitle2,,,排名竞赛 解锁,,
 SystemUnlockTitle3,,,排行 解锁,,
 SystemUnlockTitle4,,,家园 解锁,,
+SystemUnlockTitle5,,,无尽旅程 解锁,,
+SystemUnlockTitle6,,,车库 解锁,,
+SystemUnlockTitle7,,,能力 解锁,,
 SystemUnlockTitle11,,,签到 解锁,,
 SystemUnlockTitle12,,,礼包 解锁,,
 SystemUnlockTitle13,,,福利 解锁,,
@@ -409,6 +412,12 @@ SystemUnlockDescribe3,,,"恭喜骑士大人
 将排行解锁了",,
 SystemUnlockDescribe4,,,"恭喜骑士大人
 将家园解锁了",,
+SystemUnlockDescribe5,,,"恭喜骑士大人
+将无尽旅程解锁了",,
+SystemUnlockDescribe6,,,"恭喜骑士大人
+将车库解锁了",,
+SystemUnlockDescribe7,,,"恭喜骑士大人
+将能力解锁了",,
 SystemUnlockDescribe11,,,"恭喜骑士大人
 将签到解锁了",,
 SystemUnlockDescribe12,,,"恭喜骑士大人

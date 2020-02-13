@@ -7749,41 +7749,41 @@ Config.lockSystems = {
     // 车库
     bikeButton: {
         // 解锁条件
-        condition: [12, 1, 2],
+        condition: [12, 1, 3],
         // 解锁内容标题
-        title: "SystemUnlockTitle4",
+        title: "SystemUnlockTitle6",
         // 解锁描述
-        dsc: "SystemUnlockDescribe4",
+        dsc: "SystemUnlockDescribe6",
         // 解锁图片
-        image: "myLaya/laya/assets/images/ButtonSocial_Blue.png",
+        image: "myLaya/laya/assets/images/button-bike-scene.png",
         // 解锁图片缩放
         imageScale: 2,
     },
     // 无尽模式
     endlessModeButton: {
         // 解锁条件
-        condition: [12, 1, 1],
+        condition: [11, 8],
         // 解锁内容标题
-        title: "SystemUnlockTitle2",
+        title: "SystemUnlockTitle5",
         // 解锁描述
-        dsc: "SystemUnlockDescribe2",
+        dsc: "SystemUnlockDescribe5",
         // 解锁图片
-        image: "myLaya/laya/assets/images/english/Match.png",
+        image: "myLaya/laya/assets/images/english/Endless.png",
         // 解锁图片缩放
         imageScale: 1.5,
     },
     // 自行车能力
     upgradePanelButton: {
         // 解锁条件
-        condition: [13, 5],
+        condition: [12, 3, 3],
         // 解锁内容标题
-        title: "SystemUnlockTitle2",
+        title: "SystemUnlockTitle7",
         // 解锁描述
-        dsc: "SystemUnlockDescribe2",
+        dsc: "SystemUnlockDescribe7",
         // 解锁图片
-        image: "myLaya/laya/assets/images/english/Match.png",
+        image: "myLaya/laya/assets/images/button-skill.png",
         // 解锁图片缩放
-        imageScale: 1.5,
+        imageScale: 2,
     }
 };
 
