@@ -5322,7 +5322,7 @@ Config.effect = {
     // 无敌
     Invincible: {
         // 持续时间（单位：秒）
-        duration: 300,
+        duration: 3,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 变大倍数
@@ -5499,9 +5499,9 @@ Config.home = {
         y: 5
     },
     // 战利品摆放上限
-    spoilsMaxCount: 2,
+    spoilsMaxCount: 100,
     // 宠物摆放上限
-    petsMaxCount: 2,
+    petsMaxCount: 20,
     // 同类宠物摆放上限
     petsOfTheSameKindMaxCount: 1,
     types: ["backgrounds", "floors", "spoils", "pets"],
