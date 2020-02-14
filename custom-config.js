@@ -4403,8 +4403,10 @@ Config.item = {
         contactBikeImpulse: 250,
         // 触碰到的时候的小鸟受到的冲击力大小
         contactBirdImpulse: 125,
-        // 无敌状态下小鸟受到的冲击力大小
+        // 被击飞的冲击力大小
         strikedBirdImpulse: 1250,
+        // 被击飞的旋转速度
+        strikedBirdAngularVelocity: 50,
         // 出现音效
         appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
     },
@@ -4785,6 +4787,10 @@ Config.item = {
     rollingStone: {
         // 出现音效
         appearSoundPath: "myLaya/laya/assets/sounds/Sound0316.mp3",
+        // 被击飞的冲击力
+        strikedImpulse: 12500,
+        // 被击飞的旋转速度
+        strikedAngularVelocity: 50,
         table: {
             1: {
                 // 旋转速度
@@ -4804,6 +4810,10 @@ Config.item = {
     fireBall: {
         // 出现音效
         appearSoundPath: "myLaya/laya/assets/sounds/Sound0311.mp3",
+        // 被击飞的冲击力
+        strikedImpulse: 12500,
+        // 被击飞的旋转速度
+        strikedAngularVelocity: 50,
         table: {
             1: {
                 // 移动速度（单位：像素, 为正的话是像右移动）

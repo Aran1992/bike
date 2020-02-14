@@ -34,7 +34,9 @@ export default class EditorItem {
 
     destroy() {
         this.sprite.destroy();
-        this.world.destroyBody(this.body);
+        if (this.body) {
+            this.world.destroyBody(this.body);
+        }
     }
 
     onCreate() {

@@ -3,6 +3,7 @@ import Config from "../config";
 import {Box, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import MusicMgr from "../mgr/MusicMgr";
+import Utils from "../mgr/Utils";
 
 export default class FireBall extends EditorItem {
     constructor(gameMgr, parent, world, config) {
@@ -16,7 +17,11 @@ export default class FireBall extends EditorItem {
     onCreate() {
         super.onCreate();
 
-        this.body = this.world.createBody();
+        this.leftBorderX = this.sprite.x - this.sprite.texture.width * this.sprite.scale.x / 2;
+    }
+
+    createBody() {
+        this.body = this.world.createKinematicBody();
         this.body.setUserData(this);
         let pp = GameUtils.renderPos2PhysicsPos(this.sprite.position);
         this.body.setPosition(pp);
@@ -28,39 +33,46 @@ export default class FireBall extends EditorItem {
         sd.shape = Box(hw, hh);
         sd.isSensor = true;
         this.body.createFixture(sd).setUserData({isDanger: true});
-
-        this.leftBorderX = this.sprite.x - this.sprite.texture.width * this.sprite.scale.x / 2;
+        this.body.setLinearVelocity(Vec2(this.config.velocity, 0));
     }
 
     update() {
-        super.update();
+        if (this.body === undefined) {
+            if (this.gameMgr.isItemXEnterView(this)) {
+                this.createBody();
+                MusicMgr.playSound(Config.item.fireBall.appearSoundPath);
+            }
+        } else {
+            if (!this.isDead) {
+                if (this.striked) {
+                    this.body.setDynamic();
+                    const radians = Utils.calcRadians(this.striked.bikePos, this.body.getPosition());
+                    const x = Math.cos(radians) * Config.item.fireBall.strikedImpulse;
+                    const y = Math.sin(radians) * Config.item.fireBall.strikedImpulse;
+                    this.body.applyLinearImpulse(Vec2(x, y), this.body.getPosition());
+                    this.body.setAngularVelocity(Config.item.fireBall.strikedAngularVelocity);
+                    this.isDead = true;
+                }
+            }
 
-        if (this.body.isStatic() && this.gameMgr.isItemXEnterView(this)) {
-            MusicMgr.playSound(Config.item.fireBall.appearSoundPath);
-            this.body.setKinematic();
-            this.body.setLinearVelocity(Vec2(this.config.velocity, 0));
-        }
-
-        if (this.contactedByInvincible) {
-            this.gameMgr.removeItem(this);
+            let pos = GameUtils.physicsPos2renderPos(this.body.getPosition());
+            this.sprite.position.set(pos.x, pos.y);
+            this.sprite.rotation = -this.body.getAngle();
         }
     }
 
     onBeginContact(contact, anotherFixture) {
-        if (this.gameMgr.chtable.player.is(anotherFixture)) {
-            if (this.gameMgr.isInvincible()) {
-                this.contactedByInvincible = true;
+        if (this.isDead) {
+            return;
+        }
+        const anotherBody = anotherFixture.getBody();
+        const another = anotherBody.getUserData();
+        if (this.gameMgr.isBike(another)) {
+            if (another.isInvincible()) {
+                const {x, y} = anotherBody.getPosition();
+                this.striked = {bikePos: {x, y}};
             } else {
-                this.gameMgr.setContactFatalEdge(true);
-            }
-        } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
-            const enemy = anotherFixture.getBody().getUserData();
-            if (enemy.isInvincible()) {
-                this.contactedByInvincible = true;
-            } else {
-                if (enemy.selfFixture === anotherFixture) {
-                    enemy.setContactFatalEdge(true);
-                }
+                another.setContactFatalEdge(true);
             }
         }
     }
