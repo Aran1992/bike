@@ -62,7 +62,7 @@ export default class Bird {
                     const x = Math.cos(radians) * Config.item.bird.strikedBirdImpulse;
                     const y = Math.sin(radians) * Config.item.bird.strikedBirdImpulse;
                     this.body.applyLinearImpulse(Vec2(x, y), this.body.getPosition());
-                    this.body.setAngularVelocity(50);
+                    this.body.setAngularVelocity(Config.item.bird.strikedBirdAngularVelocity);
                     this.isDead = true;
                 } else if (this.trampled) {
                     this.body.applyLinearImpulse(Vec2(0, -Config.item.bird.contactBirdImpulse), this.body.getPosition());

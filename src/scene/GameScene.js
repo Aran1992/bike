@@ -751,8 +751,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "RollingStone": {
-                let item = new RollingStone(this, this.underBikeContianer, this.world, data);
-                this.itemList.push(item);
+                this.itemList.push(new RollingStone(this, this.underBikeContianer, this.world, data));
                 break;
             }
             case "FireBall": {
