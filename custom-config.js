@@ -1428,7 +1428,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1501,7 +1501,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1574,7 +1574,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_IceAge/TextureDX3_IceAgeBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1647,7 +1647,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_Rococo/TextureDX3_RococoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1720,7 +1720,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1793,7 +1793,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1866,7 +1866,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX1_Beijing/TextureDX1_BeijingBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1939,7 +1939,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX1_Newyork/TextureDX1_NewyorkBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -2012,7 +2012,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX1_Tokyo/TextureDX1_TokyoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -2085,7 +2085,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_TheJurassic/TextureDX3_TheJurassicBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -2158,7 +2158,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -5519,13 +5519,13 @@ Config.home = {
     backgrounds: [
         {
             id: 1,
-            path: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
+            path: "images/home/background/TextureDX2_TaurusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 2,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
+            path: "images/home/background/TextureDX2_AriesBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5550,14 +5550,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe2",
                 // 解锁图片
-                image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
+                image: "images/home/background/TextureDX2_AriesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 3,
-            path: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
+            path: "images/home/background/TextureDX2_CapricornBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5580,14 +5580,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe3",
                 // 解锁图片
-                image: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
+                image: "images/home/background/TextureDX2_CapricornBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 4,
-            path: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
+            path: "images/home/background/TextureDX2_ScorpiusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5610,14 +5610,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe4",
                 // 解锁图片
-                image: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
+                image: "images/home/background/TextureDX2_ScorpiusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 5,
-            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
+            path: "images/home/background/TextureDX2_AquariusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5640,14 +5640,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe5",
                 // 解锁图片
-                image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
+                image: "images/home/background/TextureDX2_AquariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 6,
-            path: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
+            path: "images/home/background/TextureDX2_CancerBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5670,14 +5670,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe6",
                 // 解锁图片
-                image: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
+                image: "images/home/background/TextureDX2_CancerBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 7,
-            path: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
+            path: "images/home/background/TextureDX2_GeminiBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5700,14 +5700,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe7",
                 // 解锁图片
-                image: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
+                image: "images/home/background/TextureDX2_GeminiBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 8,
-            path: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
+            path: "images/home/background/TextureDX2_LeoBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5730,14 +5730,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe8",
                 // 解锁图片
-                image: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
+                image: "images/home/background/TextureDX2_LeoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 9,
-            path: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+            path: "images/home/background/TextureDX2_LibraBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5760,14 +5760,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe9",
                 // 解锁图片
-                image: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+                image: "images/home/background/TextureDX2_LibraBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 10,
-            path: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+            path: "images/home/background/TextureDX2_PiscesBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5790,14 +5790,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe10",
                 // 解锁图片
-                image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+                image: "images/home/background/TextureDX2_PiscesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 11,
-            path: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
+            path: "images/home/background/TextureDX2_SagittariusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5820,14 +5820,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe11",
                 // 解锁图片
-                image: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
+                image: "images/home/background/TextureDX2_SagittariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 12,
-            path: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
+            path: "images/home/background/TextureDX2_VirgoBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5850,9 +5850,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe12",
                 // 解锁图片
-                image: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
+                image: "images/home/background/TextureDX2_VirgoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
     ],
