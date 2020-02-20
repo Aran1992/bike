@@ -7547,6 +7547,8 @@ Config.preparationRandomEffectList = {
         "Accelerate",
         "PowerJump",
         "UnlimitedJump",
+        "Invincible",
+        "Sprint",
     ],
     // 闯关模式
     gameLevel: [
@@ -7849,6 +7851,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -7912,6 +7916,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -7975,6 +7981,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8038,6 +8046,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8101,6 +8111,8 @@ Config.gameLevelMode = {
 //卡5                PowerJump: 1,
 //卡5                UnlimitedJump: 1,
 //卡5                Magnet: 1,
+//卡5                Invincible: 1,
+//卡5                Sprint: 1,
 //卡5            },
 //卡5            // 每一关的地图配置
 //卡5            levelList: [
@@ -8164,6 +8176,8 @@ Config.gameLevelMode = {
 //卡6                PowerJump: 1,
 //卡6                UnlimitedJump: 1,
 //卡6                Magnet: 1,
+//卡6                Invincible: 1,
+//卡6                Sprint: 1,
 //卡6            },
 //卡6            // 每一关的地图配置
 //卡6            levelList: [
@@ -8227,6 +8241,8 @@ Config.gameLevelMode = {
 //卡7                PowerJump: 1,
 //卡7                UnlimitedJump: 1,
 //卡7                Magnet: 1,
+//卡7                Invincible: 1,
+//卡7                Sprint: 1,
 //卡7            },
 //卡7            // 每一关的地图配置
 //卡7            levelList: [
@@ -8290,6 +8306,8 @@ Config.gameLevelMode = {
 //卡8                PowerJump: 1,
 //卡8                UnlimitedJump: 1,
 //卡8                Magnet: 1,
+//卡8                Invincible: 1,
+//卡8                Sprint: 1,
 //卡8            },
 //卡8            // 每一关的地图配置
 //卡8            levelList: [
@@ -8353,6 +8371,8 @@ Config.gameLevelMode = {
 //卡9                PowerJump: 1,
 //卡9                UnlimitedJump: 1,
 //卡9                Magnet: 1,
+//卡9                Invincible: 1,
+//卡9                Sprint: 1,
 //卡9            },
 //卡9            // 每一关的地图配置
 //卡9            levelList: [
@@ -8416,6 +8436,8 @@ Config.gameLevelMode = {
 //卡10                PowerJump: 1,
 //卡10                UnlimitedJump: 1,
 //卡10                Magnet: 1,
+//卡10                Invincible: 1,
+//卡10                Sprint: 1,
 //卡10            },
 //卡10            // 每一关的地图配置
 //卡10            levelList: [
@@ -8479,6 +8501,8 @@ Config.gameLevelMode = {
 //卡11                PowerJump: 1,
 //卡11                UnlimitedJump: 1,
 //卡11                Magnet: 1,
+//卡11                Invincible: 1,
+//卡11                Sprint: 1,
 //卡11            },
 //卡11            // 每一关的地图配置
 //卡11            levelList: [
@@ -8542,6 +8566,8 @@ Config.gameLevelMode = {
 //卡12                PowerJump: 1,
 //卡12                UnlimitedJump: 1,
 //卡12                Magnet: 1,
+//卡12                Invincible: 1,
+//卡12                Sprint: 1,
 //卡12            },
 //卡12            // 每一关的地图配置
 //卡12            levelList: [
@@ -8842,7 +8868,7 @@ Config.upgradeBike = {
 // 吃道具表现
 Config.eatItemAnimation = {
     // 动画时长（单位：毫秒）
-    duration: 250,
+    duration: 200,
     // 弹起高度
     yOffset: 100,
 };
