@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":3114,
+    "selecteID":3257,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":3250,
+    "maxID":3258,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -5170,7 +5170,7 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road//终点安全道路(一定要放在最后1位)",
-            "props":{"y":0,"x":2440,"points":"18880,0,20380,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":0,"x":21320,"points":"0,0,1500,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road//终点安全道路(一定要放在最后1位)",
             "isOpen":true,
@@ -5346,6 +5346,118 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":3249,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:55555",
+            "props":{"y":-400,"x":21820,"skin":"images/medal-2.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:55555","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:55555",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3250,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-400,"x":21870,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3251,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-400,"x":21770,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3252,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-450,"x":21770,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3253,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-350,"x":21870,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3254,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-350,"x":21770,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3255,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-450,"x":21870,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3256,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//ID:121",
+            "props":{"y":-350,"x":21485,"skin":"images/crystal_dragon_00.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:121","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//ID:121",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3257,
             "child":[
                 ]
         }],
