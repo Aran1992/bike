@@ -8065,71 +8065,71 @@ Config.gameLevelMode = {
                 {bike: 21, diamond: 20},
             ],
         },
-//卡5        {
-//卡5            // 解锁需要的星星数
-//卡5            starCountUnlockNeeded: 5,
-//卡5            // 地图描述
-//卡5            dsc: "Select Map5",
-//卡5            // 主页封面图
-//卡5            mainCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
-//卡5            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
-//卡5            texture: {
-//卡5                // 侧边
-//卡5                side: "images/map/DX3_Rococo/TextureDX3_RococoRoad01SideSkin.png",
-//卡5                // 底部
-//卡5                top: "images/map/DX3_Rococo/TextureDX3_RococoRoad01TopSkin.png",
-//卡5                // 侧边
-//卡5                side2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02SideSkin.png",
-//卡5                // 底部
-//卡5                top2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02TopSkin.png",
-//卡5                // 背景 有多少层背景就配置多少张
-//卡5                bg: [
-//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground01.png",
-//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground02.png",
-//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground03.png",
-//卡5                ],
-//卡5            },
-//卡5            // 视差背景系数：左右
-//卡5            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-//卡5            // 视差背景系数：上下
-//卡5            verticalParallaxDepth: [1, 1, 1, 0],
-//卡5            // 背景的Y轴位置
-//卡5            bgY: [0, 128, 0],
-//卡5            // 背景缩放系数
-//卡5            bgScale: [1, 1, 1],
-//卡5            // 自行车速度（基础：20）
-//卡5            bikeVelocity: 20,
-//卡5            // 重力（基础：-175）
-//卡5            gravity: -175,
-//卡5            // 跳跃爆发力（基础：12800）
-//卡5            jumpForce: 12800,
-//卡5            // BGM路径
-//卡5            bgmPath: "myLaya/laya/assets/sounds/07_rococo.mp3",
-//卡5            // 道具随机表
-//卡5            itemRandomTableList: {
-//卡5                Accelerate: 1,
-//卡5                PowerJump: 1,
-//卡5                UnlimitedJump: 1,
-//卡5                Magnet: 1,
-//卡5                Invincible: 1,
-//卡5                Sprint: 1,
-//卡5            },
-//卡5            // 每一关的地图配置
-//卡5            levelList: [
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5            ],
-//卡5            rewardList: [
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {bike: 7, 		diamond: 20},
-//卡5            ],
-//卡5        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 50,
+            // 地图描述
+            dsc: "Select Map5",
+            // 主页封面图
+            mainCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+                // 侧边
+                side: "images/map/DX3_Rococo/TextureDX3_RococoRoad01SideSkin.png",
+                // 底部
+                top: "images/map/DX3_Rococo/TextureDX3_RococoRoad01TopSkin.png",
+                // 侧边
+                side2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02SideSkin.png",
+                // 底部
+                top2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02TopSkin.png",
+                // 背景 有多少层背景就配置多少张
+                bg: [
+                    "images/map/DX3_Rococo/TextureDX3_RococoBackground01.png",
+                    "images/map/DX3_Rococo/TextureDX3_RococoBackground02.png",
+                    "images/map/DX3_Rococo/TextureDX3_RococoBackground03.png",
+                ],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 1, 1, 0],
+            // 背景的Y轴位置
+            bgY: [0, 128, 0],
+            // 背景缩放系数
+            bgScale: [1, 1, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/07_rococo.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+                Accelerate: 1,
+                PowerJump: 1,
+                UnlimitedJump: 1,
+                Magnet: 1,
+                Invincible: 1,
+                Sprint: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+            ],
+            rewardList: [
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 7, 		diamond: 20},
+            ],
+        },
 //卡6        {
 //卡6            // 解锁需要的星星数
 //卡6            starCountUnlockNeeded: 6,
@@ -8192,7 +8192,7 @@ Config.gameLevelMode = {
 //卡6                {coin: 1000, 	diamond: 20},
 //卡6                {coin: 1000, 	diamond: 20},
 //卡6                {coin: 1000, 	diamond: 20},
-//卡6                {bike: 7, 		diamond: 20},
+//卡6                {bike: 51, 	diamond: 20},
 //卡6            ],
 //卡6        },
 //卡7        {
@@ -8257,7 +8257,7 @@ Config.gameLevelMode = {
 //卡7                {coin: 1000, 	diamond: 20},
 //卡7                {coin: 1000, 	diamond: 20},
 //卡7                {coin: 1000, 	diamond: 20},
-//卡7                {bike: 7, 		diamond: 20},
+//卡7                {bike: 19, 	diamond: 20},
 //卡7            ],
 //卡7        },
 //卡8        {
@@ -8322,7 +8322,7 @@ Config.gameLevelMode = {
 //卡8                {coin: 1000, 	diamond: 20},
 //卡8                {coin: 1000, 	diamond: 20},
 //卡8                {coin: 1000, 	diamond: 20},
-//卡8                {bike: 7, 		diamond: 20},
+//卡8                {bike: 9, 		diamond: 20},
 //卡8            ],
 //卡8        },
 //卡9        {
@@ -8387,7 +8387,7 @@ Config.gameLevelMode = {
 //卡9                {coin: 1000, 	diamond: 20},
 //卡9                {coin: 1000, 	diamond: 20},
 //卡9                {coin: 1000, 	diamond: 20},
-//卡9                {bike: 7, 		diamond: 20},
+//卡9                {bike: 14, 	diamond: 20},
 //卡9            ],
 //卡9        },
 //卡10        {
@@ -8452,7 +8452,7 @@ Config.gameLevelMode = {
 //卡10                {coin: 1000, 	diamond: 20},
 //卡10                {coin: 1000, 	diamond: 20},
 //卡10                {coin: 1000, 	diamond: 20},
-//卡10                {bike: 7, 		diamond: 20},
+//卡10                {bike: 3, 	diamond: 20},
 //卡10            ],
 //卡10        },
 //卡11        {
@@ -8517,7 +8517,7 @@ Config.gameLevelMode = {
 //卡11                {coin: 1000, 	diamond: 20},
 //卡11                {coin: 1000, 	diamond: 20},
 //卡11                {coin: 1000, 	diamond: 20},
-//卡11                {bike: 7, 		diamond: 20},
+//卡11                {bike: 11, 	diamond: 20},
 //卡11            ],
 //卡11        },
 //卡12        {
@@ -8582,7 +8582,7 @@ Config.gameLevelMode = {
 //卡12                {coin: 1000, 	diamond: 20},
 //卡12                {coin: 1000, 	diamond: 20},
 //卡12                {coin: 1000, 	diamond: 20},
-//卡12                {bike: 7, 		diamond: 20},
+//卡12                {bike: 5, 	diamond: 20},
 //卡12            ],
 //卡12        },
     ],
