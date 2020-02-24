@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":22,
-    "selecteID":166,
+    "selectedBox":15,
+    "selecteID":3,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
@@ -59,7 +59,7 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"width":560,"var":"list","top":70,"centerX":0,"bottom":330},
+                    "props":{"width":560,"var":"list","top":70,"centerX":0,"bottom":370},
                     "nodeParent":15,
                     "label":"list",
                     "isOpen":false,
@@ -873,14 +873,13 @@
                     "props":{"skin":"images/bg-main-scene-12.png","height":350,"centerX":0,"bottom":50},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":21,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,drawButton",
                             "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":62},
@@ -893,7 +892,6 @@
                             "compId":22,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":-40},
@@ -907,7 +905,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,lockedImage",
                                     "props":{"y":0,"x":35,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -925,7 +922,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,bikeDscText",
                             "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":10,"centerX":30},
@@ -939,7 +935,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,upgradePanelButton",
                             "props":{"width":101,"var":"upgradePanelButton","top":60,"skin":"images/button-skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
@@ -952,7 +947,6 @@
                             "compId":65,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":0,"x":0,"skin":"images/english/skill.png","centerX":0,"bottom":-40},
@@ -966,7 +960,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,lockedImage",
                                     "props":{"y":0,"x":35,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -992,14 +985,13 @@
             "props":{"width":200,"var":"selectBikeButton","top":29,"skin":"images/button-31.png","sizeGrid":"0,50,0,50","runtime":"../laya/assets/sounds/SE312.mp3","right":56,"height":70},
             "nodeParent":1,
             "label":"selectBikeButton",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":53,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/Enable.png","centerY":-5,"centerX":0},
@@ -1022,14 +1014,13 @@
             "props":{"width":200,"visible":false,"var":"unlockBikeImage","top":29,"skin":"images/button-32.png","right":56,"height":70},
             "nodeParent":1,
             "label":"unlockBikeImage",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":55,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/Unlocked.png","centerY":-5,"centerX":0},
