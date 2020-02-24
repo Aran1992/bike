@@ -2,7 +2,6 @@ import EditorItem from "./EditorItem";
 import Config from "../config";
 import {Box, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
-import MusicMgr from "../mgr/MusicMgr";
 import Utils from "../mgr/Utils";
 
 export default class FireBall extends EditorItem {
@@ -40,7 +39,6 @@ export default class FireBall extends EditorItem {
         if (this.body === undefined) {
             if (this.gameMgr.isItemXEnterView(this)) {
                 this.createBody();
-                MusicMgr.playSound(Config.item.fireBall.appearSoundPath);
             }
         } else {
             if (!this.isDead) {

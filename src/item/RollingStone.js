@@ -2,7 +2,6 @@ import EditorItem from "./EditorItem";
 import {Circle, Vec2} from "../libs/planck-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Config from "../config";
-import MusicMgr from "../mgr/MusicMgr";
 import Utils from "../mgr/Utils";
 
 export default class RollingStone extends EditorItem {
@@ -34,7 +33,6 @@ export default class RollingStone extends EditorItem {
         if (this.body === undefined) {
             if (this.gameMgr.isItemXEnterView(this)) {
                 this.createBody();
-                MusicMgr.playSound(Config.item.rollingStone.appearSoundPath);
             }
         } else {
             if (!this.isDead) {
