@@ -4399,8 +4399,8 @@ Config.item = {
         bodyWidth: 64,
         // 实际区域高度
         bodyHeight: 40,
-        // 触碰到的时候的自行车受到的冲击力大小
-        contactBikeImpulse: 250,
+        // 触碰到的时候的自行车竖直方向上的速度
+        contactBikeVelocity: 50,
         // 触碰到的时候的小鸟受到的冲击力大小
         contactBirdImpulse: 125,
         // 被击飞的冲击力大小
