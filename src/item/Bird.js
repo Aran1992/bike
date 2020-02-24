@@ -68,9 +68,12 @@ export default class Bird {
                     this.body.applyLinearImpulse(Vec2(0, -Config.item.bird.contactBirdImpulse), this.body.getPosition());
                     this.isDead = true;
                 } else {
-                    if (!GameUtils.isItemType(this.config, "UpDown")) {
+                    if (GameUtils.isItemType(this.config, "UpDown")) {
+                        this.body.setLinearVelocity(Vec2(0, this.body.getLinearVelocity().y));
+                    } else {
                         this.body.setLinearVelocity(Vec2(-20, this.body.getLinearVelocity().y));
                     }
+                    this.body.setAngle(0);
                     let gravity = -2.5 * this.gameMgr.gravity;
                     if (this.body.getPosition().y < this.baseY) {
                         this.body.applyForceToCenter(Vec2(0, gravity * 5));

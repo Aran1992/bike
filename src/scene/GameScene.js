@@ -366,7 +366,7 @@ export default class GameScene extends Scene {
                     if (item && item instanceof Bird) {
                         if (this.bikeBody.getPosition().y >= anotherFixture.getBody().getPosition().y) {
                             this.resetJumpStatus();
-                            this.bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), this.bikeBody.getPosition());
+                            this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, Config.item.bird.contactBikeVelocity));
                         } else if (!this.isInvincible()) {
                             this.setContactFatalEdge(true);
                         }
