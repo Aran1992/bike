@@ -11,6 +11,7 @@ import Value from "./Value";
 import GroundStab from "./GroundStab";
 import SmallFireWall from "./SmallFireWall";
 import BigFireWall from "./BigFireWall";
+import Bird from "./Bird";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -182,6 +183,15 @@ export default class Bike {
             }
         } else {
             let item = anotherFixture.getBody().getUserData();
+            if (item && item instanceof Bird) {
+                if (this.bikeBody.getPosition().y >= anotherFixture.getBody().getPosition().y) {
+                    this.resetJumpStatus();
+                    this.bikeBody.applyLinearImpulse(Vec2(0, Config.item.bird.contactBikeImpulse), this.bikeBody.getPosition());
+                } else if (!this.isInvincible()) {
+                    this.setContactFatalEdge(true);
+                }
+                return;
+            }
             if (item && item instanceof BananaPeel && item.thrower === this) {
                 return;
             }
