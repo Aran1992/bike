@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":2133,
+    "selecteID":2168,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":2150,
+    "maxID":2169,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -74,7 +74,7 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road//终点安全道路(一定要放在最后1位)",
-            "props":{"y":0,"x":2440,"points":"2880,0,4380,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":0,"x":5320,"points":"0,0,1500,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road//终点安全道路(一定要放在最后1位)",
             "isOpen":true,
@@ -138,6 +138,132 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":2133,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,Sprite",
+            "props":{"y":-75,"x":4000,"skin":"images/help-1.png","name":"Sprite"},
+            "nodeParent":1,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2153,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,Sprite",
+            "props":{"y":-135,"x":4055,"skin":"images/help-11.png","name":"Sprite"},
+            "nodeParent":1,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2154,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,Text",
+            "props":{"y":-220,"x":3900,"text":"${Help-1}","strokeColor":"#000000","stroke":5,"name":"Text","fontSize":35,"color":"#ffffff"},
+            "nodeParent":1,
+            "label":"Text",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2156,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,Sprite",
+            "props":{"y":-75,"x":4800,"skin":"images/help-1.png","name":"Sprite"},
+            "nodeParent":1,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2163,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,Sprite",
+            "props":{"y":-135,"x":4855,"skin":"images/help-11.png","name":"Sprite"},
+            "nodeParent":1,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2164,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,Text",
+            "props":{"y":-240,"x":4700,"text":"${Help-1}","strokeColor":"#000000","stroke":5,"name":"Text","fontSize":35,"color":"#ffffff"},
+            "nodeParent":1,
+            "label":"Text",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2165,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,Sprite",
+            "props":{"y":-75,"x":3255,"skin":"images/help-11.png","rotation":34,"name":"Sprite"},
+            "nodeParent":1,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2166,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,Text",
+            "props":{"y":-145,"x":3130,"text":"${Help-2}","strokeColor":"#000000","stroke":5,"name":"Text","fontSize":35,"color":"#ffffff"},
+            "nodeParent":1,
+            "label":"Text",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2167,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,Text",
+            "props":{"y":-300,"x":5320,"text":"${Help-10}","strokeColor":"#000000","stroke":5,"name":"Text","fontSize":35,"color":"#ffffff"},
+            "nodeParent":1,
+            "label":"Text",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2168,
             "child":[
                 ]
         }],

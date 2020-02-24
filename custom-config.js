@@ -1428,7 +1428,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1501,7 +1501,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1574,7 +1574,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_IceAge/TextureDX3_IceAgeBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1647,7 +1647,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_Rococo/TextureDX3_RococoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1720,7 +1720,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1793,7 +1793,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_SengokuPeriod/TextureDX3_SengokuPeriodBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1866,7 +1866,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX1_Beijing/TextureDX1_BeijingBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -1939,7 +1939,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX1_Newyork/TextureDX1_NewyorkBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -2012,7 +2012,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX1_Tokyo/TextureDX1_TokyoBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -2085,7 +2085,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_TheJurassic/TextureDX3_TheJurassicBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -2158,7 +2158,7 @@ Config.endlessMode.sceneList = [
             // 解锁图片
             image: "images/map/DX3_MiddleAge/TextureDX3_MiddleAgeBackground-1.png",
             // 解锁图片缩放
-            imageScale: 1.2,
+            imageScale: 1.1,
         },
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
@@ -5519,13 +5519,13 @@ Config.home = {
     backgrounds: [
         {
             id: 1,
-            path: "images/map/DX2_Taurus/TextureDX2_TaurusBackground-1.png",
+            path: "images/home/background/TextureDX2_TaurusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
         },
         {
             id: 2,
-            path: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
+            path: "images/home/background/TextureDX2_AriesBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5550,14 +5550,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe2",
                 // 解锁图片
-                image: "images/map/DX2_Aries/TextureDX2_AriesBackground-1.png",
+                image: "images/home/background/TextureDX2_AriesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 3,
-            path: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
+            path: "images/home/background/TextureDX2_CapricornBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5580,14 +5580,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe3",
                 // 解锁图片
-                image: "images/map/DX2_Capricorn/TextureDX2_CapricornBackground-1.png",
+                image: "images/home/background/TextureDX2_CapricornBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 4,
-            path: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
+            path: "images/home/background/TextureDX2_ScorpiusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5610,14 +5610,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe4",
                 // 解锁图片
-                image: "images/map/DX2_Scorpius/TextureDX2_ScorpiusBackground-1.png",
+                image: "images/home/background/TextureDX2_ScorpiusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 5,
-            path: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
+            path: "images/home/background/TextureDX2_AquariusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5640,14 +5640,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe5",
                 // 解锁图片
-                image: "images/map/DX2_Aquarius/TextureDX2_AquariusBackground-1.png",
+                image: "images/home/background/TextureDX2_AquariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 6,
-            path: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
+            path: "images/home/background/TextureDX2_CancerBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5670,14 +5670,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe6",
                 // 解锁图片
-                image: "images/map/DX2_Cancer/TextureDX2_CancerBackground-1.png",
+                image: "images/home/background/TextureDX2_CancerBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 7,
-            path: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
+            path: "images/home/background/TextureDX2_GeminiBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5700,14 +5700,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe7",
                 // 解锁图片
-                image: "images/map/DX2_Gemini/TextureDX2_GeminiBackground-1.png",
+                image: "images/home/background/TextureDX2_GeminiBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 8,
-            path: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
+            path: "images/home/background/TextureDX2_LeoBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5730,14 +5730,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe8",
                 // 解锁图片
-                image: "images/map/DX2_Leo/TextureDX2_LeoBackground-1.png",
+                image: "images/home/background/TextureDX2_LeoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 9,
-            path: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+            path: "images/home/background/TextureDX2_LibraBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5760,14 +5760,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe9",
                 // 解锁图片
-                image: "images/map/DX2_Libra/TextureDX2_LibraBackground-1.png",
+                image: "images/home/background/TextureDX2_LibraBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 10,
-            path: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+            path: "images/home/background/TextureDX2_PiscesBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5790,14 +5790,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe10",
                 // 解锁图片
-                image: "images/map/DX2_Pisces/TextureDX2_PiscesBackground-1.png",
+                image: "images/home/background/TextureDX2_PiscesBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 11,
-            path: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
+            path: "images/home/background/TextureDX2_SagittariusBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5820,14 +5820,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe11",
                 // 解锁图片
-                image: "images/map/DX2_Sagittarius/TextureDX2_SagittariusBackground-1.png",
+                image: "images/home/background/TextureDX2_SagittariusBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
         {
             id: 12,
-            path: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
+            path: "images/home/background/TextureDX2_VirgoBackground-1.png",
             // 场景物件缩放
             itemScale: 1.41,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
@@ -5850,9 +5850,9 @@ Config.home = {
                 // 解锁描述
                 dsc: "BackgroundUnlockDescribe12",
                 // 解锁图片
-                image: "images/map/DX2_Virgo/TextureDX2_VirgoBackground-1.png",
+                image: "images/home/background/TextureDX2_VirgoBackground-1.png",
                 // 解锁图片缩放
-                imageScale: 1.2,
+                imageScale: 1.1,
             },
         },
     ],
@@ -7547,6 +7547,8 @@ Config.preparationRandomEffectList = {
         "Accelerate",
         "PowerJump",
         "UnlimitedJump",
+        "Invincible",
+        "Sprint",
     ],
     // 闯关模式
     gameLevel: [
@@ -7849,6 +7851,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -7912,6 +7916,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -7975,6 +7981,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8038,6 +8046,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
+				Invincible: 1,
+				Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8055,69 +8065,71 @@ Config.gameLevelMode = {
                 {bike: 21, diamond: 20},
             ],
         },
-//卡5        {
-//卡5            // 解锁需要的星星数
-//卡5            starCountUnlockNeeded: 5,
-//卡5            // 地图描述
-//卡5            dsc: "Select Map5",
-//卡5            // 主页封面图
-//卡5            mainCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
-//卡5            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
-//卡5            texture: {
-//卡5                // 侧边
-//卡5                side: "images/map/DX3_Rococo/TextureDX3_RococoRoad01SideSkin.png",
-//卡5                // 底部
-//卡5                top: "images/map/DX3_Rococo/TextureDX3_RococoRoad01TopSkin.png",
-//卡5                // 侧边
-//卡5                side2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02SideSkin.png",
-//卡5                // 底部
-//卡5                top2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02TopSkin.png",
-//卡5                // 背景 有多少层背景就配置多少张
-//卡5                bg: [
-//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground01.png",
-//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground02.png",
-//卡5                    "images/map/DX3_Rococo/TextureDX3_RococoBackground03.png",
-//卡5                ],
-//卡5            },
-//卡5            // 视差背景系数：左右
-//卡5            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-//卡5            // 视差背景系数：上下
-//卡5            verticalParallaxDepth: [1, 1, 1, 0],
-//卡5            // 背景的Y轴位置
-//卡5            bgY: [0, 128, 0],
-//卡5            // 背景缩放系数
-//卡5            bgScale: [1, 1, 1],
-//卡5            // 自行车速度（基础：20）
-//卡5            bikeVelocity: 20,
-//卡5            // 重力（基础：-175）
-//卡5            gravity: -175,
-//卡5            // 跳跃爆发力（基础：12800）
-//卡5            jumpForce: 12800,
-//卡5            // BGM路径
-//卡5            bgmPath: "myLaya/laya/assets/sounds/07_rococo.mp3",
-//卡5            // 道具随机表
-//卡5            itemRandomTableList: {
-//卡5                Accelerate: 1,
-//卡5                PowerJump: 1,
-//卡5                UnlimitedJump: 1,
-//卡5                Magnet: 1,
-//卡5            },
-//卡5            // 每一关的地图配置
-//卡5            levelList: [
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-//卡5            ],
-//卡5            rewardList: [
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {coin: 1000, 	diamond: 20},
-//卡5                {bike: 7, 		diamond: 20},
-//卡5            ],
-//卡5        },
+        {
+            // 解锁需要的星星数
+            starCountUnlockNeeded: 50,
+            // 地图描述
+            dsc: "Select Map5",
+            // 主页封面图
+            mainCover: "images/map/DX3_Rococo/TextureDX3_RococoMap.png",
+            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+            texture: {
+                // 侧边
+                side: "images/map/DX3_Rococo/TextureDX3_RococoRoad01SideSkin.png",
+                // 底部
+                top: "images/map/DX3_Rococo/TextureDX3_RococoRoad01TopSkin.png",
+                // 侧边
+                side2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02SideSkin.png",
+                // 底部
+                top2: "images/map/DX3_Rococo/TextureDX3_RococoRoad02TopSkin.png",
+                // 背景 有多少层背景就配置多少张
+                bg: [
+                    "images/map/DX3_Rococo/TextureDX3_RococoBackground01.png",
+                    "images/map/DX3_Rococo/TextureDX3_RococoBackground02.png",
+                    "images/map/DX3_Rococo/TextureDX3_RococoBackground03.png",
+                ],
+            },
+            // 视差背景系数：左右
+            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+            // 视差背景系数：上下
+            verticalParallaxDepth: [1, 1, 1, 0],
+            // 背景的Y轴位置
+            bgY: [0, 128, 0],
+            // 背景缩放系数
+            bgScale: [1, 1, 1],
+            // 自行车速度（基础：20）
+            bikeVelocity: 20,
+            // 重力（基础：-175）
+            gravity: -175,
+            // 跳跃爆发力（基础：12800）
+            jumpForce: 12800,
+            // BGM路径
+            bgmPath: "myLaya/laya/assets/sounds/07_rococo.mp3",
+            // 道具随机表
+            itemRandomTableList: {
+                Accelerate: 1,
+                PowerJump: 1,
+                UnlimitedJump: 1,
+                Magnet: 1,
+                Invincible: 1,
+                Sprint: 1,
+            },
+            // 每一关的地图配置
+            levelList: [
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+            ],
+            rewardList: [
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {coin: 1000, 	diamond: 20},
+                {bike: 7, 		diamond: 20},
+            ],
+        },
 //卡6        {
 //卡6            // 解锁需要的星星数
 //卡6            starCountUnlockNeeded: 6,
@@ -8164,6 +8176,8 @@ Config.gameLevelMode = {
 //卡6                PowerJump: 1,
 //卡6                UnlimitedJump: 1,
 //卡6                Magnet: 1,
+//卡6                Invincible: 1,
+//卡6                Sprint: 1,
 //卡6            },
 //卡6            // 每一关的地图配置
 //卡6            levelList: [
@@ -8178,7 +8192,7 @@ Config.gameLevelMode = {
 //卡6                {coin: 1000, 	diamond: 20},
 //卡6                {coin: 1000, 	diamond: 20},
 //卡6                {coin: 1000, 	diamond: 20},
-//卡6                {bike: 7, 		diamond: 20},
+//卡6                {bike: 51, 	diamond: 20},
 //卡6            ],
 //卡6        },
 //卡7        {
@@ -8227,6 +8241,8 @@ Config.gameLevelMode = {
 //卡7                PowerJump: 1,
 //卡7                UnlimitedJump: 1,
 //卡7                Magnet: 1,
+//卡7                Invincible: 1,
+//卡7                Sprint: 1,
 //卡7            },
 //卡7            // 每一关的地图配置
 //卡7            levelList: [
@@ -8241,7 +8257,7 @@ Config.gameLevelMode = {
 //卡7                {coin: 1000, 	diamond: 20},
 //卡7                {coin: 1000, 	diamond: 20},
 //卡7                {coin: 1000, 	diamond: 20},
-//卡7                {bike: 7, 		diamond: 20},
+//卡7                {bike: 19, 	diamond: 20},
 //卡7            ],
 //卡7        },
 //卡8        {
@@ -8290,6 +8306,8 @@ Config.gameLevelMode = {
 //卡8                PowerJump: 1,
 //卡8                UnlimitedJump: 1,
 //卡8                Magnet: 1,
+//卡8                Invincible: 1,
+//卡8                Sprint: 1,
 //卡8            },
 //卡8            // 每一关的地图配置
 //卡8            levelList: [
@@ -8304,7 +8322,7 @@ Config.gameLevelMode = {
 //卡8                {coin: 1000, 	diamond: 20},
 //卡8                {coin: 1000, 	diamond: 20},
 //卡8                {coin: 1000, 	diamond: 20},
-//卡8                {bike: 7, 		diamond: 20},
+//卡8                {bike: 9, 		diamond: 20},
 //卡8            ],
 //卡8        },
 //卡9        {
@@ -8353,6 +8371,8 @@ Config.gameLevelMode = {
 //卡9                PowerJump: 1,
 //卡9                UnlimitedJump: 1,
 //卡9                Magnet: 1,
+//卡9                Invincible: 1,
+//卡9                Sprint: 1,
 //卡9            },
 //卡9            // 每一关的地图配置
 //卡9            levelList: [
@@ -8367,7 +8387,7 @@ Config.gameLevelMode = {
 //卡9                {coin: 1000, 	diamond: 20},
 //卡9                {coin: 1000, 	diamond: 20},
 //卡9                {coin: 1000, 	diamond: 20},
-//卡9                {bike: 7, 		diamond: 20},
+//卡9                {bike: 14, 	diamond: 20},
 //卡9            ],
 //卡9        },
 //卡10        {
@@ -8416,6 +8436,8 @@ Config.gameLevelMode = {
 //卡10                PowerJump: 1,
 //卡10                UnlimitedJump: 1,
 //卡10                Magnet: 1,
+//卡10                Invincible: 1,
+//卡10                Sprint: 1,
 //卡10            },
 //卡10            // 每一关的地图配置
 //卡10            levelList: [
@@ -8430,7 +8452,7 @@ Config.gameLevelMode = {
 //卡10                {coin: 1000, 	diamond: 20},
 //卡10                {coin: 1000, 	diamond: 20},
 //卡10                {coin: 1000, 	diamond: 20},
-//卡10                {bike: 7, 		diamond: 20},
+//卡10                {bike: 3, 	diamond: 20},
 //卡10            ],
 //卡10        },
 //卡11        {
@@ -8479,6 +8501,8 @@ Config.gameLevelMode = {
 //卡11                PowerJump: 1,
 //卡11                UnlimitedJump: 1,
 //卡11                Magnet: 1,
+//卡11                Invincible: 1,
+//卡11                Sprint: 1,
 //卡11            },
 //卡11            // 每一关的地图配置
 //卡11            levelList: [
@@ -8493,7 +8517,7 @@ Config.gameLevelMode = {
 //卡11                {coin: 1000, 	diamond: 20},
 //卡11                {coin: 1000, 	diamond: 20},
 //卡11                {coin: 1000, 	diamond: 20},
-//卡11                {bike: 7, 		diamond: 20},
+//卡11                {bike: 11, 	diamond: 20},
 //卡11            ],
 //卡11        },
 //卡12        {
@@ -8542,6 +8566,8 @@ Config.gameLevelMode = {
 //卡12                PowerJump: 1,
 //卡12                UnlimitedJump: 1,
 //卡12                Magnet: 1,
+//卡12                Invincible: 1,
+//卡12                Sprint: 1,
 //卡12            },
 //卡12            // 每一关的地图配置
 //卡12            levelList: [
@@ -8556,7 +8582,7 @@ Config.gameLevelMode = {
 //卡12                {coin: 1000, 	diamond: 20},
 //卡12                {coin: 1000, 	diamond: 20},
 //卡12                {coin: 1000, 	diamond: 20},
-//卡12                {bike: 7, 		diamond: 20},
+//卡12                {bike: 5, 	diamond: 20},
 //卡12            ],
 //卡12        },
     ],
@@ -8842,7 +8868,7 @@ Config.upgradeBike = {
 // 吃道具表现
 Config.eatItemAnimation = {
     // 动画时长（单位：毫秒）
-    duration: 250,
+    duration: 200,
     // 弹起高度
     yOffset: 100,
 };

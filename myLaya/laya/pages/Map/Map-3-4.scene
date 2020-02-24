@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":2524,
+    "selecteID":2905,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":2892,
+    "maxID":2906,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -2356,7 +2356,7 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road//终点安全道路(一定要放在最后1位)",
-            "props":{"y":0,"x":2440,"points":"18880,0,20380,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":0,"x":21320,"points":"0,0,1500,0","name":"Road//终点安全道路(一定要放在最后1位)","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road//终点安全道路(一定要放在最后1位)",
             "isOpen":true,
@@ -5052,6 +5052,146 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":2891,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:55555",
+            "props":{"y":-400,"x":21820,"skin":"images/medal-2.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:55555","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:55555",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2893,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-450,"x":21820,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2894,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-350,"x":21820,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2895,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-400,"x":21870,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2896,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-400,"x":21770,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2897,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road2",
+            "props":{"y":-300,"x":21520,"points":"0,0,100,0","name":"Road2","lineWidth":1,"lineColor":"#00ff00"},
+            "nodeParent":1,
+            "label":"Road2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2901,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road2",
+            "props":{"y":-200,"x":21520,"points":"0,0,100,0","name":"Road2","lineWidth":1,"lineColor":"#00ff00"},
+            "nodeParent":1,
+            "label":"Road2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2902,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Lines",
+            "searchKey":"Lines,Road2",
+            "props":{"y":-100,"x":21520,"points":"0,0,100,0","name":"Road2","lineWidth":1,"lineColor":"#00ff00"},
+            "nodeParent":1,
+            "label":"Road2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2903,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-350,"x":21770,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2904,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
+            "props":{"y":-450,"x":21870,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//金币//ID:0",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2905,
             "child":[
                 ]
         }],
