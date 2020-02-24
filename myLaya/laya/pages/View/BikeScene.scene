@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":15,
-    "selecteID":3,
+    "selectedBox":20,
+    "selecteID":283,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":282,
+    "maxID":285,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -62,25 +62,27 @@
                     "props":{"width":560,"var":"list","top":70,"centerX":0,"bottom":370},
                     "nodeParent":15,
                     "label":"list",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item",
                             "props":{"width":190,"runtime":"../laya/assets/sounds/SE312.mp3","name":"item","height":190},
                             "nodeParent":3,
                             "label":"item",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":30,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,bikePanel",
                                     "props":{"y":0,"x":0,"width":175,"name":"bikePanel","height":175},
@@ -93,6 +95,7 @@
                                     "compId":20,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image",
                                             "props":{"width":150,"skin":"images/bg-31.png","height":150,"centerY":0,"centerX":0},
@@ -108,6 +111,7 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,selectedImage",
                                             "props":{"width":150,"skin":"images/bg-32.png","name":"selectedImage","height":150,"centerY":0,"centerX":0},
@@ -123,6 +127,7 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,lostMaskImage",
                                             "props":{"width":150,"name":"lostMaskImage","height":150,"centerY":0,"centerX":0,"alpha":0.5},
@@ -138,6 +143,7 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,fightMaskImage",
                                             "props":{"top":4,"skin":"images/english/fight.png","name":"fightMaskImage","left":2},
@@ -153,24 +159,71 @@
                                             "$HIDDEN":false
                                         },
                                         {
-                                            "type":"Label",
-                                            "searchKey":"Label,levelText",
-                                            "props":{"text":"${LV}","strokeColor":"#000000","stroke":5,"right":20,"name":"levelText","fontSize":25,"color":"#ffffff","bottom":20},
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image,levelIcon",
+                                            "props":{"y":20,"x":20,"visible":false,"skin":"images/key_lock-2.png","right":0,"name":"levelIcon","bottom":0},
                                             "nodeParent":20,
-                                            "label":"levelText",
-                                            "isDirectory":false,
+                                            "label":"levelIcon",
+                                            "isOpen":true,
+                                            "isDirectory":true,
                                             "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":61,
+                                            "hasChild":true,
+                                            "compId":283,
                                             "child":[
-                                                ]
+                                                {
+                                                    "x":90,
+                                                    "type":"Label",
+                                                    "searchKey":"Label,levelText",
+                                                    "props":{"text":"11","strokeColor":"#000000","stroke":5,"name":"levelText","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                                                    "nodeParent":283,
+                                                    "label":"levelText",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":284,
+                                                    "child":[
+                                                        ]
+                                                }],
+                                            "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
+                                            "type":"Image",
+                                            "searchKey":"Image,upgradeLevelIcon",
+                                            "props":{"visible":false,"skin":"images/key_lock-2.png","name":"upgradeLevelIcon","left":0,"bottom":0},
+                                            "nodeParent":20,
+                                            "label":"upgradeLevelIcon",
+                                            "isOpen":true,
+                                            "isDirectory":true,
+                                            "isAniNode":true,
+                                            "hasChild":true,
+                                            "compId":282,
+                                            "child":[
+                                                {
+                                                    "x":90,
+                                                    "type":"Label",
+                                                    "searchKey":"Label,upgradeLevelText",
+                                                    "props":{"text":"11","strokeColor":"#000000","stroke":5,"name":"upgradeLevelText","fontSize":25,"color":"#ffffff","centerY":0,"centerX":0},
+                                                    "nodeParent":282,
+                                                    "label":"upgradeLevelText",
+                                                    "isDirectory":false,
+                                                    "isAniNode":true,
+                                                    "hasChild":false,
+                                                    "compId":61,
+                                                    "child":[
+                                                        ]
+                                                }],
+                                            "$HIDDEN":false
+                                        },
+                                        {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image,lockedImage",
                                             "props":{"visible":false,"top":20,"skin":"images/key_lock-2.png","name":"lockedImage","left":20},
                                             "nodeParent":20,
                                             "label":"lockedImage",
+                                            "isOpen":true,
                                             "isDirectory":false,
                                             "isAniNode":true,
                                             "hasChild":false,
@@ -864,7 +917,7 @@
                                 ],
                             "$HIDDEN":false
                         }],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,

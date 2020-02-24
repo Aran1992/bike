@@ -72,7 +72,11 @@ export default class BikeScene extends Scene {
         item.ui.lockedImage.visible = lock;
         item.ui.fightMaskImage.visible = DataMgr.get(DataMgr.selectedBike, 0) === config.id;
         let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
-        item.ui.levelText.text = level !== undefined ? `${App.getText("LV")}${level + 1}` : "";
+        item.ui.levelIcon.visible = level !== undefined;
+        item.ui.levelText.text = level !== undefined ? `${level + 1}` : "";
+        const upgradeLevel = DataMgr.getBikeUpgradeTimes(config.id);
+        item.ui.upgradeLevelIcon.visible = upgradeLevel !== 0;
+        item.ui.upgradeLevelText.text = upgradeLevel !== 0 ? `${upgradeLevel}` : "";
     }
 
     updateUpgradeItem(item, index) {
