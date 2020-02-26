@@ -8119,7 +8119,7 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-5-1.scene.json",
                 "myLaya/laya/pages/Map/Map-5-2.scene.json",
                 "myLaya/laya/pages/Map/Map-5-3.scene.json",
-                "myLaya/laya/pages/Map/Map-5-1.scene.json",
+                "myLaya/laya/pages/Map/Map-5-4.scene.json",
                 "myLaya/laya/pages/Map/Map-5-1.scene.json",
             ],
             rewardList: [

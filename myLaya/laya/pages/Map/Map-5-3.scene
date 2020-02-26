@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":3274,
+    "selecteID":3276,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":3275,
+    "maxID":3277,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -5458,6 +5458,34 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":3274,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//ID:101",
+            "props":{"y":-65,"x":3736,"skin":"images/crystal_jet_00.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:101","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//ID:101",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3275,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//ID:101",
+            "props":{"y":-400,"x":15735,"skin":"images/crystal_jet_00.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:101","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//ID:101",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3276,
             "child":[
                 ]
         }],
