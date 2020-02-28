@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":742,
+    "selecteID":752,
     "searchKey":"Scene",
     "props":{"width":9000,"sceneColor":"#000000","height":-200},
     "nodeParent":-1,
-    "maxID":752,
+    "maxID":753,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -2937,6 +2937,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":751,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,Text",
+            "props":{"y":-350,"x":0,"text":"${Help-161}","strokeColor":"#000000","stroke":5,"name":"Text","fontSize":35,"color":"#ffffff"},
+            "nodeParent":1,
+            "label":"Text",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":752,
             "child":[
                 ]
         }],
