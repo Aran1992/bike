@@ -5531,17 +5531,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [12, 1, 2],
-                [13, 1],
+                [1, 2000],
+                [2, 50],
+                [6, 3000],
+                [11, 10],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5563,15 +5563,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 6000],
+                [11, 30],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5593,15 +5595,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 18000],
+                [11, 45],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5623,15 +5627,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 30000],
+                [11, 55],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5653,15 +5659,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 42000],
+                [11, 62],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5683,15 +5691,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 54000],
+                [11, 66],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5713,15 +5723,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 66000],
+                [11, 70],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5743,15 +5755,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 2000],
+                [2, 50],
+                [6, 78000],
+                [11, 74],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5773,15 +5787,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 5000],
+                [2, 100],
+                [7, 5],
+                [11, 60],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5803,15 +5819,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 5000],
+                [2, 100],
+                [8, 5],
+                [11, 60],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5833,15 +5851,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
+                [1, 5000],
+                [2, 100],
+                [9, 5],
+                [11, 60],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5872,16 +5892,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [4, 12000],
+                [1, 2000],
+                [2, 50],
+                [4, 72000],
+                [11, 15],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5903,16 +5924,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [4, 72000],
+                [1, 2000],
+                [2, 50],
+                [4, 432000],
+                [11, 40],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5934,16 +5956,16 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [4, 216000],
+                [1, 2000],
+                [4, 864000],
+                [11, 50],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5965,16 +5987,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [4, 864000],
+                [1, 2000],
+                [2, 50],
+                [4, 1296000],
+                [11, 60],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -5996,16 +6019,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [4, 3456000],
+                [1, 2000],
+                [2, 50],
+                [4, 1728000],
+                [11, 65],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6027,16 +6051,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 400],
-                [4, 6912000],
+                [1, 2000],
+                [2, 50],
+                [4, 2160000],
+                [11, 69],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6894,30 +6919,31 @@ Config.home = {
     // 宠物板相关配置 最少要有一个id为1的
     pets: [
         {
-            id: 1,
-            path: "images/home/item/decoDX2_Aquarius-1.png",
+            id: 101,
+            path: "images/home/item/decoDX2_Taurus-1.png",
             // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 0.4,
             // 物件图标缩放
-            iconScale: 0.4,
+            iconScale: 0.3,
             // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 1,
+            petsJumpInterval: 0.8,
             // 宠物跳动旋转角度（单位：角度）
             petsJumpRotation: 10,
             // 宠物移动的速度（单位：像素）
-            petsVelocity: 1,
+            petsVelocity: 2,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
+                [1, 2000],
+                [2, 50],
+                [10, 3],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6926,121 +6952,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe1",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Aquarius-1.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 2,
-            path: "images/home/item/decoDX2_Aquarius-3.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 1.1,
-            // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 10,
-            // 宠物移动的速度（单位：像素）
-            petsVelocity: 1,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 50000],
-                [2, 500],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "PetUnlockTitle2",
-                // 解锁描述
-                dsc: "PetUnlockDescribe2",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Aquarius-3.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 11,
-            path: "images/home/item/decoDX2_Aries-1.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 1.2,
-            // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 10,
-            // 宠物移动的速度（单位：像素）
-            petsVelocity: 0.5,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 50000],
-                [2, 500],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "PetUnlockTitle3",
-                // 解锁描述
-                dsc: "PetUnlockDescribe3",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Aries-1.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 21,
-            path: "images/home/item/decoDX2_Cancer-1.png",
-            // 场景物件缩放
-            itemScale: 0.4,
-            // 物件图标缩放
-            iconScale: 0.3,
-            // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 1.3,
-            // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 10,
-            // 宠物移动的速度（单位：像素）
-            petsVelocity: 1,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 50000],
-                [2, 500],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "PetUnlockTitle4",
-                // 解锁描述
-                dsc: "PetUnlockDescribe4",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Cancer-1.png",
+                image: "images/home/item/decoDX2_Taurus-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -7061,24 +6973,64 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
+                [1, 2000],
+                [2, 50],
+                [10, 6],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "PetUnlockTitle5",
+                title: "PetUnlockTitle2",
                 // 解锁描述
-                dsc: "PetUnlockDescribe5",
+                dsc: "PetUnlockDescribe2",
                 // 解锁图片
                 image: "images/home/item/decoDX2_Gemini-1.png",
+                // 解锁图片缩放
+                imageScale: 1.2,
+            },
+        },
+        {
+            id: 11,
+            path: "images/home/item/decoDX2_Aries-1.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.2,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 0.5,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 2000],
+                [2, 50],
+                [10, 12],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle3",
+                // 解锁描述
+                dsc: "PetUnlockDescribe3",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Aries-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -7099,24 +7051,65 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
+                [1, 2000],
+                [2, 50],
+                [10, 18],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "PetUnlockTitle6",
+                title: "PetUnlockTitle4",
                 // 解锁描述
-                dsc: "PetUnlockDescribe6",
+                dsc: "PetUnlockDescribe4",
                 // 解锁图片
                 image: "images/home/item/decoDX2_Gemini-2.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 21,
+            path: "images/home/item/decoDX2_Cancer-1.png",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.3,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 2000],
+                [2, 50],
+                [6, 19200],
+                [11, 51],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle5",
+                // 解锁描述
+                dsc: "PetUnlockDescribe5",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Cancer-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -7137,22 +7130,24 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
+                [1, 2000],
+                [2, 50],
+                [6, 28800],
+                [11, 60],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "PetUnlockTitle7",
+                title: "PetUnlockTitle6",
                 // 解锁描述
-                dsc: "PetUnlockDescribe7",
+                dsc: "PetUnlockDescribe6",
                 // 解锁图片
                 image: "images/home/item/decoDX2_Leo-4.png",
                 // 解锁图片缩放
@@ -7175,22 +7170,24 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
+                [1, 2000],
+                [2, 50],
+                [6, 38400],
+                [11, 65],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "PetUnlockTitle8",
+                title: "PetUnlockTitle7",
                 // 解锁描述
-                dsc: "PetUnlockDescribe8",
+                dsc: "PetUnlockDescribe7",
                 // 解锁图片
                 image: "images/home/item/decoDX2_Leo-5.png",
                 // 解锁图片缩放
@@ -7213,15 +7210,57 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
+                [1, 2000],
+                [2, 50],
+                [6, 52800],
+                [11, 71],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle8",
+                // 解锁描述
+                dsc: "PetUnlockDescribe8",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Leo-6.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 2,
+            path: "images/home/item/decoDX2_Aquarius-3.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.1,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 2000],
+                [2, 50],
+                [4, 918000],
+                [11, 56],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -7230,37 +7269,38 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe9",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Leo-6.png",
+                image: "images/home/item/decoDX2_Aquarius-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 61,
-            path: "images/home/item/decoDX2_Libra-1.png",
+            id: 1,
+            path: "images/home/item/decoDX2_Aquarius-1.png",
             // 场景物件缩放
-            itemScale: 0.1,
+            itemScale: 0.5,
             // 物件图标缩放
-            iconScale: 0.1,
+            iconScale: 0.4,
             // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 2,
+            petsJumpInterval: 1,
             // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 5,
+            petsJumpRotation: 10,
             // 宠物移动的速度（单位：像素）
-            petsVelocity: 0.5,
+            petsVelocity: 1,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
-                [6, 100000],
+                [1, 2000],
+                [2, 50],
+                [4, 1285200],
+                [11, 63],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -7269,9 +7309,49 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe10",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Libra-1.png",
+                image: "images/home/item/decoDX2_Aquarius-1.png",
                 // 解锁图片缩放
-                imageScale: 0.3,
+                imageScale: 1,
+            },
+        },
+        {
+            id: 121,
+            path: "images/home/item/decoDX1_Newyork-2.png",
+            // 场景物件缩放
+            itemScale: 1,
+            // 物件图标缩放
+            iconScale: 0.8,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.35,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1.5,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 2000],
+                [2, 50],
+                [4, 1652400],
+                [11, 67],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle11",
+                // 解锁描述
+                dsc: "PetUnlockDescribe11",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Newyork-2.png",
+                // 解锁图片缩放
+                imageScale: 2,
             },
         },
         {
@@ -7290,55 +7370,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
-                [7, 10],
+                [1, 2000],
+                [2, 50],
+                [4, 2386800],
+                [11, 73],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "PetUnlockTitle11",
-                // 解锁描述
-                dsc: "PetUnlockDescribe11",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Scorpius-1.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 101,
-            path: "images/home/item/decoDX2_Taurus-1.png",
-            // 场景物件缩放
-            itemScale: 0.4,
-            // 物件图标缩放
-            iconScale: 0.3,
-            // 宠物跳动时间间隔（单位：秒）
-            petsJumpInterval: 0.8,
-            // 宠物跳动旋转角度（单位：角度）
-            petsJumpRotation: 10,
-            // 宠物移动的速度（单位：像素）
-            petsVelocity: 2,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 50000],
-                [2, 500],
-                [8, 10],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -7347,7 +7389,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "PetUnlockDescribe12",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Taurus-1.png",
+                image: "images/home/item/decoDX2_Scorpius-1.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -7356,7 +7398,7 @@ Config.home = {
             id: 102,
             path: "images/home/item/decoDX2_Taurus-3.png",
             // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 0.6,
             // 物件图标缩放
             iconScale: 0.4,
             // 宠物跳动时间间隔（单位：秒）
@@ -7368,16 +7410,17 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 50000],
-                [2, 500],
-                [9, 10],
+                [1, 5000],
+                [2, 100],
+                [5, 9000],
+                [11, 50],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.1,
-                distancePercent: 0.1,
-                scorePercent: 0.1,
-                expPercent: 0.1,
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -7389,6 +7432,126 @@ Config.home = {
                 image: "images/home/item/decoDX2_Taurus-3.png",
                 // 解锁图片缩放
                 imageScale: 1,
+            },
+        },
+        {
+            id: 61,
+            path: "images/home/item/decoDX2_Libra-1.png",
+            // 场景物件缩放
+            itemScale: 0.7,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 2,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 5,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 0.5,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 5000],
+                [2, 100],
+                [7, 10],
+                [11, 50],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle14",
+                // 解锁描述
+                dsc: "PetUnlockDescribe14",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Libra-1.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 122,
+            path: "images/home/item/decoDX1_Newyork-1.png",
+            // 场景物件缩放
+            itemScale: 1.2,
+            // 物件图标缩放
+            iconScale: 0.8,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.35,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1.5,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 5000],
+                [2, 100],
+                [8, 10],
+                [11, 50],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle15",
+                // 解锁描述
+                dsc: "PetUnlockDescribe15",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Newyork-1.png",
+                // 解锁图片缩放
+                imageScale: 2,
+            },
+        },
+        {
+            id: 131,
+            path: "images/home/item/decoDX1_Beijing-1.png",
+            // 场景物件缩放
+            itemScale: 1.2,
+            // 物件图标缩放
+            iconScale: 0.8,
+            // 宠物跳动时间间隔（单位：秒）
+            petsJumpInterval: 1.35,
+            // 宠物跳动旋转角度（单位：角度）
+            petsJumpRotation: 10,
+            // 宠物移动的速度（单位：像素）
+            petsVelocity: 1.5,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 5000],
+                [2, 100],
+                [9, 10],
+                [11, 50],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "PetUnlockTitle16",
+                // 解锁描述
+                dsc: "PetUnlockDescribe16",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Beijing-1.png",
+                // 解锁图片缩放
+                imageScale: 2,
             },
         },
     ]
@@ -7743,7 +7906,7 @@ Config.lockSystems = {
     // 家园
     homeButton: {
         // 解锁条件
-        condition: [10, 3],
+        condition: [10, 2],
         // 解锁内容标题
         title: "SystemUnlockTitle4",
         // 解锁描述

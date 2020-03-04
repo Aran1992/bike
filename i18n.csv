@@ -80,7 +80,7 @@ Need to rank ${0}st in total distance,,,需闯入历史累计里程排行第${0}
 Need to rank ${0}st in farthest distance,,,需闯入历史最大里程排行第${0}名,Need to rank ${0}st in farthest distance,
 Need to rank ${0}st in score,,,需闯入历史积分排行第${0}名,Need to rank ${0}st in score,
 Need to takes ${0} times map game,,,需要进行${0}次排名竞赛,,
-Need to reach level ${0},,,需要等级达到${0},Need to reach level ${0},
+Need to reach level ${0},,,需要等级达到 ${0},Need to reach level ${0},
 Need to get through level ${0}-${1},,,需要闯通关卡${0}-${1},Need to get through level ${0}-${1},
 Need to get ${0} game level stars,,,需要闯关星星总数达到${0}个,Need to get ${0} game level stars,
 Highest Level,,,最高等级,Highest Level,
@@ -212,7 +212,7 @@ HomeHelp2,,,"战力品、宠物，解锁后，
 HomeHelp3,,,"背景、地面，解锁后，
 可选择想要的来展现哟。",,
 Select Map1,,,地图1 ─ 绝命荒漠,Map1,
-Select Map2,,,地图2 ─ 云巅之上,Map2,
+Select Map2,,,地图2 ─ 粉色云端,Map2,
 Select Map3,,,地图3 ─ 火焰山国,Map3,
 Select Map4,,,地图4 ─ 新噩梦岛,Map4,
 Select Map5,,,地图5 ─ 海底世界,Map5,
@@ -537,6 +537,8 @@ SpoilUnlockTitle23,,,战力品23 解锁,,
 SpoilUnlockTitle24,,,战力品24 解锁,,
 SpoilUnlockTitle25,,,战力品25 解锁,,
 SpoilUnlockTitle26,,,战力品26 解锁,,
+SpoilUnlockTitle27,,,战力品27 解锁,,
+SpoilUnlockTitle28,,,战力品28 解锁,,
 SpoilUnlockDescribe1,,,"恭喜骑士大人
 将战力品1解锁了",,
 SpoilUnlockDescribe2,,,"恭喜骑士大人
@@ -589,6 +591,10 @@ SpoilUnlockDescribe25,,,"恭喜骑士大人
 将战力品25解锁了",,
 SpoilUnlockDescribe26,,,"恭喜骑士大人
 将战力品26解锁了",,
+SpoilUnlockDescribe27,,,"恭喜骑士大人
+将战力品27解锁了",,
+SpoilUnlockDescribe28,,,"恭喜骑士大人
+将战力品28解锁了",,
 PetUnlockTitle1,,,宠物1 解锁,,
 PetUnlockTitle2,,,宠物2 解锁,,
 PetUnlockTitle3,,,宠物3 解锁,,
@@ -602,6 +608,9 @@ PetUnlockTitle10,,,宠物10 解锁,,
 PetUnlockTitle11,,,宠物11 解锁,,
 PetUnlockTitle12,,,宠物12 解锁,,
 PetUnlockTitle13,,,宠物13 解锁,,
+PetUnlockTitle14,,,宠物14 解锁,,
+PetUnlockTitle15,,,宠物15 解锁,,
+PetUnlockTitle16,,,宠物16 解锁,,
 PetUnlockDescribe1,,,"恭喜骑士大人
 将宠物1解锁了",,
 PetUnlockDescribe2,,,"恭喜骑士大人
@@ -628,6 +637,12 @@ PetUnlockDescribe12,,,"恭喜骑士大人
 将宠物12解锁了",,
 PetUnlockDescribe13,,,"恭喜骑士大人
 将宠物13解锁了",,
+PetUnlockDescribe14,,,"恭喜骑士大人
+将宠物14解锁了",,
+PetUnlockDescribe15,,,"恭喜骑士大人
+将宠物15解锁了",,
+PetUnlockDescribe16,,,"恭喜骑士大人
+将宠物16解锁了",,
 TextMap-1-1-1,,,欢迎骑士大人来到自行车的教学关卡！请点击屏幕，跳跃吃星星哟。,,
 TextMap-1-2-1,,,骑士大人，拾取更多的经验，就能快速提升游戏等级哦 。,,
 TextMap-1-3-1,,,骑士大人，学完吃金币，就可以开始你的挑战之旅了。 ,,
