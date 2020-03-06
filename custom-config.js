@@ -6079,24 +6079,25 @@ Config.home = {
     // 战利品板相关配置 最少要有一个id为1的
     spoils: [
         {
-            id: 1,
-            path: "images/home/item/decoDX2_Aquarius-101.png",
+            id: 102,
+            path: "images/home/item/decoDX2_Taurus-102.png",
             // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 0.4,
             // 物件图标缩放
-            iconScale: 0.4,
+            iconScale: 0.3,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+				[12, 2, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
                 coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6105,14 +6106,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe1",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Aquarius-101.png",
+                image: "images/home/item/decoDX2_Taurus-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 21,
-            path: "images/home/item/decoDX2_Cancer-101.png",
+            id: 101,
+            path: "images/home/item/decoDX2_Taurus-101.png",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -6120,15 +6121,16 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+				[12, 3, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
+                coinPercent: 0,
                 distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6137,14 +6139,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe2",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Cancer-101.png",
+                image: "images/home/item/decoDX2_Taurus-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 22,
-            path: "images/home/item/decoDX2_Cancer-103.png",
+            id: 111,
+            path: "images/home/item/decoDX2_Virgo-101.png",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -6152,14 +6154,15 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+				[12, 4, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
                 expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
@@ -6169,30 +6172,31 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe3",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Cancer-103.png",
+                image: "images/home/item/decoDX2_Virgo-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 31,
-            path: "images/home/item/decoDX2_Capricorn-1.png",
+            id: 22,
+            path: "images/home/item/decoDX1_Beijing-8.png",
             // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 1,
             // 物件图标缩放
-            iconScale: 0.4,
+            iconScale: 0.7,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+				[12, 5, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6201,14 +6205,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe4",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Capricorn-1.png",
+                image: "images/home/item/decoDX1_Beijing-8.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 2,
             },
         },
         {
-            id: 32,
-            path: "images/home/item/decoDX2_Capricorn-101.png",
+            id: 1,
+            path: "images/home/item/decoDX2_Aquarius-101.png",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -6216,15 +6220,16 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+                [13, 30],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
                 coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6233,31 +6238,31 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe5",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Capricorn-101.png",
+                image: "images/home/item/decoDX2_Aquarius-101.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 33,
-            path: "images/home/item/decoDX2_Capricorn-102.png",
+            id: 73,
+            path: "images/home/item/decoDX2_Pisces-101.png",
             // 场景物件缩放
-            itemScale: 0.3,
+            itemScale: 0.5,
             // 物件图标缩放
-            iconScale: 0.2,
+            iconScale: 0.4,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
-                [5, 9000],
+                [1, 1000],
+                [2, 25],
+                [13, 45],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
+                coinPercent: 0,
                 distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6266,9 +6271,75 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe6",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Capricorn-102.png",
+                image: "images/home/item/decoDX2_Pisces-101.png",
                 // 解锁图片缩放
-                imageScale: 0.8,
+                imageScale: 1,
+            },
+        },
+        {
+            id: 21,
+            path: "images/home/item/decoDX1_Beijing-6.png",
+            // 场景物件缩放
+            itemScale: 0.7,
+            // 物件图标缩放
+            iconScale: 0.6,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [13, 60],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle7",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe7",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Beijing-6.png",
+                // 解锁图片缩放
+                imageScale: 1.6,
+            },
+        },
+        {
+            id: 61,
+            path: "images/home/item/decoDX1_Beijing-7.png",
+            // 场景物件缩放
+            itemScale: 0.8,
+            // 物件图标缩放
+            iconScale: 0.7,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [13, 75],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle8",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe8",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Beijing-7.png",
+                // 解锁图片缩放
+                imageScale: 2,
             },
         },
         {
@@ -6281,22 +6352,23 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+                [11, 32],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
                 coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "SpoilUnlockTitle7",
+                title: "SpoilUnlockTitle9",
                 // 解锁描述
-                dsc: "SpoilUnlockDescribe7",
+                dsc: "SpoilUnlockDescribe9",
                 // 解锁图片
                 image: "images/home/item/decoDX2_Gemini-101.png",
                 // 解锁图片缩放
@@ -6313,79 +6385,16 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+                [11, 34],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
+                coinPercent: 0,
                 distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle8",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe8",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Gemini-102.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 51,
-            path: "images/home/item/decoDX2_Leo-3.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle9",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe9",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Leo-3.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 52,
-            path: "images/home/item/decoDX2_Leo-102.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6394,362 +6403,7 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe10",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Leo-102.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 53,
-            path: "images/home/item/decoDX2_Leo-103.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle11",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe11",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Leo-103.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 54,
-            path: "images/home/item/decoDX2_Leo-104.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.3,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle12",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe12",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Leo-104.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 55,
-            path: "images/home/item/decoDX2_Leo-105.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.3,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle13",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe13",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Leo-105.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 61,
-            path: "images/home/item/decoDX2_Libra-101.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle14",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe14",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Libra-101.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 62,
-            path: "images/home/item/decoDX2_Libra-102.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle15",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe15",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Libra-102.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 71,
-            path: "images/home/item/decoDX2_Pisces-1.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle16",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe16",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Pisces-1.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 72,
-            path: "images/home/item/decoDX2_Pisces-2.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle17",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe17",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Pisces-2.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 73,
-            path: "images/home/item/decoDX2_Pisces-101.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.4,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle18",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe18",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Pisces-101.png",
-                // 解锁图片缩放
-                imageScale: 1,
-            },
-        },
-        {
-            id: 74,
-            path: "images/home/item/decoDX2_Pisces-102.png",
-            // 场景物件缩放
-            itemScale: 0.5,
-            // 物件图标缩放
-            iconScale: 0.18,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-                [5, 9000],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle19",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe19",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Pisces-102.png",
-                // 解锁图片缩放
-                imageScale: 0.8,
-            },
-        },
-        {
-            id: 81,
-            path: "images/home/item/decoDX2_Sagittarius-1.png",
-            // 场景物件缩放
-            itemScale: 0.4,
-            // 物件图标缩放
-            iconScale: 0.2,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-                [5, 9000],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle20",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe20",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Sagittarius-1.png",
-                // 解锁图片缩放
-                imageScale: 0.8,
-            },
-        },
-        {
-            id: 82,
-            path: "images/home/item/decoDX2_Sagittarius-101.png",
-            // 场景物件缩放
-            itemScale: 0.4,
-            // 物件图标缩放
-            iconScale: 0.2,
-            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
-            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
-            unlockConditions: [
-                [1, 20000],
-                [2, 200],
-                [5, 9000],
-            ],
-            // 解锁奖励 填入对应的奖励比率
-            unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
-                expPercent: 0.05,
-            },
-            // 解锁显示内容（有配置就显示，没配置就不显示）
-            unlockInfo: {
-                // 解锁内容标题
-                title: "SpoilUnlockTitle21",
-                // 解锁描述
-                dsc: "SpoilUnlockDescribe21",
-                // 解锁图片
-                image: "images/home/item/decoDX2_Sagittarius-101.png",
+                image: "images/home/item/decoDX2_Gemini-102.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
@@ -6764,22 +6418,23 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+                [11, 36],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
+                coinPercent: 0,
+                distancePercent: 0,
                 scorePercent: 0.05,
-                expPercent: 0.05,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
                 // 解锁内容标题
-                title: "SpoilUnlockTitle22",
+                title: "SpoilUnlockTitle11",
                 // 解锁描述
-                dsc: "SpoilUnlockDescribe22",
+                dsc: "SpoilUnlockDescribe11",
                 // 解锁图片
                 image: "images/home/item/decoDX2_Scorpius-2.png",
                 // 解锁图片缩放
@@ -6796,15 +6451,390 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+                [11, 38],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle12",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe12",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Scorpius-3.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 54,
+            path: "images/home/item/decoDX2_Leo-104.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [5, 3000],
+                [11, 42],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
                 coinPercent: 0.05,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle13",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe13",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Leo-104.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 53,
+            path: "images/home/item/decoDX2_Leo-103.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [5, 3600],
+                [11, 46],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
                 distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle14",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe14",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Leo-103.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 62,
+            path: "images/home/item/decoDX2_Libra-102.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [5, 4200],
+                [11, 52],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
                 scorePercent: 0.05,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle15",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe15",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Libra-102.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 141,
+            path: "images/home/item/decoDX1_Newyork-6.png",
+            // 场景物件缩放
+            itemScale: 0.9,
+            // 物件图标缩放
+            iconScale: 0.7,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [5, 4800],
+                [11, 57],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
                 expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle16",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe16",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Newyork-6.png",
+                // 解锁图片缩放
+                imageScale: 2,
+            },
+        },
+        {
+            id: 32,
+            path: "images/home/item/decoDX2_Capricorn-101.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [4, 712800],
+                [11, 59],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle17",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe17",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Capricorn-101.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 52,
+            path: "images/home/item/decoDX2_Leo-101.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [4, 950400],
+                [11, 64],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle18",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe18",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Leo-101.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 51,
+            path: "images/home/item/decoDX2_Leo-3.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [4, 1188000],
+                [11, 68],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle19",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe19",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Leo-3.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 142,
+            path: "images/home/item/decoDX1_Newyork-4.png",
+            // 场景物件缩放
+            itemScale: 0.8,
+            // 物件图标缩放
+            iconScale: 0.7,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [4, 1425600],
+                [11, 72],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle20",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe20",
+                // 解锁图片
+                image: "images/home/item/decoDX1_Newyork-4.png",
+                // 解锁图片缩放
+                imageScale: 1.8,
+            },
+        },
+        {
+            id: 31,
+            path: "images/home/item/decoDX2_Capricorn-1.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.4,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [6, 21000],
+                [11, 61],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle21",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe21",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Capricorn-1.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 71,
+            path: "images/home/item/decoDX2_Pisces-1.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [6, 27000],
+                [11, 66],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0,
+                distancePercent: 0.05,
+                scorePercent: 0,
+                expPercent: 0,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle22",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe22",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Pisces-1.png",
+                // 解锁图片缩放
+                imageScale: 1,
+            },
+        },
+        {
+            id: 55,
+            path: "images/home/item/decoDX2_Leo-105.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.3,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 1000],
+                [2, 25],
+                [6, 33000],
+                [11, 70],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.,
+                distancePercent: 0,
+                scorePercent: 0.05,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6813,14 +6843,14 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe23",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Scorpius-3.png",
+                image: "images/home/item/decoDX2_Leo-105.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 101,
-            path: "images/home/item/decoDX2_Taurus-101.png",
+            id: 72,
+            path: "images/home/item/decoDX2_Pisces-2.png",
             // 场景物件缩放
             itemScale: 0.5,
             // 物件图标缩放
@@ -6828,14 +6858,16 @@ Config.home = {
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 1000],
+                [2, 25],
+                [6, 39000],
+                [11, 74],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
-                coinPercent: 0.05,
-                distancePercent: 0.05,
-                scorePercent: 0.05,
+                coinPercent: 0,
+                distancePercent: 0,
+                scorePercent: 0,
                 expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
@@ -6845,23 +6877,25 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe24",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Taurus-101.png",
+                image: "images/home/item/decoDX2_Pisces-2.png",
                 // 解锁图片缩放
                 imageScale: 1,
             },
         },
         {
-            id: 102,
-            path: "images/home/item/decoDX2_Taurus-102.png",
+            id: 33,
+            path: "images/home/item/decoDX2_Capricorn-102.png",
             // 场景物件缩放
             itemScale: 0.4,
             // 物件图标缩放
-            iconScale: 0.3,
+            iconScale: 0.2,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
+                [1, 5000],
+                [2, 100],
+                [5, 6000],
+                [11, 40],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -6877,24 +6911,25 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe25",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Taurus-102.png",
+                image: "images/home/item/decoDX2_Capricorn-102.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.7,
             },
         },
         {
-            id: 111,
-            path: "images/home/item/decoDX2_Virgo-101.png",
+            id: 82,
+            path: "images/home/item/decoDX2_Sagittarius-101.png",
             // 场景物件缩放
-            itemScale: 0.5,
+            itemScale: 0.55,
             // 物件图标缩放
-            iconScale: 0.4,
+            iconScale: 0.22,
             // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
             // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
             unlockConditions: [
-                [1, 20000],
-                [2, 200],
-                [5, 5000],
+                [1, 5000],
+                [2, 100],
+                [7, 20],
+                [11, 40],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -6910,9 +6945,77 @@ Config.home = {
                 // 解锁描述
                 dsc: "SpoilUnlockDescribe26",
                 // 解锁图片
-                image: "images/home/item/decoDX2_Virgo-101.png",
+                image: "images/home/item/decoDX2_Sagittarius-101.png",
                 // 解锁图片缩放
-                imageScale: 1,
+                imageScale: 0.9,
+            },
+        },
+        {
+            id: 74,
+            path: "images/home/item/decoDX2_Pisces-102.png",
+            // 场景物件缩放
+            itemScale: 0.5,
+            // 物件图标缩放
+            iconScale: 0.18,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 5000],
+                [2, 100],
+                [8, 20],
+                [11, 40],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle27",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe27",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Pisces-102.png",
+                // 解锁图片缩放
+                imageScale: 0.8,
+            },
+        },
+        {
+            id: 81,
+            path: "images/home/item/decoDX2_Sagittarius-1.png",
+            // 场景物件缩放
+            itemScale: 0.4,
+            // 物件图标缩放
+            iconScale: 0.2,
+            // 解锁条件 填入对应条件的ID，以及对应参数(第一位是条件ID，之后条件中有几位参数，就按对应顺序填写对应参数)
+            // 比如条件是1，那么其中有一位参数表示需要花费的金币，那么就填写[1,1000]，表示需要花费一千金币解锁
+            unlockConditions: [
+                [1, 5000],
+                [2, 100],
+                [9, 20],
+                [11, 40],
+            ],
+            // 解锁奖励 填入对应的奖励比率
+            unlockRewards: {
+                coinPercent: 0.05,
+                distancePercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0.05,
+            },
+            // 解锁显示内容（有配置就显示，没配置就不显示）
+            unlockInfo: {
+                // 解锁内容标题
+                title: "SpoilUnlockTitle28",
+                // 解锁描述
+                dsc: "SpoilUnlockDescribe28",
+                // 解锁图片
+                image: "images/home/item/decoDX2_Sagittarius-1.png",
+                // 解锁图片缩放
+                imageScale: 0.7,
             },
         },
     ],
