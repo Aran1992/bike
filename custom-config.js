@@ -5464,6 +5464,10 @@ Config.buff = {
         fill: "white",
         // 倒计时数字大小
         fontSize: 80,
+        // 描边颜色
+        stroke: "black",
+        // 描边宽度
+        strokeThickness: 3,
     },
     // 倒计时位置
     textPosition: [0, 140],
@@ -6090,7 +6094,7 @@ Config.home = {
             unlockConditions: [
                 [1, 1000],
                 [2, 25],
-				[12, 2, 5],
+                [12, 2, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -6123,7 +6127,7 @@ Config.home = {
             unlockConditions: [
                 [1, 1000],
                 [2, 25],
-				[12, 3, 5],
+                [12, 3, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -6156,7 +6160,7 @@ Config.home = {
             unlockConditions: [
                 [1, 1000],
                 [2, 25],
-				[12, 4, 5],
+                [12, 4, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -6189,7 +6193,7 @@ Config.home = {
             unlockConditions: [
                 [1, 1000],
                 [2, 25],
-				[12, 5, 5],
+                [12, 5, 5],
             ],
             // 解锁奖励 填入对应的奖励比率
             unlockRewards: {
@@ -8117,8 +8121,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
-				Invincible: 1,
-				Sprint: 1,
+                Invincible: 1,
+                Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8182,8 +8186,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
-				Invincible: 1,
-				Sprint: 1,
+                Invincible: 1,
+                Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8247,8 +8251,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
-				Invincible: 1,
-				Sprint: 1,
+                Invincible: 1,
+                Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8312,8 +8316,8 @@ Config.gameLevelMode = {
                 PowerJump: 1,
                 UnlimitedJump: 1,
                 Magnet: 1,
-				Invincible: 1,
-				Sprint: 1,
+                Invincible: 1,
+                Sprint: 1,
             },
             // 每一关的地图配置
             levelList: [
@@ -8389,11 +8393,11 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-5-5.scene.json",
             ],
             rewardList: [
-                {coin: 1000, 	diamond: 20},
-                {coin: 1000, 	diamond: 20},
-                {coin: 1000, 	diamond: 20},
-                {coin: 1000, 	diamond: 20},
-                {bike: 7, 		diamond: 20},
+                {coin: 1000, diamond: 20},
+                {coin: 1000, diamond: 20},
+                {coin: 1000, diamond: 20},
+                {coin: 1000, diamond: 20},
+                {bike: 7, diamond: 20},
             ],
         },
 //卡6        {
