@@ -27,7 +27,12 @@ export default class LockableButton {
 
     refreshLockStatus() {
         let lock = GameUtils.isSystemLocked(this.system);
-        GameUtils.greySprite(this.button, lock);
+        for (let i = 0; i < this.button.children.length; i++) {
+            const child = this.button.children[i];
+            if (child.uiname !== "lockedImage") {
+                GameUtils.greySprite(child, lock);
+            }
+        }
         GameUtils.findChildByName(this.button, "lockedImage").visible = lock;
     }
 
