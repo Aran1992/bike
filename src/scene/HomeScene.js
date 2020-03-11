@@ -169,11 +169,14 @@ export default class HomeScene extends Scene {
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
         this.ui.addtionText.text = [
-            `${App.getText("Coin")}: ${Math.floor(GameUtils.getHomeConfig("coinPercent") * 100)}%`,
-            `${App.getText("Distance")}: ${Math.floor(GameUtils.getHomeConfig("distancePercent") * 100)}%`,
-            `${App.getText("Score")}: ${Math.floor(GameUtils.getHomeConfig("scorePercent") * 100)}%`,
-            `${App.getText("Exp")}: ${Math.floor(GameUtils.getHomeConfig("expPercent") * 100)}%`,
-        ].join("\n");
+            {text: "Coin", config: "coinPercent"},
+            {text: "Distance", config: "distancePercent"},
+            {text: "Score", config: "scorePercent"},
+            {text: "Exp", config: "expPercent"},
+        ]
+            .filter(item => GameUtils.getHomeConfig(item.config) !== 0)
+            .map(item => `${App.getText(item.text)}: ${Math.floor(GameUtils.getHomeConfig(item.config) * 100)}%`)
+            .join("\n");
     }
 
     createSpoils(itemID, id, x, y) {
@@ -627,11 +630,13 @@ export default class HomeScene extends Scene {
         let config = Config.home[type].find(item => item.id === id);
         if (config.unlockRewards) {
             return [
-                `${App.getText("Coin")}: ${Math.floor(config.unlockRewards.coinPercent * 100)}%`,
-                `${App.getText("Distance")}: ${Math.floor(config.unlockRewards.distancePercent * 100)}%`,
-                `${App.getText("Score")}: ${Math.floor(config.unlockRewards.scorePercent * 100)}%`,
-                `${App.getText("Exp")}: ${Math.floor(config.unlockRewards.expPercent * 100)}%`,
-            ];
+                {text: "Coin", config: "coinPercent"},
+                {text: "Distance", config: "distancePercent"},
+                {text: "Score", config: "scorePercent"},
+                {text: "Exp", config: "expPercent"},
+            ]
+                .filter(item => config.unlockRewards[item.config] !== 0)
+                .map(item => `${App.getText(item.text)}: ${Math.floor(config.unlockRewards[item.config] * 100)}%`);
         } else {
             return [];
         }
