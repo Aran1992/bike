@@ -2223,7 +2223,7 @@ Config.endlessMode.default = {
     roadSectionList: [
         // 对普通玩家可过阶段
 
-        // 第1阶段
+        // 第1阶段(固定路线)
         //路段1
         {
             list: ["101-1",],
@@ -2291,131 +2291,15 @@ Config.endlessMode.default = {
             velocity: 1,
         },
 
-
-        // 第2阶段
         // 奖励阶段
         {
             list: ["0-1",],
             length: 5000,
             velocity: 1,
         },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段1
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段2
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段3
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段4
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段5
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段6
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段7
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段8
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1,
-        },
-        //路段9
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1,
-        },
 
 
-        // 第3阶段
-        // 奖励阶段
-        {
-            list: ["0-1",],
-            length: 5000,
-            velocity: 1.2,
-        },
+        // 第2阶段（随机路线）
         // 道具
         {
             list: ["9999-1",],
@@ -2512,139 +2396,434 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 1.2,
         },
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1.2,
+        },
+
+
+        // 第3阶段（随机路线）
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.2,
+            velocity: 1.4,
         },
-        //路段9
+        //路段1
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.2,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段2
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段3
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段4
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段5
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段6
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段7
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.4,
+        },
+        //路段8
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.4,
+        },
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1.4,
+        },
+
+
+        // 第4阶段（随机路线）
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段1
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段2
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段3
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段4
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段5
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段6
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段7
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.6,
+        },
+        //路段8
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.6,
+        },
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1.6,
+        },
+
+
+        // 第5阶段（随机路线）
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段1
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段2
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段3
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段4
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段5
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段6
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段7
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 道具
+        {
+            list: ["9999-1",],
+            length: 500,
+            velocity: 1.8,
+        },
+        //路段8
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
+        // 奖励阶段
+        {
+            list: ["0-1",],
+            length: 5000,
+            velocity: 1.8,
         },
 
 
     ],
     // 无限循环旅程
     infiniteRoadSectionList: [
-        // 奖励阶段
-        {
-            list: ["0-1",],
-            length: 5000,
-            velocity: 1.4,
-        },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段1
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段2
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段3
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段4
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段5
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段6
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段7
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
         // 道具
         {
             list: ["9999-1",],
             length: 500,
-            velocity: 1.4,
+            velocity: 2,
         },
         //路段8
         {
             list: ["201-1",],
             length: 3000,
-            velocity: 1.4,
+            velocity: 2,
         },
-        // 道具
+        // 奖励阶段
         {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.4,
+            list: ["0-1",],
+            length: 5000,
+            velocity: 2,
         },
-        //路段9
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.4,
-        },
-
-
     ],
 };
 
