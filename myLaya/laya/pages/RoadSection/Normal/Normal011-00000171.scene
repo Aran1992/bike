@@ -409,20 +409,6 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//ID:26",
-            "props":{"y":-80,"x":300,"skin":"images/cobweb.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:26","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//ID:26",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":380,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
             "props":{"y":-80,"x":804,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
@@ -445,20 +431,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":382,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//ID:26",
-            "props":{"y":-130,"x":1004,"skin":"images/cobweb.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:26","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//ID:26",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":383,
             "child":[
                 ]
         },
@@ -501,20 +473,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":390,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//ID:26",
-            "props":{"y":-80,"x":1800,"skin":"images/cobweb.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:26","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//ID:26",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":395,
             "child":[
                 ]
         }],
