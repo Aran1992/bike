@@ -5467,7 +5467,7 @@ Config.buff = {
         // 描边颜色
         stroke: "black",
         // 描边宽度
-        strokeThickness: 3,
+        strokeThickness: 20,
     },
     // 倒计时位置
     textPosition: [0, 140],
@@ -6166,8 +6166,8 @@ Config.home = {
             unlockRewards: {
                 coinPercent: 0,
                 distancePercent: 0,
-                scorePercent: 0,
-                expPercent: 0.05,
+                scorePercent: 0.05,
+                expPercent: 0,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
@@ -6200,7 +6200,7 @@ Config.home = {
                 coinPercent: 0,
                 distancePercent: 0,
                 scorePercent: 0,
-                expPercent: 0,
+                expPercent: 0.05,
             },
             // 解锁显示内容（有配置就显示，没配置就不显示）
             unlockInfo: {
