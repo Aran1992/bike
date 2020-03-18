@@ -1295,17 +1295,40 @@ Config.roadSections = {
     // 随机关卡（Random）
     "201-1": [
         // 关卡（每个路段为3000像素）
-        "Random/Random011-00000111",
-        "Random/Random011-00000181",
-        "Random/Random011-00000201",
+        "Random/Random021-00000101",
+        "Random/Random021-00010101",
+        "Random/Random021-00020101",
+
+        "Random/Random021-01000101",
+        "Random/Random021-01010101",
+        "Random/Random021-01020101",
+
+        "Random/Random021-02000101",
+        "Random/Random021-02010101",
+        "Random/Random021-02020101",
+
+
+
+
     ],
 
 
-    // 奖励关卡（Special）
+    // 奖励关卡-1（Special）
     "0-1": [
         // 关卡（每个路段为5000像素）
         "Special/Special111-00000101",
     ],
+    // 奖励关卡-2（Special）
+    "0-11": [
+        // 关卡（每个路段为6000像素）
+        "Special/Special121-00000101",
+        "Special/Special121-00000111",
+        "Special/Special121-00000121",
+    ],
+
+
+
+
 
 
     // 随机道具（Item）
@@ -2224,7 +2247,7 @@ Config.endlessMode.default = {
         // 对普通玩家可过阶段
 
         // 第1阶段(固定路线)
-        //路段1
+        //路段1（注意：第1个速度要为1不然会出错）
         {
             list: ["101-1",],
             length: 1000,
@@ -2398,8 +2421,8 @@ Config.endlessMode.default = {
         },
         // 奖励阶段
         {
-            list: ["0-1",],
-            length: 5000,
+            list: ["0-11",],
+            length: 6000,
             velocity: 1.2,
         },
 
@@ -2503,8 +2526,8 @@ Config.endlessMode.default = {
         },
         // 奖励阶段
         {
-            list: ["0-1",],
-            length: 5000,
+            list: ["0-11",],
+            length: 6000,
             velocity: 1.4,
         },
 
@@ -2608,8 +2631,8 @@ Config.endlessMode.default = {
         },
         // 奖励阶段
         {
-            list: ["0-1",],
-            length: 5000,
+            list: ["0-11",],
+            length: 6000,
             velocity: 1.6,
         },
 
@@ -2713,8 +2736,8 @@ Config.endlessMode.default = {
         },
         // 奖励阶段
         {
-            list: ["0-1",],
-            length: 5000,
+            list: ["0-11",],
+            length: 6000,
             velocity: 1.8,
         },
 
@@ -2820,8 +2843,8 @@ Config.endlessMode.default = {
         },
         // 奖励阶段
         {
-            list: ["0-1",],
-            length: 5000,
+            list: ["0-11",],
+            length: 6000,
             velocity: 2,
         },
     ],
