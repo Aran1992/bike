@@ -12,20 +12,21 @@ import LockableButton from "../ui/LockableButton";
 
 export default class MainScene extends Scene {
     onCreate() {
-        [
-            this.ui.shopButton,
-            this.ui.homeButton,
-            this.ui.rankButton,
-            this.ui.drawButton,
-            this.ui.signButton,
-            this.ui.giftButton,
-            this.ui.mapModeButton,
-            this.ui.endlessModeButton,
-            this.ui.bikeButton,
-        ].forEach(button => new LockableButton({
-            button: button,
-            system: button.var,
-            handler: this[`onClick${Utils.formatName(button.var)}`].bind(this),
+        this.lockableButtons = [
+            "shopButton",
+            "homeButton",
+            "rankButton",
+            "drawButton",
+            "signButton",
+            "giftButton",
+            "mapModeButton",
+            "endlessModeButton",
+            "bikeButton",
+        ];
+        this.lockableButtons.forEach(button => new LockableButton({
+            button: this.ui[button],
+            system: button,
+            handler: this[`onClick${Utils.formatName(button)}`].bind(this),
         }));
         this.onClick(this.ui.gamelevelModeButton, this.onClickGamelevelModeButton.bind(this));
         this.onClick(this.ui.systemButton, this.onClickSystemButton.bind(this));
@@ -48,6 +49,7 @@ export default class MainScene extends Scene {
         }
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
         EventMgr.registerEvent("UnlockSystem", this.onUnlockSystem.bind(this));
+        EventMgr.registerEvent("UpdatePoint", this.updatePoint.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
 
@@ -91,6 +93,7 @@ export default class MainScene extends Scene {
 
         this.refreshLockStatus();
         this.checkWaitShowNotice();
+        this.updatePoint();
     }
 
     onHide() {
@@ -196,8 +199,10 @@ export default class MainScene extends Scene {
         if (remainTime) {
             this.ui.giftTimeText.visible = true;
             this.ui.giftTimeText.text = Utils.getCDTimeStringWithoutHour(remainTime * 1000);
+            GameUtils.showRedPoint(this.ui.giftButton, true);
         } else {
             this.ui.giftTimeText.visible = false;
+            GameUtils.showRedPoint(this.ui.giftButton, false);
         }
     }
 
@@ -355,6 +360,17 @@ export default class MainScene extends Scene {
                 this.refreshEndlessMode();
                 break;
         }
+    }
+
+    updatePoint() {
+        [
+            ["signButton", () => OnlineMgr.hasReceivableSignReward()],
+            ["shopButton", () => DataMgr.hasShopReceivableCoin() || DataMgr.hasShopReceivableDiamond()],
+            ["homeButton", () => DataMgr.hasHomeReceivableItem()],
+            ["drawButton", () => DataMgr.isDrawAble()],
+            ["bikeButton", () => !GameUtils.isSystemLocked("upgradePanelButton") && DataMgr.hasBikeUpgradable()],
+        ].forEach(([name, check]) => GameUtils.showRedPoint(this.ui[name],
+            check() && (this.lockableButtons.indexOf(name) === -1 || !GameUtils.isSystemLocked(name))));
     }
 }
 

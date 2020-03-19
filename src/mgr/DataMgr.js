@@ -183,6 +183,11 @@ class DataMgr_ {
         }
     }
 
+    isHomeItemUnlockable(type, id) {
+        let unlockConditions = Config.home[type].find(item => item.id === id).unlockConditions;
+        return this.checkConditionsUnlockable(unlockConditions);
+    }
+
     checkCondition(id, ...args) {
         return this.conditionTable[id](...args);
     }
@@ -203,19 +208,16 @@ class DataMgr_ {
                 }
             }
         }
-        Config.home.types.forEach(type => {
-            Config.home[type].forEach(item => {
+        if (Config.home.types.some(type =>
+            Config.home[type].some(item => {
                 if (DataMgr.isHomeItemLocked(type, item.id)
                     && item.unlockConditions
                     && item.unlockConditions.find(([id]) => id === conditionID)) {
-                    if (!item.unlockConditions.some(list => !this.checkCondition(...list))) {
-                        let data = DataMgr.get(DataMgr.homeData);
-                        data.unlocked[type].push(item.id);
-                        DataMgr.set(DataMgr.homeData, data);
-                    }
+                    return this.isHomeItemUnlockable(type, item.id);
                 }
-            });
-        });
+            }))) {
+            EventMgr.dispatchEvent("UpdatePoint");
+        }
     }
 
     isEndlessSceneLocked(id) {
@@ -415,6 +417,59 @@ class DataMgr_ {
             return Utils.getLast(Config.rankMode.costInfo.coin);
         }
         return cost;
+    }
+
+    hasShopReceivableCoin() {
+        return Config.rewardGoldList.some((r, i) => DataMgr.get(DataMgr.receivedCoinList, []).indexOf(i) === -1
+            && OnlineMgr.getOnlineTime() >= r.onlineMinutes * 60);
+    }
+
+    hasShopReceivableDiamond() {
+        return Config.rewardDiamondList.some((r, i) => DataMgr.get(DataMgr.receivedDiamondList, []).indexOf(i) === -1
+            && OnlineMgr.getOnlineTime() >= r.onlineMinutes * 60);
+    }
+
+    hasHomeReceivableItem() {
+        const homeData = DataMgr.get(DataMgr.homeData).unlocked;
+        return Config.home.types.some(type =>
+            Config.home[type].some(item => homeData[type].indexOf(item.id) === -1
+                && this.isHomeItemUnlockable(type, item.id))
+        );
+    }
+
+    checkConditionsUnlockable(unlockConditions) {
+        if (!unlockConditions) {
+            return false;
+        }
+        return !unlockConditions
+            .some(condition => {
+                if (condition[0] === Config.conditionsEnum.costCoin) {
+                    return DataMgr.get(DataMgr.coin, 0) < condition[1];
+                } else if (condition[0] === Config.conditionsEnum.costDiamond) {
+                    return DataMgr.get(DataMgr.diamond, 0) < condition[1];
+                } else {
+                    return !this.checkCondition(...condition);
+                }
+            });
+    }
+
+    isDrawAble() {
+        let cur = new Date();
+        let freeTime = DataMgr.get(DataMgr.nextFreeDrawTime);
+        return cur >= freeTime;
+    }
+
+    hasBikeUpgradable() {
+        return DataMgr.get(DataMgr.ownedBikeList, []).some(id => this.isBikeUpgradable(id));
+    }
+
+    isBikeUpgradable(id) {
+        const maxTimes = Utils.getLast(Config.upgradeBike.playerLevelLimitTimes);
+        const playerLevel = DataMgr.getPlayerLevel().level;
+        const curLevelTimes = Config.upgradeBike.playerLevelLimitTimes[playerLevel - 1];
+        const upgradeTimes = DataMgr.getBikeUpgradeTimes(id);
+        return upgradeTimes < (curLevelTimes === undefined ? maxTimes : curLevelTimes)
+            && DataMgr.get(DataMgr.coin, 0) >= DataMgr.getBikeUpgradeCost(id);
     }
 }
 

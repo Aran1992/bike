@@ -5,6 +5,7 @@ import {Sprite, Texture} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
 import OnlineMgr from "../mgr/OnlineMgr";
 import DataMgr from "../mgr/DataMgr";
+import EventMgr from "../mgr/EventMgr";
 
 export default class SignScene extends Scene {
     onCreate() {
@@ -23,9 +24,7 @@ export default class SignScene extends Scene {
     }
 
     onShow() {
-        let index = DataMgr.get(DataMgr.receivedSignReward, -1) + 1;
-        let reward = Config.signRewardList[index];
-        this.ui.advertButton.visible = reward !== undefined && OnlineMgr.isSignRewardReceivable(index);
+        this.ui.advertButton.visible = OnlineMgr.hasReceivableSignReward();
         this.list.refresh();
         this.updateItem7();
     }
@@ -112,6 +111,7 @@ export default class SignScene extends Scene {
                     }
                     this.onShow();
                     TDGA.onEvent("广告签到", {day: index + 1});
+                    EventMgr.dispatchEvent("UpdatePoint");
                 }
             });
         } else {

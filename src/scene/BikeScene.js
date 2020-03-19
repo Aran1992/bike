@@ -7,6 +7,7 @@ import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import MusicMgr from "../mgr/MusicMgr";
 import LockableButton from "../ui/LockableButton";
+import EventMgr from "../mgr/EventMgr";
 
 export default class BikeScene extends Scene {
     onCreate() {
@@ -34,9 +35,11 @@ export default class BikeScene extends Scene {
             system: button.var,
             handler: this[`onClick${Utils.formatName(button.var)}`].bind(this),
         }));
+        EventMgr.registerEvent("UpdatePoint", this.updatePoint.bind(this));
     }
 
     onShow() {
+        this.updatePoint();
         this.onClickItem({index: 0});
         this.ui.upgradePanel.visible = false;
         this.ui.list.visible = true;
@@ -77,6 +80,8 @@ export default class BikeScene extends Scene {
         const upgradeLevel = DataMgr.getBikeUpgradeTimes(config.id);
         item.ui.upgradeLevelIcon.visible = upgradeLevel !== 0;
         item.ui.upgradeLevelText.text = upgradeLevel !== 0 ? `${upgradeLevel}` : "";
+        const locked = GameUtils.isSystemLocked("upgradePanelButton");
+        GameUtils.showRedPoint(item, !locked && DataMgr.isBikeUpgradable(config.id));
     }
 
     updateUpgradeItem(item, index) {
@@ -292,6 +297,15 @@ export default class BikeScene extends Scene {
                 this.refreshUpgradeInfo();
             }
         }
+    }
+
+    updatePoint() {
+        GameUtils.showRedPoint(this.ui.drawButton,
+            !GameUtils.isSystemLocked("drawButton") && DataMgr.isDrawAble());
+        const locked = GameUtils.isSystemLocked("upgradePanelButton");
+        GameUtils.showRedPoint(this.ui.upgradePanelButton,
+            !locked && DataMgr.isBikeUpgradable(Config.bikeList[this.selectedIndex].id));
+        this.list.refresh();
     }
 }
 

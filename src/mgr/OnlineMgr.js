@@ -1,5 +1,6 @@
 import DataMgr from "./DataMgr";
 import Config from "../config";
+import EventMgr from "./EventMgr";
 
 class OnlineMgr_ {
     start() {
@@ -88,6 +89,7 @@ class OnlineMgr_ {
         DataMgr.set(DataMgr.receivedDiamondList, []);
         DataMgr.set(DataMgr.onlineTime, 0);
         DataMgr.set(DataMgr.drawAdvertTimes, 0);
+        EventMgr.dispatchEvent("UpdatePoint");
     }
 
     getOnlineTime() {
@@ -126,6 +128,12 @@ class OnlineMgr_ {
         cur.setHours(0);
         let days = (cur - createTime) / 1000 / 60 / 60 / 24;
         return index <= days;
+    }
+
+    hasReceivableSignReward() {
+        let index = DataMgr.get(DataMgr.receivedSignReward, -1) + 1;
+        let reward = Config.signRewardList[index];
+        return reward !== undefined && OnlineMgr.isSignRewardReceivable(index);
     }
 
     hasSignReward() {

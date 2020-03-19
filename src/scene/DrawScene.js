@@ -115,6 +115,7 @@ export default class DrawScene extends Scene {
         } else {
             let nextTime = (new Date()).getTime() + Config.freeDrawInterval * 1000;
             DataMgr.set(DataMgr.nextFreeDrawTime, nextTime);
+            EventMgr.dispatchEvent("UpdatePoint");
         }
 
         App.hideMask();

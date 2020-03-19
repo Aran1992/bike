@@ -2,7 +2,7 @@ import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
 import DataMgr from "./DataMgr";
 import Utils from "./Utils";
-import {filters, resources} from "../libs/pixi-wrapper";
+import {filters, Graphics, resources} from "../libs/pixi-wrapper";
 import RunOption from "../../run-option";
 
 let grayFilter = new filters.ColorMatrixFilter();
@@ -156,5 +156,20 @@ export default class GameUtils {
         }
         let [id, ...values] = Config.lockSystems[system].condition;
         return !DataMgr.checkCondition(id, ...values);
+    }
+
+    static showRedPoint(node, visible) {
+        const name = "redPoint";
+        let redPoint = GameUtils.findChildByName(node, name);
+        if (redPoint === undefined) {
+            redPoint = new Graphics();
+            redPoint.beginFill(0xff0000);
+            redPoint.drawCircle(0, 0, 10);
+            redPoint.endFill();
+            redPoint.uiname = name;
+            redPoint.x = node.mywidth * 0.8;
+            node.addChild(redPoint);
+        }
+        redPoint.visible = visible;
     }
 }

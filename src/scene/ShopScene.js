@@ -1,6 +1,6 @@
 import List from "../ui/List";
 import Scene from "./Scene";
-import { resources, Texture } from "../libs/pixi-wrapper";
+import {resources, Texture} from "../libs/pixi-wrapper";
 import Config from "../config";
 import DataMgr from "../mgr/DataMgr";
 import Radio from "../ui/Radio";
@@ -35,9 +35,11 @@ export default class ShopScene extends Scene {
             buttonDistance: 208
         });
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
+        EventMgr.registerEvent("UpdatePoint", this.updatePoint.bind(this));
     }
 
     onShow(tab) {
+        this.updatePoint();
         this.onRefreshRankData();
         this.onClickRadio(this.radio.selectedIndex);
         if (tab && this.infoList.indexOf(tab) !== -1) {
@@ -98,10 +100,10 @@ export default class ShopScene extends Scene {
             item.ui.advertButton.visible = true;
         } else {
             item.ui.onlineText.visible = true;
-            item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
+            item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
             item.timer = setInterval(() => {
                 let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
-                item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
+                item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
                 if (countdown <= 0) {
                     item.ui.onlineText.visible = false;
                     item.ui.advertButton.visible = true;
@@ -118,12 +120,13 @@ export default class ShopScene extends Scene {
     onClickCoinAdvertButton(button) {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                App.showScene("PrizeScene", [{ rewardCoin: button.rewardCoin }]);
+                App.showScene("PrizeScene", [{rewardCoin: button.rewardCoin}]);
                 let list = DataMgr.get(DataMgr.receivedCoinList, []);
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedCoinList, list);
                 this.goldList.refresh();
                 TDGA.onEvent("广告金币");
+                EventMgr.dispatchEvent("UpdatePoint");
             }
         });
     }
@@ -157,10 +160,10 @@ export default class ShopScene extends Scene {
             item.ui.advertButton.visible = true;
         } else {
             item.ui.onlineText.visible = true;
-            item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
+            item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
             item.timer = setInterval(() => {
                 let countdown = (Config.rewardGoldList[index].onlineMinutes * 60 - OnlineMgr.getOnlineTime()) * 1000;
-                item.ui.onlineText.text = App.getText("OnlineSay", { time: Utils.getCDTimeStringWithoutHour(countdown) });
+                item.ui.onlineText.text = App.getText("OnlineSay", {time: Utils.getCDTimeStringWithoutHour(countdown)});
                 if (countdown <= 0) {
                     item.ui.onlineText.visible = false;
                     item.ui.advertButton.visible = true;
@@ -177,12 +180,13 @@ export default class ShopScene extends Scene {
     onClickDiamondAdvertButton(button) {
         window.PlatformHelper.showAd(success => {
             if (success) {
-                App.showScene("PrizeScene", [{ rewardDiamond: button.rewardDiamond }]);
+                App.showScene("PrizeScene", [{rewardDiamond: button.rewardDiamond}]);
                 let list = DataMgr.get(DataMgr.receivedDiamondList, []);
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedDiamondList, list);
                 this.diamondList.refresh();
                 TDGA.onEvent("广告钻石");
+                EventMgr.dispatchEvent("UpdatePoint");
             }
         });
     }
@@ -230,7 +234,7 @@ export default class ShopScene extends Scene {
             item.unlockButton.visible = true;
             item.unlockCostText.text = config.unlockCostDiamond;
             item.unlockCondition.visible = true;
-            item.unlockConditionText.text = App.getText("TotalDistanceReach", { distance: config.unlockDistance });
+            item.unlockConditionText.text = App.getText("TotalDistanceReach", {distance: config.unlockDistance});
             item.interactive = false;
             item.unlockButton.id = config.id;
         } else {
@@ -272,6 +276,18 @@ export default class ShopScene extends Scene {
         this.ui.totalScoreText.text = DataMgr.get(DataMgr.rankTotalScore, 0);
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
+    }
+
+    updatePoint() {
+        this.radio.buttonList.forEach((button, index) => {
+            let visible;
+            if (index === 1) {
+                visible = DataMgr.hasShopReceivableCoin();
+            } else {
+                visible = DataMgr.hasShopReceivableDiamond();
+            }
+            GameUtils.showRedPoint(button, visible);
+        });
     }
 }
 

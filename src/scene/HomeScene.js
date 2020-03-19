@@ -265,6 +265,7 @@ export default class HomeScene extends Scene {
                 this.ui.commonItemBtn.visible = !isLocked && config.id !== this.selectedBgID;
                 this.ui.selectedItemBtn.visible = !isLocked && config.id === this.selectedBgID;
                 this.ui.lockedItemBtn.visible = isLocked;
+                GameUtils.showRedPoint(this.ui.lockedItemBtn, isLocked && DataMgr.isHomeItemUnlockable("backgrounds", config.id));
                 break;
             }
             case FLOORS: {
@@ -284,6 +285,7 @@ export default class HomeScene extends Scene {
                 this.ui.commonItemBtn.visible = !isLocked && config.id !== this.selectedFloorID;
                 this.ui.selectedItemBtn.visible = !isLocked && config.id === this.selectedFloorID;
                 this.ui.lockedItemBtn.visible = isLocked;
+                GameUtils.showRedPoint(this.ui.lockedItemBtn, isLocked && DataMgr.isHomeItemUnlockable("floors", config.id));
                 break;
             }
             case SPOILS:
@@ -419,6 +421,7 @@ export default class HomeScene extends Scene {
         let locked = DataMgr.isHomeItemLocked(type, config.id);
         GameUtils.greySprite(sprite, locked);
         item.ui.lockedImage.visible = locked;
+        GameUtils.showRedPoint(item.ui.lockedImage, locked && DataMgr.isHomeItemUnlockable(type, config.id));
     }
 
     onTouchHomeStart(event) {
@@ -685,6 +688,7 @@ ${this.getUnlockCosts(type, id).join("\n")}`,
                         this.refreshPlayerBasicInfo();
                         this.refreshCurItemInfo();
                         config.unlockInfo && App.showScene("NewContentScene", config.unlockInfo);
+                        EventMgr.dispatchEvent("UpdatePoint");
                     }
                 },
                 () => {
