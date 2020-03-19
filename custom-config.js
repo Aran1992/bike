@@ -1126,6 +1126,14 @@ Config.roadSections = {
         "Random/Random021-02000101",
         "Random/Random021-02010101",
         "Random/Random021-02020101",
+
+        // 关卡元素：移动平台
+        "Random/Random021-10000101",
+        "Random/Random021-10010101",
+        "Random/Random021-10020101",
+        "Random/Random021-10030101",
+        "Random/Random021-10040101",
+
     ],
 
     // 随机关卡（Random）(第2阶段)（紧张关卡）
@@ -1133,38 +1141,50 @@ Config.roadSections = {
         // 关卡（每个路段为3000像素）
 
         // 关卡元素：蜘蛛网
-       "Random/Random021-00000201",
-       "Random/Random021-00010201",
-       "Random/Random021-00020201",
+        "Random/Random021-00000201",
+        "Random/Random021-00010201",
+        "Random/Random021-00020201",
 
-       "Random/Random021-00100201",
-       "Random/Random021-00110201",
-       "Random/Random021-00120201",
+        "Random/Random021-00100201",
+        "Random/Random021-00110201",
+        "Random/Random021-00120201",
 
-       "Random/Random021-01000201",
-       "Random/Random021-01010201",
-       "Random/Random021-01020201",
+        "Random/Random021-01000201",
+        "Random/Random021-01010201",
+        "Random/Random021-01020201",
 
-       "Random/Random021-02000201",
-       "Random/Random021-02010201",
-       "Random/Random021-02020201",
+        "Random/Random021-02000201",
+        "Random/Random021-02010201",
+        "Random/Random021-02020201",
+
+        "Random/Random021-10000201",
+        "Random/Random021-10010201",
+        "Random/Random021-10020201",
+        "Random/Random021-10030201",
+        "Random/Random021-10040201",
 
         // 关卡元素：地刺-固定
-       "Random/Random021-00000301",
-       "Random/Random021-00010301",
-       "Random/Random021-00020301",
+        "Random/Random021-00000301",
+        "Random/Random021-00010301",
+        "Random/Random021-00020301",
 
-       "Random/Random021-00100301",
-       "Random/Random021-00110301",
-       "Random/Random021-00120301",
+        "Random/Random021-00100301",
+        "Random/Random021-00110301",
+        "Random/Random021-00120301",
 
-       "Random/Random021-01000301",
-       "Random/Random021-01010301",
-       "Random/Random021-01020301",
+        "Random/Random021-01000301",
+        "Random/Random021-01010301",
+        "Random/Random021-01020301",
 
-       "Random/Random021-02000301",
-       "Random/Random021-02010301",
-       "Random/Random021-02020301",
+        "Random/Random021-02000301",
+        "Random/Random021-02010301",
+        "Random/Random021-02020301",
+
+        "Random/Random021-10000301",
+        "Random/Random021-10010301",
+        "Random/Random021-10020301",
+        "Random/Random021-10030301",
+        "Random/Random021-10040301",
 
         // 关卡元素：地刺-升降
 
@@ -1185,6 +1205,12 @@ Config.roadSections = {
         "Random/Random021-02010501",
         "Random/Random021-02020501",
 
+        "Random/Random021-10000501",
+        "Random/Random021-10010501",
+        "Random/Random021-10020501",
+        "Random/Random021-10030501",
+        "Random/Random021-10040501",
+
         // 关卡元素：小鸟-移动
         "Random/Random021-00000601",
         "Random/Random021-00010601",
@@ -1201,6 +1227,12 @@ Config.roadSections = {
         "Random/Random021-02000601",
         "Random/Random021-02010601",
         "Random/Random021-02020601",
+
+        "Random/Random021-10000601",
+        "Random/Random021-10010601",
+        "Random/Random021-10020601",
+        "Random/Random021-10030601",
+        "Random/Random021-10040601",
 
         // 关卡元素：火柱
 
@@ -1239,6 +1271,17 @@ Config.roadSections = {
         // 关卡元素：弹跳平台
 
         // 关卡元素：移动平台
+
+        // 关卡元素：小鸟-固定
+//        "Random/Random021-10000501",
+//        "Random/Random021-10010501",
+//        "Random/Random021-10020501",
+//        "Random/Random021-10030501",
+//        "Random/Random021-10040501",
+
+
+
+
 
         // 关卡元素：多层地形
 
