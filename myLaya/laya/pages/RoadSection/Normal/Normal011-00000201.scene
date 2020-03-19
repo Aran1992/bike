@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":500,
+    "selecteID":532,
     "searchKey":"Scene",
     "props":{"width":3000,"sceneColor":"#000000","height":1},
     "nodeParent":-1,
-    "maxID":525,
+    "maxID":533,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -32,7 +32,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-100,"x":1095,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-100,"x":1090,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
@@ -46,7 +46,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-100,"x":1145,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-100,"x":1140,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
@@ -60,7 +60,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-150,"x":1095,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-150,"x":1090,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
@@ -74,7 +74,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-150,"x":1145,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-150,"x":1140,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
@@ -88,7 +88,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-100,"x":1045,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-100,"x":1040,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
@@ -102,41 +102,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-150,"x":1045,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-150,"x":1040,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":380,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":-400,"x":1700,"skin":"images/FallingBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":403,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":-400,"x":2200,"skin":"images/FallingBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":404,
             "child":[
                 ]
         },
@@ -227,20 +199,6 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1",
-            "props":{"y":-400,"x":2700,"skin":"images/FallingBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"UpDownPlatform//上下移动平台//ID:1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":440,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
             "props":{"y":-100,"x":1385,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
@@ -256,76 +214,6 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1570,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":443,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1600,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":444,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1770,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":445,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1800,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":446,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":0,"x":2715,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":450,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
             "props":{"y":0,"x":2745,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
             "label":"GroundStab//地刺//Static",
@@ -333,20 +221,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":451,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":0,"x":2775,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":452,
             "child":[
                 ]
         },
@@ -522,7 +396,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-130,"x":1849,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-130,"x":1858,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//经验//ID:2000",
             "isDirectory":false,
@@ -536,7 +410,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-130,"x":1919,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-130,"x":1928,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//经验//ID:2000",
             "isDirectory":false,
@@ -550,7 +424,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-130,"x":2087,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-130,"x":2079,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//经验//ID:2000",
             "isDirectory":false,
@@ -564,7 +438,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-130,"x":2157,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-130,"x":2149,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//经验//ID:2000",
             "isDirectory":false,
@@ -662,27 +536,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-220,"x":1972,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-220,"x":2005,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//金币//ID:0",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":478,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
-            "props":{"y":-220,"x":2027,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//金币//ID:0",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":479,
             "child":[
                 ]
         },
@@ -829,160 +689,6 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//ID:26",
-            "props":{"y":-400,"x":1950,"skin":"images/cobweb.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:26","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//ID:26",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":499,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//ID:26",
-            "props":{"y":-400,"x":2449,"skin":"images/cobweb.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:26","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//ID:26",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":500,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":1598,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":501,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":1698,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":502,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":1798,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":503,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":2098,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":504,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":2198,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":505,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":2298,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":506,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":2598,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":507,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":2698,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":508,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-500,"x":2798,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":509,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//金币//ID:0",
             "props":{"y":-101,"x":2720,"skin":"images/medal.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//金币//ID:0","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
@@ -1054,13 +760,13 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1990,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
+            "props":{"y":-100,"x":1585,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
             "label":"GroundStab//地刺//Static",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":517,
+            "compId":525,
             "child":[
                 ]
         },
@@ -1068,13 +774,27 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":2020,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
+            "props":{"y":-100,"x":1785,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
             "label":"GroundStab//地刺//Static",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":518,
+            "compId":526,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,GroundStab//地刺//Static",
+            "props":{"y":-100,"x":2005,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"GroundStab//地刺//Static",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":527,
             "child":[
                 ]
         },
@@ -1088,7 +808,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":520,
+            "compId":528,
             "child":[
                 ]
         },
@@ -1102,7 +822,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":521,
+            "compId":529,
             "child":[
                 ]
         },
@@ -1116,35 +836,7 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":522,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,BlackBird//黑鸟",
-            "props":{"y":-70,"x":1345,"texture":"images/Bird01.png","scaleY":0.8,"scaleX":0.8,"name":"BlackBird//黑鸟"},
-            "nodeParent":1,
-            "label":"BlackBird//黑鸟",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":523,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,BlackBird//黑鸟",
-            "props":{"y":-70,"x":2600,"texture":"images/Bird01.png","scaleY":0.8,"scaleX":0.8,"name":"BlackBird//黑鸟"},
-            "nodeParent":1,
-            "label":"BlackBird//黑鸟",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":524,
+            "compId":530,
             "child":[
                 ]
         }],
