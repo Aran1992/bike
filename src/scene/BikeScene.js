@@ -158,7 +158,7 @@ export default class BikeScene extends Scene {
                 GameUtils.greySprite(child, lock);
             }
         }
-        GameUtils.findChildByName(this.button, "lockedImage").visible = lock;
+        GameUtils.findChildByName(this.ui.upgradePanelButton, "lockedImage").visible = lock;
     }
 
     onClickSelectedBikeButton() {
