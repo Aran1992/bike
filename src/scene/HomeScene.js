@@ -423,7 +423,7 @@ export default class HomeScene extends Scene {
         let locked = DataMgr.isHomeItemLocked(type, config.id);
         GameUtils.greySprite(sprite, locked);
         item.ui.lockedImage.visible = locked;
-        GameUtils.showRedPoint(item.ui.lockedImage, locked && DataMgr.isHomeItemUnlockable(type, config.id));
+        GameUtils.showRedPoint(item, locked && DataMgr.isHomeItemUnlockable(type, config.id));
     }
 
     onTouchHomeStart(event) {
