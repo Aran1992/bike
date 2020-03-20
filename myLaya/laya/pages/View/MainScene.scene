@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":153,
-    "selecteID":156,
+    "selectedBox":1,
+    "selecteID":34,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":218,
+    "maxID":230,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -469,6 +469,21 @@
                             "child":[
                                 ],
                             "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,redPoint",
+                            "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "nodeParent":22,
+                            "label":"redPoint",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":221,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
                         }]
                 },
                 {
@@ -565,6 +580,21 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":73,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,redPoint",
+                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "nodeParent":24,
+                            "label":"redPoint",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":225,
                             "child":[
                                 ],
                             "$HIDDEN":false
@@ -685,6 +715,21 @@
                             "child":[
                                 ],
                             "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,redPoint",
+                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "nodeParent":26,
+                            "label":"redPoint",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":226,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
                         }]
                 },
                 {
@@ -739,6 +784,21 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":217,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,redPoint",
+                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "nodeParent":27,
+                            "label":"redPoint",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":227,
                             "child":[
                                 ],
                             "$HIDDEN":false
@@ -914,13 +974,14 @@
             "props":{"var":"signButton","top":160,"skin":"images/icon-sign.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":120},
             "nodeParent":1,
             "label":"signButton",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":77,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage",
                     "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -935,6 +996,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"skin":"images/english/sign.png","centerX":0,"bottom":-5},
@@ -946,6 +1008,21 @@
                     "compId":96,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,redPoint",
+                    "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                    "nodeParent":77,
+                    "label":"redPoint",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":228,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
                 }]
         },
         {
@@ -955,13 +1032,14 @@
             "props":{"x":0,"var":"giftButton","top":160,"skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
             "nodeParent":1,
             "label":"giftButton",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":81,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage,giftLockedImage",
                     "props":{"y":0,"x":0,"visible":false,"var":"giftLockedImage","top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -976,6 +1054,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":10,"skin":"images/english/Gift.png","centerX":0,"bottom":-5},
@@ -989,6 +1068,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,giftTimeText",
                     "props":{"var":"giftTimeText","text":"00:00","fontSize":20,"color":"#ffffff","centerX":0,"bottom":-30},
@@ -998,6 +1078,21 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":91,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,redPoint",
+                    "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                    "nodeParent":81,
+                    "label":"redPoint",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":229,
                     "child":[
                         ],
                     "$HIDDEN":false

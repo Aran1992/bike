@@ -1280,6 +1280,9 @@ Config.roadSections = {
 //        "Random/Random021-10040501",
 
 
+
+
+
         // 关卡元素：多层地形
 
     ],
@@ -2667,6 +2670,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 1.8,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 1.8,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2674,6 +2682,11 @@ Config.endlessMode.default = {
             velocity: 1.8,
         },
         //路段2
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 1.8,
+        },
         {
             list: ["201-11",],
             length: 3000,
@@ -2691,6 +2704,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 1.8,
         },
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2698,6 +2716,11 @@ Config.endlessMode.default = {
             velocity: 1.8,
         },
         //路段4
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 1.8,
+        },
         {
             list: ["201-11",],
             length: 3000,
@@ -2715,6 +2738,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 1.8,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 1.8,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2722,6 +2750,11 @@ Config.endlessMode.default = {
             velocity: 1.8,
         },
         //路段6（休息关卡）
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 1.8,
+        },
         {
             list: ["201-1",],
             length: 3000,
@@ -2739,6 +2772,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 1.8,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 1.8,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2751,14 +2789,17 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 1.8,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 1.8,
+        },
         // 奖励阶段
         {
             list: ["0-11",],
             length: 6000,
             velocity: 1.8,
         },
-
-
     ],
     // 无限循环旅程
     infiniteRoadSectionList: [
@@ -2774,6 +2815,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 2,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 2,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2781,6 +2827,11 @@ Config.endlessMode.default = {
             velocity: 2,
         },
         //路段2
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 2,
+        },
         {
             list: ["201-11",],
             length: 3000,
@@ -2798,6 +2849,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 2,
         },
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 2,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2805,6 +2861,11 @@ Config.endlessMode.default = {
             velocity: 2,
         },
         //路段4
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 2,
+        },
         {
             list: ["201-11",],
             length: 3000,
@@ -2822,6 +2883,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 2,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 2,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2829,6 +2895,11 @@ Config.endlessMode.default = {
             velocity: 2,
         },
         //路段6（休息关卡）
+        {
+            list: ["201-1",],
+            length: 3000,
+            velocity: 2,
+        },
         {
             list: ["201-1",],
             length: 3000,
@@ -2846,6 +2917,11 @@ Config.endlessMode.default = {
             length: 3000,
             velocity: 2,
         },
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 2,
+        },
         // 道具
         {
             list: ["9999-1",],
@@ -2853,6 +2929,11 @@ Config.endlessMode.default = {
             velocity: 2,
         },
         //路段8
+        {
+            list: ["201-11",],
+            length: 3000,
+            velocity: 2,
+        },
         {
             list: ["201-11",],
             length: 3000,
@@ -8212,7 +8293,7 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe2",
         // 解锁图片
-        image: "myLaya/laya/assets/images/english/Match.png",
+        image: "myLaya/laya/assets/images/button-13.png",
         // 解锁图片缩放
         imageScale: 1.5,
     },
@@ -8269,7 +8350,7 @@ Config.lockSystems = {
         // 解锁描述
         dsc: "SystemUnlockDescribe5",
         // 解锁图片
-        image: "myLaya/laya/assets/images/english/Endless.png",
+        image: "myLaya/laya/assets/images/button-11.png",
         // 解锁图片缩放
         imageScale: 1.5,
     },
@@ -9369,8 +9450,8 @@ Config.defaultRedPoint = {
     // 缩放倍数
     scale: 1,
     // 在对应按钮中的位置 左上角为原点 百分币
-    positionX: 0.8,
-    positionY: 0
+    positionX: 1,
+    positionY: 0.2,
 };
 
 export default Config;
