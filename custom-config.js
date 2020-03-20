@@ -1280,9 +1280,6 @@ Config.roadSections = {
 //        "Random/Random021-10040501",
 
 
-
-
-
         // 关卡元素：多层地形
 
     ],
@@ -9363,6 +9360,17 @@ Config.eatItemAnimation = {
     duration: 200,
     // 弹起高度
     yOffset: 100,
+};
+
+// 默认红点
+Config.defaultRedPoint = {
+    // 图片路径 为空的话 就代码创建一个红点
+    imagePath: "",
+    // 缩放倍数
+    scale: 1,
+    // 在对应按钮中的位置 左上角为原点 百分币
+    positionX: 0.8,
+    positionY: 0
 };
 
 export default Config;

@@ -2,7 +2,7 @@ import Config from "../config";
 import {Vec2} from "../libs/planck-wrapper";
 import DataMgr from "./DataMgr";
 import Utils from "./Utils";
-import {filters, Graphics, resources} from "../libs/pixi-wrapper";
+import {filters, Graphics, resources, Sprite} from "../libs/pixi-wrapper";
 import RunOption from "../../run-option";
 
 let grayFilter = new filters.ColorMatrixFilter();
@@ -162,12 +162,19 @@ export default class GameUtils {
         const name = "redPoint";
         let redPoint = GameUtils.findChildByName(node, name);
         if (visible && redPoint === undefined) {
-            redPoint = new Graphics();
-            redPoint.beginFill(0xff0000);
-            redPoint.drawCircle(0, 0, 10);
-            redPoint.endFill();
+            if (Config.defaultRedPoint.imagePath) {
+                redPoint = Sprite.from(Config.defaultRedPoint.imagePath);
+                redPoint.anchor.set(0.5, 0.5);
+            } else {
+                redPoint = new Graphics();
+                redPoint.beginFill(0xff0000);
+                redPoint.drawCircle(0, 0, 10);
+                redPoint.endFill();
+            }
+            redPoint.x = node.mywidth * Config.defaultRedPoint.positionX;
+            redPoint.y = node.myheight * Config.defaultRedPoint.positionY;
+            redPoint.scale.set(Config.defaultRedPoint.scale, Config.defaultRedPoint.scale);
             redPoint.uiname = name;
-            redPoint.x = node.mywidth * 0.8;
             node.addChild(redPoint);
         }
         if (redPoint) {
