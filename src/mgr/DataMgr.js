@@ -4,6 +4,7 @@ import Utils from "./Utils";
 import OnlineMgr from "./OnlineMgr";
 import EventMgr from "./EventMgr";
 import TimeMgr from "./TimeMgr";
+import GameUtils from "./GameUtils";
 
 class DataMgr_ {
     constructor() {
@@ -437,6 +438,12 @@ class DataMgr_ {
         );
     }
 
+    hasHomeSubTypeReceivableItem(type) {
+        const homeData = DataMgr.get(DataMgr.homeData).unlocked[type];
+        return Config.home[type].some(item => homeData.indexOf(item.id) === -1
+            && this.isHomeItemUnlockable(type, item.id));
+    }
+
     checkConditionsUnlockable(unlockConditions) {
         if (!unlockConditions) {
             return false;
@@ -454,16 +461,26 @@ class DataMgr_ {
     }
 
     isDrawAble() {
-        let cur = new Date();
-        let freeTime = DataMgr.get(DataMgr.nextFreeDrawTime);
-        return cur >= freeTime;
+        return new Date().getTime() >= DataMgr.get(DataMgr.nextFreeDrawTime)
+            || DataMgr.get(DataMgr.drawAdvertTimes, 0) < Config.advertDrawBikeTime;
     }
 
     hasBikeUpgradable() {
         return DataMgr.get(DataMgr.ownedBikeList, []).some(id => this.isBikeUpgradable(id));
     }
 
+    hasOwnedBike(id) {
+        return DataMgr.get(DataMgr.unlockAllBike, false)
+            || DataMgr.get(DataMgr.ownedBikeList, []).indexOf(id) !== -1;
+    }
+
     isBikeUpgradable(id) {
+        if (GameUtils.isSystemLocked("upgradePanelButton")) {
+            return false;
+        }
+        if (!DataMgr.hasOwnedBike(id)) {
+            return false;
+        }
         const maxTimes = Utils.getLast(Config.upgradeBike.playerLevelLimitTimes);
         const playerLevel = DataMgr.getPlayerLevel().level;
         const curLevelTimes = Config.upgradeBike.playerLevelLimitTimes[playerLevel - 1];

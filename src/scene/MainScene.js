@@ -199,10 +199,10 @@ export default class MainScene extends Scene {
         if (remainTime) {
             this.ui.giftTimeText.visible = true;
             this.ui.giftTimeText.text = Utils.getCDTimeStringWithoutHour(remainTime * 1000);
-            GameUtils.showRedPoint(this.ui.giftButton, true);
+            GameUtils.showRedPoint(this.ui.giftButton, false);
         } else {
             this.ui.giftTimeText.visible = false;
-            GameUtils.showRedPoint(this.ui.giftButton, false);
+            GameUtils.showRedPoint(this.ui.giftButton, true);
         }
     }
 

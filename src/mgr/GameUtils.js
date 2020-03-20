@@ -161,7 +161,7 @@ export default class GameUtils {
     static showRedPoint(node, visible) {
         const name = "redPoint";
         let redPoint = GameUtils.findChildByName(node, name);
-        if (redPoint === undefined) {
+        if (visible && redPoint === undefined) {
             redPoint = new Graphics();
             redPoint.beginFill(0xff0000);
             redPoint.drawCircle(0, 0, 10);
@@ -170,6 +170,8 @@ export default class GameUtils {
             redPoint.x = node.mywidth * 0.8;
             node.addChild(redPoint);
         }
-        redPoint.visible = visible;
+        if (redPoint) {
+            redPoint.visible = visible;
+        }
     }
 }

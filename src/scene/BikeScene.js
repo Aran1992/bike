@@ -61,7 +61,7 @@ export default class BikeScene extends Scene {
     updateItem(item, index) {
         item.index = index;
         let config = Config.bikeList[index];
-        let lock = !this.hasOwnedBike(config.id);
+        let lock = !DataMgr.hasOwnedBike(config.id);
         item.bikeSprite.setBikeID(config.id);
         item.bikeSprite.setGray(lock);
         if (this.selectedIndex === index) {
@@ -80,8 +80,7 @@ export default class BikeScene extends Scene {
         const upgradeLevel = DataMgr.getBikeUpgradeTimes(config.id);
         item.ui.upgradeLevelIcon.visible = upgradeLevel !== 0;
         item.ui.upgradeLevelText.text = upgradeLevel !== 0 ? `${upgradeLevel}` : "";
-        const locked = GameUtils.isSystemLocked("upgradePanelButton");
-        GameUtils.showRedPoint(item, !locked && DataMgr.isBikeUpgradable(config.id));
+        GameUtils.showRedPoint(item, DataMgr.isBikeUpgradable(config.id));
     }
 
     updateUpgradeItem(item, index) {
@@ -117,7 +116,7 @@ export default class BikeScene extends Scene {
         let isHighestLevel = (config.coinPercent || Config.bike.coinPercent)[level + 1] === undefined;
         let dsc = GameUtils.getBikeDsc(config);
         let coin, distance, score, exp;
-        if (this.hasOwnedBike(config.id)) {
+        if (DataMgr.hasOwnedBike(config.id)) {
             let get = (config, key, level) => {
                 let list = config[key] || Config.bike[key];
                 let curValue = list[level];
@@ -145,14 +144,21 @@ export default class BikeScene extends Scene {
         dsc += "\n" + App.getText("BonusDsc", {coin, distance, score, exp});
         this.ui.bikeDscText.text = dsc;
 
-        let hasOwned = this.hasOwnedBike(config.id);
+        let hasOwned = DataMgr.hasOwnedBike(config.id);
         this.ui.selectBikeButton.visible = hasOwned && DataMgr.get(DataMgr.selectedBike, 0) !== config.id;
         this.ui.unlockBikeImage.visible = !hasOwned;
-        GameUtils.greySprite(this.ui.upgradePanelButton, GameUtils.isSystemLocked("upgradePanelButton") || !hasOwned);
+        this.refreshUpgradePanelButtonLockStatus(hasOwned);
     }
 
-    hasOwnedBike(id) {
-        return DataMgr.get(DataMgr.unlockAllBike, false) || DataMgr.get(DataMgr.ownedBikeList, []).indexOf(id) !== -1;
+    refreshUpgradePanelButtonLockStatus(hasOwned) {
+        let lock = GameUtils.isSystemLocked("upgradePanelButton") || !hasOwned;
+        for (let i = 0; i < this.ui.upgradePanelButton.children.length; i++) {
+            const child = this.ui.upgradePanelButton.children[i];
+            if (child.uiname !== "lockedImage") {
+                GameUtils.greySprite(child, lock);
+            }
+        }
+        GameUtils.findChildByName(this.button, "lockedImage").visible = lock;
     }
 
     onClickSelectedBikeButton() {
@@ -162,7 +168,7 @@ export default class BikeScene extends Scene {
     }
 
     onClickUpgradePanelButton() {
-        if (!this.hasOwnedBike(Config.bikeList[this.selectedIndex].id)) {
+        if (!DataMgr.hasOwnedBike(Config.bikeList[this.selectedIndex].id)) {
             return App.showNotice("该自行车未解锁");
         }
         this.ui.upgradePanel.visible = !this.ui.upgradePanel.visible;
@@ -226,6 +232,7 @@ export default class BikeScene extends Scene {
         this.frame = -1;
         this.upgradeSound = MusicMgr.playLoopSound(Config.bikeScene.res.upgradeSound);
         this.onFrame();
+        EventMgr.dispatchEvent("UpdatePoint");
     }
 
     onUpgradeEnded() {

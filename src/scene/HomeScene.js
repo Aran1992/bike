@@ -59,6 +59,7 @@ export default class HomeScene extends Scene {
         this.onClick(this.ui.homeHelpButton, HomeScene.onClickHomeHelpButton);
         EventMgr.registerEvent("RefreshRankData", this.onRefreshRankData.bind(this));
         EventMgr.registerEvent("GameStop", this.onGameStop.bind(this));
+        EventMgr.registerEvent("UpdatePoint", this.updatePoint.bind(this));
 
         this.ui.showUIBtn.visible = false;
         this.ui.endRemoveItemModeBtn.visible = false;
@@ -161,6 +162,7 @@ export default class HomeScene extends Scene {
         this.ui.uiContainer.visible = isSelf;
         this.ui.showUIBtn.visible = false;
         this.ui.returnRankBtn.visible = !isSelf;
+        this.updatePoint();
     }
 
     refreshPlayerBasicInfo() {
@@ -745,6 +747,12 @@ ${this.getUnlockRewards(type, id).join("\n")}`,
             this.touchingSprite.destroy();
             this.touchingSprite = undefined;
         }
+    }
+
+    updatePoint() {
+        this.radio.buttonList.forEach((button, index) => {
+            GameUtils.showRedPoint(button, DataMgr.hasHomeSubTypeReceivableItem(Config.home.types[index]));
+        });
     }
 }
 
