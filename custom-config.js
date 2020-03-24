@@ -1,17 +1,31 @@
 import Config from "./src/config/base-config";
 
 // 游戏的设计宽度
-Config.designWidth = 720;
+Config.designWidth = 7200;
 // 游戏的设计高度
 Config.designHeight = 1280;
 // 自行车的左边距
 Config.bikeLeftMargin = 150;
-// 自行车顶边距的最小值
+// 自行车顶边距的最小值（初始路线高度）
 Config.bikeCameraMinY = 540;
-// 自行车顶边距的最大值
+// 自行车顶边距的最大值（跳起来后恢复的路线高度）
 Config.bikeCameraMaxY = 740;
 // 底下的黑色蒙版的总高度
 Config.maskHeight = 420;
+
+// 竖版游戏的参考值
+// // 游戏的设计宽度
+// Config.designWidth = 720;
+// // 游戏的设计高度
+// Config.designHeight = 1280;
+// // 自行车的左边距
+// Config.bikeLeftMargin = 150;
+// // 自行车顶边距的最小值（初始路线高度）
+// Config.bikeCameraMinY = 540;
+// // 自行车顶边距的最大值（跳起来后恢复的路线高度）
+// Config.bikeCameraMaxY = 740;
+// // 底下的黑色蒙版的总高度
+// Config.maskHeight = 420;
 
 // 横版游戏的参考值
 // // 游戏的设计宽度
@@ -20,9 +34,9 @@ Config.maskHeight = 420;
 // Config.designHeight = 720;
 // // 自行车的左边距
 // Config.bikeLeftMargin = 150;
-// // 自行车顶边距的最小值
+// // 自行车顶边距的最小值（初始路线高度）
 // Config.bikeCameraMinY = 540;
-// // 自行车顶边距的最大值
+// // 自行车顶边距的最大值（跳起来后恢复的路线高度）
 // Config.bikeCameraMaxY = 600;
 // // 底下的黑色蒙版的总高度
 // Config.maskHeight = 0;
