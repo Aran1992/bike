@@ -1,5 +1,46 @@
 import Config from "./src/config/base-config";
 
+// 游戏的设计宽度
+Config.designWidth = 1280;
+// 游戏的设计高度
+Config.designHeight = 720;
+// 自行车的左边距
+Config.bikeLeftMargin = 150;
+// 自行车顶边距的最小值（初始路线高度）
+Config.bikeCameraMinY = 540;
+// 自行车顶边距的最大值（跳起来后恢复的路线高度）
+Config.bikeCameraMaxY = 600;
+// 底下的黑色蒙版的总高度
+Config.maskHeight = 0;
+
+// 竖版游戏的参考值
+// // 游戏的设计宽度
+// Config.designWidth = 720;
+// // 游戏的设计高度
+// Config.designHeight = 1280;
+// // 自行车的左边距
+// Config.bikeLeftMargin = 150;
+// // 自行车顶边距的最小值（初始路线高度）
+// Config.bikeCameraMinY = 540;
+// // 自行车顶边距的最大值（跳起来后恢复的路线高度）
+// Config.bikeCameraMaxY = 740;
+// // 底下的黑色蒙版的总高度
+// Config.maskHeight = 420;
+
+// 横版游戏的参考值
+// // 游戏的设计宽度
+// Config.designWidth = 1280;
+// // 游戏的设计高度
+// Config.designHeight = 720;
+// // 自行车的左边距
+// Config.bikeLeftMargin = 150;
+// // 自行车顶边距的最小值（初始路线高度）
+// Config.bikeCameraMinY = 540;
+// // 自行车顶边距的最大值（跳起来后恢复的路线高度）
+// Config.bikeCameraMaxY = 600;
+// // 底下的黑色蒙版的总高度
+// Config.maskHeight = 0;
+
 // 自行车速度（基础：20）
 Config.bikeVelocity = 20;
 
@@ -2951,9 +2992,6 @@ Config.endlessMode.rebornTimes = 3;
 
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
 Config.bgY = [0, 0, 256];
-
-// 底下的黑色蒙版的总高度
-Config.maskHeight = 420;
 
 // 底下黑色蒙版的渐变系数
 // offset指定一个点 opacity指定这个点的透明度 相邻的两个点之间会进行渐变
