@@ -3032,38 +3032,38 @@ Config.portableItemButtonPosList = [
 
 Config.bikeJumpingAnimation = {
     "2": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-2",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "3": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-3",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "4": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-4",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "5": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-2",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "6": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-3",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "7": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-4",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "8": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-5",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run5.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
 };
