@@ -1,8 +1,6 @@
 let Config = {
     roadFatalMinLength: 0.5,
     listResistance: 2,
-    designWidth: 720,
-    designHeight: 1280,
     resolution: 1,
     // 1像素等于多少米
     pixel2meter: 0.0625,
@@ -29,7 +27,6 @@ let Config = {
     // 还想继续额外跳跃的话，如果没有配置第三项的话，就没办法跳跃了
     bikeJumpExtraCountdown: [20, 18, 16, 14, 12, 10],
     bikeLeftMargin: 150,
-    bikeTopMargin: 640,
     bikeCameraMinY: 540,
     bikeCameraMaxY: 740,
     bikeGameOverAngularVelocity: 50,
