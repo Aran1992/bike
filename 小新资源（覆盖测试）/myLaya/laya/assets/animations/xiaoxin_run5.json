@@ -2,51 +2,51 @@
 
 "run1.png":
 {
-	"frame": {"x":1,"y":532,"w":179,"h":201},
+	"frame": {"x":0,"y":512,"w":256,"h":256},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":7,"y":553,"w":81,"h":95},
-	"sourceSize": {"w":81,"h":95}
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
 },
 "run2.png":
 {
-	"frame": {"x":260,"y":529,"w":174,"h":205},
+	"frame": {"x":256,"y":512,"w":256,"h":256},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
-	"sourceSize": {"w":128,"h":128}
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
 },
 "run3.png":
 {
-	"frame": {"x":513,"y":530,"w":176,"h":204},
+	"frame": {"x":512,"y":512,"w":256,"h":256},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
-	"sourceSize": {"w":128,"h":128}
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
 },
 "run4.png":
 {
-	"frame": {"x":769,"y":532,"w":200,"h":202},
+	"frame": {"x":768,"y":512,"w":256,"h":256},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
-	"sourceSize": {"w":128,"h":128}
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
 },
 "run5.png":
 {
-	"frame": {"x":4,"y":785,"w":188,"h":205},
+	"frame": {"x":0,"y":768,"w":256,"h":256},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
-	"sourceSize": {"w":128,"h":128}
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
 },
 "run6.png":
 {
-	"frame": {"x":257,"y":786,"w":200,"h":204},
+	"frame": {"x":256,"y":768,"w":256,"h":256},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
-	"sourceSize": {"w":128,"h":128}
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
 }},
 "animations": {
 	"xiaoxin_run": [
@@ -66,7 +66,7 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "sns5630_ext_01.png",
+	"image": "sns1040_ext_01.png",
 	"format": "RGBA8888",
 	"size": {"w":1024,"h":1024},
 	"scale": "1",
