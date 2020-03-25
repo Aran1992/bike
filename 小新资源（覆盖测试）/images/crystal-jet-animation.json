@@ -1,0 +1,23 @@
+{"frames": {
+
+"crystal_jet_00.png":
+{
+	"frame": {"x":0,"y":0,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+}},
+"animations": {
+	"crystal_jet": ["crystal_jet_00.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "crystal-jet-animation.png",
+	"format": "RGBA8888",
+	"size": {"w":82,"h":80},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:b87b8585a73ee5b07bd826c78e0788dc:33610270cc8f90e8a12b4bc42df3cd2c:d77924456ba96ad0f5c02236d739b00c$"
+}
+}

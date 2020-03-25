@@ -1,17 +1,17 @@
 import Config from "./src/config/base-config";
 
 // 游戏的设计宽度
-Config.designWidth = 720;
+Config.designWidth = 1280;
 // 游戏的设计高度
-Config.designHeight = 1280;
+Config.designHeight = 720;
 // 自行车的左边距
-Config.bikeLeftMargin = 150;
+Config.bikeLeftMargin = 350;
 // 自行车顶边距的最小值（初始路线高度）
 Config.bikeCameraMinY = 540;
 // 自行车顶边距的最大值（跳起来后恢复的路线高度）
-Config.bikeCameraMaxY = 740;
+Config.bikeCameraMaxY = 600;
 // 底下的黑色蒙版的总高度
-Config.maskHeight = 420;
+Config.maskHeight = 0;
 
 // 竖版游戏的参考值
 // // 游戏的设计宽度
@@ -50,6 +50,25 @@ Config.gravity = -175;
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
+// 自行车图集
+Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
+
+// 自行车在场景中显示的尺寸是原图的多大
+Config.bikeScale = 1;
+
+// 自行车物理半径（物理半径与密度相关关联）（radius变成3倍的话，质量就会变成原来的9倍，密度就要变成原来的九分之一）（影响玩家角色触碰范围）
+Config.bikeRadius = 3;
+
+// 自行车密度（物理半径与密度相关关联）（radius变成3倍的话，质量就会变成原来的9倍，密度就要变成原来的九分之一）（影响玩家角色跳跃高度）
+Config.bikeDensity = 0.12;
+
+// 自行车超级无敌冲刺物理半径
+Config.bikeSprintRadius = 11;
+
+// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
+Config.bikeJumpingRotation = -30;
+
+
 // 默认的道具随机权重表
 Config.defaultItemRandomTable = {
     Accelerate: 1,
@@ -65,30 +84,29 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
+            side: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
+            top: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 侧边
-            side2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02SideSkin.png",
+            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02TopSkin.png",
+            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
-                "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
-                "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
+                "images/map/stg20/l_stg20_01.png",
+                "images/map/stg20/l_stg20_02.png",
             ],
             // 主页封面图
             mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.95, 0.9, 0],
+        verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 256, 256],
+        bgY: [0, 256],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
@@ -96,7 +114,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -1081,24 +1099,6 @@ Config.mapList = [
     },
 ];
 
-// 自行车图集
-Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
-
-// 自行车在场景中显示的尺寸是原图的多大
-Config.bikeScale = 0.4;
-
-// 自行车物理半径
-Config.bikeRadius = 1.175;
-
-// 自行车超级无敌冲刺物理半径
-Config.bikeSprintRadius = 11;
-
-// 自行车密度
-Config.bikeDensity = 1;
-
-// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
-Config.bikeJumpingRotation = -30;
-
 // 路段配置
 Config.roadSections = {
     // 固定关卡（Normal）(第1阶段)
@@ -1321,6 +1321,9 @@ Config.roadSections = {
 //        "Random/Random021-10040501",
 
 
+
+
+
         // 关卡元素：多层地形
 
     ],
@@ -1441,32 +1444,31 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
+            side: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
+            top: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 侧边
-            side2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02SideSkin.png",
+            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02TopSkin.png",
+            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
-                "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
-                "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
+                "images/map/stg20/l_stg20_01.png",
+                "images/map/stg20/l_stg20_02.png",
             ],
             // 商店显示的封面图（改版后这个不用了）
-            shopCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
+            shopCover: "images/map/stg20/l_stg20Map.png",
             // 主页封面图
-            mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
+            mainCover: "images/map/stg20/l_stg20Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.95, 0.9, 0],
+        verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 256, 256],
+        bgY: [0, 256],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
@@ -1474,7 +1476,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
         distanceNotice: [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2800, 3200, 3600, 4000, 4400, 4800, 5200, 5600, 6000, 6400, 6800, 7200, 8400, 9600, 10800, 12000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -3031,38 +3033,38 @@ Config.portableItemButtonPosList = [
 
 Config.bikeJumpingAnimation = {
     "2": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-2",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "3": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-3",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "4": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-4",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "5": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-2",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "6": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-3",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "7": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-4",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
     "8": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-5",
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run5.json",
+        animationName: "xiaoxin_run",
         interval: 5
     },
 };
@@ -8417,39 +8419,38 @@ Config.gameLevelMode = {
             dsc: "Select Map1",
             // 主页封面图
             mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
-            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
-            texture: {
-                // 侧边
-                side: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01SideSkin.png",
-                // 底部
-                top: "images/map/DX2_Taurus/TextureDX2_TaurusRoad01TopSkin.png",
-                // 侧边
-                side2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02SideSkin.png",
-                // 底部
-                top2: "images/map/DX2_Taurus/TextureDX2_TaurusRoad02TopSkin.png",
-                // 背景 有多少层背景就配置多少张
-                bg: [
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground01.png",
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground02.png",
-                    "images/map/DX2_Taurus/TextureDX2_TaurusBackground03.png",
-                ],
-            },
-            // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-            // 视差背景系数：上下
-            verticalParallaxDepth: [1, 0.95, 0.9, 0],
-            // 背景的Y轴位置
-            bgY: [0, 256, 256],
-            // 背景缩放系数
-            bgScale: [1, 1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
-            // 重力（基础：-175）
-            gravity: -175,
-            // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
-            // BGM路径
-            bgmPath: "myLaya/laya/assets/sounds/01_oushiza.mp3",
+			// 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+			texture: {
+				// 侧边
+				side: "images/map/stg20/l_stg20Road01SideSkin.png",
+				// 底部
+				top: "images/map/stg20/l_stg20Road01TopSkin.png",
+				// 侧边
+				side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+				// 底部
+				top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+				// 背景 有多少层背景就配置多少张
+				bg: [
+					"images/map/stg20/l_stg20_01.png",
+					"images/map/stg20/l_stg20_02.png",
+				],
+			},
+			// 视差背景系数：左右
+			horizontalParallaxDepth: [0.9, 0.8, 0],
+			// 视差背景系数：上下
+			verticalParallaxDepth: [1, 0.9, 0],
+			// 背景的Y轴位置
+			bgY: [0, 256],
+			// 背景缩放系数
+			bgScale: [1, 1],
+			// 自行车速度（基础：20）
+			bikeVelocity: 20,
+			// 重力（基础：-175）
+			gravity: -175,
+			// 跳跃爆发力（基础：12800）
+			jumpForce: 12800,
+			// BGM路径
+			bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
             itemRandomTableList: {
                 Accelerate: 1,
@@ -9488,8 +9489,5 @@ Config.defaultRedPoint = {
     positionX: 1,
     positionY: 0.2,
 };
-
-// 禁止摄像头在垂直方向移动
-Config.forbidenCameraVerticalMove = true;
 
 export default Config;
