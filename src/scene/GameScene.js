@@ -790,6 +790,14 @@ export default class GameScene extends Scene {
         this.bikeOutterContainer = this.bikeContainer.addChild(new Container());
         this.bikeOutterContainer.position.set(rp.x, rp.y);
 
+        if (RunOption.showBikeCollider) {
+            const graphics = new Graphics();
+            graphics.beginFill();
+            graphics.drawCircle(0, 0, Config.bikeRadius * Config.meter2pixel);
+            graphics.endFill();
+            this.bikeOutterContainer.addChild(graphics);
+        }
+
         this.bikeSelfContainer = this.bikeOutterContainer.addChild(new Container());
         this.bikeSelfContainer.scale.set(Config.bikeScale, Config.bikeScale);
 
@@ -1103,11 +1111,13 @@ export default class GameScene extends Scene {
 
             this.cameraContainer.x = Config.bikeLeftMargin - pos.x;
 
-            let bikeY = this.cameraContainer.y + pos.y;
-            if (bikeY < Config.bikeCameraMinY) {
-                this.cameraContainer.y = Config.bikeCameraMinY - pos.y;
-            } else if (bikeY > Config.bikeCameraMaxY) {
-                this.cameraContainer.y = Config.bikeCameraMaxY - pos.y;
+            if (!Config.forbidenCameraVerticalMove) {
+                let bikeY = this.cameraContainer.y + pos.y;
+                if (bikeY < Config.bikeCameraMinY) {
+                    this.cameraContainer.y = Config.bikeCameraMinY - pos.y;
+                } else if (bikeY > Config.bikeCameraMaxY) {
+                    this.cameraContainer.y = Config.bikeCameraMaxY - pos.y;
+                }
             }
 
             let cameraMoveX = this.cameraContainer.x - oldCameraX;

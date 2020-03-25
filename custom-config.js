@@ -9489,4 +9489,7 @@ Config.defaultRedPoint = {
     positionY: 0.2,
 };
 
+// 禁止摄像头在垂直方向移动
+Config.forbidenCameraVerticalMove = true;
+
 export default Config;
