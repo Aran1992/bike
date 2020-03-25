@@ -5,7 +5,7 @@ Config.designWidth = 1280;
 // 游戏的设计高度
 Config.designHeight = 720;
 // 自行车的左边距
-Config.bikeLeftMargin = 150;
+Config.bikeLeftMargin = 350;
 // 自行车顶边距的最小值（初始路线高度）
 Config.bikeCameraMinY = 540;
 // 自行车顶边距的最大值（跳起来后恢复的路线高度）
@@ -49,6 +49,25 @@ Config.gravity = -175;
 
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
+
+// 自行车图集
+Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
+
+// 自行车在场景中显示的尺寸是原图的多大
+Config.bikeScale = 1;
+
+// 自行车物理半径（物理半径与密度相关关联）（radius变成3倍的话，质量就会变成原来的9倍，密度就要变成原来的九分之一）（影响玩家角色触碰范围）
+Config.bikeRadius = 3;
+
+// 自行车密度（物理半径与密度相关关联）（radius变成3倍的话，质量就会变成原来的9倍，密度就要变成原来的九分之一）（影响玩家角色跳跃高度）
+Config.bikeDensity = 0.12;
+
+// 自行车超级无敌冲刺物理半径
+Config.bikeSprintRadius = 11;
+
+// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
+Config.bikeJumpingRotation = -30;
+
 
 // 默认的道具随机权重表
 Config.defaultItemRandomTable = {
@@ -1079,24 +1098,6 @@ Config.mapList = [
         }
     },
 ];
-
-// 自行车图集
-Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
-
-// 自行车在场景中显示的尺寸是原图的多大
-Config.bikeScale = 0.4;
-
-// 自行车物理半径
-Config.bikeRadius = 1.175;
-
-// 自行车超级无敌冲刺物理半径
-Config.bikeSprintRadius = 11;
-
-// 自行车密度
-Config.bikeDensity = 1;
-
-// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
-Config.bikeJumpingRotation = -30;
 
 // 路段配置
 Config.roadSections = {
