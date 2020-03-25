@@ -1,7 +1,7 @@
 import Config from "./src/config/base-config";
 
 // 游戏的设计宽度
-Config.designWidth = 7200;
+Config.designWidth = 720;
 // 游戏的设计高度
 Config.designHeight = 1280;
 // 自行车的左边距
