@@ -68,6 +68,8 @@ Config.bikeSprintRadius = 11;
 // 自行车跳跃的时候的旋转角度 顺时针旋转是正数
 Config.bikeJumpingRotation = -30;
 
+// 禁止摄像头在垂直方向移动（允许移动：true：0）（禁止移动：false：1）
+Config.forbidenCameraVerticalMove = 1;
 
 // 默认的道具随机权重表
 Config.defaultItemRandomTable = {
@@ -1319,10 +1321,6 @@ Config.roadSections = {
 //        "Random/Random021-10020501",
 //        "Random/Random021-10030501",
 //        "Random/Random021-10040501",
-
-
-
-
 
         // 关卡元素：多层地形
 
