@@ -50,6 +50,27 @@ Config.gravity = -175;
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
+// 自行车图集
+Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
+
+// 自行车在场景中显示的尺寸是原图的多大
+Config.bikeScale = 0.4;
+
+// 自行车物理半径（物理半径与密度相关关联）（radius变成3倍的话，质量就会变成原来的9倍，密度就要变成原来的九分之一）（影响玩家角色触碰范围）
+Config.bikeRadius = 1.175;
+
+// 自行车密度（物理半径与密度相关关联）（radius变成3倍的话，质量就会变成原来的9倍，密度就要变成原来的九分之一）（影响玩家角色跳跃高度）
+Config.bikeDensity = 1;
+
+// 自行车超级无敌冲刺物理半径
+Config.bikeSprintRadius = 11;
+
+// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
+Config.bikeJumpingRotation = -30;
+
+// 禁止摄像头在垂直方向移动（允许移动：true：0）（禁止移动：false：1）
+Config.forbidenCameraVerticalMove = 0;
+
 // 默认的道具随机权重表
 Config.defaultItemRandomTable = {
     Accelerate: 1,
@@ -1081,24 +1102,6 @@ Config.mapList = [
     },
 ];
 
-// 自行车图集
-Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
-
-// 自行车在场景中显示的尺寸是原图的多大
-Config.bikeScale = 0.4;
-
-// 自行车物理半径
-Config.bikeRadius = 1.175;
-
-// 自行车超级无敌冲刺物理半径
-Config.bikeSprintRadius = 11;
-
-// 自行车密度
-Config.bikeDensity = 1;
-
-// 自行车跳跃的时候的旋转角度 顺时针旋转是正数
-Config.bikeJumpingRotation = -30;
-
 // 路段配置
 Config.roadSections = {
     // 固定关卡（Normal）(第1阶段)
@@ -1319,7 +1322,6 @@ Config.roadSections = {
 //        "Random/Random021-10020501",
 //        "Random/Random021-10030501",
 //        "Random/Random021-10040501",
-
 
         // 关卡元素：多层地形
 
@@ -9488,8 +9490,5 @@ Config.defaultRedPoint = {
     positionX: 1,
     positionY: 0.2,
 };
-
-// 禁止摄像头在垂直方向移动
-Config.forbidenCameraVerticalMove = true;
 
 export default Config;
