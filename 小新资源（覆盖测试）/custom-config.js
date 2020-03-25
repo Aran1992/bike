@@ -86,27 +86,27 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/map/stg20/l_stg20Road01SideSkin.png",
+            side: "images/map/stg40/l_stg40Road01SideSkin.png",
             // 底部
-            top: "images/map/stg20/l_stg20Road01TopSkin.png",
+            top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
             // 底部
-            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/map/stg20/l_stg20_01.png",
-                "images/map/stg20/l_stg20_02.png",
+                "images/map/stg40/l_stg40_01.png",
+                "images/map/stg40/l_stg40_02.png",
             ],
             // 主页封面图
-            mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
+            mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 256],
+        bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
         // 自行车速度（基础：20）
@@ -170,30 +170,29 @@ Config.mapList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
+            side: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
+            top: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 侧边
-            side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
+            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
+            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
-                "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
-                "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+                "images/map/stg20/l_stg20_01.png",
+                "images/map/stg20/l_stg20_02.png",
             ],
             // 主页封面图
-            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
+            mainCover: "images/map/stg20/l_stg20Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.95, 0.9, 0],
+        verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 128, 256],
+        bgY: [0, 0],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
@@ -201,7 +200,7 @@ Config.mapList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
         itemRandomTableList: {
             1: {
@@ -1442,29 +1441,29 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/map/stg20/l_stg20Road01SideSkin.png",
+            side: "images/map/stg40/l_stg40Road01SideSkin.png",
             // 底部
-            top: "images/map/stg20/l_stg20Road01TopSkin.png",
+            top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
             // 底部
-            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/map/stg20/l_stg20_01.png",
-                "images/map/stg20/l_stg20_02.png",
+                "images/map/stg40/l_stg40_01.png",
+                "images/map/stg40/l_stg40_02.png",
             ],
             // 商店显示的封面图（改版后这个不用了）
-            shopCover: "images/map/stg20/l_stg20Map.png",
+            shopCover: "images/map/stg40/l_stg40Map.png",
             // 主页封面图
-            mainCover: "images/map/stg20/l_stg20Map.png",
+            mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
         horizontalParallaxDepth: [0.9, 0.8, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 256],
+        bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
         // 自行车速度（基础：20）
@@ -1514,32 +1513,31 @@ Config.endlessMode.sceneList = [
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
-            side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
+            side: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
+            top: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 侧边
-            side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
+            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
             // 底部
-            top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
+            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
-                "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
-                "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
-                "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
+                "images/map/stg20/l_stg20_01.png",
+                "images/map/stg20/l_stg20_02.png",
             ],
             // 商店显示的封面图（改版后这个不用了）
-            shopCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
+            shopCover: "images/map/stg20/l_stg20Map.png",
             // 主页封面图
-            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
+            mainCover: "images/map/stg20/l_stg20Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
+        horizontalParallaxDepth: [0.9, 0.8, 0],
         // 视差背景系数：上下
-        verticalParallaxDepth: [1, 0.95, 0.9, 0],
+        verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
-        bgY: [0, 128, 256],
+        bgY: [0, 0],
         // 背景缩放系数
-        bgScale: [1, 1, 1],
+        bgScale: [1, 1],
         // 自行车速度（基础：20）
         bikeVelocity: 20,
         // 重力（基础：-175）
@@ -1547,7 +1545,7 @@ Config.endlessMode.sceneList = [
         // 跳跃爆发力（基础：12800）
         jumpForce: 12800,
         // BGM路径
-        bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
         distanceNotice: [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2800, 3200, 3600, 4000, 4400, 4800, 5200, 5600, 6000, 6400, 6800, 7200, 8400, 9600, 10800, 12000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000],
         // 每个难度的长度（单位像素）（1米=16像素）
@@ -8416,21 +8414,21 @@ Config.gameLevelMode = {
             // 地图描述
             dsc: "Select Map1",
             // 主页封面图
-            mainCover: "images/map/DX2_Taurus/TextureDX2_TaurusMap.png",
+            mainCover: "images/map/stg40/l_stg40Map.png",
 			// 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
 			texture: {
 				// 侧边
-				side: "images/map/stg20/l_stg20Road01SideSkin.png",
+				side: "images/map/stg40/l_stg40Road01SideSkin.png",
 				// 底部
-				top: "images/map/stg20/l_stg20Road01TopSkin.png",
+				top: "images/map/stg40/l_stg40Road01TopSkin.png",
 				// 侧边
-				side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+				side2: "images/map/stg40/l_stg40Road01SideSkin.png",
 				// 底部
-				top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+				top2: "images/map/stg40/l_stg40Road01TopSkin.png",
 				// 背景 有多少层背景就配置多少张
 				bg: [
-					"images/map/stg20/l_stg20_01.png",
-					"images/map/stg20/l_stg20_02.png",
+					"images/map/stg40/l_stg40_01.png",
+					"images/map/stg40/l_stg40_02.png",
 				],
 			},
 			// 视差背景系数：左右
@@ -8438,7 +8436,7 @@ Config.gameLevelMode = {
 			// 视差背景系数：上下
 			verticalParallaxDepth: [1, 0.9, 0],
 			// 背景的Y轴位置
-			bgY: [0, 256],
+			bgY: [0, 0],
 			// 背景缩放系数
 			bgScale: [1, 1],
 			// 自行车速度（基础：20）
@@ -8480,40 +8478,39 @@ Config.gameLevelMode = {
             // 地图描述
             dsc: "Select Map2",
             // 主页封面图
-            mainCover: "images/map/DX2_Aries/TextureDX2_AriesMap.png",
-            // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
-            texture: {
-                // 侧边
-                side: "images/map/DX2_Aries/TextureDX2_AriesRoad01SideSkin.png",
-                // 底部
-                top: "images/map/DX2_Aries/TextureDX2_AriesRoad01TopSkin.png",
-                // 侧边
-                side2: "images/map/DX2_Aries/TextureDX2_AriesRoad02SideSkin.png",
-                // 底部
-                top2: "images/map/DX2_Aries/TextureDX2_AriesRoad02TopSkin.png",
-                // 背景 有多少层背景就配置多少张
-                bg: [
-                    "images/map/DX2_Aries/TextureDX2_AriesBackground01.png",
-                    "images/map/DX2_Aries/TextureDX2_AriesBackground02.png",
-                    "images/map/DX2_Aries/TextureDX2_AriesBackground03.png",
-                ],
-            },
-            // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0.5, 0],
-            // 视差背景系数：上下
-            verticalParallaxDepth: [1, 0.95, 0.9, 0],
-            // 背景的Y轴位置
-            bgY: [0, 128, 256],
-            // 背景缩放系数
-            bgScale: [1, 1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
-            // 重力（基础：-175）
-            gravity: -175,
-            // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
-            // BGM路径
-            bgmPath: "myLaya/laya/assets/sounds/05_ohitsujiza.mp3",
+            mainCover: "images/map/stg20/l_stg20Map.png",
+			// 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+			texture: {
+				// 侧边
+				side: "images/map/stg20/l_stg20Road01SideSkin.png",
+				// 底部
+				top: "images/map/stg20/l_stg20Road01TopSkin.png",
+				// 侧边
+				side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+				// 底部
+				top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+				// 背景 有多少层背景就配置多少张
+				bg: [
+					"images/map/stg20/l_stg20_01.png",
+					"images/map/stg20/l_stg20_02.png",
+				],
+			},
+			// 视差背景系数：左右
+			horizontalParallaxDepth: [0.9, 0.8, 0],
+			// 视差背景系数：上下
+			verticalParallaxDepth: [1, 0.9, 0],
+			// 背景的Y轴位置
+			bgY: [0, 0],
+			// 背景缩放系数
+			bgScale: [1, 1],
+			// 自行车速度（基础：20）
+			bikeVelocity: 20,
+			// 重力（基础：-175）
+			gravity: -175,
+			// 跳跃爆发力（基础：12800）
+			jumpForce: 12800,
+			// BGM路径
+			bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
             itemRandomTableList: {
                 Accelerate: 1,
