@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":49,
-    "selecteID":87,
+    "selectedBox":100,
+    "selecteID":70,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -21,14 +21,13 @@
             "props":{"var":"blockSightSprite","top":0,"scaleY":1,"scaleX":1,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"blockSightSprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":49,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":-296,"centerX":256},
@@ -43,7 +42,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":169,"centerX":-394},
@@ -58,7 +56,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":23,"centerX":428},
@@ -73,7 +70,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"y":754,"x":579,"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":159,"centerX":265},
@@ -88,7 +84,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":68,"centerX":281},
@@ -103,7 +98,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":305,"centerX":-279},
@@ -118,7 +112,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":136,"centerX":543},
@@ -133,7 +126,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"skin":"images/moji_00014.png","scaleY":1,"scaleX":1,"name":"1","centerY":149,"centerX":428},
@@ -148,7 +140,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,2",
                     "props":{"skin":"images/moji_00014.png","scaleY":2,"scaleX":2,"name":"2","centerY":-137,"centerX":455},
@@ -163,7 +154,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,2",
                     "props":{"skin":"images/moji_00014.png","scaleY":2,"scaleX":2,"name":"2","centerY":273,"centerX":227},
@@ -178,7 +168,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,2",
                     "props":{"y":444,"x":605,"width":92,"skin":"images/moji_00014.png","scaleY":2,"scaleX":2,"rotation":45,"name":"2","height":91,"centerY":-105,"centerX":337},
@@ -193,7 +182,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,2",
                     "props":{"width":92,"skin":"images/moji_00014.png","scaleY":2,"scaleX":2,"rotation":138,"name":"2","height":91,"centerY":91,"centerX":-242},
@@ -208,7 +196,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,3",
                     "props":{"width":92,"skin":"images/moji_00014.png","scaleY":3,"scaleX":3,"rotation":-31,"name":"3","height":91,"centerY":240,"centerX":-256},
@@ -223,7 +210,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,3",
                     "props":{"skin":"images/moji_00014.png","scaleY":3,"scaleX":3,"name":"3","centerY":-95,"centerX":-210},
@@ -238,7 +224,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,3",
                     "props":{"y":399,"x":198,"width":92,"skin":"images/moji_00014.png","scaleY":3,"scaleX":3,"rotation":-29,"name":"3","height":91,"centerY":-105,"centerX":-24},
@@ -253,7 +238,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,4",
                     "props":{"width":92,"skin":"images/moji_00014.png","scaleY":4,"scaleX":4,"rotation":28,"name":"4","height":91,"centerY":45,"centerX":157},
@@ -726,28 +710,30 @@
             "props":{"y":680,"x":0,"visible":false,"var":"guidePanel","right":0,"left":0,"height":600,"bottom":0},
             "nodeParent":1,
             "label":"guidePanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":100,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-13.png","sizeGrid":"50,50,50,50","right":5,"left":5,"height":260,"bottom":280},
+                    "props":{"width":500,"skin":"images/bg-13.png","sizeGrid":"50,50,50,50","height":250,"centerY":-100,"centerX":0},
                     "nodeParent":100,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":67,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"x":350,"text":"${LearnJump}","strokeColor":"#ffffff","fontSize":50,"color":"#ffffff","centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},
+                            "props":{"text":"${LearnJump}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},
                             "nodeParent":67,
                             "label":"Label",
                             "isOpen":true,
@@ -761,21 +747,23 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"visible":true,"skin":"images/bg-13.png","sizeGrid":"50,50,50,50","right":5,"left":5,"height":260,"bottom":10},
+                    "props":{"width":320,"visible":true,"skin":"images/bg-13.png","sizeGrid":"50,50,50,50","left":50,"height":250,"centerY":-100},
                     "nodeParent":100,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":70,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":-133,"x":380,"text":"${LearnItem}","strokeColor":"#ffffff","fontSize":35,"color":"#ffffff","centerX":50,"bottom":110,"anchorY":0.5,"anchorX":0.5},
+                            "props":{"text":"${LearnItem}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},
                             "nodeParent":70,
                             "label":"Label",
                             "isOpen":true,
@@ -794,16 +782,17 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,portableItemButton1",
-            "props":{"y":1038,"x":50,"var":"portableItemButton1","skin":"images/bottom-item.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"bottom":150},
+            "props":{"y":1038,"x":50,"var":"portableItemButton1","skin":"images/bottom-item.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"bottom":150},
             "nodeParent":1,
             "label":"portableItemButton1",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":14,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
                     "props":{"width":230,"top":0,"right":0,"name":"hitArea","height":135},
@@ -821,7 +810,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,portableItemButton2",
-            "props":{"y":1158,"x":50,"var":"portableItemButton2","skin":"images/bottom-item.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"bottom":30},
+            "props":{"y":1158,"x":50,"var":"portableItemButton2","skin":"images/bottom-item.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"bottom":30},
             "nodeParent":1,
             "label":"portableItemButton2",
             "isOpen":false,
