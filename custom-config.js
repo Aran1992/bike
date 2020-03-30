@@ -51,7 +51,7 @@ Config.gravity = -175;
 Config.jumpForce = 12800;
 
 // 自行车图集
-Config.bikeAtlasPath = "myLaya/laya/assets/animations/bike.json";
+Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
 
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 0.4;
@@ -3075,6 +3075,9 @@ Config.rebornDragDuration = 1;
 Config.rebornFloatFrame = 300;
 // 复活气泡漂浮速度
 Config.rebornFloatVelocity = 10;
+
+// 默认的动画偏移，没有专门设置偏移的动画就全部使用这个偏移
+Config.bikeCommonAnimationPos = [0, 0];
 
 // 自行车列表 自行车在列表里面的排序就是在界面上显示的顺序
 Config.bikeList = [
