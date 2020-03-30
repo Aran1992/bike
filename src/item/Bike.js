@@ -62,10 +62,13 @@ export default class Bike {
 
         this.underBikeContainer = this.bikeSelfContainer.addChild(new Container());
         this.bikeSprite = this.bikeSelfContainer.addChild(new Sprite());
+        this.bikeSprite.anchor.set(0.5, 0.5);
         this.upBikeContainer = this.bikeSelfContainer.addChild(new Container());
 
-        this.bikeSprite.texture = this.frames[this.frameIndex];
-        this.bikeSprite.anchor.set(0.5, 0.5);
+        this.bikeAnimSprite = this.bikeSprite.addChild(new Sprite());
+        this.bikeAnimSprite.anchor.set(0.5, 0.5);
+        this.bikeAnimSprite.texture = this.frames[this.frameIndex];
+        this.bikeAnimSprite.position.set(...this.config.animPos);
 
         let decorateSprite = this.bikeSprite.addChild(new Sprite());
         let config = Config.bikeList.find(bike => bike.id === this.id);
@@ -224,7 +227,7 @@ export default class Bike {
         if (this.frameIndex >= this.frames.length) {
             this.frameIndex = 0;
         }
-        this.bikeSprite.texture = this.frames[this.frameIndex];
+        this.bikeAnimSprite.texture = this.frames[this.frameIndex];
         let pp = this.bikeBody.getPosition();
         let rp = GameUtils.physicsPos2renderPos(pp);
         this.bikeOutterContainer.x = rp.x;

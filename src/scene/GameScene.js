@@ -237,8 +237,11 @@ export default class GameScene extends Scene {
                 }
             }
         }
+        const id = this.getBikeID();
+        const config = Config.bikeList.find(bike => bike.id === id);
+        const bca = config.bikeCommonAnimation || Config.bikeCommonAnimation;
+        const bjas = Utils.values(config.bikeJumpingAnimation || Config.bikeJumpingAnimation).map(item => item.atlasPath);
         return [
-            Config.bikeAtlasPath,
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
             Config.accGemAniJson,
@@ -247,6 +250,7 @@ export default class GameScene extends Scene {
             Config.effect.BananaPeel.peelPrefabPath,
             Config.startImagePath.ui,
             this.bgmPath,
+            bca,
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.soundPath))
@@ -254,7 +258,7 @@ export default class GameScene extends Scene {
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
             .concat(effectResPathList)
-            .concat(Utils.values(Config.bikeJumpingAnimation).map(item => item.atlasPath));
+            .concat(bjas);
     }
 
     onRestart() {
@@ -550,20 +554,12 @@ export default class GameScene extends Scene {
                         MusicMgr.playSound(Config.soundPath.extraJump);
                         this.emitter.playOnce();
                 }
-                let jumpAnimation = Config.bikeJumpingAnimation[this.jumpCount];
-                if (jumpAnimation === undefined) {
-                    let lastKey;
-                    for (let count in Config.bikeJumpingAnimation) {
-                        lastKey = count;
-                    }
-                    if (lastKey && this.jumpCount > lastKey) {
-                        jumpAnimation = Config.bikeJumpingAnimation[lastKey];
-                    }
-                }
+                const jumpAnimation = this.getBikeJumpAnimation(this.jumpCount);
                 if (jumpAnimation) {
                     this.jumpingAnimationFrames = GameUtils.getFrames(jumpAnimation.atlasPath, jumpAnimation.animationName);
                     this.jumpingAnimationIndex = 0;
                     this.jumpingAnimationInterval = jumpAnimation.interval;
+                    this.bikeAnimSprite.position.set(...jumpAnimation.pos);
                 } else {
                     this.bikeSelfContainer.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                     this.jumpingAnimationFrames = undefined;
@@ -806,6 +802,9 @@ export default class GameScene extends Scene {
         this.bikeSprite.anchor.set(0.5, 0.5);
         this.upBikeContainer = this.bikeSelfContainer.addChild(new Container());
 
+        this.bikeAnimSprite = this.bikeSprite.addChild(new Sprite());
+        this.bikeAnimSprite.anchor.set(0.5, 0.5);
+
         let id = this.getBikeID();
         let config = Config.bikeList.find(config => config.id === id);
         this.bikeDecorateSprite = new Sprite(resources[config.imagePath].texture);
@@ -873,9 +872,11 @@ export default class GameScene extends Scene {
 
         this.setContactFatalEdge(false);
 
-        this.bikeFrames = GameUtils.getFrames(Config.bikeAtlasPath, "bike");
+        const {frames, pos} = this.getBikeCommonAnimation();
+        this.bikeFrames = frames;
         this.bikeFrame = 0;
-        this.bikeSprite.texture = this.bikeFrames[this.bikeFrame];
+        this.bikeAnimSprite.texture = this.bikeFrames[this.bikeFrame];
+        this.bikeAnimSprite.position.set(...pos);
 
         this.bikeAccSprite = this.bikeContainer.addChild(new Sprite());
         this.bikeAccSprite.anchor.set(0.5, 1);
@@ -1060,7 +1061,7 @@ export default class GameScene extends Scene {
                     if (frame === undefined) {
                         frame = this.jumpingAnimationFrames[this.jumpingAnimationFrames.length - 1];
                     }
-                    this.bikeSprite.texture = frame;
+                    this.bikeAnimSprite.texture = frame;
                 }
             } else {
                 this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
@@ -1068,7 +1069,8 @@ export default class GameScene extends Scene {
                 if (this.bikeFrame >= this.bikeFrames.length) {
                     this.bikeFrame = 0;
                 }
-                this.bikeSprite.texture = this.bikeFrames[this.bikeFrame];
+                this.bikeAnimSprite.texture = this.bikeFrames[this.bikeFrame];
+                this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
             }
         }
     }
@@ -1979,6 +1981,32 @@ export default class GameScene extends Scene {
 
     isBike(gameObject) {
         return gameObject === this || this.enemyList.indexOf(gameObject) !== -1;
+    }
+
+    getBikeCommonAnimation() {
+        const id = this.getBikeID();
+        const config = Config.bikeList.find(bike => bike.id === id);
+        return {
+            frames: GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike"),
+            pos: config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos
+        };
+    }
+
+    getBikeJumpAnimation(jumpCount) {
+        const id = this.getBikeID();
+        const config = Config.bikeList.find(bike => bike.id === id);
+        const jumpAnimations = config.bikeJumpingAnimation || Config.bikeJumpingAnimation;
+        let jumpAnimation = jumpAnimations[jumpCount];
+        if (jumpAnimation === undefined) {
+            let lastKey;
+            for (let count in jumpAnimations) {
+                lastKey = count;
+            }
+            if (lastKey && jumpCount > lastKey) {
+                jumpAnimation = jumpAnimations[lastKey];
+            }
+        }
+        return jumpAnimation;
     }
 }
 

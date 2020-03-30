@@ -5,7 +5,7 @@ import Utils from "../mgr/Utils";
 
 export default class BikeSprite {
     constructor(parent, childIndex) {
-        this.bikeSprite = new AnimatedSprite(GameUtils.getFrames(Config.bikeAtlasPath, "bike"));
+        this.bikeSprite = new AnimatedSprite(GameUtils.getFrames(Config.bikeCommonAnimation, "bike"));
         if (childIndex !== undefined) {
             parent.addChildAt(this.bikeSprite, childIndex);
         } else {
@@ -66,4 +66,4 @@ export default class BikeSprite {
     }
 }
 
-BikeSprite.resPathList = [Config.bikeAtlasPath, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];
+BikeSprite.resPathList = [Config.bikeCommonAnimation, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];
