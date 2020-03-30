@@ -33,7 +33,6 @@ export default class SignScene extends Scene {
         item.ui.itemIcon = item.ui.itemIcon.addChild(new Sprite());
         item.ui.itemIcon.anchor.set(0.5, 0.5);
         item.ui.bikeSprite = new BikeSprite(item.ui.bikeSpritePanel);
-        item.ui.bikeSprite.play();
     }
 
     updateItem(item, index) {
@@ -55,6 +54,7 @@ export default class SignScene extends Scene {
         } else if (reward.bike) {
             item.ui.bikeSpritePanel.visible = true;
             item.ui.bikeSprite.setBikeID(reward.bike);
+            item.ui.bikeSprite.play();
         }
         item.ui.receivedImage.visible = false;
         item.ui.lostImage.visible = false;

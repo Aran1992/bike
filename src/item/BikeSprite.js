@@ -1,19 +1,16 @@
 import Config from "../config";
-import {AnimatedSprite, resources, Sprite} from "../libs/pixi-wrapper";
+import {AnimatedSprite, Container, resources, Sprite} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 
 export default class BikeSprite {
     constructor(parent, childIndex) {
-        this.bikeSprite = new Sprite();
-        this.bikeAnimSprite = this.bikeSprite.addChild(new AnimatedSprite());
-        this.bikeAnimSprite.anchor.set(0.5, 0.5);
+        this.bikeSprite = new Container();
         if (childIndex !== undefined) {
             parent.addChildAt(this.bikeSprite, childIndex);
         } else {
             parent.addChild(this.bikeSprite);
         }
-        this.bikeSprite.anchor.set(0.5, 0.5);
         this.decorateSprite = new Sprite();
         this.bikeSprite.addChild(this.decorateSprite);
     }
@@ -29,7 +26,13 @@ export default class BikeSprite {
         } else {
             this.decorateSprite.visible = false;
         }
-        this.bikeAnimSprite.textures = GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike");
+        const textures = GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike");
+        if (this.bikeAnimSprite === undefined) {
+            this.bikeAnimSprite = this.bikeSprite.addChildAt(new AnimatedSprite(textures), 0);
+            this.bikeAnimSprite.anchor.set(0.5, 0.5);
+        } else {
+            this.bikeAnimSprite.textures = textures;
+        }
         this.bikeAnimSprite.position.set(...(config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos));
     }
 

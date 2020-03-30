@@ -27,7 +27,6 @@ export default class PrizeScene extends Scene {
             item.numberText = item.children[0].children[1].children[2];
             item.bikePanel = item.children[0].children[1].children[3];
             item.bikeSprite = new BikeSprite(item.bikePanel);
-            item.bikeSprite.play();
         });
     }
 
@@ -77,6 +76,7 @@ export default class PrizeScene extends Scene {
             } else if (reward.rewardBike) {
                 item.bikePanel.visible = true;
                 item.bikeSprite.setBikeID(reward.rewardBike);
+                item.bikeSprite.play();
             }
         });
         let itemWidth = this.list[0].mywidth;

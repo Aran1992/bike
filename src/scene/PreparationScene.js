@@ -22,14 +22,12 @@ export default class PreparationScene extends Scene {
         }
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
         this.bikeSprite = new BikeSprite(this.ui.itemIcon3, 0);
-        this.bikeSprite.play();
         for (let i = 0; i < 2; i++) {
             const item = this.ui[`firstTimeReward${i}`];
             UIHelper.initUIRoot(item);
             item.ui.itemIcon = item.ui.itemIcon.addChild(new Sprite());
             item.ui.itemIcon.anchor.set(0.5, 0.5);
             item.ui.bikeSprite = new BikeSprite(item.ui.bikeSpritePanel);
-            item.ui.bikeSprite.play();
         }
     }
 
@@ -60,6 +58,7 @@ export default class PreparationScene extends Scene {
         this.ui.itemIcon1.children[0].texture = Texture.from(Config.effect[this.rewards[0].effect].imagePath);
         this.ui.itemIcon2.children[0].texture = Texture.from(Config.effect[this.rewards[1].effect].imagePath);
         this.bikeSprite.setBikeID(this.rewards[2].bike);
+        this.bikeSprite.play();
         for (let i = 1; i <= 3; i++) {
             if (this.rewards[i - 1].received) {
                 this.ui[`receivedText${i}`].visible = true;
@@ -181,6 +180,7 @@ export default class PreparationScene extends Scene {
                             case "bike": {
                                 item.ui.bikeSpritePanel.visible = true;
                                 item.ui.bikeSprite.setBikeID(reward);
+                                item.ui.bikeSprite.play();
                                 break;
                             }
                         }

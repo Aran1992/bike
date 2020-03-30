@@ -1,7 +1,7 @@
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
-import {resources, Sprite, Texture} from "../libs/pixi-wrapper";
+import {resources, Texture} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
@@ -61,12 +61,6 @@ export default class MainScene extends Scene {
         this.refreshMode();
 
         this.initGift();
-
-        const a = Sprite.from("myLaya/laya/assets/images/crystal_super_00.png");
-        a.anchor.set(0.5, 0.5);
-        this.addChild(a);
-        const b = Sprite.from("myLaya/laya/assets/images/crystal_super_09.png");
-        a.addChild(b);
     }
 
     onRefreshRankData() {
@@ -208,7 +202,7 @@ export default class MainScene extends Scene {
             GameUtils.showRedPoint(this.ui.giftButton, false);
         } else {
             this.ui.giftTimeText.visible = false;
-            GameUtils.showRedPoint(this.ui.giftButton, true);
+            GameUtils.showRedPoint(this.ui.giftButton, true && !GameUtils.isSystemLocked("giftButton"));
         }
     }
 
