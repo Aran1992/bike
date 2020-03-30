@@ -73,4 +73,17 @@ export default class BikeSprite {
     }
 }
 
-BikeSprite.resPathList = [Config.bikeCommonAnimation, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];
+const bikeAnimation = [];
+Config.bikeList.forEach(bike => {
+    if (bike.bikeCommonAnimation) {
+        bikeAnimation.push(bike.bikeCommonAnimation);
+    }
+    if (bike.bikeJumpingAnimation) {
+        for (const key in bike.bikeJumpingAnimation) {
+            if (bike.bikeJumpingAnimation.hasOwnProperty(key)) {
+                bikeAnimation.push(bike.bikeJumpingAnimation[key].atlasPath);
+            }
+        }
+    }
+});
+BikeSprite.resPathList = [Config.bikeCommonAnimation, ...Utils.values(Config.bikeList).map(obj => obj.imagePath), ...bikeAnimation];
