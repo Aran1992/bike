@@ -559,7 +559,7 @@ export default class GameScene extends Scene {
                     this.jumpingAnimationFrames = GameUtils.getFrames(jumpAnimation.atlasPath, jumpAnimation.animationName);
                     this.jumpingAnimationIndex = 0;
                     this.jumpingAnimationInterval = jumpAnimation.interval;
-                    this.bikeAnimSprite.position.set(...jumpAnimation.pos);
+                    this.bikeAnimSprite.position.set(...(jumpAnimation.pos || Config.bikeCommonAnimationPos));
                 } else {
                     this.bikeSelfContainer.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                     this.jumpingAnimationFrames = undefined;
