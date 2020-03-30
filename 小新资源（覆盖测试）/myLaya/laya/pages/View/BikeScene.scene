@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":68,
-    "selecteID":79,
+    "selectedBox":1,
+    "selecteID":3,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -117,7 +117,7 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"width":580,"var":"list","right":20,"height":590,"centerY":0},
+                    "props":{"width":570,"var":"list","right":20,"height":590,"centerY":0},
                     "nodeParent":15,
                     "label":"list",
                     "isOpen":false,
@@ -319,14 +319,13 @@
                     "props":{"width":620,"visible":false,"var":"upgradePanel","skin":"images/bg-main-scene-21.png","sizeGrid":"20,20,20,20","right":20,"height":560,"centerY":0},
                     "nodeParent":15,
                     "label":"upgradePanel",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":68,
                     "child":[
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,upgradeList",
                             "props":{"width":570,"var":"upgradeList","top":50,"height":480,"centerX":0},
@@ -883,7 +882,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lvLimitPanel",
                             "props":{"width":330,"visible":false,"var":"lvLimitPanel","top":50,"skin":"images/button-start-3.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-500,"height":85},
@@ -912,7 +910,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,upgradeButton",
                             "props":{"width":330,"var":"upgradeButton","top":50,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-500,"height":85},
@@ -941,7 +938,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,upgradeCostPanel",
                             "props":{"width":200,"var":"upgradeCostPanel","top":135,"left":-450,"height":70},
@@ -984,7 +980,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,upgradeTimesLabel",
                             "props":{"var":"upgradeTimesLabel","top":-10,"text":"已升级99次","left":-430,"fontSize":40,"color":"#ffffff"},
