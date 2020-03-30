@@ -22,8 +22,27 @@ export default class MapGameScene extends StaticGameScene {
         this.mapIndex = mapIndex;
         this.mapConfig = Config.mapList[mapIndex];
         this.mapScenePath = Config.mapBasePath + this.mapConfig.scenePath + ".scene.json";
+        this.enemyIDList = [];
+        let bikeList = JSON.parse(JSON.stringify(Config.bikeList));
+        for (let i = 0; i < Config.enemy.count; i++) {
+            let id = Utils.randomChoose(bikeList).id;
+            this.enemyIDList.push(id);
+            let index = bikeList.findIndex(item => item.id === id);
+            bikeList.splice(index, 1);
+        }
         super.onShow();
         TDGA.onEvent("竞技模式");
+    }
+
+    getResPathList() {
+        let rpl = super.getResPathList();
+        this.enemyIDList.forEach(id => {
+            const config = Config.bikeList.find(bike => bike.id === id);
+            rpl.push(config.bikeCommonAnimation || Config.bikeCommonAnimation);
+            const bjas = Utils.values(config.bikeJumpingAnimation || Config.bikeJumpingAnimation).map(item => item.atlasPath);
+            rpl = rpl.concat(bjas);
+        });
+        return rpl;
     }
 
     onLoadedGameRes() {
@@ -51,12 +70,7 @@ export default class MapGameScene extends StaticGameScene {
     createEnemy(pp) {
         this.enemyList = [];
         if (!RunOption.removeAllEnemy) {
-            let frames = GameUtils.getFrames(Config.bikeAtlasPath, "enemy");
-            let list = JSON.parse(JSON.stringify(Config.bikeList));
-            for (let i = 0; i < Config.enemy.count; i++) {
-                let id = Utils.randomChoose(list).id;
-                let index = list.findIndex(item => item.id === id);
-                list.splice(index, 1);
+            this.enemyIDList.forEach((id, i) => {
                 // let id = DataMgr.get(DataMgr.selectedBike, 0);
                 // let id = 2;
                 let playername = `NPC${i + 1}`;
@@ -66,16 +80,20 @@ export default class MapGameScene extends StaticGameScene {
                     playername = item.playername;
                     headurl = item.headurl;
                 }
+                const config = Config.bikeList.find(bike => bike.id === id);
+                const frames = GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "enemy");
+                const animPos = config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos;
                 let enemy = new Enemy(this, this.bikeContainer, this.world, id, {
                     commonVelocity: this.bikeCommonVelocity,
                     jumpForce: this.jumpForce,
                     frames: frames,
+                    animPos: animPos,
                     playername: playername,
                     headurl: headurl,
                 });
                 enemy.setPhysicalPosition(pp);
                 this.enemyList.push(enemy);
-            }
+            });
         }
     }
 

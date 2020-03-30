@@ -5,7 +5,9 @@ import Utils from "../mgr/Utils";
 
 export default class BikeSprite {
     constructor(parent, childIndex) {
-        this.bikeSprite = new AnimatedSprite(GameUtils.getFrames(Config.bikeAtlasPath, "bike"));
+        this.bikeSprite = new Sprite();
+        this.bikeAnimSprite = this.bikeSprite.addChild(new AnimatedSprite());
+        this.bikeAnimSprite.anchor.set(0.5, 0.5);
         if (childIndex !== undefined) {
             parent.addChildAt(this.bikeSprite, childIndex);
         } else {
@@ -27,6 +29,8 @@ export default class BikeSprite {
         } else {
             this.decorateSprite.visible = false;
         }
+        this.bikeAnimSprite.textures = GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike");
+        this.bikeAnimSprite.position.set(...(config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos));
     }
 
     setPositionX(x) {
@@ -38,7 +42,7 @@ export default class BikeSprite {
     }
 
     getLeftBorderX() {
-        return this.bikeSprite.x - this.bikeSprite.width / 2;
+        return this.bikeSprite.x - this.bikeAnimSprite.width / 2;
     }
 
     setPosition(x, y) {
@@ -46,15 +50,15 @@ export default class BikeSprite {
     }
 
     getWidth() {
-        return this.bikeSprite.width;
+        return this.bikeAnimSprite.width;
     }
 
     play() {
-        this.bikeSprite.play();
+        this.bikeAnimSprite.play();
     }
 
     stop() {
-        this.bikeSprite.stop();
+        this.bikeAnimSprite.stop();
     }
 
     destroy() {
@@ -66,4 +70,4 @@ export default class BikeSprite {
     }
 }
 
-BikeSprite.resPathList = [Config.bikeAtlasPath, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];
+BikeSprite.resPathList = [Config.bikeCommonAnimation, ...Utils.values(Config.bikeList).map(obj => obj.imagePath)];
