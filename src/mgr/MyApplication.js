@@ -54,12 +54,22 @@ export default class MyApplication extends Application {
 
         let wwhRatio = args.width / args.height;
         let dwhRatio = Config.designWidth / Config.designHeight;
-        if (wwhRatio >= dwhRatio) {
-            this.sceneWidth = Config.designWidth;
-            this.sceneHeight = Config.designHeight;
+        if (Config.designWidth < Config.designHeight) {
+            if (wwhRatio >= dwhRatio) {
+                this.sceneWidth = Config.designWidth;
+                this.sceneHeight = Config.designHeight;
+            } else {
+                this.sceneWidth = Config.designWidth;
+                this.sceneHeight = Config.designWidth / args.width * args.height;
+            }
         } else {
-            this.sceneWidth = Config.designWidth;
-            this.sceneHeight = Config.designWidth / args.width * args.height;
+            if (wwhRatio >= dwhRatio) {
+                this.sceneHeight = Config.designHeight;
+                this.sceneWidth = Config.designHeight / args.height * args.width;
+            } else {
+                this.sceneWidth = Config.designWidth;
+                this.sceneHeight = Config.designHeight;
+            }
         }
 
         this.root = this.stage.addChild(new Container());
