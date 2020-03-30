@@ -50,8 +50,50 @@ Config.gravity = -175;
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
-// 自行车图集
+// 默认的自行车动画偏移（包括跳跃和移动），没有专门设置偏移的动画就全部使用这个偏移
+Config.bikeCommonAnimationPos = [0, -40];
+
+// 默认的自行车移动图集，里面必须有bike和enemy动画
 Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
+
+// 默认的自行车跳跃图集
+Config.bikeJumpingAnimation = {
+    "1": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+    "2": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+    "3": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+    "4": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+    "5": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+    "6": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+    "7": {
+        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run5.json",
+        animationName: "xiaoxin_run",
+        interval: 5
+    },
+};
 
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 1;
@@ -3007,53 +3049,12 @@ Config.portableItemButtonPosList = [
     [100, 100],
 ];
 
-Config.bikeJumpingAnimation = {
-    "2": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-    "3": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-    "4": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-    "5": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-    "6": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-    "7": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-    "8": {
-        atlasPath: "myLaya/laya/assets/animations/xiaoxin_run5.json",
-        animationName: "xiaoxin_run",
-        interval: 5
-    },
-};
-
 // 复活拉回的时间（单位秒）（正式对外用1秒，内部测试用0.5秒）
 Config.rebornDragDuration = 1;
 // 复活气泡漂浮时间
 Config.rebornFloatFrame = 300;
 // 复活气泡漂浮速度
 Config.rebornFloatVelocity = 10;
-
-// 默认的动画偏移，没有专门设置偏移的动画就全部使用这个偏移
-Config.bikeCommonAnimationPos = [0, 0];
 
 // 自行车列表 自行车在列表里面的排序就是在界面上显示的顺序
 Config.bikeList = [
@@ -3080,18 +3081,23 @@ Config.bikeList = [
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/bike.json",
         // 移动动画偏移，没有设置的话就是用默认的偏移
-        bikeCommonAnimationPos: [0, 0],
+        //bikeCommonAnimationPos: [0, 0],
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
-            "2": {
+            "1": {
                 atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
                 animationName: "xiaoxin_run",
                 // 动画偏移，没有设置的话，使用默认的偏移
-                pos: [100, 0],
+                //pos: [0, 0],
+                interval: 5
+            },
+            "2": {
+                atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+                animationName: "xiaoxin_run",
                 interval: 5
             },
             "3": {
-                atlasPath: "myLaya/laya/assets/animations/xiaoxin_run2.json",
+                atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
                 animationName: "xiaoxin_run",
                 interval: 5
             },
@@ -3101,7 +3107,7 @@ Config.bikeList = [
                 interval: 5
             },
             "5": {
-                atlasPath: "myLaya/laya/assets/animations/xiaoxin_run3.json",
+                atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
                 animationName: "xiaoxin_run",
                 interval: 5
             },
@@ -3111,11 +3117,6 @@ Config.bikeList = [
                 interval: 5
             },
             "7": {
-                atlasPath: "myLaya/laya/assets/animations/xiaoxin_run4.json",
-                animationName: "xiaoxin_run",
-                interval: 5
-            },
-            "8": {
                 atlasPath: "myLaya/laya/assets/animations/xiaoxin_run5.json",
                 animationName: "xiaoxin_run",
                 interval: 5
@@ -3256,6 +3257,50 @@ Config.bikeList = [
             0,
             0
         ],
+        // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
+        bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5630-1.json",
+        // 移动动画偏移，没有设置的话就是用默认的偏移
+        //bikeCommonAnimationPos: [0, 0],
+        // 跳跃动画路径 没有设置的话，使用默认的动画
+        bikeJumpingAnimation: {
+            "1": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-2.json",
+                animationName: "xiaoxin_run",
+                // 动画偏移，没有设置的话，使用默认的偏移
+                //pos: [0, 0],
+                interval: 5
+            },
+            "2": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-2.json",
+                animationName: "xiaoxin_run",
+                interval: 5
+            },
+            "3": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-3.json",
+                animationName: "xiaoxin_run",
+                interval: 5
+            },
+            "4": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-3.json",
+                animationName: "xiaoxin_run",
+                interval: 5
+            },
+            "5": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-4.json",
+                animationName: "xiaoxin_run",
+                interval: 5
+            },
+            "6": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-4.json",
+                animationName: "xiaoxin_run",
+                interval: 5
+            },
+            "7": {
+                atlasPath: "myLaya/laya/assets/animations/cosplay/sns5630-5.json",
+                animationName: "xiaoxin_run",
+                interval: 5
+            },
+        },
         "index": 2,
         // 自行车名
         "name": "Select Bike2",
