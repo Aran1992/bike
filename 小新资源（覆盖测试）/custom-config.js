@@ -10794,4 +10794,7 @@ Config.defaultRedPoint = {
     positionY: 0.2,
 };
 
+// 自行车移动的时候根据移动方向进行旋转(1开启 0关闭)
+Config.bikeRotateByMoveDirection = 0;
+
 export default Config;
