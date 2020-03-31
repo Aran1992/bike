@@ -17,7 +17,7 @@ Unlock,,DrawScene.scene.json,• 恭喜玩家大人解锁新造型 •,Unlock,�
 LvUp,,DrawScene.scene.json,• 恭喜玩家大人等级提升 •,LV UP,レベル　アップ
 Free,,"DrawScene.scene.json
 GameOverScene.scene.json",免费,Free,無料
-Draw,,DrawScene.scene.json,幸运扭蛋,Draw,くじ引き
+Draw,,DrawScene.scene.json,幸运抽奖,Draw,くじ引き
 Reborn,,GameOverScene.scene.json,复活,Reborn,復活
 ResurrectionPosition,,GameScene.scene.json,可上下移动，选择复活位置哦,Sliding Up and Down to Adjust Resurrection Position,上や下に移動して復活の位置を調整することができます。
 ShowUI,,HomeScene.scene.json,显示界面,ShowUI,画面が表示されます。
@@ -46,14 +46,14 @@ RestartAfterTime,,RankScene.scene.json,${time} 之后重新开始,Restart after 
 UnlockAllBike,,ShopScene.scene.json,解锁所有的造型,Unlock All Bike,
 UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽旅程地图,Unlock All Endless Scene,
 Money2DCPresentDsc,,ShopScene.scene.json,"${money} 钱
-= ${diamond} 钻石 + ${coin} 金币","${money} Money
+= ${diamond} 金玉 + ${coin} 金币","${money} Money
 = ${diamond} Diamond + ${coin} Gold Coins",
 Present,,ShopScene.scene.json,礼物,Present,
 Money,,ShopScene.scene.json,财宝,Money,
 Map,,ShopScene.scene.json,地图,Map,
-Diamond,,,钻石,Diamond,
+Diamond,,,金玉,Diamond,
 Coin,,,金币,Gold Coin,
-DiamondIsNotEnough,,ShopScene.scene.json,钻石不足！,Diamond is not enough!,
+DiamondIsNotEnough,,ShopScene.scene.json,金玉不足！,Diamond is not enough!,
 TotalDistanceReach,,ShopScene.scene.json,总里程达到 ${distance}m 可免费解锁哟,Total distance reached ${distance}m,
 Backgrounds,,HomeScene.scene.json,背景,Backgrounds,
 Floors,,HomeScene.scene.json,地面,Floors,
@@ -67,11 +67,11 @@ ItemIsAbleToUnlock,,,报告玩家大人，您可以解锁新物品啦！,This it
 UnlockConditions,,,【解锁条件】,Unlock condition(s):,
 UnlockRewards,,,【解锁奖励】,Unlock Reward(s):,
 Would you like to cost the following items to unlock this item?,,,您是否想花费以下这些来解锁该物品？,Would you like to cost the following items to unlock this item?,
-Cost is not enough!,,,没有足够的金币或钻石！,Cost is not enough!,
+Cost is not enough!,,,没有足够的金币或金玉！,Cost is not enough!,
 This item is locked.,,,该物品未解锁。,This item is locked.,
 该自行车未解锁,,,该造型未解锁,,
 ${0} Gold Coins,,,${0} 金币,${0} Gold Coins,
-${0} Diamonds,,,${0} 钻石,${0} Diamonds,
+${0} Diamonds,,,${0} 金玉,${0} Diamonds,
 Need to unlock Map: ${0},              ,                                               ,需要解锁地图：${0}                                                                        ,Need to unlock Map: ${0},
 Total distance required to reach ${0}m,,,总里程需达 ${0}m,Total distance required to reach ${0}m,
 Total farthest distance required to reach ${0}m,,,历史最大里程需达 ${0}m,Total farthest distance required to reach ${0}m,
@@ -398,7 +398,7 @@ HasNoRebornTimes,,,已经没有复活次数了,,
 LockNotice,,,"这个内容未解锁
 解锁条件：
 ${condition}",,
-SystemUnlockTitle1,,,扭蛋 解锁,,
+SystemUnlockTitle1,,,抽奖 解锁,,
 SystemUnlockTitle2,,,排名竞赛 解锁,,
 SystemUnlockTitle3,,,排行 解锁,,
 SystemUnlockTitle4,,,家园 解锁,,
@@ -409,7 +409,7 @@ SystemUnlockTitle11,,,签到 解锁,,
 SystemUnlockTitle12,,,礼包 解锁,,
 SystemUnlockTitle13,,,福利 解锁,,
 SystemUnlockDescribe1,,,"恭喜玩家大人
-将扭蛋解锁了",,
+将抽奖解锁了",,
 SystemUnlockDescribe2,,,"恭喜玩家大人
 将排名竞赛解锁了",,
 SystemUnlockDescribe3,,,"恭喜玩家大人

@@ -108,7 +108,7 @@ Config.bikeDensity = 0.12;
 Config.bikeSprintRadius = 11;
 
 // 自行车跳跃的时候的旋转角度 顺时针旋转是正数
-Config.bikeJumpingRotation = -30;
+Config.bikeJumpingRotation = 0;
 
 // 禁止摄像头在垂直方向移动（允许移动：true：0）（禁止移动：false：1）
 Config.forbidenCameraVerticalMove = 1;
@@ -9619,7 +9619,7 @@ Config.lockSystems = {
     // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [12, 3, 5],
+        condition: [12, 10, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -9632,7 +9632,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [11, 10],
+        condition: [11, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -9645,7 +9645,7 @@ Config.lockSystems = {
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 1],
+        condition: [10, 9999],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
@@ -9658,7 +9658,7 @@ Config.lockSystems = {
     // 家园
     homeButton: {
         // 解锁条件
-        condition: [10, 2],
+        condition: [10, 9999],
         // 解锁内容标题
         title: "SystemUnlockTitle4",
         // 解锁描述
@@ -9689,7 +9689,7 @@ Config.lockSystems = {
     // 无尽模式
     endlessModeButton: {
         // 解锁条件
-        condition: [11, 8],
+        condition: [11, 4],
         // 解锁内容标题
         title: "SystemUnlockTitle5",
         // 解锁描述
