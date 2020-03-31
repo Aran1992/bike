@@ -1054,6 +1054,7 @@ export default class GameScene extends Scene {
                 this.bikeAccSprite.visible = false;
             }
             if (this.jumping) {
+                this.bikeSelfContainer.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                 if (this.jumpingAnimationFrames) {
                     this.jumpingAnimationIndex++;
                     let frameIndex = Math.floor(this.jumpingAnimationIndex / this.jumpingAnimationInterval);
