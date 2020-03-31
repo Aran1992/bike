@@ -9,7 +9,7 @@ Config.bikeLeftMargin = 350;
 // 自行车顶边距的最小值（初始路线高度）
 Config.bikeCameraMinY = 540;
 // 自行车顶边距的最大值（跳起来后恢复的路线高度）
-Config.bikeCameraMaxY = 600;
+Config.bikeCameraMaxY = 540;
 // 底下的黑色蒙版的总高度
 Config.maskHeight = 0;
 
@@ -124,7 +124,7 @@ Config.defaultItemRandomTable = {
 Config.mapList = [
     {
         // scene文件的路径
-        scenePath: "Test001",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -208,7 +208,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test002",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -292,7 +292,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test003",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -460,7 +460,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test005",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -544,7 +544,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test006",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -628,7 +628,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test007",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -712,7 +712,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test008",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -796,7 +796,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test009",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -880,7 +880,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test010",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -964,7 +964,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test011",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1048,7 +1048,7 @@ Config.mapList = [
     },
     {
         // scene文件的路径
-        scenePath: "Test012",
+        scenePath: "Test004",
         // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
         texture: {
             // 侧边
@@ -1190,22 +1190,22 @@ Config.roadSections = {
         "Random/Random021-00020101",
 
         "Random/Random021-00100101",
-        "Random/Random021-00110101",
-        "Random/Random021-00120101",
+//        "Random/Random021-00110101",
+//        "Random/Random021-00120101",
 
-        "Random/Random021-01000101",
-        "Random/Random021-01010101",
-        "Random/Random021-01020101",
+//        "Random/Random021-01000101",
+//        "Random/Random021-01010101",
+//        "Random/Random021-01020101",
 
-        "Random/Random021-02000101",
-        "Random/Random021-02010101",
-        "Random/Random021-02020101",
+//        "Random/Random021-02000101",
+//        "Random/Random021-02010101",
+//        "Random/Random021-02020101",
 
         // 关卡元素：移动平台
         "Random/Random021-10000101",
-        "Random/Random021-10010101",
-        "Random/Random021-10020101",
-        "Random/Random021-10030101",
+//        "Random/Random021-10010101",
+//        "Random/Random021-10020101",
+//        "Random/Random021-10030101",
         "Random/Random021-10040101",
 
     ],
@@ -1220,21 +1220,21 @@ Config.roadSections = {
         "Random/Random021-00020201",
 
         "Random/Random021-00100201",
-        "Random/Random021-00110201",
-        "Random/Random021-00120201",
+//        "Random/Random021-00110201",
+//        "Random/Random021-00120201",
 
-        "Random/Random021-01000201",
-        "Random/Random021-01010201",
-        "Random/Random021-01020201",
+//        "Random/Random021-01000201",
+//        "Random/Random021-01010201",
+//        "Random/Random021-01020201",
 
-        "Random/Random021-02000201",
-        "Random/Random021-02010201",
-        "Random/Random021-02020201",
+//        "Random/Random021-02000201",
+//        "Random/Random021-02010201",
+//        "Random/Random021-02020201",
 
         "Random/Random021-10000201",
-        "Random/Random021-10010201",
-        "Random/Random021-10020201",
-        "Random/Random021-10030201",
+//        "Random/Random021-10010201",
+//        "Random/Random021-10020201",
+//        "Random/Random021-10030201",
         "Random/Random021-10040201",
 
         // 关卡元素：地刺-固定
@@ -1243,21 +1243,21 @@ Config.roadSections = {
         "Random/Random021-00020301",
 
         "Random/Random021-00100301",
-        "Random/Random021-00110301",
-        "Random/Random021-00120301",
+//        "Random/Random021-00110301",
+//        "Random/Random021-00120301",
 
-        "Random/Random021-01000301",
-        "Random/Random021-01010301",
-        "Random/Random021-01020301",
+//        "Random/Random021-01000301",
+//        "Random/Random021-01010301",
+//        "Random/Random021-01020301",
 
-        "Random/Random021-02000301",
-        "Random/Random021-02010301",
-        "Random/Random021-02020301",
+//        "Random/Random021-02000301",
+//        "Random/Random021-02010301",
+//        "Random/Random021-02020301",
 
         "Random/Random021-10000301",
-        "Random/Random021-10010301",
-        "Random/Random021-10020301",
-        "Random/Random021-10030301",
+//        "Random/Random021-10010301",
+//        "Random/Random021-10020301",
+//        "Random/Random021-10030301",
         "Random/Random021-10040301",
 
         // 关卡元素：地刺-升降
@@ -1268,21 +1268,21 @@ Config.roadSections = {
         "Random/Random021-00020501",
 
         "Random/Random021-00100501",
-        "Random/Random021-00110501",
-        "Random/Random021-00120501",
+//        "Random/Random021-00110501",
+//        "Random/Random021-00120501",
 
-        "Random/Random021-01000501",
-        "Random/Random021-01010501",
-        "Random/Random021-01020501",
+//        "Random/Random021-01000501",
+//        "Random/Random021-01010501",
+//        "Random/Random021-01020501",
 
-        "Random/Random021-02000501",
-        "Random/Random021-02010501",
-        "Random/Random021-02020501",
+//        "Random/Random021-02000501",
+//        "Random/Random021-02010501",
+//        "Random/Random021-02020501",
 
         "Random/Random021-10000501",
-        "Random/Random021-10010501",
-        "Random/Random021-10020501",
-        "Random/Random021-10030501",
+//        "Random/Random021-10010501",
+//        "Random/Random021-10020501",
+//        "Random/Random021-10030501",
         "Random/Random021-10040501",
 
         // 关卡元素：小鸟-移动
@@ -1291,21 +1291,21 @@ Config.roadSections = {
         "Random/Random021-00020601",
 
         "Random/Random021-00100601",
-        "Random/Random021-00110601",
-        "Random/Random021-00120601",
+//        "Random/Random021-00110601",
+//        "Random/Random021-00120601",
 
-        "Random/Random021-01000601",
-        "Random/Random021-01010601",
-        "Random/Random021-01020601",
+//        "Random/Random021-01000601",
+//        "Random/Random021-01010601",
+//        "Random/Random021-01020601",
 
-        "Random/Random021-02000601",
-        "Random/Random021-02010601",
-        "Random/Random021-02020601",
+//        "Random/Random021-02000601",
+//        "Random/Random021-02010601",
+//        "Random/Random021-02020601",
 
         "Random/Random021-10000601",
-        "Random/Random021-10010601",
-        "Random/Random021-10020601",
-        "Random/Random021-10030601",
+//        "Random/Random021-10010601",
+//        "Random/Random021-10020601",
+//        "Random/Random021-10030601",
         "Random/Random021-10040601",
 
         // 关卡元素：火柱
@@ -6981,7 +6981,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 变大倍数
-        scale: 2,
+        scale: 1.5,
         // 闪烁间隔（单位：帧）
         twinkleInterval: 5,
         // 闪烁透明度（0-1，越低的话越透明）
@@ -7119,7 +7119,7 @@ Config.buff = {
     // buff图左右间距
     iconInterval: 30,
     // buff图与自行车上下间距
-    containerY: 30,
+    containerY: 60,
     // buff图大小（注意也会影响到倒计时数字大小）
     iconScale: 0.25,
 };
@@ -9914,7 +9914,7 @@ Config.gameLevelMode = {
         },
         {
             // 解锁需要的星星数
-            starCountUnlockNeeded: 35,
+            starCountUnlockNeeded: 999,
             // 地图描述
             dsc: "Select Map4",
             // 主页封面图
@@ -9978,7 +9978,7 @@ Config.gameLevelMode = {
         },
         {
             // 解锁需要的星星数
-            starCountUnlockNeeded: 50,
+            starCountUnlockNeeded: 999,
             // 地图描述
             dsc: "Select Map5",
             // 主页封面图
