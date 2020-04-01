@@ -156,7 +156,7 @@ export default class PreparationScene extends Scene {
 
     updateGameLevelInfo() {
         const mainScene = App.getScene("MainScene");
-        if (DataMgr.isFirstPlayGameLevel(mainScene.gameLevel, mainScene.selectedLevel)) {
+        if (DataMgr.getGameLevelStarCount(mainScene.gameLevel, mainScene.selectedLevel) !== Config.starCount) {
             this.ui.firstTimePanel.visible = true;
             const rewardTable = Config.gameLevelMode.mapList[mainScene.gameLevel].rewardList[mainScene.selectedLevel];
             const typeList = ["coin", "diamond", "exp", "bike"];
