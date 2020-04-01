@@ -47,8 +47,9 @@ export default class GameLevelResultScene extends Scene {
 
         this.refresh();
 
-        const isFirstTime = DataMgr.isFirstPlayGameLevel(this.args.gameScene.mapIndex, this.args.gameScene.levelIndex);
-        if (isFirstTime) {
+        const hasGotAllStar = this.args.gameScene.star === Config.starCount
+            && DataMgr.getGameLevelStarCount(this.args.gameScene.mapIndex, this.args.gameScene.levelIndex) !== Config.starCount;
+        if (hasGotAllStar) {
             const reward = Config.gameLevelMode.mapList[this.args.gameScene.mapIndex].rewardList[this.args.gameScene.levelIndex];
             let list = [];
             if (reward.coin) {

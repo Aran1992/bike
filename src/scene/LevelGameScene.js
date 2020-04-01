@@ -59,7 +59,7 @@ export default class LevelGameScene extends StaticGameScene {
         if (this.doubleReward) {
             exp *= 2;
         }
-        DataMgr.add(DataMgr.exp,Math.floor(exp) );
+        DataMgr.add(DataMgr.exp, Math.floor(exp));
         if (this.gameStatus === "win") {
             const table = DataMgr.get(DataMgr.gameLevelData, {});
             const map = this.mapIndex;

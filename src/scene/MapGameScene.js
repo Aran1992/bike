@@ -165,6 +165,7 @@ export default class MapGameScene extends StaticGameScene {
         score = Math.floor(score);
         DataMgr.add(DataMgr.totalScore, score);
         DataMgr.add(DataMgr.rankTotalScore, score);
+        DataMgr.add(DataMgr.mapModeWatchedAdTimes, -1);
     }
 
     gameWin(rank) {

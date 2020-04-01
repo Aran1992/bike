@@ -545,5 +545,6 @@ DataMgr.exp = "43";
 DataMgr.bikeUpgrade = "44";
 DataMgr.rankCostLevel = "45";
 DataMgr.rankCostNextRefreshTime = "46";
+DataMgr.mapModeWatchedAdTimes = "47";
 
 export default DataMgr;

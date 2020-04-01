@@ -29,6 +29,7 @@ export default class PreparationScene extends Scene {
             item.ui.itemIcon.anchor.set(0.5, 0.5);
             item.ui.bikeSprite = new BikeSprite(item.ui.bikeSpritePanel);
         }
+        this.onClick(this.ui.mapAdButton, this.onClickMapAdButton.bind(this));
     }
 
     onShow(mode) {
@@ -38,11 +39,16 @@ export default class PreparationScene extends Scene {
         this.ui.gameLevelTitle.visible = false;
         this.ui.coinPanel.visible = false;
         this.ui.firstTimePanel.visible = false;
+        this.ui.mapAdButton.visible = false;
+        this.ui.startButton.visible = true;
         if (this.mode === "Map") {
             this.ui.mapModeImage.visible = true;
             this.ui.coinPanel.visible = true;
             this.ui.costCoinText.text = DataMgr.getRankModeCostCoin();
             this.rewardType = DataMgr.preparationDataMap;
+            const hasAd = DataMgr.get(DataMgr.mapModeWatchedAdTimes, 0) > 0;
+            this.ui.mapAdButton.visible = !hasAd;
+            this.ui.startButton.visible = hasAd;
         } else if (this.mode === "GameLevel") {
             this.ui.gameLevelTitle.visible = true;
             const mainScene = App.getScene("MainScene");
@@ -139,9 +145,18 @@ export default class PreparationScene extends Scene {
         }
     }
 
+    onClickMapAdButton() {
+        window.PlatformHelper.showAd(success => {
+            if (success) {
+                DataMgr.add(DataMgr.mapModeWatchedAdTimes, 1);
+                this.show(this.mode);
+            }
+        });
+    }
+
     updateGameLevelInfo() {
         const mainScene = App.getScene("MainScene");
-        if (DataMgr.isFirstPlayGameLevel(mainScene.gameLevel, mainScene.selectedLevel)) {
+        if (DataMgr.getGameLevelStarCount(mainScene.gameLevel, mainScene.selectedLevel) !== Config.starCount) {
             this.ui.firstTimePanel.visible = true;
             const rewardTable = Config.gameLevelMode.mapList[mainScene.gameLevel].rewardList[mainScene.selectedLevel];
             const typeList = ["coin", "diamond", "exp", "bike"];
