@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
+    "selectedBox":15,
     "selecteID":3,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":289,
+    "maxID":290,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -104,7 +104,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":1280,"skin":"images/bg-main-scene-21.png","height":600,"centerX":0,"bottom":0},
+            "props":{"width":1280,"height":600,"centerX":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -115,21 +115,38 @@
             "child":[
                 {
                     "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"width":650,"skin":"images/bg-201.png","sizeGrid":"50,0,50,0","right":20,"height":630,"bottom":10},
+                    "nodeParent":15,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":288,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"width":570,"var":"list","right":20,"height":590,"centerY":0},
+                    "props":{"width":600,"var":"list","right":50,"height":590,"bottom":30},
                     "nodeParent":15,
                     "label":"list",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item",
-                            "props":{"width":190,"runtime":"../laya/assets/sounds/SE312.mp3","name":"item","height":190},
+                            "props":{"width":200,"runtime":"../laya/assets/sounds/SE312.mp3","name":"item","height":200},
                             "nodeParent":3,
                             "label":"item",
                             "isOpen":true,
@@ -139,9 +156,10 @@
                             "compId":30,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,bikePanel",
-                                    "props":{"y":0,"x":0,"width":175,"name":"bikePanel","height":175},
+                                    "props":{"width":175,"name":"bikePanel","height":175,"centerY":0,"centerX":0},
                                     "nodeParent":30,
                                     "label":"bikePanel",
                                     "isOpen":false,
@@ -153,7 +171,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image",
-                                            "props":{"width":150,"skin":"images/bg-31.png","height":150,"centerY":0,"centerX":0},
+                                            "props":{"width":150,"skin":"images/bg-221.png","height":150,"centerY":0,"centerX":0},
                                             "nodeParent":20,
                                             "label":"Image",
                                             "isOpen":true,
@@ -168,7 +186,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,selectedImage",
-                                            "props":{"width":150,"skin":"images/bg-32.png","name":"selectedImage","height":150,"centerY":0,"centerX":0},
+                                            "props":{"width":150,"skin":"images/bg-222.png","name":"selectedImage","height":150,"centerY":0,"centerX":0},
                                             "nodeParent":20,
                                             "label":"selectedImage",
                                             "isOpen":true,
@@ -282,7 +300,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image,redPoint",
-                                            "props":{"top":0,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":0,"name":"redPoint"},
+                                            "props":{"top":0,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":0,"name":"redPoint"},
                                             "nodeParent":20,
                                             "label":"redPoint",
                                             "isDirectory":false,
@@ -294,21 +312,6 @@
                                             "$HIDDEN":false
                                         }]
                                 }]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"top":0,"skin":"images/bg-main-scene-21.png","right":0,"left":0,"bottom":0},
-                            "nodeParent":3,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":288,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
                         }],
                     "$HIDDEN":false
                 },
@@ -999,7 +1002,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":600,"skin":"images/bg-main-scene-21.png","left":20,"height":360,"bottom":10},
+                    "props":{"width":550,"skin":"images/bg-201.png","left":20,"height":450,"bottom":10},
                     "nodeParent":15,
                     "label":"Image",
                     "isOpen":false,
@@ -1010,11 +1013,26 @@
                     "child":[
                         {
                             "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"top":30,"skin":"images/bg-211.png","sizeGrid":"0,0,0,0","right":30,"left":30,"bottom":30},
+                            "nodeParent":21,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":289,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
                             "searchKey":"Image,drawButton",
-                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":62},
+                            "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":-1062},
                             "nodeParent":21,
                             "label":"drawButton",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -1067,7 +1085,7 @@
                         {
                             "type":"Label",
                             "searchKey":"Label,bikeDscText",
-                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#ffffff","centerY":10,"centerX":30},
+                            "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#000000","centerY":10,"centerX":30},
                             "nodeParent":21,
                             "label":"bikeDscText",
                             "isDirectory":false,
@@ -1083,7 +1101,7 @@
                             "props":{"width":101,"var":"upgradePanelButton","top":60,"skin":"images/button-skill.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
                             "nodeParent":21,
                             "label":"upgradePanelButton",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -1092,7 +1110,7 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"y":0,"x":0,"skin":"images/english/skill.png","centerX":0,"bottom":-40},
+                                    "props":{"x":0,"skin":"images/english/skill.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                                     "nodeParent":65,
                                     "label":"Image",
                                     "isDirectory":false,
@@ -1119,7 +1137,7 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image,redPoint",
-                                    "props":{"top":-20,"skin":"images/redPoint.png","scaleY":1.2,"scaleX":1.2,"right":-20,"name":"redPoint"},
+                                    "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                                     "nodeParent":65,
                                     "label":"redPoint",
                                     "isDirectory":false,

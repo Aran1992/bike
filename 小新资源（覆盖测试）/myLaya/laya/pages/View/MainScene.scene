@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":167,
+    "selectedBox":81,
+    "selecteID":91,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
@@ -51,14 +51,13 @@
             "props":{"y":260,"width":650,"skin":"images/bg-201.png","left":200,"height":400,"bottom":60},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":231,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":434,"skin":"images/bg-202.png","left":25,"height":233,"bottom":25},
@@ -87,13 +86,12 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"width":150,"var":"bikeButton","top":130,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":30,"height":150},
                     "nodeParent":231,
                     "label":"bikeButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -115,7 +113,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/bike.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
+                            "props":{"skin":"images/english/bike.png","scaleY":0.9,"scaleX":0.9,"centerX":0,"bottom":15},
                             "nodeParent":235,
                             "label":"Image",
                             "isDirectory":false,
@@ -142,7 +140,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,redPoint",
-                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                             "nodeParent":235,
                             "label":"redPoint",
                             "isDirectory":false,
@@ -155,7 +153,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"text":"123456","strokeColor":"#000000","stroke":5,"left":191,"fontSize":25,"color":"#ffffff","bottom":305,"align":"left"},
@@ -177,14 +174,13 @@
             "props":{"top":0,"right":0,"left":0,"height":110},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
@@ -239,7 +235,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
@@ -294,7 +289,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
@@ -335,7 +329,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
@@ -376,20 +369,18 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"width":100,"var":"userImage","skin":"images/UserIconDefault.png","left":30,"height":100,"centerY":0},
                     "nodeParent":15,
                     "label":"userImage",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":60,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,userNameText",
                             "props":{"var":"userNameText","text":"Player","strokeColor":"#000000","stroke":5,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":0},
@@ -403,7 +394,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,levelText",
                             "props":{"var":"levelText","top":0,"text":"${LevelDsc}","strokeColor":"#000000","stroke":5,"fontSize":20,"color":"#ffffff","centerX":0},
@@ -426,14 +416,13 @@
             "props":{"width":800,"top":120,"left":50,"height":120},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,playerinfoButton",
                     "props":{"width":101,"visible":false,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":-1000,"centerY":0},
@@ -473,7 +462,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,systemButton",
                     "props":{"width":101,"var":"systemButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":200,"height":101,"centerY":0},
@@ -501,7 +489,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/system.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
+                            "props":{"skin":"images/english/system.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                             "nodeParent":23,
                             "label":"Image",
                             "isDirectory":false,
@@ -513,7 +501,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,homeButton",
                     "props":{"width":101,"var":"homeButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":350,"height":101,"centerY":0},
@@ -541,7 +528,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/home.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
+                            "props":{"skin":"images/english/home.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                             "nodeParent":24,
                             "label":"Image",
                             "isDirectory":false,
@@ -568,7 +555,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,redPoint",
-                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                             "nodeParent":24,
                             "label":"redPoint",
                             "isDirectory":false,
@@ -583,7 +570,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rankButton",
                     "props":{"width":101,"var":"rankButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":500,"height":101,"centerY":0},
@@ -611,7 +597,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/rank.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
+                            "props":{"skin":"images/english/rank.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                             "nodeParent":25,
                             "label":"Image",
                             "isDirectory":false,
@@ -637,7 +623,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,drawButton",
                     "props":{"width":101,"var":"drawButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":650,"height":101,"centerY":0},
@@ -665,7 +650,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/draw.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
+                            "props":{"skin":"images/english/draw.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                             "nodeParent":26,
                             "label":"Image",
                             "isDirectory":false,
@@ -693,7 +678,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,redPoint",
-                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                            "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                             "nodeParent":26,
                             "label":"redPoint",
                             "isDirectory":false,
@@ -897,7 +882,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/english/shop.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
+                    "props":{"skin":"images/english/shop.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                     "nodeParent":240,
                     "label":"Image",
                     "isDirectory":false,
@@ -924,7 +909,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image,redPoint",
-                    "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                    "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                     "nodeParent":240,
                     "label":"redPoint",
                     "isDirectory":false,
@@ -966,7 +951,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"x":0,"skin":"images/english/sign.png","centerX":0,"bottom":-5},
+                    "props":{"x":0,"skin":"images/english/sign.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                     "nodeParent":77,
                     "label":"Image",
                     "isDirectory":false,
@@ -979,7 +964,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image,redPoint",
-                    "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                    "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                     "nodeParent":77,
                     "label":"redPoint",
                     "isDirectory":false,
@@ -998,13 +983,14 @@
             "props":{"width":101,"var":"giftButton","skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"height":101,"bottom":210},
             "nodeParent":1,
             "label":"giftButton",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":81,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage,giftLockedImage",
                     "props":{"y":0,"x":0,"visible":false,"var":"giftLockedImage","top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -1019,9 +1005,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"x":10,"skin":"images/english/Gift.png","centerX":0,"bottom":-5},
+                    "props":{"skin":"images/english/Gift.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
                     "nodeParent":81,
                     "label":"Image",
                     "isDirectory":false,
@@ -1032,9 +1019,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,giftTimeText",
-                    "props":{"var":"giftTimeText","text":"00:00","fontSize":20,"color":"#ffffff","centerX":0,"bottom":-30},
+                    "props":{"var":"giftTimeText","text":"00:00","strokeColor":"#000000","stroke":3,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":-30},
                     "nodeParent":81,
                     "label":"giftTimeText",
                     "isDirectory":false,
@@ -1046,9 +1034,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,redPoint",
-                    "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
+                    "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
                     "nodeParent":81,
                     "label":"redPoint",
                     "isDirectory":false,
@@ -1533,14 +1522,13 @@
             "props":{"skin":"images/loading-1.png","name":"exp","centerX":-115,"bottom":10},
             "nodeParent":1,
             "label":"exp",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":167,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expProgress",
                     "props":{"var":"expProgress","skin":"images/loading-2.png","centerY":0,"centerX":0},
@@ -1556,7 +1544,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,expRate",
                     "props":{"var":"expRate","text":"88888888 / 99999999","strokeColor":"#000000","stroke":4,"fontSize":25,"color":"#ffffff","centerY":0,"centerX":0,"align":"center"},
