@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":15,
+    "selectedBox":15,
+    "selecteID":77,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":98,
+    "maxID":101,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -46,10 +46,10 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":620,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","height":350,"centerY":0,"centerX":0},
+            "props":{"width":620,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","height":350,"centerY":0,"centerX":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -57,22 +57,35 @@
             "child":[
                 {
                     "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"top":30,"skin":"images/bg-211.png","right":30,"left":30,"bottom":30},
+                    "nodeParent":15,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":98,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel",
-                    "props":{"width":620,"height":150,"centerY":-80,"centerX":0},
+                    "props":{"width":620,"height":100,"centerY":-60,"centerX":0},
                     "nodeParent":15,
                     "label":"Panel",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":69,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":550,"skin":"images/bg-51.png","height":120,"centerY":0,"centerX":0},
+                            "props":{"skin":"images/bg-261.png","centerY":0,"centerX":-120},
                             "nodeParent":69,
                             "label":"Image",
                             "isOpen":true,
@@ -84,10 +97,9 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/se_icon_bgm-1.png","left":60,"centerY":0},
+                            "props":{"skin":"images/se_icon_bgm-1.png","left":120,"centerY":0},
                             "nodeParent":69,
                             "label":"Image",
                             "isOpen":true,
@@ -99,10 +111,9 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/BGM.png","left":150,"centerY":0},
+                            "props":{"skin":"images/english/BGM.png","right":70,"centerY":0},
                             "nodeParent":69,
                             "label":"Image",
                             "isOpen":true,
@@ -114,10 +125,9 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,bgmButton",
-                            "props":{"width":114,"var":"bgmButton","height":57,"centerY":0,"centerX":150},
+                            "props":{"width":120,"var":"bgmButton","height":80,"centerY":0,"centerX":0},
                             "nodeParent":69,
                             "label":"bgmButton",
                             "isOpen":true,
@@ -127,65 +137,33 @@
                             "compId":92,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,bgmOffImage",
-                                    "props":{"y":0,"x":1,"var":"bgmOffImage","skin":"images/bg_setting-2.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
+                                    "props":{"var":"bgmOffImage","skin":"images/bg_setting-2.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
                                     "nodeParent":92,
                                     "label":"bgmOffImage",
                                     "isOpen":true,
-                                    "isDirectory":true,
+                                    "isDirectory":false,
                                     "isAniNode":true,
-                                    "hasChild":true,
+                                    "hasChild":false,
                                     "compId":86,
                                     "child":[
-                                        {
-                                            "x":75,
-                                            "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/english/close.png","centerY":0,"centerX":25},
-                                            "nodeParent":86,
-                                            "label":"Image",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":87,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        }],
+                                        ],
                                     "$HIDDEN":false
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,bgmOnImage",
-                                    "props":{"y":0,"x":0,"var":"bgmOnImage","skin":"images/bg_setting-1.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
+                                    "props":{"var":"bgmOnImage","skin":"images/bg_setting-1.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
                                     "nodeParent":92,
                                     "label":"bgmOnImage",
                                     "isOpen":true,
-                                    "isDirectory":true,
+                                    "isDirectory":false,
                                     "isAniNode":true,
-                                    "hasChild":true,
+                                    "hasChild":false,
                                     "compId":63,
                                     "child":[
-                                        {
-                                            "x":75,
-                                            "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/english/open.png","centerY":0,"centerX":-25},
-                                            "nodeParent":63,
-                                            "label":"Image",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":67,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        }],
+                                        ],
                                     "$HIDDEN":false
                                 }]
                         }]
@@ -194,20 +172,19 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel",
-                    "props":{"x":0,"width":620,"height":150,"centerY":80,"centerX":0},
+                    "props":{"x":0,"width":620,"height":100,"centerY":60,"centerX":0},
                     "nodeParent":15,
                     "label":"Panel",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":77,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":550,"skin":"images/bg-51.png","height":120,"centerY":0,"centerX":0},
+                            "props":{"skin":"images/bg-261.png","centerY":0,"centerX":-120},
                             "nodeParent":77,
                             "label":"Image",
                             "isOpen":true,
@@ -219,10 +196,9 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/se_icon_se-1.png","left":60,"centerY":0},
+                            "props":{"skin":"images/se_icon_se-1.png","left":120,"centerY":0},
                             "nodeParent":77,
                             "label":"Image",
                             "isOpen":true,
@@ -234,10 +210,9 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/SE.png","left":150,"centerY":0},
+                            "props":{"skin":"images/english/SE.png","right":70,"centerY":0},
                             "nodeParent":77,
                             "label":"Image",
                             "isOpen":true,
@@ -249,10 +224,9 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,soundButton",
-                            "props":{"y":-113,"x":553,"width":114,"var":"soundButton","height":57,"centerY":0,"centerX":150},
+                            "props":{"width":120,"var":"soundButton","height":80,"centerY":0,"centerX":0},
                             "nodeParent":77,
                             "label":"soundButton",
                             "isOpen":true,
@@ -262,70 +236,65 @@
                             "compId":93,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,soundOffImage",
-                                    "props":{"y":0,"x":1,"var":"soundOffImage","skin":"images/bg_setting-2.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
+                                    "props":{"y":0,"var":"soundOffImage","skin":"images/bg_setting-2.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
                                     "nodeParent":93,
                                     "label":"soundOffImage",
                                     "isOpen":true,
-                                    "isDirectory":true,
+                                    "isDirectory":false,
                                     "isAniNode":true,
-                                    "hasChild":true,
+                                    "hasChild":false,
                                     "compId":94,
                                     "child":[
-                                        {
-                                            "x":75,
-                                            "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/english/close.png","centerY":0,"centerX":25},
-                                            "nodeParent":94,
-                                            "label":"Image",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":95,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        }],
+                                        ],
                                     "$HIDDEN":false
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,soundOnImage",
                                     "props":{"y":0,"x":0,"var":"soundOnImage","skin":"images/bg_setting-1.png","runtime":"../laya/assets/sounds/SE004.mp3","centerY":0,"centerX":0},
                                     "nodeParent":93,
                                     "label":"soundOnImage",
                                     "isOpen":true,
-                                    "isDirectory":true,
+                                    "isDirectory":false,
                                     "isAniNode":true,
-                                    "hasChild":true,
+                                    "hasChild":false,
                                     "compId":96,
                                     "child":[
-                                        {
-                                            "x":75,
-                                            "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/english/open.png","centerY":0,"centerX":-25},
-                                            "nodeParent":96,
-                                            "label":"Image",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":97,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        }],
+                                        ],
                                     "$HIDDEN":false
                                 }],
                             "$HIDDEN":false
                         }],
                     "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"top":-30,"skin":"images/bg-271.png","left":0},
+                    "nodeParent":15,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":99,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/system-2.png","scaleY":0.8,"scaleX":0.8,"centerY":0,"centerX":0},
+                            "nodeParent":99,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":100,
+                            "child":[
+                                ]
+                        }]
                 }]
         }],
     "animations":[
