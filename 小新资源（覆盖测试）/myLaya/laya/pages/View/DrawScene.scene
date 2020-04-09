@@ -1,8 +1,7 @@
 {
-    "x":0,
     "type":"Scene",
-    "selectedBox":39,
-    "selecteID":38,
+    "selectedBox":1,
+    "selecteID":134,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -15,7 +14,6 @@
     "compId":1,
     "child":[
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"skin":"images/bg-main-scene-101.png","right":0,"left":0,"bottom":0},
@@ -29,10 +27,9 @@
                 ]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"y":10,"x":1000,"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
+            "props":{"x":1000,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
             "nodeParent":1,
             "label":"Image",
             "isOpen":false,
@@ -70,10 +67,9 @@
                 }]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"y":10,"x":720,"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
+            "props":{"x":720,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
             "nodeParent":1,
             "label":"Image",
             "isOpen":false,
@@ -111,10 +107,9 @@
                 }]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"y":10,"x":160,"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
+            "props":{"x":160,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
             "nodeParent":1,
             "label":"Image",
             "isOpen":false,
@@ -152,10 +147,9 @@
                 }]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"y":10,"x":440,"width":270,"top":10,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
+            "props":{"x":440,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
             "nodeParent":1,
             "label":"Image",
             "isOpen":false,
@@ -193,7 +187,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,returnButton",
             "props":{"y":25,"x":25,"var":"returnButton","top":25,"skin":"images/ButtonBack_Blue.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","left":25},
@@ -207,7 +200,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,bikeButton",
             "props":{"width":101,"var":"bikeButton","skin":"images/button-bike-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":81,"height":101,"bottom":-1063},
@@ -248,7 +240,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,drawButton",
             "props":{"var":"drawButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":100},
@@ -276,7 +267,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,advertButton",
             "props":{"visible":false,"var":"advertButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":100},
@@ -318,7 +308,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Label",
             "searchKey":"Label,drawTimeText",
             "props":{"var":"drawTimeText","text":"00:00 ${Free}","strokeColor":"#000000","stroke":5,"right":150,"fontSize":35,"color":"#ffffff","bottom":45},
@@ -333,7 +322,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,costDiamondPanel",
             "props":{"width":150,"var":"costDiamondPanel","right":130,"height":60,"bottom":220},
@@ -346,7 +334,6 @@
             "compId":39,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/icon-diamond.png","scaleY":0.8,"scaleX":0.8,"centerY":0,"centerX":-40},
@@ -360,7 +347,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,costDiamondText",
                     "props":{"var":"costDiamondText","text":"9999","strokeColor":"#000000","stroke":5,"fontSize":35,"color":"#ffffff","centerY":0,"centerX":20},
@@ -377,7 +363,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"scaleY":1,"scaleX":1,"right":0,"left":0,"bottom":0},
@@ -560,7 +545,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,ballImage",
             "props":{"var":"ballImage","skin":"images/icon-draw-ball.png","centerY":-72,"centerX":9},
@@ -577,10 +561,395 @@
     "animations":[
         {
             "nodes":[
-                ],
-            "name":"ani1",
+                {
+                    "target":134,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":360,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":0
+                            }],
+                        "x":[
+                            {
+                                "value":640,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"x",
+                                "index":0
+                            }],
+                        "scaleY":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":0
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":20,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":23,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":25,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":28
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":30,
+                                "functions":[
+                                    ]
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":0
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":20,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":23,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":25,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":28,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":30,
+                                "functions":[
+                                    ]
+                            }],
+                        "pivotY":[
+                            {
+                                "value":360,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"pivotY",
+                                "index":0
+                            }],
+                        "pivotX":[
+                            {
+                                "value":640,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"pivotX",
+                                "index":0
+                            }]
+                    }
+                },
+                {
+                    "target":37,
+                    "keyframes":{
+                        "scaleY":[
+                            {
+                                "value":0.8,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleY",
+                                "index":0
+                            },
+                            {
+                                "value":0.8,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleY",
+                                "index":50,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleY",
+                                "index":53,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.8,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleY",
+                                "index":55,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleY",
+                                "index":58
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleY",
+                                "index":60
+                            }],
+                        "scaleX":[
+                            {
+                                "value":0.8,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleX",
+                                "index":0
+                            },
+                            {
+                                "value":0.8,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleX",
+                                "index":50,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleX",
+                                "index":53,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.8,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleX",
+                                "index":55,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleX",
+                                "index":58
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":37,
+                                "key":"scaleX",
+                                "index":60
+                            }]
+                    }
+                }],
+            "name":"normal",
             "id":1,
             "frameRate":24,
-            "action":0
+            "action":2
+        },
+        {
+            "nodes":[
+                {
+                    "target":134,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":500,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                },
+                {
+                    "target":7,
+                    "keyframes":{
+                        "x":[
+                            {
+                                "value":-100,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":7,
+                                "key":"x",
+                                "index":0
+                            },
+                            {
+                                "value":25,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":7,
+                                "key":"x",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                }],
+            "name":"in",
+            "id":2,
+            "frameRate":24,
+            "action":1
+        },
+        {
+            "nodes":[
+                {
+                    "target":134,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":500,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"y",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                },
+                {
+                    "target":7,
+                    "keyframes":{
+                        "x":[
+                            {
+                                "value":25,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":7,
+                                "key":"x",
+                                "index":0
+                            },
+                            {
+                                "value":-100,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":7,
+                                "key":"x",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                }],
+            "name":"out",
+            "id":2,
+            "frameRate":24,
+            "action":1
         }]
 }
