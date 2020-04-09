@@ -1,8 +1,7 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":81,
-    "selecteID":91,
+    "selectedBox":1,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
@@ -60,10 +59,10 @@
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":434,"skin":"images/bg-202.png","left":25,"height":233,"bottom":25},
+                    "props":{"width":340,"skin":"images/bg-202.png","left":25,"height":233,"bottom":25},
                     "nodeParent":231,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -88,7 +87,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
-                    "props":{"width":150,"var":"bikeButton","top":130,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":30,"height":150},
+                    "props":{"width":258,"var":"bikeButton","top":138,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"bottom":25},
                     "nodeParent":231,
                     "label":"bikeButton",
                     "isOpen":true,
@@ -100,7 +99,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"width":135,"skin":"images/button-bike-scene.png","height":141,"centerY":0,"centerX":0},
+                            "props":{"top":0,"skin":"images/button-bike-scene.png","right":0,"left":0,"bottom":0},
                             "nodeParent":235,
                             "label":"Image",
                             "isDirectory":false,
@@ -113,7 +112,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/bike.png","scaleY":0.9,"scaleX":0.9,"centerX":0,"bottom":15},
+                            "props":{"skin":"images/english/bike.png","centerX":0,"bottom":15},
                             "nodeParent":235,
                             "label":"Image",
                             "isDirectory":false,
@@ -126,7 +125,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
-                            "props":{"y":-120,"x":35,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                            "props":{"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
                             "nodeParent":235,
                             "label":"lockedImage",
                             "isDirectory":false,
@@ -541,7 +540,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
-                            "props":{"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                            "props":{"x":0,"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
                             "nodeParent":24,
                             "label":"lockedImage",
                             "isDirectory":false,
@@ -610,7 +609,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
-                            "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                            "props":{"x":0,"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
                             "nodeParent":25,
                             "label":"lockedImage",
                             "isDirectory":false,
@@ -628,7 +627,7 @@
                     "props":{"width":101,"var":"drawButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":650,"height":101,"centerY":0},
                     "nodeParent":28,
                     "label":"drawButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -663,7 +662,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
-                            "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                            "props":{"x":0,"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
                             "nodeParent":26,
                             "label":"lockedImage",
                             "isOpen":true,
@@ -698,13 +697,14 @@
             "props":{"width":330,"top":120,"right":50,"height":600},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
                     "props":{"width":300,"var":"endlessModeButton","top":10,"skin":"images/button-11.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10,"height":170},
@@ -732,7 +732,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
-                            "props":{"visible":false,"top":-25,"skin":"images/key_lock.png","scaleY":1.5,"scaleX":1.5,"name":"lockedImage","centerX":0},
+                            "props":{"visible":false,"top":-25,"skin":"images/key_lock-2.png","name":"lockedImage","centerX":0},
                             "nodeParent":29,
                             "label":"lockedImage",
                             "isDirectory":false,
@@ -745,6 +745,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelModeButton",
                     "props":{"width":300,"var":"gamelevelModeButton","top":200,"skin":"images/button-12.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10,"height":170},
@@ -771,18 +772,20 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"width":300,"var":"mapModeButton","top":400,"skin":"images/button-13.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
                     "nodeParent":21,
                     "label":"mapModeButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":30,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Match.png","scaleY":1.5,"scaleX":1.5,"centerY":0,"centerX":0},
@@ -796,9 +799,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
-                            "props":{"x":0,"visible":false,"top":-25,"skin":"images/key_lock.png","scaleY":1.5,"scaleX":1.5,"name":"lockedImage","centerX":0},
+                            "props":{"x":0,"visible":false,"top":-25,"skin":"images/key_lock-2.png","name":"lockedImage","centerX":0},
                             "nodeParent":30,
                             "label":"lockedImage",
                             "isDirectory":false,
@@ -811,6 +815,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessHelpButton",
                     "props":{"var":"endlessHelpButton","top":10,"skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":10},
@@ -825,6 +830,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelHelpButton",
                     "props":{"var":"gamelevelHelpButton","top":200,"skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":10},
@@ -839,6 +845,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapHelpButton",
                     "props":{"var":"mapHelpButton","top":400,"skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":10},
@@ -895,7 +902,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image,lockedImage",
-                    "props":{"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                    "props":{"x":0,"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
                     "nodeParent":240,
                     "label":"lockedImage",
                     "isDirectory":false,
@@ -937,7 +944,7 @@
                 {
                     "type":"Image",
                     "searchKey":"Image,lockedImage",
-                    "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                    "props":{"x":0,"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
                     "nodeParent":77,
                     "label":"lockedImage",
                     "isDirectory":false,
@@ -983,17 +990,16 @@
             "props":{"width":101,"var":"giftButton","skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"height":101,"bottom":210},
             "nodeParent":1,
             "label":"giftButton",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":81,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage,giftLockedImage",
-                    "props":{"y":0,"x":0,"visible":false,"var":"giftLockedImage","top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                    "props":{"x":0,"visible":false,"var":"giftLockedImage","top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
                     "nodeParent":81,
                     "label":"lockedImage",
                     "isDirectory":false,
@@ -1005,7 +1011,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/Gift.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
@@ -1019,7 +1024,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,giftTimeText",
                     "props":{"var":"giftTimeText","text":"00:00","strokeColor":"#000000","stroke":3,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":-30},
@@ -1034,7 +1038,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,redPoint",
                     "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
