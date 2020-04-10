@@ -140,8 +140,8 @@ export default class PreparationScene extends Scene {
         } else if (this.mode === "GameLevel") {
             App.hideScene("MainScene");
             App.hideScene("PreparationScene");
-            const mainScene = App.getScene("MainScene");
-            App.showScene("LevelGameScene", mainScene.gameLevel, mainScene.selectedLevel);
+            const gameLevelScene = App.getScene("GameLevelScene");
+            App.showScene("LevelGameScene", gameLevelScene.gameLevel, gameLevelScene.selectedLevel);
         }
     }
 
