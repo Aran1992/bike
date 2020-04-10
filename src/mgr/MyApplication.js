@@ -43,6 +43,7 @@ import BikeDetailScene from "../scene/BikeDetailScene";
 import GameLevelFailedScene from "../scene/GameLevelFailedScene";
 import GameLevelResultScene from "../scene/GameLevelResultScene";
 import HelpGameLevelScene from "../scene/HelpGameLevelScene";
+import GameLevelScene from "../scene/GameLevelScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -122,6 +123,7 @@ export default class MyApplication extends Application {
             "BikeDetailScene": BikeDetailScene,
             "GameLevelFailedScene": GameLevelFailedScene,
             "GameLevelResultScene": GameLevelResultScene,
+            "GameLevelScene": GameLevelScene,
         };
 
         this.sceneTable = {};

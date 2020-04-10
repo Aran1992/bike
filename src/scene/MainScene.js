@@ -276,6 +276,7 @@ export default class MainScene extends Scene {
     onClickGamelevelModeButton() {
         this.mode = "GameLevel";
         this.refreshMode();
+        App.showScene("GameLevelScene");
     }
 
     onClickLastLevelButton() {
