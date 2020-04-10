@@ -51,8 +51,8 @@ export default class PreparationScene extends Scene {
             this.ui.startButton.visible = hasAd;
         } else if (this.mode === "GameLevel") {
             this.ui.gameLevelTitle.visible = true;
-            const mainScene = App.getScene("MainScene");
-            this.ui.gameLevelTitle.text = App.getText(Config.gameLevelMode.mapList[mainScene.gameLevel].dsc);
+            const gameLevelScene = App.getScene("GameLevelScene");
+            this.ui.gameLevelTitle.text = App.getText(Config.gameLevelMode.mapList[gameLevelScene.gameLevel].dsc);
             this.rewardType = DataMgr.preparationDataGameLevel;
             this.updateGameLevelInfo();
         } else if (this.mode === "Endless") {
@@ -155,10 +155,10 @@ export default class PreparationScene extends Scene {
     }
 
     updateGameLevelInfo() {
-        const mainScene = App.getScene("MainScene");
-        if (DataMgr.getGameLevelStarCount(mainScene.gameLevel, mainScene.selectedLevel) !== Config.starCount) {
+        const gameLevelScene = App.getScene("GameLevelScene");
+        if (DataMgr.getGameLevelStarCount(gameLevelScene.gameLevel, gameLevelScene.selectedLevel) !== Config.starCount) {
             this.ui.firstTimePanel.visible = true;
-            const rewardTable = Config.gameLevelMode.mapList[mainScene.gameLevel].rewardList[mainScene.selectedLevel];
+            const rewardTable = Config.gameLevelMode.mapList[gameLevelScene.gameLevel].rewardList[gameLevelScene.selectedLevel];
             const typeList = ["coin", "diamond", "exp", "bike"];
             let rewardIndex = 0;
             for (let typeIndex = 0; typeIndex < typeList.length; typeIndex++) {
