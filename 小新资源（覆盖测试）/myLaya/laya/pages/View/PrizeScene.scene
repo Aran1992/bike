@@ -6,7 +6,7 @@
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":237,
+    "maxID":239,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"y":0,"x":0,"top":0,"skin":"images/bg-main-scene-2.png","right":0,"left":0,"bottom":0},
+            "props":{"y":0,"x":0,"top":0,"skin":"images/bg-311.png","right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -33,7 +33,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,Panel",
-            "props":{"width":700,"skin":"images/bg-main-scene-11.png","name":"Panel","height":500,"centerY":0,"centerX":0},
+            "props":{"width":700,"skin":"images/bg-322.png","name":"Panel","height":600,"centerY":0,"centerX":0},
             "nodeParent":1,
             "label":"Panel",
             "isOpen":true,
@@ -46,7 +46,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":605,"top":50,"skin":"images/bg-101.png","left":48,"height":90},
+                    "props":{"width":400,"top":-50,"skin":"images/bg-301.png","height":120,"centerX":0},
                     "nodeParent":16,
                     "label":"Image",
                     "isOpen":true,
@@ -59,7 +59,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/CONG.png","centerY":0,"centerX":0},
+                            "props":{"skin":"images/english/CONG.png","scaleY":0.8,"scaleX":0.8,"centerY":0,"centerX":0},
                             "nodeParent":18,
                             "label":"Image",
                             "isOpen":true,
@@ -75,16 +75,17 @@
                     "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"x":18,"width":660,"var":"list","top":210,"height":200},
+                    "props":{"width":660,"var":"list","height":200,"centerY":0,"centerX":0},
                     "nodeParent":16,
                     "label":"list",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":151,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item",
                             "props":{"width":220,"var":"item","height":200,"centerY":0,"centerX":0},
@@ -97,9 +98,10 @@
                             "compId":207,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"width":200,"skin":"images/bg-43.png","height":200,"centerY":0,"centerX":0},
+                                    "props":{"width":200,"skin":"images/bg-221.png","height":200,"centerY":0,"centerX":0},
                                     "nodeParent":207,
                                     "label":"Image",
                                     "isOpen":true,
@@ -109,6 +111,7 @@
                                     "compId":152,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image",
                                             "props":{"x":0,"width":175,"height":175,"centerX":0,"bottom":10},
@@ -121,6 +124,7 @@
                                             "compId":156,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,itemIcon",
                                                     "props":{"width":0,"var":"itemIcon","scaleY":2,"scaleX":2,"height":0,"centerY":0,"centerX":0},
@@ -134,6 +138,7 @@
                                                         ]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Label",
                                                     "searchKey":"Label,numberText",
                                                     "props":{"y":145,"text":"999999","strokeColor":"#000000","stroke":5,"name":"numberText","fontSize":40,"color":"#ffffff","centerX":0,"bottom":5},
@@ -147,6 +152,7 @@
                                                         ]
                                                 },
                                                 {
+                                                    "x":90,
                                                     "type":"Panel",
                                                     "searchKey":"Panel,bikePanel",
                                                     "props":{"width":0,"name":"bikePanel","height":0,"centerY":20,"centerX":0},
@@ -168,7 +174,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,returnButton",
-                    "props":{"y":-13,"x":613,"var":"returnButton","top":-13,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":9},
+                    "props":{"var":"returnButton","top":-25,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-25},
                     "nodeParent":16,
                     "label":"returnButton",
                     "isDirectory":false,
@@ -178,6 +184,36 @@
                     "child":[
                         ]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"y":0,"x":0,"skin":"images/show-91.png","left":100,"bottom":10},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":237,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"y":0,"x":0,"skin":"images/show-101.png","right":100,"bottom":10},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":238,
+            "child":[
+                ]
         }],
     "animations":[
         {

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":16,
+    "selecteID":262,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":261,
+    "maxID":263,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -581,6 +581,36 @@
                             "$HIDDEN":false
                         }]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"skin":"images/show-121.png","left":150,"bottom":120},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":261,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"skin":"images/show-131.png","scaleY":0.8,"scaleX":0.8,"right":150,"bottom":120},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":262,
+            "child":[
+                ]
         }],
     "animations":[
         {

@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":16,
-    "selecteID":8,
+    "selectedBox":1,
+    "selecteID":68,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":66,
+    "maxID":69,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"y":0,"x":0,"top":0,"skin":"images/bg-main-scene-2.png","right":0,"left":0,"bottom":0},
+            "props":{"y":0,"x":0,"top":0,"skin":"images/bg-311.png","right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -33,46 +33,42 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":1200,"skin":"images/bg-21.png","height":650,"centerY":20,"centerX":0},
+            "props":{"width":1200,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","height":650,"centerY":20,"centerX":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":16,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":-40,"x":121,"top":-40,"skin":"images/bg-22.png","centerX":0},
+                    "props":{"y":-50,"x":450,"width":300,"top":-50,"skin":"images/bg-301.png","height":100,"centerX":0},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":61,
+                    "compId":66,
                     "child":[
                         {
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"text":"${Count}","fontSize":40,"color":"#ffffff","centerY":-10,"centerX":0},
-                            "nodeParent":61,
-                            "label":"Label",
-                            "isOpen":true,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/count.png","scaleY":0.6,"scaleX":0.6,"centerY":0,"centerX":0},
+                            "nodeParent":66,
+                            "label":"Image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":62,
+                            "compId":67,
                             "child":[
-                                ],
-                            "$HIDDEN":false
+                                ]
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,matchRacetrack",
                     "props":{"var":"matchRacetrack","top":-20,"skin":"images/racetrack.png","scaleY":1.3,"scaleX":1.3,"left":50},
@@ -87,13 +83,12 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":650,"top":180,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","left":50,"height":250},
+                    "props":{"width":650,"top":180,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":50,"height":250},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -126,7 +121,7 @@
                                         {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"text":"积分 500","left":20,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
+                                            "props":{"width":200,"text":"积分 500","strokeColor":"#000000","stroke":5,"left":20,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":34,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -139,7 +134,7 @@
                                         {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"text":"*2倍->","left":250,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
+                                            "props":{"width":200,"text":"*2倍->","strokeColor":"#000000","stroke":5,"left":250,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":34,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -152,7 +147,7 @@
                                         {
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"text":"积分 1000","left":430,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
+                                            "props":{"text":"积分 1000","strokeColor":"#000000","stroke":5,"left":430,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":34,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -166,7 +161,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":450,"skin":"images/bottom-num-31.png","scaleY":0.9,"scaleX":0.9,"left":250},
@@ -220,7 +214,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,diamondRebornButton",
                     "props":{"width":220,"var":"diamondRebornButton","top":520,"skin":"images/button-22.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":90},
@@ -289,7 +282,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,advertRebornButton",
                     "props":{"width":220,"var":"advertRebornButton","top":520,"skin":"images/button-21.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":420},
@@ -331,10 +323,9 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,hasNoRebornTimesText",
-                    "props":{"var":"hasNoRebornTimesText","top":530,"text":"${HasNoRebornTimes}","left":120,"fontSize":50,"color":"#ffffff"},
+                    "props":{"var":"hasNoRebornTimesText","top":530,"text":"${HasNoRebornTimes}","strokeColor":"#000000","stroke":5,"left":120,"fontSize":50,"color":"#ffffff"},
                     "nodeParent":16,
                     "label":"hasNoRebornTimesText",
                     "isDirectory":false,
@@ -345,13 +336,12 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mainButton",
-                    "props":{"var":"mainButton","skin":"images/button-main.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":320,"bottom":70},
+                    "props":{"var":"mainButton","skin":"images/bg-353.png","scaleY":0.6,"scaleX":0.6,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":270,"bottom":70},
                     "nodeParent":16,
                     "label":"mainButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -360,7 +350,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/Main.png","centerX":0,"bottom":-50},
+                            "props":{"skin":"images/english/Main.png","scaleY":0.75,"scaleX":0.65,"right":20,"centerY":-15},
                             "nodeParent":8,
                             "label":"Image",
                             "isDirectory":false,
@@ -372,13 +362,12 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,restartButton",
-                    "props":{"var":"restartButton","skin":"images/button-restart.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":120,"bottom":70},
+                    "props":{"var":"restartButton","skin":"images/bg-352.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":30,"bottom":70},
                     "nodeParent":16,
                     "label":"restartButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -387,7 +376,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/replay.png","scaleY":1,"scaleX":1,"centerX":0,"bottom":-50},
+                            "props":{"skin":"images/english/replay.png","scaleY":0.7,"scaleX":0.6,"left":20,"centerY":-15},
                             "nodeParent":10,
                             "label":"Image",
                             "isDirectory":false,
@@ -398,6 +387,21 @@
                                 ]
                         }]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"skin":"images/show-21.png","right":130,"centerY":-50},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":68,
+            "child":[
+                ]
         }],
     "animations":[
         {

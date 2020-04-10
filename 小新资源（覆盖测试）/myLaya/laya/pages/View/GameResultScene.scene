@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":14,
+    "selectedBox":1,
+    "selecteID":68,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":64,
+    "maxID":69,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"top":0,"skin":"images/bg-main-scene-2.png","right":0,"left":0,"bottom":0},
+            "props":{"top":0,"skin":"images/bg-311.png","right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -33,7 +33,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,panel",
-            "props":{"width":1200,"var":"panel","skin":"images/bg-21.png","height":650,"centerY":20,"centerX":0},
+            "props":{"width":1200,"var":"panel","skin":"images/bg-201.png","sizeGrid":"50,50,50,50","height":650,"centerY":20,"centerX":0},
             "nodeParent":1,
             "label":"panel",
             "isOpen":true,
@@ -46,29 +46,28 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":-40,"skin":"images/bg-22.png","centerX":0},
+                    "props":{"y":-50,"x":450,"width":300,"top":-50,"skin":"images/bg-301.png","height":100,"centerX":0},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":60,
+                    "compId":66,
                     "child":[
                         {
-                            "type":"Label",
-                            "searchKey":"Label",
-                            "props":{"text":"${Count}","fontSize":40,"color":"#ffffff","centerY":-10,"centerX":0},
-                            "nodeParent":60,
-                            "label":"Label",
-                            "isOpen":true,
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/count.png","scaleY":0.6,"scaleX":0.6,"centerY":0,"centerX":0},
+                            "nodeParent":66,
+                            "label":"Image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":61,
+                            "compId":67,
                             "child":[
-                                ],
-                            "$HIDDEN":false
+                                ]
                         }]
                 },
                 {
@@ -78,16 +77,17 @@
                     "props":{"top":100,"left":350},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":14,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
-                            "props":{"var":"totalScoreText","text":"JAMES 当前总积分 1000","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"align":"center"},
+                            "props":{"var":"totalScoreText","text":"JAMES 当前总积分 1000","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"align":"center"},
                             "nodeParent":14,
                             "label":"totalScoreText",
                             "isDirectory":false,
@@ -102,16 +102,17 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":650,"top":150,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","left":50,"height":150},
+                    "props":{"width":650,"top":150,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":50,"height":150},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":15,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,resultList",
                             "props":{"width":600,"var":"resultList","height":150,"centerY":0,"centerX":0},
@@ -124,6 +125,7 @@
                             "compId":34,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,resultItem",
                                     "props":{"width":600,"var":"resultItem","top":0,"height":75,"centerX":0},
@@ -136,9 +138,10 @@
                                     "compId":35,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,originScoreText",
-                                            "props":{"width":200,"var":"originScoreText","text":"积分 500","left":20,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
+                                            "props":{"width":200,"var":"originScoreText","text":"积分 500","strokeColor":"#000000","stroke":5,"left":20,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":35,
                                             "label":"originScoreText",
                                             "isDirectory":false,
@@ -149,9 +152,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,scoreMultipleText",
-                                            "props":{"width":200,"var":"scoreMultipleText","text":"*2倍->","left":250,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
+                                            "props":{"width":200,"var":"scoreMultipleText","text":"*2倍->","strokeColor":"#000000","stroke":5,"left":250,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":35,
                                             "label":"scoreMultipleText",
                                             "isDirectory":false,
@@ -162,9 +166,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,finalScoreText",
-                                            "props":{"width":200,"var":"finalScoreText","text":"积分 1000","left":430,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
+                                            "props":{"width":200,"var":"finalScoreText","text":"积分 1000","strokeColor":"#000000","stroke":5,"left":430,"height":50,"fontSize":30,"color":"#ffffff","centerY":0,"align":"left"},
                                             "nodeParent":35,
                                             "label":"finalScoreText",
                                             "isDirectory":false,
@@ -181,19 +186,20 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":650,"top":320,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","left":50,"height":300},
+                    "props":{"width":650,"top":320,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":50,"height":300},
                     "nodeParent":2,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":16,
                     "child":[
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,rankNameText",
-                            "props":{"var":"rankNameText","top":25,"text":"本次排名","fontSize":30,"color":"#ffffff","centerX":0,"align":"center"},
+                            "props":{"var":"rankNameText","top":25,"text":"本次排名","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerX":0,"align":"center"},
                             "nodeParent":16,
                             "label":"rankNameText",
                             "isDirectory":false,
@@ -204,6 +210,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,rankList",
                             "props":{"width":600,"var":"rankList","top":75,"height":200,"centerX":0},
@@ -216,6 +223,7 @@
                             "compId":48,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,rankItem",
                                     "props":{"width":600,"var":"rankItem","top":0,"left":0,"height":50},
@@ -228,9 +236,10 @@
                                     "compId":49,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":150,"top":5,"text":"第一名","left":0,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":150,"top":5,"text":"第一名","strokeColor":"#000000","stroke":5,"left":0,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":49,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -241,9 +250,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"top":5,"text":"玩家名","left":125,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"top":5,"text":"玩家名","strokeColor":"#000000","stroke":5,"left":125,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":49,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -254,9 +264,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"top":5,"text":"奖励积分","left":350,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"top":5,"text":"奖励积分","strokeColor":"#000000","stroke":5,"left":350,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":49,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -267,9 +278,10 @@
                                                 ]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label",
-                                            "props":{"width":200,"top":5,"text":"1000","left":500,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
+                                            "props":{"width":200,"top":5,"text":"1000","strokeColor":"#000000","stroke":5,"left":500,"height":50,"fontSize":30,"color":"#ffffff","align":"left"},
                                             "nodeParent":49,
                                             "label":"Label",
                                             "isDirectory":false,
@@ -328,7 +340,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,hasDoubleRewardText",
-                    "props":{"var":"hasDoubleRewardText","text":"${HasDoubleReward}","right":40,"fontSize":50,"color":"#ffffff","bottom":220},
+                    "props":{"var":"hasDoubleRewardText","text":"${HasDoubleReward}","strokeColor":"#000000","stroke":5,"right":40,"fontSize":50,"color":"#ffffff","bottom":220},
                     "nodeParent":2,
                     "label":"hasDoubleRewardText",
                     "isDirectory":false,
@@ -342,30 +354,46 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,mainButton",
-                    "props":{"var":"mainButton","skin":"images/button-main.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":210,"bottom":70},
+                    "props":{"y":0,"var":"mainButton","skin":"images/bg-353.png","scaleY":0.6,"scaleX":0.6,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":150,"bottom":70},
                     "nodeParent":2,
                     "label":"mainButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":4,
+                    "compId":64,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/Main.png","centerX":0,"bottom":-50},
-                            "nodeParent":4,
+                            "props":{"skin":"images/english/Main.png","scaleY":0.75,"scaleX":0.65,"right":20,"centerY":-15},
+                            "nodeParent":64,
                             "label":"Image",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":58,
+                            "compId":65,
                             "child":[
                                 ]
                         }]
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"y":10,"skin":"images/show-41.png","scaleY":0.6,"scaleX":0.6,"right":170,"centerY":-130},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":68,
+            "child":[
+                ]
         }],
     "animations":[
         {
