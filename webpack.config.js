@@ -20,6 +20,5 @@ module.exports = {
         path: path.resolve("./dist"),
         filename: "bundle.js"
     },
-    mode: "development",
-    devtool: "eval-source-map"
+    mode: "development"
 };

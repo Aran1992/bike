@@ -59,8 +59,8 @@ const list = [
     "isDirectory",
     "isAniNode",
     "hasChild",
-    "compId",
-    "animations",
+    "id",
+    "functions",
 ];
 
 const filterSceneData = (data) => {

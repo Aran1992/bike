@@ -1,7 +1,8 @@
-import {Container} from "../libs/pixi-wrapper";
+import {Container, resources} from "../libs/pixi-wrapper";
 import EventMgr from "../mgr/EventMgr";
 import SceneHelper from "../mgr/SceneHelper";
 import UIHelper from "../ui/UIHelper";
+import Animation from "../ui/Animation";
 
 export default class Scene extends Container {
     create(createCallback) {
@@ -12,9 +13,7 @@ export default class Scene extends Container {
             this.sceneFilePath = this.__proto__.constructor.sceneFilePath;
             this.loadResources();
         } else {
-            this.onCreate();
-            this.createCallback();
-            this.createCallback = undefined;
+            this.internalOnCreate();
         }
     }
 
@@ -26,11 +25,18 @@ export default class Scene extends Container {
     show(...args) {
         this.visible = true;
         this.onShow(...args);
+        this.stopNormalAnimation();
+        this.playAnimation("in", () => {
+            this.createNormalAnimation();
+        });
     }
 
     hide() {
-        this.visible = false;
-        this.onHide();
+        this.stopNormalAnimation();
+        this.playAnimation("out", () => {
+            this.visible = false;
+            this.onHide();
+        });
     }
 
     loadResources() {
@@ -43,9 +49,29 @@ export default class Scene extends Container {
 
     onLoadedAllRes() {
         SceneHelper.createScene(this.sceneFilePath, this);
+        this.internalOnCreate();
+    }
+
+    internalOnCreate() {
         this.onCreate();
         this.createCallback();
         this.createCallback = undefined;
+    }
+
+    createNormalAnimation() {
+        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data.animations) {
+            const animation = resources[this.sceneFilePath].data.animations.find(animation => animation.name === "normal");
+            if (animation) {
+                this.normalAnimation = new Animation(this, animation, () => this.createNormalAnimation());
+            }
+        }
+    }
+
+    stopNormalAnimation() {
+        if (this.normalAnimation) {
+            this.normalAnimation.stop();
+            delete this.normalAnimation;
+        }
     }
 
     onCreate() {
@@ -58,6 +84,10 @@ export default class Scene extends Container {
             }
         }
         this.eventTable = undefined;
+        if (this.normalAnimation) {
+            this.normalAnimation.stop();
+            delete this.normalAnimation;
+        }
     }
 
     onShow() {
@@ -83,5 +113,25 @@ export default class Scene extends Container {
 
     isShowed() {
         return this.visible;
+    }
+
+    getChildByID(id) {
+        return this.uiWithID[id];
+    }
+
+    playAnimation(name, callback) {
+        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data.animations) {
+            const animation = resources[this.sceneFilePath].data.animations.find(animation => animation.name === name);
+            if (animation) {
+                App.showMask();
+                return new Animation(this, animation, () => {
+                    App.hideMask();
+                    if (callback) {
+                        callback();
+                    }
+                });
+            }
+        }
+        callback();
     }
 }

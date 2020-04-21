@@ -16,12 +16,13 @@ function createScene(path, sceneContainer) {
     sceneContainer.myheight = App.sceneHeight;
     sceneContainer.interactive = true;
     sceneContainer.ui = {};
+    sceneContainer.uiWithID = {};
     let callbackList = [];
-    sceneData.child.forEach(child => sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui, callbackList)));
+    sceneData.child.forEach(child => sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui, sceneContainer.uiWithID, callbackList)));
     callbackList.forEach(callback => callback());
 }
 
-function createSceneChild(child, parent, root, callbackList) {
+function createSceneChild(child, parent, root, idRoot, callbackList) {
     let data = child.props;
     let item;
     switch (child.type) {
@@ -49,13 +50,16 @@ function createSceneChild(child, parent, root, callbackList) {
         root[data.var] = item;
         item.var = data.var;
     }
+    if (child.compId !== undefined) {
+        idRoot[child.compId] = item;
+    }
     if (data.name) {
         item.uiname = data.name;
     }
     if (data.runtime) {
         item.clickSoundPath = data.runtime.replace("../", "myLaya/");
     }
-    child.child.forEach(child => item.addChild(createSceneChild(child, item, root, callbackList)));
+    child.child.forEach(child => item.addChild(createSceneChild(child, item, root, idRoot, callbackList)));
     if (data.layoutEnabled !== undefined) {
         callbackList.push((() => {
             item.scrollView = new ScrollView({root: item, isHorizontal: data.layoutEnabled});
