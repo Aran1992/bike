@@ -1,7 +1,6 @@
 import Config from "../config";
-import {AnimatedSprite, Container, resources, Sprite} from "../libs/pixi-wrapper";
+import {AnimatedSprite, Container, Sprite, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
-import Utils from "../mgr/Utils";
 
 export default class BikeSprite {
     constructor(parent, childIndex) {
@@ -16,24 +15,56 @@ export default class BikeSprite {
     }
 
     setBikeID(id) {
-        let config = Config.bikeList.find(bike => bike.id === id);
-        if (config.imagePath && config.imagePath.length !== 0) {
-            this.decorateSprite.texture = resources[config.imagePath].texture;
-            this.decorateSprite.anchor.set(...config.anchor);
-            this.decorateSprite.scale.set(...config.scale);
-            this.decorateSprite.position.set(...config.position);
+        this.config = Config.bikeList.find(bike => bike.id === id);
+        this.animationPath = this.config.bikeCommonAnimation || Config.bikeCommonAnimation;
+        this.updateDecorate();
+        if (this.isAnimationLoaded()) {
+            this.updateAnimation();
+        } else {
+            this.bikeSprite.visible = false;
+            this.loadAnimation();
+        }
+    }
+
+    isAnimationLoaded() {
+        return App.hasLoadResource(this.animationPath);
+    }
+
+    loadAnimation() {
+        App.loadResources([this.animationPath], this.onLoadedAnimation.bind(this), () => 0);
+    }
+
+    onLoadedAnimation() {
+        this.updateAnimation();
+    }
+
+    updateAnimation() {
+        // 有可能一开始设置成A 但是A的资源还没加载完成就又设置成B 这个时候A的资源加载回来的时候 其实是不想要显示的
+        if (this.isAnimationLoaded()) {
+            const textures = GameUtils.getFrames(this.animationPath, "bike");
+            if (this.bikeAnimSprite) {
+                this.bikeAnimSprite.destroy();
+            }
+            this.bikeAnimSprite = this.bikeSprite.addChildAt(new AnimatedSprite(textures), 0);
+            this.bikeAnimSprite.anchor.set(0.5, 0.5);
+            this.bikeAnimSprite.position.set(...(this.config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos));
+            if (this.playing) {
+                this.bikeAnimSprite.play();
+            }
+            this.bikeSprite.visible = true;
+        }
+    }
+
+    updateDecorate() {
+        if (this.config.imagePath && this.config.imagePath.length !== 0) {
+            this.decorateSprite.texture = Texture.from(this.config.imagePath);
+            this.decorateSprite.anchor.set(...this.config.anchor);
+            this.decorateSprite.scale.set(...this.config.scale);
+            this.decorateSprite.position.set(...this.config.position);
             this.decorateSprite.visible = true;
         } else {
             this.decorateSprite.visible = false;
         }
-        const textures = GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike");
-        if (this.bikeAnimSprite === undefined) {
-            this.bikeAnimSprite = this.bikeSprite.addChildAt(new AnimatedSprite(textures), 0);
-            this.bikeAnimSprite.anchor.set(0.5, 0.5);
-        } else {
-            this.bikeAnimSprite.textures = textures;
-        }
-        this.bikeAnimSprite.position.set(...(config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos));
     }
 
     setPositionX(x) {
@@ -45,7 +76,7 @@ export default class BikeSprite {
     }
 
     getLeftBorderX() {
-        return this.bikeSprite.x - this.bikeAnimSprite.width / 2;
+        return this.bikeSprite.x - this.getWidth() / 2;
     }
 
     setPosition(x, y) {
@@ -53,15 +84,21 @@ export default class BikeSprite {
     }
 
     getWidth() {
-        return this.bikeAnimSprite.width;
+        return this.bikeAnimSprite ? this.bikeAnimSprite.width : 0;
     }
 
     play() {
-        this.bikeAnimSprite.play();
+        if (this.bikeAnimSprite) {
+            this.bikeAnimSprite.play();
+        }
+        this.playing = true;
     }
 
     stop() {
-        this.bikeAnimSprite.stop();
+        if (this.bikeAnimSprite) {
+            this.bikeAnimSprite.stop();
+        }
+        this.playing = false;
     }
 
     destroy() {
@@ -73,17 +110,4 @@ export default class BikeSprite {
     }
 }
 
-const bikeAnimation = [];
-Config.bikeList.forEach(bike => {
-    if (bike.bikeCommonAnimation) {
-        bikeAnimation.push(bike.bikeCommonAnimation);
-    }
-    if (bike.bikeJumpingAnimation) {
-        for (const key in bike.bikeJumpingAnimation) {
-            if (bike.bikeJumpingAnimation.hasOwnProperty(key)) {
-                bikeAnimation.push(bike.bikeJumpingAnimation[key].atlasPath);
-            }
-        }
-    }
-});
-BikeSprite.resPathList = [Config.bikeCommonAnimation, ...Utils.values(Config.bikeList).map(obj => obj.imagePath), ...bikeAnimation];
+BikeSprite.resPathList = [];

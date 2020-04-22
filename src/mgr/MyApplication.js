@@ -129,6 +129,8 @@ export default class MyApplication extends Application {
         this.sceneTable = {};
 
         this.listenGameRunStatus();
+
+        this.waitLoadList = [];
     }
 
     showScene(sceneName, ...args) {
@@ -161,7 +163,18 @@ export default class MyApplication extends Application {
         }
     }
 
+    hasLoadResource(path) {
+        if (resources[path] !== undefined && resources[path].isComplete) {
+            return true;
+        }
+        return MusicMgr.hasLoadedAudio(path);
+    }
+
     loadResources(resPathList, onLoadedCallback, onProgressCallback, minLoadTime = 0, count = 0) {
+        if (loader.loading) {
+            this.waitLoadList.push([resPathList, onLoadedCallback, onProgressCallback, minLoadTime, count]);
+            return;
+        }
         let start = new Date().getTime();
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined && !MusicMgr.hasLoadedAudio(path));
@@ -182,6 +195,13 @@ export default class MyApplication extends Application {
             }
         });
 
+        let loadNextRes = () => {
+            const next = this.waitLoadList.shift();
+            if (next) {
+                this.loadResources(...next);
+            }
+        };
+
         let onLoadedResource = () => {
             if (isMusicLoaded && isCommonLoaded) {
                 this.onLoadEnded();
@@ -193,9 +213,13 @@ export default class MyApplication extends Application {
                 } else {
                     if (remain <= 0) {
                         onLoadedCallback();
+                        loadNextRes();
                     } else {
                         onProgressCallback(100);
-                        setTimeout(onLoadedCallback, remain);
+                        setTimeout(() => {
+                            onLoadedCallback();
+                            loadNextRes();
+                        }, remain);
                     }
                 }
             }
@@ -206,7 +230,6 @@ export default class MyApplication extends Application {
             onLoadedResource();
         });
         console.log("loading", JSON.stringify(commonResPathList, undefined, "\t"));
-        // todo loader.loading 正在加载中的话 不能再次进行加载
         loader
             .add(commonResPathList)
             .on("progress", (loader, resource) => {
