@@ -1072,10 +1072,11 @@ export default class GameScene extends Scene {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
                 this.bikeFrame++;
-                this.bikeFrame = this.bikeFrame % this.bikeFrames.length;
                 let cv = this.bikeBody.getLinearVelocity().x;
                 let bv = Config.bikeBasicVelocity;
-                let frame = Math.floor(this.bikeFrame / (Config.framesForChangeImageInBasicVelocity / (cv / bv)));
+                let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
+                this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
+                let frame = Math.floor(this.bikeFrame / framesEachFrame);
                 this.bikeAnimSprite.texture = this.bikeFrames[frame];
                 this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
             }
