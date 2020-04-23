@@ -132,9 +132,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -216,9 +216,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+            side2: "images/map/stg20/l_stg20Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+            top2: "images/map/stg20/l_stg20Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg20/l_stg20_01.png",
@@ -300,9 +300,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg06/l_stg06Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg06/l_stg06Road01SideSkin.png",
+            side2: "images/map/stg06/l_stg06Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg06/l_stg06Road01TopSkin.png",
+            top2: "images/map/stg06/l_stg06Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg06/l_stg06_01.png",
@@ -384,9 +384,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg04/l_stg04Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg04/l_stg04Road01SideSkin.png",
+            side2: "images/map/stg04/l_stg04Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg04/l_stg04Road01TopSkin.png",
+            top2: "images/map/stg04/l_stg04Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg04/l_stg04_01.png",
@@ -468,9 +468,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg02/l_stg02Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg02/l_stg02Road01SideSkin.png",
+            side2: "images/map/stg02/l_stg02Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg02/l_stg02Road01TopSkin.png",
+            top2: "images/map/stg02/l_stg02Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg02/l_stg02_01.png",
@@ -552,9 +552,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -636,9 +636,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -720,9 +720,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -804,9 +804,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -888,9 +888,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -972,9 +972,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -1056,9 +1056,9 @@ Config.mapList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -1477,9 +1477,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -1549,9 +1549,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg20/l_stg20Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+            side2: "images/map/stg20/l_stg20Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+            top2: "images/map/stg20/l_stg20Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg20/l_stg20_01.png",
@@ -1621,9 +1621,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg06/l_stg06Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg06/l_stg06Road01SideSkin.png",
+            side2: "images/map/stg06/l_stg06Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg06/l_stg06Road01TopSkin.png",
+            top2: "images/map/stg06/l_stg06Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg06/l_stg06_01.png",
@@ -1693,9 +1693,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg04/l_stg04Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg04/l_stg04Road01SideSkin.png",
+            side2: "images/map/stg04/l_stg04Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg04/l_stg04Road01TopSkin.png",
+            top2: "images/map/stg04/l_stg04Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg04/l_stg04_01.png",
@@ -1765,9 +1765,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg02/l_stg02Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg02/l_stg02Road01SideSkin.png",
+            side2: "images/map/stg02/l_stg02Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg02/l_stg02Road01TopSkin.png",
+            top2: "images/map/stg02/l_stg02Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg02/l_stg02_01.png",
@@ -1837,9 +1837,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -1909,9 +1909,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -1981,9 +1981,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -2053,9 +2053,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -2125,9 +2125,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -2197,9 +2197,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -2269,9 +2269,9 @@ Config.endlessMode.sceneList = [
             // 底部
             top: "images/map/stg40/l_stg40Road01TopSkin.png",
             // 侧边
-            side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
             // 底部
-            top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
             // 背景 有多少层背景就配置多少张
             bg: [
                 "images/map/stg40/l_stg40_01.png",
@@ -9734,9 +9734,9 @@ Config.gameLevelMode = {
 				// 底部
 				top: "images/map/stg40/l_stg40Road01TopSkin.png",
 				// 侧边
-				side2: "images/map/stg40/l_stg40Road01SideSkin.png",
+				side2: "images/map/stg40/l_stg40Road02SideSkin.png",
 				// 底部
-				top2: "images/map/stg40/l_stg40Road01TopSkin.png",
+				top2: "images/map/stg40/l_stg40Road02TopSkin.png",
 				// 背景 有多少层背景就配置多少张
 				bg: [
 					"images/map/stg40/l_stg40_01.png",
@@ -9798,9 +9798,9 @@ Config.gameLevelMode = {
 				// 底部
 				top: "images/map/stg20/l_stg20Road01TopSkin.png",
 				// 侧边
-				side2: "images/map/stg20/l_stg20Road01SideSkin.png",
+				side2: "images/map/stg20/l_stg20Road02SideSkin.png",
 				// 底部
-				top2: "images/map/stg20/l_stg20Road01TopSkin.png",
+				top2: "images/map/stg20/l_stg20Road02TopSkin.png",
 				// 背景 有多少层背景就配置多少张
 				bg: [
 					"images/map/stg20/l_stg20_01.png",
@@ -9862,9 +9862,9 @@ Config.gameLevelMode = {
 				// 底部
 				top: "images/map/stg06/l_stg06Road01TopSkin.png",
 				// 侧边
-				side2: "images/map/stg06/l_stg06Road01SideSkin.png",
+				side2: "images/map/stg06/l_stg06Road02SideSkin.png",
 				// 底部
-				top2: "images/map/stg06/l_stg06Road01TopSkin.png",
+				top2: "images/map/stg06/l_stg06Road02TopSkin.png",
 				// 背景 有多少层背景就配置多少张
 				bg: [
 					"images/map/stg06/l_stg06_01.png",
@@ -9926,9 +9926,9 @@ Config.gameLevelMode = {
 				// 底部
 				top: "images/map/stg04/l_stg04Road01TopSkin.png",
 				// 侧边
-				side2: "images/map/stg04/l_stg04Road01SideSkin.png",
+				side2: "images/map/stg04/l_stg04Road02SideSkin.png",
 				// 底部
-				top2: "images/map/stg04/l_stg04Road01TopSkin.png",
+				top2: "images/map/stg04/l_stg04Road02TopSkin.png",
 				// 背景 有多少层背景就配置多少张
 				bg: [
 					"images/map/stg04/l_stg04_01.png",
@@ -9990,9 +9990,9 @@ Config.gameLevelMode = {
 				// 底部
 				top: "images/map/stg02/l_stg02Road01TopSkin.png",
 				// 侧边
-				side2: "images/map/stg02/l_stg02Road01SideSkin.png",
+				side2: "images/map/stg02/l_stg02Road02SideSkin.png",
 				// 底部
-				top2: "images/map/stg02/l_stg02Road01TopSkin.png",
+				top2: "images/map/stg02/l_stg02Road02TopSkin.png",
 				// 背景 有多少层背景就配置多少张
 				bg: [
 					"images/map/stg02/l_stg02_01.png",
