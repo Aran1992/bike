@@ -235,7 +235,7 @@ export default class Bike {
         let rp = GameUtils.physicsPos2renderPos(pp);
         this.bikeOutterContainer.x = rp.x;
         this.bikeOutterContainer.y = rp.y;
-        if (!this.isDead && !this.jumping && Config.bikeRotateByMoveDirection) {
+        if (!this.isDead && !this.jumping) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
         }

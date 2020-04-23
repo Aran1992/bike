@@ -1073,7 +1073,7 @@ export default class GameScene extends Scene {
                 }
                 this.bikeFrame++;
                 let cv = this.bikeBody.getLinearVelocity().x;
-                let bv = Config.bikeVelocity;
+                let bv = Config.bikeBasicVelocity;
                 let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
                 this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
                 let frame = Math.floor(this.bikeFrame / framesEachFrame);
