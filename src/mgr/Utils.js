@@ -10,6 +10,10 @@ export default class Utils {
         return angle / 180 * Math.PI;
     }
 
+    static radius2angle(radius) {
+        return radius / Math.PI * 180;
+    }
+
     static createLinearGradientMask(width, height, colorStop) {
         let canvas = document.createElement("canvas");
         canvas.width = width;

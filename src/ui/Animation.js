@@ -1,4 +1,5 @@
 import TWEEN from "@tweenjs/tween.js";
+import Utils from "../mgr/Utils";
 
 const supportCommonKeys = [
     "x",
@@ -6,7 +7,6 @@ const supportCommonKeys = [
     "alpha",
     "width",
     "height",
-    "rotation",
 ];
 
 function setObjKeyValue(obj, key, value) {
@@ -14,6 +14,8 @@ function setObjKeyValue(obj, key, value) {
         obj.scale.x = value;
     } else if (key === "scaleY") {
         obj.scale.y = value;
+    } else if (key === "rotation") {
+        obj.rotation = Utils.angle2radius(value);
     } else if (supportCommonKeys.indexOf(key) !== -1) {
         obj[key] = value;
     } else {
@@ -26,6 +28,8 @@ function getObjKeyValue(obj, key) {
         return obj.scale.x;
     } else if (key === "scaleY") {
         return obj.scale.y;
+    } else if (key === "rotation") {
+        return Utils.radius2angle(obj.rotation);
     } else if (supportCommonKeys.indexOf(key) !== -1) {
         return obj[key];
     } else {

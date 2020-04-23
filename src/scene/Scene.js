@@ -59,11 +59,9 @@ export default class Scene extends Container {
     }
 
     createNormalAnimation() {
-        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data.animations) {
-            const animation = resources[this.sceneFilePath].data.animations.find(animation => animation.name === "normal");
-            if (animation) {
-                this.normalAnimation = new Animation(this, animation, () => this.createNormalAnimation());
-            }
+        const animation = this.getAnimationConfig("normal");
+        if (animation) {
+            this.normalAnimation = new Animation(this, animation, () => this.createNormalAnimation());
         }
     }
 
@@ -119,19 +117,22 @@ export default class Scene extends Container {
         return this.uiWithID[id];
     }
 
-    playAnimation(name, callback) {
-        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data.animations) {
-            const animation = resources[this.sceneFilePath].data.animations.find(animation => animation.name === name);
-            if (animation) {
-                App.showMask();
-                return new Animation(this, animation, () => {
-                    App.hideMask();
-                    if (callback) {
-                        callback();
-                    }
-                });
-            }
+    playAnimation(name, callback = () => 0) {
+        const animation = this.getAnimationConfig(name);
+        if (animation) {
+            App.showMask();
+            return new Animation(this, animation, () => {
+                App.hideMask();
+                callback();
+            });
+        } else {
+            callback();
         }
-        callback();
+    }
+
+    getAnimationConfig(name) {
+        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data.animations) {
+            return resources[this.sceneFilePath].data.animations.find(animation => animation.name === name);
+        }
     }
 }
