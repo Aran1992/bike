@@ -10799,7 +10799,7 @@ Config.bikeRotateByMoveDirection = 0;
 
 // 自行车假定的基本速率
 Config.bikeBasicVelocity = 20;
-// 自行车在基本速率之下，多少帧换一张图
+// 自行车在基本速率之下，多少帧换一张图！
 Config.framesForChangeImageInBasicVelocity = 2;
 
 export default Config;
