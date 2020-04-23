@@ -807,11 +807,14 @@ export default class GameScene extends Scene {
 
         let id = this.getBikeID();
         let config = Config.bikeList.find(config => config.id === id);
-        this.bikeDecorateSprite = new Sprite(resources[config.imagePath].texture);
-        this.bikeSprite.addChild(this.bikeDecorateSprite);
-        this.bikeDecorateSprite.anchor.set(...config.anchor);
-        this.bikeDecorateSprite.scale.set(...config.scale);
-        this.bikeDecorateSprite.position.set(...config.position);
+
+        if (config.imagePath) {
+            this.bikeDecorateSprite = new Sprite(resources[config.imagePath].texture);
+            this.bikeSprite.addChild(this.bikeDecorateSprite);
+            this.bikeDecorateSprite.anchor.set(...config.anchor);
+            this.bikeDecorateSprite.scale.set(...config.scale);
+            this.bikeDecorateSprite.position.set(...config.position);
+        }
 
         this.player = {};
         this.player.velocity = new Value();
@@ -1069,10 +1072,12 @@ export default class GameScene extends Scene {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
                 this.bikeFrame++;
-                if (this.bikeFrame >= this.bikeFrames.length) {
-                    this.bikeFrame = 0;
-                }
-                this.bikeAnimSprite.texture = this.bikeFrames[this.bikeFrame];
+                let cv = this.bikeBody.getLinearVelocity().x;
+                let bv = Config.bikeBasicVelocity;
+                let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
+                this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
+                let frame = Math.floor(this.bikeFrame / framesEachFrame);
+                this.bikeAnimSprite.texture = this.bikeFrames[frame];
                 this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
             }
         }

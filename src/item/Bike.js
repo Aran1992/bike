@@ -70,12 +70,15 @@ export default class Bike {
         this.bikeAnimSprite.texture = this.frames[this.frameIndex];
         this.bikeAnimSprite.position.set(...this.config.animPos);
 
-        let decorateSprite = this.bikeSprite.addChild(new Sprite());
         let config = Config.bikeList.find(bike => bike.id === this.id);
-        decorateSprite.texture = resources[config.imagePath].texture;
-        decorateSprite.anchor.set(...config.anchor);
-        decorateSprite.scale.set(...config.scale);
-        decorateSprite.position.set(...config.position);
+
+        if (config.imagePath) {
+            let decorateSprite = this.bikeSprite.addChild(new Sprite());
+            decorateSprite.texture = resources[config.imagePath].texture;
+            decorateSprite.anchor.set(...config.anchor);
+            decorateSprite.scale.set(...config.scale);
+            decorateSprite.position.set(...config.position);
+        }
 
         this.bikeBubbleSprite = this.bikeSprite.addChild(new Sprite());
         this.bikeBubbleSprite.texture = resources[Config.imagePath.bubble].texture;
