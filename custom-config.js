@@ -9497,9 +9497,7 @@ Config.defaultRedPoint = {
 // 自行车移动的时候根据移动方向进行旋转(1开启 0关闭)
 Config.bikeRotateByMoveDirection = 1;
 
-// 自行车假定的基本速率
-Config.bikeBasicVelocity = 20;
-// 自行车在基本速率之下，多少帧换一张图
+// 自行车在基本速度之下，多少帧换一张图（如果自行车速度发生变化的话 会根据这个基础值进行换算）
 Config.framesForChangeImageInBasicVelocity = 3;
 
 export default Config;
