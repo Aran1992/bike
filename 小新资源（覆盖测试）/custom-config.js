@@ -6981,7 +6981,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 变大倍数
-        scale: 1.5,
+        scale: 3,
         // 闪烁间隔（单位：帧）
         twinkleInterval: 5,
         // 闪烁透明度（0-1，越低的话越透明）
@@ -10800,6 +10800,6 @@ Config.bikeRotateByMoveDirection = 0;
 // 自行车假定的基本速率
 Config.bikeBasicVelocity = 20;
 // 自行车在基本速率之下，多少帧换一张图
-Config.framesForChangeImageInBasicVelocity = 3;
+Config.framesForChangeImageInBasicVelocity = 2;
 
 export default Config;
