@@ -32,7 +32,7 @@ class DataMgr_ {
             //需要达到 ### 等级
             11: value => DataMgr.getPlayerLevel().level >= value,
             //闯通 ### 关卡
-            12: (map, level) => !DataMgr.isFirstPlayGameLevel(map - 1, level - 1),
+            12: (map, level) => !DataMgr.isPlayGameLevelFirstTime(map - 1, level - 1),
             //闯关模式星星总数达到 ###
             13: value => DataMgr.getGameLevelStarTotalCount() >= value,
         };
@@ -324,24 +324,60 @@ class DataMgr_ {
     }
 
     isGameLevelMapLocked(map) {
-        const total = DataMgr.getGameLevelStarTotalCount();
-        const glConfig = Config.gameLevelMode.mapList[map];
-        const needed = glConfig.starCountUnlockNeeded;
-        if (total < needed) {
+        if (map === 0) {
+            return false;
+        }
+        const level = -1;
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        if (table[map] === undefined) {
             return true;
         }
-        const lastMap = map - 1;
-        const lastMapConfig = Config.gameLevelMode.mapList[lastMap];
-        if (lastMapConfig) {
-            return DataMgr.isFirstPlayGameLevel(lastMap, lastMapConfig.levelList.length - 1);
-        }
-        return false;
+        return !table[map][level];
     }
 
-    isFirstPlayGameLevel(map, level) {
+    hasEnoughStarUnlockGameLevelMap(map) {
+        const glConfig = Config.gameLevelMode.mapList[map];
+        const need = glConfig.starCountUnlockNeeded;
+        const count = this.getGameLevelStarTotalCount();
+        return count >= need;
+    }
+
+    unlockGameLevelMap(map) {
+        const level = -1;
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        if (table[map] === undefined) {
+            table[map] = {};
+        }
+        if (table[map][level] === undefined) {
+            table[map][level] = 1;
+        }
+        DataMgr.set(DataMgr.gameLevelData, table);
+    }
+
+    setGameLevelStarCount(map, level, star) {
+        const table = DataMgr.get(DataMgr.gameLevelData, {});
+        if (table[map] === undefined) {
+            table[map] = {};
+        }
+        if (table[map][level] === undefined || table[map][level] < star) {
+            table[map][level] = star;
+        }
+        DataMgr.set(DataMgr.gameLevelData, table);
+    }
+
+    isPlayGameLevelFirstTime(map, level) {
         const table = DataMgr.get(DataMgr.gameLevelData, {});
         return table[map] === undefined || table[map][level] === undefined;
     }
+
+    isLatestMap(map) {
+        return map === Config.gameLevelMode.mapList[map].length - 1;
+    }
+
+    isLatestLevelInMap(map, level) {
+        return Config.gameLevelMode.mapList[map].levelList.length - 1 === level;
+    }
+
 
     getPlayerLevel(exp) {
         exp = exp === undefined ? DataMgr.get(DataMgr.exp, 0) : exp;
