@@ -56,9 +56,9 @@ Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
 Config.bikeCommonAnimationPos = [0, -40];
 
 // 默认自行车冲刺动画，里面必须有sprint动画
-Config.bikeSprintAnimation = "myLaya/laya/assets/animations/cosplay/sprint.json";
+Config.bikeSprintAnimation = "myLaya/laya/assets/animations/sprint.json";
 // 默认自行车冲刺动画的偏移
-Config.bikeSprintAnimationPos = [0, 0];
+Config.bikeSprintAnimationPos = [0, -40];
 
 // 默认的自行车跳跃图集
 Config.bikeJumpingAnimation = {
@@ -3084,12 +3084,12 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/bike.json",
-        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
-        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sprint.json",
-        // 自行车冲刺动画的偏移，没有设置的话就是用默认的偏移
-        bikeSprintAnimationPos: [0, 0],
         // 移动动画偏移，没有设置的话就是用默认的偏移
         //bikeCommonAnimationPos: [0, 0],
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/sprint.json",
+        // 自行车冲刺动画的偏移，没有设置的话就是用默认的偏移
+        //bikeSprintAnimationPos: [0, 0],
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3269,6 +3269,10 @@ Config.bikeList = [
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns1030-1.json",
         // 移动动画偏移，没有设置的话就是用默认的偏移
         //bikeCommonAnimationPos: [0, 0],
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/sprint.json",
+        // 自行车冲刺动画的偏移，没有设置的话就是用默认的偏移
+        //bikeSprintAnimationPos: [0, 0],
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -10826,9 +10830,9 @@ Config.framesForChangeImageInBasicVelocity = 2;
 
 // 选择关卡界面相关配置
 Config.gameLevelScene = {
-    bikeSpriteScale: 0.5,
-    bikeSpriteOffsetX: 50,
-    bikeSpriteOffsetY: 100,
+    bikeSpriteScale: 0.8,
+    bikeSpriteOffsetX: 60,
+    bikeSpriteOffsetY: 10,
 };
 
 export default Config;
