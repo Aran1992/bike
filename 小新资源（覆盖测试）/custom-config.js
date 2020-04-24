@@ -50,11 +50,15 @@ Config.gravity = -175;
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
+// 默认的自行车移动图集，里面必须有bike和enemy动画
+Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
 // 默认的自行车动画偏移（包括跳跃和移动），没有专门设置偏移的动画就全部使用这个偏移
 Config.bikeCommonAnimationPos = [0, -40];
 
-// 默认的自行车移动图集，里面必须有bike和enemy动画
-Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
+// 默认自行车冲刺动画，里面必须有sprint动画
+Config.bikeSprintAnimation = "myLaya/laya/assets/animations/cosplay/sprint.json";
+// 默认自行车冲刺动画的偏移
+Config.bikeSprintAnimationPos = [0, 0];
 
 // 默认的自行车跳跃图集
 Config.bikeJumpingAnimation = {
@@ -3080,6 +3084,10 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/bike.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sprint.json",
+        // 自行车冲刺动画的偏移，没有设置的话就是用默认的偏移
+        bikeSprintAnimationPos: [0, 0],
         // 移动动画偏移，没有设置的话就是用默认的偏移
         //bikeCommonAnimationPos: [0, 0],
         // 跳跃动画路径 没有设置的话，使用默认的动画
@@ -7011,10 +7019,6 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_super_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
-        // 持续期间角色的动画
-        durationBikeAnimationPath: "myLaya/laya/assets/animations/cosplay/sns1020-1.json",
-        // 持续期间角色的动画的偏移
-        durationBikeAnimationOffset: [0, 0],
     },
 };
 

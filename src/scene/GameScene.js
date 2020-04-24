@@ -240,6 +240,7 @@ export default class GameScene extends Scene {
         const config = Config.bikeList.find(bike => bike.id === id);
         const bca = config.bikeCommonAnimation || Config.bikeCommonAnimation;
         const bjas = Utils.values(config.bikeJumpingAnimation || Config.bikeJumpingAnimation).map(item => item.atlasPath);
+        const bsa = config.bikeSprintAnimation || Config.bikeSprintAnimation;
         return [
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
@@ -250,7 +251,7 @@ export default class GameScene extends Scene {
             Config.startImagePath.ui,
             this.bgmPath,
             bca,
-            Config.effect.Sprint.durationBikeAnimationPath,
+            bsa,
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.soundPath))
@@ -1071,12 +1072,12 @@ export default class GameScene extends Scene {
                 }
                 this.bikeFrame++;
                 if (this.hasEffect("Sprint")) {
-                    const frames = GameUtils.getFrames(Config.effect.Sprint.durationBikeAnimationPath);
+                    const {frames, pos} = this.getBikeSprintAnimation();
                     if (this.bikeFrame >= frames.length) {
                         this.bikeFrame = 0;
                     }
                     this.bikeAnimSprite.texture = frames[this.bikeFrame];
-                    this.bikeAnimSprite.position.set(...Config.effect.Sprint.durationBikeAnimationOffset);
+                    this.bikeAnimSprite.position.set(...pos);
                 } else {
                     let cv = this.bikeBody.getLinearVelocity().x;
                     let bv = Config.bikeBasicVelocity;
@@ -2006,6 +2007,15 @@ export default class GameScene extends Scene {
         return {
             frames: GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike"),
             pos: config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos
+        };
+    }
+
+    getBikeSprintAnimation() {
+        const id = this.getBikeID();
+        const config = Config.bikeList.find(bike => bike.id === id);
+        return {
+            frames: GameUtils.getFrames(config.bikeSprintAnimation || Config.bikeSprintAnimation, "sprint"),
+            pos: config.bikeSprintAnimationPos || Config.bikeSprintAnimationPos
         };
     }
 
