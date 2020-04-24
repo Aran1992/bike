@@ -5706,6 +5706,10 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_super_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
+        // 持续期间角色的动画
+        durationBikeAnimationPath: "myLaya/laya/assets/animations/cosplay/sns1020-1.json",
+        // 持续期间角色的动画的偏移
+        durationBikeAnimationOffset: [0, 0],
     },
 };
 
@@ -9501,5 +9505,12 @@ Config.bikeRotateByMoveDirection = 1;
 Config.bikeBasicVelocity = 20;
 // 自行车在基本速率之下，多少帧换一张图
 Config.framesForChangeImageInBasicVelocity = 3;
+
+// 选择关卡界面相关配置
+Config.gameLevelScene = {
+    bikeSpriteScale: 0.5,
+    bikeSpriteOffsetX: 50,
+    bikeSpriteOffsetY: 100,
+};
 
 export default Config;

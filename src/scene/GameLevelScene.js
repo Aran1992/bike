@@ -20,6 +20,7 @@ export default class GameLevelScene extends Scene {
         this.onClick(this.ui.nextLevelButton, this.onClickNextLevelButton.bind(this));
         this.onClick(this.ui.gameLevelLocked, this.onClickGameLevelLocked.bind(this));
         this.bikeSprite = new BikeSprite(this.ui.gameLevelPanel);
+        this.bikeSprite.setScale(Config.gameLevelScene.bikeSpriteScale);
     }
 
     onClickReturnButton() {
@@ -79,22 +80,23 @@ export default class GameLevelScene extends Scene {
             const count = DataMgr.getGameLevelStarCount(this.gameLevel, i - 1);
             const isLocked = DataMgr.isGameLevelIsLocked(this.gameLevel, i - 1);
             const btn = this.ui[`glBtn${i}`];
-            if (isLocked) {
-                btn.children[0].texture = Texture.from(Config.imagePath.lockedLevel);
-                btn.interactive = false;
-            } else if (i - 1 === this.selectedLevel) {
-                btn.children[0].texture = Texture.from(Config.imagePath.selectedLevel);
-                btn.interactive = true;
-            } else {
-                btn.children[0].texture = Texture.from(Config.imagePath.enabledLevel);
-                btn.interactive = true;
-            }
+            this.setButtonState(btn, isLocked, i - 1 === this.selectedLevel);
             const nameLabel = GameUtils.findChildByName(btn, "nameLabel");
             nameLabel.text = `${this.gameLevel + 1}-${i}`;
-            for (let j = 1; j <= 3; j++) {
-                const star = GameUtils.findChildByName(btn, j + "");
-                star.visible = count >= j;
-            }
+            this.refreshLevelBtnStar(btn, count);
+        }
+    }
+
+    setButtonState(btn, isLocked, selected) {
+        if (isLocked) {
+            btn.children[0].texture = Texture.from(Config.imagePath.lockedLevel);
+            btn.interactive = false;
+        } else if (selected) {
+            btn.children[0].texture = Texture.from(Config.imagePath.selectedLevel);
+            btn.interactive = true;
+        } else {
+            btn.children[0].texture = Texture.from(Config.imagePath.enabledLevel);
+            btn.interactive = true;
         }
     }
 
@@ -109,7 +111,10 @@ export default class GameLevelScene extends Scene {
 
     getSelectedLevelBtnPos() {
         const selectedLevelBtn = this.ui[`glBtn${this.selectedLevel + 1}`];
-        return {x: selectedLevelBtn.x, y: selectedLevelBtn.y};
+        return {
+            x: selectedLevelBtn.x + Config.gameLevelScene.bikeSpriteOffsetX,
+            y: selectedLevelBtn.y + Config.gameLevelScene.bikeSpriteOffsetY
+        };
     }
 
     playMove(reverse, callback = () => 0) {
@@ -152,13 +157,17 @@ export default class GameLevelScene extends Scene {
         }
     }
 
-    onGameEnded() {
-        if (DataMgr.isLatestLevelInMap(this.gameLevel, this.selectedLevel)) {
-            if (!DataMgr.isLatestMap(this.gameLevel)) {
-                this.play2nextMap();
+    onGameEnded(firstWin) {
+        if (firstWin) {
+            if (DataMgr.isLatestLevelInMap(this.gameLevel, this.selectedLevel)) {
+                if (!DataMgr.isLatestMap(this.gameLevel)) {
+                    this.play2nextMap();
+                }
+            } else {
+                this.play2nextLevel();
             }
         } else {
-            this.play2nextLevel();
+            this.refreshGameLevelMode();
         }
     }
 
@@ -178,6 +187,13 @@ export default class GameLevelScene extends Scene {
             App.hideMask();
             this.onClickGameLevelLocked();
         }, 500);
+    }
+
+    refreshLevelBtnStar(btn, count) {
+        for (let j = 1; j <= 3; j++) {
+            const star = GameUtils.findChildByName(btn, j + "");
+            star.visible = count >= j;
+        }
     }
 }
 

@@ -57,8 +57,6 @@ class Frame {
             .onUpdate(this.onUpdate.bind(this))
             .onComplete(this.onComplete.bind(this))
             .start(performance.now());
-
-        this.setNextFrame();
     }
 
     onUpdate() {
@@ -70,21 +68,8 @@ class Frame {
         this.callback();
     }
 
-    setNextFrame() {
-        this.frame = requestAnimationFrame((time) => {
-            if (!this.ended) {
-                this.tween.update(time);
-                this.setNextFrame();
-            }
-        });
-    }
-
     stop() {
         this.tween.stop();
-        this.ended = true;
-        if (this.frame) {
-            cancelAnimationFrame(this.frame);
-        }
     }
 }
 

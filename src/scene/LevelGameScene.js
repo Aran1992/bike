@@ -59,12 +59,13 @@ export default class LevelGameScene extends StaticGameScene {
         if (this.doubleReward) {
             exp *= 2;
         }
+        const isFirstTime = DataMgr.isPlayGameLevelFirstTime(this.mapIndex, this.levelIndex);
         DataMgr.add(DataMgr.exp, Math.floor(exp));
         if (this.gameStatus === "win") {
             DataMgr.setGameLevelStarCount(this.mapIndex, this.levelIndex, this.star);
         }
         DataMgr.refreshPreparationRewards(DataMgr.preparationDataGameLevel);
-        App.getScene("GameLevelScene").onGameEnded(this.gameStatus === "win");
+        App.getScene("GameLevelScene").onGameEnded(this.gameStatus === "win" && isFirstTime);
     }
 
     gameWin() {

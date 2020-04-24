@@ -240,6 +240,7 @@ export default class GameScene extends Scene {
         const config = Config.bikeList.find(bike => bike.id === id);
         const bca = config.bikeCommonAnimation || Config.bikeCommonAnimation;
         const bjas = Utils.values(config.bikeJumpingAnimation || Config.bikeJumpingAnimation).map(item => item.atlasPath);
+        const bsa = config.bikeSprintAnimation || Config.bikeSprintAnimation;
         return [
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
@@ -250,6 +251,7 @@ export default class GameScene extends Scene {
             Config.startImagePath.ui,
             this.bgmPath,
             bca,
+            bsa,
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.soundPath))
@@ -1069,13 +1071,22 @@ export default class GameScene extends Scene {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
                 this.bikeFrame++;
-                let cv = this.bikeBody.getLinearVelocity().x;
-                let bv = Config.bikeBasicVelocity;
-                let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
-                this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
-                let frame = Math.floor(this.bikeFrame / framesEachFrame);
-                this.bikeAnimSprite.texture = this.bikeFrames[frame];
-                this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
+                if (this.hasEffect("Sprint")) {
+                    const {frames, pos} = this.getBikeSprintAnimation();
+                    if (this.bikeFrame >= frames.length) {
+                        this.bikeFrame = 0;
+                    }
+                    this.bikeAnimSprite.texture = frames[this.bikeFrame];
+                    this.bikeAnimSprite.position.set(...pos);
+                } else {
+                    let cv = this.bikeBody.getLinearVelocity().x;
+                    let bv = Config.bikeBasicVelocity;
+                    let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
+                    this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
+                    let frame = Math.floor(this.bikeFrame / framesEachFrame);
+                    this.bikeAnimSprite.texture = this.bikeFrames[frame];
+                    this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
+                }
             }
         }
     }
@@ -1638,10 +1649,12 @@ export default class GameScene extends Scene {
                     this.setBikeScale(2, true);
                     this.bikeBody.setKinematic();
                     this.resetJumpStatus();
+                    this.bikeFrame = -1;
                 },
                 end: () => {
                     this.setBikeScale(1, true);
                     this.bikeBody.setDynamic();
+                    this.bikeFrame = -1;
                 }
             },
         };
@@ -1994,6 +2007,15 @@ export default class GameScene extends Scene {
         return {
             frames: GameUtils.getFrames(config.bikeCommonAnimation || Config.bikeCommonAnimation, "bike"),
             pos: config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos
+        };
+    }
+
+    getBikeSprintAnimation() {
+        const id = this.getBikeID();
+        const config = Config.bikeList.find(bike => bike.id === id);
+        return {
+            frames: GameUtils.getFrames(config.bikeSprintAnimation || Config.bikeSprintAnimation, "sprint"),
+            pos: config.bikeSprintAnimationPos || Config.bikeSprintAnimationPos
         };
     }
 
