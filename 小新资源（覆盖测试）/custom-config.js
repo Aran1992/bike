@@ -6048,20 +6048,34 @@ Config.item = {
     },
     // 小鸟
     bird: {
-        // 实际区域宽度
-        bodyWidth: 64,
-        // 实际区域高度
-        bodyHeight: 40,
-        // 触碰到的时候的自行车竖直方向上的速度
-        contactBikeVelocity: 50,
-        // 触碰到的时候的小鸟受到的冲击力大小
-        contactBirdImpulse: 125,
-        // 被击飞的冲击力大小
-        strikedBirdImpulse: 1250,
-        // 被击飞的旋转速度
-        strikedBirdAngularVelocity: 50,
         // 出现音效
         appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
+        // 配置列表（对应ID的配置）
+        table: {
+            // 没有配置id的小鸟都是用这个配置
+            default: {
+                // 动画路径
+                animationJsonPath: "images/bird-animation.json",
+                // 动画名称
+                animationName: "Bird",
+                // 动画速率（1表示1游戏帧换1张图片，1游戏帧换0.25张图片，4游戏帧换1张图片）
+                animationSpeed: 0.25,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 64,
+                // 实际区域高度
+                bodyHeight: 40,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 50,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+            }
+        }
     },
     // 地刺
     groundStab: {
