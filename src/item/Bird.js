@@ -1,4 +1,4 @@
-import {AnimatedSprite} from "../libs/pixi-wrapper";
+import {AnimatedSprite, Sprite} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Config from "../config";
 import {Box, Vec2} from "../libs/planck-wrapper";
@@ -10,6 +10,8 @@ export default class Bird {
         this.container = container;
         this.world = world;
         this.config = config;
+        const id = GameUtils.getItemProp(config, "ID") || "default";
+        this.itemConfig = Config.item.bird.table[id];
 
         this.type = GameUtils.getItemType(this.config);
         this.itemType = "bird";
@@ -18,18 +20,23 @@ export default class Bird {
     }
 
     createSprite() {
-        this.sprite = this.container.addChild(new AnimatedSprite(GameUtils.getFrames(Config.birdAniJson)));
+        this.sprite = new Sprite();
+        this.container.addChild(this.sprite);
+        const frames = GameUtils.getFrames(this.itemConfig.animationJsonPath, this.itemConfig.animationName);
+        this.animation = new AnimatedSprite(frames);
+        this.sprite.addChild(this.animation);
+        this.animation.position.set(...this.itemConfig.animationPos);
         this.sprite.part = this;
         this.sprite.anchor.set(0.5, 0.5);
-        const texture = this.sprite.textures[0];
+        const texture = this.animation.textures[0];
         const scaleX = this.config.props.scaleX;
         const scaleY = this.config.props.scaleY;
-        this.sprite.scale.set(scaleX, scaleY);
+        this.animation.scale.set(scaleX, scaleY);
         const x = this.config.props.x + texture.width / 2 * scaleX;
         const y = this.config.props.y + texture.height / 2 * scaleY;
         this.sprite.position.set(x, y);
-        this.sprite.animationSpeed = 0.25;
-        this.sprite.play();
+        this.animation.animationSpeed = this.itemConfig.animationSpeed;
+        this.animation.play();
     }
 
     createBody() {
@@ -37,8 +44,8 @@ export default class Bird {
         this.body.setUserData(this);
         const pp = GameUtils.renderPos2PhysicsPos({x: this.sprite.x, y: this.sprite.y});
         this.body.setPosition(pp);
-        const width = Config.item.bird.bodyWidth / 2 * this.config.props.scaleX * Config.pixel2meter;
-        const height = Config.item.bird.bodyHeight / 2 * this.config.props.scaleY * Config.pixel2meter;
+        const width = this.itemConfig.bodyWidth / 2 * this.config.props.scaleX * Config.pixel2meter;
+        const height = this.itemConfig.bodyHeight / 2 * this.config.props.scaleY * Config.pixel2meter;
         this.body.createFixture(Box(width, height), {density: 1, friction: 1,});
         this.baseY = pp.y;
     }
@@ -59,13 +66,13 @@ export default class Bird {
             if (!this.isDead) {
                 if (this.striked) {
                     const radians = Utils.calcRadians(this.striked.bikePos, this.body.getPosition());
-                    const x = Math.cos(radians) * Config.item.bird.strikedBirdImpulse;
-                    const y = Math.sin(radians) * Config.item.bird.strikedBirdImpulse;
+                    const x = Math.cos(radians) * this.itemConfig.strikedBirdImpulse;
+                    const y = Math.sin(radians) * this.itemConfig.strikedBirdImpulse;
                     this.body.applyLinearImpulse(Vec2(x, y), this.body.getPosition());
-                    this.body.setAngularVelocity(Config.item.bird.strikedBirdAngularVelocity);
+                    this.body.setAngularVelocity(this.itemConfig.strikedBirdAngularVelocity);
                     this.isDead = true;
                 } else if (this.trampled) {
-                    this.body.applyLinearImpulse(Vec2(0, -Config.item.bird.contactBirdImpulse), this.body.getPosition());
+                    this.body.applyLinearImpulse(Vec2(0, -this.itemConfig.contactBirdImpulse), this.body.getPosition());
                     this.isDead = true;
                 } else {
                     if (GameUtils.isItemType(this.config, "UpDown")) {
@@ -112,10 +119,10 @@ export default class Bird {
     }
 
     getLeftBorderX() {
-        return this.sprite.x - this.sprite.anchor.x * this.sprite.width * this.sprite.scale.x;
+        return this.sprite.x - this.animation.anchor.x * this.animation.width * this.sprite.scale.x;
     }
 
     getRightBorderX() {
-        return this.sprite.x + (1 - this.sprite.anchor.x) * this.sprite.width * this.sprite.scale.x;
+        return this.sprite.x + (1 - this.animation.anchor.x) * this.animation.width * this.sprite.scale.x;
     }
 }

@@ -246,7 +246,6 @@ export default class GameScene extends Scene {
             Config.goldCoinAniJson,
             Config.accGemAniJson,
             Config.fireWallAniJson,
-            Config.birdAniJson,
             Config.effect.BananaPeel.peelPrefabPath,
             Config.startImagePath.ui,
             this.bgmPath,
@@ -254,6 +253,7 @@ export default class GameScene extends Scene {
             bsa,
         ]
             .concat(soundPathList)
+            .concat(Utils.values(Config.item.bird.table).map(data => data.animationJsonPath))
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.sceneItemImagePath))
             .concat(Utils.values(Config.emitterPath))
@@ -371,7 +371,7 @@ export default class GameScene extends Scene {
                     if (item && item instanceof Bird) {
                         if (this.bikeBody.getPosition().y >= anotherFixture.getBody().getPosition().y) {
                             this.resetJumpStatus();
-                            this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, Config.item.bird.contactBikeVelocity));
+                            this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, item.itemConfig.contactBikeVelocity));
                         } else if (!this.isInvincible()) {
                             this.setContactFatalEdge(true);
                         }
