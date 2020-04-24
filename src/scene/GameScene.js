@@ -250,6 +250,7 @@ export default class GameScene extends Scene {
             Config.startImagePath.ui,
             this.bgmPath,
             bca,
+            Config.effect.Sprint.durationBikeAnimationPath,
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.soundPath))
@@ -1069,13 +1070,22 @@ export default class GameScene extends Scene {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
                 this.bikeFrame++;
-                let cv = this.bikeBody.getLinearVelocity().x;
-                let bv = Config.bikeBasicVelocity;
-                let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
-                this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
-                let frame = Math.floor(this.bikeFrame / framesEachFrame);
-                this.bikeAnimSprite.texture = this.bikeFrames[frame];
-                this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
+                if (this.hasEffect("Sprint")) {
+                    const frames = GameUtils.getFrames(Config.effect.Sprint.durationBikeAnimationPath);
+                    if (this.bikeFrame >= frames.length) {
+                        this.bikeFrame = 0;
+                    }
+                    this.bikeAnimSprite.texture = frames[this.bikeFrame];
+                    this.bikeAnimSprite.position.set(...Config.effect.Sprint.durationBikeAnimationOffset);
+                } else {
+                    let cv = this.bikeBody.getLinearVelocity().x;
+                    let bv = Config.bikeBasicVelocity;
+                    let framesEachFrame = Config.framesForChangeImageInBasicVelocity / (cv / bv);
+                    this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
+                    let frame = Math.floor(this.bikeFrame / framesEachFrame);
+                    this.bikeAnimSprite.texture = this.bikeFrames[frame];
+                    this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
+                }
             }
         }
     }
@@ -1638,10 +1648,12 @@ export default class GameScene extends Scene {
                     this.setBikeScale(2, true);
                     this.bikeBody.setKinematic();
                     this.resetJumpStatus();
+                    this.bikeFrame = -1;
                 },
                 end: () => {
                     this.setBikeScale(1, true);
                     this.bikeBody.setDynamic();
+                    this.bikeFrame = -1;
                 }
             },
         };
