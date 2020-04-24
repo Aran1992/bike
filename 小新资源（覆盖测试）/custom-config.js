@@ -7033,6 +7033,8 @@ Config.effect = {
         imagePath: "myLaya/laya/assets/images/crystal_super_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
         userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_rocket.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_super_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
