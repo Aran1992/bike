@@ -13,11 +13,11 @@ UpgradeItemDsc,,BikeScene.scene.json,${cur}秒/${max}秒,,
 Exp,,,经验,Exp,
 LevelDsc,,,等级${level},Lv. ${level},
 Count,,,• 结算 •,Count,
-Unlock,,DrawScene.scene.json,• 恭喜玩家大人解锁新造型 •,Unlock,アンロックしていました。
-LvUp,,DrawScene.scene.json,• 恭喜玩家大人等级提升 •,LV UP,レベル　アップ
+Unlock,,DrawScene.scene.json,• 恭喜骑士大人解锁自行车 •,Unlock,アンロックしていました。
+LvUp,,DrawScene.scene.json,• 恭喜骑士大人等级提升 •,LV UP,レベル　アップ
 Free,,"DrawScene.scene.json
 GameOverScene.scene.json",免费,Free,無料
-Draw,,DrawScene.scene.json,幸运抽奖,Draw,くじ引き
+Draw,,DrawScene.scene.json,幸运扭蛋,Draw,くじ引き
 Reborn,,GameOverScene.scene.json,复活,Reborn,復活
 ResurrectionPosition,,GameScene.scene.json,可上下移动，选择复活位置哦,Sliding Up and Down to Adjust Resurrection Position,上や下に移動して復活の位置を調整することができます。
 ShowUI,,HomeScene.scene.json,显示界面,ShowUI,画面が表示されます。
@@ -25,35 +25,35 @@ HideUI,,HomeScene.scene.json,隐藏界面,HideUI,画面が隠されます。
 StartRemove,,HomeScene.scene.json,开启删除模式,StartRemove,「削除」モード　オン
 EndRemove,,HomeScene.scene.json,关闭删除模式,EndRemove,「削除」モード　オフ
 RemoveAll,,HomeScene.scene.json,清空数据,RemoveAll,全部リセット
-骑士大人，战力品摆放已经超过总上限${count}个了哟！,,HomeScene.scene.json,"玩家大人，
+骑士大人，战力品摆放已经超过总上限${count}个了哟！,,HomeScene.scene.json,"骑士大人，
 战力品摆放已经超过总上限${count}个了哟！",,
-骑士大人，宠物摆放已经超过总上限${count}个了哟！,,HomeScene.scene.json,"玩家大人，
+骑士大人，宠物摆放已经超过总上限${count}个了哟！,,HomeScene.scene.json,"骑士大人，
 宠物摆放已经超过总上限${count}个了哟！",,
-骑士大人，这个宠物最多只能放出${count}个哟！,,HomeScene.scene.json,"玩家大人，
+骑士大人，这个宠物最多只能放出${count}个哟！,,HomeScene.scene.json,"骑士大人，
 每种宠物最多只能放出${count}个哟！",,
 TotalDistance,,RankScene.scene.json,累计里程,Total Distance,累計のマイレージ
 FarthestDistance,,RankScene.scene.json,最远里程,Farthest Distance,最長の距離
 Score,,RankScene.scene.json,积分,Score,ポイント
 Now,,RankScene.scene.json,当前排行,Now,現在のランキング
 LastTime,,RankScene.scene.json,上次排行,Last Time,前回のランキング
-MyRank,,RankScene.scene.json,【玩家大人当前的排行】,My Rank,自分のランク
+MyRank,,RankScene.scene.json,【骑士大人当前的排行】,My Rank,自分のランク
 Purchased,,ShopScene.scene.json,已拥有,Purchased,持っているもの
 Confirm,,TipScene.scene.json,确认,Confirm,確認
 RequestingRankData,,RankScene.scene.json,排行榜数据加载中,Requesting rank data,
 NotListed,,RankScene.scene.json,"差一点就上榜啦
-玩家大人加油啊",Not Listed,
+骑士大人加油啊",Not Listed,
 RestartAfterTime,,RankScene.scene.json,${time} 之后重新开始,Restart after ${time},
-UnlockAllBike,,ShopScene.scene.json,解锁所有的造型,Unlock All Bike,
+UnlockAllBike,,ShopScene.scene.json,解锁所有的自行车,Unlock All Bike,
 UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽旅程地图,Unlock All Endless Scene,
 Money2DCPresentDsc,,ShopScene.scene.json,"${money} 钱
-= ${diamond} 金玉 + ${coin} 金币","${money} Money
+= ${diamond} 钻石 + ${coin} 金币","${money} Money
 = ${diamond} Diamond + ${coin} Gold Coins",
 Present,,ShopScene.scene.json,礼物,Present,
 Money,,ShopScene.scene.json,财宝,Money,
 Map,,ShopScene.scene.json,地图,Map,
-Diamond,,,金玉,Diamond,
+Diamond,,,钻石,Diamond,
 Coin,,,金币,Gold Coin,
-DiamondIsNotEnough,,ShopScene.scene.json,金玉不足！,Diamond is not enough!,
+DiamondIsNotEnough,,ShopScene.scene.json,钻石不足！,Diamond is not enough!,
 TotalDistanceReach,,ShopScene.scene.json,总里程达到 ${distance}m 可免费解锁哟,Total distance reached ${distance}m,
 Backgrounds,,HomeScene.scene.json,背景,Backgrounds,
 Floors,,HomeScene.scene.json,地面,Floors,
@@ -63,16 +63,16 @@ Distance,,,里程,Distance,
 ConfirmDeleteHomeItem,,HomeScene.scene.json,您确定要删除该装饰吗？,Are you sure you want to delete this item?,
 ConfirmDeleteAllHomeItem,,HomeScene.scene.json,您确定要删除所有装饰吗？,Are you sure you want to delete all items?,
 ConfirmDeleteAllHomeItemAgain,,HomeScene.scene.json,确实要删除所有装饰吗？,Are you really sure you want to DELETE ALL ITEMS?,
-ItemIsAbleToUnlock,,,报告玩家大人，您可以解锁新物品啦！,This item is able to unlock.,
+ItemIsAbleToUnlock,,,报告骑士大人，您可以解锁新物品啦！,This item is able to unlock.,
 UnlockConditions,,,【解锁条件】,Unlock condition(s):,
 UnlockRewards,,,【解锁奖励】,Unlock Reward(s):,
 Would you like to cost the following items to unlock this item?,,,您是否想花费以下这些来解锁该物品？,Would you like to cost the following items to unlock this item?,
-Cost is not enough!,,,没有足够的金币或金玉！,Cost is not enough!,
+Cost is not enough!,,,没有足够的金币或钻石！,Cost is not enough!,
 This item is locked.,,,该物品未解锁。,This item is locked.,
-该自行车未解锁,,,该造型未解锁,,
+该自行车未解锁,,,该自行车未解锁,,
 没有足够的星星解锁该地图,,,没有足够的星星解锁该地图,,
 ${0} Gold Coins,,,${0} 金币,${0} Gold Coins,
-${0} Diamonds,,,${0} 金玉,${0} Diamonds,
+${0} Diamonds,,,${0} 钻石,${0} Diamonds,
 Need to unlock Map: ${0},              ,                                               ,需要解锁地图：${0}                                                                        ,Need to unlock Map: ${0},
 Total distance required to reach ${0}m,,,总里程需达 ${0}m,Total distance required to reach ${0}m,
 Total farthest distance required to reach ${0}m,,,历史最大里程需达 ${0}m,Total farthest distance required to reach ${0}m,
@@ -85,13 +85,13 @@ Need to reach level ${0},,,需要等级达到 ${0},Need to reach level ${0},
 Need to get through level ${0}-${1},,,需要闯通关卡${0}-${1},Need to get through level ${0}-${1},
 Need to get ${0} game level stars,,,需要闯关星星总数达到${0}个,Need to get ${0} game level stars,
 Highest Level,,,最高等级,Highest Level,
-You have ridden ${distance} meters,,,报告玩家大人，您已跑了${distance}m啦,You have ridden ${distance} meters,
+You have ridden ${distance} meters,,,报告骑士大人，您已骑行${distance}m啦,You have ridden ${distance} meters,
 Air,,,空气,Air,
-${player} Record: ${record}m,,,报告${player}玩家，您当前纪录：${record}m,${player} Record: ${record}m,
+${player} Record: ${record}m,,,报告${player}骑士，您当前纪录：${record}m,${player} Record: ${record}m,
 Leveling with the highest record,,,与您的最高纪录持平,Leveling with the highest record,
-${player} New Record: ${distance}m,,,恭喜${player}玩家，您已创造新纪录：${distance}m,${player} New Record: ${distance}m,
+${player} New Record: ${distance}m,,,恭喜${player}骑士，您已创造新纪录：${distance}m,${player} New Record: ${distance}m,
 ${diff} meters more to go beyond yourself,,,还差${diff}m就能超越自己的纪录啦,${diff} meters more to go beyond yourself,
-${player} current rank total score: ${score},,,恭喜${player}玩家，您当前总积分：${score},${player} current rank total score: ${score},
+${player} current rank total score: ${score},,,恭喜${player}骑士，您当前总积分：${score},${player} current rank total score: ${score},
 "You only get the last prize after surrender, are you sure?",,,"现在退出，
 您将只能获得最后一名的奖励，
 确定要退出游戏吗？","You only get the last prize after surrender, are you sure?",
@@ -132,8 +132,7 @@ Middle,,,中,Middle,
 Big,,,大,Big,
 Loading,,,加载中 ...,Loading ...,
 LearnJump,,,点击画面可以进行跳跃,,
-LearnItem,,,"点击左边两个道具栏
-可以使用道具",,
+LearnItem,,,点击左边两个道具栏可以使用道具,,
 NewContent,,,新的内容已解锁,,
 GiftTitle,,,• 看视频领礼包 •,,
 GiftContent,,,观看视频，获得超值奖励,,
@@ -146,10 +145,10 @@ DoubleReward,,,双倍奖励,,
 AddGame,,,免费竞赛,,
 PreparationItem1,,,随机道具,,
 PreparationItem2,,,随机道具,,
-PreparationItem3,,,随机造型,,
+PreparationItem3,,,随机自行车,,
 PreparationItemContent1,,,获得道具,,
 PreparationItemContent2,,,获得道具,,
-PreparationItemContent3,,,体验特殊造型,,
+PreparationItemContent3,,,体验特殊自行车,,
 PreparationDone,,,准备完成,,
 day1,,,第1天,,
 day2,,,第2天,,
@@ -164,7 +163,7 @@ GamelevelHelp2,,,"梦幻包裹：可随机获得某种助力，但如何
                   使用关键看您自己哟！",,
 GamelevelHelp3,,,磁铁道具：自动吸金，威力无比！,,
 GamelevelHelp4,,,加速道具：追赶和超越对手的好帮手！,,
-GamelevelHelp5,,,"强化跳跃：使用过的玩家都说，跳跃效果
+GamelevelHelp5,,,"强化跳跃：使用过的骑士都说，跳跃效果
                   非常好。",,
 GamelevelHelp6,,,"无限跳跃：有了它，山再高、路再陡，
                   也不怕不怕啦~",,
@@ -172,13 +171,13 @@ GamelevelHelp7,,,无敌道具：身体变大，无惧伤害！,,
 GamelevelHelp8,,,"超人道具：自动飞行，无需操作，
                   自动吸金，无惧伤害！",,
 EndlessHelp1,,,"无尽模式：无尽旅程，除了死亡，
-                  谁都无法阻止玩家们的
+                  谁都无法阻止骑士们的
                   闯荡！",,
 EndlessHelp2,,,"梦幻包裹：可随机获得某种助力，但如何
                   使用关键看您自己哟！",,
 EndlessHelp3,,,磁铁道具：自动吸金，威力无比！,,
 EndlessHelp4,,,加速道具：追赶和超越对手的好帮手！,,
-EndlessHelp5,,,"强化跳跃：使用过的玩家都说，跳跃效果
+EndlessHelp5,,,"强化跳跃：使用过的骑士都说，跳跃效果
                   非常好。",,
 EndlessHelp6,,,"无限跳跃：有了它，山再高、路再陡，
                   也不怕不怕啦~",,
@@ -186,11 +185,11 @@ EndlessHelp7,,,无敌道具：身体变大，无惧伤害！,,
 EndlessHelp8,,,"超人道具：自动飞行，无需操作，
                   自动吸金，无惧伤害！",,
 MatchHelp1,,,"竞技模式：快速匹配开局，与其他
-                  玩家争夺头名奖励。",,
+                  骑士争夺头名奖励。",,
 MatchHelp2,,,"梦幻包裹：可随机获得某种助力，但如何
                   使用关键看您自己哟！",,
 MatchHelp3,,,加速道具：追赶和超越对手的好帮手！,,
-MatchHelp4,,,"强化跳跃：使用过的玩家都说，跳跃效果
+MatchHelp4,,,"强化跳跃：使用过的骑士都说，跳跃效果
                   非常好。",,
 MatchHelp5,,,"无限跳跃：有了它，山再高、路再陡，也
                   不怕不怕啦~",,
@@ -198,7 +197,7 @@ MatchHelp6,,,"蜗牛道具：想让前一名对手跑得比乌龟还
                   慢？用这个就对啦！",,
 MatchHelp7,,,"削弱跳跃：使用它，可暂时减弱前一名对
                   手“爱蹦跶”的坏毛病哟。",,
-MatchHelp8,,,"蛛网道具：令所有玩家都害怕的束缚魔法
+MatchHelp8,,,"蛛网道具：令所有骑士都害怕的束缚魔法
                   ，只能向前一名对手使用哦！",,
 MatchHelp9,,,"封印道具：可让您的前一名对手，暂时无
                   法使用任何道具哦。",,
@@ -208,57 +207,57 @@ MatchHelp11,,,"落雷道具：打雷啦！小心触电呀~——变
                   态群攻，可雷击所有对手。",,
 MatchHelp12,,,"炸弹道具：点击使用，炸弹将向前抛射
                   ，谁碰到谁倒霉哟。",,
-HomeHelp1,,,"玩家大人的家园，
+HomeHelp1,,,"骑士大人的家园，
 有4大类装饰可自由设计布局。",,
 HomeHelp2,,,"战力品、宠物，解锁后，
 可拖动到地面上随意摆放哟。",,
 HomeHelp3,,,"背景、地面，解锁后，
 可选择想要的来展现哟。",,
-Select Map1,,,地图1,Map1,
-Select Map2,,,地图2,Map2,
-Select Map3,,,地图3,Map3,
-Select Map4,,,地图4,Map4,
-Select Map5,,,地图5,Map5,
-Select Map6,,,地图6,Map6,
-Select Map7,,,地图7,Map7,
-Select Map8,,,地图8,Map8,
-Select Map9,,,地图9,Map9,
-Select Map10,,,地图10,Map10,
-Select Map11,,,地图11,Map11,
-Select Map12,,,地图12,Map12,
-Select Bike1,,,1号造型,Bike1,
-Select Bike2,,,2号造型,Bike2,
-Select Bike3,,,3号造型,Bike3,
-Select Bike4,,,4号造型,Bike4,
-Select Bike5,,,5号造型,Bike5,
-Select Bike6,,,6号造型,Bike6,
-Select Bike7,,,7号造型,Bike7,
-Select Bike8,,,8号造型,Bike8,
-Select Bike9,,,9号造型,Bike9,
-Select Bike10,,,10号造型,Bike10,
-Select Bike11,,,11号造型,Bike11,
-Select Bike12,,,12号造型,Bike12,
-Select Bike13,,,13号造型,Bike13,
-Select Bike14,,,14号造型,Bike14,
-Select Bike15,,,15号造型,Bike15,
-Select Bike16,,,16号造型,Bike16,
-Select Bike17,,,17号造型,Bike17,
-Select Bike18,,,18号造型,Bike18,
-Select Bike19,,,19号造型,Bike19,
-Select Bike20,,,20号造型,Bike20,
-Select Bike21,,,21号造型,Bike21,
-Select Bike22,,,22号造型,Bike22,
-Select Bike23,,,23号造型,Bike23,
-Select Bike24,,,24号造型,Bike24,
-Select Bike25,,,25号造型,Bike25,
-Select Bike26,,,26号造型,Bike26,
-Select Bike27,,,27号造型,Bike27,
-Select Bike28,,,28号造型,Bike28,
-Select Bike29,,,29号造型,Bike29,
-Select Bike30,,,30号造型,Bike30,
-Select Bike31,,,31号造型,Bike31,
-Select Bike32,,,32号造型,Bike32,
-Select Bike33,,,33号造型,Bike33,
+Select Map1,,,地图1 ─ 荒原秘境,Map1,
+Select Map2,,,地图2 ─ 漫步云端,Map2,
+Select Map3,,,地图3 ─ 海底世界,Map3,
+Select Map4,,,地图4 ─ 探险冰原,Map4,
+Select Map5,,,地图5 ─ 风情洛可可,Map5,
+Select Map6,,,地图6 ─ 神秘海域,Map6,
+Select Map7,,,地图7 ─ 穿越战国,Map7,
+Select Map8,,,地图8 ─ 极速北京,Map8,
+Select Map9,,,地图9 ─ 酷跑纽约,Map9,
+Select Map10,,,地图10 ─ 疾走东京,Map10,
+Select Map11,,,地图11 ─ 疯狂侏罗纪,Map11,
+Select Map12,,,地图12 ─ 狂野中世纪,Map12,
+Select Bike1,,,暴走火柴,Bike1,
+Select Bike2,,,打码赛克,Bike2,
+Select Bike3,,,星爸爸,Bike3,
+Select Bike4,,,向日葵仔,Bike4,
+Select Bike5,,,马桶车X3,Bike5,
+Select Bike6,,,传奇泳士,Bike6,
+Select Bike7,,,马面擂神,Bike7,
+Select Bike8,,,大头女儿,Bike8,
+Select Bike9,,,呆个鸡头,Bike9,
+Select Bike10,,,饭你哥,Bike10,
+Select Bike11,,,水管玛丽,Bike11,
+Select Bike12,,,桶装车66,Bike12,
+Select Bike13,,,雨衣怪咖,Bike13,
+Select Bike14,,,魔法阿嫲,Bike14,
+Select Bike15,,,带妹大神,Bike15,
+Select Bike16,,,北极熊人,Bike16,
+Select Bike17,,,长颈鹿君,Bike17,
+Select Bike18,,,冰雪奇人,Bike18,
+Select Bike19,,,铃铛喵娘,Bike19,
+Select Bike20,,,追风少年,Bike20,
+Select Bike21,,,凉宫春夜,Bike21,
+Select Bike22,,,寿司君,Bike22,
+Select Bike23,,,团子酱,Bike23,
+Select Bike24,,,竹轮桑,Bike24,
+Select Bike25,,,熊猫车M2,Bike25,
+Select Bike26,,,疾风飙神,Bike26,
+Select Bike27,,,小甜甜,Bike27,
+Select Bike28,,,杂技一哥,Bike28,
+Select Bike29,,,铁包皮神,Bike29,
+Select Bike30,,,外送高手,Bike30,
+Select Bike31,,,萌萌小青,Bike31,
+Select Bike32,,,酷跑初音,Bike32,
+Select Bike33,,,孔雀开屏,Bike33,
 Random role1,,,淡淡紫丁香へ,NPC1,
 Random role2,,,oО绿帽侠,NPC2,
 Random role3,,,姐与作业水土不服づ,NPC3,
@@ -293,7 +292,7 @@ Tip1,,,"跳跃后未落地时，再次点击画面，
 可进行二段跳哦！",,
 Tip2,,,"三段跳（含第3次连跳）后，每次跳跃，
 时间不能间隔太久！",,
-Tip3,,,"报告玩家大人，一般情况下，
+Tip3,,,"报告骑士大人，一般情况下，
 您可进行7次连跳哟！",,
 Tip4,,,死亡再复活后，可上下移动选择复活位置哦！,,
 Tip5,,,"请及时腾出道具栏哦，否则，
@@ -301,39 +300,39 @@ Tip5,,,"请及时腾出道具栏哦，否则，
 Tip6,,,遇到小鸟别怕，踩上去就对啦！,,
 Tip7,,,和小鸟一样，滚石也是能踩的哦！,,
 Tip8,,,蛛网道具太可怕？其实跳跃3次，就能挣脱了哦！,,
-Tip9,,,报告玩家大人，泡泡状态下的您，防御无敌哦！,,
-say2,,,第1次使用 2号造型,,
-say3,,,第1次使用 3号造型,,
-say4,,,第1次使用 4号造型,,
-say5,,,第1次使用 5号造型,,
-say6,,,第1次使用 6号造型,,
-say7,,,第1次使用 7号造型,,
-say8,,,第1次使用 8号造型,,
-say9,,,第1次使用 9号造型,,
-say10,,,第1次使用 10号造型,,
-say11,,,第1次使用 11号造型,,
-say12,,,第1次使用 12号造型,,
-say13,,,第1次使用 13号造型,,
-say14,,,第1次使用 14号造型,,
-say15,,,第1次使用 15号造型,,
-say16,,,第1次使用 16号造型,,
-say17,,,第1次使用 17号造型,,
-say18,,,第1次使用 18号造型,,
-say19,,,第1次使用 19号造型,,
-say20,,,第1次使用 20号造型,,
-say21,,,第1次使用 21号造型,,
-say22,,,第1次使用 22号造型,,
-say23,,,第1次使用 23号造型,,
-say24,,,第1次使用 24号造型,,
-say25,,,第1次使用 25号造型,,
-say26,,,第1次使用 26号造型,,
-say27,,,第1次使用 27号造型,,
-say28,,,第1次使用 28号造型,,
-say29,,,第1次使用 29号造型,,
-say30,,,第1次使用 30号造型,,
-say31,,,第1次使用 31号造型,,
-say32,,,第1次使用 32号造型,,
-say33,,,第1次使用 33号造型,,
+Tip9,,,报告骑士大人，泡泡状态下的您，防御无敌哦！,,
+say2,,,第1次使用 2号车,,
+say3,,,第1次使用 3号车,,
+say4,,,第1次使用 4号车,,
+say5,,,第1次使用 5号车,,
+say6,,,第1次使用 6号车,,
+say7,,,第1次使用 7号车,,
+say8,,,第1次使用 8号车,,
+say9,,,第1次使用 9号车,,
+say10,,,第1次使用 10号车,,
+say11,,,第1次使用 11号车,,
+say12,,,第1次使用 12号车,,
+say13,,,第1次使用 13号车,,
+say14,,,第1次使用 14号车,,
+say15,,,第1次使用 15号车,,
+say16,,,第1次使用 16号车,,
+say17,,,第1次使用 17号车,,
+say18,,,第1次使用 18号车,,
+say19,,,第1次使用 19号车,,
+say20,,,第1次使用 20号车,,
+say21,,,第1次使用 21号车,,
+say22,,,第1次使用 22号车,,
+say23,,,第1次使用 23号车,,
+say24,,,第1次使用 24号车,,
+say25,,,第1次使用 25号车,,
+say26,,,第1次使用 26号车,,
+say27,,,第1次使用 27号车,,
+say28,,,第1次使用 28号车,,
+say29,,,第1次使用 29号车,,
+say30,,,第1次使用 30号车,,
+say31,,,第1次使用 31号车,,
+say32,,,第1次使用 32号车,,
+say33,,,第1次使用 33号车,,
 say1001,,,第1次  进入无尽模式关卡,,
 say1002,,,第2次  进入无尽模式关卡 之前无尽模式里程超过600M（不算加成）,,
 say1003,,,第3次  进入无尽模式关卡 之前无尽模式里程超过600M（不算加成）,,
@@ -390,7 +389,7 @@ say5009,,,无限循环 进入排名竞赛关卡 随机9,,
 say5010,,,无限循环 进入排名竞赛关卡 随机10,,
 say5011,,,无限循环 进入排名竞赛关卡 随机11,,
 ThereIsNoGiftToday,,,真可惜，今天的礼包领完了呢,,
-领取礼包的时间还没到,,,抱歉玩家大人，还未到礼包领取时间哦,,
+领取礼包的时间还没到,,,抱歉骑士大人，还未到礼包领取时间哦,,
 OnlineSay,,,${time} 后就可以领取了,,
 GotToday,,,今天已领取,,
 HasDoubleReward,,,已经获得了双倍奖励,,
@@ -400,35 +399,35 @@ HasNoRebornTimes,,,已经没有复活次数了,,
 LockNotice,,,"这个内容未解锁
 解锁条件：
 ${condition}",,
-SystemUnlockTitle1,,,抽奖 解锁,,
+SystemUnlockTitle1,,,扭蛋 解锁,,
 SystemUnlockTitle2,,,排名竞赛 解锁,,
 SystemUnlockTitle3,,,排行 解锁,,
 SystemUnlockTitle4,,,家园 解锁,,
 SystemUnlockTitle5,,,无尽旅程 解锁,,
-SystemUnlockTitle6,,,衣柜 解锁,,
+SystemUnlockTitle6,,,车库 解锁,,
 SystemUnlockTitle7,,,能力 解锁,,
 SystemUnlockTitle11,,,签到 解锁,,
 SystemUnlockTitle12,,,礼包 解锁,,
 SystemUnlockTitle13,,,福利 解锁,,
-SystemUnlockDescribe1,,,"恭喜玩家大人
-将抽奖解锁了",,
-SystemUnlockDescribe2,,,"恭喜玩家大人
+SystemUnlockDescribe1,,,"恭喜骑士大人
+将扭蛋解锁了",,
+SystemUnlockDescribe2,,,"恭喜骑士大人
 将排名竞赛解锁了",,
-SystemUnlockDescribe3,,,"恭喜玩家大人
+SystemUnlockDescribe3,,,"恭喜骑士大人
 将排行解锁了",,
-SystemUnlockDescribe4,,,"恭喜玩家大人
+SystemUnlockDescribe4,,,"恭喜骑士大人
 将家园解锁了",,
-SystemUnlockDescribe5,,,"恭喜玩家大人
+SystemUnlockDescribe5,,,"恭喜骑士大人
 将无尽旅程解锁了",,
-SystemUnlockDescribe6,,,"恭喜玩家大人
-将衣柜解锁了",,
-SystemUnlockDescribe7,,,"恭喜玩家大人
+SystemUnlockDescribe6,,,"恭喜骑士大人
+将车库解锁了",,
+SystemUnlockDescribe7,,,"恭喜骑士大人
 将能力解锁了",,
-SystemUnlockDescribe11,,,"恭喜玩家大人
+SystemUnlockDescribe11,,,"恭喜骑士大人
 将签到解锁了",,
-SystemUnlockDescribe12,,,"恭喜玩家大人
+SystemUnlockDescribe12,,,"恭喜骑士大人
 将礼包解锁了",,
-SystemUnlockDescribe13,,,"恭喜玩家大人
+SystemUnlockDescribe13,,,"恭喜骑士大人
 将福利解锁了",,
 MapUnlockTitle2,,,地图2 解锁,,
 MapUnlockTitle3,,,地图3 解锁,,
@@ -441,27 +440,27 @@ MapUnlockTitle9,,,地图9 解锁,,
 MapUnlockTitle10,,,地图10 解锁,,
 MapUnlockTitle11,,,地图11 解锁,,
 MapUnlockTitle12,,,地图12 解锁,,
-MapUnlockDescribe2,,,"恭喜玩家大人
+MapUnlockDescribe2,,,"恭喜骑士大人
 将地图2解锁了",,
-MapUnlockDescribe3,,,"恭喜玩家大人
+MapUnlockDescribe3,,,"恭喜骑士大人
 将地图3解锁了",,
-MapUnlockDescribe4,,,"恭喜玩家大人
+MapUnlockDescribe4,,,"恭喜骑士大人
 将地图4解锁了",,
-MapUnlockDescribe5,,,"恭喜玩家大人
+MapUnlockDescribe5,,,"恭喜骑士大人
 将地图5解锁了",,
-MapUnlockDescribe6,,,"恭喜玩家大人
+MapUnlockDescribe6,,,"恭喜骑士大人
 将地图6解锁了",,
-MapUnlockDescribe7,,,"恭喜玩家大人
+MapUnlockDescribe7,,,"恭喜骑士大人
 将地图7解锁了",,
-MapUnlockDescribe8,,,"恭喜玩家大人
+MapUnlockDescribe8,,,"恭喜骑士大人
 将地图8解锁了",,
-MapUnlockDescribe9,,,"恭喜玩家大人
+MapUnlockDescribe9,,,"恭喜骑士大人
 将地图9解锁了",,
-MapUnlockDescribe10,,,"恭喜玩家大人
+MapUnlockDescribe10,,,"恭喜骑士大人
 将地图10解锁了",,
-MapUnlockDescribe11,,,"恭喜玩家大人
+MapUnlockDescribe11,,,"恭喜骑士大人
 将地图11解锁了",,
-MapUnlockDescribe12,,,"恭喜玩家大人
+MapUnlockDescribe12,,,"恭喜骑士大人
 将地图12解锁了",,
 BackgroundUnlockTitle2,,,背景2 解锁,,
 BackgroundUnlockTitle3,,,背景3 解锁,,
@@ -474,27 +473,27 @@ BackgroundUnlockTitle9,,,背景9 解锁,,
 BackgroundUnlockTitle10,,,背景10 解锁,,
 BackgroundUnlockTitle11,,,背景11 解锁,,
 BackgroundUnlockTitle12,,,背景12 解锁,,
-BackgroundUnlockDescribe2,,,"恭喜玩家大人
+BackgroundUnlockDescribe2,,,"恭喜骑士大人
 将背景2解锁了",,
-BackgroundUnlockDescribe3,,,"恭喜玩家大人
+BackgroundUnlockDescribe3,,,"恭喜骑士大人
 将背景3解锁了",,
-BackgroundUnlockDescribe4,,,"恭喜玩家大人
+BackgroundUnlockDescribe4,,,"恭喜骑士大人
 将背景4解锁了",,
-BackgroundUnlockDescribe5,,,"恭喜玩家大人
+BackgroundUnlockDescribe5,,,"恭喜骑士大人
 将背景5解锁了",,
-BackgroundUnlockDescribe6,,,"恭喜玩家大人
+BackgroundUnlockDescribe6,,,"恭喜骑士大人
 将背景6解锁了",,
-BackgroundUnlockDescribe7,,,"恭喜玩家大人
+BackgroundUnlockDescribe7,,,"恭喜骑士大人
 将背景7解锁了",,
-BackgroundUnlockDescribe8,,,"恭喜玩家大人
+BackgroundUnlockDescribe8,,,"恭喜骑士大人
 将背景8解锁了",,
-BackgroundUnlockDescribe9,,,"恭喜玩家大人
+BackgroundUnlockDescribe9,,,"恭喜骑士大人
 将背景9解锁了",,
-BackgroundUnlockDescribe10,,,"恭喜玩家大人
+BackgroundUnlockDescribe10,,,"恭喜骑士大人
 将背景10解锁了",,
-BackgroundUnlockDescribe11,,,"恭喜玩家大人
+BackgroundUnlockDescribe11,,,"恭喜骑士大人
 将背景11解锁了",,
-BackgroundUnlockDescribe12,,,"恭喜玩家大人
+BackgroundUnlockDescribe12,,,"恭喜骑士大人
 将背景12解锁了",,
 FloorUnlockTitle2,,,地面2 解锁,,
 FloorUnlockTitle3,,,地面3 解锁,,
@@ -502,17 +501,17 @@ FloorUnlockTitle4,,,地面4 解锁,,
 FloorUnlockTitle5,,,地面5 解锁,,
 FloorUnlockTitle6,,,地面6 解锁,,
 FloorUnlockTitle7,,,地面7 解锁,,
-FloorUnlockDescribe2,,,"恭喜玩家大人
+FloorUnlockDescribe2,,,"恭喜骑士大人
 将地面2解锁了",,
-FloorUnlockDescribe3,,,"恭喜玩家大人
+FloorUnlockDescribe3,,,"恭喜骑士大人
 将地面3解锁了",,
-FloorUnlockDescribe4,,,"恭喜玩家大人
+FloorUnlockDescribe4,,,"恭喜骑士大人
 将地面4解锁了",,
-FloorUnlockDescribe5,,,"恭喜玩家大人
+FloorUnlockDescribe5,,,"恭喜骑士大人
 将地面5解锁了",,
-FloorUnlockDescribe6,,,"恭喜玩家大人
+FloorUnlockDescribe6,,,"恭喜骑士大人
 将地面6解锁了",,
-FloorUnlockDescribe7,,,"恭喜玩家大人
+FloorUnlockDescribe7,,,"恭喜骑士大人
 将地面7解锁了",,
 SpoilUnlockTitle1,,,战力品1 解锁,,
 SpoilUnlockTitle2,,,战力品2 解锁,,
@@ -542,61 +541,61 @@ SpoilUnlockTitle25,,,战力品25 解锁,,
 SpoilUnlockTitle26,,,战力品26 解锁,,
 SpoilUnlockTitle27,,,战力品27 解锁,,
 SpoilUnlockTitle28,,,战力品28 解锁,,
-SpoilUnlockDescribe1,,,"恭喜玩家大人
+SpoilUnlockDescribe1,,,"恭喜骑士大人
 将战力品1解锁了",,
-SpoilUnlockDescribe2,,,"恭喜玩家大人
+SpoilUnlockDescribe2,,,"恭喜骑士大人
 将战力品2解锁了",,
-SpoilUnlockDescribe3,,,"恭喜玩家大人
+SpoilUnlockDescribe3,,,"恭喜骑士大人
 将战力品3解锁了",,
-SpoilUnlockDescribe4,,,"恭喜玩家大人
+SpoilUnlockDescribe4,,,"恭喜骑士大人
 将战力品4解锁了",,
-SpoilUnlockDescribe5,,,"恭喜玩家大人
+SpoilUnlockDescribe5,,,"恭喜骑士大人
 将战力品5解锁了",,
-SpoilUnlockDescribe6,,,"恭喜玩家大人
+SpoilUnlockDescribe6,,,"恭喜骑士大人
 将战力品6解锁了",,
-SpoilUnlockDescribe7,,,"恭喜玩家大人
+SpoilUnlockDescribe7,,,"恭喜骑士大人
 将战力品7解锁了",,
-SpoilUnlockDescribe8,,,"恭喜玩家大人
+SpoilUnlockDescribe8,,,"恭喜骑士大人
 将战力品8解锁了",,
-SpoilUnlockDescribe9,,,"恭喜玩家大人
+SpoilUnlockDescribe9,,,"恭喜骑士大人
 将战力品9解锁了",,
-SpoilUnlockDescribe10,,,"恭喜玩家大人
+SpoilUnlockDescribe10,,,"恭喜骑士大人
 将战力品10解锁了",,
-SpoilUnlockDescribe11,,,"恭喜玩家大人
+SpoilUnlockDescribe11,,,"恭喜骑士大人
 将战力品11解锁了",,
-SpoilUnlockDescribe12,,,"恭喜玩家大人
+SpoilUnlockDescribe12,,,"恭喜骑士大人
 将战力品12解锁了",,
-SpoilUnlockDescribe13,,,"恭喜玩家大人
+SpoilUnlockDescribe13,,,"恭喜骑士大人
 将战力品13解锁了",,
-SpoilUnlockDescribe14,,,"恭喜玩家大人
+SpoilUnlockDescribe14,,,"恭喜骑士大人
 将战力品14解锁了",,
-SpoilUnlockDescribe15,,,"恭喜玩家大人
+SpoilUnlockDescribe15,,,"恭喜骑士大人
 将战力品15解锁了",,
-SpoilUnlockDescribe16,,,"恭喜玩家大人
+SpoilUnlockDescribe16,,,"恭喜骑士大人
 将战力品16解锁了",,
-SpoilUnlockDescribe17,,,"恭喜玩家大人
+SpoilUnlockDescribe17,,,"恭喜骑士大人
 将战力品17解锁了",,
-SpoilUnlockDescribe18,,,"恭喜玩家大人
+SpoilUnlockDescribe18,,,"恭喜骑士大人
 将战力品18解锁了",,
-SpoilUnlockDescribe19,,,"恭喜玩家大人
+SpoilUnlockDescribe19,,,"恭喜骑士大人
 将战力品19解锁了",,
-SpoilUnlockDescribe20,,,"恭喜玩家大人
+SpoilUnlockDescribe20,,,"恭喜骑士大人
 将战力品20解锁了",,
-SpoilUnlockDescribe21,,,"恭喜玩家大人
+SpoilUnlockDescribe21,,,"恭喜骑士大人
 将战力品21解锁了",,
-SpoilUnlockDescribe22,,,"恭喜玩家大人
+SpoilUnlockDescribe22,,,"恭喜骑士大人
 将战力品22解锁了",,
-SpoilUnlockDescribe23,,,"恭喜玩家大人
+SpoilUnlockDescribe23,,,"恭喜骑士大人
 将战力品23解锁了",,
-SpoilUnlockDescribe24,,,"恭喜玩家大人
+SpoilUnlockDescribe24,,,"恭喜骑士大人
 将战力品24解锁了",,
-SpoilUnlockDescribe25,,,"恭喜玩家大人
+SpoilUnlockDescribe25,,,"恭喜骑士大人
 将战力品25解锁了",,
-SpoilUnlockDescribe26,,,"恭喜玩家大人
+SpoilUnlockDescribe26,,,"恭喜骑士大人
 将战力品26解锁了",,
-SpoilUnlockDescribe27,,,"恭喜玩家大人
+SpoilUnlockDescribe27,,,"恭喜骑士大人
 将战力品27解锁了",,
-SpoilUnlockDescribe28,,,"恭喜玩家大人
+SpoilUnlockDescribe28,,,"恭喜骑士大人
 将战力品28解锁了",,
 PetUnlockTitle1,,,宠物1 解锁,,
 PetUnlockTitle2,,,宠物2 解锁,,
@@ -614,72 +613,72 @@ PetUnlockTitle13,,,宠物13 解锁,,
 PetUnlockTitle14,,,宠物14 解锁,,
 PetUnlockTitle15,,,宠物15 解锁,,
 PetUnlockTitle16,,,宠物16 解锁,,
-PetUnlockDescribe1,,,"恭喜玩家大人
+PetUnlockDescribe1,,,"恭喜骑士大人
 将宠物1解锁了",,
-PetUnlockDescribe2,,,"恭喜玩家大人
+PetUnlockDescribe2,,,"恭喜骑士大人
 将宠物2解锁了",,
-PetUnlockDescribe3,,,"恭喜玩家大人
+PetUnlockDescribe3,,,"恭喜骑士大人
 将宠物3解锁了",,
-PetUnlockDescribe4,,,"恭喜玩家大人
+PetUnlockDescribe4,,,"恭喜骑士大人
 将宠物4解锁了",,
-PetUnlockDescribe5,,,"恭喜玩家大人
+PetUnlockDescribe5,,,"恭喜骑士大人
 将宠物5解锁了",,
-PetUnlockDescribe6,,,"恭喜玩家大人
+PetUnlockDescribe6,,,"恭喜骑士大人
 将宠物6解锁了",,
-PetUnlockDescribe7,,,"恭喜玩家大人
+PetUnlockDescribe7,,,"恭喜骑士大人
 将宠物7解锁了",,
-PetUnlockDescribe8,,,"恭喜玩家大人
+PetUnlockDescribe8,,,"恭喜骑士大人
 将宠物8解锁了",,
-PetUnlockDescribe9,,,"恭喜玩家大人
+PetUnlockDescribe9,,,"恭喜骑士大人
 将宠物9解锁了",,
-PetUnlockDescribe10,,,"恭喜玩家大人
+PetUnlockDescribe10,,,"恭喜骑士大人
 将宠物10解锁了",,
-PetUnlockDescribe11,,,"恭喜玩家大人
+PetUnlockDescribe11,,,"恭喜骑士大人
 将宠物11解锁了",,
-PetUnlockDescribe12,,,"恭喜玩家大人
+PetUnlockDescribe12,,,"恭喜骑士大人
 将宠物12解锁了",,
-PetUnlockDescribe13,,,"恭喜玩家大人
+PetUnlockDescribe13,,,"恭喜骑士大人
 将宠物13解锁了",,
-PetUnlockDescribe14,,,"恭喜玩家大人
+PetUnlockDescribe14,,,"恭喜骑士大人
 将宠物14解锁了",,
-PetUnlockDescribe15,,,"恭喜玩家大人
+PetUnlockDescribe15,,,"恭喜骑士大人
 将宠物15解锁了",,
-PetUnlockDescribe16,,,"恭喜玩家大人
+PetUnlockDescribe16,,,"恭喜骑士大人
 将宠物16解锁了",,
-TextMap-1-1-1,,,欢迎玩家大人来到教学关卡！请点击屏幕，跳跃吃星星哟。,,
-TextMap-1-2-1,,,玩家大人，拾取更多的经验，就能快速提升游戏等级哦 。,,
-TextMap-1-3-1,,,玩家大人，学完吃金币，就可以开始你的挑战之旅了。 ,,
-TextMap-1-4-1,,,玩家大人，接下来是2段跳跃练习，期待你的表演。 ,,
-TextMap-1-5-1,,,玩家大人，连续点击最多可以7段连跳哦，快来试试吧！ ,,
-TextMap-2-1-1,,,玩家大人，这个关卡开始会有陷进出现，就看你的表现了。 ,,
-TextMap-2-2-1,,,玩家大人，快来尝试一下加速道具带来的快感吧 。,,
+TextMap-1-1-1,,,欢迎骑士大人来到自行车的教学关卡！请点击屏幕，跳跃吃星星哟。,,
+TextMap-1-2-1,,,骑士大人，拾取更多的经验，就能快速提升游戏等级哦 。,,
+TextMap-1-3-1,,,骑士大人，学完吃金币，就可以开始你的挑战之旅了。 ,,
+TextMap-1-4-1,,,骑士大人，接下来是2段跳跃练习，期待你的表演。 ,,
+TextMap-1-5-1,,,骑士大人，连续点击最多可以7段连跳哦，快来试试吧！ ,,
+TextMap-2-1-1,,,骑士大人，这个关卡开始会有陷进出现，就看你的表现了。 ,,
+TextMap-2-2-1,,,骑士大人，快来尝试一下加速道具带来的快感吧 。,,
 TextMap-2-3-1,,,现在开始陷进难度加大了哦，可以尝试使用2段连跳闯关哦。,,
 TextMap-2-4-1,,,请看准时机，感受一下一头冲向终点的快感吧！,,
-TextMap-2-5-1,,,玩家大人，有时候先掉落再跳跃，是一种高级技巧哦！,,
+TextMap-2-5-1,,,骑士大人，有时候先掉落再跳跃，是一种高级技巧哦！,,
 TextMap-3-1-1,,,使用弹跳道具，能够轻松跳得高高的哦。,,
-TextMap-3-2-1,,,玩家大人，多层地形可以尝试跳上去哦。,,
-TextMap-3-3-1,,,玩家大人，快来尽情享受跳跳乐吧，测试一下你的弹跳能力！,,
+TextMap-3-2-1,,,骑士大人，多层地形可以尝试跳上去哦。,,
+TextMap-3-3-1,,,骑士大人，快来尽情享受跳跳乐吧，测试一下你的弹跳能力！,,
 TextMap-3-4-1,,,错落的多层地形就像迷宫，你准备好挑战了吗？,,
-TextMap-3-5-1,,,玩家大人，再来一次也是一种勇气，希望你能一直幸运。,,
+TextMap-3-5-1,,,骑士大人，再来一次也是一种勇气，希望你能一直幸运。,,
 TextMap-4-1-1,,,磁铁道具在手，关卡奖励轻松有。,,
-TextMap-4-2-1,,,玩家大人，跳踩前方的小鸟会有惊喜哦！,,
+TextMap-4-2-1,,,骑士大人，跳踩前方的小鸟会有惊喜哦！,,
 TextMap-4-3-1,,,送你一堆磁铁，接下来看你的！,,
 TextMap-4-4-1,,,前方一大波鸟群出现，祝你好运！,,
 TextMap-4-5-1,,,辨别哪些该吃，哪些不该吃，也是一种智慧哦。,,
 TextMap-5-1-1,,,无限跳跃道具记得吃哦，这样你就能轻松通过难度较大的陷进哦。,,
-TextMap-5-2-1,,,玩家大人，如果遇到蜘蛛网，能躲就躲，就算碰到了只要多跳跃几次就能挣脱哦！,,
-TextMap-5-3-1,,,玩家大人，请尽情飞翔吧，感受非一般的时刻。,,
-TextMap-5-4-1,,,玩家大人，前方路面到处都是蜘蛛网，请小心上路！,,
+TextMap-5-2-1,,,骑士大人，如果遇到蜘蛛网，能躲就躲，就算碰到了只要多跳跃几次就能挣脱哦！,,
+TextMap-5-3-1,,,骑士大人，请尽情飞翔吧，感受非一般的时刻。,,
+TextMap-5-4-1,,,骑士大人，前方路面到处都是蜘蛛网，请小心上路！,,
 TextMap-5-5-1,,,前方高能预警，考验技术的时刻到了哦。,,
 Help-1,,,点击画面，就能跳跃吃星星。,,
-Help-2,,,继续跑跳吃星星。,,
-Help-10,,,恭喜玩家大人，通过第一个教学关卡。,,
-Help-11,,,继续跑跳吃经验。,,
+Help-2,,,继续骑行吃星星。,,
+Help-10,,,恭喜骑士大人，通过第一个教学关卡。,,
+Help-11,,,继续骑行吃经验。,,
 Help-12,,,别忘记吃星星哦。,,
-Help-13,,,正常奔跑就能吃到经验了，不需要高空跳跃哦。,,
-Help-20,,,恭喜玩家大人，通过第二个教学关卡。,,
+Help-13,,,正常骑行就能吃到经验了，不需要高空跳跃哦。,,
+Help-20,,,恭喜骑士大人，通过第二个教学关卡。,,
 Help-21,,,点击画面，就能跳跃吃金币。,,
-Help-30,,,恭喜玩家大人，通过第三个教学关卡。,,
+Help-30,,,恭喜骑士大人，通过第三个教学关卡。,,
 Help-31,,,进行2段连跳才能吃到奖励哦。,,
 Help-32,,,一直连续跳跃才能吃光金币哦。,,
 Help-33,,,进行2段连跳，就能获得终点前最后一波丰厚的奖励哦。,,
