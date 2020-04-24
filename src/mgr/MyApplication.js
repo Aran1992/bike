@@ -44,6 +44,7 @@ import GameLevelFailedScene from "../scene/GameLevelFailedScene";
 import GameLevelResultScene from "../scene/GameLevelResultScene";
 import HelpGameLevelScene from "../scene/HelpGameLevelScene";
 import GameLevelScene from "../scene/GameLevelScene";
+import TWEEN from "@tweenjs/tween.js";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -131,6 +132,8 @@ export default class MyApplication extends Application {
         this.listenGameRunStatus();
 
         this.waitLoadList = [];
+
+        this.ticker.add(this.onTick.bind(this));
     }
 
     showScene(sceneName, ...args) {
@@ -426,5 +429,9 @@ export default class MyApplication extends Application {
                 }
             }, false);
         }
+    }
+
+    onTick() {
+        TWEEN.update(performance.now());
     }
 }

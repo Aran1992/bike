@@ -89,7 +89,7 @@ export default class BikeSprite {
     }
 
     getWidth() {
-        return this.bikeAnimSprite ? this.bikeAnimSprite.width : 0;
+        return this.bikeAnimSprite ? this.bikeAnimSprite.width * Math.abs(this.bikeSprite.scale.x) : 0;
     }
 
     play() {
@@ -115,12 +115,16 @@ export default class BikeSprite {
     }
 
     reverse(reverse) {
-        this.bikeSprite.scale.x = reverse ? -1 : 1;
+        this.bikeSprite.scale.x = Math.abs(this.bikeSprite.scale.x) * (reverse ? -1 : 1);
     }
 
     setVisible(visible) {
         this.visible = visible;
         this.bikeSprite.visible = visible;
+    }
+
+    setScale(scale) {
+        this.bikeSprite.scale.set(scale, scale);
     }
 }
 

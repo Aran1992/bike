@@ -10802,4 +10802,11 @@ Config.bikeBasicVelocity = 20;
 // 自行车在基本速率之下，多少帧换一张图！
 Config.framesForChangeImageInBasicVelocity = 2;
 
+// 选择关卡界面相关配置
+Config.gameLevelScene = {
+    bikeSpriteScale: 0.5,
+    bikeSpriteOffsetX: 50,
+    bikeSpriteOffsetY: 100,
+};
+
 export default Config;
