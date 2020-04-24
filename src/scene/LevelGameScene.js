@@ -61,18 +61,10 @@ export default class LevelGameScene extends StaticGameScene {
         }
         DataMgr.add(DataMgr.exp, Math.floor(exp));
         if (this.gameStatus === "win") {
-            const table = DataMgr.get(DataMgr.gameLevelData, {});
-            const map = this.mapIndex;
-            const level = this.levelIndex;
-            if (table[map] === undefined) {
-                table[map] = {};
-            }
-            if (table[map][level] === undefined || table[map][level] < this.star) {
-                table[map][level] = this.star;
-            }
-            DataMgr.set(DataMgr.gameLevelData, table);
+            DataMgr.setGameLevelStarCount(this.mapIndex, this.levelIndex, this.star);
         }
         DataMgr.refreshPreparationRewards(DataMgr.preparationDataGameLevel);
+        App.getScene("GameLevelScene").onGameEnded(this.gameStatus === "win");
     }
 
     gameWin() {

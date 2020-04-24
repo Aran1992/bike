@@ -12,6 +12,7 @@ export default class BikeSprite {
         }
         this.decorateSprite = new Sprite();
         this.bikeSprite.addChild(this.decorateSprite);
+        this.visible = true;
     }
 
     setBikeID(id) {
@@ -51,7 +52,7 @@ export default class BikeSprite {
             if (this.playing) {
                 this.bikeAnimSprite.play();
             }
-            this.bikeSprite.visible = true;
+            this.bikeSprite.visible = this.visible;
         }
     }
 
@@ -73,6 +74,10 @@ export default class BikeSprite {
 
     getPositionX() {
         return this.bikeSprite.x;
+    }
+
+    getPositionY() {
+        return this.bikeSprite.y;
     }
 
     getLeftBorderX() {
@@ -107,6 +112,15 @@ export default class BikeSprite {
 
     setGray(gray) {
         GameUtils.greySprite(this.bikeSprite, gray);
+    }
+
+    reverse(reverse) {
+        this.bikeSprite.scale.x = reverse ? -1 : 1;
+    }
+
+    setVisible(visible) {
+        this.visible = visible;
+        this.bikeSprite.visible = visible;
     }
 }
 

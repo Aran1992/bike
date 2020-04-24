@@ -3,6 +3,8 @@ import Config from "../config";
 import {resources, Texture} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
 import GameUtils from "../mgr/GameUtils";
+import BikeSprite from "../item/BikeSprite";
+import TWEEN from "@tweenjs/tween.js";
 
 export default class GameLevelScene extends Scene {
     onCreate() {
@@ -16,6 +18,8 @@ export default class GameLevelScene extends Scene {
         this.onClick(this.ui.returnButton, this.onClickReturnButton);
         this.onClick(this.ui.lastLevelButton, this.onClickLastLevelButton.bind(this));
         this.onClick(this.ui.nextLevelButton, this.onClickNextLevelButton.bind(this));
+        this.onClick(this.ui.gameLevelLocked, this.onClickGameLevelLocked.bind(this));
+        this.bikeSprite = new BikeSprite(this.ui.gameLevelPanel);
     }
 
     onClickReturnButton() {
@@ -24,6 +28,8 @@ export default class GameLevelScene extends Scene {
     }
 
     onShow() {
+        this.bikeSprite.setBikeID(DataMgr.get(DataMgr.selectedBike, 0));
+        this.bikeSprite.play();
         this.refreshGameLevelMode(true);
     }
 
@@ -56,6 +62,7 @@ export default class GameLevelScene extends Scene {
         const total = DataMgr.getGameLevelStarTotalCount();
         const needed = glConfig.starCountUnlockNeeded;
         const locked = DataMgr.isGameLevelMapLocked(this.gameLevel);
+        this.bikeSprite.setVisible(!locked);
         this.ui.totalStarCount.text = total;
         this.ui.gameLevelMapDsc.text = App.getText(glConfig.dsc);
         this.ui.gameLevelLocked.visible = locked;
@@ -63,6 +70,8 @@ export default class GameLevelScene extends Scene {
         GameUtils.greySprite(this.ui.sceneImage.children[0], locked);
         this.ui.lastLevelButton.visible = this.gameLevel > 0;
         this.ui.nextLevelButton.visible = this.gameLevel < Config.gameLevelMode.mapList.length - 1;
+        const pos = this.getSelectedLevelBtnPos();
+        this.bikeSprite.setPosition(pos.x, pos.y);
     }
 
     refreshGameLevelSelectedState() {
@@ -90,9 +99,85 @@ export default class GameLevelScene extends Scene {
     }
 
     onClickGameLevel(button) {
+        const reverse = this.selectedLevel > button.index;
         this.selectedLevel = button.index;
-        this.refreshGameLevelSelectedState();
-        App.showScene("PreparationScene", "GameLevel");
+        this.playMove(reverse, () => {
+            this.refreshGameLevelSelectedState();
+            App.showScene("PreparationScene", "GameLevel");
+        });
+    }
+
+    getSelectedLevelBtnPos() {
+        const selectedLevelBtn = this.ui[`glBtn${this.selectedLevel + 1}`];
+        return {x: selectedLevelBtn.x, y: selectedLevelBtn.y};
+    }
+
+    playMove(reverse, callback = () => 0) {
+        this.bikeSprite.reverse(reverse);
+        const obj = {x: this.bikeSprite.getPositionX(), y: this.bikeSprite.getPositionY()};
+        let ended = false;
+        App.showMask();
+        const tween = new TWEEN.Tween(obj)
+            .to(this.getSelectedLevelBtnPos(), 500)
+            .onUpdate(() => {
+                this.bikeSprite.setPosition(obj.x, obj.y);
+            })
+            .onComplete(() => {
+                App.hideMask();
+                ended = true;
+                callback();
+            })
+            .start(performance.now());
+        (function frame() {
+            requestAnimationFrame((time) => {
+                if (!ended) {
+                    tween.update(time);
+                    frame();
+                }
+            });
+        }());
+    }
+
+    onClickGameLevelLocked() {
+        if (DataMgr.hasEnoughStarUnlockGameLevelMap(this.gameLevel)) {
+            App.showMask();
+            App.showNotice("此时播放一个解锁地图的动画");
+            setTimeout(() => {
+                DataMgr.unlockGameLevelMap(this.gameLevel);
+                App.hideMask();
+                this.refreshGameLevelMode();
+            }, Config.notice.duration);
+        } else {
+            App.showNotice("没有足够的星星解锁该地图");
+        }
+    }
+
+    onGameEnded() {
+        if (DataMgr.isLatestLevelInMap(this.gameLevel, this.selectedLevel)) {
+            if (!DataMgr.isLatestMap(this.gameLevel)) {
+                this.play2nextMap();
+            }
+        } else {
+            this.play2nextLevel();
+        }
+    }
+
+    play2nextLevel() {
+        App.showMask();
+        App.showNotice("此时播放一个解锁关卡的动画");
+        setTimeout(() => {
+            App.hideMask();
+            this.onClickGameLevel({index: this.selectedLevel + 1});
+        }, Config.notice.duration);
+    }
+
+    play2nextMap() {
+        App.showMask();
+        this.onClickNextLevelButton();
+        setTimeout(() => {
+            App.hideMask();
+            this.onClickGameLevelLocked();
+        }, 500);
     }
 }
 

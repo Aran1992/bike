@@ -72,20 +72,32 @@ export default class EatableItem extends EditorItem {
     }
 
     playEatAnimation() {
-        this.animation = new TWEEN.Tween(this.sprite)
+        const animation = new TWEEN.Tween(this.sprite)
             .to({
                 y: this.sprite.y - Config.eatItemAnimation.yOffset,
                 alpha: 0
             }, Config.eatItemAnimation.duration)
             .easing(TWEEN.Easing.Quadratic.Out)
             .onComplete(() => {
+                ended = true;
                 this.sprite.visible = false;
                 delete this.animation;
                 if (this.gameMgr.enemyList.length === 0) {
                     this.willDestroyed = true;
                 }
             })
-            .start();
+            .start(performance.now());
+        this.animation = animation;
+        let ended = false;
+        const frame = () => {
+            requestAnimationFrame((time) => {
+                if (!ended) {
+                    animation.update(time);
+                    frame();
+                }
+            });
+        };
+        frame();
     }
 
     update() {
