@@ -12,6 +12,7 @@ import GroundStab from "./GroundStab";
 import SmallFireWall from "./SmallFireWall";
 import BigFireWall from "./BigFireWall";
 import Bird from "./Bird";
+import Cloud from "./Cloud";
 
 export default class Bike {
     constructor(gameScene, parent, world, id, config) {
@@ -194,6 +195,12 @@ export default class Bike {
                     this.resetJumpStatus();
                     this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, item.itemConfig.contactBikeVelocity));
                 } else if (!this.isInvincible()) {
+                    this.setContactFatalEdge(true);
+                }
+                return;
+            }
+            if (item && item instanceof Cloud) {
+                if (!this.isInvincible()) {
                     this.setContactFatalEdge(true);
                 }
                 return;

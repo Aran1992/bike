@@ -36,6 +36,7 @@ import Value from "../item/Value";
 import BaseEffect from "../item/BaseEffect";
 import SceneHelper from "../mgr/SceneHelper";
 import Bird from "../item/Bird";
+import Cloud from "../item/Cloud";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -234,6 +235,17 @@ export default class GameScene extends Scene {
                 if (Config.item[itemType].appearSoundPath) {
                     soundPathList.push(Config.item[itemType].appearSoundPath);
                 }
+                if (Config.item[itemType].table) {
+                    const table = Config.item[itemType].table;
+                    for (const key in table) {
+                        if (table.hasOwnProperty(key)) {
+                            const item = table[key];
+                            if (item.appearSoundPath && item.appearSoundPath.length > 0) {
+                                soundPathList.push(item.appearSoundPath);
+                            }
+                        }
+                    }
+                }
             }
         }
         const id = this.getBikeID();
@@ -254,6 +266,7 @@ export default class GameScene extends Scene {
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.item.bird.table).map(data => data.animationJsonPath))
+            .concat(Utils.values(Config.item.Cloud.table).map(data => data.animationJsonPath))
             .concat(Utils.values(Config.soundPath))
             .concat(Utils.values(Config.sceneItemImagePath))
             .concat(Utils.values(Config.emitterPath))
@@ -373,6 +386,12 @@ export default class GameScene extends Scene {
                             this.resetJumpStatus();
                             this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, item.itemConfig.contactBikeVelocity));
                         } else if (!this.isInvincible()) {
+                            this.setContactFatalEdge(true);
+                        }
+                        return;
+                    }
+                    if (item && item instanceof Cloud) {
+                        if (!this.isInvincible()) {
                             this.setContactFatalEdge(true);
                         }
                         return;
@@ -731,6 +750,10 @@ export default class GameScene extends Scene {
                 this.itemList.push(new Bird(this, this.underBikeContianer, this.world, data));
                 break;
             }
+            case "Cloud": {
+                this.itemList.push(new Cloud(this, this.underBikeContianer, this.world, data));
+                break;
+            }
             case "GroundStab": {
                 let item = new GroundStab(this.underBikeContianer, this.world, data);
                 this.itemList.push(item);
@@ -787,7 +810,7 @@ export default class GameScene extends Scene {
         this.bikeOutterContainer = this.bikeContainer.addChild(new Container());
         this.bikeOutterContainer.position.set(rp.x, rp.y);
 
-        if (RunOption.showBikeCollider) {
+        if (RunOption.showCollider) {
             const graphics = new Graphics();
             graphics.beginFill();
             graphics.drawCircle(0, 0, Config.bikeRadius * Config.meter2pixel);
