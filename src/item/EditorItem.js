@@ -40,7 +40,12 @@ export default class EditorItem {
     }
 
     onCreate() {
-        if (this.config.effect === "Random") {
+        if (this.config.animationJsonPath) {
+            this.sprite = this.parent.addChild(new AnimatedSprite(GameUtils.getFrames(this.config.animationJsonPath, this.config.animationName)));
+            this.sprite.loop = true;
+            this.sprite.animationSpeed = this.config.animationSpeed;
+            this.sprite.play();
+        } else if (this.config.effect === "Random") {
             this.sprite = this.parent.addChild(new AnimatedSprite(GameUtils.getFrames(Config.imagePath.randomItem)));
             this.sprite.loop = true;
             this.sprite.animationSpeed = Config.animationSpeed.randomItem;

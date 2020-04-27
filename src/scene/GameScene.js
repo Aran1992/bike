@@ -243,6 +243,9 @@ export default class GameScene extends Scene {
                             if (item.appearSoundPath && item.appearSoundPath.length > 0) {
                                 soundPathList.push(item.appearSoundPath);
                             }
+                            if (item.animationJsonPath && item.animationJsonPath.length > 0) {
+                                effectResPathList.push(item.animationJsonPath);
+                            }
                         }
                     }
                 }

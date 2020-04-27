@@ -6839,6 +6839,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/bird-animation.json",
+                // 动画名称
+                animationName: "Bird",
+                // 动画速率（1表示1游戏帧换1张图片，1游戏帧换0.25张图片，4游戏帧换1张图片）
+                animationSpeed: 0.25,
             },
         }
     },
