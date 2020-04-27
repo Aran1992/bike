@@ -40,7 +40,11 @@ export default class Bird {
     }
 
     createBody() {
-        this.body = this.world.createDynamicBody();
+        if (this.isDynamic()) {
+            this.body = this.world.createKinematicBody();
+        } else {
+            this.body = this.world.createBody();
+        }
         this.body.setUserData(this);
         const pp = GameUtils.renderPos2PhysicsPos({x: this.sprite.x, y: this.sprite.y});
         this.body.setPosition(pp);
@@ -50,6 +54,8 @@ export default class Bird {
         const density = fixedMass / halfWidth / halfHeight;
         this.body.createFixture(Box(halfWidth, halfHeight), {density: density, friction: 1,});
         this.baseY = pp.y;
+        this.bodyHeight = halfHeight * 2;
+        this.frame = 0;
 
         if (RunOption.showCollider) {
             const graphics = new Graphics();
@@ -80,6 +86,7 @@ export default class Bird {
         } else {
             if (!this.isDead) {
                 if (this.striked) {
+                    this.body.setDynamic();
                     const radians = Utils.calcRadians(this.striked.bikePos, this.body.getPosition());
                     const x = Math.cos(radians) * this.itemConfig.strikedBirdImpulse;
                     const y = Math.sin(radians) * this.itemConfig.strikedBirdImpulse;
@@ -87,20 +94,19 @@ export default class Bird {
                     this.body.setAngularVelocity(this.itemConfig.strikedBirdAngularVelocity);
                     this.isDead = true;
                 } else if (this.trampled) {
+                    this.body.setDynamic();
                     this.body.applyLinearImpulse(Vec2(0, -this.itemConfig.contactBirdImpulse), this.body.getPosition());
                     this.isDead = true;
+                } else if (this.jacked) {
+                    this.body.setDynamic();
+                    this.body.applyLinearImpulse(Vec2(0, this.itemConfig.contactBirdImpulse), this.body.getPosition());
+                    this.isDead = true;
                 } else {
-                    if (GameUtils.isItemType(this.config, "UpDown")) {
-                        this.body.setLinearVelocity(Vec2(0, this.body.getLinearVelocity().y));
-                    } else {
-                        this.body.setLinearVelocity(Vec2(-20, this.body.getLinearVelocity().y));
-                    }
-                    this.body.setAngle(0);
-                    let gravity = -2.5 * this.gameMgr.gravity;
-                    if (this.body.getPosition().y < this.baseY) {
-                        this.body.applyForceToCenter(Vec2(0, gravity * 5));
-                    } else {
-                        this.body.applyForceToCenter(Vec2(0, gravity * 0.75));
+                    this.body.setLinearVelocity(Vec2(this.itemConfig.forwardVelocity, 0));
+                    if (this.isMoveUpDown()) {
+                        this.frame += this.itemConfig.upDownStep;
+                        const y = this.baseY + Math.sin(this.frame) * this.itemConfig.upDownCoefficient;
+                        this.body.setPosition(Vec2(this.body.getPosition().x, y));
                     }
                 }
             }
@@ -118,17 +124,25 @@ export default class Bird {
         const anotherBody = anotherFixture.getBody();
         const another = anotherBody.getUserData();
         if (this.gameMgr.isBike(another)) {
-            if (anotherBody.getPosition().y >= this.body.getPosition().y) {
+            if (this.isAbleToBeTrampled() && anotherBody.getPosition().y >= this.body.getPosition().y + this.bodyHeight / 4) {
+                another.resetJumpStatus();
+                anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
                 this.trampled = true;
+            } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 4) {
+                another.resetJumpStatus();
+                anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
+                this.jacked = true;
             } else if (another.isInvincible()) {
                 const {x, y} = anotherBody.getPosition();
                 this.striked = {bikePos: {x, y}};
+            } else {
+                another.setContactFatalEdge(true);
             }
         }
     }
 
     onPreSolve(contact, anotherFixture) {
-        if (this.isDead || this.trampled || this.striked || !this.gameMgr.isBike(anotherFixture.getBody().getUserData())) {
+        if (this.isDead || this.trampled || this.jacked || this.striked || !this.gameMgr.isBike(anotherFixture.getBody().getUserData())) {
             contact.setEnabled(false);
         }
     }
@@ -139,5 +153,24 @@ export default class Bird {
 
     getRightBorderX() {
         return this.sprite.x + (1 - this.animation.anchor.x) * this.animation.width * this.animation.scale.x;
+    }
+
+    isAbleToBeTrampled() {
+        return this.itemConfig.isAbleToBeTrampled;
+    }
+
+    isAbleToBeJacked() {
+        return this.itemConfig.isAbleToBeJacked;
+    }
+
+    isDynamic() {
+        return GameUtils.isItemType(this.config, "UpDown")
+            || this.itemConfig.isMoveUpDown
+            || this.itemConfig.forwardVelocity;
+    }
+
+    isMoveUpDown() {
+        return GameUtils.isItemType(this.config, "UpDown")
+            || this.itemConfig.isMoveUpDown;
     }
 }

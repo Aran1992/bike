@@ -6056,6 +6056,8 @@ Config.item = {
         table: {
             // 没有配置id的小鸟都是用这个配置
             default: {
+                // 出现音效
+                appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
                 // 动画路径
                 animationJsonPath: "images/bird-animation.json",
                 // 动画名称
@@ -6068,6 +6070,10 @@ Config.item = {
                 bodyWidth: 64,
                 // 实际区域高度
                 bodyHeight: 40,
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 0,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 50,
                 // 触碰到的时候的小鸟受到的冲击力大小
@@ -6076,10 +6082,16 @@ Config.item = {
                 strikedBirdImpulse: 1250,
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
-                // 出现音效
-                appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
-            }
-        }
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -10,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 1,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 10,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
+            },
+        },
     },
     // 地刺
     groundStab: {
@@ -6788,9 +6800,9 @@ Config.item = {
                 bodyWidth: 64,
                 // 实际区域高度
                 bodyHeight: 40,
-            }
-        }
-    }
+            },
+        },
+    },
 };
 
 Config.defaultItemImagePath = "myLaya/laya/assets/images/crystal_grider_09.png";
@@ -10856,5 +10868,8 @@ Config.gameLevelScene = {
     bikeSpriteOffsetX: 60,
     bikeSpriteOffsetY: 10,
 };
+
+// 随机道具动画
+Config.imagePath.randomItem = "myLaya/laya/assets/animations/Random.json";
 
 export default Config;

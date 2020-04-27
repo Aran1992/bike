@@ -191,12 +191,6 @@ export default class Bike {
         } else {
             let item = anotherFixture.getBody().getUserData();
             if (item && item instanceof Bird) {
-                if (this.bikeBody.getPosition().y >= anotherFixture.getBody().getPosition().y) {
-                    this.resetJumpStatus();
-                    this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, item.itemConfig.contactBikeVelocity));
-                } else if (!this.isInvincible()) {
-                    this.setContactFatalEdge(true);
-                }
                 return;
             }
             if (item && item instanceof Cloud) {
