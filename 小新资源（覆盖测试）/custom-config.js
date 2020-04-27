@@ -6115,6 +6115,18 @@ Config.item = {
                 strikedBirdAngularVelocity: 50,
 				// 出现音效
                 //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 10,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
             },
         }
     },
