@@ -6056,13 +6056,11 @@ Config.item = {
         table: {
             // 没有配置id的小鸟都是用这个配置
             default: {
-                // 出现音效
-                appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
                 // 动画路径
                 animationJsonPath: "images/bird-animation.json",
                 // 动画名称
                 animationName: "Bird",
-                // 动画速率（1表示1游戏帧换1张图片，1游戏帧换0.25张图片，4游戏帧换1张图片）
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.25,
                 // 动画偏移
                 animationPos: [0, 0],
@@ -6070,10 +6068,6 @@ Config.item = {
                 bodyWidth: 64,
                 // 实际区域高度
                 bodyHeight: 40,
-                // 是否能踩
-                isAbleToBeTrampled: 1,
-                // 是否能顶
-                isAbleToBeJacked: 0,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 50,
                 // 触碰到的时候的小鸟受到的冲击力大小
@@ -6082,6 +6076,12 @@ Config.item = {
                 strikedBirdImpulse: 1250,
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
+                // 出现音效
+                appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 0,
                 // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
                 forwardVelocity: -10,
                 // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
@@ -6091,7 +6091,54 @@ Config.item = {
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0.1,
             },
-        },
+            // 地上固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            10000: {
+                // 动画路径
+                animationJsonPath: "images/enm01.json",
+                // 动画名称
+                animationName: "enm01",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 87,
+                // 实际区域高度
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 50,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+				// 出现音效
+                //appearSoundPath: "",
+            },
+        }
+    },
+    // 乌云
+    Cloud: {
+        table: {
+            // 没有配置id的都是用这个配置
+            default: {
+                // 动画路径
+                animationJsonPath: "images/enm01.json",
+                // 动画名称
+                animationName: "enm01",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 87,
+                // 实际区域高度
+                bodyHeight: 96,
+                // 出现音效
+                //appearSoundPath: "",
+            },
+        }
     },
     // 地刺
     groundStab: {
@@ -6463,7 +6510,7 @@ Config.item = {
                 topOffset: 0,
                 // 运动范围的底部距离初始位置的偏移（数值为像素）
                 bottomOffset: 0,
-            }
+            },
         }
     },
     //滚石
@@ -6486,7 +6533,7 @@ Config.item = {
             20: {
                 // 旋转速度
                 angularVelocity: -10
-            }
+            },
         }
     },
     // 火球
@@ -6509,7 +6556,7 @@ Config.item = {
             103: {
                 // 移动速度（单位：像素, 为正的话是像右移动）
                 velocity: 30
-            }
+            },
         }
     },
     // 可食用物体
@@ -6780,28 +6827,8 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
-            }
-        }
-    },
-    // 乌云
-    Cloud: {
-        table: {
-            // 没有配置id的都是用这个配置
-            default: {
-                // 动画路径
-                animationJsonPath: "images/bird-animation.json",
-                // 动画名称
-                animationName: "Bird",
-                // 动画速率（1表示1游戏帧换1张图片，1游戏帧换0.25张图片，4游戏帧换1张图片）
-                animationSpeed: 0.25,
-                // 动画偏移
-                animationPos: [0, 0],
-                // 实际区域宽度
-                bodyWidth: 64,
-                // 实际区域高度
-                bodyHeight: 40,
             },
-        },
+        }
     },
 };
 

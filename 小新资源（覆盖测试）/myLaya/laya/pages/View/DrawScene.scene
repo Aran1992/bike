@@ -1,7 +1,6 @@
 {
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":134,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -564,24 +563,6 @@
                 {
                     "target":134,
                     "keyframes":{
-                        "y":[
-                            {
-                                "value":360,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"y",
-                                "index":0
-                            }],
-                        "x":[
-                            {
-                                "value":640,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"x",
-                                "index":0
-                            }],
                         "scaleY":[
                             {
                                 "value":1,
@@ -697,24 +678,6 @@
                                 "index":30,
                                 "functions":[
                                     ]
-                            }],
-                        "pivotY":[
-                            {
-                                "value":360,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"pivotY",
-                                "index":0
-                            }],
-                        "pivotX":[
-                            {
-                                "value":640,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"pivotX",
-                                "index":0
                             }]
                     }
                 },
@@ -860,7 +823,7 @@
                                 "tween":true,
                                 "target":134,
                                 "key":"y",
-                                "index":10,
+                                "index":5,
                                 "functions":[
                                     ]
                             }]
@@ -884,7 +847,7 @@
                                 "tween":true,
                                 "target":7,
                                 "key":"x",
-                                "index":10,
+                                "index":5,
                                 "functions":[
                                     ]
                             }]
@@ -917,7 +880,7 @@
                                 "tween":true,
                                 "target":134,
                                 "key":"y",
-                                "index":10,
+                                "index":5,
                                 "functions":[
                                     ]
                             }]
@@ -941,7 +904,7 @@
                                 "tween":true,
                                 "target":7,
                                 "key":"x",
-                                "index":10,
+                                "index":5,
                                 "functions":[
                                     ]
                             }]
