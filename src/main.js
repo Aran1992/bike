@@ -2,6 +2,7 @@ import Config from "./config";
 import MyApplication from "./mgr/MyApplication";
 import LoadingScene from "./scene/LoadingScene";
 import GameScene from "./scene/GameScene";
+import MainScene from "./scene/MainScene";
 
 export function main(callback) {
     let width;
@@ -25,5 +26,11 @@ export function main(callback) {
         view: canvas,
     });
 
-    App.loadResources([Config.i18nPath, LoadingScene.sceneFilePath, GameScene.sceneFilePath], callback);
+    App.loadResources(
+        [Config.i18nPath, LoadingScene.sceneFilePath, MainScene.sceneFilePath, GameScene.sceneFilePath],
+        callback,
+        (percent) => {
+            window.addPercent(percent);
+        }
+    );
 }

@@ -5,14 +5,145 @@
     <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
           name="viewport"/>
     <script src="//sdk.talkingdata.com/g/h5/v1/44C663F8CD4849369D1BB85E0F7EAFFD" type="text/javascript"></script>
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        #logoScene {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url('myLaya/laya/assets/images/logo-pic.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        #emptyImg {
+            position: absolute;
+            height: 6.72%;
+            bottom: 10%;
+        }
+
+        #fillDiv {
+            position: absolute;
+            bottom: 10%;
+            background-image: url("myLaya/laya/assets/images/loading-2.png");
+            background-position: left;
+            background-size: cover;
+        }
+
+        #textImg {
+            height: 58%;
+            position: absolute;
+            top: 12%;
+        }
+    </style>
 </head>
-<body style="margin:0">
+<body>
 <p hidden id="ipConfig">//localhost:10001</p>
-<canvas id="canvas" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0;"></canvas>
-<div id="logoScene"
-     style="width: 100%; height: 100%; position: absolute;
-     background-image: url('myLaya/laya/assets/images/logo-pic.png'); background-position: center; background-size: cover;">
+<canvas id="canvas"></canvas>
+<div id="logoScene">
+    <img id="emptyImg" src="myLaya/laya/assets/images/loading-1.png"/>
+    <img hidden id="fillImg" src="myLaya/laya/assets/images/loading-2.png"/>
+    <div hidden id="fillDiv"></div>
+    <img id="textImg" src="myLaya/laya/assets/images/logo.png"/>
 </div>
+<script>
+    const logoScene = document.getElementById("logoScene");
+    const emptyImg = document.getElementById("emptyImg");
+    const fillDiv = document.getElementById("fillDiv");
+    const fillImg = document.getElementById("fillImg");
+    const textImg = document.getElementById("textImg");
+    let fullWidth = 0;
+    let curPercent = 0;
+    let targetPercent = 0;
+    let animationID;
+    let loadingUILoaded = false;
+    let emptyImgLoaded = false;
+    let fillDivLoaded = false;
+
+    function centerImg(img, callback) {
+        img.onload = () => {
+            const left = (window.innerWidth - img.clientWidth) / 2;
+            img.style.left = left + "px";
+            if (callback) {
+                callback();
+            }
+        };
+    }
+
+    function onEmptyImgLoaded() {
+        emptyImgLoaded = true;
+        console.log("onEmptyImgLoaded");
+        onBothLoaded();
+    }
+
+    function onFillDivLoaded() {
+        fillDiv.hidden = false;
+        const height = 43 / 640 * window.innerHeight;
+        const width = 555 / 43 * height;
+        fillDiv.style.height = height + "px";
+        fillDiv.style.width = width + "px";
+        fillDiv.style.left = (window.innerWidth - width) / 2 + "px";
+        fullWidth = width;
+        fillDivLoaded = true;
+        onBothLoaded();
+    }
+
+    function onBothLoaded() {
+        if (emptyImgLoaded && fillDivLoaded && !loadingUILoaded) {
+            loadingUILoaded = true;
+            setPercent(0);
+            addPercent(0.1);
+        }
+    }
+
+    function setPercent(percent) {
+        curPercent = percent;
+        fillDiv.style.width = fullWidth * percent / window.innerWidth * 100 + "%";
+    }
+
+    function addPercent(percent) {
+        percent /= 100;
+        targetPercent += percent;
+        if (loadingUILoaded) {
+            if (animationID === undefined) {
+                animationID = requestAnimationFrame(onFrame);
+            }
+        }
+    }
+
+    function onFrame() {
+        curPercent += 0.01;
+        if (curPercent >= 1) {
+            curPercent = 1;
+        }
+        setPercent(curPercent);
+        if (curPercent >= targetPercent) {
+            animationID = undefined;
+        } else {
+            animationID = requestAnimationFrame(onFrame);
+        }
+        if (curPercent >= 1) {
+            logoScene.hidden = true;
+        }
+    }
+
+    centerImg(textImg);
+    centerImg(emptyImg, onEmptyImgLoaded);
+    fillImg.onload = onFillDivLoaded;
+</script>
 <script src="dist/bundle.js"></script>
 </body>
 </html>

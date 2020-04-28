@@ -1,5 +1,5 @@
-import {main} from "../../src/main";
-import NetworkMgr from "../../src/mgr/NetworkMgr";
+import {main} from "./src/main";
+import NetworkMgr from "./src/mgr/NetworkMgr";
 
 window.PlatformHelper = {
     canLogout: true,
@@ -18,7 +18,6 @@ main(() => {
     let password = localStorage.password;
     if (username && password) {
         NetworkMgr.requestLogin(username, password, username, undefined, () => {
-            localStorage.playername = username;
             App.showScene("MainScene");
         }, () => {
             App.showScene("LoginScene");
