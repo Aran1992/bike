@@ -6624,31 +6624,67 @@ Config.item = {
             1: {
                 portable: 0,
                 effect: "Decelerate",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_grider.json",
+                // 动画名称
+                animationName: "crystal_grider",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：削弱跳跃
             6: {
                 portable: 0,
                 effect: "WeakenJump",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_frog.json",
+                // 动画名称
+                animationName: "crystal_frog",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：遮挡视线
             21: {
                 portable: 0,
                 effect: "BlockSight",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_ninja.json",
+                // 动画名称
+                animationName: "crystal_ninja",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：束缚
             26: {
                 portable: 0,
                 effect: "SpiderWeb",
+                // 动画路径
+                animationJsonPath: "images/trap/cobweb.json",
+                // 动画名称
+                animationName: "cobweb",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：封印
             31: {
                 portable: 0,
                 effect: "Seal",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_icon2.json",
+                // 动画名称
+                animationName: "crystal_icon2",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：落雷
             36: {
                 portable: 0,
                 effect: "Thunder",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_icon1.json",
+                // 动画名称
+                animationName: "crystal_icon1",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：加速
             101: {
@@ -6659,6 +6695,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_jet.json",
+                // 动画名称
+                animationName: "crystal_jet",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：强化跳跃
             106: {
@@ -6668,6 +6710,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_drill.json",
+                // 动画名称
+                animationName: "crystal_drill",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：无限跳跃
             111: {
@@ -6677,6 +6725,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_wing.json",
+                // 动画名称
+                animationName: "crystal_wing",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
             121: {
@@ -6686,7 +6740,13 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
-            },
+                // 动画路径
+                animationJsonPath: "images/item/crystal_dragon.json",
+                // 动画名称
+                animationName: "crystal_dragon",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
+				},
             // 增益：无敌
             131: {
                 portable: 0,
@@ -6695,6 +6755,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_invincible.json",
+                // 动画名称
+                animationName: "crystal_invincible",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：超级无敌冲刺
             141: {
@@ -6704,6 +6770,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_super.json",
+                // 动画名称
+                animationName: "crystal_super",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 随机效果（机会命运）（还需要程序支持）（现在不能用用了会出错）
             9999: {
@@ -6840,11 +6912,11 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 动画路径
-                animationJsonPath: "images/bird-animation.json",
+                animationJsonPath: "images/item/Random.json",
                 // 动画名称
-                animationName: "Bird",
-                // 动画速率（1表示1游戏帧换1张图片，1游戏帧换0.25张图片，4游戏帧换1张图片）
-                animationSpeed: 0.25,
+                animationName: "Random",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
         }
     },
@@ -10913,8 +10985,5 @@ Config.gameLevelScene = {
     bikeSpriteOffsetX: 60,
     bikeSpriteOffsetY: 10,
 };
-
-// 随机道具动画
-Config.imagePath.randomItem = "myLaya/laya/assets/animations/Random.json";
 
 export default Config;
