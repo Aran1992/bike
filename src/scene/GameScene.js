@@ -37,6 +37,7 @@ import BaseEffect from "../item/BaseEffect";
 import SceneHelper from "../mgr/SceneHelper";
 import Bird from "../item/Bird";
 import Cloud from "../item/Cloud";
+import Spring from "../item/Spring";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -245,6 +246,13 @@ export default class GameScene extends Scene {
                             }
                             if (item.animationJsonPath && item.animationJsonPath.length > 0) {
                                 effectResPathList.push(item.animationJsonPath);
+                            }
+                            if (item.animations) {
+                                for (const animation in item.animations) {
+                                    if (item.animations.hasOwnProperty(animation)) {
+                                        effectResPathList.push(item.animations[animation].path);
+                                    }
+                                }
                             }
                         }
                     }
@@ -749,6 +757,10 @@ export default class GameScene extends Scene {
             }
             case "Cloud": {
                 this.itemList.push(new Cloud(this, this.underBikeContianer, this.world, data));
+                break;
+            }
+            case "Spring": {
+                this.itemList.push(new Spring(this, this.underBikeContianer, this.world, data));
                 break;
             }
             case "GroundStab": {

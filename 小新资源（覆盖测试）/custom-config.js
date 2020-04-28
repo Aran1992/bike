@@ -6113,7 +6113,7 @@ Config.item = {
                 strikedBirdImpulse: 1250,
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
-				// 出现音效
+                // 出现音效
                 //appearSoundPath: "",
                 // 是否能踩
                 isAbleToBeTrampled: 1,
@@ -6569,6 +6569,59 @@ Config.item = {
                 // 移动速度（单位：像素, 为正的话是像右移动）
                 velocity: 30
             },
+        }
+    },
+    // 弹簧
+    Spring: {
+        // 配置列表（对应ID的配置）
+        table: {
+            // 没有配置id的都是用这个配置
+            default: {
+                // 所有的动画列表
+                animations: {
+                    // 通常情况下的动画
+                    common: {
+                        // 路径
+                        path: "images/bird-animation.json",
+                        // 名称
+                        name: "Bird",
+                        // 播放速度
+                        speed: 1,
+                        // 偏移
+                        pos: [0, 0],
+                    },
+                    // 被触碰到的动画
+                    ing: {
+                        // 路径
+                        path: "myLaya/laya/assets/animations/Random.json",
+                        // 名称
+                        name: "Random",
+                        // 播放速度
+                        speed: 1,
+                        // 偏移
+                        pos: [0, 0],
+                    },
+                    // 弹到顶之后的动画
+                    ended: {
+                        // 路径
+                        path: "images/firewall-animation.json",
+                        // 名称
+                        name: "firewallx4",
+                        // 播放速度
+                        speed: 1,
+                        // 偏移
+                        pos: [0, 0],
+                    },
+                },
+                // 实际区域宽度
+                bodyWidth: 100,
+                // 实际区域高度
+                bodyHeight: 50,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 100,
+                // 出现音效
+                appearSoundPath: "",
+            }
         }
     },
     // 可食用物体
