@@ -49,6 +49,9 @@ export default class BikeSprite {
             this.bikeAnimSprite = this.bikeSprite.addChildAt(new AnimatedSprite(textures), 0);
             this.bikeAnimSprite.anchor.set(0.5, 0.5);
             this.bikeAnimSprite.position.set(...(this.config.bikeCommonAnimationPos || Config.bikeCommonAnimationPos));
+            if (this.animationSpeed !== undefined) {
+                this.bikeAnimSprite.animationSpeed = this.animationSpeed;
+            }
             if (this.playing) {
                 this.bikeAnimSprite.play();
             }
@@ -125,6 +128,13 @@ export default class BikeSprite {
 
     setScale(scale) {
         this.bikeSprite.scale.set(scale, scale);
+    }
+
+    setAnimationSpeed(speed) {
+        this.animationSpeed = speed;
+        if (this.bikeAnimSprite) {
+            this.bikeAnimSprite.animationSpeed = speed;
+        }
     }
 }
 

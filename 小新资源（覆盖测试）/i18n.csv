@@ -31,6 +31,8 @@ RemoveAll,,HomeScene.scene.json,清空数据,RemoveAll,全部リセット
 宠物摆放已经超过总上限${count}个了哟！",,
 骑士大人，这个宠物最多只能放出${count}个哟！,,HomeScene.scene.json,"玩家大人，
 每种宠物最多只能放出${count}个哟！",,
+主页加成,,MainScene.scene.json,"金币：${Coin}  积分：${Score}
+里程：${Distance}  经验：${Exp}",,
 TotalDistance,,RankScene.scene.json,累计里程,Total Distance,累計のマイレージ
 FarthestDistance,,RankScene.scene.json,最远里程,Farthest Distance,最長の距離
 Score,,RankScene.scene.json,积分,Score,ポイント
