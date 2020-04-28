@@ -60,7 +60,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//ID:111",
-            "props":{"y":-40,"x":50,"skin":"images/crystal_wing_00.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//ID:111","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":-40,"x":50,"skin":"images/crystal_wing_00.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//ID:111","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//ID:111",
             "isDirectory":false,
