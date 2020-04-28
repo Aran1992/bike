@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":161,
-    "selecteID":216,
+    "selectedBox":234,
+    "selecteID":49,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
@@ -51,13 +51,14 @@
             "props":{"y":260,"width":650,"skin":"images/bg-201.png","left":200,"height":400,"bottom":60},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":231,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":340,"skin":"images/bg-202.png","left":25,"height":233,"bottom":25},
@@ -70,9 +71,10 @@
                     "compId":234,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,bikeSpritePanel",
-                            "props":{"var":"bikeSpritePanel","scaleY":1.2,"scaleX":1.2,"centerX":0,"bottom":10},
+                            "props":{"var":"bikeSpritePanel","scaleY":1.2,"scaleX":1.2,"centerX":70,"bottom":10},
                             "nodeParent":234,
                             "label":"bikeSpritePanel",
                             "isOpen":true,
@@ -86,6 +88,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"width":258,"var":"bikeButton","top":138,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"bottom":25},
@@ -98,6 +101,7 @@
                     "compId":235,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":0,"skin":"images/button-bike-scene.png","right":0,"left":0,"bottom":0},
@@ -111,6 +115,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/bike.png","centerX":0,"bottom":15},
@@ -124,6 +129,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -138,6 +144,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,redPoint",
                             "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
@@ -153,11 +160,12 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"text":"123456","strokeColor":"#000000","stroke":5,"left":191,"fontSize":25,"color":"#ffffff","bottom":305,"align":"left"},
+                    "searchKey":"Label,addtionText",
+                    "props":{"var":"addtionText","text":"123456","strokeColor":"#000000","stroke":5,"left":191,"fontSize":25,"color":"#ffffff","bottom":305,"align":"left"},
                     "nodeParent":231,
-                    "label":"Label",
+                    "label":"addtionText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
