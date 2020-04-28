@@ -6677,31 +6677,67 @@ Config.item = {
             1: {
                 portable: 0,
                 effect: "Decelerate",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_grider.json",
+                // 动画名称
+                animationName: "crystal_grider",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：削弱跳跃
             6: {
                 portable: 0,
                 effect: "WeakenJump",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_frog.json",
+                // 动画名称
+                animationName: "crystal_frog",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：遮挡视线
             21: {
                 portable: 0,
                 effect: "BlockSight",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_ninja.json",
+                // 动画名称
+                animationName: "crystal_ninja",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：束缚
             26: {
                 portable: 0,
                 effect: "SpiderWeb",
+                // 动画路径
+                animationJsonPath: "images/trap/cobweb.json",
+                // 动画名称
+                animationName: "cobweb",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：封印
             31: {
                 portable: 0,
                 effect: "Seal",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_icon2.json",
+                // 动画名称
+                animationName: "crystal_icon2",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 陷阱：落雷
             36: {
                 portable: 0,
                 effect: "Thunder",
+                // 动画路径
+                animationJsonPath: "images/trap/crystal_icon1.json",
+                // 动画名称
+                animationName: "crystal_icon1",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：加速
             101: {
@@ -6712,6 +6748,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_jet.json",
+                // 动画名称
+                animationName: "crystal_jet",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：强化跳跃
             106: {
@@ -6721,6 +6763,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_drill.json",
+                // 动画名称
+                animationName: "crystal_drill",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：无限跳跃
             111: {
@@ -6730,6 +6778,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_wing.json",
+                // 动画名称
+                animationName: "crystal_wing",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
             121: {
@@ -6739,7 +6793,13 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
-            },
+                // 动画路径
+                animationJsonPath: "images/item/crystal_dragon.json",
+                // 动画名称
+                animationName: "crystal_dragon",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
+				},
             // 增益：无敌
             131: {
                 portable: 0,
@@ -6748,6 +6808,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_invincible.json",
+                // 动画名称
+                animationName: "crystal_invincible",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 增益：超级无敌冲刺
             141: {
@@ -6757,6 +6823,12 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/crystal_super.json",
+                // 动画名称
+                animationName: "crystal_super",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
             // 随机效果（机会命运）（还需要程序支持）（现在不能用用了会出错）
             9999: {
@@ -6893,11 +6965,11 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 动画路径
-                animationJsonPath: "images/bird-animation.json",
+                animationJsonPath: "images/item/Random.json",
                 // 动画名称
-                animationName: "Bird",
-                // 动画速率（1表示1游戏帧换1张图片，1游戏帧换0.25张图片，4游戏帧换1张图片）
-                animationSpeed: 0.25,
+                animationName: "Random",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
             },
         }
     },
@@ -6934,9 +7006,11 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_grider_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
+        //bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect2.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_slow.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_grider_00.png",
         // 使用音效
@@ -6957,9 +7031,11 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_frog_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect2.prefab.json",
+        //bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect2.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_sjump.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_frog_00.png",
         // 使用音效
@@ -6978,9 +7054,11 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_ninja_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BlockSightEffect2.prefab.json",
+        //bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/BlockSightEffect2.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_inkfish.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_ninja_00.png",
         // 使用音效
@@ -7003,7 +7081,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_propeller_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/SpiderWebBearerBuffEffect.prefab.json",
         // 持续效果ICON路径
@@ -7024,9 +7102,11 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon2_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/SpellEffect.prefab.json",
         // 承受者受击特效路径（只能是动画）（因为平台关系需加上.json）
-        bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect2.prefab.json",
+        //bearerSufferedEffectPath: "myLaya/laya/assets/prefabs/SealEffect2.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_closed.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_icon2_00.png",
         // 使用音效
@@ -7062,7 +7142,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_jet_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/AccelerateEffec.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_speedup.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_jet_00.png",
     },
@@ -7077,7 +7159,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_drill_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/PowerJumpEffect.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_bjump.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_drill_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7092,7 +7176,9 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_wing_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/UnlimitedJumpEffect.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_fly.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_wing_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7109,15 +7195,17 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/MagnetEffect.prefab.json",
+        // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
+        bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_mag_01.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_dragon_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
     },
-    // 香蕉皮
+    // 香蕉皮炸弹
     BananaPeel: {
-        // 丢出去的香蕉皮的编辑器预制件（因为平台关系需加上.json）
+        // 丢出去的香蕉皮炸弹的编辑器预制件（因为平台关系需加上.json）
         peelPrefabPath: "myLaya/laya/assets/prefabs/BananaPeel.prefab.json",
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_icon3_09.png",
@@ -7145,7 +7233,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_invincible_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/WeakenJumpEffect.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_invincible_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
@@ -7162,7 +7250,7 @@ Config.effect = {
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_super_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
-        userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
+        //userUsedEffectPath: "myLaya/laya/assets/prefabs/DecelerateEffect.prefab.json",
         // 承受者持续特效路径（可以是动画或者静态图片）（因为平台关系需加上.json）
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_rocket.prefab.json",
         // 持续效果ICON路径
@@ -10966,8 +11054,5 @@ Config.gameLevelScene = {
     bikeSpriteOffsetX: 60,
     bikeSpriteOffsetY: 10,
 };
-
-// 随机道具动画
-Config.imagePath.randomItem = "myLaya/laya/assets/animations/Random.json";
 
 export default Config;
