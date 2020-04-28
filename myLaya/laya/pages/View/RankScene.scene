@@ -1,10 +1,10 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":74,
-    "selecteID":80,
+    "selectedBox":1,
+    "selecteID":62,
     "searchKey":"Scene",
-    "props":{"width":720,"sceneColor":"#000000","height":1280},
+    "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
     "maxID":157,
     "label":"Scene",
@@ -47,17 +47,16 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":720,"top":205,"height":80,"centerX":0},
+            "props":{"width":720,"top":105,"height":80,"centerX":0},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":60,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/RANKING.png","centerY":-4,"centerX":0},
@@ -76,7 +75,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":416,"top":115,"skin":"images/bg-56.png","height":67,"centerX":0},
+            "props":{"width":416,"top":20,"skin":"images/bg-56.png","height":67,"centerX":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -91,7 +90,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,rangeRadio",
-            "props":{"width":416,"var":"rangeRadio","top":115,"height":67,"centerX":0},
+            "props":{"width":416,"var":"rangeRadio","top":20,"height":67,"centerX":0},
             "nodeParent":1,
             "label":"rangeRadio",
             "isOpen":false,
@@ -199,7 +198,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":690,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","height":950,"centerX":0,"bottom":15},
+            "props":{"width":690,"top":200,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","height":500,"centerX":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -214,7 +213,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,resetTimeText",
-            "props":{"var":"resetTimeText","top":385,"text":"Requesting rank data","fontSize":35,"color":"#ffffff","centerX":0},
+            "props":{"var":"resetTimeText","top":270,"text":"Requesting rank data","fontSize":35,"color":"#ffffff","centerX":0},
             "nodeParent":1,
             "label":"resetTimeText",
             "isDirectory":false,
@@ -228,7 +227,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":690,"top":300,"skin":"images/bg-81.png","height":66,"centerX":0},
+            "props":{"width":690,"top":185,"skin":"images/bg-81.png","height":66,"centerX":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -243,17 +242,16 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,typeRadio",
-            "props":{"width":690,"var":"typeRadio","top":300,"height":66,"centerX":0},
+            "props":{"width":690,"var":"typeRadio","top":185,"height":66,"centerX":0},
             "nodeParent":1,
             "label":"typeRadio",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":73,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,typeCheck",
                     "props":{"width":230,"var":"typeCheck","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":52,"centerY":-3,"centerX":20},
@@ -266,7 +264,6 @@
                     "compId":74,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selected",
                             "props":{"width":220,"visible":false,"skin":"images/button-shop-21.png","name":"selected","height":52,"centerY":0,"centerX":0},
@@ -280,7 +277,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,common",
                             "props":{"width":220,"visible":true,"skin":"images/button-shop-22.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"common","height":52,"centerY":0,"centerX":0},
@@ -295,7 +291,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
                             "props":{"name":"1","centerY":0,"centerX":0},
@@ -308,7 +303,6 @@
                             "compId":78,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/english/mileage-total.png","centerY":0,"centerX":0},
@@ -325,7 +319,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
                             "props":{"name":"2","centerY":0,"centerX":0},
@@ -338,7 +331,6 @@
                             "compId":79,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/english/mileage-farthest.png","centerY":0,"centerX":0},
@@ -355,7 +347,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,3",
                             "props":{"name":"3","centerY":0,"centerX":0},
@@ -368,7 +359,6 @@
                             "compId":80,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/english/integral.png","centerY":0,"centerX":0},
@@ -390,7 +380,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,listPanel",
-            "props":{"width":700,"var":"listPanel","top":435,"sizeGrid":"50,50,50,50","centerX":0,"bottom":110},
+            "props":{"width":700,"var":"listPanel","top":320,"sizeGrid":"50,50,50,50","centerX":0,"bottom":110},
             "nodeParent":1,
             "label":"listPanel",
             "isOpen":false,
@@ -582,17 +572,16 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,myInfoPanel",
-            "props":{"var":"myInfoPanel","left":0,"bottom":70},
+            "props":{"var":"myInfoPanel","centerX":-200,"bottom":70},
             "nodeParent":1,
             "label":"myInfoPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":62,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"text":"${MyRank}","left":50,"fontSize":30,"color":"#ffffff","centerY":0},
@@ -606,7 +595,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,myValue",
                     "props":{"var":"myValue","text":"0","left":450,"fontSize":30,"color":"#ffffff","centerY":0,"align":"right"},

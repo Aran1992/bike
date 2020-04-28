@@ -5811,7 +5811,9 @@ Config.mainScene = {
     // 自行车相关配置
     bikeSprite: {
         // 在X轴上移动的速度
-        velocityX: 2,
+        velocityX: 0,
+        // 动画速度
+        animationSpeed: 0.5,
     }
 };
 // 扭蛋界面相关配置
@@ -6799,7 +6801,7 @@ Config.item = {
                 animationName: "crystal_dragon",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
-				},
+            },
             // 增益：无敌
             131: {
                 portable: 0,

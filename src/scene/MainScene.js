@@ -52,6 +52,7 @@ export default class MainScene extends Scene {
         EventMgr.registerEvent("UpdatePoint", this.updatePoint.bind(this));
 
         this.bikeSprite = new BikeSprite(this.ui.bikeSpritePanel);
+        this.bikeSprite.setAnimationSpeed(Config.mainScene.bikeSprite.animationSpeed);
 
         this.waitShowNotice = [];
 
@@ -72,6 +73,18 @@ export default class MainScene extends Scene {
         this.ui.levelText.text = App.getText("LevelDsc", {level});
         this.ui.expProgress.children[0].width = this.ui.expProgress.children[0].texture.width * curExp / totalExp;
         this.ui.expRate.text = `${curExp}/${totalExp}`;
+        const table = {
+            Coin: "coinPercent",
+            Distance: "distancePercent",
+            Score: "scorePercent",
+            Exp: "expPercent",
+        };
+        for (const key in table) {
+            if (table.hasOwnProperty(key)) {
+                table[key] = Math.floor(GameUtils.getBikeConfig(table[key]) * 100) + "%";
+            }
+        }
+        this.ui.addtionText.text = App.getText("主页加成", table);
     }
 
     onShow() {
