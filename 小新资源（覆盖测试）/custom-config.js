@@ -6113,7 +6113,7 @@ Config.item = {
                 strikedBirdImpulse: 1250,
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
-                // 出现音效
+				// 出现音效
                 //appearSoundPath: "",
                 // 是否能踩
                 isAbleToBeTrampled: 1,
@@ -6155,7 +6155,7 @@ Config.item = {
     // 地刺
     groundStab: {
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.25,
+        animationSpeed: 0.1,
         // 静止状态动画是第几帧（从0开始）
         staticFrame: 2,
     },
@@ -6582,20 +6582,20 @@ Config.item = {
                     // 通常情况下的动画
                     common: {
                         // 路径
-                        path: "images/bird-animation.json",
+                        path: "images/trap/jmp_0.json",
                         // 名称
-                        name: "Bird",
+                        name: "jmp_0",
                         // 播放速度
                         speed: 1,
                         // 偏移
-                        pos: [0, 0],
+                        pos: [0, -30],
                     },
                     // 被触碰到的动画
                     ing: {
                         // 路径
-                        path: "myLaya/laya/assets/animations/Random.json",
+                        path: "images/trap/jmp_0.json",
                         // 名称
-                        name: "Random",
+                        name: "jmp_0",
                         // 播放速度
                         speed: 1,
                         // 偏移
@@ -6604,24 +6604,24 @@ Config.item = {
                     // 弹到顶之后的动画
                     ended: {
                         // 路径
-                        path: "images/firewall-animation.json",
+                        path: "images/trap/jmp_1.json",
                         // 名称
-                        name: "firewallx4",
+                        name: "jmp_1",
                         // 播放速度
                         speed: 1,
                         // 偏移
-                        pos: [0, 0],
+                        pos: [0, -50],
                     },
                 },
                 // 实际区域宽度
                 bodyWidth: 100,
                 // 实际区域高度
-                bodyHeight: 50,
+                bodyHeight: 70,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 100,
                 // 出现音效
-                appearSoundPath: "",
-            }
+                //appearSoundPath: "",
+            },
         }
     },
     // 可食用物体
