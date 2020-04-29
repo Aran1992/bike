@@ -104,6 +104,7 @@ export default class GameScene extends Scene {
         this.ui.starPanel.visible = false;
         this.ui.coinPanel.visible = false;
         this.ui.expPanel.visible = false;
+        this.ui.velocityState.visible = false;
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
         this.ui.rebornPanel.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
@@ -267,7 +268,6 @@ export default class GameScene extends Scene {
         return [
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
-            Config.accGemAniJson,
             Config.fireWallAniJson,
             Config.effect.BananaPeel.peelPrefabPath,
             Config.startImagePath.ui,
