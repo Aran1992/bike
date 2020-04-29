@@ -5831,6 +5831,11 @@ Config.bikeScene = {
     //自行车能力升级随机转动音效
     res: {
         upgradeSound: "myLaya/laya/assets/sounds/se_icon_select.mp3"
+    },
+    // 自行车列表相关配置
+    bikeList: {
+        // 是否横向显示
+        isHorizontal: 1
     }
 };
 
@@ -6115,7 +6120,7 @@ Config.item = {
                 strikedBirdImpulse: 1250,
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
-				// 出现音效
+                // 出现音效
                 //appearSoundPath: "",
                 // 是否能踩
                 isAbleToBeTrampled: 1,

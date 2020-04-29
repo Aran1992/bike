@@ -20,6 +20,8 @@ export default class BikeScene extends Scene {
             initItemFunc: this.initItem.bind(this),
             updateItemFunc: this.updateItem.bind(this),
             count: Config.bikeList.length,
+            isHorizontal: Config.bikeScene.bikeList.isHorizontal,
+            onScroll: this.onScroll.bind(this)
         });
         this.upgradeList = new List({
             root: this.ui.upgradeList,
@@ -43,6 +45,7 @@ export default class BikeScene extends Scene {
         this.onClickItem({index: 0});
         this.ui.upgradePanel.visible = false;
         this.ui.list.visible = true;
+        this.onScroll();
     }
 
     onHide() {
@@ -313,6 +316,11 @@ export default class BikeScene extends Scene {
         GameUtils.showRedPoint(this.ui.upgradePanelButton,
             !locked && DataMgr.isBikeUpgradable(Config.bikeList[this.selectedIndex].id));
         this.list.refresh();
+    }
+
+    onScroll() {
+        this.ui.leftArrow.visible = this.list.isAbleScrollLeft();
+        this.ui.rightArrow.visible = this.list.isAbleScrollRight();
     }
 }
 
