@@ -1,6 +1,6 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {AnimatedSprite, resources} from "../libs/pixi-wrapper";
+import {AnimatedSprite, resources, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import {Vec2} from "../libs/planck-wrapper";
@@ -14,6 +14,7 @@ export default class EndlessGameScene extends GameScene {
         this.ui.coinPanel.visible = true;
         this.ui.expPanel.visible = true;
         this.ui.pauseButton.visible = true;
+        this.ui.velocityState.visible = true;
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
 
@@ -73,7 +74,8 @@ export default class EndlessGameScene extends GameScene {
                 this.sceneConfig.texture.side2,
                 this.sceneConfig.texture.top2,
             ])
-            .concat(this.sceneFilePathList);
+            .concat(this.sceneFilePathList)
+            .concat(Config.gameScene.velocityStateImgList.map(({imgPath}) => imgPath));
     }
 
     onRestart() {
@@ -146,6 +148,7 @@ export default class EndlessGameScene extends GameScene {
             this.speedUpNotice.gotoAndPlay(0);
         }
         this.player.velocity.setBasicValueRate(roadSection.velocity);
+        this.onVelocityUpdate(roadSection.velocity);
         this.bikeBody.setLinearVelocity(Vec2(this.player.velocity.value, this.bikeBody.getLinearVelocity().y));
 
         this.partList = [];
@@ -160,6 +163,16 @@ export default class EndlessGameScene extends GameScene {
             let item = rsList.splice(index, 1)[0];
             this.partList.push(item);
             sumLength += item.props.width;
+        }
+    }
+
+    onVelocityUpdate(newValue) {
+        for (let i = 0; i < Config.gameScene.velocityStateImgList.length; i++) {
+            const item = Config.gameScene.velocityStateImgList[i];
+            if (newValue <= item.maxVelocity) {
+                this.ui.velocityState.children[0].texture = Texture.from(item.imgPath);
+                break;
+            }
         }
     }
 

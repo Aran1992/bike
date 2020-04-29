@@ -33,6 +33,7 @@ export default class PreparationScene extends Scene {
     }
 
     onShow(mode) {
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
         this.mode = mode;
         this.ui.endlessModeImage.visible = false;
         this.ui.mapModeImage.visible = false;

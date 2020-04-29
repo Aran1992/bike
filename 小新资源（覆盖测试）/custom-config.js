@@ -5838,6 +5838,48 @@ Config.bikeScene = {
         isHorizontal: 1
     }
 };
+// 游戏界面相关配置
+Config.gameScene = {
+    // 速度状态图片列表（由低至高）
+    velocityStateImgList: [
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_1.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.2,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_2.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.4,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_3.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.6,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_4.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.8,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_5.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 2,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_6.png",
+        },
+    ]
+};
 
 // 商店游戏币配置（目前关闭了不用）
 Config.moneyList = [

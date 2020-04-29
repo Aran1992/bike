@@ -146,12 +146,12 @@ export default class GameLevelScene extends Scene {
     onClickGameLevelLocked() {
         if (DataMgr.hasEnoughStarUnlockGameLevelMap(this.gameLevel)) {
             App.showMask();
-            App.showNotice("此时播放一个解锁地图的动画");
+            // App.showNotice("此时播放一个解锁地图的动画");
             setTimeout(() => {
                 DataMgr.unlockGameLevelMap(this.gameLevel);
                 App.hideMask();
                 this.refreshGameLevelMode();
-            }, Config.notice.duration);
+            }, 100);
         } else {
             App.showNotice("没有足够的星星解锁该地图");
         }
@@ -173,11 +173,11 @@ export default class GameLevelScene extends Scene {
 
     play2nextLevel() {
         App.showMask();
-        App.showNotice("此时播放一个解锁关卡的动画");
+        // App.showNotice("此时播放一个解锁关卡的动画");
         setTimeout(() => {
             App.hideMask();
             this.onClickGameLevel({index: this.selectedLevel + 1});
-        }, Config.notice.duration);
+        }, 100);
     }
 
     play2nextMap() {
