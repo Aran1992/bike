@@ -97,6 +97,7 @@ export default class MainScene extends Scene {
         this.bikeSprite.setBikeID(DataMgr.get(DataMgr.selectedBike, 0));
         this.bikeSprite.setPosition(-this.bikeSprite.getWidth() / 2, 0);
         this.bikeSprite.play();
+        this.bikeSprite.setPositionX(0);
         this.onUpdate();
 
         this.ui.userImage.children[0].texture = Texture.from(DataMgr.get(DataMgr.headurl, Config.defaultEnemyHeadImagePath));

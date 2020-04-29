@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":79,
-    "selecteID":82,
+    "selectedBox":15,
+    "selecteID":300,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -136,14 +136,13 @@
                     "props":{"width":600,"var":"list","right":50,"height":590,"bottom":30},
                     "nodeParent":15,
                     "label":"list",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item",
                             "props":{"width":200,"runtime":"../laya/assets/sounds/SE312.mp3","name":"item","height":200},
@@ -311,38 +310,6 @@
                                             "$HIDDEN":false
                                         }]
                                 }]
-                        },
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"skin":"images/button-lastBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-30,"centerY":0},
-                            "nodeParent":3,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":298,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        },
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"skin":"images/button-nextBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":-30,"centerY":0},
-                            "nodeParent":3,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":300,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
                         }],
                     "$HIDDEN":false
                 },
@@ -353,14 +320,13 @@
                     "props":{"width":650,"visible":false,"var":"upgradePanel","skin":"images/bg-201.png","sizeGrid":"50,0,50,0","right":20,"height":620,"bottom":10},
                     "nodeParent":15,
                     "label":"upgradePanel",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":68,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":60,"skin":"images/bg-231.png","sizeGrid":"50,0,50,0","right":25,"left":25,"bottom":60},
@@ -376,7 +342,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":-50,"skin":"images/bg-251.png","scaleY":0.5,"scaleX":0.5,"left":0},
@@ -389,7 +354,6 @@
                             "compId":293,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/english/skillup.png","centerY":0,"centerX":0},
@@ -407,7 +371,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,upgradeList",
                             "props":{"width":570,"var":"upgradeList","height":480,"centerY":0,"centerX":0},
@@ -420,7 +383,6 @@
                             "compId":277,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel",
                                     "props":{"width":570,"height":120},
@@ -965,7 +927,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lvLimitPanel",
                             "props":{"width":330,"visible":false,"var":"lvLimitPanel","top":0,"skin":"images/button-start-3.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-400,"height":85},
@@ -994,7 +955,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,upgradeButton",
                             "props":{"width":330,"var":"upgradeButton","top":0,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-400,"height":85},
@@ -1007,7 +967,6 @@
                             "compId":160,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/english/LevelUp.png","centerY":-5,"centerX":0},
@@ -1024,7 +983,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,upgradeCostPanel",
                             "props":{"width":200,"var":"upgradeCostPanel","top":85,"left":-350,"height":70},
@@ -1037,7 +995,6 @@
                             "compId":79,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-coin.png","scaleY":0.4,"scaleX":0.4,"left":0,"centerY":0},
@@ -1052,7 +1009,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,upgradeCostLabel",
                                     "props":{"var":"upgradeCostLabel","text":"9999999","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":30},
@@ -1069,7 +1025,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,upgradeTimesLabel",
                             "props":{"var":"upgradeTimesLabel","top":-60,"text":"已升级99次","strokeColor":"#000000","stroke":5,"left":-330,"fontSize":40,"color":"#ffffff"},
@@ -1281,6 +1236,38 @@
                                     "$HIDDEN":false
                                 }]
                         }],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,leftArrow",
+                    "props":{"var":"leftArrow","skin":"images/button-lastBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":650,"bottom":300},
+                    "nodeParent":15,
+                    "label":"leftArrow",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":298,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,rightArrow",
+                    "props":{"var":"rightArrow","skin":"images/button-nextBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"bottom":300},
+                    "nodeParent":15,
+                    "label":"rightArrow",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":300,
+                    "child":[
+                        ],
                     "$HIDDEN":false
                 }],
             "$HIDDEN":false

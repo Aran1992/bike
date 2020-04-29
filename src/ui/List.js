@@ -3,7 +3,7 @@ import UIHelper from "./UIHelper";
 import Config from "../config";
 
 export default class List {
-    constructor({root, initItemFunc, updateItemFunc, count, isStatic, isHorizontal}) {
+    constructor({root, initItemFunc, updateItemFunc, count, isStatic, isHorizontal, onScroll}) {
         this.itemTable = {};
         this.cacheItemList = [];
 
@@ -16,6 +16,7 @@ export default class List {
         this.item.visible = false;
         this.initItem = initItemFunc;
         this.updateItem = updateItemFunc;
+        this.onScroll = onScroll || (() => 0);
 
         this.createMask();
 
@@ -114,6 +115,7 @@ export default class List {
             }
             this.container[this.moveAxis] = newOffset;
             this.update();
+            this.onScroll();
         }
     }
 
@@ -142,6 +144,7 @@ export default class List {
                 }
                 this.update();
                 lastTime = curTime;
+                this.onScroll();
             };
             handler();
         }
@@ -240,5 +243,13 @@ export default class List {
                 updateFunc(this.itemTable[index], parseInt(index));
             }
         }
+    }
+
+    isAbleScrollLeft() {
+        return this.container[this.moveAxis] < this.maxOffset;
+    }
+
+    isAbleScrollRight() {
+        return this.container[this.moveAxis] > this.minOffset;
     }
 }
