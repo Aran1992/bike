@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":28,
-    "selecteID":29,
+    "selectedBox":1,
+    "selecteID":138,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":137,
+    "maxID":158,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -260,14 +260,13 @@
             "props":{"width":720,"skin":"images/bg-7.png","height":76},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":31,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,pauseButton",
                     "props":{"x":0,"var":"pauseButton","skin":"images/button-pause.png","scaleY":0.95,"scaleX":0.95,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"centerY":0},
@@ -281,7 +280,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,surrenderButton",
                     "props":{"var":"surrenderButton","top":0,"skin":"images/ButtonClose_Gray-2.png","scaleY":0.95,"scaleX":0.95,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
@@ -296,20 +294,18 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":-100,"x":290,"visible":false,"top":-100,"skin":"images/bottom-num.png","scaleY":0.9,"scaleX":0.9},
                     "nodeParent":31,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":22,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bottom-num-2.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -322,7 +318,6 @@
                             "compId":23,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":5,"skin":"images/icon-diamond.png","scaleY":0.4,"scaleX":0.4,"centerY":2},
@@ -338,7 +333,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
                             "props":{"var":"diamondText","text":"0","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -353,7 +347,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"y":10,"x":77,"top":10,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9},
@@ -407,7 +400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,coinPanel",
                     "props":{"y":10,"x":505,"var":"coinPanel","top":10,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9},
@@ -420,7 +412,6 @@
                     "compId":27,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bottom-num-12.png","scaleY":0.9,"scaleX":0.9,"left":0,"centerY":-4},
@@ -433,7 +424,6 @@
                             "compId":28,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-coin.png","scaleY":0.4,"scaleX":0.4,"centerY":0,"centerX":-1},
@@ -449,7 +439,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
                             "props":{"var":"coinText","text":"0","left":70,"fontSize":30,"color":"#000000","centerY":-2},
@@ -465,7 +454,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expPanel",
                     "props":{"y":0,"x":291,"visible":true,"var":"expPanel","top":10,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9},
@@ -518,7 +506,24 @@
                                 ]
                         }],
                     "$HIDDEN":false
-                }]
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,velocityState",
+            "props":{"y":0,"var":"velocityState","skin":"images/game-scene/ui_spd_1.png","left":750},
+            "nodeParent":1,
+            "label":"velocityState",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":138,
+            "child":[
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -722,14 +727,13 @@
             "props":{"y":680,"x":0,"visible":false,"var":"guidePanel","right":0,"left":0,"height":600,"bottom":0},
             "nodeParent":1,
             "label":"guidePanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":100,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":500,"skin":"images/bg-13.png","sizeGrid":"50,50,50,50","height":150,"centerY":-80,"centerX":0},
@@ -742,7 +746,6 @@
                     "compId":67,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"${LearnJump}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},
@@ -759,7 +762,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":320,"visible":true,"skin":"images/bg-13.png","sizeGrid":"50,50,50,50","left":50,"height":150,"centerY":-80},
@@ -772,7 +774,6 @@
                     "compId":70,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"${LearnItem}","strokeColor":"#ffffff","fontSize":30,"color":"#ffffff","centerY":0,"centerX":0,"anchorY":0.5,"anchorX":0.5},
@@ -797,14 +798,13 @@
             "props":{"var":"portableItemButton1","skin":"images/bottom-item.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":20,"bottom":160},
             "nodeParent":1,
             "label":"portableItemButton1",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":14,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
                     "props":{"width":200,"right":-10,"name":"hitArea","height":140,"bottom":-10},
@@ -825,14 +825,13 @@
             "props":{"var":"portableItemButton2","skin":"images/bottom-item.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":20,"bottom":20},
             "nodeParent":1,
             "label":"portableItemButton2",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":13,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
                     "props":{"width":200,"top":-10,"right":-10,"name":"hitArea","height":150},
@@ -853,14 +852,13 @@
             "props":{"width":150,"var":"sealMask","left":0,"height":290,"bottom":0},
             "nodeParent":1,
             "label":"sealMask",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":54,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-item-close-2.png","left":15,"centerY":65},
@@ -875,7 +873,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-item-close-1.png","left":15,"centerY":-75},
@@ -897,14 +894,13 @@
             "props":{"width":550,"var":"rebornPanel","top":5,"skin":"images/bg-3.png","sizeGrid":"50,50,50,50","height":300,"centerX":0},
             "nodeParent":1,
             "label":"rebornPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":41,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"width":500,"top":50,"text":"${ResurrectionPosition}","height":80,"fontSize":36,"color":"#ffffff","centerX":0,"anchorY":0.5,"anchorX":0.5},
@@ -919,7 +915,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,confirmButton",
                     "props":{"var":"confirmButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/Sound0009.mp3","centerX":0,"bottom":55},
@@ -932,7 +927,6 @@
                     "compId":15,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/START.png","centerY":-5,"centerX":0},
