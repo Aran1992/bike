@@ -3270,7 +3270,7 @@ Config.bikeList = [
         // 移动动画偏移，没有设置的话就是用默认的偏移
         //bikeCommonAnimationPos: [0, 0],
         // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
-        bikeSprintAnimation: "myLaya/laya/assets/animations/sprint.json",
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns1030-6.json",
         // 自行车冲刺动画的偏移，没有设置的话就是用默认的偏移
         //bikeSprintAnimationPos: [0, 0],
         // 跳跃动画路径 没有设置的话，使用默认的动画
@@ -3354,6 +3354,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns1010-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns1010-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3433,6 +3435,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns1020-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns1020-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3512,6 +3516,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2010-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2010-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3591,6 +3597,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2020-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2020-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3670,6 +3678,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2030-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2030-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3749,6 +3759,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2040-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2040-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3828,6 +3840,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2060-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2060-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3907,6 +3921,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2070-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2070-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -3986,6 +4002,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2080-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2080-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4065,6 +4083,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns2090-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns2090-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4144,6 +4164,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns3000-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns3000-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4223,6 +4245,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns3010-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns3010-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4302,6 +4326,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns3020-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns3020-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4381,6 +4407,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns3030-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns3030-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4460,6 +4488,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5000-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5000-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4539,6 +4569,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5010-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5010-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4618,6 +4650,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5020-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5020-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4697,6 +4731,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5030-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5030-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4776,6 +4812,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5040-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5040-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4855,6 +4893,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5050-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5050-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -4934,6 +4974,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5060-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5060-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5013,6 +5055,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5070-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5070-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5092,6 +5136,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5080-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5080-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5171,6 +5217,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5090-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5090-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5250,6 +5298,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5100-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5100-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5329,6 +5379,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5110-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5110-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5408,6 +5460,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5120-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5120-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5487,6 +5541,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5130-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5130-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5566,6 +5622,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5140-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5140-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5645,6 +5703,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5150-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5150-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
@@ -5724,6 +5784,8 @@ Config.bikeList = [
         ],
         // 移动动画路径 json文件中动画名为“bike”，没有设置的话，使用默认的动画
         bikeCommonAnimation: "myLaya/laya/assets/animations/cosplay/sns5630-1.json",
+        // 自行车冲刺动画，json文件中动画名为“sprint”，没有设置的话，使用默认的动画
+        bikeSprintAnimation: "myLaya/laya/assets/animations/cosplay/sns5630-6.json",
         // 跳跃动画路径 没有设置的话，使用默认的动画
         bikeJumpingAnimation: {
             "1": {
