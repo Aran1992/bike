@@ -9979,7 +9979,7 @@ Config.lockSystems = {
         // 解锁图片
         image: "myLaya/laya/assets/images/button-bike-scene.png",
         // 解锁图片缩放
-        imageScale: 2,
+        imageScale: 1,
     },
     // 无尽模式
     endlessModeButton: {
