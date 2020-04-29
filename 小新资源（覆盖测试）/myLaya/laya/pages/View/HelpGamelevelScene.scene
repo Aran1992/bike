@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":96,
-    "selecteID":42,
+    "selectedBox":137,
+    "selecteID":139,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -38,14 +38,13 @@
             "props":{"width":1000,"top":50,"skin":"images/bg-200.png","sizeGrid":"50,50,50,50","name":"Panel","height":650,"centerX":0},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":16,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":50,"skin":"images/bg-231.png","sizeGrid":"50,50,50,50","right":20,"left":20,"bottom":20},
@@ -60,7 +59,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,returnButton",
                     "props":{"var":"returnButton","top":-25,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-25},
@@ -74,7 +72,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,list",
                     "props":{"top":70,"right":40,"name":"list","left":40,"layoutEnabled":false,"bottom":40},
@@ -87,7 +84,6 @@
                     "compId":96,
                     "child":[
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,list",
                             "props":{"width":900,"name":"list","height":700,"centerX":0},
@@ -100,7 +96,6 @@
                             "compId":42,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help1",
                                     "props":{"x":0,"width":900,"top":0,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help1","height":100,"centerX":0},
@@ -128,7 +123,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":100,"x":-30,"width":1000,"top":100,"skin":"images/line-1.png","scaleY":1,"scaleX":1,"centerX":20},
@@ -142,7 +136,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help2",
                                     "props":{"width":900,"top":100,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help2","height":100,"centerX":0},
@@ -183,7 +176,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"width":1000,"top":200,"skin":"images/line-1.png","scaleY":1,"scaleX":1,"centerX":20},
@@ -197,7 +189,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help3",
                                     "props":{"x":0,"width":900,"top":215,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help3","height":70,"centerX":0},
@@ -238,7 +229,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help6",
                                     "props":{"width":900,"top":285,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help6","height":70,"centerX":0},
@@ -279,7 +269,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help7",
                                     "props":{"x":0,"width":900,"top":355,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help7","height":70,"centerX":0},
@@ -320,7 +309,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help8",
                                     "props":{"x":0,"width":900,"top":425,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help8","height":70,"centerX":0},
@@ -361,7 +349,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"width":1000,"top":510,"skin":"images/line-1.png","scaleY":1,"scaleX":1,"centerX":20},
@@ -375,7 +362,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help4",
                                     "props":{"x":0,"width":900,"top":525,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help4","height":70,"centerX":0},
@@ -416,7 +402,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,Help5",
                                     "props":{"x":0,"width":900,"top":595,"runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"Help5","height":70,"centerX":0},
@@ -457,7 +442,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"x":0,"width":1000,"top":680,"skin":"images/line-1.png","scaleY":1,"scaleX":1,"centerX":20},
@@ -490,7 +474,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":0,"x":0,"skin":"images/english/LevelMode.png","centerY":0,"centerX":0},
+                    "props":{"x":0,"skin":"images/english/LevelMode-2.png","centerY":-10,"centerX":0},
                     "nodeParent":137,
                     "label":"Image",
                     "isOpen":false,
