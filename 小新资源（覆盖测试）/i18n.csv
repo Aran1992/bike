@@ -112,8 +112,7 @@ Gold Coin is not enough!,,,金币不足！,Gold Coin is not enough!,
 BikeDsc,,,"【 No.${index}  ${name} 】
 速度          ${speed}%
 跳跃力      ${jump}%
-连续跳跃   ${highJump}
-体积          ${size}","【No.${index} bike】
+连续跳跃   ${highJump}","【No.${index} bike】
 Speed     ${speed}%
 Jump      ${jump}%
 HighJump  ${highJump}
