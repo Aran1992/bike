@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":10,
-    "selecteID":52,
+    "selectedBox":38,
+    "selecteID":39,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -233,13 +233,14 @@
                     "props":{"width":220,"var":"diamondRebornButton","top":520,"skin":"images/button-22.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":90},
                     "nodeParent":16,
                     "label":"diamondRebornButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":24,
                     "child":[
                         {
+                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
                             "props":{"width":200,"height":50,"centerY":-30,"centerX":0},
@@ -252,9 +253,10 @@
                             "compId":38,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"skin":"images/icon-diamond.png","scaleY":0.7,"scaleX":0.7,"centerY":0,"centerX":-25},
+                                    "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"centerY":0,"centerX":-25},
                                     "nodeParent":38,
                                     "label":"Image",
                                     "isDirectory":false,
@@ -265,6 +267,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label,diamondRebornCostText",
                                     "props":{"var":"diamondRebornCostText","text":"999","fontSize":30,"color":"#ffffff","centerY":0,"centerX":25},
@@ -281,6 +284,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Reborn.png","centerY":13,"centerX":0},
