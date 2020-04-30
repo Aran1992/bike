@@ -35,18 +35,29 @@
             bottom: 10%;
         }
 
+        #fillImg {
+            height: 100%;
+        }
+
         #fillDiv {
             position: absolute;
+            height: 7.81%;
             bottom: 10%;
-            background-image: url("myLaya/laya/assets/images/loading-2.png");
-            background-position: left;
-            background-size: cover;
+            overflow: hidden;
         }
 
         #textImg {
-            height: 58%;
+            height: 38.28%;
             position: absolute;
-            top: 12%;
+            top: 1%;
+        }
+
+        #loadingText, #percentText {
+            position: absolute;
+            bottom: 20%;
+            color: white;
+            font-size: 30px;
+            text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
         }
     </style>
 </head>
@@ -55,9 +66,12 @@
 <canvas id="canvas"></canvas>
 <div id="logoScene">
     <img id="emptyImg" src="myLaya/laya/assets/images/loading-1.png"/>
-    <img hidden id="fillImg" src="myLaya/laya/assets/images/loading-2.png"/>
-    <div hidden id="fillDiv"></div>
-    <img id="textImg" src="myLaya/laya/assets/images/logo.png"/>
+    <div hidden id="fillDiv">
+        <img id="fillImg" src="myLaya/laya/assets/images/loading-2.png"/>
+    </div>
+    <img id="textImg" src="myLaya/laya/assets/images/title_logo.png"/>
+    <span id="percentText">0%</span>
+    <span id="loadingText">加载中...</span>
 </div>
 <script>
     const logoScene = document.getElementById("logoScene");
@@ -65,6 +79,7 @@
     const fillDiv = document.getElementById("fillDiv");
     const fillImg = document.getElementById("fillImg");
     const textImg = document.getElementById("textImg");
+    const percentText = document.getElementById("percentText");
     let fullWidth = 0;
     let curPercent = 0;
     let targetPercent = 0;
@@ -111,7 +126,9 @@
 
     function setPercent(percent) {
         curPercent = percent;
-        fillDiv.style.width = fullWidth * percent / window.innerWidth * 100 + "%";
+        fillDiv.style.width = fullWidth * percent + "px";
+        percentText.innerHTML = `${Math.floor(percent * 100)}%`;
+        percentText.style.right = (window.innerWidth - fullWidth) / 2 + "px";
     }
 
     function addPercent(percent) {
@@ -142,7 +159,22 @@
 
     centerImg(textImg);
     centerImg(emptyImg, onEmptyImgLoaded);
-    fillImg.onload = onFillDivLoaded;
+    centerImg(fillImg, onFillDivLoaded);
+    loadingText.style.left = (window.innerWidth - loadingText.clientWidth) / 2 + "px";
+    let count = 0;
+    const base = 30;
+    (function frame() {
+        count++;
+        if (count >= base * 3) {
+            count = 0;
+        }
+        let str = "加载中";
+        for (let i = 0; i <= Math.floor(count / base); i++) {
+            str += ".";
+        }
+        loadingText.innerHTML = str;
+        requestAnimationFrame(frame);
+    }());
 </script>
 <script src="dist/bundle.js"></script>
 </body>
