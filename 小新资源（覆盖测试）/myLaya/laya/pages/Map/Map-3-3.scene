@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":2916,
+    "selecteID":2517,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":2917,
+    "maxID":2918,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -1544,20 +1544,6 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-40,"x":16785,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2399,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
             "props":{"y":-40,"x":17215,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"EatableItem//立即生效物品//经验//ID:2000",
@@ -1565,34 +1551,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":2400,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-40,"x":17415,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2403,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
-            "props":{"y":-40,"x":17515,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"EatableItem//立即生效物品//经验//ID:2000",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2404,
             "child":[
                 ]
         },
@@ -2468,20 +2426,6 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road",
-            "props":{"y":0,"x":16720,"points":"0,0,130,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
-            "nodeParent":1,
-            "label":"Road",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2515,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Lines",
-            "searchKey":"Lines,Road",
             "props":{"y":0,"x":17150,"points":"0,0,130,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road",
@@ -2496,7 +2440,7 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road",
-            "props":{"y":0,"x":17380,"points":"0,0,170,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":0,"x":17430,"points":"0,0,70,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road",
             "isDirectory":false,
@@ -6613,7 +6557,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1010",
-            "props":{"y":-73,"x":10219,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1010","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":30,"x":10219,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1010","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"UpDownPlatform//上下移动平台//ID:1010",
             "isDirectory":false,
@@ -6886,6 +6830,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":2916,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,UpDownPlatform//上下移动平台//ID:1010",
+            "props":{"y":25,"x":16785,"skin":"images/FallingSingleBlock.png","scaleY":0.5,"scaleX":0.5,"name":"UpDownPlatform//上下移动平台//ID:1010","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"UpDownPlatform//上下移动平台//ID:1010",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2917,
             "child":[
                 ]
         }],
