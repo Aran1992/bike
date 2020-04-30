@@ -221,6 +221,14 @@ function createImageText(child, parent) {
         imageText.setVAlign("top", data.y);
     }
 
+    if (data.scaleX !== undefined) {
+        imageText.scale.x = data.scaleX;
+    }
+
+    if (data.scaleY !== undefined) {
+        imageText.scale.y = data.scaleY;
+    }
+
     imageText.text = data.text;
 
     return imageText;
