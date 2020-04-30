@@ -1,11 +1,11 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":231,
-    "selecteID":245,
+    "selectedBox":167,
+    "selecteID":180,
     "searchKey":"Scene",
     "referenceLines":[
-        ],
+    ],
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
     "maxID":261,
@@ -28,7 +28,7 @@
             "hasChild":false,
             "compId":19,
             "child":[
-                ]
+            ]
         },
         {
             "x":15,
@@ -43,7 +43,7 @@
             "hasChild":false,
             "compId":34,
             "child":[
-                ],
+            ],
             "$HIDDEN":false
         },
         {
@@ -84,7 +84,7 @@
                             "hasChild":false,
                             "compId":49,
                             "child":[
-                                ]
+                            ]
                         }],
                     "$HIDDEN":false
                 },
@@ -113,7 +113,7 @@
                             "hasChild":false,
                             "compId":236,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -127,7 +127,7 @@
                             "hasChild":false,
                             "compId":237,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -141,7 +141,7 @@
                             "hasChild":false,
                             "compId":238,
                             "child":[
-                                ],
+                            ],
                             "$HIDDEN":false
                         },
                         {
@@ -156,7 +156,7 @@
                             "hasChild":false,
                             "compId":239,
                             "child":[
-                                ],
+                            ],
                             "$HIDDEN":false
                         }]
                 },
@@ -172,7 +172,7 @@
                     "hasChild":false,
                     "compId":245,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "x":30,
@@ -199,7 +199,7 @@
                             "hasChild":false,
                             "compId":61,
                             "child":[
-                                ]
+                            ]
                         }],
                     "$HIDDEN":false
                 }],
@@ -244,7 +244,7 @@
                             "hasChild":false,
                             "compId":56,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -258,7 +258,7 @@
                             "hasChild":false,
                             "compId":7,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -273,7 +273,7 @@
                             "hasChild":false,
                             "compId":84,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -302,7 +302,7 @@
                             "hasChild":false,
                             "compId":58,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -316,7 +316,7 @@
                             "hasChild":false,
                             "compId":9,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -331,7 +331,7 @@
                             "hasChild":false,
                             "compId":85,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -360,7 +360,7 @@
                             "hasChild":false,
                             "compId":52,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -374,7 +374,7 @@
                             "hasChild":false,
                             "compId":5,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -403,7 +403,7 @@
                             "hasChild":false,
                             "compId":54,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -417,7 +417,7 @@
                             "hasChild":false,
                             "compId":12,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -445,7 +445,7 @@
                             "hasChild":false,
                             "compId":166,
                             "child":[
-                                ]
+                            ]
                         }]
                 }],
             "$HIDDEN":false
@@ -486,7 +486,7 @@
                             "hasChild":false,
                             "compId":50,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -499,7 +499,7 @@
                             "hasChild":false,
                             "compId":163,
                             "child":[
-                                ],
+                            ],
                             "$HIDDEN":false
                         }]
                 },
@@ -526,7 +526,7 @@
                             "hasChild":false,
                             "compId":216,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -552,7 +552,7 @@
                             "hasChild":false,
                             "compId":51,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -565,7 +565,7 @@
                             "hasChild":false,
                             "compId":76,
                             "child":[
-                                ],
+                            ],
                             "$HIDDEN":false
                         }]
                 },
@@ -581,7 +581,7 @@
                     "hasChild":false,
                     "compId":69,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -595,7 +595,7 @@
                     "hasChild":false,
                     "compId":165,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -609,7 +609,7 @@
                     "hasChild":false,
                     "compId":71,
                     "child":[
-                        ]
+                    ]
                 }],
             "$HIDDEN":false
         },
@@ -637,7 +637,7 @@
                     "hasChild":false,
                     "compId":95,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -650,7 +650,7 @@
                     "hasChild":false,
                     "compId":206,
                     "child":[
-                        ]
+                    ]
                 }]
         },
         {
@@ -677,7 +677,7 @@
                     "hasChild":false,
                     "compId":65,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -690,7 +690,7 @@
                     "hasChild":false,
                     "compId":210,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -703,7 +703,7 @@
                     "hasChild":false,
                     "compId":74,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 }]
         },
@@ -731,7 +731,7 @@
                     "hasChild":false,
                     "compId":66,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -744,7 +744,7 @@
                     "hasChild":false,
                     "compId":209,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -757,7 +757,7 @@
                     "hasChild":false,
                     "compId":73,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -771,7 +771,7 @@
                     "hasChild":false,
                     "compId":225,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
@@ -801,7 +801,7 @@
                     "hasChild":false,
                     "compId":67,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -814,7 +814,7 @@
                     "hasChild":false,
                     "compId":208,
                     "child":[
-                        ]
+                    ]
                 }]
         },
         {
@@ -841,7 +841,7 @@
                     "hasChild":false,
                     "compId":64,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -854,7 +854,7 @@
                     "hasChild":false,
                     "compId":211,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -868,7 +868,7 @@
                     "hasChild":false,
                     "compId":75,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -882,7 +882,7 @@
                     "hasChild":false,
                     "compId":226,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 }]
         },
@@ -910,7 +910,7 @@
                     "hasChild":false,
                     "compId":241,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -923,7 +923,7 @@
                     "hasChild":false,
                     "compId":242,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -936,7 +936,7 @@
                     "hasChild":false,
                     "compId":243,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -950,7 +950,7 @@
                     "hasChild":false,
                     "compId":244,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 }]
         },
@@ -978,7 +978,7 @@
                     "hasChild":false,
                     "compId":79,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -992,7 +992,7 @@
                     "hasChild":false,
                     "compId":96,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -1005,7 +1005,7 @@
                     "hasChild":false,
                     "compId":228,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 }]
         },
@@ -1033,7 +1033,7 @@
                     "hasChild":false,
                     "compId":82,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -1047,7 +1047,7 @@
                     "hasChild":false,
                     "compId":97,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Label",
@@ -1060,7 +1060,7 @@
                     "hasChild":false,
                     "compId":91,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -1074,7 +1074,7 @@
                     "hasChild":false,
                     "compId":229,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 }]
         },
@@ -1114,7 +1114,7 @@
                             "hasChild":false,
                             "compId":128,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1128,7 +1128,7 @@
                             "hasChild":false,
                             "compId":191,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1142,7 +1142,7 @@
                             "hasChild":false,
                             "compId":192,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1156,7 +1156,7 @@
                             "hasChild":false,
                             "compId":193,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -1182,7 +1182,7 @@
                             "hasChild":false,
                             "compId":129,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1196,7 +1196,7 @@
                             "hasChild":false,
                             "compId":194,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1210,7 +1210,7 @@
                             "hasChild":false,
                             "compId":195,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1224,7 +1224,7 @@
                             "hasChild":false,
                             "compId":196,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -1250,7 +1250,7 @@
                             "hasChild":false,
                             "compId":130,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1264,7 +1264,7 @@
                             "hasChild":false,
                             "compId":197,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1278,7 +1278,7 @@
                             "hasChild":false,
                             "compId":198,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1292,7 +1292,7 @@
                             "hasChild":false,
                             "compId":199,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -1318,7 +1318,7 @@
                             "hasChild":false,
                             "compId":131,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1332,7 +1332,7 @@
                             "hasChild":false,
                             "compId":200,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1346,7 +1346,7 @@
                             "hasChild":false,
                             "compId":201,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1360,7 +1360,7 @@
                             "hasChild":false,
                             "compId":202,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -1386,7 +1386,7 @@
                             "hasChild":false,
                             "compId":132,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1400,7 +1400,7 @@
                             "hasChild":false,
                             "compId":203,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1414,7 +1414,7 @@
                             "hasChild":false,
                             "compId":204,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -1428,7 +1428,7 @@
                             "hasChild":false,
                             "compId":205,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -1442,7 +1442,7 @@
                     "hasChild":false,
                     "compId":150,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "type":"Image",
@@ -1456,7 +1456,7 @@
                     "hasChild":false,
                     "compId":151,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -1471,7 +1471,7 @@
                     "hasChild":false,
                     "compId":152,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -1497,7 +1497,7 @@
                             "hasChild":false,
                             "compId":156,
                             "child":[
-                                ]
+                            ]
                         }],
                     "$HIDDEN":false
                 },
@@ -1525,7 +1525,7 @@
                             "hasChild":false,
                             "compId":160,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Label",
@@ -1538,7 +1538,7 @@
                             "hasChild":false,
                             "compId":159,
                             "child":[
-                                ]
+                            ]
                         }],
                     "$HIDDEN":false
                 }],
@@ -1561,7 +1561,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,expProgress",
-                    "props":{"var":"expProgress","skin":"images/loading-2.png","centerY":0,"centerX":0},
+                    "props":{"y":0,"x":0,"width":100,"var":"expProgress","skin":"images/loading-2.png","sizeGrid":"0,30,0,30"},
                     "nodeParent":167,
                     "label":"expProgress",
                     "isOpen":true,
@@ -1570,7 +1570,7 @@
                     "hasChild":false,
                     "compId":180,
                     "child":[
-                        ],
+                    ],
                     "$HIDDEN":false
                 },
                 {
@@ -1585,14 +1585,14 @@
                     "hasChild":false,
                     "compId":179,
                     "child":[
-                        ]
+                    ]
                 }],
             "$HIDDEN":false
         }],
     "animations":[
         {
             "nodes":[
-                ],
+            ],
             "name":"ani1",
             "id":1,
             "frameRate":24,
