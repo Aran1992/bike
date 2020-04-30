@@ -3,6 +3,7 @@ import MyApplication from "./mgr/MyApplication";
 import LoadingScene from "./scene/LoadingScene";
 import GameScene from "./scene/GameScene";
 import MainScene from "./scene/MainScene";
+import Utils from "./mgr/Utils";
 
 export function main(callback) {
     let width;
@@ -26,8 +27,19 @@ export function main(callback) {
         view: canvas,
     });
 
+    let imageTextPathList = [];
+    Utils.values(Config.imageText).forEach(text => {
+        imageTextPathList = imageTextPathList.concat(Utils.values(text.charImgPathTable));
+    });
+
     App.loadResources(
-        [Config.i18nPath, LoadingScene.sceneFilePath, MainScene.sceneFilePath, GameScene.sceneFilePath],
+        [
+            Config.i18nPath,
+            LoadingScene.sceneFilePath,
+            MainScene.sceneFilePath,
+            GameScene.sceneFilePath,
+            ...imageTextPathList
+        ],
         callback,
         (percent) => {
             window.addPercent(percent);

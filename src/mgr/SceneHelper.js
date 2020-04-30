@@ -1,6 +1,7 @@
 import Config from "../config";
 import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle, Texture} from "../libs/pixi-wrapper";
 import ScrollView from "../ui/ScrollView";
+import ImageText from "../ui/ImageText";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -196,8 +197,41 @@ function createScale9Image(child, parent) {
     return sprite;
 }
 
+function createImageText(child, parent) {
+    let data = child.props;
+    const imageText = new ImageText(data.font);
+
+    if (data.left !== undefined) {
+        imageText.setHAlign("left", data.left);
+    } else if (data.right !== undefined) {
+        imageText.setHAlign("right", parent.mywidth - data.right);
+    } else if (data.centerX !== undefined) {
+        imageText.setHAlign("center", parent.mywidth / 2);
+    } else if (data.x !== undefined) {
+        imageText.setHAlign("left", data.x);
+    }
+
+    if (data.top !== undefined) {
+        imageText.setVAlign("top", data.top);
+    } else if (data.bottom !== undefined) {
+        imageText.setVAlign("bottom", parent.myheight - data.bottom);
+    } else if (data.centerY !== undefined) {
+        imageText.setVAlign("center", parent.myheight / 2);
+    } else if (data.y !== undefined) {
+        imageText.setVAlign("top", data.y);
+    }
+
+    imageText.text = data.text;
+
+    return imageText;
+}
+
 function createLabel(child, parent) {
     let data = child.props;
+
+    if (Config.imageText[data.font]) {
+        return createImageText(child, parent);
+    }
 
     let x = getValue(data.x, 0);
     let y = getValue(data.y, 0);

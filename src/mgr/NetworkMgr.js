@@ -1,6 +1,7 @@
 import Config from "../config";
 import DataMgr from "./DataMgr";
 import Utils from "./Utils";
+import RunOption from "../../run-option";
 
 const RANK_LIST = [
     "/board/get_total_mileage_board",
@@ -17,6 +18,9 @@ class NetworkMgr_ {
         });
         failedCallback = failedCallback || (() => {
         });
+        if (RunOption.singlePlayerMode) {
+            return successCallback({key: "0", response: {}});
+        }
         let request = new XMLHttpRequest();
         request.onreadystatechange = () => {
             if (request.readyState === 4) {
