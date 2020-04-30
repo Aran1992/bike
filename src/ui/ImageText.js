@@ -1,10 +1,48 @@
-import {Container, Sprite} from "../libs/pixi-wrapper";
+import {Container, resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
 import Config from "../config";
 
+function getValue(value, defaultValue) {
+    if (value === undefined) {
+        return defaultValue;
+    } else {
+        return value;
+    }
+}
+
+function createTextFromData(data, textContent) {
+    let fill = getValue(data.color, "black");
+    let fontSize = getValue(data.fontSize, 10);
+    let fontFamily = getValue(data.font);
+    let width = getValue(data.width);
+    let textStyle = {
+        fill: fill,
+        fontFamily: "arial",
+        fontSize: fontSize,
+        wordWrap: false,
+        leading: getValue(data.leading, 0),
+        padding: 5,
+    };
+    if (getValue(data.strokeColor) !== undefined) {
+        textStyle.stroke = getValue(data.strokeColor);
+    }
+    if (getValue(data.stroke) !== undefined) {
+        textStyle.strokeThickness = getValue(data.stroke);
+    }
+    if (fontFamily) {
+        textStyle.fontFamily = fontFamily;
+    }
+    if (width !== undefined) {
+        textStyle.wordWrap = true;
+        textStyle.wordWrapWidth = width;
+    }
+    return new Text(textContent, new TextStyle(textStyle));
+}
+
 export default class ImageText extends Sprite {
-    constructor(fontFamily) {
+    constructor(data) {
         super();
-        this.fontFamily = fontFamily;
+        this.data = data;
+        this.fontFamily = this.data.font;
         this.config = Config.imageText[this.fontFamily];
         this._text = "";
         this.mycontainer = this.addChild(new Container());
@@ -35,12 +73,16 @@ export default class ImageText extends Sprite {
             }
             chars.forEach((char, charIndex) => {
                 const path = this.config.charImgPathTable[char];
+                let sprite, charHeight;
                 if (path === undefined) {
-                    return path;
+                    sprite = createTextFromData(this.data, char);
+                    charHeight = sprite.height;
+                } else {
+                    sprite = Sprite.from(path);
+                    charHeight = sprite.texture.height;
                 }
-                const sprite = Sprite.from(path);
                 sprite.x = this.config.charWidth * charIndex;
-                sprite.y = lineIndex * this.config.charHeight + this.config.charHeight - sprite.texture.height;
+                sprite.y = lineIndex * this.config.charHeight + this.config.charHeight - charHeight;
                 this.mycontainer.addChild(sprite);
             });
         });

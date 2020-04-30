@@ -199,7 +199,7 @@ function createScale9Image(child, parent) {
 
 function createImageText(child, parent) {
     let data = child.props;
-    const imageText = new ImageText(data.font);
+    const imageText = new ImageText(data);
 
     if (data.left !== undefined) {
         imageText.setHAlign("left", data.left);
