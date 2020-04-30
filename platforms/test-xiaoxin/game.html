@@ -62,7 +62,7 @@
     </style>
 </head>
 <body>
-<p hidden id="ipConfig">//58.23.237.218:10001</p>
+<p hidden id="ipConfig">//localhost:10001</p>
 <canvas id="canvas"></canvas>
 <div id="logoScene">
     <img id="emptyImg" src="myLaya/laya/assets/images/loading-1.png"/>
@@ -74,23 +74,23 @@
     <span id="loadingText">加载中...</span>
 </div>
 <script>
-    const logoScene = document.getElementById("logoScene");
-    const emptyImg = document.getElementById("emptyImg");
-    const fillDiv = document.getElementById("fillDiv");
-    const fillImg = document.getElementById("fillImg");
-    const textImg = document.getElementById("textImg");
-    const percentText = document.getElementById("percentText");
-    let fullWidth = 0;
-    let curPercent = 0;
-    let targetPercent = 0;
-    let animationID;
-    let loadingUILoaded = false;
-    let emptyImgLoaded = false;
-    let fillDivLoaded = false;
+    var logoScene = document.getElementById("logoScene");
+    var emptyImg = document.getElementById("emptyImg");
+    var fillDiv = document.getElementById("fillDiv");
+    var fillImg = document.getElementById("fillImg");
+    var textImg = document.getElementById("textImg");
+    var percentText = document.getElementById("percentText");
+    var fullWidth = 0;
+    var curPercent = 0;
+    var targetPercent = 0;
+    var animationID;
+    var loadingUILoaded = false;
+    var emptyImgLoaded = false;
+    var fillDivLoaded = false;
 
     function centerImg(img, callback) {
-        img.onload = () => {
-            const left = (window.innerWidth - img.clientWidth) / 2;
+        img.onload = function () {
+            var left = (window.innerWidth - img.clientWidth) / 2;
             img.style.left = left + "px";
             if (callback) {
                 callback();
@@ -106,8 +106,8 @@
 
     function onFillDivLoaded() {
         fillDiv.hidden = false;
-        const height = 50 / 640 * window.innerHeight;
-        const width = 697 / 50 * height;
+        var height = 50 / 640 * window.innerHeight;
+        var width = 697 / 50 * height;
         fillDiv.style.height = height + "px";
         fillDiv.style.width = width + "px";
         fillDiv.style.left = (window.innerWidth - width) / 2 + "px";
@@ -127,7 +127,7 @@
     function setPercent(percent) {
         curPercent = percent;
         fillDiv.style.width = fullWidth * percent + "px";
-        percentText.innerHTML = `${Math.floor(percent * 100)}%`;
+        percentText.innerHTML = Math.floor(percent * 100) + "%";
         percentText.style.right = (window.innerWidth - fullWidth) / 2 + "px";
     }
 
@@ -161,15 +161,15 @@
     centerImg(emptyImg, onEmptyImgLoaded);
     centerImg(fillImg, onFillDivLoaded);
     loadingText.style.left = (window.innerWidth - loadingText.clientWidth) / 2 + "px";
-    let count = 0;
-    const base = 30;
+    var count = 0;
+    var base = 30;
     (function frame() {
         count++;
         if (count >= base * 3) {
             count = 0;
         }
-        let str = "加载中";
-        for (let i = 0; i <= Math.floor(count / base); i++) {
+        var str = "加载中";
+        for (var i = 0; i <= Math.floor(count / base); i++) {
             str += ".";
         }
         loadingText.innerHTML = str;

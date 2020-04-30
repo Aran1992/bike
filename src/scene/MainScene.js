@@ -71,7 +71,7 @@ export default class MainScene extends Scene {
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         const {level, curExp, totalExp} = DataMgr.getPlayerLevel();
         this.ui.levelText.text = App.getText("LevelDsc", {level});
-        this.ui.expProgress.children[0].width = this.ui.expProgress.children[0].texture.width * curExp / totalExp;
+        this.ui.expProgress.width = this.ui.expProgress.mywidth * curExp / totalExp;
         this.ui.expRate.text = `${curExp}/${totalExp}`;
         const table = {
             Coin: "coinPercent",
