@@ -24,18 +24,25 @@ export default class ImageText extends Sprite {
         }
         this._text = text;
         this.mycontainer.removeChildren();
-        const chars = this._text.split("");
-        this.mycontainer.mywidth = chars.length * this.config.charWidth;
-        this.mycontainer.myheight = this.config.charHeight;
-        chars.forEach((char, i) => {
-            const path = this.config.charImgPathTable[char];
-            if (path === undefined) {
-                return path;
+        const lines = this._text.split("\n");
+        this.mycontainer.mywidth = 0;
+        this.mycontainer.myheight = this.config.charHeight * lines.length;
+        lines.forEach((line, lineIndex) => {
+            const chars = line.split("");
+            const lineWidth = chars.length * this.config.charWidth;
+            if (lineWidth > this.mycontainer.mywidth) {
+                this.mycontainer.mywidth = lineWidth;
             }
-            const sprite = Sprite.from(path);
-            sprite.x = this.config.charWidth * i;
-            sprite.y = this.mycontainer.myheight - sprite.texture.height;
-            this.mycontainer.addChild(sprite);
+            chars.forEach((char, charIndex) => {
+                const path = this.config.charImgPathTable[char];
+                if (path === undefined) {
+                    return path;
+                }
+                const sprite = Sprite.from(path);
+                sprite.x = this.config.charWidth * charIndex;
+                sprite.y = lineIndex * this.config.charHeight + this.config.charHeight - sprite.texture.height;
+                this.mycontainer.addChild(sprite);
+            });
         });
         this.updateHAlign(this.hAlign);
         this.updateVAlign(this.vAlign);
