@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":77,
+    "selectedBox":231,
+    "selecteID":245,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -66,14 +66,13 @@
                     "props":{"width":425,"skin":"images/bg-202.png","left":25,"height":265,"bottom":25},
                     "nodeParent":231,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":234,
                     "child":[
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,bikeSpritePanel",
                             "props":{"var":"bikeSpritePanel","scaleY":1.2,"scaleX":1.2,"centerX":50,"bottom":0},
@@ -165,7 +164,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,addtionText",
-                    "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":5,"left":60,"fontSize":30,"color":"#ffffff","align":"left"},
+                    "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":1,"scaleY":1.2,"scaleX":1.2,"left":50,"fontSize":20,"font":"ui_fvr_gauge","color":"#000000","align":"left"},
                     "nodeParent":231,
                     "label":"addtionText",
                     "isDirectory":false,
@@ -226,13 +225,14 @@
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -247,9 +247,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
-                            "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
+                            "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
                             "nodeParent":3,
                             "label":"diamondText",
                             "isDirectory":false,
@@ -260,6 +261,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addDiamondButton",
                             "props":{"var":"addDiamondButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
@@ -281,13 +283,14 @@
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":4,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-coin.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -302,9 +305,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
-                            "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
+                            "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
                             "nodeParent":4,
                             "label":"coinText",
                             "isDirectory":false,
@@ -315,6 +319,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addCoinButton",
                             "props":{"var":"addCoinButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
@@ -336,13 +341,14 @@
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":2,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.8,"scaleX":0.8,"left":3,"centerY":-9},
@@ -357,9 +363,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,distanceText",
-                            "props":{"var":"distanceText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
+                            "props":{"var":"distanceText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
                             "nodeParent":2,
                             "label":"distanceText",
                             "isDirectory":false,
@@ -377,13 +384,14 @@
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":10,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-mark.png","scaleY":0.8,"scaleX":0.8,"left":10,"centerY":0},
@@ -398,9 +406,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
-                            "props":{"var":"totalScoreText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
+                            "props":{"var":"totalScoreText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
                             "nodeParent":10,
                             "label":"totalScoreText",
                             "isDirectory":false,

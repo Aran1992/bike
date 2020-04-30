@@ -11240,6 +11240,7 @@ Config.gameLevelScene = {
     bikeSpriteOffsetY: 10,
 };
 
+// 图形化字库
 Config.imageText = {
     bonuspt: {
         charWidth: 25,
@@ -11259,6 +11260,57 @@ Config.imageText = {
             ".": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_11.png",
             "x": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_12.png",
             "+": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_13.png",
+        },
+    },
+    theme: {
+        charWidth: 20,
+        charHeight: 26,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/theme/theme_num0.png",
+            "1": "myLaya/laya/assets/images/image-text/theme/theme_num1.png",
+            "2": "myLaya/laya/assets/images/image-text/theme/theme_num2.png",
+            "3": "myLaya/laya/assets/images/image-text/theme/theme_num3.png",
+            "4": "myLaya/laya/assets/images/image-text/theme/theme_num4.png",
+            "5": "myLaya/laya/assets/images/image-text/theme/theme_num5.png",
+            "6": "myLaya/laya/assets/images/image-text/theme/theme_num6.png",
+            "7": "myLaya/laya/assets/images/image-text/theme/theme_num7.png",
+            "8": "myLaya/laya/assets/images/image-text/theme/theme_num8.png",
+            "9": "myLaya/laya/assets/images/image-text/theme/theme_num9.png",
+            "m": "myLaya/laya/assets/images/image-text/theme/theme_milesunit_jp.png",
+        },
+    },
+    theme2: {
+        charWidth: 20,
+        charHeight: 26,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num0.png",
+            "1": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num1.png",
+            "2": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num2.png",
+            "3": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num3.png",
+            "4": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num4.png",
+            "5": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num5.png",
+            "6": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num6.png",
+            "7": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num7.png",
+            "8": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num8.png",
+            "9": "myLaya/laya/assets/images/image-text/theme-2/theme-2_num9.png",
+            "m": "myLaya/laya/assets/images/image-text/theme-2/theme-2_milesunit_jp.png",
+        },
+    },
+    ui_fvr_gauge: {
+        charWidth: 20,
+        charHeight: 30,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_9.png",
+            "%": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_10.png",
         },
     },
 };
