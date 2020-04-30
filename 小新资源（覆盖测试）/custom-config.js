@@ -11104,4 +11104,27 @@ Config.gameLevelScene = {
     bikeSpriteOffsetY: 10,
 };
 
+Config.imageText = {
+    bonuspt: {
+        charWidth: 25,
+        charHeight: 40,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_0.png",
+            "1": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_1.png",
+            "2": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_2.png",
+            "3": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_3.png",
+            "4": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_4.png",
+            "5": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_5.png",
+            "6": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_6.png",
+            "7": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_7.png",
+            "8": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_8.png",
+            "9": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_9.png",
+            ",": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_10.png",
+            ".": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_11.png",
+            "x": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_12.png",
+            "+": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_13.png",
+        },
+    },
+};
+
 export default Config;

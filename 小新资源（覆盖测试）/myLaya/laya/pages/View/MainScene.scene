@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":15,
+    "selectedBox":3,
+    "selecteID":7,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -226,13 +226,14 @@
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
                     "nodeParent":15,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -247,9 +248,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
-                            "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"color":"#000000","centerY":0},
+                            "props":{"var":"diamondText","text":"123456","left":70,"fontSize":40,"font":"bonuspt","color":"#000000","centerY":0},
                             "nodeParent":3,
                             "label":"diamondText",
                             "isDirectory":false,
@@ -260,6 +262,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addDiamondButton",
                             "props":{"var":"addDiamondButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
