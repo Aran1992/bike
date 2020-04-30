@@ -124,11 +124,11 @@ export default class Bird {
         const anotherBody = anotherFixture.getBody();
         const another = anotherBody.getUserData();
         if (this.gameMgr.isBike(another)) {
-            if (this.isAbleToBeTrampled() && anotherBody.getPosition().y >= this.body.getPosition().y + this.bodyHeight / 4) {
+            if (this.isAbleToBeTrampled() && anotherBody.getPosition().y >= this.body.getPosition().y + this.bodyHeight / 2) {
                 another.resetJumpStatus();
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
                 this.trampled = true;
-            } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 4) {
+            } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 2) {
                 another.resetJumpStatus();
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
                 this.jacked = true;
