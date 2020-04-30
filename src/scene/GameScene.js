@@ -1117,6 +1117,9 @@ export default class GameScene extends Scene {
                     this.bikeFrame = this.bikeFrame % (this.bikeFrames.length * framesEachFrame);
                     let frame = Math.floor(this.bikeFrame / framesEachFrame);
                     this.bikeAnimSprite.texture = this.bikeFrames[frame];
+                    if (this.bikeFrames[frame] === undefined) {
+                        this.bikeAnimSprite.texture = this.bikeFrames[0];
+                    }
                     this.bikeAnimSprite.position.set(...this.getBikeCommonAnimation().pos);
                 }
             }
