@@ -60,7 +60,7 @@
             "x":15,
             "type":"Lines",
             "searchKey":"Lines,Road",
-            "props":{"y":-50,"x":200,"points":"0,0,1250,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
+            "props":{"y":-50,"x":200,"points":"0,0,1150,0","name":"Road","lineWidth":1,"lineColor":"#ff0000"},
             "nodeParent":1,
             "label":"Road",
             "isDirectory":false,
@@ -130,27 +130,13 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,BlackBird//上下黑鸟//UpDown//ID:10100",
-            "props":{"y":-180,"x":250,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
+            "props":{"y":-180,"x":274,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
             "nodeParent":1,
             "label":"BlackBird//上下黑鸟//UpDown//ID:10100",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":379,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,BlackBird//上下黑鸟//UpDown//ID:10100",
-            "props":{"y":-180,"x":350,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
-            "nodeParent":1,
-            "label":"BlackBird//上下黑鸟//UpDown//ID:10100",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":380,
             "child":[
                 ]
         },
@@ -242,27 +228,13 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,BlackBird//上下黑鸟//UpDown//ID:10100",
-            "props":{"y":-180,"x":1150,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
+            "props":{"y":-180,"x":1174,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
             "nodeParent":1,
             "label":"BlackBird//上下黑鸟//UpDown//ID:10100",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":388,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,BlackBird//上下黑鸟//UpDown//ID:10100",
-            "props":{"y":-180,"x":1250,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
-            "nodeParent":1,
-            "label":"BlackBird//上下黑鸟//UpDown//ID:10100",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":389,
             "child":[
                 ]
         },
@@ -396,27 +368,13 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,BlackBird//上下黑鸟//UpDown//ID:10100",
-            "props":{"y":-180,"x":700,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
+            "props":{"y":-180,"x":724,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
             "nodeParent":1,
             "label":"BlackBird//上下黑鸟//UpDown//ID:10100",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":400,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,BlackBird//上下黑鸟//UpDown//ID:10100",
-            "props":{"y":-180,"x":800,"texture":"images/edit/enm03.png","scaleY":1,"scaleX":1,"name":"BlackBird//上下黑鸟//UpDown//ID:10100"},
-            "nodeParent":1,
-            "label":"BlackBird//上下黑鸟//UpDown//ID:10100",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":401,
             "child":[
                 ]
         },

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":513,
+    "selecteID":535,
     "searchKey":"Scene",
     "props":{"width":3000,"sceneColor":"#000000","height":1},
     "nodeParent":-1,
-    "maxID":533,
+    "maxID":536,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -144,20 +144,6 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":0,"x":200,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":432,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
             "props":{"y":0,"x":400,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
             "label":"GroundStab//地刺//Static",
@@ -172,20 +158,6 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":0,"x":615,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":434,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
             "props":{"y":0,"x":815,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
             "label":"GroundStab//地刺//Static",
@@ -193,20 +165,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":436,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1385,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":441,
             "child":[
                 ]
         },
@@ -774,20 +732,6 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,GroundStab//地刺//Static",
-            "props":{"y":-100,"x":1785,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"GroundStab//地刺//Static",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":526,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,GroundStab//地刺//Static",
             "props":{"y":-100,"x":2005,"skin":"images/needlex4_03.png","scaleY":0.5,"scaleX":0.5,"name":"GroundStab//地刺//Static","anchorY":1,"anchorX":0.5},
             "nodeParent":1,
             "label":"GroundStab//地刺//Static",
@@ -837,6 +781,48 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":530,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
+            "props":{"y":-30,"x":610,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//经验//ID:2000",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":533,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
+            "props":{"y":-130,"x":1381,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//经验//ID:2000",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":534,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2000",
+            "props":{"y":-130,"x":1789,"skin":"images/logo.png","scaleY":0.5,"scaleX":0.5,"name":"EatableItem//立即生效物品//经验//ID:2000","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//经验//ID:2000",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":535,
             "child":[
                 ]
         }],
