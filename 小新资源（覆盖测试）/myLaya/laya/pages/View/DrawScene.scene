@@ -1,7 +1,8 @@
 {
+    "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":38,
+    "selecteID":134,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -14,6 +15,7 @@
     "compId":1,
     "child":[
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"skin":"images/bg-main-scene-101.png","right":0,"left":0,"bottom":0},
@@ -27,6 +29,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"x":1000,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
@@ -67,6 +70,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"x":720,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
@@ -107,6 +111,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"x":160,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
@@ -147,6 +152,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"x":440,"width":270,"top":-210,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
@@ -187,6 +193,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,returnButton",
             "props":{"y":25,"x":25,"var":"returnButton","top":25,"skin":"images/ButtonBack_Blue.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","left":25},
@@ -200,6 +207,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,bikeButton",
             "props":{"width":101,"var":"bikeButton","skin":"images/button-bike-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":81,"height":101,"bottom":-1063},
@@ -240,6 +248,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,drawButton",
             "props":{"var":"drawButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":100},
@@ -267,6 +276,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,advertButton",
             "props":{"visible":false,"var":"advertButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":100},
@@ -308,6 +318,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Label",
             "searchKey":"Label,drawTimeText",
             "props":{"var":"drawTimeText","text":"00:00 ${Free}","strokeColor":"#000000","stroke":5,"right":150,"fontSize":35,"color":"#ffffff","bottom":45},
@@ -322,6 +333,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Panel",
             "searchKey":"Panel,costDiamondPanel",
             "props":{"width":150,"var":"costDiamondPanel","right":130,"height":60,"bottom":220},
@@ -334,6 +346,7 @@
             "compId":39,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"centerY":0,"centerX":-40},
@@ -347,6 +360,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,costDiamondText",
                     "props":{"var":"costDiamondText","text":"99","strokeColor":"#000000","stroke":5,"fontSize":35,"color":"#ffffff","centerY":0,"centerX":20},
@@ -363,6 +377,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"scaleY":1,"scaleX":1,"right":0,"left":0,"bottom":0},
@@ -545,9 +560,10 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,ballImage",
-            "props":{"var":"ballImage","skin":"images/icon-draw-ball.png","centerY":-72,"centerX":9},
+            "props":{"var":"ballImage","skin":"images/icon-draw-ball.png","scaleY":1.2,"scaleX":1.2,"centerY":-72,"centerX":5},
             "nodeParent":1,
             "label":"ballImage",
             "isDirectory":false,
