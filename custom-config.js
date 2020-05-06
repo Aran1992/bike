@@ -53,6 +53,11 @@ Config.jumpForce = 12800;
 // 自行车图集
 Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
 
+// 默认自行车冲刺动画，里面必须有sprint动画
+Config.bikeSprintAnimation = "myLaya/laya/assets/animations/sprint.json";
+// 默认自行车冲刺动画的偏移
+Config.bikeSprintAnimationPos = [0, -40];
+
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 0.4;
 
