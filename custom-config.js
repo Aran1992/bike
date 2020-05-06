@@ -4512,7 +4512,54 @@ Config.bikeScene = {
     //自行车能力升级随机转动音效
     res: {
         upgradeSound: "myLaya/laya/assets/sounds/se_icon_select.mp3"
+    },
+    // 自行车列表相关配置
+    bikeList: {
+        // 是否横向显示
+        isHorizontal: 0
     }
+};
+// 游戏界面相关配置
+Config.gameScene = {
+    // 速度状态图片列表（由低至高）
+    velocityStateImgList: [
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_1.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.2,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_2.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.4,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_3.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.6,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_4.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 1.8,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_5.png",
+        },
+        {
+            // 场景速率倍数如果小于等于这个值，那么就算是这个档次的
+            maxVelocity: 2,
+            // 在这个档次的时候显示的图
+            imgPath: "myLaya/laya/assets/images/game-scene/ui_spd_6.png",
+        },
+    ]
 };
 
 // 商店游戏币配置（目前关闭了不用）
@@ -4735,20 +4782,68 @@ Config.item = {
     },
     // 小鸟
     bird: {
-        // 实际区域宽度
-        bodyWidth: 64,
-        // 实际区域高度
-        bodyHeight: 40,
-        // 触碰到的时候的自行车竖直方向上的速度
-        contactBikeVelocity: 50,
-        // 触碰到的时候的小鸟受到的冲击力大小
-        contactBirdImpulse: 125,
-        // 被击飞的冲击力大小
-        strikedBirdImpulse: 1250,
-        // 被击飞的旋转速度
-        strikedBirdAngularVelocity: 50,
-        // 出现音效
-        appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
+        // 配置列表（对应ID的配置）
+        table: {
+            // 没有配置id的小鸟都是用这个配置
+            default: {
+                // 动画路径
+                animationJsonPath: "images/bird-animation.json",
+                // 动画名称
+                animationName: "Bird",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.25,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 64,
+                // 实际区域高度
+                bodyHeight: 40,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 50,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -10,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 1,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 10,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
+            },
+        }
+    },
+    // 乌云
+    Cloud: {
+        table: {
+            // 没有配置id的都是用这个配置
+            default: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm01.json",
+                // 动画名称
+                animationName: "enm01",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 87,
+                // 实际区域高度
+                bodyHeight: 96,
+                // 出现音效
+                //appearSoundPath: "",
+            },
+        }
     },
     // 地刺
     groundStab: {
@@ -9512,5 +9607,7 @@ Config.gameLevelScene = {
     bikeSpriteOffsetX: 50,
     bikeSpriteOffsetY: 100,
 };
+
+Config.imageText = {};
 
 export default Config;

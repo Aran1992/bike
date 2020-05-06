@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":34,
+    "selecteID":230,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
-    "maxID":230,
+    "maxID":231,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -65,14 +65,13 @@
             "props":{"width":720,"top":0,"left":0,"height":150},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":5,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":4},
@@ -140,7 +139,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":5,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":242},
@@ -208,7 +206,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":75,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":5},
@@ -262,7 +259,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":75,"skin":"images/bottom-num-11.png","scaleY":0.9,"scaleX":0.9,"height":64,"centerX":242},
@@ -316,7 +312,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"x":56,"var":"userImage","top":5,"skin":"images/UserIconDefault.png"},
@@ -329,7 +324,6 @@
                     "compId":60,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,userNameText",
                             "props":{"var":"userNameText","text":"Player","strokeColor":"#000000","stroke":5,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":0},
@@ -344,7 +338,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,levelText",
                     "props":{"var":"levelText","top":2,"text":"${LevelDsc}","strokeColor":"#000000","stroke":5,"left":2,"fontSize":20,"color":"#ffffff"},
@@ -366,14 +359,13 @@
             "props":{"width":105,"height":831,"centerY":-150},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,playerinfoButton",
                     "props":{"width":101,"visible":false,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":0,"height":101,"bottom":720},
@@ -386,7 +378,6 @@
                     "compId":92,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/profile.png","centerX":0,"bottom":-5},
@@ -400,7 +391,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"x":0,"skin":"images/english/profile.png","centerX":0,"bottom":-5},
@@ -415,7 +405,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,shopButton",
                     "props":{"y":10,"x":0,"width":101,"var":"shopButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":600},
@@ -428,7 +417,6 @@
                     "compId":22,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/ButtonShop.png","scaleY":0.7,"scaleX":0.7,"centerX":0,"bottom":30},
@@ -442,7 +430,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/shop.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
@@ -456,7 +443,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -471,7 +457,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,redPoint",
                             "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
@@ -487,7 +472,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,systemButton",
                     "props":{"width":101,"var":"systemButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":480},
@@ -500,7 +484,6 @@
                     "compId":23,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/ButtonSetting_Green.png","scaleY":0.7,"scaleX":0.7,"centerX":0,"bottom":30},
@@ -514,7 +497,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/system.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
@@ -529,7 +511,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,homeButton",
                     "props":{"width":101,"var":"homeButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":360},
@@ -542,7 +523,6 @@
                     "compId":24,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/ButtonSocial_Blue.png","scaleY":0.7,"scaleX":0.7,"centerX":0,"bottom":30},
@@ -556,7 +536,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/home.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
@@ -570,7 +549,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -585,7 +563,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,redPoint",
                             "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
@@ -603,7 +580,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,rankButton",
                     "props":{"width":101,"var":"rankButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":240},
@@ -616,7 +592,6 @@
                     "compId":25,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/ButtonRanking_Orange.png","scaleY":0.7,"scaleX":0.7,"centerX":0,"bottom":30},
@@ -630,7 +605,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/rank.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
@@ -644,7 +618,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -660,7 +633,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,drawButton",
                     "props":{"width":101,"var":"drawButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":120},
@@ -673,7 +645,6 @@
                     "compId":26,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/button-draw-scene.png","scaleY":0.7,"scaleX":0.7,"centerX":0,"bottom":30},
@@ -687,7 +658,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/draw.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
@@ -701,7 +671,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -717,7 +686,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,redPoint",
                             "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
@@ -733,7 +701,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"width":101,"var":"bikeButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"height":101,"bottom":0},
@@ -746,7 +713,6 @@
                     "compId":27,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/button-bike-scene.png","scaleY":0.7,"scaleX":0.7,"centerX":0,"bottom":30},
@@ -760,7 +726,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/bike.png","scaleY":0.8,"scaleX":0.8,"centerX":0,"bottom":0},
@@ -774,7 +739,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"y":-120,"x":35,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -789,7 +753,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,redPoint",
                             "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
@@ -974,14 +937,13 @@
             "props":{"var":"signButton","top":160,"skin":"images/icon-sign.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":120},
             "nodeParent":1,
             "label":"signButton",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":77,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage",
                     "props":{"y":0,"x":0,"visible":false,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -996,7 +958,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"skin":"images/english/sign.png","centerX":0,"bottom":-5},
@@ -1010,7 +971,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,redPoint",
                     "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
@@ -1032,14 +992,13 @@
             "props":{"x":0,"var":"giftButton","top":160,"skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
             "nodeParent":1,
             "label":"giftButton",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":81,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage,giftLockedImage",
                     "props":{"y":0,"x":0,"visible":false,"var":"giftLockedImage","top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -1054,7 +1013,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":10,"skin":"images/english/Gift.png","centerX":0,"bottom":-5},
@@ -1068,7 +1026,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,giftTimeText",
                     "props":{"var":"giftTimeText","text":"00:00","fontSize":20,"color":"#ffffff","centerX":0,"bottom":-30},
@@ -1083,7 +1040,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,redPoint",
                     "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1,"scaleX":1,"right":-5,"name":"redPoint"},
@@ -1105,14 +1061,13 @@
             "props":{"width":500,"var":"gameLevelPanel","height":700,"centerY":0,"centerX":0},
             "nodeParent":1,
             "label":"gameLevelPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":98,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road1",
                     "props":{"visible":true,"skin":"images/bg_root05-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road1","centerY":34,"centerX":-13},
@@ -1127,7 +1082,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road2",
                     "props":{"visible":true,"skin":"images/bg_root04-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road2","centerY":-34,"centerX":139},
@@ -1142,7 +1096,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road3",
                     "props":{"visible":true,"skin":"images/bg_root03-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road3","centerY":-151,"centerX":107},
@@ -1157,7 +1110,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,road4",
                     "props":{"visible":true,"skin":"images/bg_root02-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"road4","centerY":-176,"centerX":-80},
@@ -1172,7 +1124,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn1",
                     "props":{"visible":true,"var":"glBtn1","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":16,"centerX":-94},
@@ -1241,7 +1192,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn2",
                     "props":{"visible":true,"var":"glBtn2","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":14,"centerX":74},
@@ -1310,7 +1260,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn3",
                     "props":{"visible":true,"var":"glBtn3","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-139,"centerX":186},
@@ -1379,7 +1328,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn4",
                     "props":{"visible":true,"var":"glBtn4","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-189,"centerX":16},
@@ -1448,7 +1396,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,glBtn5",
                     "props":{"visible":true,"var":"glBtn5","skin":"images/icon_mapbtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-204,"centerX":-150},
@@ -1517,12 +1464,12 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,gameLevelMapDsc",
                     "props":{"var":"gameLevelMapDsc","top":10,"text":"Map Description","strokeColor":"#000000","stroke":5,"fontSize":50,"color":"#ffffff","centerX":1},
                     "nodeParent":98,
                     "label":"gameLevelMapDsc",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -1531,7 +1478,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lastLevelButton",
                     "props":{"var":"lastLevelButton","skin":"images/button-lastBtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":-150},
@@ -1547,7 +1493,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,nextLevelButton",
                     "props":{"var":"nextLevelButton","skin":"images/button-nextBtn.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":150},
@@ -1563,7 +1508,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gameLevelLocked",
                     "props":{"var":"gameLevelLocked","skin":"images/bg_lockmedal.png","scaleY":0.6,"scaleX":0.6,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":120,"centerX":0},
@@ -1576,7 +1520,6 @@
                     "compId":153,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,glUnlockStarCount",
                             "props":{"var":"glUnlockStarCount","text":"999","fontSize":45,"color":"#000000","centerY":37,"centerX":25,"align":"center"},
@@ -1592,7 +1535,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bg-23.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":0},
@@ -1642,14 +1584,13 @@
             "props":{"skin":"images/shop-title-11.png","name":"exp","bottom":-20},
             "nodeParent":1,
             "label":"exp",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":167,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expProgress",
                     "props":{"var":"expProgress","skin":"images/shop-title-12.png","bottom":-3},
@@ -1665,7 +1606,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,expRate",
                     "props":{"var":"expRate","text":"88888888 / 99999999","strokeColor":"#000000","stroke":2,"fontSize":20,"color":"#ffffff","centerX":0,"bottom":50,"align":"center"},
@@ -1679,6 +1619,20 @@
                         ]
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,addtionText",
+            "props":{"var":"addtionText","text":"加成","strokeColor":"#000000","stroke":5,"fontSize":50,"color":"#ffffff","centerY":-400,"centerX":0},
+            "nodeParent":1,
+            "label":"addtionText",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":230,
+            "child":[
+                ]
         }],
     "animations":[
         {

@@ -191,10 +191,14 @@ export default class MyApplication extends Application {
         let isMusicLoaded = false;
         let isCommonLoaded = false;
         resPathList.forEach(path => {
-            if ([".mp3", ".ogg", ".m4a", ".wav",].some(end => path.endsWith(end))) {
-                audioResPathList.push(path);
+            if (path) {
+                if ([".mp3", ".ogg", ".m4a", ".wav",].some(end => path.endsWith(end))) {
+                    audioResPathList.push(path);
+                } else {
+                    commonResPathList.push(path);
+                }
             } else {
-                commonResPathList.push(path);
+                console.log("path===undefined,resPathList=", resPathList);
             }
         });
 

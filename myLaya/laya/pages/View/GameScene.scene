@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":41,
+    "selecteID":137,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#000000","height":1280},
     "nodeParent":-1,
-    "maxID":137,
+    "maxID":138,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -917,6 +917,7 @@
                             "props":{"x":0,"skin":"images/english/START.png","centerY":-5,"centerX":0},
                             "nodeParent":15,
                             "label":"Image",
+                            "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -926,6 +927,20 @@
                         }]
                 }],
             "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,velocityState",
+            "props":{"var":"velocityState","top":300,"skin":"images/game-scene/ui_spd_1.png","right":0},
+            "nodeParent":1,
+            "label":"velocityState",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":137,
+            "child":[
+                ]
         }],
     "animations":[
         {

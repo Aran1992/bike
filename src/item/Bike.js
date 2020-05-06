@@ -75,7 +75,7 @@ export default class Bike {
 
         if (config.imagePath) {
             let decorateSprite = this.bikeSprite.addChild(new Sprite());
-            decorateSprite.texture = resources[config.imagePath].texture;
+            decorateSprite.texture = Texture.from(config.imagePath);
             decorateSprite.anchor.set(...config.anchor);
             decorateSprite.scale.set(...config.scale);
             decorateSprite.position.set(...config.position);
@@ -734,7 +734,7 @@ export default class Bike {
         if (Config.effect[type].buffIconImagePath && this.buffIconTable[type] === undefined) {
             let sprite = this.buffIconContainer.addChild(new Sprite());
             sprite.anchor.set(0.5, 0);
-            sprite.texture = resources[Config.effect[type].buffIconImagePath].texture;
+            sprite.texture = Texture.from(Config.effect[type].buffIconImagePath);
             sprite.scale.set(Config.buff.iconScale, Config.buff.iconScale);
             let seconds = Math.ceil(this.effectRemainFrame[type] / Config.fps);
             let text = sprite.addChild(new Text(seconds, new TextStyle(Config.buff.text)));

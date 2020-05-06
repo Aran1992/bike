@@ -842,7 +842,7 @@ export default class GameScene extends Scene {
         let config = Config.bikeList.find(config => config.id === id);
 
         if (config.imagePath) {
-            this.bikeDecorateSprite = new Sprite(resources[config.imagePath].texture);
+            this.bikeDecorateSprite = Sprite.from(config.imagePath);
             this.bikeSprite.addChild(this.bikeDecorateSprite);
             this.bikeDecorateSprite.anchor.set(...config.anchor);
             this.bikeDecorateSprite.scale.set(...config.scale);

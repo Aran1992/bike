@@ -42,7 +42,9 @@ export function main(callback) {
         ],
         callback,
         (percent) => {
-            window.addPercent(percent);
+            if (window.addPercent) {
+                window.addPercent(percent);
+            }
         }
     );
 }

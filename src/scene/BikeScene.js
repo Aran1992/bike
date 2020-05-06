@@ -319,8 +319,12 @@ export default class BikeScene extends Scene {
     }
 
     onScroll() {
-        this.ui.leftArrow.visible = this.list.isAbleScrollLeft();
-        this.ui.rightArrow.visible = this.list.isAbleScrollRight();
+        if (this.ui.leftArrow) {
+            this.ui.leftArrow.visible = this.list.isAbleScrollLeft();
+        }
+        if (this.ui.rightArrow) {
+            this.ui.rightArrow.visible = this.list.isAbleScrollRight();
+        }
     }
 }
 
