@@ -932,7 +932,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,velocityState",
-            "props":{"var":"velocityState","top":300,"skin":"images/game-scene/ui_spd_1.png","right":0},
+            "props":{"var":"velocityState","top":85,"skin":"images/game-scene/ui_spd_1.png","scaleY":0.7,"scaleX":0.7,"right":0},
             "nodeParent":1,
             "label":"velocityState",
             "isDirectory":false,

@@ -56,7 +56,7 @@ Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
 // 默认自行车冲刺动画，里面必须有sprint动画
 Config.bikeSprintAnimation = "myLaya/laya/assets/animations/sprint.json";
 // 默认自行车冲刺动画的偏移
-Config.bikeSprintAnimationPos = [0, -40];
+Config.bikeSprintAnimationPos = [0, 0];
 
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 0.4;
@@ -9604,9 +9604,9 @@ Config.framesForChangeImageInBasicVelocity = 3;
 
 // 选择关卡界面相关配置
 Config.gameLevelScene = {
-    bikeSpriteScale: 0.5,
-    bikeSpriteOffsetX: 50,
-    bikeSpriteOffsetY: 100,
+    bikeSpriteScale: 0.7,
+    bikeSpriteOffsetX: 55,
+    bikeSpriteOffsetY: 55,
 };
 
 Config.imageText = {};
