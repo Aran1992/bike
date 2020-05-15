@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":34,
+    "selecteID":69,
     "searchKey":"Scene",
     "props":{"width":720,"sceneColor":"#ffffff","height":1280},
     "nodeParent":-1,
@@ -1158,13 +1158,14 @@
             "props":{"var":"mapModeButton","top":740,"skin":"images/button-13.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":80},
             "nodeParent":1,
             "label":"mapModeButton",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":30,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/Match.png","centerY":-5,"centerX":0},
@@ -1178,6 +1179,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lockedImage",
                     "props":{"x":0,"visible":false,"top":-25,"skin":"images/key_lock.png","scaleY":1.5,"scaleX":1.5,"name":"lockedImage","centerX":0},
@@ -1190,27 +1192,13 @@
                     "child":[
                         ],
                     "$HIDDEN":false
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image,mapHelpButton",
-                    "props":{"var":"mapHelpButton","top":8,"skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":17},
-                    "nodeParent":30,
-                    "label":"mapHelpButton",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":71,
-                    "child":[
-                        ]
                 }]
         },
         {
             "x":15,
             "type":"Image",
             "searchKey":"Image,gamelevelHelpButton",
-            "props":{"var":"gamelevelHelpButton","skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":97,"bottom":670},
+            "props":{"var":"gamelevelHelpButton","skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":82,"bottom":677},
             "nodeParent":1,
             "label":"gamelevelHelpButton",
             "isOpen":true,
@@ -1225,7 +1213,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,endlessHelpButton",
-            "props":{"var":"endlessHelpButton","skin":"images/btn_setting_help.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":97,"bottom":850},
+            "props":{"var":"endlessHelpButton","skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":82,"bottom":857},
             "nodeParent":1,
             "label":"endlessHelpButton",
             "isOpen":true,
@@ -1233,6 +1221,21 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":69,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,mapHelpButton",
+            "props":{"var":"mapHelpButton","skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":82,"bottom":497},
+            "nodeParent":1,
+            "label":"mapHelpButton",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":71,
             "child":[
                 ]
         },

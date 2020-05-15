@@ -50,13 +50,52 @@ Config.gravity = -175;
 // 跳跃爆发力（基础：12800）
 Config.jumpForce = 12800;
 
-// 自行车图集
+// 默认的自行车移动图集，里面必须有bike和enemy动画
 Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
 
 // 默认自行车冲刺动画，里面必须有sprint动画
 Config.bikeSprintAnimation = "myLaya/laya/assets/animations/sprint.json";
 // 默认自行车冲刺动画的偏移
 Config.bikeSprintAnimationPos = [0, 0];
+
+// 默认的自行车跳跃图集
+Config.bikeJumpingAnimation = {
+    "2": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-2",
+        interval: 5
+    },
+    "3": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-3",
+        interval: 5
+    },
+    "4": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-4",
+        interval: 5
+    },
+    "5": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-2",
+        interval: 5
+    },
+    "6": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-3",
+        interval: 5
+    },
+    "7": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-4",
+        interval: 5
+    },
+    "8": {
+        atlasPath: "myLaya/laya/assets/animations/bike.json",
+        animationName: "jump-5",
+        interval: 5
+    },
+};
 
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 0.4;
@@ -3035,44 +3074,6 @@ Config.portableItemButtonPosList = [
     [100, 200],
     [100, 100],
 ];
-
-Config.bikeJumpingAnimation = {
-    "2": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-2",
-        interval: 5
-    },
-    "3": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-3",
-        interval: 5
-    },
-    "4": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-4",
-        interval: 5
-    },
-    "5": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-2",
-        interval: 5
-    },
-    "6": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-3",
-        interval: 5
-    },
-    "7": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-4",
-        interval: 5
-    },
-    "8": {
-        atlasPath: "myLaya/laya/assets/animations/bike.json",
-        animationName: "jump-5",
-        interval: 5
-    },
-};
 
 // 复活拉回的时间（单位秒）（正式对外用1秒，内部测试用0.5秒）
 Config.rebornDragDuration = 1;
@@ -9609,6 +9610,106 @@ Config.gameLevelScene = {
     bikeSpriteOffsetY: 55,
 };
 
-Config.imageText = {};
+// 图形化字库
+Config.imageText = {
+    TextureAlphabetPattern2: {
+        charWidth: 18,
+        charHeight: 20,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_0.png",
+            "1": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_1.png",
+            "2": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_2.png",
+            "3": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_3.png",
+            "4": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_4.png",
+            "5": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_5.png",
+            "6": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_6.png",
+            "7": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_7.png",
+            "8": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_8.png",
+            "9": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_9.png",
+            "/": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern2/TextureAlphabetPattern2_10.png",
+        },
+    },
+    TextureAlphabetPattern3: {
+        charWidth: 24,
+        charHeight: 24,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_0.png",
+            "1": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_1.png",
+            "2": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_2.png",
+            "3": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_3.png",
+            "4": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_4.png",
+            "5": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_5.png",
+            "6": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_6.png",
+            "7": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_7.png",
+            "8": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_8.png",
+            "9": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_9.png",
+            "/": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_10.png",
+            "-": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_11.png",
+            ".": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_12.png",
+            ",": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_13.png",
+            ":": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_14.png",
+            "A": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_16.png",
+            "B": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_17.png",
+            "C": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_18.png",
+            "D": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_19.png",
+            "E": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_20.png",
+            "F": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_21.png",
+            "G": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_22.png",
+            "H": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_23.png",
+            "I": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_24.png",
+            "J": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_25.png",
+            "K": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_26.png",
+            "L": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_27.png",
+            "M": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_28.png",
+            "N": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_29.png",
+            "O": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_30.png",
+            "P": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_31.png",
+            "Q": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_32.png",
+            "R": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_33.png",
+            "S": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_34.png",
+            "T": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_35.png",
+            "U": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_36.png",
+            "V": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_37.png",
+            "W": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_38.png",
+            "X": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_39.png",
+            "Y": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_40.png",
+            "Z": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_41.png",
+            "a": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_42.png",
+            "b": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_43.png",
+            "c": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_44.png",
+            "d": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_45.png",
+            "e": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_46.png",
+            "f": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_47.png",
+            "g": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_48.png",
+            "h": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_49.png",
+            "i": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_50.png",
+            "j": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_51.png",
+            "k": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_52.png",
+            "l": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_53.png",
+            "m": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_54.png",
+            "n": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_55.png",
+            "o": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_56.png",
+            "p": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_57.png",
+            "q": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_58.png",
+            "r": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_59.png",
+            "s": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_60.png",
+            "t": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_61.png",
+            "u": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_62.png",
+            "v": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_63.png",
+            "w": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_64.png",
+            "x": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_65.png",
+            "y": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_66.png",
+            "z": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_67.png",
+            "&": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_68.png",
+            "(": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_70.png",
+            ")": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_71.png",
+            "%": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_91.png",
+            "金": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_101.png",
+            "币": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_102.png",
+            "里": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_111.png",
+            "程": "myLaya/laya/assets/images/image-text/TextureAlphabetPattern3/TextureAlphabetPattern3_112.png",
+        },
+    },
+};
 
 export default Config;
