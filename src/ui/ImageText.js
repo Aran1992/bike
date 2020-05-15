@@ -1,42 +1,5 @@
-import {Container, resources, Sprite, Text, TextStyle} from "../libs/pixi-wrapper";
+import {Container, Sprite} from "../libs/pixi-wrapper";
 import Config from "../config";
-
-function getValue(value, defaultValue) {
-    if (value === undefined) {
-        return defaultValue;
-    } else {
-        return value;
-    }
-}
-
-function createTextFromData(data, textContent) {
-    let fill = getValue(data.color, "black");
-    let fontSize = getValue(data.fontSize, 10);
-    let fontFamily = getValue(data.font);
-    let width = getValue(data.width);
-    let textStyle = {
-        fill: fill,
-        fontFamily: "arial",
-        fontSize: fontSize,
-        wordWrap: false,
-        leading: getValue(data.leading, 0),
-        padding: 5,
-    };
-    if (getValue(data.strokeColor) !== undefined) {
-        textStyle.stroke = getValue(data.strokeColor);
-    }
-    if (getValue(data.stroke) !== undefined) {
-        textStyle.strokeThickness = getValue(data.stroke);
-    }
-    if (fontFamily) {
-        textStyle.fontFamily = fontFamily;
-    }
-    if (width !== undefined) {
-        textStyle.wordWrap = true;
-        textStyle.wordWrapWidth = width;
-    }
-    return new Text(textContent, new TextStyle(textStyle));
-}
 
 export default class ImageText extends Sprite {
     constructor(data) {
@@ -67,24 +30,21 @@ export default class ImageText extends Sprite {
         this.mycontainer.myheight = this.config.charHeight * lines.length;
         lines.forEach((line, lineIndex) => {
             const chars = line.split("");
-            const lineWidth = chars.length * this.config.charWidth;
-            if (lineWidth > this.mycontainer.mywidth) {
-                this.mycontainer.mywidth = lineWidth;
-            }
-            chars.forEach((char, charIndex) => {
+            let lastX = 0;
+            chars.forEach(char => {
                 const path = this.config.charImgPathTable[char];
-                let sprite, charHeight;
-                if (path === undefined) {
-                    sprite = createTextFromData(this.data, char);
-                    charHeight = sprite.height;
-                } else {
-                    sprite = Sprite.from(path);
-                    charHeight = sprite.texture.height;
+                if (path) {
+                    let sprite = Sprite.from(path);
+                    let charHeight = sprite.texture.height;
+                    sprite.x = lastX;
+                    lastX += sprite.width;
+                    sprite.y = lineIndex * this.config.charHeight + this.config.charHeight - charHeight;
+                    this.mycontainer.addChild(sprite);
                 }
-                sprite.x = this.config.charWidth * charIndex;
-                sprite.y = lineIndex * this.config.charHeight + this.config.charHeight - charHeight;
-                this.mycontainer.addChild(sprite);
             });
+            if (lastX > this.mycontainer.mywidth) {
+                this.mycontainer.mywidth = lastX;
+            }
         });
         this.updateHAlign(this.hAlign);
         this.updateVAlign(this.vAlign);
