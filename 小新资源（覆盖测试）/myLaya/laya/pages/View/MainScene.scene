@@ -1,11 +1,11 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":167,
-    "selecteID":180,
+    "selectedBox":21,
+    "selecteID":69,
     "searchKey":"Scene",
     "referenceLines":[
-    ],
+        ],
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
     "maxID":261,
@@ -28,7 +28,7 @@
             "hasChild":false,
             "compId":19,
             "child":[
-            ]
+                ]
         },
         {
             "x":15,
@@ -43,7 +43,7 @@
             "hasChild":false,
             "compId":34,
             "child":[
-            ],
+                ],
             "$HIDDEN":false
         },
         {
@@ -84,7 +84,7 @@
                             "hasChild":false,
                             "compId":49,
                             "child":[
-                            ]
+                                ]
                         }],
                     "$HIDDEN":false
                 },
@@ -113,7 +113,7 @@
                             "hasChild":false,
                             "compId":236,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -127,7 +127,7 @@
                             "hasChild":false,
                             "compId":237,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -141,7 +141,7 @@
                             "hasChild":false,
                             "compId":238,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         },
                         {
@@ -156,7 +156,7 @@
                             "hasChild":false,
                             "compId":239,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }]
                 },
@@ -164,7 +164,7 @@
                     "x":30,
                     "type":"Label",
                     "searchKey":"Label,addtionText",
-                    "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":1,"scaleY":1.2,"scaleX":1.2,"left":50,"fontSize":20,"font":"ui_fvr_gauge","color":"#000000","align":"left"},
+                    "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":1,"scaleY":1.2,"scaleX":1.2,"left":50,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
                     "label":"addtionText",
                     "isDirectory":false,
@@ -172,7 +172,7 @@
                     "hasChild":false,
                     "compId":245,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "x":30,
@@ -199,7 +199,7 @@
                             "hasChild":false,
                             "compId":61,
                             "child":[
-                            ]
+                                ]
                         }],
                     "$HIDDEN":false
                 }],
@@ -212,14 +212,13 @@
             "props":{"top":0,"right":0,"left":0,"height":110},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
@@ -232,7 +231,6 @@
                     "compId":3,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -244,10 +242,9 @@
                             "hasChild":false,
                             "compId":56,
                             "child":[
-                            ]
+                                ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
                             "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -258,10 +255,9 @@
                             "hasChild":false,
                             "compId":7,
                             "child":[
-                            ]
+                                ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addDiamondButton",
                             "props":{"var":"addDiamondButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
@@ -273,11 +269,10 @@
                             "hasChild":false,
                             "compId":84,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
@@ -290,7 +285,6 @@
                     "compId":4,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-coin.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -302,10 +296,9 @@
                             "hasChild":false,
                             "compId":58,
                             "child":[
-                            ]
+                                ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
                             "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -316,10 +309,9 @@
                             "hasChild":false,
                             "compId":9,
                             "child":[
-                            ]
+                                ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addCoinButton",
                             "props":{"var":"addCoinButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
@@ -331,11 +323,10 @@
                             "hasChild":false,
                             "compId":85,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
@@ -348,7 +339,6 @@
                     "compId":2,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.8,"scaleX":0.8,"left":3,"centerY":-9},
@@ -360,10 +350,9 @@
                             "hasChild":false,
                             "compId":52,
                             "child":[
-                            ]
+                                ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,distanceText",
                             "props":{"var":"distanceText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -374,11 +363,10 @@
                             "hasChild":false,
                             "compId":5,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
@@ -391,7 +379,6 @@
                     "compId":10,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-mark.png","scaleY":0.8,"scaleX":0.8,"left":10,"centerY":0},
@@ -403,10 +390,9 @@
                             "hasChild":false,
                             "compId":54,
                             "child":[
-                            ]
+                                ]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
                             "props":{"var":"totalScoreText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -417,11 +403,10 @@
                             "hasChild":false,
                             "compId":12,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"width":110,"var":"userImage","top":19,"skin":"images/UserIconDefault.png","left":17,"height":110},
@@ -434,7 +419,6 @@
                     "compId":60,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,levelText",
                             "props":{"var":"levelText","text":"${LevelDsc}","strokeColor":"#ffffff","stroke":5,"fontSize":30,"color":"#000000","centerX":0,"bottom":0},
@@ -445,7 +429,7 @@
                             "hasChild":false,
                             "compId":166,
                             "child":[
-                            ]
+                                ]
                         }]
                 }],
             "$HIDDEN":false
@@ -457,13 +441,14 @@
             "props":{"width":330,"top":120,"right":50,"height":600},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
                     "props":{"var":"endlessModeButton","top":10,"skin":"images/button-11.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
@@ -476,6 +461,7 @@
                     "compId":29,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Endless.png","centerY":0,"centerX":-20},
@@ -486,9 +472,10 @@
                             "hasChild":false,
                             "compId":50,
                             "child":[
-                            ]
+                                ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"visible":false,"top":-25,"skin":"images/key_lock-2.png","name":"lockedImage","centerX":0},
@@ -499,11 +486,12 @@
                             "hasChild":false,
                             "compId":163,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelModeButton",
                     "props":{"var":"gamelevelModeButton","top":180,"skin":"images/button-12.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
@@ -516,6 +504,7 @@
                     "compId":161,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/LevelMode.png","centerY":20,"centerX":-20},
@@ -526,10 +515,11 @@
                             "hasChild":false,
                             "compId":216,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"var":"mapModeButton","top":400,"skin":"images/button-13.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
@@ -542,6 +532,7 @@
                     "compId":30,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Match.png","centerY":10,"centerX":-10},
@@ -552,9 +543,10 @@
                             "hasChild":false,
                             "compId":51,
                             "child":[
-                            ]
+                                ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"x":0,"visible":false,"top":-25,"skin":"images/key_lock-2.png","name":"lockedImage","centerX":0},
@@ -565,42 +557,45 @@
                             "hasChild":false,
                             "compId":76,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessHelpButton",
-                    "props":{"var":"endlessHelpButton","top":0,"skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
+                    "props":{"var":"endlessHelpButton","top":0,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-8},
                     "nodeParent":21,
                     "label":"endlessHelpButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":69,
                     "child":[
-                    ]
+                        ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelHelpButton",
-                    "props":{"var":"gamelevelHelpButton","top":210,"skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
+                    "props":{"var":"gamelevelHelpButton","top":210,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-4},
                     "nodeParent":21,
                     "label":"gamelevelHelpButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":165,
                     "child":[
-                    ]
+                        ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapHelpButton",
-                    "props":{"var":"mapHelpButton","top":410,"skin":"images/btn_setting_help.png","scaleY":1.2,"scaleX":1.2,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
+                    "props":{"var":"mapHelpButton","top":410,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
                     "nodeParent":21,
                     "label":"mapHelpButton",
                     "isOpen":true,
@@ -609,7 +604,7 @@
                     "hasChild":false,
                     "compId":71,
                     "child":[
-                    ]
+                        ]
                 }],
             "$HIDDEN":false
         },
@@ -617,7 +612,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,playerinfoButton",
-            "props":{"y":130,"width":101,"visible":false,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":-500,"centerY":0},
+            "props":{"y":130,"width":101,"visible":false,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":-350,"centerY":0},
             "nodeParent":1,
             "label":"playerinfoButton",
             "isOpen":false,
@@ -637,7 +632,7 @@
                     "hasChild":false,
                     "compId":95,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -650,14 +645,14 @@
                     "hasChild":false,
                     "compId":206,
                     "child":[
-                    ]
+                        ]
                 }]
         },
         {
             "x":15,
             "type":"Image",
             "searchKey":"Image,rankButton",
-            "props":{"width":101,"var":"rankButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-500,"height":101},
+            "props":{"width":101,"var":"rankButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":480,"height":101},
             "nodeParent":1,
             "label":"rankButton",
             "isOpen":false,
@@ -677,7 +672,7 @@
                     "hasChild":false,
                     "compId":65,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -690,7 +685,7 @@
                     "hasChild":false,
                     "compId":210,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -703,7 +698,7 @@
                     "hasChild":false,
                     "compId":74,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 }]
         },
@@ -731,7 +726,7 @@
                     "hasChild":false,
                     "compId":66,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -744,7 +739,7 @@
                     "hasChild":false,
                     "compId":209,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -757,7 +752,7 @@
                     "hasChild":false,
                     "compId":73,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -771,7 +766,7 @@
                     "hasChild":false,
                     "compId":225,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
@@ -781,7 +776,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,systemButton",
-            "props":{"width":101,"var":"systemButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":580,"height":101},
+            "props":{"width":101,"var":"systemButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":590,"height":101},
             "nodeParent":1,
             "label":"systemButton",
             "isOpen":false,
@@ -801,7 +796,7 @@
                     "hasChild":false,
                     "compId":67,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -814,7 +809,7 @@
                     "hasChild":false,
                     "compId":208,
                     "child":[
-                    ]
+                        ]
                 }]
         },
         {
@@ -841,7 +836,7 @@
                     "hasChild":false,
                     "compId":64,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -854,7 +849,7 @@
                     "hasChild":false,
                     "compId":211,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -868,7 +863,7 @@
                     "hasChild":false,
                     "compId":75,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -882,7 +877,7 @@
                     "hasChild":false,
                     "compId":226,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 }]
         },
@@ -890,7 +885,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,shopButton",
-            "props":{"width":101,"var":"shopButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-650,"height":101},
+            "props":{"width":101,"var":"shopButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":370,"height":101},
             "nodeParent":1,
             "label":"shopButton",
             "isOpen":false,
@@ -910,7 +905,7 @@
                     "hasChild":false,
                     "compId":241,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -923,7 +918,7 @@
                     "hasChild":false,
                     "compId":242,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -936,7 +931,7 @@
                     "hasChild":false,
                     "compId":243,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -950,7 +945,7 @@
                     "hasChild":false,
                     "compId":244,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 }]
         },
@@ -958,7 +953,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,signButton",
-            "props":{"width":101,"var":"signButton","top":110,"skin":"images/icon-sign.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":340,"height":101},
+            "props":{"width":101,"var":"signButton","top":110,"skin":"images/icon-sign.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":150,"height":101},
             "nodeParent":1,
             "label":"signButton",
             "isOpen":false,
@@ -978,7 +973,7 @@
                     "hasChild":false,
                     "compId":79,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -992,7 +987,7 @@
                     "hasChild":false,
                     "compId":96,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -1005,7 +1000,7 @@
                     "hasChild":false,
                     "compId":228,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 }]
         },
@@ -1013,7 +1008,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,giftButton",
-            "props":{"width":101,"var":"giftButton","top":110,"skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":460},
+            "props":{"width":101,"var":"giftButton","top":110,"skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":260,"height":101},
             "nodeParent":1,
             "label":"giftButton",
             "isOpen":false,
@@ -1033,7 +1028,7 @@
                     "hasChild":false,
                     "compId":82,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1047,7 +1042,7 @@
                     "hasChild":false,
                     "compId":97,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Label",
@@ -1060,7 +1055,7 @@
                     "hasChild":false,
                     "compId":91,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1074,7 +1069,7 @@
                     "hasChild":false,
                     "compId":229,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 }]
         },
@@ -1114,7 +1109,7 @@
                             "hasChild":false,
                             "compId":128,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1128,7 +1123,7 @@
                             "hasChild":false,
                             "compId":191,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1142,7 +1137,7 @@
                             "hasChild":false,
                             "compId":192,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1156,7 +1151,7 @@
                             "hasChild":false,
                             "compId":193,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -1182,7 +1177,7 @@
                             "hasChild":false,
                             "compId":129,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1196,7 +1191,7 @@
                             "hasChild":false,
                             "compId":194,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1210,7 +1205,7 @@
                             "hasChild":false,
                             "compId":195,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1224,7 +1219,7 @@
                             "hasChild":false,
                             "compId":196,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -1250,7 +1245,7 @@
                             "hasChild":false,
                             "compId":130,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1264,7 +1259,7 @@
                             "hasChild":false,
                             "compId":197,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1278,7 +1273,7 @@
                             "hasChild":false,
                             "compId":198,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1292,7 +1287,7 @@
                             "hasChild":false,
                             "compId":199,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -1318,7 +1313,7 @@
                             "hasChild":false,
                             "compId":131,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1332,7 +1327,7 @@
                             "hasChild":false,
                             "compId":200,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1346,7 +1341,7 @@
                             "hasChild":false,
                             "compId":201,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1360,7 +1355,7 @@
                             "hasChild":false,
                             "compId":202,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -1386,7 +1381,7 @@
                             "hasChild":false,
                             "compId":132,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1400,7 +1395,7 @@
                             "hasChild":false,
                             "compId":203,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1414,7 +1409,7 @@
                             "hasChild":false,
                             "compId":204,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -1428,7 +1423,7 @@
                             "hasChild":false,
                             "compId":205,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -1442,7 +1437,7 @@
                     "hasChild":false,
                     "compId":150,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -1456,7 +1451,7 @@
                     "hasChild":false,
                     "compId":151,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1471,7 +1466,7 @@
                     "hasChild":false,
                     "compId":152,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1497,7 +1492,7 @@
                             "hasChild":false,
                             "compId":156,
                             "child":[
-                            ]
+                                ]
                         }],
                     "$HIDDEN":false
                 },
@@ -1525,7 +1520,7 @@
                             "hasChild":false,
                             "compId":160,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Label",
@@ -1538,7 +1533,7 @@
                             "hasChild":false,
                             "compId":159,
                             "child":[
-                            ]
+                                ]
                         }],
                     "$HIDDEN":false
                 }],
@@ -1570,7 +1565,7 @@
                     "hasChild":false,
                     "compId":180,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1585,14 +1580,14 @@
                     "hasChild":false,
                     "compId":179,
                     "child":[
-                    ]
+                        ]
                 }],
             "$HIDDEN":false
         }],
     "animations":[
         {
             "nodes":[
-            ],
+                ],
             "name":"ani1",
             "id":1,
             "frameRate":24,

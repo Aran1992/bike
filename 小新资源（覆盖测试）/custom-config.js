@@ -10050,7 +10050,7 @@ Config.lockSystems = {
     // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [12, 10, 5],
+        condition: [12, 3, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -10076,7 +10076,7 @@ Config.lockSystems = {
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 9999],
+        condition: [10, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
