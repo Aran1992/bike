@@ -97,7 +97,9 @@ export default class GameScene extends Scene {
 
         this.createBottomMask();
 
-        // this.createFPSText();
+        if (RunOption.showFPS) {
+            this.createFPSText();
+        }
 
         this.ui.pauseButton.visible = false;
         this.ui.surrenderButton.visible = false;
@@ -663,16 +665,18 @@ export default class GameScene extends Scene {
         this.gameContainer.addChild(sprite);
     }
 
-    // createFPSText() {
-    //     let style = new TextStyle({
-    //         fill: "white",
-    //         stroke: "#ff3300",
-    //         strokeThickness: 1,
-    //     });
-    //     this.fpsText = new Text("FPS:0", style);
-    //     this.fpsText.anchor.set(0, 0);
-    //     this.addChild(this.fpsText);
-    // }
+    createFPSText() {
+        this.addChild(new Graphics()
+            .beginFill(0x000000, 0.5)
+            .drawRect(0, 0, 120, 50,)
+            .endFill());
+        let style = new TextStyle({
+            fill: "white",
+        });
+        this.fpsText = new Text("FPS:0", style);
+        this.fpsText.anchor.set(0, 0);
+        this.addChild(this.fpsText);
+    }
 
     createBg() {
         this.bgList = [];
@@ -943,14 +947,14 @@ export default class GameScene extends Scene {
         this.gameLoopFunc(delta);
     }
 
-    play(delta) {
+    play() {
         if (this.eatEffect) {
             this.startEffect(this.eatEffect);
             delete this.eatEffect;
         }
 
         if (this.fpsText) {
-            this.fpsText.text = `FPS:${Math.floor(delta * Config.fps)}`;
+            this.fpsText.text = `FPS：${Math.floor(App.ticker.FPS)}`;
         }
 
         let oldX = this.bikeBody.getPosition().x;

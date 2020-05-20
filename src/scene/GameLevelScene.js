@@ -78,7 +78,7 @@ export default class GameLevelScene extends Scene {
     refreshGameLevelSelectedState() {
         for (let i = 1; i <= 5; i++) {
             const count = DataMgr.getGameLevelStarCount(this.gameLevel, i - 1);
-            const isLocked = DataMgr.isGameLevelIsLocked(this.gameLevel, i - 1);
+            const isLocked = DataMgr.isGameLevelLocked(this.gameLevel, i - 1);
             const btn = this.ui[`glBtn${i}`];
             this.setButtonState(btn, isLocked, i - 1 === this.selectedLevel);
             const nameLabel = GameUtils.findChildByName(btn, "nameLabel");

@@ -334,7 +334,7 @@ export default class MainScene extends Scene {
     refreshGameLevelSelectedState() {
         for (let i = 1; i <= 5; i++) {
             const count = DataMgr.getGameLevelStarCount(this.gameLevel, i - 1);
-            const isLocked = DataMgr.isGameLevelIsLocked(this.gameLevel, i - 1);
+            const isLocked = DataMgr.isGameLevelLocked(this.gameLevel, i - 1);
             const btn = this.ui[`glBtn${i}`];
             if (isLocked) {
                 btn.children[0].texture = Texture.from(Config.imagePath.lockedLevel);

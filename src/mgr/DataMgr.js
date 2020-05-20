@@ -5,6 +5,7 @@ import OnlineMgr from "./OnlineMgr";
 import EventMgr from "./EventMgr";
 import TimeMgr from "./TimeMgr";
 import GameUtils from "./GameUtils";
+import RunOption from "../../run-option";
 
 class DataMgr_ {
     constructor() {
@@ -312,7 +313,10 @@ class DataMgr_ {
         return (table[map] && table[map][level]) || 0;
     }
 
-    isGameLevelIsLocked(map, level) {
+    isGameLevelLocked(map, level) {
+        if (RunOption.openAllLevel) {
+            return false;
+        }
         if (this.isGameLevelMapLocked(map)) {
             return true;
         }
