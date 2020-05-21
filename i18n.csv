@@ -3,8 +3,8 @@ id,comments,scene,sc,en,jp
 NetworkBusy,,,网络繁忙，请稍后重试。,The network is busy. Please try again later.,ネットワークがビジー状態で、少し時間をおいて再度お試しください。
 Unlocked,,"BikeScene.scene.json
 HomeScene.scene.json",未解锁,Unlocked,アンロックしていません。
-主页加成,,MainScene.scene.json,"金币：${Coin}  积分：${Score}
-里程：${Distance}  经验：${Exp}",,
+主页加成,,MainScene.scene.json,"金币加成：${Coin}  积分加成：${Score}
+里程加成：${Distance}  经验加成：${Exp}",,
 Enable,,"HomeScene.scene.json
 ShopScene.scene.json",可选择,Enable,選択可能
 Select,,BikeScene.scene.json,可选择,Select,選択可能
