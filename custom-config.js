@@ -5819,7 +5819,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 1,
         // 吸取速度（单位：像素/秒）
-        velocity: 1000,
+        velocity: 2000,
         // 道具栏显示的道具图标
         imagePath: "myLaya/laya/assets/images/crystal_dragon_09.png",
         // 使用者使用特效路径（只能是动画）（因为平台关系需加上.json）
