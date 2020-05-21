@@ -18,8 +18,8 @@ const RunOption = {
     // 是否显示自行车碰撞体（1就显示 为0就不显示）
     showCollider: 0,
     // 是否启用单机模式（该模式下不需要连接服务器，每次游玩都相当于是从头开始）（1就启用 为0就不启用）
-    singlePlayerMode: 1,
+    singlePlayerMode: 0,
     // 是否开启所有关卡
-    openAllLevel: 1,
+    openAllLevel: 0,
 };
 export default RunOption;
