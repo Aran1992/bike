@@ -4813,6 +4813,80 @@ Config.item = {
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
                 // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+            },
+            // 浮空固定的小鸟（可向下踩踏、向上、横向碰触即死）
+            20000: {
+                // 动画路径
+                animationJsonPath: "images/bird-animation.json",
+                // 动画名称
+                animationName: "Bird",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.25,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 64,
+                // 实际区域高度
+                bodyHeight: 40,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 50,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+            },
+            // 浮空向左直线移动的小鸟（可向下踩踏、向上、横向碰触即死）
+            20010: {
+                // 动画路径
+                animationJsonPath: "images/bird-animation.json",
+                // 动画名称
+                animationName: "Bird",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.25,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度
+                bodyWidth: 64,
+                // 实际区域高度
+                bodyHeight: 40,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 50,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
                 appearSoundPath: "myLaya/laya/assets/sounds/SE310.mp3",
                 // 是否能踩
                 isAbleToBeTrampled: 1,
@@ -4821,11 +4895,11 @@ Config.item = {
                 // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
                 forwardVelocity: -10,
                 // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
-                isMoveUpDown: 1,
+                isMoveUpDown: 0,
                 // 这个系数越大 小鸟上下移动的最大幅度就越大
-                upDownCoefficient: 10,
+                upDownCoefficient: 0,
                 // 这个系数越大 完成一遍上下移动的时间就越短
-                upDownStep: 0.1,
+                upDownStep: 0,
             },
         }
     },
