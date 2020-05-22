@@ -1,6 +1,6 @@
 const RunOption = {
     // 是否显示帧数信息
-    showFPS: 1,
+    showFPS: 0,
     // 为1就是调试模式 为0就是正常模式
     debug: 0,
     // 排名竞赛NPC是否出现（0就出现 为1就不出现）
