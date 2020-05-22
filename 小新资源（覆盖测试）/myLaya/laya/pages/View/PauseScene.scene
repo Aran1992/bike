@@ -2,8 +2,10 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":11,
+    "selecteID":3,
     "searchKey":"Scene",
+    "referenceLines":[
+        ],
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
     "maxID":17,
@@ -18,7 +20,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,continueButton",
-            "props":{"var":"continueButton","skin":"images/bg-351.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":50,"centerX":0},
+            "props":{"var":"continueButton","skin":"images/bg-351.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":-100,"centerX":0},
             "nodeParent":1,
             "label":"continueButton",
             "isOpen":true,
@@ -46,7 +48,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,mainButton",
-            "props":{"var":"mainButton","skin":"images/bg-353.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":-230},
+            "props":{"var":"mainButton","skin":"images/bg-353.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":200,"centerX":0},
             "nodeParent":1,
             "label":"mainButton",
             "isOpen":true,
@@ -59,7 +61,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/english/Main.png","scaleY":0.7,"scaleX":0.7,"right":20,"centerY":-10},
+                    "props":{"skin":"images/english/Main.png","scaleY":0.8,"scaleX":0.7,"right":20,"centerY":-15},
                     "nodeParent":3,
                     "label":"Image",
                     "isDirectory":false,
@@ -74,7 +76,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,restartButton",
-            "props":{"var":"restartButton","skin":"images/bg-352.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":230},
+            "props":{"var":"restartButton","skin":"images/bg-352.png","scaleY":1,"scaleX":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","centerY":230,"centerX":1230},
             "nodeParent":1,
             "label":"restartButton",
             "isOpen":true,
@@ -94,34 +96,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":15,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":360,"skin":"images/english/PAUSE.png","height":180,"centerY":-200,"centerX":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":11,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"top":-60,"skin":"images/single-bike-2.png","centerX":205},
-                    "nodeParent":11,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":12,
                     "child":[
                         ]
                 }]
