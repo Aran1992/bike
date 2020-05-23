@@ -70,7 +70,7 @@ export default class Cloud {
             if (this.gameMgr.isItemXEnterView(this)) {
                 this.createBody();
                 if (this.itemConfig.appearSoundPath && this.itemConfig.appearSoundPath.length > 0) {
-                    MusicMgr.playSound(this.itemConfig.appearSoundPath);
+                    MusicMgr.playSound(this.itemConfig.appearSoundPath, undefined, this.gameMgr.stepSpeed);
                 }
             }
         }
