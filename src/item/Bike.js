@@ -253,7 +253,7 @@ export default class Bike {
         if (!this.completeGame && this.isDead === false && this.isContactFatalEdge) {
             this.bikeBody.setLinearVelocity(Vec2(0, 0));
             this.bikeBody.setAngularVelocity(Config.bikeGameOverAngularVelocity);
-            this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
+            this.bikeBody.applyLinearImpulse(Vec2(-100, 200), this.bikeBody.getPosition());
             this.onDead();
             return;
         }
@@ -475,7 +475,7 @@ export default class Bike {
 
     jump() {
         if (this.hasEffect("SpiderWeb")) {
-            this.bikeBody.applyForceToCenter(Vec2(0, Config.effect.SpiderWeb.jumpForce));
+            this.bikeBody.applyLinearImpulse(Vec2(0, Config.effect.SpiderWeb.jumpForce), this.bikeBody.getPosition());
             this.spiderWebRemainBreakTimes--;
             if (this.spiderWebRemainBreakTimes === 0) {
                 delete this.effectRemainFrame.SpiderWeb;
@@ -492,7 +492,7 @@ export default class Bike {
             || this.jumpExtraCountdown > 0) {
             let velocity = this.bikeBody.getLinearVelocity();
             this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
-            this.bikeBody.applyForceToCenter(Vec2(0, this.jumpForce.value));
+            this.bikeBody.applyLinearImpulse(Vec2(0, this.jumpForce.value), this.bikeBody.getPosition());
             this.jumping = true;
             this.jumpCount++;
             this.jumpExtraCountdown = Config.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];

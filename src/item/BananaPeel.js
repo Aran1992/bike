@@ -164,17 +164,17 @@ export default class BananaPeel {
     }
 
     onBeginContact(contact, anotherFixture) {
-        if (anotherFixture.getBody().getUserData() === this.thrower
+        let ud = anotherFixture.getBody().getUserData();
+        if (ud === this.thrower
             || anotherFixture.isSensor()) {
             return;
         }
         this.contactSomething = true;
-        let ud = anotherFixture.getBody().getUserData();
         if (ud && ud.isPlayer && ud.isPlayer()) {
             this.contactPlayer = true;
             this.gameMgr.addEffect(ud, Config.effect.BananaPeel.bearerSufferedEffectPath);
             if (ud === this.gameMgr) {
-                MusicMgr.playSound(Config.effect.BananaPeel.sufferSound);
+                MusicMgr.playSound(Config.effect.BananaPeel.sufferSound, undefined, this.gameMgr.stepSpeed);
             }
         }
     }

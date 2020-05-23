@@ -125,6 +125,24 @@ export default class GameScene extends Scene {
         this.ui.nextPlayerInfo.visible = false;
 
         this.ui.itemUseHistoryPanel.removeChildren();
+
+        this.stepDuration = 1 / Config.fps / Config.stepTimesEachFrame;
+        this.stepSpeed = 1;
+
+        if (this.ui.enterBulletTime) {
+            this.onClick(this.ui.enterBulletTime, this.onClickEnterBulletTime.bind(this));
+        }
+        if (this.ui.leaveBulletTime) {
+            this.onClick(this.ui.leaveBulletTime, this.onClickLeaveBulletTime.bind(this));
+        }
+    }
+
+    onClickEnterBulletTime() {
+        this.stepSpeed = 0.5;
+    }
+
+    onClickLeaveBulletTime() {
+        this.stepSpeed = 1;
     }
 
     onShow() {
@@ -547,7 +565,7 @@ export default class GameScene extends Scene {
                 this.stopSounds();
                 MusicMgr.playSound(Config.soundPath.bubbleDestroy);
             } else if (this.hasEffect("SpiderWeb")) {
-                this.bikeBody.applyForceToCenter(Vec2(0, Config.effect.SpiderWeb.jumpForce));
+                this.bikeBody.applyLinearImpulse(Vec2(0, Config.effect.SpiderWeb.jumpForce), this.bikeBody.getPosition());
                 this.spiderWebRemainBreakTimes--;
                 if (this.spiderWebRemainBreakTimes === 0) {
                     delete this.effectRemainFrame.SpiderWeb;
@@ -565,20 +583,20 @@ export default class GameScene extends Scene {
                 || this.jumpExtraCountdown > 0) {
                 let velocity = this.bikeBody.getLinearVelocity();
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
-                this.bikeBody.applyForceToCenter(Vec2(0, this.player.jumpForce.value));
+                this.bikeBody.applyLinearImpulse(Vec2(0, this.player.jumpForce.value), this.bikeBody.getPosition());
                 this.jumping = true;
                 this.jumpCount++;
                 this.jumpExtraCountdown = this.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
                 switch (this.jumpCount) {
                     case 1:
-                        MusicMgr.playSound(Config.soundPath.firstJump);
+                        MusicMgr.playSound(Config.soundPath.firstJump, undefined, this.stepSpeed);
                         break;
                     case 2:
-                        MusicMgr.playSound(Config.soundPath.secondJump);
+                        MusicMgr.playSound(Config.soundPath.secondJump, undefined, this.stepSpeed);
                         this.emitter.playOnce();
                         break;
                     default:
-                        MusicMgr.playSound(Config.soundPath.extraJump);
+                        MusicMgr.playSound(Config.soundPath.extraJump, undefined, this.stepSpeed);
                         this.emitter.playOnce();
                 }
                 const jumpAnimation = this.getBikeJumpAnimation(this.jumpCount);
@@ -625,24 +643,24 @@ export default class GameScene extends Scene {
             }
             case "GoldCoin": {
                 this.updateCoin(this.coin + value);
-                MusicMgr.playSound(Config.soundPath.eatGoldCoin);
+                MusicMgr.playSound(Config.soundPath.eatGoldCoin, undefined, this.stepSpeed);
                 break;
             }
             case "Star": {
                 this.updateStar(this.star + 1);
-                MusicMgr.playSound(Config.soundPath.eatStar);
+                MusicMgr.playSound(Config.soundPath.eatStar, undefined, this.stepSpeed);
                 break;
             }
             case "Exp": {
                 this.updateExp(this.exp + value);
-                MusicMgr.playSound(Config.soundPath.eatExp);
+                MusicMgr.playSound(Config.soundPath.eatExp, undefined, this.stepSpeed);
                 break;
             }
             case "Thunder": {
                 if (!this.isInvincible()) {
                     this.setContactFatalEdge(true);
                 }
-                MusicMgr.playSound(Config.effect.Thunder.sufferSound);
+                MusicMgr.playSound(Config.effect.Thunder.sufferSound, undefined, this.stepSpeed);
                 this.addEffect(this, Config.effect.Thunder.bearerSufferedEffectPath);
                 break;
             }
@@ -959,7 +977,10 @@ export default class GameScene extends Scene {
 
         let oldX = this.bikeBody.getPosition().x;
 
-        this.world.step(1 / Config.fps);
+        const times = Config.stepTimesEachFrame * this.stepSpeed;
+        for (let i = 0; i < times; i++) {
+            this.world.step(this.stepDuration);
+        }
 
         let velocity = this.bikeBody.getLinearVelocity();
         let bikePhysicsPos = this.bikeBody.getPosition();
@@ -977,7 +998,7 @@ export default class GameScene extends Scene {
                 if (!item.itemShowed && this.isItemXEnterView(item)) {
                     item.itemShowed = true;
                     if (Config.item[itemType] && Config.item[itemType].appearSoundPath) {
-                        MusicMgr.playSound(Config.item[itemType].appearSoundPath);
+                        MusicMgr.playSound(Config.item[itemType].appearSoundPath, undefined, this.stepSpeed);
                     }
                 }
             }
@@ -1146,7 +1167,7 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play" && this.isContactFatalEdge) {
             this.bikeBody.setLinearVelocity(Vec2(0, 0));
             this.bikeBody.setAngularVelocity(Config.bikeGameOverAngularVelocity);
-            this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
+            this.bikeBody.applyLinearImpulse(Vec2(-100, 200), this.bikeBody.getPosition());
             this.onDead();
         }
     }
@@ -1411,7 +1432,7 @@ export default class GameScene extends Scene {
                     this.effectList.push(effect);
                 }
                 if (config.useSound) {
-                    MusicMgr.playSound(config.useSound);
+                    MusicMgr.playSound(config.useSound, undefined, this.stepSpeed);
                 }
                 button.removeChildAt(1);
             }
@@ -1574,7 +1595,7 @@ export default class GameScene extends Scene {
                 this.addBuffIcon(type);
             }
             if (config.sufferSound) {
-                MusicMgr.playSound(config.sufferSound);
+                MusicMgr.playSound(config.sufferSound, undefined, this.stepSpeed);
             }
         }
         this.effectRemainFrame[type] = DataMgr.getEffectDuration(this.getBikeID(), type) * Config.fps;

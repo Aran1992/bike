@@ -98,10 +98,11 @@ class MusicMgr_ {
         this.bgmSource = undefined;
     }
 
-    playSound(path, callback) {
+    playSound(path, callback, playbackRate = 1) {
         let bs = this.context.createBufferSource();
         this.soundList.push(bs);
         bs.buffer = this.bufferTable[path];
+        bs.playbackRate.value = playbackRate;
         if (DataMgr.get(DataMgr.soundOn, true)) {
             bs.connect(this.context.destination);
         }

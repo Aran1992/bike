@@ -37,7 +37,7 @@ export default class EatableItem extends EditorItem {
         if (this.config.portable) {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible && !this.animation) {
-                    MusicMgr.playSound(Config.soundPath.eatRandomItem);
+                    MusicMgr.playSound(Config.soundPath.eatRandomItem, undefined, this.gameMgr.stepSpeed);
                     if (this.config.effect === "Random") {
                         let effect = this.gameMgr.randomEffect(this.gameMgr);
                         let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
