@@ -1,4 +1,5 @@
-let Config = {
+const Config = {
+    stepTimesEachFrame: 2,
     roadFatalMinLength: 0.5,
     listResistance: 2,
     resolution: 1,

@@ -125,6 +125,24 @@ export default class GameScene extends Scene {
         this.ui.nextPlayerInfo.visible = false;
 
         this.ui.itemUseHistoryPanel.removeChildren();
+
+        this.stepDuration = 1 / Config.fps / Config.stepTimesEachFrame;
+        this.stepSpeed = 1;
+
+        if (this.ui.enterBulletTime) {
+            this.onClick(this.ui.enterBulletTime, this.onClickEnterBulletTime.bind(this));
+        }
+        if (this.ui.leaveBulletTime) {
+            this.onClick(this.ui.leaveBulletTime, this.onClickLeaveBulletTime.bind(this));
+        }
+    }
+
+    onClickEnterBulletTime() {
+        this.stepSpeed = 0.5;
+    }
+
+    onClickLeaveBulletTime() {
+        this.stepSpeed = 1;
     }
 
     onShow() {
@@ -547,7 +565,7 @@ export default class GameScene extends Scene {
                 this.stopSounds();
                 MusicMgr.playSound(Config.soundPath.bubbleDestroy);
             } else if (this.hasEffect("SpiderWeb")) {
-                this.bikeBody.applyForceToCenter(Vec2(0, Config.effect.SpiderWeb.jumpForce));
+                this.bikeBody.applyLinearImpulse(Vec2(0, Config.effect.SpiderWeb.jumpForce), this.bikeBody.getPosition());
                 this.spiderWebRemainBreakTimes--;
                 if (this.spiderWebRemainBreakTimes === 0) {
                     delete this.effectRemainFrame.SpiderWeb;
@@ -565,7 +583,7 @@ export default class GameScene extends Scene {
                 || this.jumpExtraCountdown > 0) {
                 let velocity = this.bikeBody.getLinearVelocity();
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
-                this.bikeBody.applyForceToCenter(Vec2(0, this.player.jumpForce.value));
+                this.bikeBody.applyLinearImpulse(Vec2(0, this.player.jumpForce.value), this.bikeBody.getPosition());
                 this.jumping = true;
                 this.jumpCount++;
                 this.jumpExtraCountdown = this.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
@@ -959,7 +977,10 @@ export default class GameScene extends Scene {
 
         let oldX = this.bikeBody.getPosition().x;
 
-        this.world.step(1 / Config.fps);
+        const times = Config.stepTimesEachFrame * this.stepSpeed;
+        for (let i = 0; i < times; i++) {
+            this.world.step(this.stepDuration);
+        }
 
         let velocity = this.bikeBody.getLinearVelocity();
         let bikePhysicsPos = this.bikeBody.getPosition();
@@ -1146,7 +1167,7 @@ export default class GameScene extends Scene {
         if (this.gameStatus === "play" && this.isContactFatalEdge) {
             this.bikeBody.setLinearVelocity(Vec2(0, 0));
             this.bikeBody.setAngularVelocity(Config.bikeGameOverAngularVelocity);
-            this.bikeBody.applyForceToCenter(Vec2(-5000, 10000));
+            this.bikeBody.applyLinearImpulse(Vec2(-100, 200), this.bikeBody.getPosition());
             this.onDead();
         }
     }
