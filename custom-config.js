@@ -8489,7 +8489,7 @@ Config.lockSystems = {
     // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [12, 3, 5],
+        condition: [12, 4, 3],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
@@ -8502,7 +8502,7 @@ Config.lockSystems = {
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [11, 10],
+        condition: [12, 4, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
@@ -8559,7 +8559,7 @@ Config.lockSystems = {
     // 无尽模式
     endlessModeButton: {
         // 解锁条件
-        condition: [11, 8],
+        condition: [12, 3, 3],
         // 解锁内容标题
         title: "SystemUnlockTitle5",
         // 解锁描述
@@ -8572,7 +8572,7 @@ Config.lockSystems = {
     // 自行车能力
     upgradePanelButton: {
         // 解锁条件
-        condition: [12, 3, 3],
+        condition: [12, 3, 5],
         // 解锁内容标题
         title: "SystemUnlockTitle7",
         // 解锁描述
