@@ -72,30 +72,30 @@ class MusicMgr_ {
     }
 
     playBGM(path, reset) {
-        // if (this.bgmSource
-        //     && this.bgmSource.buffer === this.bufferTable[path]
-        //     && !reset) {
-        //     return;
-        // }
-        // if (this.bgmSource) {
-        //     this.bgmSource.stop();
-        //     this.bgmSource.disconnect();
-        // }
-        // this.bgmSource = this.context.createBufferSource();
-        // this.bgmSource.buffer = this.bufferTable[path];
-        // this.bgmSource.loop = true;
-        // if (DataMgr.get(DataMgr.bgmOn, true)) {
-        //     this.bgmSource.connect(this.context.destination);
-        // }
-        // this.bgmSource.start();
+        if (this.bgmSource
+            && this.bgmSource.buffer === this.bufferTable[path]
+            && !reset) {
+            return;
+        }
+        if (this.bgmSource) {
+            this.bgmSource.stop();
+            this.bgmSource.disconnect();
+        }
+        this.bgmSource = this.context.createBufferSource();
+        this.bgmSource.buffer = this.bufferTable[path];
+        this.bgmSource.loop = true;
+        if (DataMgr.get(DataMgr.bgmOn, true)) {
+            this.bgmSource.connect(this.context.destination);
+        }
+        this.bgmSource.start();
     }
 
     pauseBGM() {
-        // if (this.bgmSource) {
-        //     this.bgmSource.stop();
-        //     this.bgmSource.disconnect();
-        // }
-        // this.bgmSource = undefined;
+        if (this.bgmSource) {
+            this.bgmSource.stop();
+            this.bgmSource.disconnect();
+        }
+        this.bgmSource = undefined;
     }
 
     playSound(path, callback, playbackRate = 1) {
