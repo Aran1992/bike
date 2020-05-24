@@ -138,7 +138,18 @@ export default class GameScene extends Scene {
     }
 
     onClickEnterBulletTime() {
-        this.stepSpeed = 0.5;
+        // todo 速度应该是剔除了 加速减速道具
+        const velocity = this.player.velocity.basicValue;
+        let percent = Config.bulletTimeTargetVelocity  / velocity;
+        let base = 1 / Config.stepTimesEachFrame;
+        if (percent > 1) {
+            percent = 1;
+        } else if (percent < base) {
+            percent = base;
+        } else {
+            percent = Math.floor(percent / base) * base;
+        }
+        this.stepSpeed = percent;
     }
 
     onClickLeaveBulletTime() {

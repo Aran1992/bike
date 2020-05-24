@@ -9786,4 +9786,11 @@ Config.imageText = {
     },
 };
 
+// 进入子弹时间之后，自行车期望的移动速度（只能够近似，不能够完全等于）
+Config.bulletTimeTargetVelocity = 10;
+// 每帧进行几次物理计算
+// 次数越多，进入子弹时间之后就能够更精确的限制速度，但是相对的性能消耗越大，建议不超过10次
+// 修改该配置后，自行车的跳跃高度可能会发生变化，请进行检查，并且调整jumpForce为合适的值
+Config.stepTimesEachFrame = 10;
+
 export default Config;

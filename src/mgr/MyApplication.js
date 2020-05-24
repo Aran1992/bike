@@ -236,7 +236,6 @@ export default class MyApplication extends Application {
             isMusicLoaded = true;
             onLoadedResource();
         });
-        console.log("loading", JSON.stringify(commonResPathList, undefined, "\t"));
         loader
             .add(commonResPathList)
             .on("progress", (loader, resource) => {
@@ -248,7 +247,6 @@ export default class MyApplication extends Application {
                 onProgressCallback && onProgressCallback(this.calcLoadProgress(count, this.loadList));
             })
             .load(() => {
-                console.log("loaded", JSON.stringify(commonResPathList, undefined, "\t"));
                 isCommonLoaded = true;
                 onLoadedResource();
             });

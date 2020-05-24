@@ -1,5 +1,6 @@
 const Config = {
-    stepTimesEachFrame: 2,
+    stepTimesEachFrame: 10,
+    bulletTimeTargetVelocity: 10,
     roadFatalMinLength: 0.5,
     listResistance: 2,
     resolution: 1,
