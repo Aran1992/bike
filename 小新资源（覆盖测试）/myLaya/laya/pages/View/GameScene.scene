@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":109,
-    "selecteID":112,
+    "selectedBox":1,
+    "selecteID":49,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":143,
+    "maxID":147,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -976,6 +976,65 @@
                         }]
                 }],
             "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label",
+            "props":{"text":"进入子弹时间","right":80,"fontSize":36,"color":"#ffffff","bottom":120,"anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Label",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":143,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label",
+            "props":{"text":"退出子弹时间","right":80,"fontSize":36,"color":"#ffffff","bottom":215,"anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Label",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":144,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,enterBulletTime",
+            "props":{"y":10,"var":"enterBulletTime","skin":"images/button-pause.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"bottom":100},
+            "nodeParent":1,
+            "label":"enterBulletTime",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":145,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,leaveBulletTime",
+            "props":{"y":10,"var":"leaveBulletTime","skin":"images/button-pause.png","scaleY":0.95,"scaleX":0.95,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"bottom":200},
+            "nodeParent":1,
+            "label":"leaveBulletTime",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":146,
+            "child":[
+                ]
         }],
     "animations":[
         {
