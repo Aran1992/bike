@@ -14,6 +14,9 @@ export default class Bird {
         this.config = config;
         const id = GameUtils.getItemProp(config, "ID") || "default";
         this.itemConfig = Config.item.bird.table[id];
+        if (this.itemConfig === undefined) {
+            console.error(`bird 不存在ID为：${id}的配置`);
+        }
 
         this.type = GameUtils.getItemType(this.config);
         this.itemType = "bird";

@@ -1158,7 +1158,7 @@ export default class GameScene extends Scene {
                     if (this.bikeFrame >= frames.length) {
                         this.bikeFrame = 0;
                     }
-                    this.bikeAnimSprite.texture = frames[this.bikeFrame];
+                    this.bikeAnimSprite.texture = frames[Math.floor(this.bikeFrame)];
                     this.bikeAnimSprite.position.set(...pos);
                 } else {
                     let cv = this.bikeBody.getLinearVelocity().x;
@@ -2119,6 +2119,19 @@ export default class GameScene extends Scene {
             }
         }
         return jumpAnimation;
+    }
+
+    // 初始化的时候
+    initBulletTime() {
+        this.onClick(this.ui.bulletTimeBtn, this.onClickBulletTimeBtn.bind(this));
+        this.bulletTime = 0;
+        this.bulletTimeFillMask = new Graphics();
+        this.bulletTimeFillMask.beginFill();
+        this.ui.bulletTimeFill.mask = this.bulletTimeFillMask;
+    }
+
+    onClickBulletTimeBtn() {
+
     }
 }
 
