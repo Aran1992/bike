@@ -139,10 +139,14 @@ export default class GameScene extends Scene {
 
     onClickEnterBulletTime() {
         this.stepSpeed = 0.5;
+        MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
     }
 
     onClickLeaveBulletTime() {
         this.stepSpeed = 1;
+        MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
     }
 
     onShow() {
@@ -567,7 +571,7 @@ export default class GameScene extends Scene {
             } else if (this.hasEffect("SpiderWeb")) {
                 this.bikeBody.applyLinearImpulse(Vec2(0, Config.effect.SpiderWeb.jumpForce), this.bikeBody.getPosition());
                 this.spiderWebRemainBreakTimes--;
-                if (this.spiderWebRemainBreakTimes === 0) {
+                if (this.spiderWebRemainBreakTimes <= 0) {
                     delete this.effectRemainFrame.SpiderWeb;
                     if (this.effectTable.SpiderWeb.end) {
                         this.effectTable.SpiderWeb.end();
@@ -630,6 +634,14 @@ export default class GameScene extends Scene {
                     this.gameStatus = "play";
                     this.gameLoopFunc = this.play.bind(this);
                 }
+                break;
+            }
+            case "ArrowLeft": {
+                this.onClickEnterBulletTime();
+                break;
+            }
+            case "ArrowRight": {
+                this.onClickLeaveBulletTime();
                 break;
             }
         }
@@ -764,13 +776,15 @@ export default class GameScene extends Scene {
                 break;
             }
             case "BigFireWall": {
-                let item = new BigFireWall(data, this.world);
+                let item = new BigFireWall(data, this.world, this);
                 this.underBikeContianer.addChild(item.sprite);
+                this.itemList.push(item);
                 break;
             }
             case "SmallFireWall": {
-                let item = new SmallFireWall(data, this.world);
+                let item = new SmallFireWall(data, this.world, this);
                 this.underBikeContianer.addChild(item.sprite);
+                this.itemList.push(item);
                 break;
             }
             case "BlackBird": {
@@ -786,7 +800,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "GroundStab": {
-                let item = new GroundStab(this.underBikeContianer, this.world, data);
+                let item = new GroundStab(this.underBikeContianer, this.world, data, this);
                 this.itemList.push(item);
                 break;
             }
@@ -1036,7 +1050,7 @@ export default class GameScene extends Scene {
         }
 
         this.updateEffect();
-        this.jumpExtraCountdown--;
+        this.jumpExtraCountdown -= this.stepSpeed;
         this.updateBuffIcon();
         this.effectList.forEach(effect => effect.update());
         for (let type in this.durationEffectTable) {
@@ -1115,7 +1129,7 @@ export default class GameScene extends Scene {
             if (this.jumping) {
                 this.bikeSelfContainer.rotation = Utils.angle2radius(Config.bikeJumpingRotation);
                 if (this.jumpingAnimationFrames) {
-                    this.jumpingAnimationIndex++;
+                    this.jumpingAnimationIndex += this.stepSpeed;
                     let frameIndex = Math.floor(this.jumpingAnimationIndex / this.jumpingAnimationInterval);
                     let frame = this.jumpingAnimationFrames[frameIndex];
                     if (frame === undefined) {
@@ -1127,7 +1141,7 @@ export default class GameScene extends Scene {
                 if (Config.bikeRotateByMoveDirection) {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
-                this.bikeFrame++;
+                this.bikeFrame += this.stepSpeed;
                 if (this.hasEffect("Sprint")) {
                     const {frames, pos} = this.getBikeSprintAnimation();
                     if (this.bikeFrame >= frames.length) {
@@ -1428,7 +1442,7 @@ export default class GameScene extends Scene {
                     let effect = new BikeEffect(this, config.userUsedEffectPath, () => {
                         Utils.removeItemFromArray(this.effectList, effect);
                         effect.destroy();
-                    });
+                    }, this);
                     this.effectList.push(effect);
                 }
                 if (config.useSound) {
@@ -1582,13 +1596,13 @@ export default class GameScene extends Scene {
             }
             let config = Config.effect[type];
             if (config.bearerBuffEffectPath) {
-                this.durationEffectTable[type] = new BikeEffect(this, config.bearerBuffEffectPath);
+                this.durationEffectTable[type] = new BikeEffect(this, config.bearerBuffEffectPath, undefined, this);
             }
             if (config.bearerSufferedEffectPath) {
                 let effect = new BikeEffect(this, config.bearerSufferedEffectPath, () => {
                     effect.destroy();
                     Utils.removeItemFromArray(this.effectList, effect);
-                });
+                }, this);
                 this.effectList.push(effect);
             }
             if (config.buffIconImagePath) {
@@ -1604,8 +1618,8 @@ export default class GameScene extends Scene {
     updateEffect() {
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
-                this.effectRemainFrame[type]--;
-                if (this.effectRemainFrame[type] === 0) {
+                this.effectRemainFrame[type] -= this.stepSpeed;
+                if (this.effectRemainFrame[type] <= 0) {
                     delete this.effectRemainFrame[type];
                     if (this.effectTable[type] && this.effectTable[type].end) {
                         this.effectTable[type].end();
@@ -1891,7 +1905,7 @@ export default class GameScene extends Scene {
             effect.destroy();
             effectContainer.destroy();
             Utils.removeItemFromArray(this.effectList, effect);
-        });
+        }, this);
         effectContainer.addChild(effect.sprite);
         this.effectList.push(effect);
     }

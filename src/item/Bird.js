@@ -31,7 +31,7 @@ export default class Bird {
         const scaleY = this.config.props.scaleY;
         this.animation.scale.set(scaleX, scaleY);
         this.animation.position.set(...this.itemConfig.animationPos);
-        this.animation.animationSpeed = this.itemConfig.animationSpeed;
+        this.animation.animationSpeed = this.itemConfig.animationSpeed * this.gameMgr.stepSpeed;
         this.animation.play();
         const texture = this.animation.textures[0];
         const x = this.config.props.x + texture.width / 2 * scaleX;
@@ -104,7 +104,7 @@ export default class Bird {
                 } else {
                     this.body.setLinearVelocity(Vec2(this.itemConfig.forwardVelocity, 0));
                     if (this.isMoveUpDown()) {
-                        this.frame += this.itemConfig.upDownStep;
+                        this.frame += this.itemConfig.upDownStep * this.gameMgr.stepSpeed;
                         const y = this.baseY + Math.sin(this.frame) * this.itemConfig.upDownCoefficient;
                         this.body.setPosition(Vec2(this.body.getPosition().x, y));
                     }
@@ -172,5 +172,9 @@ export default class Bird {
     isMoveUpDown() {
         return GameUtils.isItemType(this.config, "UpDown")
             || this.itemConfig.isMoveUpDown;
+    }
+
+    changeSpeed(speed) {
+        this.animation.animationSpeed = this.itemConfig.animationSpeed * speed;
     }
 }

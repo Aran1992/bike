@@ -4,7 +4,8 @@ import {Box, Circle, Polygon} from "../libs/planck-wrapper";
 import {Graphics, resources, Sprite} from "../libs/pixi-wrapper";
 
 export default class Item {
-    constructor(config, world) {
+    constructor(config, world, gameMgr) {
+        this.gameMgr = gameMgr;
         this.config = config;
         this.world = world;
         this.create();

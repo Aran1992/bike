@@ -141,7 +141,7 @@ export default class BananaPeel {
         }
 
         if (this.sprite.textures) {
-            this.sprite.textureIndex++;
+            this.sprite.textureIndex += this.gameMgr.stepSpeed;
             let index = Math.floor(this.sprite.textureIndex / this.sprite.interval);
             if (this.sprite.textures[index] === undefined) {
                 this.sprite.textureIndex = 0;
