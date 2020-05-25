@@ -140,7 +140,7 @@ export default class GameScene extends Scene {
     onClickEnterBulletTime() {
         // todo 速度应该是剔除了 加速减速道具
         const velocity = this.player.velocity.basicValue;
-        let percent = Config.bulletTimeTargetVelocity  / velocity;
+        let percent = Config.bulletTimeTargetVelocity / velocity;
         let base = 1 / Config.stepTimesEachFrame;
         if (percent > 1) {
             percent = 1;
@@ -1859,10 +1859,10 @@ export default class GameScene extends Scene {
     updateBuffIcon() {
         for (let type in this.buffIconTable) {
             if (this.buffIconTable.hasOwnProperty(type)) {
-                if (this.effectRemainFrame[type] > 0) {
-                    this.buffIconTable[type].getChildAt(0).text = Math.ceil(this.effectRemainFrame[type] / Config.fps);
-                } else {
+                if (this.effectRemainFrame[type] === Infinity) {
                     this.buffIconTable[type].getChildAt(0).text = "";
+                } else {
+                    this.buffIconTable[type].getChildAt(0).text = Math.ceil(this.effectRemainFrame[type] / Config.fps);
                 }
             }
         }

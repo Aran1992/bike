@@ -7253,8 +7253,8 @@ Config.effect = {
     },
     // 束缚（可做：害人束缚道具、束缚物件区域）
     SpiderWeb: {
-        // 持续时间（单位：秒）（-1为不限时长）
-        duration: -1,
+        // 持续时间（单位：秒）（Infinity为不限时长）
+        duration: Infinity,
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 身缠蜘蛛网时的跳跃力
