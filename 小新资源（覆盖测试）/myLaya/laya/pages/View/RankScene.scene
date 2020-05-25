@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":62,
+    "selectedBox":81,
+    "selecteID":82,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -45,64 +45,22 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":720,"top":105,"height":80,"centerX":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":60,
-            "child":[
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"skin":"images/english/RANKING.png","centerY":-4,"centerX":0},
-                    "nodeParent":60,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":61,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":416,"top":20,"skin":"images/bg-56.png","height":67,"centerX":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":149,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,rangeRadio",
             "props":{"width":416,"var":"rangeRadio","top":20,"height":67,"centerX":0},
             "nodeParent":1,
             "label":"rangeRadio",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":81,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,rangeCheck",
-                    "props":{"width":208,"var":"rangeCheck","top":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","height":59,"centerX":0},
+                    "props":{"width":218,"var":"rangeCheck","top":1,"runtime":"../laya/assets/sounds/SoundSE001.mp3","height":59,"centerX":0},
                     "nodeParent":81,
                     "label":"rangeCheck",
                     "isOpen":true,
@@ -112,6 +70,7 @@
                     "compId":82,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,selected",
                             "props":{"width":208,"visible":false,"skin":"images/button-shop-11.png","name":"selected","height":59},
@@ -125,9 +84,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,common",
-                            "props":{"width":208,"visible":true,"top":0,"skin":"images/button-shop-12.png","name":"common","left":0,"height":59},
+                            "props":{"width":208,"visible":true,"top":0,"skin":"images/button-shop-21.png","name":"common","left":0,"height":59},
                             "nodeParent":82,
                             "label":"common",
                             "isDirectory":false,
@@ -139,6 +99,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,1",
                             "props":{"skin":"images/rank-icon-1.png","name":"1","left":20,"centerY":0},
@@ -151,6 +112,7 @@
                             "compId":85,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/english/rank-now.png","left":40,"centerY":0},
@@ -166,6 +128,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,2",
                             "props":{"y":0,"skin":"images/rank-icon-2.png","name":"2","left":20,"centerY":0},
@@ -178,6 +141,7 @@
                             "compId":86,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":0,"x":0,"skin":"images/english/rank-before.png","left":40,"centerY":0},
@@ -196,68 +160,25 @@
         },
         {
             "x":15,
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":690,"top":200,"skin":"images/bg-main-scene-21.png","sizeGrid":"50,50,50,50","height":500,"centerX":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":152,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Label",
-            "searchKey":"Label,resetTimeText",
-            "props":{"var":"resetTimeText","top":270,"text":"Requesting rank data","fontSize":35,"color":"#ffffff","centerX":0},
-            "nodeParent":1,
-            "label":"resetTimeText",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":127,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"width":690,"top":185,"skin":"images/bg-81.png","height":66,"centerX":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":153,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,typeRadio",
-            "props":{"width":690,"var":"typeRadio","top":185,"height":66,"centerX":0},
+            "props":{"width":690,"var":"typeRadio","top":100,"height":66,"centerX":0},
             "nodeParent":1,
             "label":"typeRadio",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":73,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,typeCheck",
                     "props":{"width":230,"var":"typeCheck","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":52,"centerY":-3,"centerX":20},
                     "nodeParent":73,
                     "label":"typeCheck",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -266,7 +187,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,selected",
-                            "props":{"width":220,"visible":false,"skin":"images/button-shop-21.png","name":"selected","height":52,"centerY":0,"centerX":0},
+                            "props":{"width":220,"visible":false,"skin":"images/button-shop-11.png","name":"selected","height":52,"centerY":0,"centerX":0},
                             "nodeParent":74,
                             "label":"selected",
                             "isDirectory":false,
@@ -279,7 +200,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,common",
-                            "props":{"width":220,"visible":true,"skin":"images/button-shop-22.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"common","height":52,"centerY":0,"centerX":0},
+                            "props":{"width":220,"visible":true,"skin":"images/button-shop-21.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"common","height":52,"centerY":0,"centerX":0},
                             "nodeParent":74,
                             "label":"common",
                             "isDirectory":false,
@@ -379,8 +300,37 @@
         {
             "x":15,
             "type":"Image",
+            "searchKey":"Image",
+            "props":{"width":1050,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","height":564,"centerY":71,"centerX":0},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":152,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,resetTimeText",
+            "props":{"var":"resetTimeText","top":166,"text":"Requesting rank data","fontSize":30,"color":"#000000","centerX":0},
+            "nodeParent":1,
+            "label":"resetTimeText",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":127,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
             "searchKey":"Image,listPanel",
-            "props":{"width":700,"var":"listPanel","top":320,"sizeGrid":"50,50,50,50","centerX":0,"bottom":110},
+            "props":{"width":1000,"var":"listPanel","skin":"images/bg-211.png","sizeGrid":"50,50,50,50","height":480,"centerX":0,"bottom":30},
             "nodeParent":1,
             "label":"listPanel",
             "isOpen":false,
@@ -392,7 +342,7 @@
                 {
                     "type":"Panel",
                     "searchKey":"Panel,list",
-                    "props":{"width":670,"var":"list","top":13,"height":710,"centerX":0,"bottom":12},
+                    "props":{"width":970,"var":"list","top":12,"centerX":0,"bottom":12},
                     "nodeParent":15,
                     "label":"list",
                     "isOpen":true,
@@ -404,7 +354,7 @@
                         {
                             "type":"Panel",
                             "searchKey":"Panel,item",
-                            "props":{"width":670,"var":"item","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":160,"centerX":0},
+                            "props":{"width":970,"var":"item","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":100,"centerX":0},
                             "nodeParent":118,
                             "label":"item",
                             "isOpen":true,
@@ -416,7 +366,7 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"width":670,"top":0,"skin":"images/bg-51.png","scaleY":1,"scaleX":1,"height":150,"centerX":0},
+                                    "props":{"top":0,"skin":"images/bg-412.png","sizeGrid":"50,50,50,50","scaleY":1,"scaleX":1,"right":0,"left":0,"bottom":0},
                                     "nodeParent":103,
                                     "label":"Image",
                                     "isDirectory":false,
@@ -429,7 +379,7 @@
                                 {
                                     "type":"Label",
                                     "searchKey":"Label,playerRank",
-                                    "props":{"text":"99","name":"playerRank","left":15,"fontSize":40,"color":"#ffffff","centerY":-5},
+                                    "props":{"text":"99","name":"playerRank","left":15,"fontSize":40,"font":"ranking","color":"#000000","centerY":0},
                                     "nodeParent":103,
                                     "label":"playerRank",
                                     "isDirectory":false,
@@ -442,7 +392,7 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image,userImage",
-                                    "props":{"skin":"images/UserIconDefault.png","name":"userImage","left":80,"centerY":-5},
+                                    "props":{"width":80,"skin":"images/UserIconDefault.png","name":"userImage","left":110,"height":80,"centerY":0},
                                     "nodeParent":103,
                                     "label":"userImage",
                                     "isOpen":true,
@@ -456,7 +406,7 @@
                                 {
                                     "type":"Label",
                                     "searchKey":"Label,userNameText",
-                                    "props":{"top":15,"text":"Player Name","name":"userNameText","left":220,"fontSize":40,"color":"#ffffff"},
+                                    "props":{"text":"Player Name","name":"userNameText","fontSize":40,"color":"#000000","centerY":0,"centerX":-50},
                                     "nodeParent":103,
                                     "label":"userNameText",
                                     "isDirectory":false,
@@ -540,7 +490,7 @@
                                         {
                                             "type":"Label",
                                             "searchKey":"Label,value",
-                                            "props":{"text":"2100000000","name":"value","left":70,"fontSize":30,"color":"#ffffff","centerY":0},
+                                            "props":{"text":"2100000000","name":"value","fontSize":30,"color":"#000000","centerY":0,"centerX":20},
                                             "nodeParent":113,
                                             "label":"value",
                                             "isDirectory":false,
@@ -555,7 +505,7 @@
                                 {
                                     "type":"Label",
                                     "searchKey":"Label,levelText",
-                                    "props":{"text":"${LV}","strokeColor":"#000000","name":"levelText","left":220,"fontSize":30,"color":"#ffffff","bottom":25},
+                                    "props":{"text":"${LV}","strokeColor":"#000000","name":"levelText","left":220,"fontSize":30,"color":"#000000","centerY":0},
                                     "nodeParent":103,
                                     "label":"levelText",
                                     "isDirectory":false,
@@ -572,7 +522,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,myInfoPanel",
-            "props":{"var":"myInfoPanel","centerX":-200,"bottom":70},
+            "props":{"var":"myInfoPanel","left":200,"bottom":-270},
             "nodeParent":1,
             "label":"myInfoPanel",
             "isOpen":false,
@@ -584,7 +534,7 @@
                 {
                     "type":"Label",
                     "searchKey":"Label",
-                    "props":{"text":"${MyRank}","left":50,"fontSize":30,"color":"#ffffff","centerY":0},
+                    "props":{"text":"${MyRank}","left":50,"fontSize":30,"color":"#000000","centerY":0},
                     "nodeParent":62,
                     "label":"Label",
                     "isDirectory":false,
@@ -597,7 +547,7 @@
                 {
                     "type":"Label",
                     "searchKey":"Label,myValue",
-                    "props":{"var":"myValue","text":"0","left":450,"fontSize":30,"color":"#ffffff","centerY":0,"align":"right"},
+                    "props":{"var":"myValue","text":"0","left":450,"fontSize":30,"color":"#000000","centerY":0,"align":"right"},
                     "nodeParent":62,
                     "label":"myValue",
                     "isDirectory":false,

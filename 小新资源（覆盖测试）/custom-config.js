@@ -11313,6 +11313,22 @@ Config.imageText = {
             "%": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_10.png",
         },
     },
+    ranking: {
+        charWidth: 42,
+        charHeight: 46,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/ranking/ranking_0.png",
+            "1": "myLaya/laya/assets/images/image-text/ranking/ranking_1.png",
+            "2": "myLaya/laya/assets/images/image-text/ranking/ranking_2.png",
+            "3": "myLaya/laya/assets/images/image-text/ranking/ranking_3.png",
+            "4": "myLaya/laya/assets/images/image-text/ranking/ranking_4.png",
+            "5": "myLaya/laya/assets/images/image-text/ranking/ranking_5.png",
+            "6": "myLaya/laya/assets/images/image-text/ranking/ranking_6.png",
+            "7": "myLaya/laya/assets/images/image-text/ranking/ranking_7.png",
+            "8": "myLaya/laya/assets/images/image-text/ranking/ranking_8.png",
+            "9": "myLaya/laya/assets/images/image-text/ranking/ranking_9.png",
+        },
+    },
 };
 
 export default Config;
