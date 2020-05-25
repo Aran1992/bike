@@ -160,7 +160,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -244,7 +244,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -328,7 +328,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -412,7 +412,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -496,7 +496,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -580,7 +580,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -664,7 +664,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -748,7 +748,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -832,7 +832,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -916,7 +916,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -1000,7 +1000,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -1084,7 +1084,7 @@ Config.mapList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 根据排名的道具随机表 有配置这个的话 就有先用这个 没有的话就用itemRandomTable 再没有就用默认的itemRandomTable
@@ -1507,7 +1507,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -1579,7 +1579,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -1651,7 +1651,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -1723,7 +1723,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -1795,7 +1795,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -1867,7 +1867,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -1939,7 +1939,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -2011,7 +2011,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -2083,7 +2083,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -2155,7 +2155,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -2227,7 +2227,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -2299,7 +2299,7 @@ Config.endlessMode.sceneList = [
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
-        jumpForce: 12800,
+        jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         // 里程提示（单位米）（1秒大约走20米）
@@ -7258,7 +7258,7 @@ Config.effect = {
         // 是否有益（1为有益，0为陷阱/害人）
         isHelpful: 0,
         // 身缠蜘蛛网时的跳跃力
-        jumpForce: 2560,
+        jumpForce: 50,
         // 挣脱需要点击次数
         breakTimes: 3,
         // 使用害人道具对象目标类型（不填或者0就是随即其他一名玩家，1就是前一名玩家，2就是所有其他玩家）
@@ -10187,7 +10187,7 @@ Config.gameLevelMode = {
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
+            jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
@@ -10251,7 +10251,7 @@ Config.gameLevelMode = {
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
+            jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
@@ -10315,7 +10315,7 @@ Config.gameLevelMode = {
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
+            jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
@@ -10379,7 +10379,7 @@ Config.gameLevelMode = {
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
+            jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
@@ -10443,7 +10443,7 @@ Config.gameLevelMode = {
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
-            jumpForce: 12800,
+            jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
             // 道具随机表
@@ -10508,7 +10508,7 @@ Config.gameLevelMode = {
 //卡6            // 重力（基础：-175）
 //卡6            gravity: -175,
 //卡6            // 跳跃爆发力（基础：12800）
-//卡6            jumpForce: 12800,
+//卡6            jumpForce: 250,
 //卡6            // BGM路径
 //卡6            bgmPath: "myLaya/laya/assets/sounds/10_uoza.mp3",
 //卡6            // 道具随机表
@@ -10573,7 +10573,7 @@ Config.gameLevelMode = {
 //卡7            // 重力（基础：-175）
 //卡7            gravity: -175,
 //卡7            // 跳跃爆发力（基础：12800）
-//卡7            jumpForce: 12800,
+//卡7            jumpForce: 250,
 //卡7            // BGM路径
 //卡7            bgmPath: "myLaya/laya/assets/sounds/08_sengoku.mp3",
 //卡7            // 道具随机表
@@ -10638,7 +10638,7 @@ Config.gameLevelMode = {
 //卡8            // 重力（基础：-175）
 //卡8            gravity: -175,
 //卡8            // 跳跃爆发力（基础：12800）
-//卡8            jumpForce: 12800,
+//卡8            jumpForce: 250,
 //卡8            // BGM路径
 //卡8            bgmPath: "myLaya/laya/assets/sounds/BGM_103.mp3",
 //卡8            // 道具随机表
@@ -10703,7 +10703,7 @@ Config.gameLevelMode = {
 //卡9            // 重力（基础：-175）
 //卡9            gravity: -175,
 //卡9            // 跳跃爆发力（基础：12800）
-//卡9            jumpForce: 12800,
+//卡9            jumpForce: 250,
 //卡9            // BGM路径
 //卡9            bgmPath: "myLaya/laya/assets/sounds/BGM_105.mp3",
 //卡9            // 道具随机表
@@ -10768,7 +10768,7 @@ Config.gameLevelMode = {
 //卡10            // 重力（基础：-175）
 //卡10            gravity: -175,
 //卡10            // 跳跃爆发力（基础：12800）
-//卡10            jumpForce: 12800,
+//卡10            jumpForce: 250,
 //卡10            // BGM路径
 //卡10            bgmPath: "myLaya/laya/assets/sounds/BGM_101.mp3",
 //卡10            // 道具随机表
@@ -10833,7 +10833,7 @@ Config.gameLevelMode = {
 //卡11            // 重力（基础：-175）
 //卡11            gravity: -175,
 //卡11            // 跳跃爆发力（基础：12800）
-//卡11            jumpForce: 12800,
+//卡11            jumpForce: 250,
 //卡11            // BGM路径
 //卡11            bgmPath: "myLaya/laya/assets/sounds/02_jurassic.mp3",
 //卡11            // 道具随机表
@@ -10898,7 +10898,7 @@ Config.gameLevelMode = {
 //卡12            // 重力（基础：-175）
 //卡12            gravity: -175,
 //卡12            // 跳跃爆发力（基础：12800）
-//卡12            jumpForce: 12800,
+//卡12            jumpForce: 250,
 //卡12            // BGM路径
 //卡12            bgmPath: "myLaya/laya/assets/sounds/01_middle.mp3",
 //卡12            // 道具随机表
@@ -11311,6 +11311,22 @@ Config.imageText = {
             "8": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_8.png",
             "9": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_9.png",
             "%": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_10.png",
+        },
+    },
+    ranking: {
+        charWidth: 42,
+        charHeight: 46,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/ranking/ranking_0.png",
+            "1": "myLaya/laya/assets/images/image-text/ranking/ranking_1.png",
+            "2": "myLaya/laya/assets/images/image-text/ranking/ranking_2.png",
+            "3": "myLaya/laya/assets/images/image-text/ranking/ranking_3.png",
+            "4": "myLaya/laya/assets/images/image-text/ranking/ranking_4.png",
+            "5": "myLaya/laya/assets/images/image-text/ranking/ranking_5.png",
+            "6": "myLaya/laya/assets/images/image-text/ranking/ranking_6.png",
+            "7": "myLaya/laya/assets/images/image-text/ranking/ranking_7.png",
+            "8": "myLaya/laya/assets/images/image-text/ranking/ranking_8.png",
+            "9": "myLaya/laya/assets/images/image-text/ranking/ranking_9.png",
         },
     },
 };

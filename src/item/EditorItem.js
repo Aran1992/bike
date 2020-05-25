@@ -81,4 +81,8 @@ export default class EditorItem {
     getRightBorderX() {
         return this.getLeftBorderX() + this.sprite.texture.width * this.sprite.scale.x;
     }
+
+    changeSpeed(speed) {
+        this.sprite.animationSpeed = this.config.animationSpeed * speed;
+    }
 }

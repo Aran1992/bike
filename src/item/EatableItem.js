@@ -76,7 +76,7 @@ export default class EatableItem extends EditorItem {
             .to({
                 y: this.sprite.y - Config.eatItemAnimation.yOffset,
                 alpha: 0
-            }, Config.eatItemAnimation.duration)
+            }, Config.eatItemAnimation.duration / this.gameMgr.stepSpeed)
             .easing(TWEEN.Easing.Quadratic.Out)
             .onComplete(() => {
                 this.sprite.visible = false;

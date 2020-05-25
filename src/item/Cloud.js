@@ -30,7 +30,7 @@ export default class Cloud {
         const scaleY = this.config.props.scaleY;
         this.animation.scale.set(scaleX, scaleY);
         this.animation.position.set(...this.itemConfig.animationPos);
-        this.animation.animationSpeed = this.itemConfig.animationSpeed;
+        this.animation.animationSpeed = this.itemConfig.animationSpeed * this.gameMgr.stepSpeed;
         this.animation.play();
         const texture = this.animation.textures[0];
         const x = this.config.props.x + texture.width / 2 * scaleX;
@@ -88,5 +88,9 @@ export default class Cloud {
 
     getRightBorderX() {
         return this.sprite.x + (1 - this.animation.anchor.x) * this.animation.width * this.animation.scale.x;
+    }
+
+    changeSpeed(speed) {
+        this.animation.animationSpeed = this.itemConfig.animationSpeed * speed;
     }
 }

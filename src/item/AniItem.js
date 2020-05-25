@@ -10,7 +10,7 @@ export default class AniItem extends Item {
         this.sprite = new AnimatedSprite(this.frames);
         this.sprite.position.set(this.config.props.x, this.config.props.y);
         this.sprite.scale.set(this.config.props.scaleX, this.config.props.scaleY);
-        this.sprite.animationSpeed = this.animationSpeed;
+        this.sprite.animationSpeed = this.animationSpeed * this.gameMgr.stepSpeed;
         this.sprite.play();
 
         let body = this.world.createBody();
@@ -25,5 +25,9 @@ export default class AniItem extends Item {
         body.setPosition(GameUtils.renderPos2PhysicsPos(this.config.props));
         this.type = GameUtils.getItemType(this.config);
         body.setUserData(this);
+    }
+
+    changeSpeed(speed) {
+        this.sprite.animationSpeed = this.animationSpeed * speed;
     }
 }
