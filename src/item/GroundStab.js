@@ -5,7 +5,8 @@ import {Polygon, Vec2} from "../libs/planck-wrapper";
 import Utils from "../mgr/Utils";
 
 export default class GroundStab {
-    constructor(parent, world, config,) {
+    constructor(parent, world, config, gameMgr) {
+        this.gameMgr = gameMgr;
         this.parent = parent;
         this.world = world;
 
@@ -34,7 +35,7 @@ export default class GroundStab {
 
     update() {
         let oldFrameIndex = Math.floor(this.frameIndex * Config.item.groundStab.animationSpeed);
-        this.frameIndex++;
+        this.frameIndex += this.gameMgr.stepSpeed;
         let newFrameIndex = Math.floor(this.frameIndex * Config.item.groundStab.animationSpeed);
         if (oldFrameIndex !== newFrameIndex) {
             if (this.frames[newFrameIndex] === undefined) {

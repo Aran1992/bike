@@ -6,7 +6,8 @@ function get(v, d) {
 }
 
 export default class BaseEffect {
-    constructor(effectPath, animationEndCallback) {
+    constructor(effectPath, animationEndCallback, gameMgr) {
+        this.gameMgr = gameMgr;
         this.animationEndCallback = animationEndCallback;
 
         let effectData = resources[effectPath].data;
@@ -38,7 +39,7 @@ export default class BaseEffect {
 
     update() {
         if (this.sprite.textures) {
-            this.sprite.textureIndex++;
+            this.sprite.textureIndex += this.gameMgr.stepSpeed;
             let index = Math.floor(this.sprite.textureIndex / this.sprite.interval);
             if (this.sprite.textures[index] === undefined) {
                 this.sprite.textureIndex = 0;

@@ -227,18 +227,20 @@ export default class Bike {
             this.startEffect(this.eatEffect);
             delete this.eatEffect;
         }
-        this.frameIndex++;
+        this.frameIndex += this.gameScene.stepSpeed;
         if (this.frameIndex >= this.frames.length) {
             this.frameIndex = 0;
         }
-        this.bikeAnimSprite.texture = this.frames[this.frameIndex];
+        this.bikeAnimSprite.texture = this.frames[Math.floor(this.frameIndex)];
         let pp = this.bikeBody.getPosition();
         let rp = GameUtils.physicsPos2renderPos(pp);
         this.bikeOutterContainer.x = rp.x;
         this.bikeOutterContainer.y = rp.y;
         if (!this.isDead && !this.jumping) {
             let velocity = this.bikeBody.getLinearVelocity();
-            this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
+            if (Config.bikeRotateByMoveDirection) {
+                this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
+            }
         }
         if (Utils.calcPointDistance(this.bikeBody.getPosition(), this.gameScene.bikeBody.getPosition()) < Config.bikeRadius * 2) {
             this.bikeOutterContainer.alpha = Config.enemy.contactPlayerAlpha;
@@ -392,7 +394,7 @@ export default class Bike {
                 let effect = new BikeEffect(this, config.userUsedEffectPath, () => {
                     Utils.removeItemFromArray(this.effectList, effect);
                     effect.destroy();
-                });
+                }, this.gameScene);
                 this.effectList.push(effect);
             }
         }
@@ -476,8 +478,8 @@ export default class Bike {
     jump() {
         if (this.hasEffect("SpiderWeb")) {
             this.bikeBody.applyLinearImpulse(Vec2(0, Config.effect.SpiderWeb.jumpForce), this.bikeBody.getPosition());
-            this.spiderWebRemainBreakTimes--;
-            if (this.spiderWebRemainBreakTimes === 0) {
+            this.spiderWebRemainBreakTimes -= this.gameScene.stepSpeed;
+            if (this.spiderWebRemainBreakTimes <= 0) {
                 delete this.effectRemainFrame.SpiderWeb;
                 if (this.effectTable.SpiderWeb.end) {
                     this.effectTable.SpiderWeb.end();
@@ -556,13 +558,13 @@ export default class Bike {
             }
             let config = Config.effect[type];
             if (config.bearerBuffEffectPath) {
-                this.durationEffectTable[type] = new BikeEffect(this, config.bearerBuffEffectPath);
+                this.durationEffectTable[type] = new BikeEffect(this, config.bearerBuffEffectPath, undefined, this.gameScene);
             }
             if (config.bearerSufferedEffectPath) {
                 let effect = new BikeEffect(this, config.bearerSufferedEffectPath, () => {
                     effect.destroy();
                     Utils.removeItemFromArray(this.effectList, effect);
-                });
+                }, this.gameScene);
                 this.effectList.push(effect);
             }
             if (config.buffIconImagePath) {
@@ -575,8 +577,8 @@ export default class Bike {
     updateEffect() {
         for (let type in this.effectRemainFrame) {
             if (this.effectRemainFrame.hasOwnProperty(type)) {
-                this.effectRemainFrame[type]--;
-                if (this.effectRemainFrame[type] === 0) {
+                this.effectRemainFrame[type] -= this.gameScene.stepSpeed;
+                if (this.effectRemainFrame[type] <= 0) {
                     delete this.effectRemainFrame[type];
                     if (this.effectTable[type] && this.effectTable[type].end) {
                         this.effectTable[type].end();
