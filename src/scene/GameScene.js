@@ -750,9 +750,7 @@ export default class GameScene extends Scene {
                 this.eatEffect = type;
             }
         }
-        if (bulletTimeValue) {
-            this.addBulletTime(bulletTimeValue);
-        }
+        this.addBulletTime(5);
     }
 
     createBottomMask() {
@@ -2192,7 +2190,7 @@ export default class GameScene extends Scene {
     // 初始化的时候
     initBulletTime() {
         this.createBulletTimeFullEffect();
-        this.onClick(this.ui.bulletTimeBtn, this.onClickBulletTimeBtn.bind(this));
+        this.onClick(this.ui.bulletTimeBtn, this.onClickBulletTimeBtn.bind(this), true);
         this.bulletTimeMask = new Graphics();
         this.ui.bulletTimeEnough.mask = this.bulletTimeMask;
         this.ui.bulletTimeLack.mask = this.bulletTimeMask;
@@ -2223,8 +2221,10 @@ export default class GameScene extends Scene {
 
     onClickBulletTimeBtn() {
         if (this.stepSpeed === 1) {
-            this.updateBulletTime(this.bulletTime - Config.bulletTime.startUpCostValue);
-            this.enterBulletTime();
+            if (this.bulletTime >= Config.bulletTime.usableMinValue) {
+                this.updateBulletTime(this.bulletTime - Config.bulletTime.startUpCostValue);
+                this.enterBulletTime();
+            }
         } else {
             this.leaveBulletTime();
         }
@@ -2244,11 +2244,9 @@ export default class GameScene extends Scene {
         if (this.bulletTime >= Config.bulletTime.usableMinValue) {
             this.ui.bulletTimeLack.visible = false;
             this.ui.bulletTimeEnough.visible = true;
-            this.ui.bulletTimeBtn.interactive = true;
         } else {
             this.ui.bulletTimeEnough.visible = false;
             this.ui.bulletTimeLack.visible = true;
-            this.ui.bulletTimeBtn.interactive = false;
         }
         this.bulletTimeMask.clear();
         this.bulletTimeMask.lineStyle(40);
