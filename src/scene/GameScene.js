@@ -7,6 +7,7 @@ import DataMgr from "../mgr/DataMgr";
 import Scene from "./Scene";
 import {Circle, Vec2, World} from "../libs/planck-wrapper";
 import {
+    AnimatedSprite,
     Container,
     Emitter,
     Graphics,
@@ -130,14 +131,16 @@ export default class GameScene extends Scene {
         this.stepSpeed = 1;
 
         if (this.ui.enterBulletTime) {
-            this.onClick(this.ui.enterBulletTime, this.onClickEnterBulletTime.bind(this));
+            this.onClick(this.ui.enterBulletTime, this.enterBulletTime.bind(this));
         }
         if (this.ui.leaveBulletTime) {
-            this.onClick(this.ui.leaveBulletTime, this.onClickLeaveBulletTime.bind(this));
+            this.onClick(this.ui.leaveBulletTime, this.leaveBulletTime.bind(this));
         }
+
+        this.initBulletTime();
     }
 
-    onClickEnterBulletTime() {
+    enterBulletTime() {
         // todo 速度应该是剔除了 加速减速道具
         const velocity = this.player.velocity.basicValue;
         let percent = Config.bulletTimeTargetVelocity / velocity;
@@ -154,7 +157,7 @@ export default class GameScene extends Scene {
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
     }
 
-    onClickLeaveBulletTime() {
+    leaveBulletTime() {
         this.stepSpeed = 1;
         MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
@@ -211,6 +214,8 @@ export default class GameScene extends Scene {
         this.initEnvironment();
 
         this.rewards = DataMgr.get(this.rewardType);
+
+        this.resetBulletTime();
 
         App.showScene("LoadingScene", this.getBikeID());
         App.loadResources(this.getResPathList(), () => {
@@ -648,17 +653,17 @@ export default class GameScene extends Scene {
                 break;
             }
             case "ArrowLeft": {
-                this.onClickEnterBulletTime();
+                this.enterBulletTime();
                 break;
             }
             case "ArrowRight": {
-                this.onClickLeaveBulletTime();
+                this.leaveBulletTime();
                 break;
             }
         }
     }
 
-    onAteItem(type, effect, texture, value) {
+    onAteItem(type, effect, texture, value, bulletTimeValue) {
         switch (type) {
             case "PortableItem": {
                 this.showPortableItem(effect, texture);
@@ -694,6 +699,9 @@ export default class GameScene extends Scene {
                 }
                 this.eatEffect = type;
             }
+        }
+        if (bulletTimeValue) {
+            this.updateBulletTime(this.bulletTime + bulletTimeValue);
         }
     }
 
@@ -1083,6 +1091,10 @@ export default class GameScene extends Scene {
             let newX = this.bikeBody.getPosition().x;
             this.distance += newX - oldX;
             this.ui.distanceText.text = Math.floor(this.distance) + "m";
+            if (this.distance > this.nextBulletDistanceIndex * Config.bulletTime.addValueDistance) {
+                this.addBulletTime(Config.bulletTime.addValuePerDistance);
+                this.nextBulletDistanceIndex++;
+            }
         }
 
         if (RunOption.showBikeState) {
@@ -1100,6 +1112,10 @@ export default class GameScene extends Scene {
 
         if (this.gaSprite) {
             this.onGuideAnimation();
+        }
+
+        if (this.stepSpeed !== 1) {
+            this.reduceBulletTimeValue();
         }
     }
 
@@ -1478,6 +1494,7 @@ export default class GameScene extends Scene {
     }
 
     onDead() {
+        this.leaveBulletTime();
         MusicMgr.playSound(Config.soundPath.die);
         this.gameStatus = "end";
         let pos = this.bikeBody.getPosition();
@@ -2123,15 +2140,80 @@ export default class GameScene extends Scene {
 
     // 初始化的时候
     initBulletTime() {
+        this.createBulletTimeFullEffect();
         this.onClick(this.ui.bulletTimeBtn, this.onClickBulletTimeBtn.bind(this));
-        this.bulletTime = 0;
-        this.bulletTimeFillMask = new Graphics();
-        this.bulletTimeFillMask.beginFill();
-        this.ui.bulletTimeFill.mask = this.bulletTimeFillMask;
+        this.bulletTimeMask = new Graphics();
+        this.ui.bulletTimeEnough.mask = this.bulletTimeMask;
+        this.ui.bulletTimeLack.mask = this.bulletTimeMask;
+        this.updateBulletTime(0);
+    }
+
+    createBulletTimeFullEffect() {
+        const texture1 = Texture.from("myLaya/laya/assets/images/bullet-time-full-effect-1.png");
+        const texture2 = Texture.from("myLaya/laya/assets/images/bullet-time-full-effect-2.png");
+        this.bulletTimeFullEffect = new AnimatedSprite([texture1, texture2]);
+        this.bulletTimeFullEffect.anchor.set(0.5, 0.5);
+        this.bulletTimeFullEffect.position.set(102, 28);
+        this.ui.bulletTimeBtn.addChild(this.bulletTimeFullEffect);
+        this.bulletTimeFullEffect.play();
     }
 
     onClickBulletTimeBtn() {
+        if (this.stepSpeed === 1) {
+            this.updateBulletTime(this.bulletTime - Config.bulletTime.startUpCostValue);
+            this.enterBulletTime();
+        } else {
+            this.leaveBulletTime();
+        }
+    }
 
+    updateBulletTime(time) {
+        const maxValue = DataMgr.getBulletTimeMaxValue();
+        if (time >= maxValue) {
+            time = maxValue;
+        } else if (time < 0) {
+            time = 0;
+        }
+        if (time === this.bulletTime) {
+            return;
+        }
+        this.bulletTime = time;
+        if (this.bulletTime >= Config.bulletTime.usableMinValue) {
+            this.ui.bulletTimeLack.visible = false;
+            this.ui.bulletTimeEnough.visible = true;
+            this.ui.bulletTimeBtn.interactive = true;
+        } else {
+            this.ui.bulletTimeEnough.visible = false;
+            this.ui.bulletTimeLack.visible = true;
+            this.ui.bulletTimeBtn.interactive = false;
+        }
+        this.bulletTimeMask.clear();
+        this.bulletTimeMask.lineStyle(40);
+        const bounds = this.ui.bulletTimeBtn.getBounds();
+        const percent = this.bulletTime / maxValue;
+        const base = Math.PI / 2 * 3;
+        this.bulletTimeMask.arc(198 / 2 + bounds.x, 204 / 2 + bounds.y, 70, base - Math.PI * 2 * percent, base);
+        this.ui.bulletTimeValue.text = Math.floor(this.bulletTime);
+        this.bulletTimeFullEffect.visible = percent === 1;
+    }
+
+    reduceBulletTimeValue() {
+        this.updateBulletTime(this.bulletTime - Config.bulletTime.reduceValuePerSecond / Config.fps);
+        if (this.bulletTime <= 0) {
+            this.leaveBulletTime();
+        }
+    }
+
+    resetBulletTime() {
+        this.nextBulletDistanceIndex = 1;
+        this.updateBulletTime(0);
+        this.leaveBulletTime();
+    }
+
+    addBulletTime(value) {
+        if (value) {
+            this.updateBulletTime(this.bulletTime + value);
+        }
     }
 }
 

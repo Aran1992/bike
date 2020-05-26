@@ -41,9 +41,9 @@ export default class EatableItem extends EditorItem {
                     if (this.config.effect === "Random") {
                         let effect = this.gameMgr.randomEffect(this.gameMgr);
                         let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
-                        EventMgr.dispatchEvent("AteItem", "PortableItem", effect, texture);
+                        EventMgr.dispatchEvent("AteItem", "PortableItem", effect, texture, this.config.bulletTimeValue);
                     } else {
-                        EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture);
+                        EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture, this.config.bulletTimeValue);
                     }
                     this.playEatAnimation();
                 }
@@ -60,7 +60,7 @@ export default class EatableItem extends EditorItem {
         } else {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible && !this.animation) {
-                    EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value);
+                    EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value, this.config.bulletTimeValue);
                     this.playEatAnimation();
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {

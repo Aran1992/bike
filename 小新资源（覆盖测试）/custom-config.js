@@ -6201,6 +6201,10 @@ Config.item = {
                 upDownCoefficient: 10,
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0.1,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 5,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 5,
             },
             // 地面固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10000: {
@@ -6821,6 +6825,8 @@ Config.item = {
                 attractedByMagnet: 1,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 5,
             },
             // 5金币
             55555: {
@@ -11337,5 +11343,23 @@ Config.bulletTimeTargetVelocity = 10;
 // 次数越多，进入子弹时间之后就能够更精确的限制速度，但是相对的性能消耗越大，建议不超过10次
 // 修改该配置后，自行车的跳跃高度可能会发生变化，请进行检查，并且调整jumpForce为合适的值
 Config.stepTimesEachFrame = 10;
+
+// 子弹时间相关配置
+Config.bulletTime = {
+    // 最大值
+    maxValue: [
+        1000
+    ],
+    // 可以使用的最小值
+    usableMinValue: 400,
+    // 每次启动消耗的值
+    startUpCostValue: 100,
+    // 子弹时间内每秒消耗的值
+    reduceValuePerSecond: 10,
+    // 每多少米里程增加一定子弹时间
+    addValueDistance: 100,
+    // 每多少里程增加子弹时间值
+    addValuePerDistance: 100,
+};
 
 export default Config;
