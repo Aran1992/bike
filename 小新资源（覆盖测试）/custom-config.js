@@ -6202,9 +6202,9 @@ Config.item = {
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0.1,
                 // 被踩获得的子弹时间值
-                bulletTimeValueTrampled: 5,
+                bulletTimeValueTrampled: 1,
                 // 被顶获得的子弹时间值
-                bulletTimeValueJacked: 5,
+                bulletTimeValueJacked: 2,
             },
             // 地面固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10000: {
@@ -6243,9 +6243,9 @@ Config.item = {
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
                 // 被踩获得的子弹时间值
-                bulletTimeValueTrampled: 5,
+                bulletTimeValueTrampled: 3,
                 // 被顶获得的子弹时间值
-                bulletTimeValueJacked: 5,
+                bulletTimeValueJacked: 4,
             },
             // 浮空固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10100: {
@@ -6286,7 +6286,7 @@ Config.item = {
                 // 被踩获得的子弹时间值
                 bulletTimeValueTrampled: 5,
                 // 被顶获得的子弹时间值
-                bulletTimeValueJacked: 5,
+                bulletTimeValueJacked: 6,
             },
             // 浮空移动的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10110: {
@@ -6325,9 +6325,9 @@ Config.item = {
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
                 // 被踩获得的子弹时间值
-                bulletTimeValueTrampled: 5,
+                bulletTimeValueTrampled: 7,
                 // 被顶获得的子弹时间值
-                bulletTimeValueJacked: 5,
+                bulletTimeValueJacked: 8,
             },
         }
     },
@@ -6838,7 +6838,7 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 5,
+                bulletTimeValue: 1,
             },
             // 5金币
             55555: {
@@ -6850,7 +6850,7 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 5,
+                bulletTimeValue: 2,
             },
             // 星星
             333: {
@@ -6858,7 +6858,7 @@ Config.item = {
                 effect: "Star",
                 value: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 5,
+                bulletTimeValue: 3,
             },
             // 经验
             444: {
@@ -6870,7 +6870,7 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 5,
+                bulletTimeValue: 4,
             },
             // 经验
             2000: {
@@ -7181,8 +7181,6 @@ Config.item = {
                 animationName: "Random",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
-                // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 5,
             },
         }
     },
@@ -11384,10 +11382,10 @@ Config.bulletTime = {
     addValuePerDistance: 100,
     // 子弹时间胶带效果图片
     filmImagePath: "myLaya/laya/assets/images/bullet-time-film.png",
-    // 子弹时间胶带效果图片移动速度
-    filmImageMoveVelocity: 120,
-    // 胶带出现/消失的时长（单位：毫秒）
-    filmImageAppearDuration: 1000,
+    // 子弹时间胶带效果图片移动速度（数值越大，图片移动的速度越快）
+    filmImageMoveVelocity: 400,
+    // 胶带出现/消失的时长（单位：毫秒）（数值越小，出现/消失的速度越快）
+    filmImageAppearDuration: 200,
 };
 
 export default Config;
