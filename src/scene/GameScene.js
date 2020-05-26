@@ -2199,7 +2199,6 @@ export default class GameScene extends Scene {
         }
         this.bulletTimeFilms[0].container.y = -this.bulletTimeFilms[0].before.height;
         this.bulletTimeFilms[1].container.y = App.sceneHeight;
-        debugger;
     }
 
     createBulletTimeFullEffect() {
