@@ -143,6 +143,9 @@ export default class GameScene extends Scene {
     }
 
     enterBulletTime() {
+        if (this.stepSpeed !== 1) {
+            return;
+        }
         // todo 速度应该是剔除了 加速减速道具
         const velocity = this.player.velocity.basicValue;
         let percent = Config.bulletTimeTargetVelocity / velocity;
@@ -155,14 +158,21 @@ export default class GameScene extends Scene {
             percent = Math.floor(percent / base) * base;
         }
         this.stepSpeed = percent;
-        MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        if (MusicMgr.bgmSource) {
+            MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        }
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(true);
     }
 
     leaveBulletTime() {
+        if (this.stepSpeed === 1) {
+            return;
+        }
         this.stepSpeed = 1;
-        MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        if (MusicMgr.bgmSource) {
+            MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        }
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(false);
     }
@@ -253,8 +263,6 @@ export default class GameScene extends Scene {
         this.initEnvironment();
 
         this.rewards = DataMgr.get(this.rewardType);
-
-        this.resetBulletTime();
 
         App.showScene("LoadingScene", this.getBikeID());
         App.loadResources(this.getResPathList(), () => {
@@ -388,6 +396,8 @@ export default class GameScene extends Scene {
 
     onLoadedGameRes() {
         App.hideScene("LoadingScene");
+
+        this.resetBulletTime();
 
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
@@ -2258,9 +2268,15 @@ export default class GameScene extends Scene {
     }
 
     resetBulletTime() {
+        this.bulletTimeFilms.forEach((film, index) => {
+            if (index === 0) {
+                film.container.y = -film.before.height;
+            } else {
+                film.container.y = App.sceneHeight;
+            }
+        });
         this.nextBulletDistanceIndex = 1;
         this.updateBulletTime(0);
-        this.leaveBulletTime();
     }
 
     addBulletTime(value) {
