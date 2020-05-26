@@ -530,7 +530,7 @@ class DataMgr_ {
     }
 
     getBulletTimeMaxValue() {
-        const list = Config.upgradeBike.playerLevelLimitTimes;
+        const list = Config.bulletTime.maxValue;
         const max = Utils.getLast(list);
         const level = DataMgr.getPlayerLevel().level;
         const cur = list[level - 1];

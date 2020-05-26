@@ -11360,6 +11360,12 @@ Config.bulletTime = {
     addValueDistance: 100,
     // 每多少里程增加子弹时间值
     addValuePerDistance: 100,
+    // 子弹时间胶带效果图片
+    filmImagePath: "myLaya/laya/assets/images/bullet-time-film.png",
+    // 子弹时间胶带效果图片移动速度
+    filmImageMoveVelocity: 120,
+    // 胶带出现/消失的时长（单位：毫秒）
+    filmImageAppearDuration: 1000,
 };
 
 export default Config;

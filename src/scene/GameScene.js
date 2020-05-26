@@ -39,6 +39,8 @@ import SceneHelper from "../mgr/SceneHelper";
 import Bird from "../item/Bird";
 import Cloud from "../item/Cloud";
 import Spring from "../item/Spring";
+import Scroll from "../ui/Scroll";
+import TWEEN from "@tweenjs/tween.js";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -155,12 +157,49 @@ export default class GameScene extends Scene {
         this.stepSpeed = percent;
         MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
+        this.playBulletTimeFilm(true);
     }
 
     leaveBulletTime() {
         this.stepSpeed = 1;
         MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
+        this.playBulletTimeFilm(false);
+    }
+
+    playBulletTimeFilm(enter) {
+        if (this.filmAnimation) {
+            this.filmAnimation.stop();
+        }
+        let start, end;
+        if (enter) {
+            start = 0;
+            end = this.bulletTimeFilms[0].before.height;
+        } else {
+            end = 0;
+            start = this.bulletTimeFilms[0].before.height;
+        }
+        this.bulletTimeFilms.forEach((film, index) => {
+            if (index === 0) {
+                film.container.y = -film.before.height + start;
+            } else {
+                film.container.y = App.sceneHeight - start;
+            }
+        });
+        const obj = {y: start};
+        this.filmAnimation = new TWEEN.Tween(obj)
+            .to({y: end}, Config.bulletTime.filmImageAppearDuration)
+            .easing(TWEEN.Easing.Quadratic.Out)
+            .onUpdate(() => {
+                this.bulletTimeFilms.forEach((film, index) => {
+                    if (index === 0) {
+                        film.container.y = -film.before.height + obj.y;
+                    } else {
+                        film.container.y = App.sceneHeight - obj.y;
+                    }
+                });
+            })
+            .start(performance.now());
     }
 
     onShow() {
@@ -314,6 +353,7 @@ export default class GameScene extends Scene {
             this.bgmPath,
             bca,
             bsa,
+            Config.bulletTime.filmImagePath
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.item.bird.table).map(data => data.animationJsonPath))
@@ -1116,6 +1156,7 @@ export default class GameScene extends Scene {
 
         if (this.stepSpeed !== 1) {
             this.reduceBulletTimeValue();
+            this.bulletTimeFilms.forEach(film => film.onFrame());
         }
     }
 
@@ -2146,6 +2187,19 @@ export default class GameScene extends Scene {
         this.ui.bulletTimeEnough.mask = this.bulletTimeMask;
         this.ui.bulletTimeLack.mask = this.bulletTimeMask;
         this.updateBulletTime(0);
+        this.createBulletTimeFilm();
+    }
+
+    createBulletTimeFilm() {
+        this.bulletTimeFilms = [];
+        for (let i = 0; i < 2; i++) {
+            const film = new Scroll(Config.bulletTime.filmImagePath, App.sceneWidth, Config.bulletTime.filmImageMoveVelocity);
+            this.bulletTimeFilms.push(film);
+            this.addChildAt(film.container, 2);
+        }
+        this.bulletTimeFilms[0].container.y = -this.bulletTimeFilms[0].before.height;
+        this.bulletTimeFilms[1].container.y = App.sceneHeight;
+        debugger;
     }
 
     createBulletTimeFullEffect() {
