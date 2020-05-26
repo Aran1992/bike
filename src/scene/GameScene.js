@@ -142,76 +142,6 @@ export default class GameScene extends Scene {
         this.initBulletTime();
     }
 
-    enterBulletTime() {
-        if (this.stepSpeed !== 1) {
-            return;
-        }
-        // todo 速度应该是剔除了 加速减速道具
-        const velocity = this.player.velocity.basicValue;
-        let percent = Config.bulletTimeTargetVelocity / velocity;
-        let base = 1 / Config.stepTimesEachFrame;
-        if (percent > 1) {
-            percent = 1;
-        } else if (percent < base) {
-            percent = base;
-        } else {
-            percent = Math.floor(percent / base) * base;
-        }
-        this.stepSpeed = percent;
-        if (MusicMgr.bgmSource) {
-            MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
-        }
-        this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
-        this.playBulletTimeFilm(true);
-    }
-
-    leaveBulletTime() {
-        if (this.stepSpeed === 1) {
-            return;
-        }
-        this.stepSpeed = 1;
-        if (MusicMgr.bgmSource) {
-            MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
-        }
-        this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
-        this.playBulletTimeFilm(false);
-    }
-
-    playBulletTimeFilm(enter) {
-        if (this.filmAnimation) {
-            this.filmAnimation.stop();
-        }
-        let start, end;
-        if (enter) {
-            start = 0;
-            end = this.bulletTimeFilms[0].before.height;
-        } else {
-            end = 0;
-            start = this.bulletTimeFilms[0].before.height;
-        }
-        this.bulletTimeFilms.forEach((film, index) => {
-            if (index === 0) {
-                film.container.y = -film.before.height + start;
-            } else {
-                film.container.y = App.sceneHeight - start;
-            }
-        });
-        const obj = {y: start};
-        this.filmAnimation = new TWEEN.Tween(obj)
-            .to({y: end}, Config.bulletTime.filmImageAppearDuration)
-            .easing(TWEEN.Easing.Quadratic.Out)
-            .onUpdate(() => {
-                this.bulletTimeFilms.forEach((film, index) => {
-                    if (index === 0) {
-                        film.container.y = -film.before.height + obj.y;
-                    } else {
-                        film.container.y = App.sceneHeight - obj.y;
-                    }
-                });
-            })
-            .start(performance.now());
-    }
-
     onShow() {
         this.doubleReward = false;
         this.rebornTimes = 0;
@@ -1166,6 +1096,7 @@ export default class GameScene extends Scene {
 
         if (this.stepSpeed !== 1) {
             this.reduceBulletTimeValue();
+            this.updateBulletTimeLines();
             this.bulletTimeFilms.forEach(film => film.onFrame());
         }
     }
@@ -2198,6 +2129,7 @@ export default class GameScene extends Scene {
         this.ui.bulletTimeLack.mask = this.bulletTimeMask;
         this.updateBulletTime(0);
         this.createBulletTimeFilm();
+        this.createBulletTimeLine();
     }
 
     createBulletTimeFilm() {
@@ -2285,6 +2217,100 @@ export default class GameScene extends Scene {
                 this.updateBulletTime(this.bulletTime + value);
             }
         }
+    }
+
+    enterBulletTime() {
+        if (this.stepSpeed !== 1) {
+            return;
+        }
+        // todo 速度应该是剔除了 加速减速道具
+        const velocity = this.player.velocity.basicValue;
+        let percent = Config.bulletTimeTargetVelocity / velocity;
+        let base = 1 / Config.stepTimesEachFrame;
+        if (percent > 1) {
+            percent = 1;
+        } else if (percent < base) {
+            percent = base;
+        } else {
+            percent = Math.floor(percent / base) * base;
+        }
+        this.stepSpeed = percent;
+        if (MusicMgr.bgmSource) {
+            MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        }
+        this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
+        this.playBulletTimeFilm(true);
+        // 随机创建几个
+        const number = Math.floor(Math.random() * 5) + 1;
+        this.bulletTimeLines = [];
+        for (let i = 0; i < number; i++) {
+            this.bulletTimeLines.push(this.createBulletTimeLine());
+        }
+    }
+
+    leaveBulletTime() {
+        if (this.stepSpeed === 1) {
+            return;
+        }
+        this.stepSpeed = 1;
+        if (MusicMgr.bgmSource) {
+            MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
+        }
+        this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
+        this.playBulletTimeFilm(false);
+    }
+
+    playBulletTimeFilm(enter) {
+        if (this.filmAnimation) {
+            this.filmAnimation.stop();
+        }
+        let start, end;
+        if (enter) {
+            start = 0;
+            end = this.bulletTimeFilms[0].before.height;
+        } else {
+            end = 0;
+            start = this.bulletTimeFilms[0].before.height;
+        }
+        this.bulletTimeFilms.forEach((film, index) => {
+            if (index === 0) {
+                film.container.y = -film.before.height + start;
+            } else {
+                film.container.y = App.sceneHeight - start;
+            }
+        });
+        const obj = {y: start};
+        this.filmAnimation = new TWEEN.Tween(obj)
+            .to({y: end}, Config.bulletTime.filmImageAppearDuration)
+            .easing(TWEEN.Easing.Quadratic.Out)
+            .onUpdate(() => {
+                this.bulletTimeFilms.forEach((film, index) => {
+                    if (index === 0) {
+                        film.container.y = -film.before.height + obj.y;
+                    } else {
+                        film.container.y = App.sceneHeight - obj.y;
+                    }
+                });
+            })
+            .start(performance.now());
+    }
+
+    createBulletTimeLine() {
+        const textures = [];
+        for (let i = 1; i <= 4; i++) {
+            textures.push(Texture.from(`myLaya/laya/assets/images/bullet-time-line-${i}.png`));
+        }
+        const sprite = new AnimatedSprite(textures);
+        sprite.animationSpeed = 0.25;
+        sprite.play();
+        const height = Math.random() * App.sceneHeight;
+        sprite.position.set(App.sceneWidth, height);
+        this.addChild(sprite);
+        return sprite;
+    }
+
+    updateBulletTimeLines() {
+        this.bulletTimeLines.forEach(line => line.x--);
     }
 }
 
