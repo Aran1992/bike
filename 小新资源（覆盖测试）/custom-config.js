@@ -3137,7 +3137,7 @@ Config.bikeList = [
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
         "velocityPercent": 1,
-        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）
+        // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
         "bikeJumpExtraCountdown": [
@@ -6242,6 +6242,10 @@ Config.item = {
                 upDownCoefficient: 0,
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 5,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 5,
             },
             // 浮空固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10100: {
@@ -6279,8 +6283,12 @@ Config.item = {
                 upDownCoefficient: 0,
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 5,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 5,
             },
-            // 浮空固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            // 浮空移动的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10110: {
                 // 动画路径
                 animationJsonPath: "images/trap/enm06.json",
@@ -6316,6 +6324,10 @@ Config.item = {
                 upDownCoefficient: 0,
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 5,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 5,
             },
         }
     },
@@ -6806,8 +6818,8 @@ Config.item = {
                 bodyWidth: 100,
                 // 实际区域高度
                 bodyHeight: 70,
-                // 触碰到的时候的自行车竖直方向上的速度
-                contactBikeVelocity: 100,
+                // 触碰到的时候的自行车弹起竖直方向上的高度速度
+                contactBikeVelocity: 95,
                 // 出现音效
                 //appearSoundPath: "",
             },
@@ -6837,12 +6849,16 @@ Config.item = {
                 attractedByMagnet: 1,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 5,
             },
             // 星星
             333: {
                 portable: 0,
                 effect: "Star",
                 value: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 5,
             },
             // 经验
             444: {
@@ -6853,6 +6869,8 @@ Config.item = {
                 attractedByMagnet: 1,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 5,
             },
             // 经验
             2000: {
@@ -6863,6 +6881,8 @@ Config.item = {
                 attractedByMagnet: 1,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 5,
             },
             // 陷阱：减速
             1: {
@@ -7161,6 +7181,8 @@ Config.item = {
                 animationName: "Random",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 5,
             },
         }
     },
@@ -10189,7 +10211,7 @@ Config.gameLevelMode = {
             // 背景缩放系数
             bgScale: [1, 1],
             // 自行车速度（基础：20）
-            bikeVelocity: 20,
+            bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
@@ -10207,7 +10229,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Practice-1.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -11212,7 +11234,7 @@ Config.upgradeBike = {
     ],
 };
 
-// 吃道具表现
+// 关卡中吃道具时道具的表现
 Config.eatItemAnimation = {
     // 动画时长（单位：毫秒）
     duration: 200,
@@ -11348,14 +11370,14 @@ Config.stepTimesEachFrame = 10;
 Config.bulletTime = {
     // 最大值
     maxValue: [
-        1000
+        3000
     ],
     // 可以使用的最小值
     usableMinValue: 400,
     // 每次启动消耗的值
-    startUpCostValue: 100,
+    startUpCostValue: 200,
     // 子弹时间内每秒消耗的值
-    reduceValuePerSecond: 10,
+    reduceValuePerSecond: 50,
     // 每多少米里程增加一定子弹时间
     addValueDistance: 100,
     // 每多少里程增加子弹时间值
