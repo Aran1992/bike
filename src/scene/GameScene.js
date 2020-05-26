@@ -750,7 +750,9 @@ export default class GameScene extends Scene {
                 this.eatEffect = type;
             }
         }
-        this.addBulletTime(5);
+        if (bulletTimeValue) {
+            this.addBulletTime(bulletTimeValue);
+        }
     }
 
     createBottomMask() {
