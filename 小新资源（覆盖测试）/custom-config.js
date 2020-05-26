@@ -41,14 +41,12 @@ Config.maskHeight = 0;
 // // 底下的黑色蒙版的总高度
 // Config.maskHeight = 0;
 
-// 自行车速度（基础：20）
-Config.bikeVelocity = 20;
-
-// 重力（基础：-175）
+// 默认的自行车速度（基础：30）
+Config.bikeVelocity = 30;
+// 默认的重力（基础：-175）
 Config.gravity = -175;
-
-// 跳跃爆发力（基础：12800）
-Config.jumpForce = 12800;
+// 默认的跳跃爆发力（基础：250）
+Config.jumpForce = 250;
 
 // 默认的自行车移动图集，里面必须有bike和enemy动画
 Config.bikeCommonAnimation = "myLaya/laya/assets/animations/bike.json";
@@ -159,7 +157,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -243,7 +241,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -327,7 +325,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -411,7 +409,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -495,7 +493,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -579,7 +577,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -663,7 +661,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -747,7 +745,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -831,7 +829,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -915,7 +913,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -999,7 +997,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -1083,7 +1081,7 @@ Config.mapList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2195,7 +2193,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2267,7 +2265,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2339,7 +2337,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2411,7 +2409,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2483,7 +2481,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2555,7 +2553,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2627,7 +2625,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2699,7 +2697,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2771,7 +2769,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2843,7 +2841,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2915,7 +2913,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -2987,7 +2985,7 @@ Config.endlessMode.sceneList = [
         bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
-        // 跳跃爆发力（基础：12800）
+        // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -10212,7 +10210,7 @@ Config.gameLevelMode = {
             bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
-            // 跳跃爆发力（基础：12800）
+            // 跳跃爆发力（基础：250）
             jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -10276,7 +10274,7 @@ Config.gameLevelMode = {
             bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
-            // 跳跃爆发力（基础：12800）
+            // 跳跃爆发力（基础：250）
             jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -10340,7 +10338,7 @@ Config.gameLevelMode = {
             bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
-            // 跳跃爆发力（基础：12800）
+            // 跳跃爆发力（基础：250）
             jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -10404,7 +10402,7 @@ Config.gameLevelMode = {
             bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
-            // 跳跃爆发力（基础：12800）
+            // 跳跃爆发力（基础：250）
             jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -10468,7 +10466,7 @@ Config.gameLevelMode = {
             bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
-            // 跳跃爆发力（基础：12800）
+            // 跳跃爆发力（基础：250）
             jumpForce: 250,
             // BGM路径
             bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
@@ -10533,7 +10531,7 @@ Config.gameLevelMode = {
 //卡6            bikeVelocity: 30,
 //卡6            // 重力（基础：-175）
 //卡6            gravity: -175,
-//卡6            // 跳跃爆发力（基础：12800）
+//卡6            // 跳跃爆发力（基础：250）
 //卡6            jumpForce: 250,
 //卡6            // BGM路径
 //卡6            bgmPath: "myLaya/laya/assets/sounds/10_uoza.mp3",
@@ -10598,7 +10596,7 @@ Config.gameLevelMode = {
 //卡7            bikeVelocity: 30,
 //卡7            // 重力（基础：-175）
 //卡7            gravity: -175,
-//卡7            // 跳跃爆发力（基础：12800）
+//卡7            // 跳跃爆发力（基础：250）
 //卡7            jumpForce: 250,
 //卡7            // BGM路径
 //卡7            bgmPath: "myLaya/laya/assets/sounds/08_sengoku.mp3",
@@ -10663,7 +10661,7 @@ Config.gameLevelMode = {
 //卡8            bikeVelocity: 30,
 //卡8            // 重力（基础：-175）
 //卡8            gravity: -175,
-//卡8            // 跳跃爆发力（基础：12800）
+//卡8            // 跳跃爆发力（基础：250）
 //卡8            jumpForce: 250,
 //卡8            // BGM路径
 //卡8            bgmPath: "myLaya/laya/assets/sounds/BGM_103.mp3",
@@ -10728,7 +10726,7 @@ Config.gameLevelMode = {
 //卡9            bikeVelocity: 30,
 //卡9            // 重力（基础：-175）
 //卡9            gravity: -175,
-//卡9            // 跳跃爆发力（基础：12800）
+//卡9            // 跳跃爆发力（基础：250）
 //卡9            jumpForce: 250,
 //卡9            // BGM路径
 //卡9            bgmPath: "myLaya/laya/assets/sounds/BGM_105.mp3",
@@ -10793,7 +10791,7 @@ Config.gameLevelMode = {
 //卡10            bikeVelocity: 30,
 //卡10            // 重力（基础：-175）
 //卡10            gravity: -175,
-//卡10            // 跳跃爆发力（基础：12800）
+//卡10            // 跳跃爆发力（基础：250）
 //卡10            jumpForce: 250,
 //卡10            // BGM路径
 //卡10            bgmPath: "myLaya/laya/assets/sounds/BGM_101.mp3",
@@ -10858,7 +10856,7 @@ Config.gameLevelMode = {
 //卡11            bikeVelocity: 30,
 //卡11            // 重力（基础：-175）
 //卡11            gravity: -175,
-//卡11            // 跳跃爆发力（基础：12800）
+//卡11            // 跳跃爆发力（基础：250）
 //卡11            jumpForce: 250,
 //卡11            // BGM路径
 //卡11            bgmPath: "myLaya/laya/assets/sounds/02_jurassic.mp3",
@@ -10923,7 +10921,7 @@ Config.gameLevelMode = {
 //卡12            bikeVelocity: 30,
 //卡12            // 重力（基础：-175）
 //卡12            gravity: -175,
-//卡12            // 跳跃爆发力（基础：12800）
+//卡12            // 跳跃爆发力（基础：250）
 //卡12            jumpForce: 250,
 //卡12            // BGM路径
 //卡12            bgmPath: "myLaya/laya/assets/sounds/01_middle.mp3",
