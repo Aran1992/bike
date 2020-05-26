@@ -155,8 +155,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -239,8 +239,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -323,8 +323,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -407,8 +407,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -491,8 +491,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -575,8 +575,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -659,8 +659,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -743,8 +743,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -827,8 +827,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -911,8 +911,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -995,8 +995,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -1079,8 +1079,8 @@ Config.mapList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2191,8 +2191,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2263,8 +2263,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2335,8 +2335,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2407,8 +2407,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2479,8 +2479,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2551,8 +2551,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2623,8 +2623,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2695,8 +2695,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2767,8 +2767,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2839,8 +2839,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2911,8 +2911,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -2983,8 +2983,8 @@ Config.endlessMode.sceneList = [
         bgY: [0, 0],
         // 背景缩放系数
         bgScale: [1, 1],
-        // 自行车速度（基础：20）
-        bikeVelocity: 20,
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
         // 重力（基础：-175）
         gravity: -175,
         // 跳跃爆发力（基础：12800）
@@ -10208,7 +10208,7 @@ Config.gameLevelMode = {
             bgY: [0, 0],
             // 背景缩放系数
             bgScale: [1, 1],
-            // 自行车速度（基础：20）
+            // 自行车速度（基础：30）
             bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
@@ -10272,8 +10272,8 @@ Config.gameLevelMode = {
             bgY: [0, 0],
             // 背景缩放系数
             bgScale: [1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
+            // 自行车速度（基础：30）
+            bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
@@ -10336,8 +10336,8 @@ Config.gameLevelMode = {
             bgY: [0, 0],
             // 背景缩放系数
             bgScale: [1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
+            // 自行车速度（基础：30）
+            bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
@@ -10400,8 +10400,8 @@ Config.gameLevelMode = {
             bgY: [0, 0],
             // 背景缩放系数
             bgScale: [1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
+            // 自行车速度（基础：30）
+            bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
@@ -10464,8 +10464,8 @@ Config.gameLevelMode = {
             bgY: [0, 0],
             // 背景缩放系数
             bgScale: [1, 1],
-            // 自行车速度（基础：20）
-            bikeVelocity: 20,
+            // 自行车速度（基础：30）
+            bikeVelocity: 30,
             // 重力（基础：-175）
             gravity: -175,
             // 跳跃爆发力（基础：12800）
@@ -10529,8 +10529,8 @@ Config.gameLevelMode = {
 //卡6            bgY: [0, 0, 256],
 //卡6            // 背景缩放系数
 //卡6            bgScale: [1, 1, 1],
-//卡6            // 自行车速度（基础：20）
-//卡6            bikeVelocity: 20,
+//卡6            // 自行车速度（基础：30）
+//卡6            bikeVelocity: 30,
 //卡6            // 重力（基础：-175）
 //卡6            gravity: -175,
 //卡6            // 跳跃爆发力（基础：12800）
@@ -10594,8 +10594,8 @@ Config.gameLevelMode = {
 //卡7            bgY: [0, 0, 0],
 //卡7            // 背景缩放系数
 //卡7            bgScale: [1, 1, 1],
-//卡7            // 自行车速度（基础：20）
-//卡7            bikeVelocity: 20,
+//卡7            // 自行车速度（基础：30）
+//卡7            bikeVelocity: 30,
 //卡7            // 重力（基础：-175）
 //卡7            gravity: -175,
 //卡7            // 跳跃爆发力（基础：12800）
@@ -10659,8 +10659,8 @@ Config.gameLevelMode = {
 //卡8            bgY: [0, 0, 256],
 //卡8            // 背景缩放系数
 //卡8            bgScale: [1, 1, 1],
-//卡8            // 自行车速度（基础：20）
-//卡8            bikeVelocity: 20,
+//卡8            // 自行车速度（基础：30）
+//卡8            bikeVelocity: 30,
 //卡8            // 重力（基础：-175）
 //卡8            gravity: -175,
 //卡8            // 跳跃爆发力（基础：12800）
@@ -10724,8 +10724,8 @@ Config.gameLevelMode = {
 //卡9            bgY: [0, 128, 256],
 //卡9            // 背景缩放系数
 //卡9            bgScale: [1, 1, 1],
-//卡9            // 自行车速度（基础：20）
-//卡9            bikeVelocity: 20,
+//卡9            // 自行车速度（基础：30）
+//卡9            bikeVelocity: 30,
 //卡9            // 重力（基础：-175）
 //卡9            gravity: -175,
 //卡9            // 跳跃爆发力（基础：12800）
@@ -10789,8 +10789,8 @@ Config.gameLevelMode = {
 //卡10            bgY: [0, 128, 256],
 //卡10            // 背景缩放系数
 //卡10            bgScale: [1, 1, 1],
-//卡10            // 自行车速度（基础：20）
-//卡10            bikeVelocity: 20,
+//卡10            // 自行车速度（基础：30）
+//卡10            bikeVelocity: 30,
 //卡10            // 重力（基础：-175）
 //卡10            gravity: -175,
 //卡10            // 跳跃爆发力（基础：12800）
@@ -10854,8 +10854,8 @@ Config.gameLevelMode = {
 //卡11            bgY: [0, 128, 128],
 //卡11            // 背景缩放系数
 //卡11            bgScale: [1, 1, 1],
-//卡11            // 自行车速度（基础：20）
-//卡11            bikeVelocity: 20,
+//卡11            // 自行车速度（基础：30）
+//卡11            bikeVelocity: 30,
 //卡11            // 重力（基础：-175）
 //卡11            gravity: -175,
 //卡11            // 跳跃爆发力（基础：12800）
@@ -10919,8 +10919,8 @@ Config.gameLevelMode = {
 //卡12            bgY: [0, 128, 192],
 //卡12            // 背景缩放系数
 //卡12            bgScale: [1, 1, 1],
-//卡12            // 自行车速度（基础：20）
-//卡12            bikeVelocity: 20,
+//卡12            // 自行车速度（基础：30）
+//卡12            bikeVelocity: 30,
 //卡12            // 重力（基础：-175）
 //卡12            gravity: -175,
 //卡12            // 跳跃爆发力（基础：12800）
