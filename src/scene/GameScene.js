@@ -751,7 +751,7 @@ export default class GameScene extends Scene {
             }
         }
         if (bulletTimeValue) {
-            this.updateBulletTime(this.bulletTime + bulletTimeValue);
+            this.addBulletTime(bulletTimeValue);
         }
     }
 
@@ -2281,7 +2281,9 @@ export default class GameScene extends Scene {
 
     addBulletTime(value) {
         if (value) {
-            this.updateBulletTime(this.bulletTime + value);
+            if (this.stepSpeed === 1 || Config.bulletTime.addValueInBulletTime) {
+                this.updateBulletTime(this.bulletTime + value);
+            }
         }
     }
 }

@@ -11386,6 +11386,8 @@ Config.bulletTime = {
     filmImageMoveVelocity: 400,
     // 胶带出现/消失的时长（单位：毫秒）（数值越小，出现/消失的速度越快）
     filmImageAppearDuration: 200,
+    // 子弹时间内是否能够增加子弹时间值（0不加，1加）
+    addValueInBulletTime: 0,
 };
 
 export default Config;
