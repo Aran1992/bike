@@ -11400,6 +11400,25 @@ Config.bulletTime = {
     filmImageAppearDuration: 200,
     // 子弹时间内是否能够增加子弹时间值（0不加，1加）
     addValueInBulletTime: 0,
+    // 子弹时间速度线动画路径
+    lineAnimationPath: "myLaya/laya/assets/animations/bullet-time-line.json",
+    // 子弹时间速度线动画速度
+    lineAnimationSpeed: 0.25,
+    // 子弹时间速度线移动速度（数值越大，图片移动的速度越快）
+    // 由于镜头本身会移动，所以即使速度为零，速度线依然会移动
+    // 速度为负数为往右移动，为正数为往左移动
+    lineAnimationMoveVelocity: -6,
+    // 子弹时间速度线相关配置
+    line: {
+        // 屏幕上最少数量线
+        minCountInScreen: 2,
+        // 屏幕上最多数量线
+        maxCountInScreen: 5,
+        // 线离基准位置的最大偏差
+        randomOffset: 10,
+        // 每帧每条基准线上创建速度线的可能性
+        createLineRatePerFrame: 0.01,
+    }
 };
 
 export default Config;

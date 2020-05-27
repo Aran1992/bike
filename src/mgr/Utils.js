@@ -158,6 +158,14 @@ export default class Utils {
         return !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
     }
 
+    static intList(min, max) {
+        const list = [];
+        for (let i = min; i <= max; i++) {
+            list.push(i);
+        }
+        return list;
+    }
+
     static randomChoose(list) {
         let i = Math.floor(Math.random() * list.length);
         return list[i];
@@ -181,6 +189,10 @@ export default class Utils {
 
     static randomInRange(min, max) {
         return min + (max - min) * Math.random();
+    }
+
+    static randomIntInRange(min, max) {
+        return min + Math.floor((max - min + 1) * Math.random());
     }
 
     static copyProps(src, dst) {

@@ -2,7 +2,7 @@ import {Container, Sprite} from "../libs/pixi-wrapper";
 import Config from "../config/base-config";
 
 export default class Scroll {
-    constructor(imagePath, viewWidth,moveVelocity) {
+    constructor(imagePath, viewWidth, moveVelocity) {
         this.viewWidth = viewWidth;
         this.moveVelocity = moveVelocity;
         this.container = new Container();

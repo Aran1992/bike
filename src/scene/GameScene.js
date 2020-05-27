@@ -41,6 +41,7 @@ import Cloud from "../item/Cloud";
 import Spring from "../item/Spring";
 import Scroll from "../ui/Scroll";
 import TWEEN from "@tweenjs/tween.js";
+import BulletTimeLineMgr from "../mgr/BulletTimeLineMgr";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -291,7 +292,8 @@ export default class GameScene extends Scene {
             this.bgmPath,
             bca,
             bsa,
-            Config.bulletTime.filmImagePath
+            Config.bulletTime.filmImagePath,
+            Config.bulletTime.lineAnimationPath,
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.item.bird.table).map(data => data.animationJsonPath))
@@ -1096,8 +1098,8 @@ export default class GameScene extends Scene {
 
         if (this.stepSpeed !== 1) {
             this.reduceBulletTimeValue();
-            this.updateBulletTimeLines();
             this.bulletTimeFilms.forEach(film => film.onFrame());
+            this.bulletTimeLineMgr.update();
         }
     }
 
@@ -1575,6 +1577,12 @@ export default class GameScene extends Scene {
         DataMgr.add(DataMgr.rankDistance, distance);
         DataMgr.refreshPreparationRewards(this.rewardType);
         this.gameLoopFunc = this.pause.bind(this);
+    }
+
+    isItemOutSideOfViewLeft(item) {
+        if (item.getRightBorderX) {
+            return item.getRightBorderX() < -this.cameraContainer.x;
+        }
     }
 
     isItemXEnterView(item) {
@@ -2120,7 +2128,6 @@ export default class GameScene extends Scene {
         return jumpAnimation;
     }
 
-    // 初始化的时候
     initBulletTime() {
         this.createBulletTimeFullEffect();
         this.onClick(this.ui.bulletTimeBtn, this.onClickBulletTimeBtn.bind(this), true);
@@ -2129,7 +2136,7 @@ export default class GameScene extends Scene {
         this.ui.bulletTimeLack.mask = this.bulletTimeMask;
         this.updateBulletTime(0);
         this.createBulletTimeFilm();
-        this.createBulletTimeLine();
+        this.bulletTimeLineMgr = new BulletTimeLineMgr(this);
     }
 
     createBulletTimeFilm() {
@@ -2240,12 +2247,7 @@ export default class GameScene extends Scene {
         }
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(true);
-        // 随机创建几个
-        const number = Math.floor(Math.random() * 5) + 1;
-        this.bulletTimeLines = [];
-        for (let i = 0; i < number; i++) {
-            this.bulletTimeLines.push(this.createBulletTimeLine());
-        }
+        this.bulletTimeLineMgr.enterBulletTime();
     }
 
     leaveBulletTime() {
@@ -2258,6 +2260,7 @@ export default class GameScene extends Scene {
         }
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(false);
+        this.bulletTimeLineMgr.leaveBulletTime();
     }
 
     playBulletTimeFilm(enter) {
@@ -2293,24 +2296,6 @@ export default class GameScene extends Scene {
                 });
             })
             .start(performance.now());
-    }
-
-    createBulletTimeLine() {
-        const textures = [];
-        for (let i = 1; i <= 4; i++) {
-            textures.push(Texture.from(`myLaya/laya/assets/images/bullet-time-line-${i}.png`));
-        }
-        const sprite = new AnimatedSprite(textures);
-        sprite.animationSpeed = 0.25;
-        sprite.play();
-        const height = Math.random() * App.sceneHeight;
-        sprite.position.set(App.sceneWidth, height);
-        this.addChild(sprite);
-        return sprite;
-    }
-
-    updateBulletTimeLines() {
-        this.bulletTimeLines.forEach(line => line.x--);
     }
 }
 
