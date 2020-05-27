@@ -31,7 +31,7 @@ RemoveAll,,HomeScene.scene.json,清空数据,RemoveAll,全部リセット
 宠物摆放已经超过总上限${count}个了哟！",,
 骑士大人，这个宠物最多只能放出${count}个哟！,,HomeScene.scene.json,"玩家大人，
 每种宠物最多只能放出${count}个哟！",,
-主页加成,,MainScene.scene.json,"金币：${Coin}  积分：${Score}
+主页加成,,MainScene.scene.json,"钱币：${Coin}  积分：${Score}
 里程：${Distance}  经验：${Exp}",,
 TotalDistance,,RankScene.scene.json,累计里程,Total Distance,累計のマイレージ
 FarthestDistance,,RankScene.scene.json,最远里程,Farthest Distance,最長の距離
@@ -47,13 +47,13 @@ RestartAfterTime,,RankScene.scene.json,${time} 之后重新开始,Restart after 
 UnlockAllBike,,ShopScene.scene.json,解锁所有的造型,Unlock All Bike,
 UnlockAllEndlessScene,,ShopScene.scene.json,解锁所有的无尽旅程地图,Unlock All Endless Scene,
 Money2DCPresentDsc,,ShopScene.scene.json,"${money} 钱
-= ${diamond} 金玉 + ${coin} 金币","${money} Money
+= ${diamond} 金玉 + ${coin} 钱币","${money} Money
 = ${diamond} Diamond + ${coin} Gold Coins",
 Present,,ShopScene.scene.json,礼物,Present,
 Money,,ShopScene.scene.json,财宝,Money,
 Map,,ShopScene.scene.json,地图,Map,
 Diamond,,,金玉,Diamond,
-Coin,,,金币,Gold Coin,
+Coin,,,钱币,Gold Coin,
 DiamondIsNotEnough,,ShopScene.scene.json,金玉不足！,Diamond is not enough!,
 TotalDistanceReach,,ShopScene.scene.json,总里程达到 ${distance}m 可免费解锁哟,Total distance reached ${distance}m,
 Backgrounds,,HomeScene.scene.json,背景,Backgrounds,
@@ -68,11 +68,11 @@ ItemIsAbleToUnlock,,,报告玩家大人，您可以解锁新物品啦！,This it
 UnlockConditions,,,【解锁条件】,Unlock condition(s):,
 UnlockRewards,,,【解锁奖励】,Unlock Reward(s):,
 Would you like to cost the following items to unlock this item?,,,您是否想花费以下这些来解锁该物品？,Would you like to cost the following items to unlock this item?,
-Cost is not enough!,,,没有足够的金币或金玉！,Cost is not enough!,
+Cost is not enough!,,,没有足够的钱币或金玉！,Cost is not enough!,
 This item is locked.,,,该物品未解锁。,This item is locked.,
 该自行车未解锁,,,该造型未解锁,,
 没有足够的星星解锁该地图,,,没有足够的星星解锁该地图,,
-${0} Gold Coins,,,${0} 金币,${0} Gold Coins,
+${0} Gold Coins,,,${0} 钱币,${0} Gold Coins,
 ${0} Diamonds,,,${0} 金玉,${0} Diamonds,
 Need to unlock Map: ${0},              ,                                               ,需要解锁地图：${0}                                                                        ,Need to unlock Map: ${0},
 Total distance required to reach ${0}m,,,总里程需达 ${0}m,Total distance required to reach ${0}m,
@@ -107,7 +107,7 @@ quit the game no double reward,,,"确定退出游戏吗？
 双倍奖励还没领取哟！",,
 restart the game no double reward,,,"确定重新开始游戏吗？
 双倍奖励还没领取哟！",,
-Gold Coin is not enough!,,,金币不足！,Gold Coin is not enough!,
+Gold Coin is not enough!,,,钱币不足！,Gold Coin is not enough!,
 BikeDsc,,,"【 No.${index}  ${name} 】
 速度          ${speed}%
 跳跃力      ${jump}%
@@ -117,7 +117,7 @@ Jump      ${jump}%
 HighJump  ${highJump}
 Size      ${size}",
 LevelDsc2,,,等级          ${level},LV        ${level},
-BonusDsc,,,"金币          ${coin}
+BonusDsc,,,"钱币          ${coin}
 里程          ${distance}
 积分          ${score}
 经验          ${exp}","Gold Coin ${coin}
@@ -626,7 +626,7 @@ PetUnlockDescribe16,,,"恭喜玩家大人
 将宠物16解锁了",,
 TextMap-1-1-1,,,欢迎玩家大人来到教学关卡！请点击屏幕，跳跃吃星星哟。,,
 TextMap-1-2-1,,,玩家大人，拾取更多的经验，就能快速提升游戏等级哦 。,,
-TextMap-1-3-1,,,玩家大人，学完吃金币，就可以开始你的挑战之旅了。 ,,
+TextMap-1-3-1,,,玩家大人，学完吃钱币，就可以开始你的挑战之旅了。 ,,
 TextMap-1-4-1,,,玩家大人，接下来是2段跳跃练习，期待你的表演。 ,,
 TextMap-1-5-1,,,玩家大人，连续点击最多可以7段连跳哦，快来试试吧！ ,,
 TextMap-2-1-1,,,玩家大人，这个关卡开始会有陷进出现，就看你的表现了。 ,,
@@ -656,20 +656,20 @@ Help-11,,,继续跑跳吃经验。,,
 Help-12,,,别忘记吃星星哦。,,
 Help-13,,,正常奔跑就能吃到经验了，不需要高空跳跃哦。,,
 Help-20,,,恭喜玩家大人，通过第二个教学关卡。,,
-Help-21,,,点击画面，就能跳跃吃金币。,,
+Help-21,,,点击画面，就能跳跃吃钱币。,,
 Help-30,,,恭喜玩家大人，通过第三个教学关卡。,,
 Help-31,,,进行2段连跳才能吃到奖励哦。,,
-Help-32,,,一直连续跳跃才能吃光金币哦。,,
+Help-32,,,一直连续跳跃才能吃光钱币哦。,,
 Help-33,,,进行2段连跳，就能获得终点前最后一波丰厚的奖励哦。,,
 Help-41,,,请进行多段连跳，获得通关前最后一波丰厚奖励。,,
 Help-42,,,如何通关，就靠你自己领悟了。,,
 Help-51,,,第一个陷进出现了，可别掉下去摔死了哦。,,
-Help-52,,,橙色的金币是普通金币的5倍数哦。,,
+Help-52,,,橙色的钱币是普通钱币的5倍数哦。,,
 Help-61,,,加速道具，可以让你获得短暂加速的效果哦。,,
 Help-71,,,第一个陷进出现了，可别掉下去摔死了哦。,,
 Help-81,,,弹跳平台，你踩上去可以跳跃的很高。,,
 Help-91,,,多层地形，可以从下穿透跳跃到高处的。,,
-Help-101,,,磁铁道具，可以获得短暂自动吸取经验金币的效果。,,
+Help-101,,,磁铁道具，可以获得短暂自动吸取经验钱币的效果。,,
 Help-111,,,碰到小鸟会死，但是踩上去能自动获得跳跃效果。,,
 Help-121,,,无限跳跃，可以获得短暂无限跳跃的效果。,,
 Help-131,,,碰到蜘蛛网，跳跃3次就能挣脱哦。,,
