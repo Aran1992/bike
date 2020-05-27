@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":147,
-    "selecteID":150,
+    "selectedBox":1,
+    "selecteID":147,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -696,7 +696,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,matchRacetrack",
-            "props":{"y":1119,"x":217,"var":"matchRacetrack","skin":"images/racetrack.png","right":0,"bottom":0},
+            "props":{"var":"matchRacetrack","skin":"images/racetrack.png","scaleY":0.8,"scaleX":0.8,"right":150,"bottom":0},
             "nodeParent":1,
             "label":"matchRacetrack",
             "isOpen":true,
@@ -730,13 +730,14 @@
             "props":{"y":680,"x":0,"visible":false,"var":"guidePanel","right":0,"left":0,"height":600,"bottom":0},
             "nodeParent":1,
             "label":"guidePanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":100,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":320,"skin":"images/bg-382.png","sizeGrid":"50,50,50,50","left":330,"height":100,"bottom":5},
@@ -749,6 +750,7 @@
                     "compId":67,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/say-1.png","centerY":0,"centerX":0},
@@ -766,6 +768,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":320,"visible":true,"skin":"images/bg-381.png","sizeGrid":"50,50,50,50","left":5,"height":100,"bottom":5},
@@ -778,6 +781,7 @@
                     "compId":70,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"x":0,"skin":"images/english/say-2.png","centerY":0,"centerX":0},
@@ -830,13 +834,14 @@
             "props":{"var":"portableItemButton2","top":300,"skin":"images/bottom-item.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":20},
             "nodeParent":1,
             "label":"portableItemButton2",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":13,
             "child":[
                 {
+                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
                     "props":{"width":200,"top":-10,"right":-10,"name":"hitArea","height":140},
@@ -857,13 +862,14 @@
             "props":{"width":150,"var":"sealMask","top":155,"left":0,"height":280},
             "nodeParent":1,
             "label":"sealMask",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":54,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-item-close-2.png","left":15,"centerY":65},
@@ -878,6 +884,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bottom-item-close-1.png","left":15,"centerY":-75},
@@ -899,13 +906,14 @@
             "props":{"width":430,"var":"rebornPanel","top":100,"skin":"images/bg-391.png","height":240,"centerX":0},
             "nodeParent":1,
             "label":"rebornPanel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":41,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/bg-392.png","centerY":-50,"centerX":0},
@@ -918,6 +926,7 @@
                     "compId":15,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/res.png","centerY":0,"centerX":0},
@@ -932,6 +941,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,confirmButton",
                     "props":{"var":"confirmButton","skin":"images/button-41.png","runtime":"../laya/assets/sounds/Sound0009.mp3","centerY":50,"centerX":0},
@@ -944,6 +954,7 @@
                     "compId":140,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":0,"skin":"images/english/START-2.png","centerY":-2,"centerX":0},
@@ -961,68 +972,9 @@
         },
         {
             "x":15,
-            "type":"Label",
-            "searchKey":"Label",
-            "props":{"text":"进入子弹时间","right":80,"fontSize":36,"color":"#ffffff","bottom":120,"anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"Label",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":143,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Label",
-            "searchKey":"Label",
-            "props":{"text":"退出子弹时间","right":80,"fontSize":36,"color":"#ffffff","bottom":215,"anchorY":0.5,"anchorX":0.5},
-            "nodeParent":1,
-            "label":"Label",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":144,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,enterBulletTime",
-            "props":{"y":10,"var":"enterBulletTime","skin":"images/button-pause.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"bottom":100},
-            "nodeParent":1,
-            "label":"enterBulletTime",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":145,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,leaveBulletTime",
-            "props":{"y":10,"var":"leaveBulletTime","skin":"images/button-pause.png","scaleY":0.95,"scaleX":0.95,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"bottom":200},
-            "nodeParent":1,
-            "label":"leaveBulletTime",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":146,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Image",
             "searchKey":"Image,bulletTimeBtn",
-            "props":{"var":"bulletTimeBtn","skin":"images/bullet-time-slot.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":100},
+            "props":{"var":"bulletTimeBtn","skin":"images/bullet-time-slot.png","scaleY":0.6,"scaleX":0.6,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":20,"bottom":20},
             "nodeParent":1,
             "label":"bulletTimeBtn",
             "isOpen":true,
