@@ -2189,12 +2189,19 @@ export default class GameScene extends Scene {
             this.ui.bulletTimeEnough.visible = false;
             this.ui.bulletTimeLack.visible = true;
         }
+        const scale = this.ui.bulletTimeBtn.scale.x;
         this.bulletTimeMask.clear();
-        this.bulletTimeMask.lineStyle(40);
+        this.bulletTimeMask.lineStyle(40 * scale);
         const bounds = this.ui.bulletTimeBtn.getBounds();
         const percent = this.bulletTime / maxValue;
         const base = Math.PI / 2 * 3;
-        this.bulletTimeMask.arc(198 / 2 + bounds.x, 204 / 2 + bounds.y, 70, base - Math.PI * 2 * percent, base);
+        this.bulletTimeMask.arc(
+            198 / 2 * scale + bounds.x,
+            204 / 2 * scale + bounds.y,
+            70 * scale,
+            base - Math.PI * 2 * percent,
+            base
+        );
         this.ui.bulletTimeValue.text = Math.floor(this.bulletTime);
         this.bulletTimeFullEffect.visible = percent === 1;
     }
