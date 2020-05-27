@@ -54,7 +54,7 @@ export default class BulletTimeLineMgr {
             const line = this.bulletTimeLine[i];
             if (line) {
                 // 检测右边界 是否已经超出了视野的左侧
-                if (line.getRightBorderX() <= 0) {
+                if (this.gameMgr.isItemOutSideOfViewLeft(line)) {
                     line.destroy();
                     delete this.bulletTimeLine[i];
                 } else {
@@ -83,9 +83,11 @@ export default class BulletTimeLineMgr {
     }
 
     createLine(index, x) {
-        const y = (index + 1) * this.baseY
+        let y = (index + 1) * this.baseY
             + this.config.randomOffset * 2 * Math.random() - this.config.randomOffset;
-        this.bulletTimeLine[index] = new BulletTimeLine(this.gameMgr, x, y);
+        x += -this.gameMgr.cameraContainer.x;
+        y += -this.gameMgr.cameraContainer.y;
+        this.bulletTimeLine[index] = new BulletTimeLine(this.gameMgr.underBikeContianer, x, y);
         return this.bulletTimeLine[index];
     }
 }
