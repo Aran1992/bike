@@ -6963,6 +6963,8 @@ Config.item = {
                 animationName: "crystal_jet",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益：强化跳跃
             106: {
@@ -6978,6 +6980,8 @@ Config.item = {
                 animationName: "crystal_drill",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益：无限跳跃
             111: {
@@ -6993,6 +6997,8 @@ Config.item = {
                 animationName: "crystal_wing",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
             121: {
@@ -7008,6 +7014,8 @@ Config.item = {
                 animationName: "crystal_dragon",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益：无敌
             131: {
@@ -7023,6 +7031,8 @@ Config.item = {
                 animationName: "crystal_invincible",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益：超级无敌冲刺
             141: {
@@ -7038,6 +7048,8 @@ Config.item = {
                 animationName: "crystal_super",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 随机效果（机会命运）（还需要程序支持）（现在不能用用了会出错）
             9999: {
@@ -7179,6 +7191,8 @@ Config.item = {
                 animationName: "Random",
                 // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                 animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
         }
     },
