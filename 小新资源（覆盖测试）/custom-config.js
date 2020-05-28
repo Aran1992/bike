@@ -6214,9 +6214,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 96,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6255,9 +6255,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 96,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6296,9 +6296,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 96,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6337,9 +6337,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 90,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6378,9 +6378,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 90,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6419,9 +6419,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 90,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6460,9 +6460,9 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 90,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
@@ -6490,6 +6490,293 @@ Config.item = {
                 bulletTimeValueTrampled: 7,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 8,
+            },
+            // 地面-滚动的-小-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
+            10200: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm11.json",
+                // 动画名称
+                animationName: "enm11",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 96,
+                // 实际区域高度（图档比例的0.7）
+                bodyHeight: 82,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -10,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
+            },
+            // 地面-滚动的-大-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
+            10220: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm12.json",
+                // 动画名称
+                animationName: "enm12",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 195,
+                // 实际区域高度（图档比例的0.7）
+                bodyHeight: 164,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -10,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 100,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 100,
+            },
+            // 地面-左右跳动的-西兰花（可向下踩踏、可向上跳顶，横向碰触即死）
+            10300: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm10.json",
+                // 动画名称
+                animationName: "enm10",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 104,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 75,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 75,
+            },
+            // 地面-固定的-红萝卜（可向下踩踏、可向上跳顶，横向碰触即死）
+            10400: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm02.json",
+                // 动画名称
+                animationName: "enm02",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 73,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 144,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 100,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 100,
+            },
+            // 地面-上下移动的-南瓜（可向下踩踏、可向上跳顶，横向碰触即死）（移动轨迹：先上后下）
+            10500: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm13.json",
+                // 动画名称
+                animationName: "enm13",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 120,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 111,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 1,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 20,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.01,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 100,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 100,
+            },
+            // 地面-上下移动的-茄子（可向下踩踏、可向上跳顶，横向碰触即死）（移动轨迹：先上后下）
+            10600: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm14.json",
+                // 动画名称
+                animationName: "enm14",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 77,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 104,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 1,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 7,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.07,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 30,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 30,
+            },
+            // 浮空-固定的-乌云（碰触即死）
+            12000: {
+                // 动画路径
+                animationJsonPath: "images/trap/trap_cld.json",
+                // 动画名称
+                animationName: "trap_cld",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 189,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 0,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
             },
         }
     },
