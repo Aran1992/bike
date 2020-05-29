@@ -30,16 +30,12 @@ export default class Bird {
         const frames = GameUtils.getFrames(this.itemConfig.animationJsonPath, this.itemConfig.animationName);
         this.animation = this.sprite.addChild(new AnimatedSprite(frames));
         this.animation.anchor.set(0.5, 0.5);
-        const scaleX = this.config.props.scaleX;
-        const scaleY = this.config.props.scaleY;
-        this.animation.scale.set(scaleX, scaleY);
+        this.animation.scale.set(this.config.props.scaleX, this.config.props.scaleY);
         this.animation.position.set(...this.itemConfig.animationPos);
         this.animation.animationSpeed = this.itemConfig.animationSpeed * this.gameMgr.stepSpeed;
         this.animation.play();
-        const texture = this.animation.textures[0];
-        const x = this.config.props.x + texture.width / 2 * scaleX;
-        const y = this.config.props.y + texture.height / 2 * scaleY;
-        this.sprite.position.set(x, y);
+        this.sprite.anchor.set(this.config.props.anchorX || 0, this.config.props.anchorY || 0);
+        this.sprite.position.set(this.config.props.x, this.config.props.y);
     }
 
     createBody() {
