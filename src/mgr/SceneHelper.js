@@ -11,8 +11,7 @@ function getValue(value, defaultValue) {
     }
 }
 
-function createScene(path, sceneContainer) {
-    let sceneData = resources[path].data;
+function createSceneByData(sceneData, sceneContainer) {
     sceneContainer.mywidth = App.sceneWidth;
     sceneContainer.myheight = App.sceneHeight;
     sceneContainer.interactive = true;
@@ -21,6 +20,11 @@ function createScene(path, sceneContainer) {
     let callbackList = [];
     sceneData.child.forEach(child => sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui, sceneContainer.uiWithID, callbackList)));
     callbackList.forEach(callback => callback());
+}
+
+function createScene(path, sceneContainer) {
+    let sceneData = resources[path].data;
+    return createSceneByData(sceneData, sceneContainer);
 }
 
 function createSceneChild(child, parent, root, idRoot, callbackList) {
@@ -423,5 +427,5 @@ function createTextFromData(data) {
     return new Text(textContent, new TextStyle(textStyle));
 }
 
-export default {createScene, createTextFromData};
+export default {createScene, createTextFromData, createSceneByData};
 

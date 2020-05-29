@@ -8,6 +8,7 @@ import DataMgr from "../mgr/DataMgr";
 import NetworkMgr from "../mgr/NetworkMgr";
 import StaticGameScene from "./StaticGameScene";
 import MusicMgr from "../mgr/MusicMgr";
+import EventMgr from "../mgr/EventMgr";
 
 export default class MapGameScene extends StaticGameScene {
     onCreate() {
@@ -205,6 +206,8 @@ export default class MapGameScene extends StaticGameScene {
             playerNameList: playerNameList,
             gameScene: this,
         });
+
+        EventMgr.dispatchEvent("GameWin");
     }
 
     onDead() {

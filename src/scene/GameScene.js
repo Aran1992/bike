@@ -42,6 +42,7 @@ import Spring from "../item/Spring";
 import Scroll from "../ui/Scroll";
 import TWEEN from "@tweenjs/tween.js";
 import BulletTimeLineMgr from "../mgr/BulletTimeLineMgr";
+import GuideMgr from "../mgr/GuideMgr";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -141,9 +142,12 @@ export default class GameScene extends Scene {
         }
 
         this.initBulletTime();
+        this.guideMgr = new GuideMgr(this, this);
     }
 
     onShow() {
+        this.guideMgr.clear();
+
         this.doubleReward = false;
         this.rebornTimes = 0;
         this.ui.blockSightSprite.visible = false;
@@ -842,6 +846,10 @@ export default class GameScene extends Scene {
                 handleDisplayObjectWithData(text, data);
                 break;
             }
+            case "Guide": {
+                this.guideMgr.push(data);
+                break;
+            }
             default : {
                 let item = new Item(data, this.world);
                 this.underBikeContianer.addChild(item.sprite);
@@ -1101,6 +1109,8 @@ export default class GameScene extends Scene {
             this.bulletTimeFilms.forEach(film => film.onFrame());
             this.bulletTimeLineMgr.update();
         }
+
+        this.guideMgr.update();
     }
 
     pause() {
@@ -1877,6 +1887,10 @@ export default class GameScene extends Scene {
 
     pauseGame() {
         this.gameLoopFunc = this.pause.bind(this);
+    }
+
+    resumeGame() {
+        this.gameLoopFunc = this.play.bind(this);
     }
 
     getSpriteGameBounds(sprite) {
