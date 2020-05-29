@@ -6708,8 +6708,8 @@ Config.item = {
                 animationPos: [0, 0],
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 77,
-                // 实际区域高度（图档比例的0.8）
-                bodyHeight: 104,
+                // 实际区域高度（图档比例的0.6）
+                bodyHeight: 78,
                 // 触碰到的时候的自行车竖直方向上的速度
                 contactBikeVelocity: 55,
                 // 触碰到的时候的小鸟受到的冲击力大小
@@ -6767,6 +6767,88 @@ Config.item = {
                 isAbleToBeJacked: 0,
                 // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
                 forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
+            },
+            // 地面-固定的-瓦斯（碰触即死）
+            12100: {
+                // 动画路径
+                animationJsonPath: "images/trap/trp_gas.json",
+                // 动画名称
+                animationName: "trp_gas",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.3,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 54,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 92,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 0,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
+            },
+            // 浮空-向左移动的-火球（碰触即死）
+            12200: {
+                // 动画路径
+                animationJsonPath: "images/trap/trap_fire.json",
+                // 动画名称
+                animationName: "trap_fire",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.3,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.7）
+                bodyWidth: 98,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 60,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                appearSoundPath: "myLaya/laya/assets/sounds/Sound0316.mp3",
+                // 是否能踩
+                isAbleToBeTrampled: 0,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -30,
                 // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
                 isMoveUpDown: 0,
                 // 这个系数越大 小鸟上下移动的最大幅度就越大
@@ -12059,7 +12141,7 @@ Config.stepTimesEachFrame = 10;
 Config.bulletTime = {
     // 最大值
     maxValue: [
-        3000
+        5000
     ],
     // 可以使用的最小值
     usableMinValue: 400,
