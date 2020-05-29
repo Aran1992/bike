@@ -2,6 +2,7 @@ import Config from "../config";
 import DataMgr from "../mgr/DataMgr";
 import StaticGameScene from "./StaticGameScene";
 import GameUtils from "../mgr/GameUtils";
+import EventMgr from "../mgr/EventMgr";
 
 export default class LevelGameScene extends StaticGameScene {
     onCreate() {
@@ -71,6 +72,7 @@ export default class LevelGameScene extends StaticGameScene {
     gameWin() {
         this.gameStatus = "win";
         App.showScene("GameLevelResultScene", {gameScene: this});
+        EventMgr.dispatchEvent("GameWin");
     }
 
     onDead() {

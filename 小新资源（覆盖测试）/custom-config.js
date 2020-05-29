@@ -6178,7 +6178,7 @@ Config.item = {
                 // 实际区域高度
                 bodyHeight: 40,
                 // 触碰到的时候的自行车竖直方向上的速度
-                contactBikeVelocity: 50,
+                contactBikeVelocity: 55,
                 // 触碰到的时候的小鸟受到的冲击力大小
                 contactBirdImpulse: 125,
                 // 被击飞的冲击力大小
@@ -6204,7 +6204,7 @@ Config.item = {
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 2,
             },
-            // 地面固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            // 地面-固定的-青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10000: {
                 // 动画路径
                 animationJsonPath: "images/trap/enm01.json",
@@ -6214,12 +6214,12 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 96,
                 // 触碰到的时候的自行车竖直方向上的速度
-                contactBikeVelocity: 50,
+                contactBikeVelocity: 55,
                 // 触碰到的时候的小鸟受到的冲击力大小
                 contactBirdImpulse: 125,
                 // 被击飞的冲击力大小
@@ -6241,11 +6241,93 @@ Config.item = {
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
                 // 被踩获得的子弹时间值
-                bulletTimeValueTrampled: 3,
+                bulletTimeValueTrampled: 50,
                 // 被顶获得的子弹时间值
-                bulletTimeValueJacked: 4,
+                bulletTimeValueJacked: 50,
             },
-            // 浮空固定的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            // 地面-固定的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            10020: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm04.json",
+                // 动画名称
+                animationName: "enm04",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 87,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 500,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 500,
+            },
+            // 地面-固定的-黄椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            10040: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm05.json",
+                // 动画名称
+                animationName: "enm05",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 87,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 1000,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 1000,
+            },
+            // 浮空-固定的-青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10100: {
                 // 动画路径
                 animationJsonPath: "images/trap/enm03.json",
@@ -6255,12 +6337,12 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 90,
                 // 触碰到的时候的自行车竖直方向上的速度
-                contactBikeVelocity: 50,
+                contactBikeVelocity: 55,
                 // 触碰到的时候的小鸟受到的冲击力大小
                 contactBirdImpulse: 125,
                 // 被击飞的冲击力大小
@@ -6282,11 +6364,93 @@ Config.item = {
                 // 这个系数越大 完成一遍上下移动的时间就越短
                 upDownStep: 0,
                 // 被踩获得的子弹时间值
-                bulletTimeValueTrampled: 5,
+                bulletTimeValueTrampled: 50,
                 // 被顶获得的子弹时间值
-                bulletTimeValueJacked: 6,
+                bulletTimeValueJacked: 50,
             },
-            // 浮空移动的青椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            // 浮空-固定的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            10120: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm06.json",
+                // 动画名称
+                animationName: "enm06",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 96,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 90,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 500,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 500,
+            },
+            // 浮空-固定的-黄椒（可向下踩踏、可向上跳顶，横向碰触即死）
+            10140: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm07.json",
+                // 动画名称
+                animationName: "enm07",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 96,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 90,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 1000,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 1000,
+            },
+            // 浮空-移动的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10110: {
                 // 动画路径
                 animationJsonPath: "images/trap/enm06.json",
@@ -6296,12 +6460,12 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
-                // 实际区域宽度
+                // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
-                // 实际区域高度
+                // 实际区域高度（图档比例的0.8）
                 bodyHeight: 90,
                 // 触碰到的时候的自行车竖直方向上的速度
-                contactBikeVelocity: 50,
+                contactBikeVelocity: 55,
                 // 触碰到的时候的小鸟受到的冲击力大小
                 contactBirdImpulse: 125,
                 // 被击飞的冲击力大小
@@ -6326,6 +6490,375 @@ Config.item = {
                 bulletTimeValueTrampled: 7,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 8,
+            },
+            // 地面-滚动的-小-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
+            10200: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm11.json",
+                // 动画名称
+                animationName: "enm11",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 96,
+                // 实际区域高度（图档比例的0.7）
+                bodyHeight: 82,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -10,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
+            },
+            // 地面-滚动的-大-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
+            10220: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm12.json",
+                // 动画名称
+                animationName: "enm12",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 195,
+                // 实际区域高度（图档比例的0.7）
+                bodyHeight: 164,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -10,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 100,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 100,
+            },
+            // 地面-左右跳动的-西兰花（可向下踩踏、可向上跳顶，横向碰触即死）
+            10300: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm10.json",
+                // 动画名称
+                animationName: "enm10",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 104,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 75,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 75,
+            },
+            // 地面-固定的-红萝卜（可向下踩踏、可向上跳顶，横向碰触即死）
+            10400: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm02.json",
+                // 动画名称
+                animationName: "enm02",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 73,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 144,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 100,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 100,
+            },
+            // 地面-上下移动的-南瓜（可向下踩踏、可向上跳顶，横向碰触即死）（移动轨迹：先上后下）
+            10500: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm13.json",
+                // 动画名称
+                animationName: "enm13",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 120,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 111,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 1,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 20,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.01,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 100,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 100,
+            },
+            // 地面-上下移动的-茄子（可向下踩踏、可向上跳顶，横向碰触即死）（移动轨迹：先上后下）
+            10600: {
+                // 动画路径
+                animationJsonPath: "images/trap/enm14.json",
+                // 动画名称
+                animationName: "enm14",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 77,
+                // 实际区域高度（图档比例的0.6）
+                bodyHeight: 78,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 1,
+                // 是否能顶
+                isAbleToBeJacked: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 1,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 7,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.07,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 30,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 30,
+            },
+            // 浮空-固定的-乌云（碰触即死）
+            12000: {
+                // 动画路径
+                animationJsonPath: "images/trap/trap_cld.json",
+                // 动画名称
+                animationName: "trap_cld",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 1,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 189,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 96,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 0,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
+            },
+            // 地面-固定的-瓦斯（碰触即死）
+            12100: {
+                // 动画路径
+                animationJsonPath: "images/trap/trp_gas.json",
+                // 动画名称
+                animationName: "trp_gas",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.3,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.8）
+                bodyWidth: 54,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 92,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                //appearSoundPath: "",
+                // 是否能踩
+                isAbleToBeTrampled: 0,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: 0,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
+            },
+            // 浮空-向左移动的-火球（碰触即死）
+            12200: {
+                // 动画路径
+                animationJsonPath: "images/trap/trap_fire.json",
+                // 动画名称
+                animationName: "trap_fire",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.3,
+                // 动画偏移
+                animationPos: [0, 0],
+                // 实际区域宽度（图档比例的0.7）
+                bodyWidth: 98,
+                // 实际区域高度（图档比例的0.8）
+                bodyHeight: 60,
+                // 触碰到的时候的自行车竖直方向上的速度
+                contactBikeVelocity: 55,
+                // 触碰到的时候的小鸟受到的冲击力大小
+                contactBirdImpulse: 125,
+                // 被击飞的冲击力大小
+                strikedBirdImpulse: 1250,
+                // 被击飞的旋转速度
+                strikedBirdAngularVelocity: 50,
+                // 出现音效
+                appearSoundPath: "myLaya/laya/assets/sounds/Sound0316.mp3",
+                // 是否能踩
+                isAbleToBeTrampled: 0,
+                // 是否能顶
+                isAbleToBeJacked: 0,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了；如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                forwardVelocity: -30,
+                // 是否会上下移动（如果编辑器名字中有带“UpDown”，那么就忽略这个配置，就只会上下移动）
+                isMoveUpDown: 0,
+                // 这个系数越大 小鸟上下移动的最大幅度就越大
+                upDownCoefficient: 0,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0,
+                // 被踩获得的子弹时间值
+                bulletTimeValueTrampled: 50,
+                // 被顶获得的子弹时间值
+                bulletTimeValueJacked: 50,
             },
         }
     },
@@ -6826,7 +7359,7 @@ Config.item = {
     // 可食用物体
     EatableItem: {
         table: {
-            // 金币
+            // 钱币：铜币
             0: {
                 portable: 0,
                 effect: "GoldCoin",
@@ -6838,7 +7371,7 @@ Config.item = {
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
             },
-            // 5金币
+            // 钱币：银币
             55555: {
                 portable: 0,
                 effect: "GoldCoin",
@@ -6848,7 +7381,19 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 2,
+                bulletTimeValue: 5,
+            },
+            // 钱币：金币
+            66666: {
+                portable: 0,
+                effect: "GoldCoin",
+                value: 10,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 星星
             333: {
@@ -6858,7 +7403,7 @@ Config.item = {
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 3,
             },
-            // 经验
+            // 经验：自行车用
             444: {
                 portable: 0,
                 effect: "Exp",
@@ -6870,7 +7415,7 @@ Config.item = {
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 4,
             },
-            // 经验
+            // 经验：1-1
             2000: {
                 portable: 0,
                 effect: "Exp",
@@ -6880,7 +7425,211 @@ Config.item = {
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
-                bulletTimeValue: 5,
+                bulletTimeValue: 1,
+            },
+            // 经验：1-2
+            2001: {
+                portable: 0,
+                effect: "Exp",
+                value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 1,
+            },
+            // 经验：1-3
+            2002: {
+                portable: 0,
+                effect: "Exp",
+                value: 1,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 1,
+            },
+            // 经验：2-1
+            2010: {
+                portable: 0,
+                effect: "Exp",
+                value: 2,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 2,
+            },
+            // 经验：2-2
+            2011: {
+                portable: 0,
+                effect: "Exp",
+                value: 2,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 2,
+            },
+            // 经验：2-2
+            2012: {
+                portable: 0,
+                effect: "Exp",
+                value: 2,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 2,
+            },
+            // 经验：3
+            2020: {
+                portable: 0,
+                effect: "Exp",
+                value: 30,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 30,
+            },
+            // 经验：4-1
+            2030: {
+                portable: 0,
+                effect: "Exp",
+                value: 40,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 40,
+            },
+            // 经验：4-2
+            2031: {
+                portable: 0,
+                effect: "Exp",
+                value: 40,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 40,
+            },
+            // 经验：5
+            2040: {
+                portable: 0,
+                effect: "Exp",
+                value: 50,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 50,
+            },
+            // 经验：6
+            2050: {
+                portable: 0,
+                effect: "Exp",
+                value: 50,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 50,
+            },
+            // 经验：7
+            2060: {
+                portable: 0,
+                effect: "Exp",
+                value: 60,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 60,
+            },
+            // 经验：8-1
+            2070: {
+                portable: 0,
+                effect: "Exp",
+                value: 300,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 300,
+            },
+            // 经验：8-2
+            2071: {
+                portable: 0,
+                effect: "Exp",
+                value: 300,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 300,
+            },
+            // 经验：8-3
+            2072: {
+                portable: 0,
+                effect: "Exp",
+                value: 300,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 300,
+            },
+            // 经验：9-1
+            2080: {
+                portable: 0,
+                effect: "Exp",
+                value: 500,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 500,
+            },
+            // 经验：9-2
+            2081: {
+                portable: 0,
+                effect: "Exp",
+                value: 500,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 500,
+            },
+            // 经验：10
+            2090: {
+                portable: 0,
+                effect: "Exp",
+                value: 1000,
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 1,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 1000,
             },
             // 陷阱：减速
             1: {
@@ -7131,6 +7880,8 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益道具：强化跳跃
             1060: {
@@ -7140,6 +7891,8 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益道具：无限跳跃
             1110: {
@@ -7149,6 +7902,8 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益道具：磁铁（只能用于无尽模式，排名竞赛用会当机）
             1210: {
@@ -7158,6 +7913,8 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益道具：无敌
             1310: {
@@ -7167,6 +7924,8 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
             },
             // 增益道具：超级无敌冲刺
             1410: {
@@ -7176,7 +7935,9 @@ Config.item = {
                 attractedByMagnet: 0,
                 // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
                 attractedBySprint: 1,
-            },
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 10,
+				},
             // 随机道具
             99990: {
                 portable: 1,
@@ -11380,7 +12141,7 @@ Config.stepTimesEachFrame = 10;
 Config.bulletTime = {
     // 最大值
     maxValue: [
-        3000
+        5000
     ],
     // 可以使用的最小值
     usableMinValue: 400,

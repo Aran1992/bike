@@ -27,8 +27,6 @@ export default class Bird {
     createSprite() {
         this.sprite = this.container.addChild(new Sprite());
         this.sprite.part = this;
-        this.sprite.anchor.set(this.config.props.anchorX || 0, this.config.props.anchorY || 0);
-        this.sprite.position.set(this.config.props.x, this.config.props.y);
         const frames = GameUtils.getFrames(this.itemConfig.animationJsonPath, this.itemConfig.animationName);
         this.animation = this.sprite.addChild(new AnimatedSprite(frames));
         this.animation.anchor.set(0.5, 0.5);
@@ -36,6 +34,8 @@ export default class Bird {
         this.animation.position.set(...this.itemConfig.animationPos);
         this.animation.animationSpeed = this.itemConfig.animationSpeed * this.gameMgr.stepSpeed;
         this.animation.play();
+        this.sprite.anchor.set(this.config.props.anchorX || 0, this.config.props.anchorY || 0);
+        this.sprite.position.set(this.config.props.x, this.config.props.y);
     }
 
     createBody() {
