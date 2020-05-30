@@ -196,8 +196,8 @@ export default class MainScene extends Scene {
         App.showTip(App.getText("Do you want log out?"), () => {
             delete localStorage.username;
             delete localStorage.password;
-            let url = window.location.href;
-            window.location.href = url;
+            const url = window.parent.location.href;
+            window.parent.location.href = url.replace("autoRegister=1", "");
         });
     }
 

@@ -13,7 +13,7 @@ window.PlatformHelper = {
     }
 };
 
-main(() => {
+function callback() {
     let username = localStorage.username;
     let password = localStorage.password;
     if (username && password) {
@@ -25,5 +25,18 @@ main(() => {
         });
     } else {
         App.showScene("LoginScene");
+    }
+}
+
+main(() => {
+    if (window.parent.location.href.indexOf("autoRegister=1") !== -1 && localStorage.username === undefined) {
+        const id = new Date().getTime();
+        NetworkMgr.requestRegister(id, id, () => {
+            localStorage.username = id;
+            localStorage.password = id;
+            callback();
+        });
+    } else {
+        callback();
     }
 });
