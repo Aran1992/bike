@@ -148,7 +148,7 @@ export default class GameScene extends Scene {
 
     onShow() {
         this.guideMgr.clear();
-        this.guideMgr.setControlAll(true);
+        this.guideMgr.setControlAll(false);
 
         this.doubleReward = false;
         this.rebornTimes = 0;
