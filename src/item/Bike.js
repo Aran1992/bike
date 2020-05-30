@@ -123,7 +123,7 @@ export default class Bike {
 
         this.emitter = new Emitter(
             this.parent,
-            [Texture.fromImage(Config.imagePath.bikeParticle)],
+            [Texture.from(Config.imagePath.bikeParticle)],
             resources[Config.emitterPath.bike].data
         );
         this.emitter.emit = false;

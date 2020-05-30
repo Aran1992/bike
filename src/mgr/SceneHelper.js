@@ -1,5 +1,15 @@
 import Config from "../config";
-import {Container, NineSlicePlane, resources, Sprite, Text, TextInput, TextStyle, Texture} from "../libs/pixi-wrapper";
+import {
+    Container,
+    Graphics,
+    NineSlicePlane,
+    resources,
+    Sprite,
+    Text,
+    TextInput,
+    TextStyle,
+    Texture
+} from "../libs/pixi-wrapper";
 import ScrollView from "../ui/ScrollView";
 import ImageText from "../ui/ImageText";
 
@@ -111,10 +121,16 @@ function createImage(child, parent) {
 
 function createCommonImage(child, parent) {
     let data = child.props;
-    let path = `myLaya/laya/assets/${data.skin}`;
-    let texture = Texture.from(path);
-    let width = texture ? getValue(data.width, texture.width) : 0;
-    let height = texture ? getValue(data.height, texture.height) : 0;
+    let texture, width, height;
+    if (data.skin !== undefined) {
+        let path = `myLaya/laya/assets/${data.skin}`;
+        texture = Texture.from(path);
+        width = texture ? getValue(data.width, texture.width) : 0;
+        height = texture ? getValue(data.height, texture.height) : 0;
+    } else {
+        width = getValue(data.width, 0);
+        height = getValue(data.height, 0);
+    }
     let scaleX = getValue(data.scaleX, 1);
     let scaleY = getValue(data.scaleY, 1);
     let x = getValue(data.x, 0);
@@ -161,12 +177,19 @@ function createCommonImage(child, parent) {
 
 function createScale9Image(child, parent) {
     let data = child.props;
-    let path = `myLaya/laya/assets/${data.skin}`;
-    let texture = Texture.from(path);
     let [top, right, bottom, left] = data.sizeGrid.split(",").map(str => parseInt(str));
-    let sprite = new NineSlicePlane(texture, left, top, right, bottom);
-    let width = getValue(data.width, texture.width);
-    let height = getValue(data.height, texture.height);
+    let texture, width, height, sprite;
+    if (data.skin === undefined) {
+        width = data.width || 0;
+        height = data.height || 0;
+        sprite = new Sprite();
+    } else {
+        let path = `myLaya/laya/assets/${data.skin}`;
+        texture = Texture.from(path);
+        width = getValue(data.width, texture.width);
+        height = getValue(data.height, texture.height);
+        sprite = new NineSlicePlane(texture, left, top, right, bottom);
+    }
     let x = getValue(data.x, 0);
     let y = getValue(data.y, 0);
 
@@ -306,6 +329,16 @@ function createLabel(child, parent) {
     return text;
 }
 
+function generateBox(w, h) {
+    const box = new Container();
+    const g = new Graphics();
+    g.beginFill(0xffffff);
+    g.drawRect(0, 0, w, h);
+    g.endFill();
+    box.addChild(g);
+    return box;
+}
+
 function createTextInput(child, parent) {
     let data = child.props;
 
@@ -320,13 +353,10 @@ function createTextInput(child, parent) {
         color: "#26272E"
     };
 
-    let boxStyle = {
-        default: {fill: 0xE8E9F3, rounded: 12, stroke: {color: 0xCBCEE0, width: 3}},
-        focused: {fill: 0xE1E3EE, rounded: 12, stroke: {color: 0xABAFC6, width: 3}},
-        disabled: {fill: 0xDBDBDB, rounded: 12}
-    };
-
-    let item = new TextInput(inputStyle, boxStyle);
+    let item = new TextInput({
+        input: inputStyle,
+        box: generateBox
+    });
 
     item.placeholder = data.prompt;
 

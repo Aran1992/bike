@@ -99,7 +99,7 @@ export default class Road {
         edgeList.forEach(({sp, ep}) => {
             let edgeWidth = Math.abs(sp.y - ep.y);
             let canvas = Utils.createLinearGradientMask(edgeWidth, Config.edgeHeight, Config.edgeColorStop);
-            let texture = Texture.fromCanvas(canvas);
+            let texture = Texture.from(canvas);
             let sprite = new Sprite(texture);
             this.sprite.addChild(sprite);
             sprite.position.set(sp.x, sp.y);

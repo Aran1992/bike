@@ -299,7 +299,7 @@ export default class MyApplication extends Application {
         this.loadText.anchor.set(0.5, 0);
         this.loadText.position.set(this.sceneWidth / 2, this.sceneHeight / 2 + 50);
 
-        this.loadSprite = this.loadScene.addChild(new AnimatedSprite(Config.loadingImagePathList.map(path => Texture.fromImage(path))));
+        this.loadSprite = this.loadScene.addChild(new AnimatedSprite(Config.loadingImagePathList.map(path => Texture.from(path))));
         this.loadSprite.animationSpeed = 0.5;
         this.loadSprite.anchor.set(0.5, 0.5);
         this.loadSprite.position.set(this.sceneWidth / 2, this.sceneHeight / 2 - 50);

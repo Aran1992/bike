@@ -357,7 +357,7 @@ export default class GameScene extends Scene {
 
         this.emitter = new Emitter(
             this.bikeContainer,
-            [Texture.fromImage(Config.imagePath.bikeParticle)],
+            [Texture.from(Config.imagePath.bikeParticle)],
             resources[Config.emitterPath.bike].data
         );
         this.emitter.emit = false;
@@ -693,7 +693,7 @@ export default class GameScene extends Scene {
 
     createBottomMask() {
         let canvas = Utils.createLinearGradientMask(Config.designWidth, Config.maskHeight, Config.maskColorStop);
-        let texture = Texture.fromCanvas(canvas);
+        let texture = Texture.from(canvas);
         let sprite = new Sprite(texture);
         sprite.anchor.set(0, 1);
         sprite.position.set(0, Config.designHeight);

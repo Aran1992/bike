@@ -101,7 +101,7 @@ export default class Utils {
         canvas.width = texture.width;
         canvas.height = texture.height;
         let ctx = canvas.getContext("2d");
-        ctx.drawImage(texture.baseTexture.source, 0, 0, texture.width, texture.height);
+        ctx.drawImage(texture.baseTexture.resource.source, 0, 0, texture.width, texture.height);
         let data = ctx.getImageData(x, y, 1, 1).data;
         return data[0] * 256 * 256 + data[1] * 256 + data[2];
     }
