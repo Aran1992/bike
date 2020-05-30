@@ -121,7 +121,7 @@ export default class Scene extends Container {
         const animation = this.getAnimationConfig(name);
         if (animation) {
             App.showMask();
-            return new Animation(this, animation, () => {
+            return new Animation(this.getChildByID.bind(this), animation, () => {
                 App.hideMask();
                 callback();
             });

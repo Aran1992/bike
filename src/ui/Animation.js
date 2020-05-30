@@ -120,16 +120,18 @@ class Frames {
 }
 
 export default class Animation {
-    constructor(scene, config, callback) {
-        this.callback = callback;
+    constructor(getChildByID, config, callback) {
+        this.callback = callback || (() => 0);
         this.animationTable = {};
         config.nodes.forEach(node => {
             this.animationTable[node.target] = {};
-            const obj = scene.getChildByID(node.target);
-            for (const key in node.keyframes) {
-                if (node.keyframes.hasOwnProperty(key)) {
-                    const frames = node.keyframes[key];
-                    this.animationTable[node.target][key] = new Frames(obj, key, frames, this.onFramesEnded.bind(this));
+            const obj = getChildByID(node.target);
+            if (obj) {
+                for (const key in node.keyframes) {
+                    if (node.keyframes.hasOwnProperty(key)) {
+                        const frames = node.keyframes[key];
+                        this.animationTable[node.target][key] = new Frames(obj, key, frames, this.onFramesEnded.bind(this));
+                    }
                 }
             }
         });

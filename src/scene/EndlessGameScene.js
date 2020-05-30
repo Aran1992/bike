@@ -113,6 +113,7 @@ export default class EndlessGameScene extends GameScene {
         json.child.forEach(data => {
             data.props.x += offsetX;
             data.props.y += offsetY;
+            data.animations = json.animations;
             this.createPart(data);
         });
         this.roadList.sort((a, b) => a.getLeftBorderX() - b.getLeftBorderX());

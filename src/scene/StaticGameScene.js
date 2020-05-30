@@ -95,7 +95,10 @@ export default class StaticGameScene extends GameScene {
 
     createMap() {
         let json = resources[this.mapScenePath].data;
-        json.child.forEach(data => this.createPart(data));
+        json.child.forEach(data => {
+            data.animations = json.animations;
+            this.createPart(data);
+        });
         this.roadList.sort((a, b) => a.getLeftBorderX() - b.getLeftBorderX());
     }
 
