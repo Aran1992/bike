@@ -7937,7 +7937,7 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 10,
-				},
+            },
             // 随机道具
             99990: {
                 portable: 1,
@@ -12180,6 +12180,55 @@ Config.bulletTime = {
         // 每帧每条基准线上创建速度线的可能性
         createLineRatePerFrame: 0.01,
     }
+};
+
+// 引导模式
+Config.guideMode = {
+    mapConfig: {
+        // scene文件的路径
+        scenePath: "myLaya/laya/pages/Map/Practice-1.scene.json",
+        // 地图所需的图片路径（看描述还是不明白是啥的话 可以直接打开对应的文件看看）
+        texture: {
+            // 侧边
+            side: "images/map/stg40/l_stg40Road01SideSkin.png",
+            // 底部
+            top: "images/map/stg40/l_stg40Road01TopSkin.png",
+            // 侧边
+            side2: "images/map/stg40/l_stg40Road02SideSkin.png",
+            // 底部
+            top2: "images/map/stg40/l_stg40Road02TopSkin.png",
+            // 背景 有多少层背景就配置多少张
+            bg: [
+                "images/map/stg40/l_stg40_01.png",
+                "images/map/stg40/l_stg40_02.png",
+            ],
+            // 主页封面图
+            mainCover: "images/map/stg40/l_stg40Map.png",
+        },
+        // 视差背景系数：左右
+        horizontalParallaxDepth: [0.9, 0.8, 0],
+        // 视差背景系数：上下
+        verticalParallaxDepth: [1, 0.9, 0],
+        // 背景的Y轴位置
+        bgY: [0, 0],
+        // 背景缩放系数
+        bgScale: [1, 1],
+        // 自行车速度（基础：30）
+        bikeVelocity: 30,
+        // 重力（基础：-175）
+        gravity: -175,
+        // 跳跃爆发力（基础：250）
+        jumpForce: 250,
+        // BGM路径
+        bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
+        itemRandomTable: {
+            BlockSight: 1,
+            BananaPeel: 4,
+            Accelerate: 1,
+            PowerJump: 1,
+            UnlimitedJump: 1,
+        }
+    },
 };
 
 export default Config;
