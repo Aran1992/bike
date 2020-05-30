@@ -14,6 +14,7 @@ export default class GuidePanel {
     }
 
     destroy() {
+        UIHelper.freeClick();
         if (this.animation) {
             this.animation.stop();
             delete this.animation;
@@ -23,24 +24,42 @@ export default class GuidePanel {
 
     createGuidePanel(data) {
         const panel = new Container();
-        SceneHelper.createSceneByData(data, panel);
+        SceneHelper.createSceneByData(data, panel, true);
         this.panelContainer.addChild(panel);
         if (GameUtils.getItemProp(data, "蒙版") === "1") {
-            panel.addChildAt(new Graphics()
+            this.guideMask = new Graphics()
                 .beginFill(0x000000, 0.5)
                 .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
-                .endFill(), 0);
+                .endFill();
+            panel.addChildAt(this.guideMask, 0);
         }
         if (GameUtils.getItemProp(data, "暂停直到用户点击") === "1") {
             this.gameMgr.pauseGame();
             UIHelper.onClick(panel, this.onClickGuidePanel.bind(this), true);
+            UIHelper.controlClick((button) => button === panel);
         } else if (GameUtils.getItemProp(data, "暂停直到用户跳跃") === "1") {
             this.gameMgr.pauseGame();
-            UIHelper.onClick(panel, this.onClickGuidePanelJump.bind(this), true);
+            UIHelper.controlClick((button) => {
+                if (this.gameMgr.gameContainer === button) {
+                    this.onClickGuidePanel();
+                    return true;
+                }
+            });
         } else if (GameUtils.getItemProp(data, "暂停直到用户使用道具") !== "0") {
             this.gameMgr.pauseGame();
             this.guidePanelItemIndex = parseInt(GameUtils.getItemProp(data, "暂停直到用户使用道具"));
-            UIHelper.onClick(panel, this.onClickGuidePanelItem.bind(this), true);
+            if (this.guideMask) {
+                this.guideMask.clear();
+                this.guideMask.beginFill(0x000000, 0.5);
+                this.guideMask.drawRect(0, 0, App.sceneWidth, App.sceneHeight);
+                this.guideMask.beginHole();
+                const targetButton = this.gameMgr.ui[`portableItemButton${this.guidePanelItemIndex}`];
+                const bounds = targetButton.getBounds();
+                this.guideMask.drawRect(bounds.x, bounds.y, bounds.width, bounds.height);
+                this.guideMask.endHole();
+                this.guideMask.endFill();
+                UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
+            }
         }
         return panel;
     }
@@ -61,15 +80,5 @@ export default class GuidePanel {
     onClickGuidePanel() {
         this.gameMgr.resumeGame();
         this.mgr.destroyGuidePanel();
-    }
-
-    onClickGuidePanelJump() {
-        this.onClickGuidePanel();
-        this.gameMgr.onClickGameContainer();
-    }
-
-    onClickGuidePanelItem() {
-        this.onClickGuidePanel();
-        this.gameMgr.onClickPortableItem(this.guidePanelItemIndex - 1);
     }
 }

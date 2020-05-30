@@ -3,6 +3,8 @@ import Config from "../config";
 import Utils from "../mgr/Utils";
 import MusicMgr from "../mgr/MusicMgr";
 
+let clickPredicate = () => true;
+
 export default class UIHelper {
     static uiClone(displayObject, root) {
         let displayObject_ = UIHelper.copy(displayObject);
@@ -127,6 +129,9 @@ export default class UIHelper {
         button.buttonMode = true;
         button.interactive = true;
         button.on("pointerdown", (event) => {
+            if (!clickPredicate(button)) {
+                return;
+            }
             button.clickPoint = {x: event.data.global.x, y: event.data.global.y};
             if (!noScale) {
                 button.originScaleX = button.scale.x;
@@ -139,6 +144,12 @@ export default class UIHelper {
             }
         });
         button.on("pointerup", (event) => {
+            if (!clickPredicate(button)) {
+                return;
+            }
+            if (this.controlClickCallback) {
+                this.controlClickCallback();
+            }
             if (button.clickPoint) {
                 if (!noScale) {
                     button.scale.set(button.originScaleX, button.originScaleY);
@@ -164,6 +175,9 @@ export default class UIHelper {
             }
         });
         button.on("pointerupoutside", () => {
+            if (!clickPredicate(button)) {
+                return;
+            }
             if (button.clickPoint) {
                 button.clickPoint = undefined;
                 if (!noScale) {
@@ -176,6 +190,21 @@ export default class UIHelper {
             }
         });
     }
+
+    static controlClick(predicate, callback) {
+        clickPredicate = predicate;
+        this.controlClickCallback = callback;
+    }
+
+    static freeClick() {
+        clickPredicate = () => true;
+        delete this.controlClickCallback;
+    }
+
+    static getClickPredicate() {
+        return clickPredicate;
+    }
+
 
     static calcButtonMove(button) {
         let oldwidth = button.mywidth * button.originScaleX;

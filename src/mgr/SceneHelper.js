@@ -21,10 +21,10 @@ function getValue(value, defaultValue) {
     }
 }
 
-function createSceneByData(sceneData, sceneContainer) {
+function createSceneByData(sceneData, sceneContainer, clickThrough) {
     sceneContainer.mywidth = App.sceneWidth;
     sceneContainer.myheight = App.sceneHeight;
-    sceneContainer.interactive = true;
+    sceneContainer.interactive = !clickThrough;
     sceneContainer.ui = {};
     sceneContainer.uiWithID = {};
     let callbackList = [];

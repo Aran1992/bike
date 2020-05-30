@@ -43,6 +43,7 @@ import Scroll from "../ui/Scroll";
 import TWEEN from "@tweenjs/tween.js";
 import BulletTimeLineMgr from "../mgr/BulletTimeLineMgr";
 import GuideMgr from "../mgr/GuideMgr";
+import UIHelper from "../ui/UIHelper";
 
 function getValue(value, defaultValue) {
     if (value === undefined) {
@@ -147,6 +148,7 @@ export default class GameScene extends Scene {
 
     onShow() {
         this.guideMgr.clear();
+        this.guideMgr.setControlAll(true);
 
         this.doubleReward = false;
         this.rebornTimes = 0;
@@ -560,6 +562,9 @@ export default class GameScene extends Scene {
     }
 
     onClickGameContainer(event) {
+        if (!UIHelper.getClickPredicate()(this.gameContainer)) {
+            return;
+        }
         if (this.gameStatus === "play") {
             // 无敌冲刺期间不能操作
             if (this.hasEffect("Sprint")) {

@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Config from "../config";
 import GuidePanel from "../item/GuidePanel";
+import UIHelper from "../ui/UIHelper";
 
 export default class GuideMgr {
     constructor(gameMgr, panelContainer) {
@@ -11,8 +12,18 @@ export default class GuideMgr {
     }
 
     clear() {
+        this.setControlAll(false);
         this.guidePanelDataList = [];
         this.destroyGuidePanel();
+    }
+
+    setControlAll(controlAll) {
+        this.controlAll = controlAll;
+        if (this.controlAll) {
+            UIHelper.controlClick(() => false);
+        } else {
+            UIHelper.freeClick();
+        }
     }
 
     push(data) {
@@ -33,6 +44,7 @@ export default class GuideMgr {
 
     onGameWin() {
         this.destroyGuidePanel();
+        this.setControlAll(false);
     }
 
     destroyGuidePanel() {
@@ -40,5 +52,6 @@ export default class GuideMgr {
             this.guidePanel.destroy();
             delete this.guidePanel;
         }
+        this.setControlAll(this.controlAll);
     }
 }
