@@ -60,6 +60,20 @@ export default class GuidePanel {
                 this.guideMask.endFill();
                 UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
             }
+        } else if (GameUtils.getItemProp(data, "暂停直到用户使用子弹时间") === "1") {
+            this.gameMgr.pauseGame();
+            if (this.guideMask) {
+                this.guideMask.clear();
+                this.guideMask.beginFill(0x000000, 0.5);
+                this.guideMask.drawRect(0, 0, App.sceneWidth, App.sceneHeight);
+                this.guideMask.beginHole();
+                const targetButton = this.gameMgr.ui.bulletTimeBtn;
+                const bounds = targetButton.getBounds();
+                this.guideMask.drawRect(bounds.x, bounds.y, bounds.width, bounds.height);
+                this.guideMask.endHole();
+                this.guideMask.endFill();
+                UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
+            }
         }
         return panel;
     }

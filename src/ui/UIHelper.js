@@ -205,7 +205,6 @@ export default class UIHelper {
         return clickPredicate;
     }
 
-
     static calcButtonMove(button) {
         let oldwidth = button.mywidth * button.originScaleX;
         let oldheight = button.myheight * button.originScaleY;

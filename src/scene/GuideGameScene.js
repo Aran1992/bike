@@ -8,6 +8,8 @@ export default class GuideGameScene extends StaticGameScene {
     onShow() {
         this.mapConfig = Config.guideMode.mapConfig;
         this.mapScenePath = Config.guideMode.mapConfig.scenePath;
+        this.ui.distancePanel.visible = false;
+        this.ui.matchRacetrack.visible = false;
         super.onShow();
         this.guideMgr.setControlAll(true);
     }
