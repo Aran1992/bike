@@ -9,6 +9,7 @@ import Utils from "../mgr/Utils";
 import OnlineMgr from "../mgr/OnlineMgr";
 import GameUtils from "../mgr/GameUtils";
 import LockableButton from "../ui/LockableButton";
+import RunOption from "../../run-option";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -109,7 +110,11 @@ export default class MainScene extends Scene {
         this.checkWaitShowNotice();
         this.updatePoint();
 
-        if (!DataMgr.get(DataMgr.throughGuide, false)) {
+        if (RunOption.forceShowBeginnerGuide === 0) {
+            if (!DataMgr.get(DataMgr.throughGuide, false)) {
+                App.showScene("GuideGameScene");
+            }
+        } else if (RunOption.forceShowBeginnerGuide === 1) {
             App.showScene("GuideGameScene");
         }
     }
