@@ -2195,8 +2195,12 @@ export default class GameScene extends Scene {
         }
     }
 
+    getPlayerLevel(){
+        return DataMgr.getPlayerLevel().level;
+    }
+
     updateBulletTime(time) {
-        const maxValue = DataMgr.getBulletTimeMaxValue();
+        const maxValue = DataMgr.getBulletTimeMaxValue(this.getPlayerLevel());
         if (time >= maxValue) {
             time = maxValue;
         } else if (time < 0) {

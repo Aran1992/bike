@@ -529,10 +529,9 @@ class DataMgr_ {
             && DataMgr.get(DataMgr.coin, 0) >= DataMgr.getBikeUpgradeCost(id);
     }
 
-    getBulletTimeMaxValue() {
+    getBulletTimeMaxValue(level) {
         const list = Config.bulletTime.maxValue;
         const max = Utils.getLast(list);
-        const level = DataMgr.getPlayerLevel().level;
         const cur = list[level - 1];
         return cur === undefined ? max : cur;
     }

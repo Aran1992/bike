@@ -28,6 +28,10 @@ export default class GuideGameScene extends StaticGameScene {
         return 0;
     }
 
+    getPlayerLevel() {
+        return DataMgr.getPlayerLevel(0).level;
+    }
+
     onLoadedGameRes() {
         super.onLoadedGameRes();
         MusicMgr.playBGM(this.bgmPath, true);
