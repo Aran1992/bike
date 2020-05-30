@@ -11000,7 +11000,7 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Practice-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
                 "myLaya/laya/pages/Map/Map-1-2.scene.json",
                 "myLaya/laya/pages/Map/Map-1-3.scene.json",
                 "myLaya/laya/pages/Map/Map-1-4.scene.json",
@@ -12141,10 +12141,10 @@ Config.stepTimesEachFrame = 10;
 Config.bulletTime = {
     // 最大值
     maxValue: [
-        5000
+        700
     ],
     // 可以使用的最小值
-    usableMinValue: 400,
+    usableMinValue: 500,
     // 每次启动消耗的值
     startUpCostValue: 200,
     // 子弹时间内每秒消耗的值
@@ -12222,11 +12222,7 @@ Config.guideMode = {
         // BGM路径
         bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
         itemRandomTable: {
-            BlockSight: 1,
-            BananaPeel: 4,
-            Accelerate: 1,
-            PowerJump: 1,
-            UnlimitedJump: 1,
+            Magnet: 1,
         }
     },
 };
