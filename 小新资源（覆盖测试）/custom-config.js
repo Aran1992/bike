@@ -3009,7 +3009,7 @@ Config.endlessMode.sceneList = [
 ];
 
 // 无尽模式复活次数
-Config.endlessMode.rebornTimes = 333;
+Config.endlessMode.rebornTimes = 3;
 
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
 Config.bgY = [0, 0, 256];
