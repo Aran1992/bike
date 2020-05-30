@@ -107,6 +107,7 @@ export default class GameScene extends Scene {
             this.createFPSText();
         }
 
+        this.ui.skipBtn.visible = false;
         this.ui.pauseButton.visible = false;
         this.ui.surrenderButton.visible = false;
         this.ui.starPanel.visible = false;
@@ -143,7 +144,7 @@ export default class GameScene extends Scene {
         }
 
         this.initBulletTime();
-        this.guideMgr = new GuideMgr(this, this);
+        this.guideMgr = new GuideMgr(this, this.ui.guidePanelContainer);
     }
 
     onShow() {

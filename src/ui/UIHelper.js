@@ -125,11 +125,11 @@ export default class UIHelper {
         return dst;
     }
 
-    static onClick(button, handler, noScale) {
+    static onClick(button, handler, noScale, params = {}) {
         button.buttonMode = true;
         button.interactive = true;
         button.on("pointerdown", (event) => {
-            if (!clickPredicate(button)) {
+            if (!params.noControl && !clickPredicate(button)) {
                 return;
             }
             button.clickPoint = {x: event.data.global.x, y: event.data.global.y};
@@ -144,7 +144,7 @@ export default class UIHelper {
             }
         });
         button.on("pointerup", (event) => {
-            if (!clickPredicate(button)) {
+            if (!params.noControl &&!clickPredicate(button)) {
                 return;
             }
             if (this.controlClickCallback) {
@@ -175,7 +175,7 @@ export default class UIHelper {
             }
         });
         button.on("pointerupoutside", () => {
-            if (!clickPredicate(button)) {
+            if (!params.noControl &&!clickPredicate(button)) {
                 return;
             }
             if (button.clickPoint) {

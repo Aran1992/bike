@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":31,
-    "selecteID":4,
+    "selectedBox":1,
+    "selecteID":152,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":151,
+    "maxID":153,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -273,6 +273,7 @@
                     "props":{"x":0,"var":"pauseButton","skin":"images/button-pause.png","scaleY":0.95,"scaleX":0.95,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0,"centerY":0},
                     "nodeParent":31,
                     "label":"pauseButton",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -852,14 +853,13 @@
             "props":{"var":"portableItemButton2","top":300,"skin":"images/bottom-item.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":20},
             "nodeParent":1,
             "label":"portableItemButton2",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":13,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,hitArea",
                     "props":{"width":200,"top":-10,"right":-10,"name":"hitArea","height":140},
@@ -1048,6 +1048,34 @@
                     "child":[
                         ]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "searchKey":"Panel,guidePanelContainer",
+            "props":{"var":"guidePanelContainer","top":0,"right":0,"left":0,"bottom":0},
+            "nodeParent":1,
+            "label":"guidePanelContainer",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":152,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,skipBtn",
+            "props":{"var":"skipBtn","skin":"images/english/skip.png","scaleY":0.95,"scaleX":0.95,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":50},
+            "nodeParent":1,
+            "label":"skipBtn",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":151,
+            "child":[
+                ]
         }],
     "animations":[
         {

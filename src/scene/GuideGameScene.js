@@ -5,11 +5,17 @@ import EventMgr from "../mgr/EventMgr";
 import MusicMgr from "../mgr/MusicMgr";
 
 export default class GuideGameScene extends StaticGameScene {
+    onCreate() {
+        super.onCreate();
+        this.ui.distancePanel.visible = false;
+        this.ui.matchRacetrack.visible = false;
+        this.ui.skipBtn.visible = true;
+        this.onClick(this.ui.skipBtn, this.onClickSkipButton.bind(this), false, {noControl: true});
+    }
+
     onShow() {
         this.mapConfig = Config.guideMode.mapConfig;
         this.mapScenePath = Config.guideMode.mapConfig.scenePath;
-        this.ui.distancePanel.visible = false;
-        this.ui.matchRacetrack.visible = false;
         super.onShow();
         this.guideMgr.setControlAll(true);
     }
@@ -37,5 +43,9 @@ export default class GuideGameScene extends StaticGameScene {
 
     getItemRandomTableList() {
         return this.mapConfig.itemRandomTable;
+    }
+
+    onClickSkipButton() {
+        this.gameWin();
     }
 }
