@@ -45,6 +45,7 @@ import GameLevelResultScene from "../scene/GameLevelResultScene";
 import HelpGameLevelScene from "../scene/HelpGameLevelScene";
 import GameLevelScene from "../scene/GameLevelScene";
 import TWEEN from "@tweenjs/tween.js";
+import GuideGameScene from "../scene/GuideGameScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -99,6 +100,7 @@ export default class MyApplication extends Application {
             "MapGameScene": MapGameScene,
             "EndlessGameScene": EndlessGameScene,
             "LevelGameScene": LevelGameScene,
+            "GuideGameScene": GuideGameScene,
             "GameOverScene": GameOverScene,
             "PauseScene": PauseScene,
             "HomeScene": HomeScene,

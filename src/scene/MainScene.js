@@ -108,6 +108,10 @@ export default class MainScene extends Scene {
         this.refreshLockStatus();
         this.checkWaitShowNotice();
         this.updatePoint();
+
+        if (!DataMgr.get(DataMgr.throughGuide, false)) {
+            App.showScene("GuideGameScene");
+        }
     }
 
     onHide() {

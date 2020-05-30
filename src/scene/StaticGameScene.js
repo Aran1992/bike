@@ -4,7 +4,6 @@ import {resources, Sprite} from "../libs/pixi-wrapper";
 import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 import DataMgr from "../mgr/DataMgr";
-import MusicMgr from "../mgr/MusicMgr";
 import MatchRacetrack from "../ui/MatchRacetrack";
 
 export default class StaticGameScene extends GameScene {

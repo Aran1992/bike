@@ -199,7 +199,9 @@ export default class GameScene extends Scene {
 
         this.initEnvironment();
 
-        this.rewards = DataMgr.get(this.rewardType);
+        if (this.rewardType) {
+            this.rewards = DataMgr.get(this.rewardType);
+        }
 
         App.showScene("LoadingScene", this.getBikeID());
         App.loadResources(this.getResPathList(), () => {
@@ -379,10 +381,12 @@ export default class GameScene extends Scene {
 
         this.adjustInitCameraBg();
 
-        for (let i = 0; i < 2; i++) {
-            if (this.rewards[i].received) {
-                let texture = Texture.from(Config.effect[this.rewards[i].effect].imagePath);
-                this.showPortableItem(this.rewards[i].effect, texture);
+        if (this.rewards) {
+            for (let i = 0; i < 2; i++) {
+                if (this.rewards[i].received) {
+                    let texture = Texture.from(Config.effect[this.rewards[i].effect].imagePath);
+                    this.showPortableItem(this.rewards[i].effect, texture);
+                }
             }
         }
 
