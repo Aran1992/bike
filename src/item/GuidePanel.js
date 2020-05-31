@@ -55,7 +55,8 @@ export default class GuidePanel {
                 this.guideMask.beginHole();
                 const targetButton = this.gameMgr.ui[`portableItemButton${this.guidePanelItemIndex}`];
                 const bounds = targetButton.getBounds();
-                this.guideMask.drawRect(bounds.x, bounds.y, bounds.width, bounds.height);
+                const {x, y} = App.trans2GlobalPosition(bounds);
+                this.guideMask.drawRect(x, y, bounds.width, bounds.height);
                 this.guideMask.endHole();
                 this.guideMask.endFill();
                 UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
@@ -69,7 +70,8 @@ export default class GuidePanel {
                 this.guideMask.beginHole();
                 const targetButton = this.gameMgr.ui.bulletTimeBtn;
                 const bounds = targetButton.getBounds();
-                this.guideMask.drawRect(bounds.x, bounds.y, bounds.width, bounds.height);
+                const {x, y} = App.trans2GlobalPosition(bounds);
+                this.guideMask.drawRect(x, y, bounds.width, bounds.height);
                 this.guideMask.endHole();
                 this.guideMask.endFill();
                 UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
