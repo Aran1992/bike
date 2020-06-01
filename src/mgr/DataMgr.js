@@ -539,8 +539,14 @@ class DataMgr_ {
     }
 
     hasShowedGuide(guideData) {
-        const data = DataMgr.get(DataMgr.showedGuide);
-        return data.indexOf(GameUtils.getItemProp(guideData, "归属引导")) !== -1;
+        if (RunOption.forceShowUIGuide === 0) {
+            const data = DataMgr.get(DataMgr.showedGuide);
+            return data.indexOf(GameUtils.getItemProp(guideData, "归属引导")) !== -1;
+        } else if (RunOption.forceShowUIGuide === 1) {
+            return false;
+        } else if (RunOption.forceShowUIGuide === 2) {
+            return true;
+        }
     }
 
     recordGuide(guideData) {

@@ -77,12 +77,26 @@ export default class Bird {
     update() {
         if (this.body === undefined) {
             if (this.gameMgr.isItemXEnterView(this)) {
+                this.scaleFrame = 0;
                 this.createBody();
                 if (this.itemConfig.appearSoundPath && this.itemConfig.appearSoundPath.length > 0) {
                     MusicMgr.playSound(this.itemConfig.appearSoundPath, undefined, this.gameMgr.stepSpeed);
                 }
             }
         } else {
+            if (this.itemConfig.scaleRange) {
+                this.scaleFrame += this.gameMgr.stepSpeed;
+                const totalFrame = this.itemConfig.scaleDuration / 1000 * Config.fps * 2;
+                const rate = this.scaleFrame / totalFrame;
+                let percent = rate - Math.floor(rate);
+                let scale;
+                if (percent < 0.5) {
+                    scale = this.itemConfig.scaleRange[0] + (this.itemConfig.scaleRange[1] - this.itemConfig.scaleRange[0]) * percent * 2;
+                } else {
+                    scale = this.itemConfig.scaleRange[0] + (this.itemConfig.scaleRange[1] - this.itemConfig.scaleRange[0]) * (1 - percent) * 2;
+                }
+                this.sprite.scale.set(scale, scale);
+            }
             if (!this.isDead) {
                 if (this.striked) {
                     this.body.setDynamic();
@@ -125,12 +139,14 @@ export default class Bird {
         if (this.gameMgr.isBike(another)) {
             if (this.isAbleToBeTrampled() && anotherBody.getPosition().y >= this.body.getPosition().y + this.bodyHeight / 2) {
                 another.resetJumpStatus();
+                another.playPlayerEffect && another.playPlayerEffect(Config.playerEffect.trampled);
                 another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueTrampled);
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
                 this.trampled = true;
             } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 2) {
                 another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueJacked);
                 another.resetJumpStatus();
+                another.playPlayerEffect && another.playPlayerEffect(Config.playerEffect.jacked);
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
                 this.jacked = true;
             } else if (another.isInvincible()) {
