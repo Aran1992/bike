@@ -28,7 +28,11 @@ function createSceneByData(sceneData, sceneContainer, clickThrough) {
     sceneContainer.ui = {};
     sceneContainer.uiWithID = {};
     let callbackList = [];
-    sceneData.child.forEach(child => sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui, sceneContainer.uiWithID, callbackList)));
+    sceneData.child.forEach(child => {
+        if (!child.label.startsWith("Guide")) {
+            sceneContainer.addChild(createSceneChild(child, sceneContainer, sceneContainer.ui, sceneContainer.uiWithID, callbackList));
+        }
+    });
     callbackList.forEach(callback => callback());
 }
 

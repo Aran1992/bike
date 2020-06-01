@@ -125,7 +125,7 @@ export default class ShopScene extends Scene {
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedCoinList, list);
                 this.goldList.refresh();
-                TDGA.onEvent("广告金币");
+                window.TDGA && TDGA.onEvent("广告金币");
                 EventMgr.dispatchEvent("UpdatePoint");
             }
         });
@@ -185,7 +185,7 @@ export default class ShopScene extends Scene {
                 list.push(button.index);
                 DataMgr.set(DataMgr.receivedDiamondList, list);
                 this.diamondList.refresh();
-                TDGA.onEvent("广告钻石");
+                window.TDGA && TDGA.onEvent("广告钻石");
                 EventMgr.dispatchEvent("UpdatePoint");
             }
         });

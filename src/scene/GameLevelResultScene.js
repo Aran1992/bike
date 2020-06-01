@@ -77,7 +77,7 @@ export default class GameLevelResultScene extends Scene {
             if (success) {
                 this.args.gameScene.doubleReward = true;
                 this.refresh();
-                TDGA.onEvent("广告闯关模式双倍");
+                window.TDGA && TDGA.onEvent("广告闯关模式双倍");
             }
         });
     }

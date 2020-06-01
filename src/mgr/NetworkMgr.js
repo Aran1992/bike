@@ -97,7 +97,7 @@ class NetworkMgr_ {
                 DataMgr.set(DataMgr.headurl, headurl);
                 this.requestSaveSocialData({playername, headurl});
                 successCallback(...args);
-                TDGA.Account({
+                window.TDGA && TDGA.Account({
                     accountId: username,
                     accountType: 1,
                     accountName: username,

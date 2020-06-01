@@ -105,6 +105,9 @@ class DataMgr_ {
         if (DataMgr.get(DataMgr.preparationDataGameLevel) === undefined) {
             this.refreshPreparationRewards(DataMgr.preparationDataGameLevel);
         }
+        if (DataMgr.get(DataMgr.showedGuide) === undefined) {
+            DataMgr.set(DataMgr.showedGuide, []);
+        }
 
         OnlineMgr.start();
         TimeMgr.init();
@@ -382,7 +385,6 @@ class DataMgr_ {
         return Config.gameLevelMode.mapList[map].levelList.length - 1 === level;
     }
 
-
     getPlayerLevel(exp) {
         exp = exp === undefined ? DataMgr.get(DataMgr.exp, 0) : exp;
         for (let i = 0; i < Config.playerLevelNeededExp.length; i++) {
@@ -535,6 +537,20 @@ class DataMgr_ {
         const cur = list[level - 1];
         return cur === undefined ? max : cur;
     }
+
+    hasShowedGuide(guideData) {
+        const data = DataMgr.get(DataMgr.showedGuide);
+        return data.indexOf(GameUtils.getItemProp(guideData, "归属引导")) !== -1;
+    }
+
+    recordGuide(guideData) {
+        const endGuide = GameUtils.getItemProp(guideData, "结束引导");
+        if (endGuide && endGuide === "1") {
+            const data = DataMgr.get(DataMgr.showedGuide);
+            data.push(GameUtils.getItemProp(guideData, "归属引导"));
+            DataMgr.set(DataMgr.showedGuide, data);
+        }
+    }
 }
 
 const DataMgr = new DataMgr_();
@@ -594,5 +610,6 @@ DataMgr.rankCostLevel = "45";
 DataMgr.rankCostNextRefreshTime = "46";
 DataMgr.mapModeWatchedAdTimes = "47";
 DataMgr.throughGuide = "48";
+DataMgr.showedGuide = "49";
 
 export default DataMgr;

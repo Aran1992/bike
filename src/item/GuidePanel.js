@@ -45,7 +45,8 @@ export default class GuidePanel {
                     return true;
                 }
             });
-        } else if (GameUtils.getItemProp(data, "暂停直到用户使用道具") !== "0") {
+        } else if (GameUtils.getItemProp(data, "暂停直到用户使用道具") === "1"
+            || GameUtils.getItemProp(data, "暂停直到用户使用道具") === "2") {
             this.gameMgr.pauseGame();
             this.guidePanelItemIndex = parseInt(GameUtils.getItemProp(data, "暂停直到用户使用道具"));
             if (this.guideMask) {

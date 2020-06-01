@@ -3,6 +3,8 @@ import EventMgr from "../mgr/EventMgr";
 import SceneHelper from "../mgr/SceneHelper";
 import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
+import UIGuidePanel from "../item/UIGuidePanel";
+import DataMgr from "../mgr/DataMgr";
 
 export default class Scene extends Container {
     create(createCallback) {
@@ -28,6 +30,7 @@ export default class Scene extends Container {
         this.stopNormalAnimation();
         this.playAnimation("in", () => {
             this.createNormalAnimation();
+            this.initGuide();
         });
     }
 
@@ -134,5 +137,34 @@ export default class Scene extends Container {
         if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data.animations) {
             return resources[this.sceneFilePath].data.animations.find(animation => animation.name === name);
         }
+    }
+
+    initGuide() {
+        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data) {
+            this.uiGuideList = resources[this.sceneFilePath].data.child.find(child => child.label.startsWith("GuideList"));
+            if (this.uiGuideList) {
+                this.uiGuideList = this.uiGuideList.child;
+                this.showGuide();
+            }
+        }
+    }
+
+    showGuide() {
+        this.uiGuide = this.uiGuideList.pop();
+        if (this.uiGuide) {
+            this.uiGuide.animations = resources[this.sceneFilePath].data.animations;
+            if (!DataMgr.hasShowedGuide(this.uiGuide)) {
+                this.uiGuidePanel = new UIGuidePanel(this.uiGuide, this, this);
+            }
+        }
+    }
+
+    destroyUIGuidePanel() {
+        if (this.uiGuidePanel) {
+            this.uiGuidePanel.destroy();
+            delete this.uiGuidePanel;
+            DataMgr.recordGuide(this.uiGuide);
+        }
+        this.showGuide();
     }
 }

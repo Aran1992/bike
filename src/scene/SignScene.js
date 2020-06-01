@@ -110,7 +110,7 @@ export default class SignScene extends Scene {
                         App.getScene("MainScene").hideSignScene();
                     }
                     this.onShow();
-                    TDGA.onEvent("广告签到", {day: index + 1});
+                    window.TDGA && TDGA.onEvent("广告签到", {day: index + 1});
                     EventMgr.dispatchEvent("UpdatePoint");
                 }
             });

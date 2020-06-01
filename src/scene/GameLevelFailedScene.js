@@ -68,7 +68,7 @@ export default class GameLevelFailedScene extends Scene {
         window.PlatformHelper.showAd(success => {
             if (success) {
                 this.reborn();
-                TDGA.onEvent("广告闯关模式复活");
+                window.TDGA && TDGA.onEvent("广告闯关模式复活");
             }
         });
     }
@@ -105,7 +105,7 @@ export default class GameLevelFailedScene extends Scene {
         this.args.gameScene.rebornTimes++;
         App.hideScene("GameLevelFailedScene");
         EventMgr.dispatchEvent("Reborn");
-        TDGA.onEvent("闯关模式复活");
+        window.TDGA && TDGA.onEvent("闯关模式复活");
     }
 }
 
