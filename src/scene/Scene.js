@@ -64,7 +64,7 @@ export default class Scene extends Container {
     createNormalAnimation() {
         const animation = this.getAnimationConfig("normal");
         if (animation) {
-            this.normalAnimation = new Animation(this, animation, () => this.createNormalAnimation());
+            this.normalAnimation = new Animation(this.getChildByID.bind(this), animation, () => this.createNormalAnimation());
         }
     }
 
