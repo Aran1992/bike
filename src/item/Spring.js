@@ -33,10 +33,25 @@ export default class Spring {
     update() {
         if (this.body === undefined) {
             if (this.gameMgr.isItemXEnterView(this)) {
+                this.scaleFrame = 0;
                 this.createBody();
                 if (this.itemConfig.appearSoundPath && this.itemConfig.appearSoundPath.length > 0) {
                     MusicMgr.playSound(this.itemConfig.appearSoundPath, undefined, this.gameMgr.stepSpeed);
                 }
+            }
+        } else {
+            if (this.itemConfig.scaleRange) {
+                this.scaleFrame += this.gameMgr.stepSpeed;
+                const totalFrame = this.itemConfig.scaleDuration / 1000 * Config.fps * 2;
+                const rate = this.scaleFrame / totalFrame;
+                let percent = rate - Math.floor(rate);
+                let scale;
+                if (percent < 0.5) {
+                    scale = this.itemConfig.scaleRange[0] + (this.itemConfig.scaleRange[1] - this.itemConfig.scaleRange[0]) * percent * 2;
+                } else {
+                    scale = this.itemConfig.scaleRange[0] + (this.itemConfig.scaleRange[1] - this.itemConfig.scaleRange[0]) * (1 - percent) * 2;
+                }
+                this.sprite.scale.set(scale, scale);
             }
         }
     }

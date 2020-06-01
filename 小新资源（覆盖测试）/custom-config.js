@@ -6244,6 +6244,10 @@ Config.item = {
                 bulletTimeValueTrampled: 50,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 50,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-固定的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10020: {
@@ -6367,6 +6371,10 @@ Config.item = {
                 bulletTimeValueTrampled: 50,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 50,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 浮空-固定的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10120: {
@@ -7353,6 +7361,10 @@ Config.item = {
                 contactBikeVelocity: 95,
                 // 出现音效
                 //appearSoundPath: "",
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
         }
     },
