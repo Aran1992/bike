@@ -312,6 +312,7 @@ export default class GameScene extends Scene {
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
             .concat(effectResPathList)
+            .concat(Utils.values(Config.playerEffect).map(config => config.animationJsonPath))
             .concat(bjas);
     }
 
@@ -343,6 +344,7 @@ export default class GameScene extends Scene {
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
         this.world.on("begin-contact", this.onBeginContact.bind(this));
+        this.world.on("end-contact", this.onBeginContact.bind(this));
         this.world.on("pre-solve", this.onPreSolve.bind(this));
 
         this.createBg();
@@ -626,10 +628,35 @@ export default class GameScene extends Scene {
                     this.jumpingAnimationFrames = undefined;
                     this.jumpingAnimationIndex = undefined;
                 }
+                const config = this.jumpCount === 1 ? Config.playerEffect.ground : Config.playerEffect.air;
+                this.playPlayerEffect(config);
+                if (this.followAnimation) {
+                    this.followAnimation.visible = false;
+                }
             }
         } else if (this.gameStatus === "end" && this.startAdjustBikeHeight) {
             this.startY = event.data.global.y;
         }
+    }
+
+    playPlayerEffect(config) {
+        const sprite = new AnimatedSprite(GameUtils.getFrames(config.animationJsonPath, config.animationName));
+        sprite.animationSpeed = config.animationSpeed * this.stepSpeed;
+        sprite.onComplete = () => {
+            Utils.removeItemFromArray(this.animationList, sprite);
+            sprite.destroy();
+        };
+        sprite.loop = false;
+        sprite.play();
+        if (config.followPlayer) {
+            sprite.position.set(config.animationPos[0], config.animationPos[1]);
+            this.bikeOutterContainer.addChild(sprite);
+        } else {
+            sprite.position.set(this.bikeOutterContainer.x + config.animationPos[0],
+                this.bikeOutterContainer.y + config.animationPos[1]);
+            this.underBikeContianer.addChild(sprite);
+        }
+        this.animationList.push(sprite);
     }
 
     onKeydown(event) {
@@ -951,15 +978,24 @@ export default class GameScene extends Scene {
 
         this.effectList = [];
         this.durationEffectTable = {};
+        this.animationList = [];
 
         this.buffIconContainer = this.bikeOutterContainer.addChild(new Container());
         this.buffIconContainer.y = Config.buff.containerY;
         this.buffIconTable = {};
+
+        const animation = Config.playerEffect.follow;
+        this.followAnimation = new AnimatedSprite(GameUtils.getFrames(animation.animationJsonPath, animation.animationName));
+        this.followAnimation.position.set(...animation.animationPos);
+        this.followAnimation.animationSpeed = animation.animationSpeed * this.stepSpeed;
+        this.followAnimation.loop = true;
+        this.followAnimation.play();
+        this.bikeOutterContainer.addChild(this.followAnimation);
+        this.animationList.push(this.followAnimation);
     }
 
     resetBikeStatus() {
-        this.jumpCount = 0;
-        this.jumping = false;
+        this.resetJumpStatus();
 
         this.setContactFatalEdge(false);
 
@@ -1618,6 +1654,9 @@ export default class GameScene extends Scene {
     resetJumpStatus() {
         this.jumping = false;
         this.jumpCount = 0;
+        if (this.followAnimation) {
+            this.followAnimation.visible = true;
+        }
     }
 
     startEffect(type) {
@@ -2195,7 +2234,7 @@ export default class GameScene extends Scene {
         }
     }
 
-    getPlayerLevel(){
+    getPlayerLevel() {
         return DataMgr.getPlayerLevel().level;
     }
 
@@ -2283,6 +2322,9 @@ export default class GameScene extends Scene {
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(true);
         this.bulletTimeLineMgr.enterBulletTime();
+        this.animationList.forEach(animation => {
+            animation.animationSpeed *= this.stepSpeed;
+        });
     }
 
     leaveBulletTime() {
@@ -2296,6 +2338,9 @@ export default class GameScene extends Scene {
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(false);
         this.bulletTimeLineMgr.leaveBulletTime();
+        this.animationList.forEach(animation => {
+            animation.animationSpeed /= this.stepSpeed;
+        });
     }
 
     playBulletTimeFilm(enter) {

@@ -12227,4 +12227,71 @@ Config.guideMode = {
     },
 };
 
+// 玩家的一些动画效果
+Config.playerEffect = {
+    // 地面跳跃
+    ground: {
+        // 动画路径
+        animationJsonPath: "images/bird-animation.json",
+        // 动画名称
+        animationName: "Bird",
+        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+        animationSpeed: 0.25,
+        // 动画偏移
+        animationPos: [0, 0],
+        // 是否跟随玩家
+        followPlayer: 0,
+    },
+    // 空中跳跃
+    air: {
+        // 动画路径
+        animationJsonPath: "images/trap/enm01.json",
+        // 动画名称
+        animationName: "enm01",
+        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+        animationSpeed: 1,
+        // 动画偏移
+        animationPos: [0, 0],
+        // 是否跟随玩家
+        followPlayer: 0,
+    },
+    // 地面移动
+    follow: {
+        // 动画路径
+        animationJsonPath: "images/item/Random.json",
+        // 动画名称
+        animationName: "Random",
+        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+        animationSpeed: 1,
+        // 动画偏移
+        animationPos: [-100, 0],
+    },
+    // 踩
+    trampled: {
+        // 动画路径
+        animationJsonPath: "images/trap/trap_fire.json",
+        // 动画名称
+        animationName: "trap_fire",
+        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+        animationSpeed: 0.5,
+        // 动画偏移
+        animationPos: [-100, 0],
+        // 是否跟随玩家
+        followPlayer: 0,
+    },
+    // 顶
+    jacked: {
+        // 动画路径
+        animationJsonPath: "images/trap/trap_fire.json",
+        // 动画名称
+        animationName: "trap_fire",
+        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+        animationSpeed: 0.5,
+        // 动画偏移
+        animationPos: [-100, 0],
+        // 是否跟随玩家
+        followPlayer: 0,
+    }
+};
+
 export default Config;
