@@ -12141,7 +12141,7 @@ Config.stepTimesEachFrame = 10;
 Config.bulletTime = {
     // 最大值
     maxValue: [
-        700
+        700, 1000, 3000, 5000
     ],
     // 可以使用的最小值
     usableMinValue: 500,
