@@ -22,7 +22,7 @@ export default class LevelGameScene extends StaticGameScene {
         this.mapConfig = Config.gameLevelMode.mapList[mapIndex];
         this.mapScenePath = this.mapConfig.levelList[this.levelIndex];
         super.onShow();
-        TDGA.onEvent("闯关模式");
+        window.TDGA && TDGA.onEvent("闯关模式");
     }
 
     onRestart() {

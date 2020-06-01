@@ -63,7 +63,7 @@ export default class GameOverScene extends Scene {
         window.PlatformHelper.showAd(success => {
             if (success) {
                 this.reborn();
-                TDGA.onEvent("广告无尽模式复活");
+                window.TDGA && TDGA.onEvent("广告无尽模式复活");
             }
         });
     }
@@ -73,7 +73,7 @@ export default class GameOverScene extends Scene {
             if (success) {
                 this.args.gameScene.doubleReward = true;
                 this.refresh();
-                TDGA.onEvent("广告无尽模式双倍");
+                window.TDGA && TDGA.onEvent("广告无尽模式双倍");
             }
         });
     }
@@ -146,7 +146,7 @@ export default class GameOverScene extends Scene {
         this.args.gameScene.rebornTimes++;
         App.hideScene("GameOverScene");
         EventMgr.dispatchEvent("Reborn");
-        TDGA.onEvent("无尽模式复活");
+        window.TDGA && TDGA.onEvent("无尽模式复活");
     }
 }
 

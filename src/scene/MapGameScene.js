@@ -32,7 +32,7 @@ export default class MapGameScene extends StaticGameScene {
             bikeList.splice(index, 1);
         }
         super.onShow();
-        TDGA.onEvent("竞技模式");
+        window.TDGA && TDGA.onEvent("竞技模式");
     }
 
     getResPathList() {

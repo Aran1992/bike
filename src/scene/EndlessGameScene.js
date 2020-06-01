@@ -32,7 +32,7 @@ export default class EndlessGameScene extends GameScene {
         let config = this.sceneConfig.distanceNotice;
         this.nextNoticeDistance = config && config[this.nextDistanceIndex];
         super.onShow();
-        TDGA.onEvent("无尽模式");
+        window.TDGA && TDGA.onEvent("无尽模式");
     }
 
     initEnvironment() {

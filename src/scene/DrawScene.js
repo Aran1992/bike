@@ -68,13 +68,13 @@ export default class DrawScene extends Scene {
         window.PlatformHelper.showAd(success => {
             if (success) {
                 this.startAnimation();
-                TDGA.onEvent("广告扭蛋");
+                window.TDGA && TDGA.onEvent("广告扭蛋");
             }
         });
     }
 
     startAnimation() {
-        TDGA.onEvent("扭蛋");
+        window.TDGA && TDGA.onEvent("扭蛋");
         App.showMask(this.onAnimationEnded.bind(this));
         this.ballImage.visible = true;
         this.ballImage.scale.set(0, 0);

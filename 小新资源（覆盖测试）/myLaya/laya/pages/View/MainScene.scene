@@ -1,14 +1,14 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":21,
-    "selecteID":69,
+    "selectedBox":267,
+    "selecteID":268,
     "searchKey":"Scene",
     "referenceLines":[
         ],
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
-    "maxID":261,
+    "maxID":274,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -53,14 +53,13 @@
             "props":{"width":770,"skin":"images/bg-201.png","left":60,"height":415,"bottom":70},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":231,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":425,"skin":"images/bg-202.png","left":25,"height":265,"bottom":25},
@@ -89,7 +88,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"width":294,"var":"bikeButton","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":25,"height":274,"bottom":25},
@@ -102,7 +100,6 @@
                     "compId":235,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/button-bike-scene.png","centerY":0,"centerX":0},
@@ -116,7 +113,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/bike.png","centerX":0,"bottom":15},
@@ -130,7 +126,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"visible":false,"top":-20,"skin":"images/key_lock-2.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
@@ -145,7 +140,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,redPoint",
                             "props":{"y":0,"x":0,"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
@@ -161,7 +155,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,addtionText",
                     "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":1,"scaleY":1.2,"scaleX":1.2,"left":50,"fontSize":20,"color":"#000000","align":"left"},
@@ -175,7 +168,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":290,"top":40,"skin":"images/bg-231.png","sizeGrid":"20,20,20,20","right":25,"height":57},
@@ -188,7 +180,6 @@
                     "compId":259,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,userNameText",
                             "props":{"x":-41,"var":"userNameText","text":"玩家名字八个中文","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -454,14 +445,13 @@
                     "props":{"var":"endlessModeButton","top":10,"skin":"images/button-11.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
                     "nodeParent":21,
                     "label":"endlessModeButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":29,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Endless.png","centerY":0,"centerX":-20},
@@ -475,7 +465,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"visible":false,"top":-25,"skin":"images/key_lock-2.png","name":"lockedImage","centerX":0},
@@ -497,14 +486,13 @@
                     "props":{"var":"gamelevelModeButton","top":180,"skin":"images/button-12.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
                     "nodeParent":21,
                     "label":"gamelevelModeButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":161,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/LevelMode.png","centerY":20,"centerX":-20},
@@ -525,14 +513,13 @@
                     "props":{"var":"mapModeButton","top":400,"skin":"images/button-13.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":10},
                     "nodeParent":21,
                     "label":"mapModeButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":30,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/Match.png","centerY":10,"centerX":-10},
@@ -546,7 +533,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,lockedImage",
                             "props":{"x":0,"visible":false,"top":-25,"skin":"images/key_lock-2.png","name":"lockedImage","centerX":0},
@@ -1546,14 +1532,13 @@
             "props":{"skin":"images/loading-1.png","name":"exp","left":96,"bottom":10},
             "nodeParent":1,
             "label":"exp",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":167,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expProgress",
                     "props":{"y":0,"x":0,"width":100,"var":"expProgress","skin":"images/loading-2.png","sizeGrid":"0,30,0,30"},
@@ -1569,7 +1554,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,expRate",
                     "props":{"var":"expRate","text":"88888888 / 99999999","strokeColor":"#000000","fontSize":30,"color":"#ffffff","centerY":-2,"centerX":0,"align":"center"},
@@ -1582,6 +1566,105 @@
                     "child":[
                         ]
                 }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "searchKey":"Panel,GuideList",
+            "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"GuideList","height":720},
+            "nodeParent":1,
+            "label":"GuideList",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":267,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Panel",
+                    "searchKey":"Panel,Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0",
+                    "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0","height":720},
+                    "nodeParent":267,
+                    "label":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":268,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,对玩家位置用",
+                            "props":{"visible":false,"top":454,"skin":"images/help-12.png","name":"对玩家位置用","left":304},
+                            "nodeParent":268,
+                            "label":"对玩家位置用",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":269,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image,对左下位置用",
+                            "props":{"visible":false,"skin":"images/help-12.png","name":"对左下位置用","left":0,"bottom":0},
+                            "nodeParent":268,
+                            "label":"对左下位置用",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":270,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"top":110,"skin":"images/bg-421.png","centerX":0},
+                            "nodeParent":268,
+                            "label":"Image",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":271,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"x":0,"text":"${Practice-1}","strokeColor":"#5a7995","stroke":2,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "nodeParent":271,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":272,
+                                    "child":[
+                                        ]
+                                }]
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"top":130,"skin":"images/show-191.png","centerX":350},
+                            "nodeParent":268,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":273,
+                            "child":[
+                                ]
+                        }],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "$LOCKED":false,
             "$HIDDEN":false
         }],
     "animations":[
