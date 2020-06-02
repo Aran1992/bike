@@ -61,7 +61,7 @@ export default class Spring {
         const another = anotherBody.getUserData();
         if (this.gameMgr.isBike(another)) {
             another.resetJumpStatus();
-            anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
+            another.onClickGameContainer && another.onClickGameContainer();
             this.playAnimation("ing");
             this.animation.loop = false;
             this.animation.onComplete = this.onIngAnimationComplete.bind(this);
