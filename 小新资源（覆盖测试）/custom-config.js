@@ -3009,7 +3009,7 @@ Config.endlessMode.sceneList = [
 ];
 
 // 无尽模式复活次数
-Config.endlessMode.rebornTimes = 3;
+Config.endlessMode.rebornTimes = 333;
 
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
 Config.bgY = [0, 0, 256];
@@ -6206,7 +6206,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-固定的-青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10000: {
@@ -6251,7 +6251,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-固定的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10020: {
@@ -6296,7 +6296,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-固定的-黄椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10040: {
@@ -6341,7 +6341,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 浮空-固定的-青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10100: {
@@ -6386,7 +6386,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 浮空-固定的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10120: {
@@ -6431,7 +6431,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 浮空-固定的-黄椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10140: {
@@ -6476,7 +6476,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 浮空-移动的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10110: {
@@ -6521,7 +6521,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-滚动的-小-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
             10200: {
@@ -6566,7 +6566,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-滚动的-大-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
             10220: {
@@ -6611,7 +6611,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-左右跳动的-西兰花（可向下踩踏、可向上跳顶，横向碰触即死）
             10300: {
@@ -6656,7 +6656,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-固定的-红萝卜（可向下踩踏、可向上跳顶，横向碰触即死）
             10400: {
@@ -6701,7 +6701,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-上下移动的-南瓜（可向下踩踏、可向上跳顶，横向碰触即死）（移动轨迹：先上后下）
             10500: {
@@ -6787,7 +6787,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 浮空-固定的-乌云（碰触即死）
             12000: {
@@ -6832,7 +6832,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
             // 地面-固定的-瓦斯（碰触即死）
             12100: {
@@ -7412,7 +7412,7 @@ Config.item = {
                 // 缩放范围
                 scaleRange: [0.95, 1.05],
                 // 完成一次从最小到最大的时间（单位：毫秒）
-                scaleDuration: 500,
+                scaleDuration: 250,
             },
         }
     },
@@ -11007,7 +11007,7 @@ Config.lockSystems = {
 // 闯关模式地图配置
 Config.gameLevelMode = {
     // 闯关模式复活次数
-    rebornTimes: 1,
+    rebornTimes: 111,
     // 大地图列表
     mapList: [
         {
@@ -12336,26 +12336,26 @@ Config.playerEffect = {
     trampled: [
         {
             // 动画路径
-            animationJsonPath: "images/trap/trap_fire.json",
+            animationJsonPath: "images/eff_atk_01.json",
             // 动画名称
-            animationName: "trap_fire",
+            animationName: "eff_atk_01",
             // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-            animationSpeed: 0.5,
+            animationSpeed: 0.2,
             // 动画偏移
-            animationPos: [-100, 0],
+            animationPos: [-100, -40],
         }
     ],
     // 顶
     jacked: [
         {
             // 动画路径
-            animationJsonPath: "images/trap/trap_fire.json",
+            animationJsonPath: "images/eff_atk_01.json",
             // 动画名称
-            animationName: "trap_fire",
+            animationName: "eff_atk_01",
             // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-            animationSpeed: 0.5,
+            animationSpeed: 0.2,
             // 动画偏移
-            animationPos: [-100, 0],
+            animationPos: [-100, -40],
         }
     ]
 };
