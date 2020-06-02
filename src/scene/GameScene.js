@@ -292,6 +292,14 @@ export default class GameScene extends Scene {
         const bca = config.bikeCommonAnimation || Config.bikeCommonAnimation;
         const bjas = Utils.values(config.bikeJumpingAnimation || Config.bikeJumpingAnimation).map(item => item.atlasPath);
         const bsa = config.bikeSprintAnimation || Config.bikeSprintAnimation;
+        const pe = [];
+        Utils.values(Config.playerEffect).forEach(config => {
+            if (config.length) {
+                config.forEach(config => pe.push(config.animationJsonPath));
+            } else {
+                pe.push(config.animationJsonPath);
+            }
+        });
         return [
             Config.finalFlagImagePath,
             Config.goldCoinAniJson,
@@ -312,7 +320,7 @@ export default class GameScene extends Scene {
             .concat(Utils.values(Config.emitterPath))
             .concat(Utils.values(Config.imagePath))
             .concat(effectResPathList)
-            .concat(Utils.values(Config.playerEffect).map(config => config.animationJsonPath))
+            .concat(pe)
             .concat(bjas);
     }
 
