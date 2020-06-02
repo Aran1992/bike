@@ -12298,26 +12298,26 @@ Config.playerEffect = {
     // 地面跳跃
     ground: {
         // 动画路径
-        animationJsonPath: "images/eff_run_02.json",
+        animationJsonPath: "images/eff_jump_01.json",
         // 动画名称
-        animationName: "eff_run_02",
+        animationName: "eff_jump_01",
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.2,
+        animationSpeed: 0.08,
         // 动画偏移
-        animationPos: [-250, -25],
+        animationPos: [-40, -20],
         // 是否跟随玩家
         followPlayer: 0,
     },
     // 空中跳跃
     air: {
         // 动画路径
-        animationJsonPath: "images/eff_run_02.json",
+        animationJsonPath: "images/eff_jump_01_2.json",
         // 动画名称
-        animationName: "eff_run_02",
+        animationName: "eff_jump_01_2",
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.2,
+        animationSpeed: 0.15,
         // 动画偏移
-        animationPos: [-250, -25],
+        animationPos: [-120, 40],
         // 是否跟随玩家
         followPlayer: 0,
     },
