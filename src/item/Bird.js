@@ -142,7 +142,7 @@ export default class Bird {
                 if (another.spring) {
                     another.spring(this.itemConfig.contactBikeVelocity);
                     if (Config.soundPath.trample) {
-                        MusicMgr.playSound(Config.soundPath.trample);
+                        MusicMgr.playSound(Config.soundPath.trample, undefined, this.gameMgr.stepSpeed);
                     }
                 } else {
                     anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
@@ -157,7 +157,7 @@ export default class Bird {
                 if (another.jack) {
                     another.jack(-this.itemConfig.contactBikeVelocity);
                     if (Config.soundPath.jack) {
-                        MusicMgr.playSound(Config.soundPath.jack);
+                        MusicMgr.playSound(Config.soundPath.jack, undefined, this.gameMgr.stepSpeed);
                     }
                 } else {
                     anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
@@ -171,7 +171,7 @@ export default class Bird {
                 const {x, y} = anotherBody.getPosition();
                 this.striked = {bikePos: {x, y}};
                 if (Config.soundPath.strike) {
-                    MusicMgr.playSound(Config.soundPath.strike);
+                    MusicMgr.playSound(Config.soundPath.strike, undefined, this.gameMgr.stepSpeed);
                 }
             } else {
                 another.setContactFatalEdge(true);

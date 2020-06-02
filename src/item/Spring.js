@@ -64,7 +64,7 @@ export default class Spring {
             if (another.spring) {
                 another.spring(this.itemConfig.contactBikeVelocity);
                 if (Config.soundPath.spring) {
-                    MusicMgr.playSound(Config.soundPath.spring);
+                    MusicMgr.playSound(Config.soundPath.spring, undefined, this.gameMgr.stepSpeed);
                 }
             } else {
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
