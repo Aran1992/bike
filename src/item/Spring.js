@@ -63,6 +63,9 @@ export default class Spring {
             another.resetJumpStatus();
             if (another.spring) {
                 another.spring(this.itemConfig.contactBikeVelocity);
+                if (Config.soundPath.spring) {
+                    MusicMgr.playSound(Config.soundPath.spring);
+                }
             } else {
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
             }

@@ -141,6 +141,9 @@ export default class Bird {
                 another.resetJumpStatus();
                 if (another.spring) {
                     another.spring(this.itemConfig.contactBikeVelocity);
+                    if (Config.soundPath.trample) {
+                        MusicMgr.playSound(Config.soundPath.trample);
+                    }
                 } else {
                     anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
                 }
@@ -153,6 +156,9 @@ export default class Bird {
                 another.resetJumpStatus();
                 if (another.jack) {
                     another.jack(-this.itemConfig.contactBikeVelocity);
+                    if (Config.soundPath.jack) {
+                        MusicMgr.playSound(Config.soundPath.jack);
+                    }
                 } else {
                     anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
                 }
