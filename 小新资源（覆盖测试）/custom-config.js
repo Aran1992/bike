@@ -12383,4 +12383,12 @@ Config.playerEffect = {
     ]
 };
 
+// 随机物品动画
+Config.randomItemAnimation = {
+    // 速度
+    speed: 0.25,
+    // 将可能随机到的道具展示几轮
+    times: 2,
+};
+
 export default Config;
