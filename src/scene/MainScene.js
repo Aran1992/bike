@@ -1,7 +1,7 @@
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
-import {AnimatedSprite, resources, Texture} from "../libs/pixi-wrapper";
+import {resources, Texture} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import BikeSprite from "../item/BikeSprite";
 import EventMgr from "../mgr/EventMgr";
