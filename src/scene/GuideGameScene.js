@@ -11,6 +11,7 @@ export default class GuideGameScene extends StaticGameScene {
         this.ui.matchRacetrack.visible = false;
         this.ui.skipBtn.visible = true;
         this.onClick(this.ui.skipBtn, this.onClickSkipButton.bind(this), false, {noControl: true});
+        this.onlyBaseDuration = true;
     }
 
     onShow() {

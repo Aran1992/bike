@@ -1751,7 +1751,7 @@ export default class GameScene extends Scene {
                 MusicMgr.playSound(config.sufferSound, undefined, this.stepSpeed);
             }
         }
-        this.effectRemainFrame[type] = DataMgr.getEffectDuration(this.getBikeID(), type) * Config.fps;
+        this.effectRemainFrame[type] = DataMgr.getEffectDuration(this.getBikeID(), type, this.onlyBaseDuration) * Config.fps;
     }
 
     updateEffect() {
