@@ -195,6 +195,16 @@ export default class Utils {
         return min + Math.floor((max - min + 1) * Math.random());
     }
 
+    static randomList(list) {
+        const newList = [];
+        while (list.length) {
+            const i = Math.floor(Math.random() * list.length);
+            newList.push(list[i]);
+            list.splice(i, 1);
+        }
+        return newList;
+    }
+
     static copyProps(src, dst) {
         for (let key in dst) {
             if (dst.hasOwnProperty(key)) {

@@ -132,19 +132,6 @@ export default class StaticGameScene extends GameScene {
         this.updateRacetrackPlayer();
     }
 
-    randomEffect(player) {
-        let itemRandomTable = this.getItemRandomTableList(player);
-        let weights = [];
-        let effects = [];
-        for (let effect in itemRandomTable) {
-            if (itemRandomTable.hasOwnProperty(effect)) {
-                weights.push(itemRandomTable[effect]);
-                effects.push(effect);
-            }
-        }
-        return effects[Utils.randomWithWeight(weights)];
-    }
-
     isPlayerInScreen(player) {
         return player.bikeOutterContainer.x < Config.designWidth - this.cameraContainer.x;
     }

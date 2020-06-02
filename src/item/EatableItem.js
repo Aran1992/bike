@@ -39,9 +39,7 @@ export default class EatableItem extends EditorItem {
                 if (this.sprite.visible && !this.animation) {
                     MusicMgr.playSound(Config.soundPath.eatRandomItem, undefined, this.gameMgr.stepSpeed);
                     if (this.config.effect === "Random") {
-                        let effect = this.gameMgr.randomEffect(this.gameMgr);
-                        let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
-                        EventMgr.dispatchEvent("AteItem", "PortableItem", effect, texture, this.config.value, this.config.bulletTimeValue);
+                        EventMgr.dispatchEvent("AteItem", "Random");
                     } else {
                         EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture, this.config.value, this.config.bulletTimeValue);
                     }

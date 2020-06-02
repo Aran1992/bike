@@ -178,7 +178,12 @@ export default class GameScene extends Scene {
         this.roadList = [];
         this.itemList = [];
 
-        this.portableItemButtonList.forEach(button => button.children.length === 2 && button.removeChildAt(1));
+        this.portableItemButtonList.forEach(button => {
+            if (button.children.length === 2) {
+                button.removeChildAt(1);
+            }
+            button.randoming = false;
+        });
         this.ui.sealMask.visible = false;
 
         if (Config.enableCameraAutoZoom) {
@@ -698,6 +703,17 @@ export default class GameScene extends Scene {
 
     onAteItem(type, effect, texture, value, bulletTimeValue) {
         switch (type) {
+            case "Random": {
+                let effect = this.randomEffect(this);
+                let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
+                const button = this.portableItemButtonList.find(button => button.children.length < 2 && !button.randoming);
+                button.randoming = true;
+                this.playRandomItemAnimation(button, () => {
+                    button.randoming = false;
+                    this.showPortableItem(effect, texture);
+                });
+                break;
+            }
             case "PortableItem": {
                 this.showPortableItem(effect, texture);
                 break;
@@ -1486,7 +1502,7 @@ export default class GameScene extends Scene {
     onClickPortableItem(i) {
         if (this.gameStatus === "play") {
             let button = this.portableItemButtonList[i];
-            if (button.children.length === 2) {
+            if (button.children.length === 2 && !button.randoming) {
                 if (this.hasEffect("Seal")) {
                     return App.showNotice("Your item are sealed now.");
                 }
@@ -2405,6 +2421,39 @@ export default class GameScene extends Scene {
         this.isSpring = true;
         this.bikeFrame = 0;
         this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, springVelocity));
+    }
+
+    playRandomItemAnimation(button, callback) {
+        let textures = [];
+        for (let i = 0; i < Config.randomItemAnimation.times; i++) {
+            const list = Utils.keys(this.getItemRandomTableList(this))
+                .map(effect => Texture.from(Config.effect[effect].imagePath));
+            textures = textures.concat(Utils.randomList(list));
+        }
+        const sprite = new AnimatedSprite(textures);
+        button.addChild(sprite);
+        sprite.anchor.set(0.5, 0.5);
+        sprite.position.set(button.mywidth / 2, button.myheight / 2);
+        sprite.animationSpeed = Config.randomItemAnimation.speed;
+        sprite.loop = false;
+        sprite.play();
+        sprite.onComplete = () => {
+            sprite.destroy();
+            callback();
+        };
+    }
+
+    randomEffect(player) {
+        let itemRandomTable = this.getItemRandomTableList(player);
+        let weights = [];
+        let effects = [];
+        for (let effect in itemRandomTable) {
+            if (itemRandomTable.hasOwnProperty(effect)) {
+                weights.push(itemRandomTable[effect]);
+                effects.push(effect);
+            }
+        }
+        return effects[Utils.randomWithWeight(weights)];
     }
 }
 
