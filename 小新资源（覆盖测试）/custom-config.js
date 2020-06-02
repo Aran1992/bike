@@ -12288,8 +12288,6 @@ Config.playerEffect = {
         animationSpeed: 0.5,
         // 动画偏移
         animationPos: [-100, 0],
-        // 是否跟随玩家
-        followPlayer: 0,
     },
     // 顶
     jacked: {
@@ -12301,8 +12299,6 @@ Config.playerEffect = {
         animationSpeed: 0.5,
         // 动画偏移
         animationPos: [-100, 0],
-        // 是否跟随玩家
-        followPlayer: 0,
     }
 };
 
