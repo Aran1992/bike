@@ -344,7 +344,6 @@ export default class GameScene extends Scene {
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
         this.world.on("begin-contact", this.onBeginContact.bind(this));
-        this.world.on("end-contact", this.onBeginContact.bind(this));
         this.world.on("pre-solve", this.onPreSolve.bind(this));
 
         this.createBg();
