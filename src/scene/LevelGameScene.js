@@ -36,7 +36,7 @@ export default class LevelGameScene extends StaticGameScene {
 
     onClickPauseButton() {
         if (this.gameStatus === "play") {
-            this.gameLoopFunc = this.pause.bind(this);
+            this.pauseGame();
             this.gameStatus = "pause";
             App.showScene("PauseScene", {
                 gameSceneName: "LevelGameScene",
@@ -44,7 +44,7 @@ export default class LevelGameScene extends StaticGameScene {
                 clickRestartTip: "Are you sure to restart the game? The current game data will be saved automatically after exit."
             });
         } else if (this.gameStatus === "pause") {
-            this.gameLoopFunc = this.play.bind(this);
+            this.resumeGame();
             this.gameStatus = "play";
             App.hideScene("PauseScene");
         }
@@ -78,7 +78,7 @@ export default class LevelGameScene extends StaticGameScene {
     onDead() {
         super.onDead();
         this.deadCompleteTimer = setTimeout(() => {
-            this.gameLoopFunc = this.pause.bind(this);
+            this.pauseGame();
             App.showScene("GameLevelFailedScene", {
                 gameScene: this,
                 distance: this.distance,

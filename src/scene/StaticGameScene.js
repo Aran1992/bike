@@ -138,7 +138,7 @@ export default class StaticGameScene extends GameScene {
 
     settle() {
         this.stopSounds();
-        this.gameLoopFunc = this.pause.bind(this);
+        this.pauseGame();
         let distance = this.distance * GameUtils.getBikeConfig("distancePercent");
         if (this.doubleReward) {
             distance *= 2;
