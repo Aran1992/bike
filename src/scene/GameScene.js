@@ -183,6 +183,7 @@ export default class GameScene extends Scene {
                 button.removeChildAt(1);
             }
             button.randoming = false;
+            button.destroying = false;
         });
         this.ui.sealMask.visible = false;
 
@@ -1507,7 +1508,7 @@ export default class GameScene extends Scene {
     onClickPortableItem(i) {
         if (this.gameStatus === "play") {
             let button = this.portableItemButtonList[i];
-            if (button.children.length === 2 && !button.randoming) {
+            if (button.children.length === 2 && !button.randoming && !button.destroying) {
                 if (this.hasEffect("Seal")) {
                     return App.showNotice("Your item are sealed now.");
                 }
@@ -1560,7 +1561,23 @@ export default class GameScene extends Scene {
                 if (config.useSound) {
                     MusicMgr.playSound(config.useSound, undefined, this.stepSpeed);
                 }
-                button.removeChildAt(1);
+
+                button.destroying = true;
+                const target = button.children[1];
+                const obj = {alpha: 1, scale: 1};
+                // todo 过程管理
+                new TWEEN.Tween(obj)
+                    .to({alpha: 0, scale: Config.useItemAnimation.scale}, Config.useItemAnimation.duration)
+                    .easing(TWEEN.Easing.Quadratic.Out)
+                    .onUpdate(() => {
+                        target.alpha = obj.alpha;
+                        target.scale.set(obj.scale, obj.scale);
+                    })
+                    .onComplete(() => {
+                        target.destroy();
+                        button.destroying = false;
+                    })
+                    .start(performance.now());
             }
         }
     }

@@ -12221,7 +12221,7 @@ Config.bulletTimeTargetVelocity = 10;
 // 每帧进行几次物理计算
 // 次数越多，进入子弹时间之后就能够更精确的限制速度，但是相对的性能消耗越大，建议不超过10次
 // 修改该配置后，自行车的跳跃高度可能会发生变化，请进行检查，并且调整jumpForce为合适的值
-Config.stepTimesEachFrame = 10;
+Config.stepTimesEachFrame = 5;
 
 // 子弹时间相关配置
 Config.bulletTime = {
@@ -12394,6 +12394,14 @@ Config.randomItemAnimation = {
     speed: 0.25,
     // 将可能随机到的道具展示几轮
     times: 2,
+};
+
+// 使用物品动画
+Config.useItemAnimation = {
+    // 持续时间(毫秒)
+    duration: 500,
+    // 最后的缩放倍数
+    scale: 2,
 };
 
 export default Config;
