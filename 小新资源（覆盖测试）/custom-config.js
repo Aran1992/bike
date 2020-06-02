@@ -8305,6 +8305,8 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_invincible_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
+        // 结束时的无敌时间（秒）
+        endInvincibleDuration: 1,
     },
     // 超级无敌冲刺
     Sprint: {
@@ -8324,9 +8326,10 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_super_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
+        // 结束时的无敌时间（秒）
+        endInvincibleDuration: 1,
     },
 };
-
 // 排行榜分数（按照1/2/3/4名往下配置）
 Config.rankScore = [
     1000,
@@ -12268,7 +12271,9 @@ Config.bulletTime = {
         randomOffset: 10,
         // 每帧每条基准线上创建速度线的可能性
         createLineRatePerFrame: 0.01,
-    }
+    },
+    // 结束时的无敌时间（秒）
+    endInvincibleDuration: 1,
 };
 
 // 引导模式

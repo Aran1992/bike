@@ -707,11 +707,13 @@ export default class GameScene extends Scene {
                 let effect = this.randomEffect(this);
                 let texture = resources[Config.effect[effect].imagePath || Config.defaultItemImagePath].texture;
                 const button = this.portableItemButtonList.find(button => button.children.length < 2 && !button.randoming);
-                button.randoming = true;
-                this.playRandomItemAnimation(button, () => {
-                    button.randoming = false;
-                    this.showPortableItem(effect, texture);
-                });
+                if (button) {
+                    button.randoming = true;
+                    this.playRandomItemAnimation(button, () => {
+                        button.randoming = false;
+                        this.showPortableItem(effect, texture);
+                    });
+                }
                 break;
             }
             case "PortableItem": {
@@ -1131,6 +1133,7 @@ export default class GameScene extends Scene {
         }
 
         this.updateEffect();
+        this.updateLittleInvincible();
         this.jumpExtraCountdown -= this.stepSpeed;
         this.updateBuffIcon();
         this.effectList.forEach(effect => effect.update());
@@ -1574,6 +1577,7 @@ export default class GameScene extends Scene {
     }
 
     onDead() {
+        this.leaveInvincible();
         this.leaveBulletTime();
         MusicMgr.playSound(Config.soundPath.die);
         this.gameStatus = "end";
@@ -1820,12 +1824,14 @@ export default class GameScene extends Scene {
             },
             Invincible: {
                 start: () => {
+                    this.leaveInvincible();
                     this.setBikeScale(Config.effect.Invincible.scale);
                     this.removeAllEffects(true);
                 },
                 end: () => {
                     this.setBikeScale(1);
                     this.bikeSprite.alpha = 1;
+                    this.enterInvincible(Config.effect.Invincible.endInvincibleDuration);
                 },
                 update: () => {
                     const light = Math.floor(this.effectRemainFrame.Invincible / Config.effect.Invincible.twinkleInterval) % 2 === 0;
@@ -1834,6 +1840,7 @@ export default class GameScene extends Scene {
             },
             Sprint: {
                 start: () => {
+                    this.leaveInvincible();
                     this.removeAllEffects(true);
                     this.setBikeScale(2, true);
                     this.bikeBody.setKinematic();
@@ -1844,6 +1851,7 @@ export default class GameScene extends Scene {
                     this.setBikeScale(1, true);
                     this.bikeBody.setDynamic();
                     this.bikeFrame = -1;
+                    this.enterInvincible(Config.effect.Sprint.endInvincibleDuration);
                 }
             },
         };
@@ -2187,7 +2195,7 @@ export default class GameScene extends Scene {
     }
 
     isInvincible() {
-        return this.hasEffect("Invincible") || this.hasEffect("Sprint");
+        return this.hasEffect("Invincible") || this.hasEffect("Sprint") || this.littleInvincible;
     }
 
     isBike(gameObject) {
@@ -2269,6 +2277,7 @@ export default class GameScene extends Scene {
             }
         } else {
             this.leaveBulletTime();
+            this.enterInvincible(Config.bulletTime.endInvincibleDuration);
         }
     }
 
@@ -2315,6 +2324,7 @@ export default class GameScene extends Scene {
         this.updateBulletTime(this.bulletTime - Config.bulletTime.reduceValuePerSecond / Config.fps);
         if (this.bulletTime <= 0) {
             this.leaveBulletTime();
+            this.enterInvincible(Config.bulletTime.endInvincibleDuration);
         }
     }
 
@@ -2454,6 +2464,32 @@ export default class GameScene extends Scene {
             }
         }
         return effects[Utils.randomWithWeight(weights)];
+    }
+
+    enterInvincible(duration) {
+        if (this.isInvincible()) {
+            return;
+        }
+        this.littleInvincible = {
+            remainFrames: duration * Config.fps,
+        };
+    }
+
+    leaveInvincible() {
+        delete this.littleInvincible;
+        this.bikeSprite.alpha = 1;
+    }
+
+    updateLittleInvincible() {
+        if (this.littleInvincible) {
+            this.littleInvincible.remainFrames -= this.stepSpeed;
+            if (this.littleInvincible.remainFrames <= 0) {
+                this.leaveInvincible();
+            } else {
+                const light = Math.floor(this.littleInvincible.remainFrames / Config.effect.Invincible.twinkleInterval) % 2 === 0;
+                this.bikeSprite.alpha = light ? 1 : Config.effect.Invincible.twinkleAlpha;
+            }
+        }
     }
 }
 
