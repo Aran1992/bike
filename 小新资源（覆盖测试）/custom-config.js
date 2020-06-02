@@ -97,6 +97,18 @@ Config.bikeJumpingAnimation = {
     },
 };
 
+// 默认的自行车弹跳图集
+Config.bikeSpringAnimation = {
+    // 路径
+    path: "images/trap/jmp_0.json",
+    // 名称
+    name: "jmp_0",
+    // 播放速度
+    speed: 1,
+    // 偏移
+    pos: [0, -30],
+};
+
 // 自行车在场景中显示的尺寸是原图的多大
 Config.bikeScale = 1;
 
@@ -3127,6 +3139,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "images/trap/jmp_0.json",
+            // 名称
+            name: "jmp_0",
+            // 播放速度
+            speed: 1,
+            // 偏移
+            pos: [0, -30],
         },
         "index": 1,
         // 自行车名

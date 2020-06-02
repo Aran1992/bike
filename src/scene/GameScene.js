@@ -292,6 +292,7 @@ export default class GameScene extends Scene {
         const bca = config.bikeCommonAnimation || Config.bikeCommonAnimation;
         const bjas = Utils.values(config.bikeJumpingAnimation || Config.bikeJumpingAnimation).map(item => item.atlasPath);
         const bsa = config.bikeSprintAnimation || Config.bikeSprintAnimation;
+        const bspa = config.bikeSpringAnimation ? config.bikeSpringAnimation.path : Config.bikeSpringAnimation.path;
         const pe = [];
         Utils.values(Config.playerEffect).forEach(config => {
             if (config.length) {
@@ -309,6 +310,7 @@ export default class GameScene extends Scene {
             this.bgmPath,
             bca,
             bsa,
+            bspa,
             Config.bulletTime.filmImagePath,
             Config.bulletTime.lineAnimationPath,
         ]
@@ -610,6 +612,7 @@ export default class GameScene extends Scene {
                 this.bikeBody.setLinearVelocity(Vec2(velocity.x, 0));
                 this.bikeBody.applyLinearImpulse(Vec2(0, this.player.jumpForce.value), this.bikeBody.getPosition());
                 this.jumping = true;
+                this.isSpring = false;
                 this.jumpCount++;
                 this.jumpExtraCountdown = this.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
                 switch (this.jumpCount) {
@@ -637,9 +640,6 @@ export default class GameScene extends Scene {
                 }
                 const config = this.jumpCount === 1 ? Config.playerEffect.ground : Config.playerEffect.air;
                 this.playPlayerEffect(config);
-                if (this.followAnimation) {
-                    this.followAnimation.visible = false;
-                }
             }
         } else if (this.gameStatus === "end" && this.startAdjustBikeHeight) {
             this.startY = event.data.global.y;
@@ -1190,6 +1190,9 @@ export default class GameScene extends Scene {
     }
 
     syncBikeSprite(velocity, bikePhysicsPos) {
+        if (this.followAnimation) {
+            this.followAnimation.visible = false;
+        }
         let bikeRenderPos = GameUtils.physicsPos2renderPos(bikePhysicsPos);
         this.bikeOutterContainer.position.set(bikeRenderPos.x, bikeRenderPos.y);
         if (this.gameStatus === "end") {
@@ -1214,7 +1217,18 @@ export default class GameScene extends Scene {
                     }
                     this.bikeAnimSprite.texture = frame;
                 }
+            } else if (this.isSpring) {
+                const animationConfig = Config.bikeList.find(bike => bike.id === this.getBikeID()).bikeSpringAnimation || Config.bikeSpringAnimation;
+                const frames = GameUtils.getFrames(animationConfig.path, animationConfig.name);
+                this.bikeFrame += this.stepSpeed;
+                const gameFrameEachAnimationFrame = 1 / animationConfig.speed;
+                const frame = Math.floor(this.bikeFrame / gameFrameEachAnimationFrame);
+                this.bikeAnimSprite.texture = frames[frame] || Utils.getLast(frames);
+                this.bikeAnimSprite.position.set(...animationConfig.pos);
             } else {
+                if (this.followAnimation) {
+                    this.followAnimation.visible = true;
+                }
                 if (Config.bikeRotateByMoveDirection) {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
@@ -1663,10 +1677,8 @@ export default class GameScene extends Scene {
 
     resetJumpStatus() {
         this.jumping = false;
+        this.isSpring = false;
         this.jumpCount = 0;
-        if (this.followAnimation) {
-            this.followAnimation.visible = true;
-        }
     }
 
     startEffect(type) {
@@ -2386,6 +2398,13 @@ export default class GameScene extends Scene {
                 });
             })
             .start(performance.now());
+    }
+
+    spring(springVelocity) {
+        this.resetJumpStatus();
+        this.isSpring = true;
+        this.bikeFrame = 0;
+        this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, springVelocity));
     }
 }
 
