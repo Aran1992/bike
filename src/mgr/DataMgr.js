@@ -439,12 +439,14 @@ class DataMgr_ {
         return upgradeIndex;
     }
 
-    getEffectDuration(bikeId, effect) {
+    getEffectDuration(bikeId, effect, onlyBaseDuration) {
         let base = Config.effect[effect].duration;
-        const index = Config.upgradeBike.items.indexOf(effect);
-        if (index !== -1) {
-            const [cur] = DataMgr.getBikeUpgradeItem(bikeId, index);
-            base += cur;
+        if (!onlyBaseDuration) {
+            const index = Config.upgradeBike.items.indexOf(effect);
+            if (index !== -1) {
+                const [cur] = DataMgr.getBikeUpgradeItem(bikeId, index);
+                base += cur;
+            }
         }
         return base;
     }
