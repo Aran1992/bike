@@ -12410,4 +12410,10 @@ Config.useItemAnimation = {
     scale: 2,
 };
 
+// 获得星星动画
+Config.getStarAnimation = {
+    // 持续时间(毫秒)
+    duration: 500,
+};
+
 export default Config;
