@@ -145,6 +145,12 @@ export default class GameScene extends Scene {
 
         this.initBulletTime();
         this.guideMgr = new GuideMgr(this, this.ui.guidePanelContainer);
+
+        for (let i = 0; i < Config.starCount; i++) {
+            const star = this.ui[`star${i}`].children[0];
+            star.anchor.set(0.5, 0.5);
+            star.position.set(star.x + star.width / 2, star.y + star.height / 2);
+        }
     }
 
     onShow() {
@@ -1202,6 +1208,20 @@ export default class GameScene extends Scene {
         this.star = star;
         for (let i = 0; i < Config.starCount; i++) {
             this.ui[`star${i}`].visible = i < this.star;
+        }
+        let target = this.ui[`star${this.star - 1}`];
+        if (target) {
+            target = target.children[0];
+            target.scale.set(0, 0);
+            const obj = {scale: 0};
+            // todo 过程管理
+            new TWEEN.Tween(obj)
+                .to({scale: 1}, 1000)
+                .easing(TWEEN.Easing.Elastic.Out)
+                .onUpdate(() => {
+                    target.scale.set(obj.scale, obj.scale);
+                })
+                .start(performance.now());
         }
     }
 
