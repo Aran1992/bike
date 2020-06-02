@@ -7273,7 +7273,7 @@ Config.item = {
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
                 // 出现音效
-                appearSoundPath: "myLaya/laya/assets/sounds/Sound0316.mp3",
+                appearSoundPath: "myLaya/laya/assets/sounds/SE022.mp3",
                 // 是否能踩
                 isAbleToBeTrampled: 0,
                 // 是否能顶
@@ -11095,12 +11095,12 @@ Config.soundPath = {
     guideCountDown: "myLaya/laya/assets/sounds/SoundSE006.mp3",
     //无尽模式引导倒计时GO音效
     guideStartGo: "myLaya/laya/assets/sounds/SoundSE007.mp3",
-    // 顶音效
-    jack: "myLaya/laya/assets/sounds/SoundSE007.mp3",
-    // 顶音效
-    trample: "myLaya/laya/assets/sounds/SoundSE007.mp3",
-    // 弹音效
-    spring: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 顶蔬菜怪音效
+    jack: "myLaya/laya/assets/sounds/shinchan_057.mp3",
+    // 踩蔬菜怪音效
+    trample: "myLaya/laya/assets/sounds/shinchan_058.mp3",
+    // 弹簧音效
+    spring: "myLaya/laya/assets/sounds/SE011.mp3",
 };
 
 // 无尽模式开始路段长度（单位：像素）
@@ -12786,7 +12786,7 @@ Config.useItemAnimation = {
 // 获得星星动画
 Config.getStarAnimation = {
     // 持续时间(毫秒)
-    duration: 500,
+    duration: 1000,
 };
 
 export default Config;
