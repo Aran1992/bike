@@ -2458,9 +2458,6 @@ export default class GameScene extends Scene {
         this.isJacking = true;
         this.bikeFrame = 0;
         this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, velocity));
-        if (Config.soundPath.jack) {
-            MusicMgr.playSound(Config.soundPath.jack);
-        }
     }
 
     playRandomItemAnimation(button, callback) {
