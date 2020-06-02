@@ -12333,27 +12333,31 @@ Config.playerEffect = {
         animationPos: [-250, -25],
     },
     // 踩
-    trampled: {
-        // 动画路径
-        animationJsonPath: "images/trap/trap_fire.json",
-        // 动画名称
-        animationName: "trap_fire",
-        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.5,
-        // 动画偏移
-        animationPos: [-100, 0],
-    },
+    trampled: [
+        {
+            // 动画路径
+            animationJsonPath: "images/trap/trap_fire.json",
+            // 动画名称
+            animationName: "trap_fire",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.5,
+            // 动画偏移
+            animationPos: [-100, 0],
+        }
+    ],
     // 顶
-    jacked: {
-        // 动画路径
-        animationJsonPath: "images/trap/trap_fire.json",
-        // 动画名称
-        animationName: "trap_fire",
-        // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.5,
-        // 动画偏移
-        animationPos: [-100, 0],
-    }
+    jacked: [
+        {
+            // 动画路径
+            animationJsonPath: "images/trap/trap_fire.json",
+            // 动画名称
+            animationName: "trap_fire",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.5,
+            // 动画偏移
+            animationPos: [-100, 0],
+        }
+    ]
 };
 
 export default Config;
