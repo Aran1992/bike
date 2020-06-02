@@ -61,7 +61,12 @@ export default class Spring {
         const another = anotherBody.getUserData();
         if (this.gameMgr.isBike(another)) {
             another.resetJumpStatus();
-            another.onClickGameContainer && another.onClickGameContainer();
+            if (another.spring) {
+                another.spring(this.itemConfig.contactBikeVelocity);
+            } else {
+                anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
+            }
+            another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueTrampled);
             this.playAnimation("ing");
             this.animation.loop = false;
             this.animation.onComplete = this.onIngAnimationComplete.bind(this);

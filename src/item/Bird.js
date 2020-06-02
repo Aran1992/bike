@@ -148,8 +148,6 @@ export default class Bird {
                 if (another.playPlayerEffect) {
                     Config.playerEffect.trampled.forEach(config => another.playPlayerEffect(config, this.sprite));
                 }
-                another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueTrampled);
-                another.onClickGameContainer && another.onClickGameContainer();
                 this.trampled = true;
             } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 2) {
                 another.resetJumpStatus();
