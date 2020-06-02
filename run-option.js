@@ -23,5 +23,7 @@ const RunOption = {
     openAllLevel: 0,
     // 强制显示新手引导 0表现不进行控制，1表示每次都会显示，2表现每次都不会显示
     forceShowBeginnerGuide: 0,
+    // 强制显示界面引导 0表现不进行控制，1表示每次都会显示，2表现每次都不会显示
+    forceShowUIGuide: 0,
 };
 export default RunOption;
