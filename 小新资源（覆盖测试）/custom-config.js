@@ -10748,6 +10748,8 @@ Config.soundPath = {
     trample: "myLaya/laya/assets/sounds/SoundSE007.mp3",
     // 弹音效
     spring: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 无敌撞开物体音效
+    strike: "myLaya/laya/assets/sounds/SoundSE007.mp3",
 };
 
 // 无尽模式开始路段长度（单位：像素）

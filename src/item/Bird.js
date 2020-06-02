@@ -170,6 +170,9 @@ export default class Bird {
             } else if (another.isInvincible()) {
                 const {x, y} = anotherBody.getPosition();
                 this.striked = {bikePos: {x, y}};
+                if (Config.soundPath.strike) {
+                    MusicMgr.playSound(Config.soundPath.strike);
+                }
             } else {
                 another.setContactFatalEdge(true);
             }
