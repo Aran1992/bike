@@ -639,7 +639,7 @@ export default class GameScene extends Scene {
         }
     }
 
-    playPlayerEffect(config) {
+    playPlayerEffect(config, target) {
         const sprite = new AnimatedSprite(GameUtils.getFrames(config.animationJsonPath, config.animationName));
         sprite.animationSpeed = config.animationSpeed * this.stepSpeed;
         sprite.onComplete = () => {
@@ -648,7 +648,10 @@ export default class GameScene extends Scene {
         };
         sprite.loop = false;
         sprite.play();
-        if (config.followPlayer) {
+        if (target) {
+            sprite.position.set(target.x + config.animationPos[0], target.y + config.animationPos[1]);
+            this.underBikeContianer.addChild(sprite);
+        } else if (config.followPlayer) {
             sprite.position.set(config.animationPos[0], config.animationPos[1]);
             this.bikeOutterContainer.addChild(sprite);
         } else {

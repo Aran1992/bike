@@ -139,14 +139,14 @@ export default class Bird {
         if (this.gameMgr.isBike(another)) {
             if (this.isAbleToBeTrampled() && anotherBody.getPosition().y >= this.body.getPosition().y + this.bodyHeight / 2) {
                 another.resetJumpStatus();
-                another.playPlayerEffect && another.playPlayerEffect(Config.playerEffect.trampled);
+                another.playPlayerEffect && another.playPlayerEffect(Config.playerEffect.trampled, this.sprite);
                 another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueTrampled);
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, this.itemConfig.contactBikeVelocity));
                 this.trampled = true;
             } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 2) {
                 another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueJacked);
                 another.resetJumpStatus();
-                another.playPlayerEffect && another.playPlayerEffect(Config.playerEffect.jacked);
+                another.playPlayerEffect && another.playPlayerEffect(Config.playerEffect.jacked, this.sprite);
                 anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
                 this.jacked = true;
             } else if (another.isInvincible()) {
