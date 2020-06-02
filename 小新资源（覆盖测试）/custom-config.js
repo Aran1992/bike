@@ -6203,6 +6203,10 @@ Config.item = {
                 bulletTimeValueTrampled: 1,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 2,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-固定的-青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10000: {
@@ -6289,6 +6293,10 @@ Config.item = {
                 bulletTimeValueTrampled: 500,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 500,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-固定的-黄椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10040: {
@@ -6330,6 +6338,10 @@ Config.item = {
                 bulletTimeValueTrampled: 1000,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 1000,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 浮空-固定的-青椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10100: {
@@ -6416,6 +6428,10 @@ Config.item = {
                 bulletTimeValueTrampled: 500,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 500,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 浮空-固定的-黄椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10140: {
@@ -6457,6 +6473,10 @@ Config.item = {
                 bulletTimeValueTrampled: 1000,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 1000,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 浮空-移动的-红椒（可向下踩踏、可向上跳顶，横向碰触即死）
             10110: {
@@ -6498,6 +6518,10 @@ Config.item = {
                 bulletTimeValueTrampled: 7,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 8,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-滚动的-小-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
             10200: {
@@ -6539,6 +6563,10 @@ Config.item = {
                 bulletTimeValueTrampled: 50,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 50,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-滚动的-大-西红柿（可向下踩踏、可向上跳顶，横向碰触即死）
             10220: {
@@ -6580,6 +6608,10 @@ Config.item = {
                 bulletTimeValueTrampled: 100,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 100,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-左右跳动的-西兰花（可向下踩踏、可向上跳顶，横向碰触即死）
             10300: {
@@ -6621,6 +6653,10 @@ Config.item = {
                 bulletTimeValueTrampled: 75,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 75,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-固定的-红萝卜（可向下踩踏、可向上跳顶，横向碰触即死）
             10400: {
@@ -6662,6 +6698,10 @@ Config.item = {
                 bulletTimeValueTrampled: 100,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 100,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-上下移动的-南瓜（可向下踩踏、可向上跳顶，横向碰触即死）（移动轨迹：先上后下）
             10500: {
@@ -6744,6 +6784,10 @@ Config.item = {
                 bulletTimeValueTrampled: 30,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 30,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 浮空-固定的-乌云（碰触即死）
             12000: {
@@ -6785,6 +6829,10 @@ Config.item = {
                 bulletTimeValueTrampled: 50,
                 // 被顶获得的子弹时间值
                 bulletTimeValueJacked: 50,
+                // 缩放范围
+                scaleRange: [0.95, 1.05],
+                // 完成一次从最小到最大的时间（单位：毫秒）
+                scaleDuration: 500,
             },
             // 地面-固定的-瓦斯（碰触即死）
             12100: {
@@ -12153,7 +12201,13 @@ Config.stepTimesEachFrame = 10;
 Config.bulletTime = {
     // 最大值
     maxValue: [
-        700, 1000, 3000, 5000
+        700, 710, 720, 730, 740,
+        750, 760, 770, 780, 790,
+        800, 810, 820, 830, 840,
+        850, 860, 870, 880, 890,
+        900, 910, 920, 930, 940,
+        950, 960, 970, 980, 990,
+        1000, 1010, 1020, 1030, 1040
     ],
     // 可以使用的最小值
     usableMinValue: 500,
@@ -12244,39 +12298,39 @@ Config.playerEffect = {
     // 地面跳跃
     ground: {
         // 动画路径
-        animationJsonPath: "images/bird-animation.json",
+        animationJsonPath: "images/eff_run_02.json",
         // 动画名称
-        animationName: "Bird",
+        animationName: "eff_run_02",
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 0.25,
+        animationSpeed: 0.2,
         // 动画偏移
-        animationPos: [0, 0],
+        animationPos: [-250, -25],
         // 是否跟随玩家
         followPlayer: 0,
     },
     // 空中跳跃
     air: {
         // 动画路径
-        animationJsonPath: "images/trap/enm01.json",
+        animationJsonPath: "images/eff_run_02.json",
         // 动画名称
-        animationName: "enm01",
+        animationName: "eff_run_02",
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 1,
+        animationSpeed: 0.2,
         // 动画偏移
-        animationPos: [0, 0],
+        animationPos: [-250, -25],
         // 是否跟随玩家
         followPlayer: 0,
     },
     // 地面移动
     follow: {
         // 动画路径
-        animationJsonPath: "images/item/Random.json",
+        animationJsonPath: "images/eff_run_02.json",
         // 动画名称
-        animationName: "Random",
+        animationName: "eff_run_02",
         // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-        animationSpeed: 1,
+        animationSpeed: 0.2,
         // 动画偏移
-        animationPos: [-100, 0],
+        animationPos: [-250, -25],
     },
     // 踩
     trampled: {
