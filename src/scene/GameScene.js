@@ -1216,7 +1216,7 @@ export default class GameScene extends Scene {
             const obj = {scale: 0};
             // todo 过程管理
             new TWEEN.Tween(obj)
-                .to({scale: 1}, 1000)
+                .to({scale: 1}, Config.getStarAnimation.duration)
                 .easing(TWEEN.Easing.Elastic.Out)
                 .onUpdate(() => {
                     target.scale.set(obj.scale, obj.scale);
