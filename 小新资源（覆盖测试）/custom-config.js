@@ -10742,6 +10742,12 @@ Config.soundPath = {
     guideCountDown: "myLaya/laya/assets/sounds/SoundSE006.mp3",
     //无尽模式引导倒计时GO音效
     guideStartGo: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 顶音效
+    jack: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 顶音效
+    trample: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 弹音效
+    spring: "myLaya/laya/assets/sounds/SoundSE007.mp3",
 };
 
 // 无尽模式开始路段长度（单位：像素）
