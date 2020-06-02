@@ -618,6 +618,7 @@ export default class GameScene extends Scene {
                 this.bikeBody.applyLinearImpulse(Vec2(0, this.player.jumpForce.value), this.bikeBody.getPosition());
                 this.jumping = true;
                 this.isSpring = false;
+                this.isJacking = false;
                 this.jumpCount++;
                 this.jumpExtraCountdown = this.bikeJumpExtraCountdown[this.jumpCount - Config.jumpCommonMaxCount];
                 switch (this.jumpCount) {
@@ -1244,6 +1245,7 @@ export default class GameScene extends Scene {
                 const frame = Math.floor(this.bikeFrame / gameFrameEachAnimationFrame);
                 this.bikeAnimSprite.texture = frames[frame] || Utils.getLast(frames);
                 this.bikeAnimSprite.position.set(...animationConfig.pos);
+            } else if (this.isJacking) {
             } else {
                 if (this.followAnimation) {
                     this.followAnimation.visible = true;
@@ -1698,6 +1700,7 @@ export default class GameScene extends Scene {
     resetJumpStatus() {
         this.jumping = false;
         this.isSpring = false;
+        this.isJacking = false;
         this.jumpCount = 0;
     }
 
@@ -2426,11 +2429,18 @@ export default class GameScene extends Scene {
             .start(performance.now());
     }
 
-    spring(springVelocity) {
+    spring(velocity) {
         this.resetJumpStatus();
         this.isSpring = true;
         this.bikeFrame = 0;
-        this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, springVelocity));
+        this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, velocity));
+    }
+
+    jack(velocity) {
+        this.resetJumpStatus();
+        this.isJacking = true;
+        this.bikeFrame = 0;
+        this.bikeBody.setLinearVelocity(Vec2(this.bikeBody.getLinearVelocity().x, velocity));
     }
 
     playRandomItemAnimation(button, callback) {

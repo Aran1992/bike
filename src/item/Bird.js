@@ -151,7 +151,11 @@ export default class Bird {
                 this.trampled = true;
             } else if (this.isAbleToBeJacked() && anotherBody.getPosition().y <= this.body.getPosition().y - this.bodyHeight / 2) {
                 another.resetJumpStatus();
-                anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
+                if (another.jack) {
+                    another.jack(-this.itemConfig.contactBikeVelocity);
+                } else {
+                    anotherBody.setLinearVelocity(Vec2(anotherBody.getLinearVelocity().x, -this.itemConfig.contactBikeVelocity));
+                }
                 another.addBulletTime && another.addBulletTime(this.itemConfig.bulletTimeValueJacked);
                 if (another.playPlayerEffect) {
                     Config.playerEffect.jacked.forEach(config => another.playPlayerEffect(config, this.sprite));
