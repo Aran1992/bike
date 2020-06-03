@@ -177,6 +177,9 @@ export default class Bird {
                 if (Config.soundPath.strike) {
                     MusicMgr.playSound(Config.soundPath.strike, undefined, this.gameMgr.stepSpeed);
                 }
+                if (another.playPlayerEffect) {
+                    Config.playerEffect.striked.forEach(config => another.playPlayerEffect(config, this.sprite));
+                }
             } else {
                 another.setContactFatalEdge(true);
             }

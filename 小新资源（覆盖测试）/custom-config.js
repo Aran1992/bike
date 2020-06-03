@@ -12766,7 +12766,20 @@ Config.playerEffect = {
             // 动画偏移
             animationPos: [-100, -40],
         }
-    ]
+    ],
+    // 被无敌击飞
+    striked: [
+        {
+            // 动画路径
+            animationJsonPath: "images/eff_atk_01.json",
+            // 动画名称
+            animationName: "eff_atk_01",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.2,
+            // 动画偏移
+            animationPos: [-100, -40],
+        }
+    ],
 };
 
 // 随机物品动画
