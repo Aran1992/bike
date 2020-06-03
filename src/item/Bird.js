@@ -75,7 +75,11 @@ export default class Bird {
     }
 
     update() {
-        if (this.body === undefined) {
+        if (Config.warningAnimation && !this.hasShowedWarning && Math.abs(this.itemConfig.forwardVelocity) > Config.warningAnimation.warningMinVelocity) {
+            if (this.gameMgr.isXEnterView(this.getLeftBorderX() - Config.warningAnimation.warningDistance)) {
+                this.showWarning();
+            }
+        } else if (this.body === undefined) {
             if (this.gameMgr.isItemXEnterView(this)) {
                 this.scaleFrame = 0;
                 this.createBody();
@@ -214,5 +218,10 @@ export default class Bird {
 
     changeSpeed(speed) {
         this.animation.animationSpeed = this.itemConfig.animationSpeed * speed;
+    }
+
+    showWarning() {
+        this.hasShowedWarning = true;
+        this.gameMgr.showWarning(this.sprite);
     }
 }

@@ -39,6 +39,7 @@ export default class GuideGameScene extends StaticGameScene {
     }
 
     gameWin() {
+        this.pauseGame();
         this.gameStatus = "win";
         EventMgr.dispatchEvent("GameWin");
         DataMgr.set(DataMgr.throughGuide, true);

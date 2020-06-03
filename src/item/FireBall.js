@@ -36,7 +36,11 @@ export default class FireBall extends EditorItem {
     }
 
     update() {
-        if (this.body === undefined) {
+        if (Config.warningAnimation && !this.hasShowedWarning) {
+            if (this.gameMgr.isXEnterView(this.getLeftBorderX() - Config.warningAnimation.warningDistance)) {
+                this.showWarning();
+            }
+        } else if (this.body === undefined) {
             if (this.gameMgr.isItemXEnterView(this)) {
                 this.createBody();
             }
@@ -77,5 +81,10 @@ export default class FireBall extends EditorItem {
 
     getLeftBorderX() {
         return this.leftBorderX;
+    }
+
+    showWarning() {
+        this.hasShowedWarning = true;
+        this.gameMgr.showWarning(this.sprite);
     }
 }

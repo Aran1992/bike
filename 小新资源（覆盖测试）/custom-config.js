@@ -7370,15 +7370,15 @@ Config.item = {
         table: {
             1: {
                 // 移动速度（单位：像素, 为正的话是像右移动）
-                velocity: -300
+                velocity: -300,
             },
             30: {
                 // 移动速度（单位：像素, 为正的话是像右移动）
-                velocity: -300
+                velocity: -300,
             },
             103: {
                 // 移动速度（单位：像素, 为正的话是像右移动）
-                velocity: 30
+                velocity: 30,
             },
         }
     },
@@ -12416,6 +12416,17 @@ Config.useItemAnimation = {
 Config.getStarAnimation = {
     // 持续时间(毫秒)
     duration: 500,
+};
+
+Config.warningAnimation = {
+    // 提示图片路径
+    warnSpritePath: "myLaya/laya/assets/images/bg-45.png",
+    // 距离多远出现警告（单位：像素）
+    warningDistance: 2000,
+    // 距离多远警告消失（单位：像素）
+    disWarningDistance: 1000,
+    // 小鸟速度需要大于多少才会出现警告
+    warningMinVelocity: 20,
 };
 
 export default Config;

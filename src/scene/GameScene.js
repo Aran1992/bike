@@ -152,6 +152,8 @@ export default class GameScene extends Scene {
             star.anchor.set(0.5, 0.5);
             star.position.set(star.x + star.width / 2, star.y + star.height / 2);
         }
+
+        this.warningTable = {};
     }
 
     onShow() {
@@ -225,6 +227,8 @@ export default class GameScene extends Scene {
         }, (percent) => {
             App.getScene("LoadingScene").goToPercent(percent);
         }, Config.minLoadingTime * 1000);
+
+        this.clearWarning();
     }
 
     getBikeID() {
@@ -326,6 +330,7 @@ export default class GameScene extends Scene {
             bspa,
             Config.bulletTime.filmImagePath,
             Config.bulletTime.lineAnimationPath,
+            Config.warningAnimation.warnSpritePath,
         ]
             .concat(soundPathList)
             .concat(Utils.values(Config.item.bird.table).map(data => data.animationJsonPath))
@@ -1195,6 +1200,7 @@ export default class GameScene extends Scene {
         }
 
         this.guideMgr.update();
+        this.updateWarning();
     }
 
     pause() {
@@ -1725,9 +1731,13 @@ export default class GameScene extends Scene {
         }
     }
 
+    isXEnterView(x) {
+        return x < -this.cameraContainer.x + Config.designWidth;
+    }
+
     isItemXEnterView(item) {
         if (item.getLeftBorderX) {
-            return item.getLeftBorderX() < -this.cameraContainer.x + Config.designWidth;
+            return this.isXEnterView(item.getLeftBorderX());
         }
     }
 
@@ -2540,6 +2550,47 @@ export default class GameScene extends Scene {
                 this.bikeSprite.alpha = light ? 1 : Config.effect.Invincible.twinkleAlpha;
             }
         }
+    }
+
+    showWarning(item) {
+        const itemY = item.y;
+        if (this.warningTable[itemY] === undefined) {
+            const sprite = Sprite.from(Config.warningAnimation.warnSpritePath);
+            sprite.anchor.set(1, 0.5);
+            const sceneY = this.itemY2sceneY(itemY);
+            sprite.position.set(App.sceneWidth, sceneY);
+            this.addChild(sprite);
+            this.warningTable[itemY] = {
+                sprite,
+                item,
+            };
+        }
+    }
+
+    updateWarning() {
+        for (let y in this.warningTable) {
+            if (this.warningTable.hasOwnProperty(y)) {
+                const warning = this.warningTable[y];
+                if (this.isXEnterView(warning.item.x-Config.warningAnimation.disWarningDistance)) {
+                    warning.sprite.destroy();
+                    delete this.warningTable[y];
+                }
+            }
+        }
+    }
+
+    clearWarning() {
+        for (let y in this.warningTable) {
+            if (this.warningTable.hasOwnProperty(y)) {
+                const warning = this.warningTable[y];
+                warning.sprite.destroy();
+                delete this.warningTable[y];
+            }
+        }
+    }
+
+    itemY2sceneY(itemY) {
+        return itemY + this.cameraContainer.y;
     }
 }
 
