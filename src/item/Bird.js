@@ -27,12 +27,16 @@ export default class Bird {
     createSprite() {
         this.sprite = this.container.addChild(new Sprite());
         this.sprite.part = this;
-        const frames = GameUtils.getFrames(this.itemConfig.animationJsonPath, this.itemConfig.animationName);
+        let animationConfig = this.itemConfig;
+        if (this.gameMgr.stepSpeed !== 1 && this.itemConfig.bulletTimeAnimation) {
+            animationConfig = this.itemConfig.bulletTimeAnimation;
+        }
+        const frames = GameUtils.getFrames(animationConfig.animationJsonPath, animationConfig.animationName);
         this.animation = this.sprite.addChild(new AnimatedSprite(frames));
         this.animation.anchor.set(0.5, 0.5);
         this.animation.scale.set(this.config.props.scaleX, this.config.props.scaleY);
-        this.animation.position.set(...this.itemConfig.animationPos);
-        this.animation.animationSpeed = this.itemConfig.animationSpeed * this.gameMgr.stepSpeed;
+        this.animation.position.set(...animationConfig.animationPos);
+        this.animation.animationSpeed = animationConfig.animationSpeed * this.gameMgr.stepSpeed;
         this.animation.play();
         this.sprite.anchor.set(this.config.props.anchorX || 0, this.config.props.anchorY || 0);
         this.sprite.position.set(this.config.props.x, this.config.props.y);
@@ -221,6 +225,15 @@ export default class Bird {
 
     changeSpeed(speed) {
         this.animation.animationSpeed = this.itemConfig.animationSpeed * speed;
+        if (this.itemConfig.bulletTimeAnimation) {
+            this.updateAnimation(speed === 1 ? this.itemConfig : this.itemConfig.bulletTimeAnimation);
+        }
+    }
+
+    updateAnimation(animationConfig) {
+        this.animation.textures = GameUtils.getFrames(animationConfig.animationJsonPath, animationConfig.animationName);
+        this.animation.position.set(...animationConfig.animationPos);
+        this.animation.animationSpeed = animationConfig.animationSpeed * this.gameMgr.stepSpeed;
     }
 
     showWarning() {

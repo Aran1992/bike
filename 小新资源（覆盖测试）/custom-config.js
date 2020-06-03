@@ -6593,6 +6593,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm01.json",
+                    // 动画名称
+                    animationName: "enm01",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
                 // 实际区域高度（图档比例的0.8）

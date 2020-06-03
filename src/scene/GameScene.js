@@ -299,6 +299,9 @@ export default class GameScene extends Scene {
                                     }
                                 }
                             }
+                            if (item.bulletTimeAnimation && item.bulletTimeAnimation.animationJsonPath && item.bulletTimeAnimation.animationJsonPath.length > 0) {
+                                effectResPathList.push(item.bulletTimeAnimation.animationJsonPath);
+                            }
                         }
                     }
                 }
