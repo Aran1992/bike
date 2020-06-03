@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":81,
+    "selectedBox":21,
+    "selecteID":30,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -432,16 +432,17 @@
             "props":{"width":330,"top":120,"right":50,"height":600},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
-                    "props":{"var":"endlessModeButton","top":10,"skin":"images/button-11.png","runtime":"../laya/assets/sounds/shinchan_097b.mp3","right":10},
+                    "props":{"var":"endlessModeButton","top":10,"skin":"images/button-11.png","runtime":"../laya/assets/sounds/shinchan_168.mp3","right":10},
                     "nodeParent":21,
                     "label":"endlessModeButton",
                     "isOpen":false,
@@ -479,6 +480,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelModeButton",
                     "props":{"var":"gamelevelModeButton","top":180,"skin":"images/button-12.png","runtime":"../laya/assets/sounds/shinchan_168.mp3","right":10},
@@ -505,6 +507,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"var":"mapModeButton","top":400,"skin":"images/button-13.png","runtime":"../laya/assets/sounds/shinchan_168.mp3","right":10},
@@ -545,6 +548,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessHelpButton",
                     "props":{"var":"endlessHelpButton","top":0,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-8},
@@ -559,6 +563,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelHelpButton",
                     "props":{"var":"gamelevelHelpButton","top":210,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-4},
@@ -573,6 +578,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapHelpButton",
                     "props":{"var":"mapHelpButton","top":410,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},

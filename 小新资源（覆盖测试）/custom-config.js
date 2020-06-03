@@ -12657,6 +12657,26 @@ Config.imageText = {
             "9": "myLaya/laya/assets/images/image-text/ranking/ranking_9.png",
         },
     },
+    score: {
+        charWidth: 30,
+        charHeight: 38,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/score/score_number_02_0.png",
+            "1": "myLaya/laya/assets/images/image-text/score/score_number_02_1.png",
+            "2": "myLaya/laya/assets/images/image-text/score/score_number_02_2.png",
+            "3": "myLaya/laya/assets/images/image-text/score/score_number_02_3.png",
+            "4": "myLaya/laya/assets/images/image-text/score/score_number_02_4.png",
+            "5": "myLaya/laya/assets/images/image-text/score/score_number_02_5.png",
+            "6": "myLaya/laya/assets/images/image-text/score/score_number_02_6.png",
+            "7": "myLaya/laya/assets/images/image-text/score/score_number_02_7.png",
+            "8": "myLaya/laya/assets/images/image-text/score/score_number_02_8.png",
+            "9": "myLaya/laya/assets/images/image-text/score/score_number_02_9.png",
+            ",": "myLaya/laya/assets/images/image-text/score/score_number_02_10.png",
+            ".": "myLaya/laya/assets/images/image-text/score/score_number_02_11.png",
+            "%": "myLaya/laya/assets/images/image-text/score/score_number_02_12.png",
+            "?": "myLaya/laya/assets/images/image-text/score/score_number_02_14.png",
+        },
+    },
 };
 
 // 进入子弹时间之后，自行车期望的移动速度（只能够近似，不能够完全等于）
