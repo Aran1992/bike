@@ -100,13 +100,13 @@ Config.bikeJumpingAnimation = {
 // 默认的自行车弹跳图集
 Config.bikeSpringAnimation = {
     // 路径
-    path: "images/trap/jmp_0.json",
+    path: "myLaya/laya/assets/animations/xiaoxin_run2.json",
     // 名称
-    name: "jmp_0",
+    name: "xiaoxin_run",
     // 播放速度
-    speed: 1,
+    speed: 0.2,
     // 偏移
-    pos: [0, -30],
+    pos: [0, -40],
 };
 
 // 自行车在场景中显示的尺寸是原图的多大
@@ -158,7 +158,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -242,7 +242,7 @@ Config.mapList = [
             mainCover: "images/map/stg20/l_stg20Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -326,7 +326,7 @@ Config.mapList = [
             mainCover: "images/map/stg06/l_stg06Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -410,7 +410,7 @@ Config.mapList = [
             mainCover: "images/map/stg04/l_stg04Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -494,7 +494,7 @@ Config.mapList = [
             mainCover: "images/map/stg02/l_stg02Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -578,7 +578,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -662,7 +662,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -746,7 +746,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -830,7 +830,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -914,7 +914,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -998,7 +998,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -1082,7 +1082,7 @@ Config.mapList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2194,7 +2194,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2266,7 +2266,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg20/l_stg20Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2338,7 +2338,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg06/l_stg06Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2410,7 +2410,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg04/l_stg04Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2482,7 +2482,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg02/l_stg02Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2554,7 +2554,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2626,7 +2626,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2698,7 +2698,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2770,7 +2770,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2842,7 +2842,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2914,7 +2914,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -2986,7 +2986,7 @@ Config.endlessMode.sceneList = [
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -3143,13 +3143,13 @@ Config.bikeList = [
         // 自行车弹跳图集
         bikeSpringAnimation: {
             // 路径
-            path: "images/trap/jmp_0.json",
+            path: "myLaya/laya/assets/animations/xiaoxin_run2.json",
             // 名称
-            name: "jmp_0",
+            name: "xiaoxin_run",
             // 播放速度
-            speed: 1,
+            speed: 0.2,
             // 偏移
-            pos: [0, -30],
+            pos: [0, -40],
         },
         "index": 1,
         // 自行车名
@@ -3334,6 +3334,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns1030-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 2,
         // 自行车名
         "name": "Select Bike2",
@@ -3414,6 +3425,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns1010-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 3,
         // 自行车名
@@ -3496,6 +3518,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns1020-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 4,
         // 自行车名
         "name": "Select Bike4",
@@ -3576,6 +3609,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2010-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 5,
         // 自行车名
@@ -3658,6 +3702,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2020-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 6,
         // 自行车名
         "name": "Select Bike6",
@@ -3738,6 +3793,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2030-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 7,
         // 自行车名
@@ -3820,6 +3886,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2040-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 8,
         // 自行车名
         "name": "Select Bike8",
@@ -3900,6 +3977,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2060-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 9,
         // 自行车名
@@ -3982,6 +4070,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2070-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 10,
         // 自行车名
         "name": "Select Bike10",
@@ -4062,6 +4161,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2080-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 11,
         // 自行车名
@@ -4144,6 +4254,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns2090-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 12,
         // 自行车名
         "name": "Select Bike12",
@@ -4224,6 +4345,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns3000-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 13,
         // 自行车名
@@ -4306,6 +4438,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns3010-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 14,
         // 自行车名
         "name": "Select Bike14",
@@ -4386,6 +4529,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns3020-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 15,
         // 自行车名
@@ -4468,6 +4622,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns3030-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 16,
         // 自行车名
         "name": "Select Bike16",
@@ -4548,6 +4713,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5000-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 17,
         // 自行车名
@@ -4630,6 +4806,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5010-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 18,
         // 自行车名
         "name": "Select Bike18",
@@ -4710,6 +4897,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5020-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 19,
         // 自行车名
@@ -4792,6 +4990,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5030-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 20,
         // 自行车名
         "name": "Select Bike20",
@@ -4872,6 +5081,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5040-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 21,
         // 自行车名
@@ -4954,6 +5174,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5050-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 22,
         // 自行车名
         "name": "Select Bike22",
@@ -5034,6 +5265,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5060-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 23,
         // 自行车名
@@ -5116,6 +5358,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5070-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 24,
         // 自行车名
         "name": "Select Bike24",
@@ -5196,6 +5449,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5080-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 25,
         // 自行车名
@@ -5278,6 +5542,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5090-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 26,
         // 自行车名
         "name": "Select Bike26",
@@ -5358,6 +5633,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5100-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 27,
         // 自行车名
@@ -5440,6 +5726,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5110-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 28,
         // 自行车名
         "name": "Select Bike28",
@@ -5520,6 +5817,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5120-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 29,
         // 自行车名
@@ -5602,6 +5910,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5130-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 30,
         // 自行车名
         "name": "Select Bike30",
@@ -5682,6 +6001,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5140-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 31,
         // 自行车名
@@ -5764,6 +6094,17 @@ Config.bikeList = [
                 interval: 5
             },
         },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5150-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
+        },
         "index": 32,
         // 自行车名
         "name": "Select Bike32",
@@ -5844,6 +6185,17 @@ Config.bikeList = [
                 animationName: "xiaoxin_run",
                 interval: 5
             },
+        },
+        // 自行车弹跳图集
+        bikeSpringAnimation: {
+            // 路径
+            path: "myLaya/laya/assets/animations/cosplay/sns5630-2.json",
+            // 名称
+            name: "xiaoxin_run",
+            // 播放速度
+            speed: 0.2,
+            // 偏移
+            pos: [0, -40],
         },
         "index": 33,
         // 自行车名
@@ -6921,7 +7273,7 @@ Config.item = {
                 // 被击飞的旋转速度
                 strikedBirdAngularVelocity: 50,
                 // 出现音效
-                appearSoundPath: "myLaya/laya/assets/sounds/Sound0316.mp3",
+                appearSoundPath: "myLaya/laya/assets/sounds/SE022.mp3",
                 // 是否能踩
                 isAbleToBeTrampled: 0,
                 // 是否能顶
@@ -8306,7 +8658,7 @@ Config.effect = {
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
         // 结束时的无敌时间（秒）
-        endInvincibleDuration: 1,
+        endInvincibleDuration: 2,
     },
     // 超级无敌冲刺
     Sprint: {
@@ -8327,9 +8679,10 @@ Config.effect = {
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
         // 结束时的无敌时间（秒）
-        endInvincibleDuration: 1,
+        endInvincibleDuration: 2,
     },
 };
+
 // 排行榜分数（按照1/2/3/4名往下配置）
 Config.rankScore = [
     1000,
@@ -10742,12 +11095,12 @@ Config.soundPath = {
     guideCountDown: "myLaya/laya/assets/sounds/SoundSE006.mp3",
     //无尽模式引导倒计时GO音效
     guideStartGo: "myLaya/laya/assets/sounds/SoundSE007.mp3",
-    // 顶音效
-    jack: "myLaya/laya/assets/sounds/SoundSE007.mp3",
-    // 顶音效
-    trample: "myLaya/laya/assets/sounds/SoundSE007.mp3",
-    // 弹音效
-    spring: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 顶蔬菜怪音效
+    jack: "myLaya/laya/assets/sounds/shinchan_057.mp3",
+    // 踩蔬菜怪音效
+    trample: "myLaya/laya/assets/sounds/shinchan_058.mp3",
+    // 弹簧音效
+    spring: "myLaya/laya/assets/sounds/SE011.mp3",
     // 无敌撞开物体音效
     strike: "myLaya/laya/assets/sounds/SoundSE007.mp3",
 };
@@ -11068,7 +11421,7 @@ Config.gameLevelMode = {
                 ],
             },
             // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0],
+            horizontalParallaxDepth: [0.9, 0.5, 0],
             // 视差背景系数：上下
             verticalParallaxDepth: [1, 0.9, 0],
             // 背景的Y轴位置
@@ -11132,7 +11485,7 @@ Config.gameLevelMode = {
                 ],
             },
             // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0],
+            horizontalParallaxDepth: [0.9, 0.5, 0],
             // 视差背景系数：上下
             verticalParallaxDepth: [1, 0.9, 0],
             // 背景的Y轴位置
@@ -11196,7 +11549,7 @@ Config.gameLevelMode = {
                 ],
             },
             // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0],
+            horizontalParallaxDepth: [0.9, 0.5, 0],
             // 视差背景系数：上下
             verticalParallaxDepth: [1, 0.9, 0],
             // 背景的Y轴位置
@@ -11260,7 +11613,7 @@ Config.gameLevelMode = {
                 ],
             },
             // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0],
+            horizontalParallaxDepth: [0.9, 0.5, 0],
             // 视差背景系数：上下
             verticalParallaxDepth: [1, 0.9, 0],
             // 背景的Y轴位置
@@ -11324,7 +11677,7 @@ Config.gameLevelMode = {
                 ],
             },
             // 视差背景系数：左右
-            horizontalParallaxDepth: [0.9, 0.8, 0],
+            horizontalParallaxDepth: [0.9, 0.5, 0],
             // 视差背景系数：上下
             verticalParallaxDepth: [1, 0.9, 0],
             // 背景的Y轴位置
@@ -12229,7 +12582,7 @@ Config.bulletTimeTargetVelocity = 10;
 // 每帧进行几次物理计算
 // 次数越多，进入子弹时间之后就能够更精确的限制速度，但是相对的性能消耗越大，建议不超过10次
 // 修改该配置后，自行车的跳跃高度可能会发生变化，请进行检查，并且调整jumpForce为合适的值
-Config.stepTimesEachFrame = 5;
+Config.stepTimesEachFrame = 10;
 
 // 子弹时间相关配置
 Config.bulletTime = {
@@ -12281,7 +12634,7 @@ Config.bulletTime = {
         createLineRatePerFrame: 0.01,
     },
     // 结束时的无敌时间（秒）
-    endInvincibleDuration: 1,
+    endInvincibleDuration: 2,
 };
 
 // 引导模式
@@ -12308,7 +12661,7 @@ Config.guideMode = {
             mainCover: "images/map/stg40/l_stg40Map.png",
         },
         // 视差背景系数：左右
-        horizontalParallaxDepth: [0.9, 0.8, 0],
+        horizontalParallaxDepth: [0.9, 0.5, 0],
         // 视差背景系数：上下
         verticalParallaxDepth: [1, 0.9, 0],
         // 背景的Y轴位置
@@ -12322,7 +12675,7 @@ Config.guideMode = {
         // 跳跃爆发力（基础：250）
         jumpForce: 250,
         // BGM路径
-        bgmPath: "myLaya/laya/assets/sounds/BGM002.mp3",
+        bgmPath: "myLaya/laya/assets/sounds/BGM003.mp3",
         itemRandomTable: {
             Magnet: 1,
         }
@@ -12379,6 +12732,26 @@ Config.playerEffect = {
             animationSpeed: 0.2,
             // 动画偏移
             animationPos: [-100, -40],
+        },
+        {
+            // 动画路径
+            animationJsonPath: "images/eff_atk_02.json",
+            // 动画名称
+            animationName: "eff_atk_02",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.1,
+            // 动画偏移
+            animationPos: [-140, -130],
+        },
+        {
+            // 动画路径
+            animationJsonPath: "images/eff_atk_03.json",
+            // 动画名称
+            animationName: "eff_atk_03",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.1,
+            // 动画偏移
+            animationPos: [-100, -200],
         }
     ],
     // 顶
@@ -12399,7 +12772,7 @@ Config.playerEffect = {
 // 随机物品动画
 Config.randomItemAnimation = {
     // 速度
-    speed: 0.25,
+    speed: 0.2,
     // 将可能随机到的道具展示几轮
     times: 2,
 };
@@ -12407,7 +12780,7 @@ Config.randomItemAnimation = {
 // 使用物品动画
 Config.useItemAnimation = {
     // 持续时间(毫秒)
-    duration: 500,
+    duration: 400,
     // 最后的缩放倍数
     scale: 2,
 };
@@ -12415,7 +12788,7 @@ Config.useItemAnimation = {
 // 获得星星动画
 Config.getStarAnimation = {
     // 持续时间(毫秒)
-    duration: 500,
+    duration: 1000,
 };
 
 Config.warningAnimation = {
