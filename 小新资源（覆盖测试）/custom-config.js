@@ -6596,9 +6596,9 @@ Config.item = {
                 // 子弹时间时显示的动画
                 bulletTimeAnimation: {
                     // 动画路径
-                    animationJsonPath: "images/trap/enm04.json",
+                    animationJsonPath: "images/trap/enm01-2.json",
                     // 动画名称
-                    animationName: "enm04",
+                    animationName: "enm01-2",
                     // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                     animationSpeed: 1,
                     // 动画偏移
@@ -6649,6 +6649,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm04-2.json",
+                    // 动画名称
+                    animationName: "enm04-2",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
                 // 实际区域高度（图档比例的0.8）
@@ -6694,6 +6705,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm05-2.json",
+                    // 动画名称
+                    animationName: "enm05-2",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 87,
                 // 实际区域高度（图档比例的0.8）
@@ -6739,6 +6761,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm03-2.json",
+                    // 动画名称
+                    animationName: "enm03-2",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
                 // 实际区域高度（图档比例的0.8）
@@ -6784,6 +6817,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm06-2.json",
+                    // 动画名称
+                    animationName: "enm06-2",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
                 // 实际区域高度（图档比例的0.8）
@@ -6829,6 +6873,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm07-2.json",
+                    // 动画名称
+                    animationName: "enm07-2",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 96,
                 // 实际区域高度（图档比例的0.8）
@@ -7054,6 +7109,17 @@ Config.item = {
                 animationSpeed: 1,
                 // 动画偏移
                 animationPos: [0, 0],
+                // 子弹时间时显示的动画
+                bulletTimeAnimation: {
+                    // 动画路径
+                    animationJsonPath: "images/trap/enm02-2.json",
+                    // 动画名称
+                    animationName: "enm02-2",
+                    // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                    animationSpeed: 1,
+                    // 动画偏移
+                    animationPos: [0, 0],
+                },
                 // 实际区域宽度（图档比例的0.8）
                 bodyWidth: 73,
                 // 实际区域高度（图档比例的0.8）
@@ -11113,9 +11179,9 @@ Config.soundPath = {
     // 弹簧音效
     spring: "myLaya/laya/assets/sounds/SE011.mp3",
     // 无敌撞开物体音效
-    strike: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    strike: "myLaya/laya/assets/sounds/shinchan_056.mp3",
     // 小鸟/火球警告音效
-    warning: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    warning: "myLaya/laya/assets/sounds/SE021.mp3",
 };
 
 // 无尽模式开始路段长度（单位：像素）
@@ -12734,7 +12800,7 @@ Config.playerEffect = {
         // 动画偏移
         animationPos: [-250, -25],
     },
-    // 踩
+    // 被踩的NPC
     trampled: [
         {
             // 动画路径
@@ -12767,7 +12833,7 @@ Config.playerEffect = {
             animationPos: [-100, -200],
         }
     ],
-    // 顶
+    // 被顶的NPC
     jacked: [
         {
             // 动画路径
@@ -12780,7 +12846,7 @@ Config.playerEffect = {
             animationPos: [-100, -40],
         }
     ],
-    // 被无敌击飞
+    // 被无敌击飞的NPC
     striked: [
         {
             // 动画路径
@@ -12791,19 +12857,29 @@ Config.playerEffect = {
             animationSpeed: 0.2,
             // 动画偏移
             animationPos: [-100, -40],
+        },
+        {
+            // 动画路径
+            animationJsonPath: "images/eff_atk_02.json",
+            // 动画名称
+            animationName: "eff_atk_02",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.1,
+            // 动画偏移
+            animationPos: [-140, -130],
         }
     ],
     // 子弹时间内玩家身上的特效
     bulletTime: [
         {
             // 动画路径
-            animationJsonPath: "images/eff_atk_01.json",
+            animationJsonPath: "images/eff_sweat_01.json",
             // 动画名称
-            animationName: "eff_atk_01",
+            animationName: "eff_sweat_01",
             // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
-            animationSpeed: 0.2,
+            animationSpeed: 0.5,
             // 动画偏移
-            animationPos: [-100, -40],
+            animationPos: [-120, -120],
             // 是否跟随玩家
             followPlayer: 1,
             // 是否循环播放
@@ -12836,13 +12912,13 @@ Config.getStarAnimation = {
 
 Config.warningAnimation = {
     // 提示图片路径
-    warnSpritePath: "myLaya/laya/assets/images/bg-45.png",
-    // 距离多远出现警告（单位：像素）
-    warningDistance: 2000,
-    // 距离多远警告消失（单位：像素）
-    disWarningDistance: 1000,
-    // 小鸟速度需要大于多少才会出现警告
-    warningMinVelocity: 20,
+    warnSpritePath: "myLaya/laya/assets/images/warn-1.png",
+    // 距离目标多远出现，出现警告（单位：像素）
+    warningDistance: 700,
+    // 距离目标多远出现，警告消失（单位：像素）
+    disWarningDistance: 100,
+    // 小鸟移动前进速度需要大于多少才会出现警告
+    warningMinVelocity: 29,
 };
 
 Config.addExtraScoreAnimation = {

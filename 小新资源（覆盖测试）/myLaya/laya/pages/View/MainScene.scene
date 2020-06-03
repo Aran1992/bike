@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":267,
-    "selecteID":268,
+    "selectedBox":271,
+    "selecteID":272,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -1588,55 +1588,30 @@
                     "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0","height":720},
                     "nodeParent":267,
                     "label":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":268,
                     "child":[
                         {
-                            "type":"Image",
-                            "searchKey":"Image,对玩家位置用",
-                            "props":{"visible":false,"top":454,"skin":"images/help-12.png","name":"对玩家位置用","left":304},
-                            "nodeParent":268,
-                            "label":"对玩家位置用",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":269,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,对左下位置用",
-                            "props":{"visible":false,"skin":"images/help-12.png","name":"对左下位置用","left":0,"bottom":0},
-                            "nodeParent":268,
-                            "label":"对左下位置用",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":270,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"top":110,"skin":"images/bg-421.png","centerX":0},
+                            "props":{"width":575,"top":134,"skin":"images/bg-192.png","height":249,"centerX":-102},
                             "nodeParent":268,
                             "label":"Image",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":271,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"x":0,"text":"${Practice-1}","strokeColor":"#5a7995","stroke":2,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"x":0,"text":"${Guide-1-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":271,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -1648,9 +1623,10 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"top":130,"skin":"images/show-191.png","centerX":350},
+                            "props":{"skin":"images/show-191.png","centerY":-102,"centerX":-481},
                             "nodeParent":268,
                             "label":"Image",
                             "isOpen":true,
