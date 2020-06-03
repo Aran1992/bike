@@ -838,7 +838,7 @@ export default class GameScene extends Scene {
         });
     }
 
-    createPart(data) {
+    createPart(data, chainData) {
         let type = GameUtils.getItemType(data);
         switch (type) {
             case "Road": {
@@ -921,7 +921,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "EatableItem": {
-                this.itemList.push(new EatableItem(this, this.underBikeContianer, this.world, data));
+                this.itemList.push(new EatableItem(this, this.underBikeContianer, this.world, data, chainData));
                 break;
             }
             case "Sprite": {
@@ -938,6 +938,17 @@ export default class GameScene extends Scene {
             }
             case "Guide": {
                 this.guideMgr.push(data);
+                break;
+            }
+            case "Chain": {
+                let chainData = {
+                    count: 0,
+                    value: 0
+                };
+                data.child.forEach(child => {
+                    child.animations = data.animations;
+                    this.createPart(child, chainData);
+                });
                 break;
             }
             default : {

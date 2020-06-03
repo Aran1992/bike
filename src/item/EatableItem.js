@@ -4,15 +4,19 @@ import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
 import EventMgr from "../mgr/EventMgr";
 import Utils from "../mgr/Utils";
-import {resources} from "../libs/pixi-wrapper";
 import MusicMgr from "../mgr/MusicMgr";
 import TWEEN from "@tweenjs/tween.js";
 
 export default class EatableItem extends EditorItem {
-    constructor(gameMgr, parent, world, config) {
+    constructor(gameMgr, parent, world, config, chainData) {
         super("EatableItem", gameMgr, parent, world, config);
 
         this.isHelpful = this.config.portable ? true : Config.effect[this.config.effect].isHelpful;
+        if (chainData) {
+            this.chainData = chainData;
+            this.chainData.count++;
+            this.chainData.value += this.config.value;
+        }
 
         this.onCreate();
     }
@@ -59,6 +63,12 @@ export default class EatableItem extends EditorItem {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible && !this.animation) {
                     EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value, this.config.bulletTimeValue);
+                    if (this.chainData) {
+                        this.chainData.count--;
+                        if (this.chainData.count === 0) {
+                            this.gameMgr.addExtraScore(this.config.effect, this.chainData.value);
+                        }
+                    }
                     this.playEatAnimation();
                 }
             } else if (this.gameMgr.chtable.enemy.is(anotherFixture)) {
