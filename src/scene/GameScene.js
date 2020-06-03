@@ -2440,6 +2440,9 @@ export default class GameScene extends Scene {
         if (this.stepSpeed === 1) {
             return;
         }
+        this.animationList.forEach(animation => {
+            animation.animationSpeed /= this.stepSpeed;
+        });
         this.stepSpeed = 1;
         if (MusicMgr.bgmSource) {
             MusicMgr.bgmSource.playbackRate.value = this.stepSpeed;
@@ -2447,9 +2450,6 @@ export default class GameScene extends Scene {
         this.itemList.forEach(item => item.changeSpeed && item.changeSpeed(this.stepSpeed));
         this.playBulletTimeFilm(false);
         this.bulletTimeLineMgr.leaveBulletTime();
-        this.animationList.forEach(animation => {
-            animation.animationSpeed /= this.stepSpeed;
-        });
         this.bulletEffectList.forEach(effect => effect.visible = false);
     }
 
