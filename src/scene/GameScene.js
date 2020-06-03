@@ -2575,7 +2575,7 @@ export default class GameScene extends Scene {
             sprite.anchor.set(1, 0.5);
             const sceneY = this.itemY2sceneY(itemY);
             sprite.position.set(App.sceneWidth, sceneY);
-            this.addChild(sprite);
+            this.addChildAt(sprite, 1);
             this.warningTable[itemY] = {
                 sprite,
                 item,
