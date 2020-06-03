@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":310,
-    "selecteID":316,
+    "selectedBox":16,
+    "selecteID":265,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":322,
+    "maxID":323,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -36,13 +36,14 @@
             "props":{"width":750,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","name":"Panel","height":660,"centerY":30,"centerX":0},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":16,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":140,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","right":20,"left":20,"bottom":130},
@@ -57,6 +58,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,returnButton",
                     "props":{"var":"returnButton","top":-25,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-25},
@@ -70,6 +72,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":106,"top":-50,"skin":"images/bg-301.png","scaleY":0.7,"scaleX":0.7,"centerX":0},
@@ -97,6 +100,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,1",
                     "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50,","name":"1","left":30,"height":370},
@@ -249,6 +253,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,2",
                     "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","name":"2","height":370,"centerX":0},
@@ -397,6 +402,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,3",
                     "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","right":30,"name":"3","height":370},
@@ -544,6 +550,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,coinPanel",
                     "props":{"var":"coinPanel","centerX":-1190,"bottom":85},
@@ -610,18 +617,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,startButton",
-                    "props":{"width":254,"var":"startButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":81,"centerX":0,"bottom":45},
+                    "props":{"width":254,"var":"startButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/shinchan_049.mp3","height":81,"centerX":0,"bottom":45},
                     "nodeParent":16,
                     "label":"startButton",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":265,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/START.png","centerY":-5,"centerX":0},
@@ -636,6 +645,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapAdButton",
                     "props":{"width":254,"var":"mapAdButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":81,"centerX":0,"bottom":45},
@@ -677,6 +687,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeImage",
                     "props":{"x":0,"var":"endlessModeImage","top":70,"skin":"images/english/Endless-3.png","centerX":0},
@@ -691,6 +702,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeImage",
                     "props":{"x":0,"var":"mapModeImage","top":70,"skin":"images/english/Match-3.png","centerX":0},
@@ -706,6 +718,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,gameLevelTitle",
                     "props":{"var":"gameLevelTitle","top":70,"text":"闯关模式地图名","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerX":0},
@@ -720,6 +733,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,firstTimePanel",
                     "props":{"width":250,"var":"firstTimePanel","skin":"images/bg-201.png","sizeGrid":"50,50,50,50","left":-250,"height":580,"bottom":0},
@@ -903,55 +917,30 @@
                     "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:1//蒙版:1//显示直到用户点击:0//显示直到点击控件:startButton//显示时长:0","height":720},
                     "nodeParent":310,
                     "label":"Guide//归属引导:首次闯关模式//结束引导:1//蒙版:1//显示直到用户点击:0//显示直到点击控件:startButton//显示时长:0",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":316,
                     "child":[
                         {
-                            "type":"Image",
-                            "searchKey":"Image,对玩家位置用",
-                            "props":{"visible":false,"top":454,"skin":"images/help-12.png","name":"对玩家位置用","left":304},
-                            "nodeParent":316,
-                            "label":"对玩家位置用",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":317,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,对左下位置用",
-                            "props":{"visible":false,"skin":"images/help-12.png","name":"对左下位置用","left":0,"bottom":0},
-                            "nodeParent":316,
-                            "label":"对左下位置用",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":318,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"top":110,"skin":"images/bg-421.png","centerX":0},
+                            "props":{"width":520,"skin":"images/bg-192.png","height":226,"centerY":0,"centerX":0},
                             "nodeParent":316,
                             "label":"Image",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":319,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"x":0,"text":"${Practice-1}","strokeColor":"#5a7995","stroke":2,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"x":0,"text":"${Guide-3-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":319,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -963,9 +952,10 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"top":130,"skin":"images/show-191.png","centerX":350},
+                            "props":{"skin":"images/show-171.png","centerY":0,"centerX":-300},
                             "nodeParent":316,
                             "label":"Image",
                             "isOpen":true,
@@ -973,6 +963,21 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":321,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,手指点击动画",
+                            "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"rotation":-45,"name":"手指点击动画","centerY":340,"centerX":180},
+                            "nodeParent":316,
+                            "label":"手指点击动画",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":322,
                             "child":[
                                 ]
                         }],
@@ -985,8 +990,62 @@
     "animations":[
         {
             "nodes":[
-                ],
-            "name":"ani1",
+                {
+                    "target":322,
+                    "keyframes":{
+                        "scaleY":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":322,
+                                "key":"scaleY",
+                                "index":0
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":322,
+                                "key":"scaleY",
+                                "index":5
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":322,
+                                "key":"scaleY",
+                                "index":10
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":322,
+                                "key":"scaleX",
+                                "index":0
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":322,
+                                "key":"scaleX",
+                                "index":5
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":322,
+                                "key":"scaleX",
+                                "index":10
+                            }]
+                    }
+                }],
+            "name":"normal",
             "id":1,
             "frameRate":24,
             "action":0

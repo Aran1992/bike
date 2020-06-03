@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":255,
-    "selecteID":256,
+    "selectedBox":1,
+    "selecteID":262,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
-    "maxID":262,
+    "maxID":263,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -570,55 +570,30 @@
                     "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:glBtn1//显示时长:0","height":720},
                     "nodeParent":255,
                     "label":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:glBtn1//显示时长:0",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":256,
                     "child":[
                         {
-                            "type":"Image",
-                            "searchKey":"Image,对玩家位置用",
-                            "props":{"visible":false,"top":454,"skin":"images/help-12.png","name":"对玩家位置用","left":304},
-                            "nodeParent":256,
-                            "label":"对玩家位置用",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":257,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,对左下位置用",
-                            "props":{"visible":false,"skin":"images/help-12.png","name":"对左下位置用","left":0,"bottom":0},
-                            "nodeParent":256,
-                            "label":"对左下位置用",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":258,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"top":110,"skin":"images/bg-421.png","centerX":0},
+                            "props":{"width":520,"top":150,"skin":"images/bg-192.png","height":226,"centerX":0},
                             "nodeParent":256,
                             "label":"Image",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":259,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"x":0,"text":"${Practice-1}","strokeColor":"#5a7995","stroke":2,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
+                                    "props":{"text":"${Guide-2-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":259,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -630,9 +605,10 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"top":130,"skin":"images/show-191.png","centerX":350},
+                            "props":{"top":160,"skin":"images/show-181.png","centerX":300},
                             "nodeParent":256,
                             "label":"Image",
                             "isOpen":true,
@@ -640,6 +616,21 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":261,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image,手指点击动画",
+                            "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"name":"手指点击动画","centerY":0,"centerX":-300},
+                            "nodeParent":256,
+                            "label":"手指点击动画",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":262,
                             "child":[
                                 ]
                         }],
@@ -652,8 +643,62 @@
     "animations":[
         {
             "nodes":[
-                ],
-            "name":"ani1",
+                {
+                    "target":262,
+                    "keyframes":{
+                        "scaleY":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":262,
+                                "key":"scaleY",
+                                "index":0
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":262,
+                                "key":"scaleY",
+                                "index":5
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":262,
+                                "key":"scaleY",
+                                "index":10
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":262,
+                                "key":"scaleX",
+                                "index":0
+                            },
+                            {
+                                "value":0.9,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":262,
+                                "key":"scaleX",
+                                "index":5
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":262,
+                                "key":"scaleX",
+                                "index":10
+                            }]
+                    }
+                }],
+            "name":"normal",
             "id":1,
             "frameRate":24,
             "action":0

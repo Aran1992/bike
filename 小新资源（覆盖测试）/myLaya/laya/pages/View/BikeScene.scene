@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":53,
-    "selecteID":272,
+    "selectedBox":1,
+    "selecteID":53,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -48,7 +48,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,selectBikeButton",
-            "props":{"width":200,"var":"selectBikeButton","top":5,"skin":"images/button-41.png","runtime":"../laya/assets/sounds/SE312.mp3","right":56,"height":82},
+            "props":{"width":200,"var":"selectBikeButton","top":5,"skin":"images/button-41.png","runtime":"../laya/assets/sounds/shinchan_141.mp3","right":56,"height":82},
             "nodeParent":1,
             "label":"selectBikeButton",
             "isOpen":true,
