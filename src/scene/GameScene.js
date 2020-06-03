@@ -1193,7 +1193,7 @@ export default class GameScene extends Scene {
 
         if (this.gameStatus === "play") {
             let newX = this.bikeBody.getPosition().x;
-            this.distance += newX - oldX;
+            this.distance += (newX - oldX) * Config.meter2distance;
             this.ui.distanceText.text = Math.floor(this.distance) + "m";
             if (this.distance > this.nextBulletDistanceIndex * Config.bulletTime.addValueDistance) {
                 this.addBulletTime(Config.bulletTime.addValuePerDistance);
