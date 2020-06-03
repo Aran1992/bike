@@ -201,7 +201,7 @@ export default class EndlessGameScene extends GameScene {
     onDead() {
         super.onDead();
         this.deadCompleteTimer = setTimeout(() => {
-            this.gameLoopFunc = this.pause.bind(this);
+            this.pauseGame();
             App.showScene("GameOverScene", {
                 distance: Math.floor(this.distance),
                 coin: this.coin,
@@ -212,7 +212,7 @@ export default class EndlessGameScene extends GameScene {
 
     onClickPauseButton() {
         if (this.gameStatus === "play") {
-            this.gameLoopFunc = this.pause.bind(this);
+            this.pauseGame();
             this.gameStatus = "pause";
             App.showScene("PauseScene", {
                 gameSceneName: "EndlessGameScene",
@@ -220,7 +220,7 @@ export default class EndlessGameScene extends GameScene {
                 clickRestartTip: "Are you sure to restart the game? The current game data will be saved automatically after exit."
             });
         } else if (this.gameStatus === "pause") {
-            this.gameLoopFunc = this.play.bind(this);
+            this.resumeGame();
             this.gameStatus = "play";
             App.hideScene("PauseScene");
         }

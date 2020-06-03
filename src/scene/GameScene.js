@@ -125,7 +125,8 @@ export default class GameScene extends Scene {
         });
 
         this.gameStatus = "end";
-        this.gameLoopFunc = this.pause.bind(this);
+        this.animationList = [];
+        this.pauseGame();
         App.ticker.add(this.gameLoop.bind(this));
 
         this.ui.matchRacetrack.visible = false;
@@ -355,7 +356,7 @@ export default class GameScene extends Scene {
         this.bikeBody.setStatic();
         this.bikeBody.setAngle(0);
         this.bikeSelfContainer.rotation = 0;
-        this.gameLoopFunc = this.play.bind(this);
+        this.resumeGame();
     }
 
     onLoadedGameRes() {
@@ -415,7 +416,7 @@ export default class GameScene extends Scene {
         }
 
         this.gameStatus = "play";
-        this.gameLoopFunc = this.play.bind(this);
+        this.resumeGame();
 
         MusicMgr.pauseBGM();
     }
@@ -691,10 +692,10 @@ export default class GameScene extends Scene {
             case "Space": {
                 if (this.gameStatus === "play") {
                     this.gameStatus = "end";
-                    this.gameLoopFunc = this.pause.bind(this);
+                    this.pauseGame();
                 } else if (this.gameStatus === "end") {
                     this.gameStatus = "play";
-                    this.gameLoopFunc = this.play.bind(this);
+                    this.resumeGame();
                 }
                 break;
             }
@@ -1715,7 +1716,7 @@ export default class GameScene extends Scene {
         });
         DataMgr.add(DataMgr.rankDistance, distance);
         DataMgr.refreshPreparationRewards(this.rewardType);
-        this.gameLoopFunc = this.pause.bind(this);
+        this.pauseGame();
     }
 
     isItemOutSideOfViewLeft(item) {
@@ -2022,10 +2023,12 @@ export default class GameScene extends Scene {
 
     pauseGame() {
         this.gameLoopFunc = this.pause.bind(this);
+        this.animationList.forEach(a => a.stop());
     }
 
     resumeGame() {
         this.gameLoopFunc = this.play.bind(this);
+        this.animationList.forEach(a => a.play());
     }
 
     getSpriteGameBounds(sprite) {
