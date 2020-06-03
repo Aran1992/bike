@@ -12845,4 +12845,17 @@ Config.warningAnimation = {
     warningMinVelocity: 20,
 };
 
+Config.addExtraScoreAnimation = {
+    // 移动过程时长（毫秒）
+    appearDuration: 250,
+    // 停留时长（毫秒）
+    showDuration: 500,
+    // 消失过程时长（毫秒）
+    disappearAnimation: 250,
+    // 开始移动的时候的位置
+    startMoveX: -200,
+    // 结束移动的时候的位置
+    endMoveX: 0,
+};
+
 export default Config;

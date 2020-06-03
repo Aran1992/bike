@@ -229,6 +229,13 @@ export default class GameScene extends Scene {
         }, Config.minLoadingTime * 1000);
 
         this.clearWarning();
+
+        this.ui.addExtraScoreLabel.x = -1000;
+        this.ui.addExtraScoreLabel.alpha = 1;
+        if (this.addExtraScoreAnimation) {
+            this.addExtraScoreAnimation.stop();
+            delete this.addExtraScoreAnimation;
+        }
     }
 
     getBikeID() {
@@ -2601,6 +2608,44 @@ export default class GameScene extends Scene {
 
     itemY2sceneY(itemY) {
         return itemY + this.cameraContainer.y;
+    }
+
+    addExtraScore(type, value) {
+        switch (type) {
+            case "GoldCoin": {
+                this.updateCoin(this.coin + value);
+                this.playAddExtraScore(App.getText("Coin"), value);
+                break;
+            }
+            case "Exp": {
+                this.updateExp(this.exp + value);
+                this.playAddExtraScore(App.getText("Exp"), value);
+                break;
+            }
+        }
+    }
+
+    playAddExtraScore(name, value) {
+        // todo 过程管理
+        if (this.addExtraScoreAnimation) {
+            this.addExtraScoreAnimation.stop();
+            delete this.addExtraScoreAnimation;
+        }
+        this.ui.addExtraScoreLabel.x = Config.addExtraScoreAnimation.startMoveX;
+        this.ui.addExtraScoreLabel.alpha = 1;
+        this.ui.addExtraScoreLabel.text = `${name}+${value}`;
+        this.addExtraScoreAnimation = new TWEEN.Tween(this.ui.addExtraScoreLabel)
+            .to({x: Config.addExtraScoreAnimation.endMoveX}, Config.addExtraScoreAnimation.appearDuration)
+            .onComplete(() => {
+                this.addExtraScoreAnimation = new TWEEN.Tween(this.ui.addExtraScoreLabel)
+                    .delay(Config.addExtraScoreAnimation.showDuration)
+                    .to({alpha: 0}, Config.addExtraScoreAnimation.disappearAnimation)
+                    .onComplete(() => {
+                        delete this.addExtraScoreAnimation;
+                    })
+                    .start(performance.now());
+            })
+            .start(performance.now());
     }
 }
 
