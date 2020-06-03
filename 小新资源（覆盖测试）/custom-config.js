@@ -1,5 +1,8 @@
 import Config from "./src/config/base-config";
 
+// 程序内部距离转换成显示距离的系数
+Config.meter2distance = 0.5;
+
 // 游戏的设计宽度
 Config.designWidth = 1280;
 // 游戏的设计高度
