@@ -672,7 +672,7 @@ export default class GameScene extends Scene {
             Utils.removeItemFromArray(this.animationList, sprite);
             sprite.destroy();
         };
-        sprite.loop = false;
+        sprite.loop = !!config.loop;
         sprite.play();
         if (target) {
             sprite.position.set(target.x + config.animationPos[0], target.y + config.animationPos[1]);
@@ -686,6 +686,7 @@ export default class GameScene extends Scene {
             this.underBikeContianer.addChild(sprite);
         }
         this.animationList.push(sprite);
+        return sprite;
     }
 
     onKeydown(event) {
@@ -1034,6 +1035,9 @@ export default class GameScene extends Scene {
         this.followAnimation.play();
         this.bikeOutterContainer.addChild(this.followAnimation);
         this.animationList.push(this.followAnimation);
+
+        this.bulletEffectList = Config.playerEffect.bulletTime.map(config => this.playPlayerEffect(config));
+        this.bulletEffectList.forEach(a => a.visible = false);
     }
 
     resetBikeStatus() {
@@ -2426,6 +2430,7 @@ export default class GameScene extends Scene {
         this.animationList.forEach(animation => {
             animation.animationSpeed *= this.stepSpeed;
         });
+        this.bulletEffectList.forEach(effect => effect.visible = true);
     }
 
     leaveBulletTime() {
@@ -2442,6 +2447,7 @@ export default class GameScene extends Scene {
         this.animationList.forEach(animation => {
             animation.animationSpeed /= this.stepSpeed;
         });
+        this.bulletEffectList.forEach(effect => effect.visible = false);
     }
 
     playBulletTimeFilm(enter) {
@@ -2571,7 +2577,7 @@ export default class GameScene extends Scene {
         for (let y in this.warningTable) {
             if (this.warningTable.hasOwnProperty(y)) {
                 const warning = this.warningTable[y];
-                if (this.isXEnterView(warning.item.x-Config.warningAnimation.disWarningDistance)) {
+                if (this.isXEnterView(warning.item.x - Config.warningAnimation.disWarningDistance)) {
                     warning.sprite.destroy();
                     delete this.warningTable[y];
                 }

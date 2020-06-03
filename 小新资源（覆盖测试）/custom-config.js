@@ -12780,6 +12780,23 @@ Config.playerEffect = {
             animationPos: [-100, -40],
         }
     ],
+    // 子弹时间内玩家身上的特效
+    bulletTime: [
+        {
+            // 动画路径
+            animationJsonPath: "images/eff_atk_01.json",
+            // 动画名称
+            animationName: "eff_atk_01",
+            // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+            animationSpeed: 0.2,
+            // 动画偏移
+            animationPos: [-100, -40],
+            // 是否跟随玩家
+            followPlayer: 1,
+            // 是否循环播放
+            loop: 1,
+        }
+    ],
 };
 
 // 随机物品动画
