@@ -6596,9 +6596,9 @@ Config.item = {
                 // 子弹时间时显示的动画
                 bulletTimeAnimation: {
                     // 动画路径
-                    animationJsonPath: "images/trap/enm01.json",
+                    animationJsonPath: "images/trap/enm04.json",
                     // 动画名称
-                    animationName: "enm01",
+                    animationName: "enm04",
                     // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
                     animationSpeed: 1,
                     // 动画偏移
@@ -11114,6 +11114,8 @@ Config.soundPath = {
     spring: "myLaya/laya/assets/sounds/SE011.mp3",
     // 无敌撞开物体音效
     strike: "myLaya/laya/assets/sounds/SoundSE007.mp3",
+    // 小鸟/火球警告音效
+    warning: "myLaya/laya/assets/sounds/SoundSE007.mp3",
 };
 
 // 无尽模式开始路段长度（单位：像素）

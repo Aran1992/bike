@@ -2573,6 +2573,7 @@ export default class GameScene extends Scene {
                 sprite,
                 item,
             };
+            MusicMgr.playSound(Config.soundPath.warning, undefined, this.stepSpeed);
         }
     }
 
