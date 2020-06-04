@@ -1,7 +1,7 @@
 import Config from "./src/config/base-config";
 
 // 程序内部距离转换成显示距离的系数
-Config.meter2distance = 0.5;
+Config.meter2distance = 0.2;
 
 // 游戏的设计宽度
 Config.designWidth = 1280;
@@ -3026,15 +3026,15 @@ Config.endlessMode.sceneList = [
 // 无尽模式复活次数
 Config.endlessMode.rebornTimes = 333;
 
-// 无尽模式奖励路段
+// 无尽模式特殊奖励路段
 Config.endlessMode.rewardRoad = {
     // 地图路径
-    roadPath: "myLaya/laya/pages/Map/Map-2-1.scene.json",
+    roadPath: "myLaya/laya/pages/Map/Map-1-2.scene.json",
     // 吃满多少能够进入奖励路段
     maxValue: 100,
     // 结束时的无敌时间（秒）
     endInvincibleDuration: 2,
-    // 结束时的无敌时间（毫秒）
+    // 闪光动画的时长（毫秒）
     lightAnimationDuration: 1000,
 };
 
@@ -7897,16 +7897,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
-                // 吃到这个道具的时候玩家增加的奖励进度值
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
                 rewardProgressValue: 1,
-                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
-                forwardVelocity: -10,
-                // 是否会上下移动
-                isMoveUpDown: 1,
-                // 这个系数越大 上下移动的幅度就越大
-                upDownCoefficient: 10,
-                // 这个系数越大 完成一遍上下移动的时间就越短
-                upDownStep: 0.1,
             },
             // 钱币：银币
             55555: {
@@ -7919,6 +7911,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 5,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 钱币：金币
             66666: {
@@ -7931,6 +7925,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 10,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 星星
             333: {
@@ -7951,6 +7947,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 4,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：1-1
             2000: {
@@ -7963,6 +7961,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：1-2
             2001: {
@@ -7975,6 +7975,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：1-3
             2002: {
@@ -7987,6 +7989,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：2-1
             2010: {
@@ -7999,6 +8003,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 2,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：2-2
             2011: {
@@ -8011,6 +8017,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 2,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：2-2
             2012: {
@@ -8023,6 +8031,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 2,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：3
             2020: {
@@ -8035,6 +8045,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 30,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：4-1
             2030: {
@@ -8047,6 +8059,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 40,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：4-2
             2031: {
@@ -8059,6 +8073,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 40,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：5
             2040: {
@@ -8071,6 +8087,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 50,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：6
             2050: {
@@ -8083,6 +8101,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 50,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：7
             2060: {
@@ -8095,6 +8115,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 60,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 经验：8-1
             2070: {
@@ -8107,6 +8129,16 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 300,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
+                forwardVelocity: -5,
+                // 是否会上下移动
+                isMoveUpDown: 1,
+                // 这个系数越大 上下移动的幅度就越大
+                upDownCoefficient: 0.5,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
             },
             // 经验：8-2
             2071: {
@@ -8119,6 +8151,16 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 300,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
+                forwardVelocity: -5,
+                // 是否会上下移动
+                isMoveUpDown: 1,
+                // 这个系数越大 上下移动的幅度就越大
+                upDownCoefficient: 0.5,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
             },
             // 经验：8-3
             2072: {
@@ -8131,6 +8173,16 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 300,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
+                forwardVelocity: -5,
+                // 是否会上下移动
+                isMoveUpDown: 1,
+                // 这个系数越大 上下移动的幅度就越大
+                upDownCoefficient: 0.5,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
             },
             // 经验：9-1
             2080: {
@@ -8143,6 +8195,16 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 500,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
+                forwardVelocity: 0,
+                // 是否会上下移动
+                isMoveUpDown: 1,
+                // 这个系数越大 上下移动的幅度就越大
+                upDownCoefficient: 10,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.05,
             },
             // 经验：9-2
             2081: {
@@ -8155,6 +8217,16 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 500,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
+                forwardVelocity: 0,
+                // 是否会上下移动
+                isMoveUpDown: 1,
+                // 这个系数越大 上下移动的幅度就越大
+                upDownCoefficient: 10,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.05,
             },
             // 经验：10
             2090: {
@@ -8167,6 +8239,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1000,
+                // 吃到这个道具的时候，玩家增加的，无尽模式特殊奖励路段进度值
+                rewardProgressValue: 1,
             },
             // 陷阱：减速
             1: {
@@ -11552,10 +11626,10 @@ Config.gameLevelMode = {
             // 每一关的地图配置
             levelList: [
                 "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-2.scene.json",
-                "myLaya/laya/pages/Map/Map-1-3.scene.json",
-                "myLaya/laya/pages/Map/Map-1-4.scene.json",
-                "myLaya/laya/pages/Map/Map-1-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
             ],
             rewardList: [
                 {coin: 1000, diamond: 20},
@@ -11615,11 +11689,11 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-2-1.scene.json",
-                "myLaya/laya/pages/Map/Map-2-2.scene.json",
-                "myLaya/laya/pages/Map/Map-2-3.scene.json",
-                "myLaya/laya/pages/Map/Map-2-4.scene.json",
-                "myLaya/laya/pages/Map/Map-2-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
             ],
             rewardList: [
                 {coin: 1000, diamond: 20},
@@ -11679,11 +11753,11 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-3-1.scene.json",
-                "myLaya/laya/pages/Map/Map-3-2.scene.json",
-                "myLaya/laya/pages/Map/Map-3-3.scene.json",
-                "myLaya/laya/pages/Map/Map-3-4.scene.json",
-                "myLaya/laya/pages/Map/Map-3-5.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-1.scene.json",
             ],
             rewardList: [
                 {coin: 1000, diamond: 20},
