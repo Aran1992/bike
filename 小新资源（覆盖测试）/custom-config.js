@@ -7885,6 +7885,14 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
+                // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
+                forwardVelocity: -10,
+                // 是否会上下移动
+                isMoveUpDown: 1,
+                // 这个系数越大 上下移动的幅度就越大
+                upDownCoefficient: 10,
+                // 这个系数越大 完成一遍上下移动的时间就越短
+                upDownStep: 0.1,
             },
             // 钱币：银币
             55555: {

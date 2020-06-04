@@ -21,10 +21,8 @@ export default class EatableItem extends EditorItem {
         this.onCreate();
     }
 
-    onCreate() {
-        super.onCreate();
-
-        this.body = this.world.createBody();
+    createBody() {
+        this.body = this.world.createKinematicBody();
         this.body.setUserData(this);
         let sd = {};
         let texture = this.sprite.texture;
@@ -33,8 +31,11 @@ export default class EatableItem extends EditorItem {
         sd.shape = Box(hw, hh);
         sd.isSensor = true;
         this.body.createFixture(sd).setUserData({isDanger: !this.isHelpful});
-        this.body.setPosition(GameUtils.renderPos2PhysicsPos(this.sprite.position));
+        const pp = GameUtils.renderPos2PhysicsPos(this.sprite.position);
+        this.body.setPosition(pp);
         this.body.setAngle(-this.sprite.rotation);
+        this.baseY = pp.y;
+        this.frame = 0;
     }
 
     onBeginContact(contact, anotherFixture) {
@@ -97,10 +98,15 @@ export default class EatableItem extends EditorItem {
     }
 
     update() {
-        if (this.isAttracted) {
-            this.moveToPlayer();
-        } else {
-            if (this.gameMgr.isItemXInView(this)) {
+        if (this.body === undefined) {
+            if (this.gameMgr.isItemXEnterView(this)) {
+                this.createBody();
+            }
+        }
+        if (this.body) {
+            if (this.isAttracted) {
+                this.moveToPlayer();
+            } else if (this.gameMgr.isItemXInView(this)) {
                 ["Magnet", "Sprint"].some(key => {
                     if (this.gameMgr.hasEffect(key) && this.config[`attractedBy${key}`]) {
                         this.isAttracted = true;
@@ -110,6 +116,15 @@ export default class EatableItem extends EditorItem {
                     }
                 });
             }
+            if (!this.isAttracted) {
+                this.body.setLinearVelocity(Vec2(this.config.forwardVelocity || 0, 0));
+                if (this.config.isMoveUpDown) {
+                    this.frame += this.config.upDownStep * this.gameMgr.stepSpeed;
+                    const y = this.baseY + Math.sin(this.frame) * this.config.upDownCoefficient;
+                    this.body.setPosition(Vec2(this.body.getPosition().x, y));
+                }
+            }
+            super.update();
         }
     }
 
@@ -126,7 +141,6 @@ export default class EatableItem extends EditorItem {
         } else {
             this.body.setLinearVelocity(Vec2(0, 0));
         }
-        super.update();
     }
 
     destroy() {
