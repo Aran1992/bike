@@ -6,6 +6,7 @@ import GameUtils from "../mgr/GameUtils";
 import Scene from "./Scene";
 import DataMgr from "../mgr/DataMgr";
 import MusicMgr from "../mgr/MusicMgr";
+import TWEEN from "@tweenjs/tween.js";
 
 export default class GameLevelResultScene extends Scene {
     static onClickMainButton() {
@@ -22,6 +23,8 @@ export default class GameLevelResultScene extends Scene {
         EventMgr.dispatchEvent("Restart");
     }
 
+    // 播放一个动画 还是要有刷新的功能 万一她要快速结束的话
+
     onCreate() {
         let mask = new Graphics()
             .beginFill(0x000000, 0.5)
@@ -34,6 +37,12 @@ export default class GameLevelResultScene extends Scene {
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
         this.resultList = new ResultList(this.ui.resultList);
+
+        for (let i = 0; i < Config.starCount; i++) {
+            const star = this.ui[`star${i}`].children[0];
+            star.anchor.set(0.5, 0.5);
+            star.position.set(star.x + star.width / 2, star.y + star.height / 2);
+        }
     }
 
     onShow(args) {
@@ -70,6 +79,8 @@ export default class GameLevelResultScene extends Scene {
         App.getScene("LevelGameScene").stopSounds();
         MusicMgr.pauseBGM();
         MusicMgr.playSound(Config.soundPath.throughFlag);
+
+        this.playStarsAnimation(this.args.gameScene.star);
     }
 
     onClickAdvertDoubleButton() {
@@ -111,6 +122,47 @@ export default class GameLevelResultScene extends Scene {
             this.ui.advertDoubleButton.visible = true;
             this.ui.hasDoubleRewardText.visible = false;
         }
+    }
+
+    playStarsAnimation(starCount, callback) {
+        for (let i = 0; i < Config.starCount; i++) {
+            this.ui[`star${i}`].visible = false;
+        }
+        this.starIndex = 0;
+        const loop = () => {
+            if (this.starIndex < starCount) {
+                const star = this.ui[`star${this.starIndex}`];
+                star.visible = true;
+                this.playStarAnimation(star, () => {
+                    this.starIndex++;
+                    loop();
+                });
+            } else {
+                callback && callback();
+            }
+        };
+        loop();
+    }
+
+    playStarAnimation(target, callback) {
+        target = target.children[0];
+        const os = target.scale.x;
+        const s = os * Config.getStarAnimation.startScale;
+        const a = Config.getStarAnimation.startAlpha;
+        target.scale.set(s, s);
+        target.alpha = a;
+        const obj = {scale: s, alpha: a};
+        new TWEEN.Tween(obj)
+            .to({scale: os, alpha: 1}, Config.getStarAnimation.duration)
+            .easing(TWEEN.Easing.Bounce.Out)
+            .onUpdate(() => {
+                target.scale.set(obj.scale, obj.scale);
+                target.alpha = obj.alpha;
+            })
+            .onComplete(() => {
+                callback && callback();
+            })
+            .start(performance.now());
     }
 }
 

@@ -12951,8 +12951,12 @@ Config.useItemAnimation = {
 
 // 获得星星动画
 Config.getStarAnimation = {
+    // 开始动画时星星的缩放倍数
+    startScale: 5,
+    // 开始动画时星星的透明度（0-1，0是透明）
+    startAlpha: 0.5,
     // 持续时间(毫秒)
-    duration: 1000,
+    duration: 500,
 };
 
 Config.warningAnimation = {

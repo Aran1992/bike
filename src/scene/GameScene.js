@@ -1260,14 +1260,18 @@ export default class GameScene extends Scene {
         let target = this.ui[`star${this.star - 1}`];
         if (target) {
             target = target.children[0];
-            target.scale.set(0, 0);
-            const obj = {scale: 0};
+            const s = Config.getStarAnimation.startScale;
+            const a = Config.getStarAnimation.startAlpha;
+            target.scale.set(s, s);
+            target.alpha = a;
+            const obj = {scale: s, alpha: a};
             // todo 过程管理
             new TWEEN.Tween(obj)
-                .to({scale: 1}, Config.getStarAnimation.duration)
-                .easing(TWEEN.Easing.Elastic.Out)
+                .to({scale: 1, alpha: 1}, Config.getStarAnimation.duration)
+                .easing(TWEEN.Easing.Bounce.Out)
                 .onUpdate(() => {
                     target.scale.set(obj.scale, obj.scale);
+                    target.alpha = obj.alpha;
                 })
                 .start(performance.now());
         }
