@@ -80,6 +80,6 @@ export default class Item {
 
     destroy() {
         this.world.destroyBody(this.body);
-        this.sprite.parent.removeChild(this.sprite);
+        this.sprite.destroy();
     }
 }

@@ -114,6 +114,7 @@ export default class GameScene extends Scene {
         this.ui.coinPanel.visible = false;
         this.ui.expPanel.visible = false;
         this.ui.velocityState.visible = false;
+        this.ui.rewardProgressPanel.visible = false;
         this.onClick(this.ui.confirmButton, this.onClickConfirmButton.bind(this));
         this.ui.rebornPanel.visible = false;
         this.portableItemButtonList = [1, 2].map(i => this.ui[`portableItemButton${i}`]);
@@ -186,6 +187,7 @@ export default class GameScene extends Scene {
 
         this.roadList = [];
         this.itemList = [];
+        this.showList = [];
 
         this.portableItemButtonList.forEach(button => {
             if (button.children.length === 2) {
@@ -723,10 +725,14 @@ export default class GameScene extends Scene {
                 this.leaveBulletTime();
                 break;
             }
+            case "ArrowDown": {
+                this.playLightAnimation();
+                break;
+            }
         }
     }
 
-    onAteItem(type, effect, texture, value, bulletTimeValue) {
+    onAteItem(type, effect, texture, value, bulletTimeValue, rewardProgressValue) {
         switch (type) {
             case "Random": {
                 let effect = this.randomEffect(this);
@@ -778,6 +784,9 @@ export default class GameScene extends Scene {
         }
         if (bulletTimeValue) {
             this.addBulletTime(bulletTimeValue);
+        }
+        if (this.addRewardProgressValue && rewardProgressValue) {
+            this.addRewardProgressValue(rewardProgressValue);
         }
     }
 
@@ -928,12 +937,14 @@ export default class GameScene extends Scene {
                 const sprite = Sprite.from(`myLaya/laya/assets/${data.props.skin}`);
                 this.underBikeContianer.addChild(sprite);
                 handleDisplayObjectWithData(sprite, data);
+                this.showList.push(sprite);
                 break;
             }
             case "Text": {
                 const text = SceneHelper.createTextFromData(data.props);
                 this.underBikeContianer.addChild(text);
                 handleDisplayObjectWithData(text, data);
+                this.showList.push(text);
                 break;
             }
             case "Guide": {
@@ -1102,6 +1113,11 @@ export default class GameScene extends Scene {
     }
 
     play() {
+        if (this.willEnterScene) {
+            this.enterRewardRoad();
+            this.willEnterScene = false;
+        }
+
         if (this.eatEffect) {
             this.startEffect(this.eatEffect);
             delete this.eatEffect;

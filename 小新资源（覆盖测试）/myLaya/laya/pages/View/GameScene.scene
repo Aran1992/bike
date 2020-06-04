@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":153,
+    "selectedBox":154,
+    "selecteID":155,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":154,
+    "maxID":157,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -39,7 +39,7 @@
                     "hasChild":false,
                     "compId":82,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -53,7 +53,7 @@
                     "hasChild":false,
                     "compId":90,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -67,7 +67,7 @@
                     "hasChild":false,
                     "compId":95,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -81,7 +81,7 @@
                     "hasChild":false,
                     "compId":94,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -95,7 +95,7 @@
                     "hasChild":false,
                     "compId":93,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -109,7 +109,7 @@
                     "hasChild":false,
                     "compId":81,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -123,7 +123,7 @@
                     "hasChild":false,
                     "compId":80,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -137,7 +137,7 @@
                     "hasChild":false,
                     "compId":79,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -151,7 +151,7 @@
                     "hasChild":false,
                     "compId":73,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -165,7 +165,7 @@
                     "hasChild":false,
                     "compId":87,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -179,7 +179,7 @@
                     "hasChild":false,
                     "compId":89,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -193,7 +193,7 @@
                     "hasChild":false,
                     "compId":83,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -207,7 +207,7 @@
                     "hasChild":false,
                     "compId":74,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -221,7 +221,7 @@
                     "hasChild":false,
                     "compId":88,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -235,7 +235,7 @@
                     "hasChild":false,
                     "compId":92,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -249,7 +249,7 @@
                     "hasChild":false,
                     "compId":78,
                     "child":[
-                    ]
+                        ]
                 }],
             "$HIDDEN":false
         },
@@ -278,7 +278,7 @@
                     "hasChild":false,
                     "compId":2,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -291,7 +291,7 @@
                     "hasChild":false,
                     "compId":40,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":true
                 },
                 {
@@ -330,7 +330,7 @@
                                     "hasChild":false,
                                     "compId":24,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
@@ -344,7 +344,7 @@
                             "hasChild":false,
                             "compId":25,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -383,7 +383,7 @@
                                     "hasChild":false,
                                     "compId":21,
                                     "child":[
-                                    ],
+                                        ],
                                     "$HIDDEN":false
                                 }]
                         },
@@ -398,7 +398,7 @@
                             "hasChild":false,
                             "compId":6,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -437,7 +437,7 @@
                                     "hasChild":false,
                                     "compId":29,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
@@ -451,7 +451,7 @@
                             "hasChild":false,
                             "compId":30,
                             "child":[
-                            ]
+                                ]
                         }],
                     "$HIDDEN":false
                 },
@@ -491,7 +491,7 @@
                                     "hasChild":false,
                                     "compId":111,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
@@ -505,7 +505,7 @@
                             "hasChild":false,
                             "compId":112,
                             "child":[
-                            ]
+                                ]
                         }],
                     "$HIDDEN":false
                 }]
@@ -523,7 +523,7 @@
             "hasChild":false,
             "compId":142,
             "child":[
-            ],
+                ],
             "$HIDDEN":false
         },
         {
@@ -538,7 +538,7 @@
             "hasChild":false,
             "compId":108,
             "child":[
-            ]
+                ]
         },
         {
             "x":15,
@@ -577,7 +577,7 @@
                             "hasChild":false,
                             "compId":132,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }],
                     "$HIDDEN":false
@@ -606,7 +606,7 @@
                             "hasChild":false,
                             "compId":134,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }]
                 },
@@ -634,7 +634,7 @@
                             "hasChild":false,
                             "compId":136,
                             "child":[
-                            ]
+                                ]
                         }]
                 }]
         },
@@ -663,7 +663,7 @@
                     "hasChild":false,
                     "compId":59,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Label",
@@ -676,7 +676,7 @@
                     "hasChild":false,
                     "compId":61,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Label",
@@ -690,7 +690,7 @@
                     "hasChild":false,
                     "compId":60,
                     "child":[
-                    ]
+                        ]
                 }]
         },
         {
@@ -706,7 +706,7 @@
             "hasChild":false,
             "compId":36,
             "child":[
-            ]
+                ]
         },
         {
             "x":15,
@@ -721,7 +721,7 @@
             "hasChild":false,
             "compId":103,
             "child":[
-            ],
+                ],
             "$HIDDEN":false
         },
         {
@@ -761,7 +761,7 @@
                             "hasChild":false,
                             "compId":137,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }],
                     "$HIDDEN":false
@@ -790,7 +790,7 @@
                             "hasChild":false,
                             "compId":139,
                             "child":[
-                            ],
+                                ],
                             "$HIDDEN":false
                         }],
                     "$HIDDEN":false
@@ -821,7 +821,7 @@
                     "hasChild":false,
                     "compId":101,
                     "child":[
-                    ]
+                        ]
                 }]
         },
         {
@@ -848,7 +848,7 @@
                     "hasChild":false,
                     "compId":102,
                     "child":[
-                    ]
+                        ]
                 }]
         },
         {
@@ -876,7 +876,7 @@
                     "hasChild":false,
                     "compId":55,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "type":"Image",
@@ -889,7 +889,7 @@
                     "hasChild":false,
                     "compId":56,
                     "child":[
-                    ]
+                        ]
                 }],
             "$HIDDEN":true
         },
@@ -929,7 +929,7 @@
                             "hasChild":false,
                             "compId":35,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -955,7 +955,7 @@
                             "hasChild":false,
                             "compId":141,
                             "child":[
-                            ]
+                                ]
                         }]
                 }],
             "$HIDDEN":true
@@ -985,7 +985,7 @@
                     "hasChild":false,
                     "compId":148,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1000,7 +1000,7 @@
                     "hasChild":false,
                     "compId":149,
                     "child":[
-                    ],
+                        ],
                     "$HIDDEN":false
                 },
                 {
@@ -1015,7 +1015,7 @@
                     "hasChild":false,
                     "compId":150,
                     "child":[
-                    ]
+                        ]
                 }]
         },
         {
@@ -1030,7 +1030,7 @@
             "hasChild":false,
             "compId":152,
             "child":[
-            ],
+                ],
             "$HIDDEN":false
         },
         {
@@ -1045,7 +1045,7 @@
             "hasChild":false,
             "compId":151,
             "child":[
-            ]
+                ]
         },
         {
             "x":15,
@@ -1059,12 +1059,57 @@
             "hasChild":false,
             "compId":153,
             "child":[
-            ]
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,rewardProgressPanel",
+            "props":{"var":"rewardProgressPanel","skin":"images/loading-1.png","right":150,"bottom":50},
+            "nodeParent":1,
+            "label":"rewardProgressPanel",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":154,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,rewardProgress",
+                    "props":{"y":0,"x":0,"width":100,"var":"rewardProgress","skin":"images/loading-2.png","sizeGrid":"0,27,0,27"},
+                    "nodeParent":154,
+                    "label":"rewardProgress",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":155,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,rewardProgressRate",
+                    "props":{"var":"rewardProgressRate","text":"66%","strokeColor":"#000000","fontSize":30,"color":"#ffffff","centerY":-2,"centerX":0,"align":"center"},
+                    "nodeParent":154,
+                    "label":"rewardProgressRate",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":156,
+                    "child":[
+                        ]
+                }],
+            "$HIDDEN":false
         }],
     "animations":[
         {
             "nodes":[
-            ],
+                ],
             "name":"ani1",
             "id":1,
             "frameRate":24,

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":21,
-    "selecteID":30,
+    "selectedBox":167,
+    "selecteID":180,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -1532,16 +1532,17 @@
             "props":{"skin":"images/loading-1.png","name":"exp","left":96,"bottom":10},
             "nodeParent":1,
             "label":"exp",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":167,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,expProgress",
-                    "props":{"y":0,"x":0,"width":100,"var":"expProgress","skin":"images/loading-2.png","sizeGrid":"0,30,0,30"},
+                    "props":{"y":0,"x":0,"width":100,"var":"expProgress","skin":"images/loading-2.png","sizeGrid":"0,27,0,27"},
                     "nodeParent":167,
                     "label":"expProgress",
                     "isOpen":true,
@@ -1554,6 +1555,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,expRate",
                     "props":{"var":"expRate","text":"88888888 / 99999999","strokeColor":"#000000","fontSize":30,"color":"#ffffff","centerY":-2,"centerX":0,"align":"center"},

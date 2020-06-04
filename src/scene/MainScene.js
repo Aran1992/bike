@@ -10,6 +10,7 @@ import OnlineMgr from "../mgr/OnlineMgr";
 import GameUtils from "../mgr/GameUtils";
 import LockableButton from "../ui/LockableButton";
 import RunOption from "../../run-option";
+import Progress from "../ui/Progress";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -63,6 +64,8 @@ export default class MainScene extends Scene {
         this.refreshMode();
 
         this.initGift();
+
+        this.expProgress = new Progress(this.ui.expProgress);
     }
 
     onRefreshRankData() {
@@ -72,7 +75,8 @@ export default class MainScene extends Scene {
         this.ui.coinText.text = DataMgr.get(DataMgr.coin, 0);
         const {level, curExp, totalExp} = DataMgr.getPlayerLevel();
         this.ui.levelText.text = App.getText("LevelDsc", {level});
-        this.ui.expProgress.width = this.ui.expProgress.mywidth * curExp / totalExp;
+        this.expProgress.setMax(totalExp);
+        this.expProgress.setValue(curExp);
         this.ui.expRate.text = `${curExp}/${totalExp}`;
         const table = {
             Coin: "coinPercent",

@@ -1,10 +1,12 @@
 import Config from "../config";
 import GameScene from "./GameScene";
-import {AnimatedSprite, resources, Texture} from "../libs/pixi-wrapper";
+import {AnimatedSprite, Graphics, resources, Texture} from "../libs/pixi-wrapper";
 import GameUtils from "../mgr/GameUtils";
 import Utils from "../mgr/Utils";
 import {Vec2} from "../libs/planck-wrapper";
 import DataMgr from "../mgr/DataMgr";
+import Progress from "../ui/Progress";
+import TWEEN from "@tweenjs/tween.js";
 
 export default class EndlessGameScene extends GameScene {
     onCreate() {
@@ -15,10 +17,15 @@ export default class EndlessGameScene extends GameScene {
         this.ui.expPanel.visible = true;
         this.ui.pauseButton.visible = true;
         this.ui.velocityState.visible = true;
+        this.ui.rewardProgressPanel.visible = true;
+        this.rewardProgress = new Progress(this.ui.rewardProgress, this.ui.rewardProgressRate);
+        this.rewardProgress.setMax(Config.endlessMode.rewardRoad.maxValue);
         this.onClick(this.ui.pauseButton, this.onClickPauseButton.bind(this));
     }
 
     onShow(sceneIndex) {
+        this.inRewardRoad = false;
+        this.rewardProgress.setValue(0);
         this.sceneIndex = sceneIndex;
         this.sceneConfig = Config.endlessMode.sceneList[sceneIndex];
         // 没有配置的话 就用默认配置
@@ -73,6 +80,7 @@ export default class EndlessGameScene extends GameScene {
                 this.sceneConfig.texture.top,
                 this.sceneConfig.texture.side2,
                 this.sceneConfig.texture.top2,
+                Config.endlessMode.rewardRoad.roadPath,
             ])
             .concat(this.sceneFilePathList)
             .concat(Config.gameScene.velocityStateImgList.map(({imgPath}) => imgPath));
@@ -268,5 +276,66 @@ export default class EndlessGameScene extends GameScene {
             }
         }
         DataMgr.set(DataMgr.selectedEndlessScene, id);
+    }
+
+    enterRewardRoad() {
+        this.playLightAnimation(() => {
+            this.itemList.forEach(item => item.destroy());
+            this.itemList = [];
+            this.roadList.forEach(road => road.destroy());
+            this.roadList = [];
+            this.showList.forEach(sprite => sprite.destroy());
+            this.showList = [];
+            const item = Utils.clone(resources[Config.endlessMode.rewardRoad.roadPath].data);
+            this.offsetX = -this.cameraContainer.x;
+            this.mapWidth = -this.cameraContainer.x;
+            this.createRoadSection(item, this.offsetX, this.offsetY);
+            this.mapWidth += item.props.width;
+            this.offsetX += item.props.width;
+            this.offsetY += item.props.height;
+            this.rewardProgress.setValue(0);
+            this.inRewardRoad = true;
+            this.rewardRoadFinalX = this.mapWidth;
+        });
+    }
+
+    addRewardProgressValue(rewardProgressValue) {
+        if (this.inRewardRoad) {
+            return;
+        }
+        this.rewardProgress.setValue(this.rewardProgress.value + rewardProgressValue);
+        if (this.rewardProgress.isFull()) {
+            this.willEnterScene = true;
+        }
+    }
+
+    playLightAnimation(middleCallback) {
+        const g = new Graphics();
+        this.addChild(g);
+        g.beginFill(0xffffff);
+        g.drawRect(0, 0, App.sceneWidth, App.sceneHeight);
+        g.endFill();
+        g.alpha = 0;
+        new TWEEN.Tween(g)
+            .to({alpha: 1}, Config.endlessMode.rewardRoad.lightAnimationDuration / 2)
+            .onComplete(() => {
+                middleCallback && middleCallback();
+                new TWEEN.Tween(g)
+                    .to({alpha: 0}, Config.endlessMode.rewardRoad.lightAnimationDuration / 2)
+                    .onComplete(() => {
+                        g.destroy();
+                    })
+                    .start(performance.now());
+            })
+            .start(performance.now());
+    }
+
+    play() {
+        super.play();
+        if (this.inRewardRoad && this.bikeOutterContainer.x > this.rewardRoadFinalX) {
+            this.playLightAnimation();
+            this.inRewardRoad = false;
+            this.enterInvincible(Config.endlessMode.rewardRoad.endInvincibleDuration);
+        }
     }
 }

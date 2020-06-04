@@ -21,7 +21,7 @@ export default class Scene extends Container {
 
     destroy() {
         this.onDestroy();
-        this.parent.removeChild(this);
+        super.destroy();
     }
 
     show(...args) {

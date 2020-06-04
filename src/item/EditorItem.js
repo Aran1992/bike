@@ -33,10 +33,14 @@ export default class EditorItem {
     }
 
     destroy() {
+        if (this.destroyed) {
+            return;
+        }
         this.sprite.destroy();
         if (this.body) {
             this.world.destroyBody(this.body);
         }
+        this.destroyed = true;
     }
 
     onCreate() {

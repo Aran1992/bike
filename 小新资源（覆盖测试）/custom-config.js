@@ -3026,6 +3026,18 @@ Config.endlessMode.sceneList = [
 // 无尽模式复活次数
 Config.endlessMode.rebornTimes = 333;
 
+// 无尽模式奖励路段
+Config.endlessMode.rewardRoad = {
+    // 地图路径
+    roadPath: "myLaya/laya/pages/Map/Map-2-1.scene.json",
+    // 吃满多少能够进入奖励路段
+    maxValue: 100,
+    // 结束时的无敌时间（秒）
+    endInvincibleDuration: 2,
+    // 结束时的无敌时间（毫秒）
+    lightAnimationDuration: 1000,
+};
+
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）
 Config.bgY = [0, 0, 256];
 
@@ -7885,6 +7897,8 @@ Config.item = {
                 attractedBySprint: 1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 1,
+                // 吃到这个道具的时候玩家增加的奖励进度值
+                rewardProgressValue: 1,
                 // 前进速度（如果速度为0的话，他就不会在水平方向上移动了）
                 forwardVelocity: -10,
                 // 是否会上下移动
