@@ -46,7 +46,7 @@ export default class EatableItem extends EditorItem {
                     if (this.config.effect === "Random") {
                         EventMgr.dispatchEvent("AteItem", "Random");
                     } else {
-                        EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture, this.config.value, this.config.bulletTimeValue,this.config.rewardProgressValue);
+                        EventMgr.dispatchEvent("AteItem", "PortableItem", this.config.effect, this.sprite.texture, this.config.value, this.config.bulletTimeValue, this.config.rewardProgressValue);
                     }
                     this.playEatAnimation();
                 }
@@ -63,7 +63,7 @@ export default class EatableItem extends EditorItem {
         } else {
             if (this.gameMgr.chtable.player.is(anotherFixture)) {
                 if (this.sprite.visible && !this.animation) {
-                    EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value, this.config.bulletTimeValue,this.config.rewardProgressValue);
+                    EventMgr.dispatchEvent("AteItem", this.config.effect, undefined, undefined, this.config.value, this.config.bulletTimeValue, this.config.rewardProgressValue);
                     if (this.chainData) {
                         this.chainData.count--;
                         if (this.chainData.count === 0) {
@@ -124,7 +124,9 @@ export default class EatableItem extends EditorItem {
                     this.body.setPosition(Vec2(this.body.getPosition().x, y));
                 }
             }
-            super.update();
+            if (!this.animation) {
+                super.update();
+            }
         }
     }
 
