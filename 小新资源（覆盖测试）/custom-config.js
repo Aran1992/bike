@@ -3026,19 +3026,23 @@ Config.endlessMode.sceneList = [
 // 无尽模式复活次数
 Config.endlessMode.rebornTimes = 333;
 
+// 无尽模式开始路段长度（单位：像素）
+Config.startRoadLength = 3500;
+
 // 无尽模式特殊奖励路段
 Config.endlessMode.rewardRoad = {
     // 地图路径
     roadPath: [
-        "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json"
-    ],
+        "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
+        "myLaya/laya/pages/RoadSection/Special/Special111-00000111.scene.json",
+		],
     // 吃满多少能够进入奖励路段
-    maxValue: 50,
+    maxValue: 100,
     // 结束时的无敌时间（秒）
-    endInvincibleDuration: 2,
+    endInvincibleDuration: 5,
     // 闪光动画的时长（毫秒）
     lightAnimationDuration: 1000,
-    // 玩家距离路段结束点多远闪白光
+    // 玩家当前位置，距离路段结束点多远，闪白光
     endDistance: 2000,
 };
 
@@ -11287,9 +11291,6 @@ Config.soundPath = {
     warning: "myLaya/laya/assets/sounds/SE021.mp3",
 };
 
-// 无尽模式开始路段长度（单位：像素）
-Config.startRoadLength = 3000;
-
 // 引导动画相关配置
 Config.guideAction = {
     // 动画间隔时间（单位：帧）
@@ -11630,10 +11631,10 @@ Config.gameLevelMode = {
             // 每一关的地图配置
             levelList: [
                 "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-1-2.scene.json",
+                "myLaya/laya/pages/Map/Map-1-3.scene.json",
+                "myLaya/laya/pages/Map/Map-1-4.scene.json",
+                "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
                 {coin: 1000, diamond: 20},
