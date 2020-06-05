@@ -3029,7 +3029,9 @@ Config.endlessMode.rebornTimes = 333;
 // 无尽模式特殊奖励路段
 Config.endlessMode.rewardRoad = {
     // 地图路径
-    roadPath: "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
+    roadPath: [
+        "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json"
+    ],
     // 吃满多少能够进入奖励路段
     maxValue: 50,
     // 结束时的无敌时间（秒）

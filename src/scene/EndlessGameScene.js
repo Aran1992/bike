@@ -24,6 +24,7 @@ export default class EndlessGameScene extends GameScene {
     }
 
     onShow(sceneIndex) {
+        this.rewardRoads = Utils.clone(Config.endlessMode.rewardRoad.roadPath);
         this.inRewardRoad = false;
         this.rewardProgress.setValue(0);
         this.sceneIndex = sceneIndex;
@@ -80,8 +81,8 @@ export default class EndlessGameScene extends GameScene {
                 this.sceneConfig.texture.top,
                 this.sceneConfig.texture.side2,
                 this.sceneConfig.texture.top2,
-                Config.endlessMode.rewardRoad.roadPath,
             ])
+            .concat(Config.endlessMode.rewardRoad.roadPath)
             .concat(this.sceneFilePathList)
             .concat(Config.gameScene.velocityStateImgList.map(({imgPath}) => imgPath));
     }
@@ -286,7 +287,10 @@ export default class EndlessGameScene extends GameScene {
             this.roadList = [];
             this.showList.forEach(sprite => sprite.destroy());
             this.showList = [];
-            const item = Utils.clone(resources[Config.endlessMode.rewardRoad.roadPath].data);
+            if (this.rewardRoads.length === 0) {
+                this.rewardRoads = Utils.randomList(Utils.clone(Config.endlessMode.rewardRoad.roadPath));
+            }
+            const item = Utils.clone(resources[this.rewardRoads.pop()].data);
             this.offsetX = -this.cameraContainer.x;
             this.mapWidth = -this.cameraContainer.x;
             this.createRoadSection(item, this.offsetX, this.offsetY);
