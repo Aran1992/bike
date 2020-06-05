@@ -12722,7 +12722,7 @@ Config.imageText = {
     },
     ui_fvr_gauge: {
         charWidth: 20,
-        charHeight: 30,
+        charHeight: 22,
         charImgPathTable: {
             "0": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_0.png",
             "1": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_1.png",
@@ -13030,7 +13030,7 @@ Config.getStarAnimation = {
     // 开始动画时星星的透明度（0-1，0是透明）
     startAlpha: 0.5,
     // 持续时间(毫秒)
-    duration: 500,
+    duration: 1000,
 };
 
 Config.warningAnimation = {

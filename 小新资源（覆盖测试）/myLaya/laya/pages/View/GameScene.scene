@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":154,
-    "selecteID":155,
+    "selecteID":156,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -726,6 +726,51 @@
         },
         {
             "x":15,
+            "type":"Image",
+            "searchKey":"Image,rewardProgressPanel",
+            "props":{"var":"rewardProgressPanel","skin":"images/ui_fvr.png","right":200,"bottom":13},
+            "nodeParent":1,
+            "label":"rewardProgressPanel",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":154,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,rewardProgress",
+                    "props":{"x":0,"var":"rewardProgress","skin":"images/ui_fvr_gauge.png","sizeGrid":"0,27,0,27","centerY":0},
+                    "nodeParent":154,
+                    "label":"rewardProgress",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":155,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,rewardProgressRate",
+                    "props":{"var":"rewardProgressRate","top":24,"text":"66%","strokeColor":"#000000","fontSize":30,"font":"ui_fvr_gauge","color":"#ffffff","centerX":0,"align":"center"},
+                    "nodeParent":154,
+                    "label":"rewardProgressRate",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":156,
+                    "child":[
+                        ]
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
             "type":"Panel",
             "searchKey":"Panel,guidePanel",
             "props":{"y":680,"x":0,"visible":false,"var":"guidePanel","right":0,"left":0,"height":600,"bottom":0},
@@ -1060,51 +1105,6 @@
             "compId":153,
             "child":[
                 ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,rewardProgressPanel",
-            "props":{"var":"rewardProgressPanel","skin":"images/loading-1.png","right":150,"bottom":50},
-            "nodeParent":1,
-            "label":"rewardProgressPanel",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":154,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image,rewardProgress",
-                    "props":{"y":0,"x":0,"width":100,"var":"rewardProgress","skin":"images/loading-2.png","sizeGrid":"0,27,0,27"},
-                    "nodeParent":154,
-                    "label":"rewardProgress",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":155,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "searchKey":"Label,rewardProgressRate",
-                    "props":{"var":"rewardProgressRate","text":"66%","strokeColor":"#000000","fontSize":30,"color":"#ffffff","centerY":-2,"centerX":0,"align":"center"},
-                    "nodeParent":154,
-                    "label":"rewardProgressRate",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":156,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
         }],
     "animations":[
         {
