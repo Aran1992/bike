@@ -65,5 +65,10 @@ export default class GroundStab {
 
     onBeginContact() {
     }
+
+    destroy() {
+        this.sprite.destroy();
+        this.world.destroyBody(this.body);
+    }
 }
 
