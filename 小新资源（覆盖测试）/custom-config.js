@@ -3038,6 +3038,8 @@ Config.endlessMode.rewardRoad = {
     endInvincibleDuration: 2,
     // 闪光动画的时长（毫秒）
     lightAnimationDuration: 1000,
+    // 玩家距离路段结束点多远闪白光
+    endDistance: 2000,
 };
 
 // 背景的Y轴位置（没有填的地图，默认会用这个，作为忘填保险用）

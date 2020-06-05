@@ -336,7 +336,7 @@ export default class EndlessGameScene extends GameScene {
 
     play() {
         super.play();
-        if (this.inRewardRoad && -this.cameraContainer.x + App.sceneWidth >= this.rewardRoadFinalX) {
+        if (this.inRewardRoad && this.bikeOutterContainer.x + Config.endlessMode.rewardRoad.endDistance >= this.rewardRoadFinalX) {
             this.playLightAnimation();
             this.inRewardRoad = false;
             this.enterInvincible(Config.endlessMode.rewardRoad.endInvincibleDuration);
