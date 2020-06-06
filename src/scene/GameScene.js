@@ -782,11 +782,13 @@ export default class GameScene extends Scene {
                 this.eatEffect = itemConfig;
             }
         }
-        if (itemConfig.bulletTimeValue) {
-            this.addBulletTime(itemConfig.bulletTimeValue);
-        }
-        if (this.addRewardProgressValue && itemConfig.rewardProgressValue) {
-            this.addRewardProgressValue(itemConfig.rewardProgressValue);
+        if (itemConfig) {
+            if (itemConfig.bulletTimeValue) {
+                this.addBulletTime(itemConfig.bulletTimeValue);
+            }
+            if (this.addRewardProgressValue && itemConfig.rewardProgressValue) {
+                this.addRewardProgressValue(itemConfig.rewardProgressValue);
+            }
         }
     }
 
