@@ -1151,6 +1151,14 @@ Config.mapList = [
 
 // 路段配置
 Config.roadSections = {
+
+    // 随机关卡
+    "111-1": [
+        // 关卡（每个路段为2000像素）
+        "Random/Random111-00000101",
+        "Random/Random111-00000101",
+    ],
+
     // 固定关卡（Normal）(第1阶段)
     "101-1": [
         // 关卡（每个路段为1000像素）
@@ -1374,19 +1382,6 @@ Config.roadSections = {
 
     ],
 
-    // 奖励关卡-1（Special）
-    "0-1": [
-        // 关卡（每个路段为5000像素）
-        "Special/Special111-00000101",
-    ],
-    // 奖励关卡-2（Special）
-    "0-11": [
-        // 关卡（每个路段为6000像素）
-        "Special/Special121-00000101",
-        "Special/Special121-00000111",
-        "Special/Special121-00000121",
-    ],
-
     // 随机道具（Item）
     "9999-1": [
         // 关卡（每个路段为500像素）
@@ -1484,683 +1479,192 @@ Config.endlessMode.default = {
     roadSectionList: [
         // 对普通玩家可过阶段
 
-        // 第1阶段(固定路线)
+        // 第1阶段（随机路线）
         //路段1（注意：第1个速度要为1不然会出错）
         {
-            list: ["101-1",],
-            length: 1000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1,
         },
         //路段2
         {
-            list: ["101-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1,
         },
         //路段3
         {
-            list: ["101-21",],
+            list: ["111-1",],
             length: 2000,
             velocity: 1,
         },
         //路段4
         {
-            list: ["101-31",],
+            list: ["111-1",],
             length: 2000,
             velocity: 1,
         },
         //路段5
         {
-            list: ["101-41",],
+            list: ["111-1",],
             length: 2000,
             velocity: 1,
         },
-        //路段6
-        {
-            list: ["101-51",],
-            length: 2000,
-            velocity: 1,
-        },
-        //路段7
-        {
-            list: ["101-61",],
-            length: 4000,
-            velocity: 1,
-        },
-        //路段8
-        {
-            list: ["101-71",],
-            length: 2000,
-            velocity: 1,
-        },
-        //路段9
-        {
-            list: ["101-81",],
-            length: 3000,
-            velocity: 1,
-        },
-        //路段10
-        {
-            list: ["101-91",],
-            length: 9000,
-            velocity: 1,
-        },
-        //路段11
-        {
-            list: ["101-101",],
-            length: 3000,
-            velocity: 1,
-        },
-
-        // 奖励阶段
-        {
-            list: ["0-1",],
-            length: 5000,
-            velocity: 1,
-        },
-
-
         // 第2阶段（随机路线）
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.2,
-        },
         //路段1
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.2,
         },
         //路段2
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.2,
         },
-        // 道具
+        //路段3
         {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.2,
-        },
-        //路段3（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.2,
         },
         //路段4
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.2,
         },
         //路段5
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.2,
         },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.2,
-        },
-        //路段6（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.2,
-        },
-        //路段7
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.2,
-        },
-        //路段8
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.2,
-        },
-        // 奖励阶段
-        {
-            list: ["0-11",],
-            length: 6000,
-            velocity: 1.2,
-        },
-
-
         // 第3阶段（随机路线）
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.4,
-        },
         //路段1
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.4,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.4,
         },
         //路段2
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.4,
         },
-        // 道具
+        //路段3
         {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.4,
-        },
-        //路段3（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.4,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.4,
         },
         //路段4
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.4,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.4,
         },
         //路段5
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.4,
         },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.4,
-        },
-        //路段6（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.4,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.4,
-        },
-        //路段7
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.4,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.4,
-        },
-        //路段8
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.4,
-        },
-        // 奖励阶段
-        {
-            list: ["0-11",],
-            length: 6000,
-            velocity: 1.4,
-        },
-
-
         // 第4阶段（随机路线）
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.6,
-        },
         //路段1
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.6,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.6,
         },
         //路段2
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.6,
         },
-        // 道具
+        //路段3
         {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.6,
-        },
-        //路段3（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.6,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.6,
         },
         //路段4
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.6,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.6,
         },
         //路段5
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.6,
         },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.6,
-        },
-        //路段6（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.6,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.6,
-        },
-        //路段7
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.6,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.6,
-        },
-        //路段8
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.6,
-        },
-        // 奖励阶段
-        {
-            list: ["0-11",],
-            length: 6000,
-            velocity: 1.6,
-        },
-
-
         // 第5阶段（随机路线）
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.8,
-        },
         //路段1
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.8,
         },
         //路段2
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.8,
         },
+        //路段3
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.8,
-        },
-        //路段3（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.8,
         },
         //路段4
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.8,
         },
         //路段5
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.8,
-        },
-        //路段6（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.8,
-        },
-        //路段7
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 1.8,
-        },
-        //路段8
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 1.8,
-        },
-        // 奖励阶段
-        {
-            list: ["0-11",],
-            length: 6000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 1.8,
         },
     ],
     // 无限循环旅程
     infiniteRoadSectionList: [
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 2,
-        },
         //路段1
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 2,
         },
         //路段2
         {
-            list: ["201-11",],
-            length: 3000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 2,
         },
+        //路段3
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 2,
-        },
-        //路段3（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 2,
         },
         //路段4
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
+            list: ["111-1",],
+            length: 2000,
             velocity: 2,
         },
         //路段5
         {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 2,
-        },
-        //路段6（休息关卡）
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-1",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 2,
-        },
-        //路段7
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 道具
-        {
-            list: ["9999-1",],
-            length: 500,
-            velocity: 2,
-        },
-        //路段8
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        {
-            list: ["201-11",],
-            length: 3000,
-            velocity: 2,
-        },
-        // 奖励阶段
-        {
-            list: ["0-11",],
-            length: 6000,
+            list: ["111-1",],
+            length: 2000,
             velocity: 2,
         },
     ],
@@ -3035,7 +2539,7 @@ Config.endlessMode.rewardRoad = {
     roadPath: [
         "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
         "myLaya/laya/pages/RoadSection/Special/Special111-00000111.scene.json",
-    ],
+		],
     // 吃满多少能够进入奖励路段
     maxValue: 100,
     // 结束时的无敌时间（秒）
@@ -8368,7 +7872,7 @@ Config.item = {
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 10,
             },
-            // 增益：磁铁（只能用于无尽模式，排名竞赛用会当机）
+            // 增益：磁铁（排名竞赛用会当机）
             121: {
                 portable: 0,
                 effect: "Magnet",
@@ -8384,8 +7888,25 @@ Config.item = {
                 animationSpeed: 0.1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 10,
+            },
+            // 增益：棒棒糖磁铁（排名竞赛用会当机）
+            126: {
+                portable: 0,
+                effect: "Magnet",
+                // 是否会被磁铁吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedByMagnet: 0,
+                // 是否会被超级无敌冲刺吸附 1代表可以 0代表不可以 没有这项配置的话 默认是不会被吸附的
+                attractedBySprint: 1,
+                // 动画路径
+                animationJsonPath: "images/item/itm_swe07_1.json",
+                // 动画名称
+                animationName: "itm_swe07_1",
+                // 动画帧率（1的话就是，游戏刷新一帧，动画就刷新一帧，0.5的话就是，游戏刷新两帧，动画就刷新一帧）
+                animationSpeed: 0.1,
+                // 吃到这个道具的时候玩家增加的子弹时间值
+                bulletTimeValue: 50,
                 // 固定持续时长（有配置或者不为0的话就按照这个时长，没有的话就按照默认的方法计算，单位：秒）
-                fixedDuration: 2
+                fixedDuration: 1,
             },
             // 增益：无敌
             131: {
@@ -8526,7 +8047,7 @@ Config.item = {
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 10,
             },
-            // 增益道具：磁铁（只能用于无尽模式，排名竞赛用会当机）
+            // 增益道具：磁铁（排名竞赛用会当机）
             1210: {
                 portable: 1,
                 effect: "Magnet",
@@ -8789,7 +8310,7 @@ Config.effect = {
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0111.mp3",
     },
-    // 磁铁（只能用于无尽模式，排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
+    // 磁铁（排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
     Magnet: {
         // 持续时间（单位：秒）
         duration: 3,

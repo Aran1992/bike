@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":2036,
+    "selecteID":2132,
     "searchKey":"Scene",
     "props":{"width":10000,"sceneColor":"#000000","height":1},
     "nodeParent":-1,
-    "maxID":2130,
+    "maxID":2133,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -6927,6 +6927,34 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":2128,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//ID:126",
+            "props":{"y":-401,"x":2899,"skin":"images/itm_swe07_1.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//ID:126","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//ID:126",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2130,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,EatableItem//立即生效物品//ID:126",
+            "props":{"y":-81,"x":6915,"skin":"images/itm_swe07_1.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//ID:126","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"EatableItem//立即生效物品//ID:126",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":2132,
             "child":[
                 ]
         }],
