@@ -959,6 +959,8 @@ export default class GameScene extends Scene {
                     value: 0
                 };
                 data.child.forEach(child => {
+                    child.props.x += data.props.x;
+                    child.props.y += data.props.y;
                     child.animations = data.animations;
                     this.createPart(child, chainData);
                 });
