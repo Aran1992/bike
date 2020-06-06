@@ -3035,7 +3035,7 @@ Config.endlessMode.rewardRoad = {
     roadPath: [
         "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
         "myLaya/laya/pages/RoadSection/Special/Special111-00000111.scene.json",
-		],
+    ],
     // 吃满多少能够进入奖励路段
     maxValue: 100,
     // 结束时的无敌时间（秒）
@@ -8384,6 +8384,8 @@ Config.item = {
                 animationSpeed: 0.1,
                 // 吃到这个道具的时候玩家增加的子弹时间值
                 bulletTimeValue: 10,
+                // 固定持续时长（有配置或者不为0的话就按照这个时长，没有的话就按照默认的方法计算，单位：秒）
+                fixedDuration: 2
             },
             // 增益：无敌
             131: {

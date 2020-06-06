@@ -732,7 +732,7 @@ export default class GameScene extends Scene {
         }
     }
 
-    onAteItem(type, effect, texture, value, bulletTimeValue, rewardProgressValue) {
+    onAteItem(type, effect, texture, itemConfig) {
         switch (type) {
             case "Random": {
                 let effect = this.randomEffect(this);
@@ -752,7 +752,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "GoldCoin": {
-                this.updateCoin(this.coin + value);
+                this.updateCoin(this.coin + itemConfig.value);
                 MusicMgr.playSound(Config.soundPath.eatGoldCoin, undefined, this.stepSpeed);
                 break;
             }
@@ -762,7 +762,7 @@ export default class GameScene extends Scene {
                 break;
             }
             case "Exp": {
-                this.updateExp(this.exp + value);
+                this.updateExp(this.exp + itemConfig.value);
                 MusicMgr.playSound(Config.soundPath.eatExp, undefined, this.stepSpeed);
                 break;
             }
@@ -779,14 +779,14 @@ export default class GameScene extends Scene {
                 if (this.isInvincible() && effectConfig && !effectConfig.isHelpful) {
                     return;
                 }
-                this.eatEffect = type;
+                this.eatEffect = itemConfig;
             }
         }
-        if (bulletTimeValue) {
-            this.addBulletTime(bulletTimeValue);
+        if (itemConfig.bulletTimeValue) {
+            this.addBulletTime(itemConfig.bulletTimeValue);
         }
-        if (this.addRewardProgressValue && rewardProgressValue) {
-            this.addRewardProgressValue(rewardProgressValue);
+        if (this.addRewardProgressValue && itemConfig.rewardProgressValue) {
+            this.addRewardProgressValue(itemConfig.rewardProgressValue);
         }
     }
 
@@ -1119,7 +1119,7 @@ export default class GameScene extends Scene {
         }
 
         if (this.eatEffect) {
-            this.startEffect(this.eatEffect);
+            this.startEffect(this.eatEffect.effect, this.eatEffect.fixedDuration);
             delete this.eatEffect;
         }
 
@@ -1797,7 +1797,7 @@ export default class GameScene extends Scene {
         this.jumpCount = 0;
     }
 
-    startEffect(type) {
+    startEffect(type, fixedDuration) {
         if (this.gameStatus === "end") {
             return;
         }
@@ -1827,7 +1827,8 @@ export default class GameScene extends Scene {
                 MusicMgr.playSound(config.sufferSound, undefined, this.stepSpeed);
             }
         }
-        this.effectRemainFrame[type] = DataMgr.getEffectDuration(this.getBikeID(), type, this.onlyBaseDuration) * Config.fps;
+        const duration = fixedDuration || DataMgr.getEffectDuration(this.getBikeID(), type, this.onlyBaseDuration);
+        this.effectRemainFrame[type] = duration * Config.fps;
     }
 
     updateEffect() {
