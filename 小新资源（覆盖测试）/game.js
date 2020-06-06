@@ -8,7 +8,7 @@ window.PlatformHelper = {
     },
     closeLogoScene() {
         if (window.logoScene && window.logoScene.parentNode) {
-            // window.logoScene.parentNode.removeChild(window.logoScene);
+            window.logoScene.hidden = true;
         }
     }
 };
@@ -16,6 +16,7 @@ window.PlatformHelper = {
 function callback() {
     let username = localStorage.username;
     let password = localStorage.password;
+    // 还要等待登录完成再显示
     if (username && password) {
         NetworkMgr.requestLogin(username, password, username, undefined, () => {
             App.showScene("MainScene");
