@@ -779,7 +779,7 @@ export default class GameScene extends Scene {
                 if (this.isInvincible() && effectConfig && !effectConfig.isHelpful) {
                     return;
                 }
-                this.eatEffect = itemConfig;
+                this.eatEffect = itemConfig || {effect: type};
             }
         }
         if (itemConfig) {
