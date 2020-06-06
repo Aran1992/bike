@@ -8,7 +8,7 @@ window.PlatformHelper = {
     },
     closeLogoScene() {
         if (window.logoScene && window.logoScene.parentNode) {
-            // window.logoScene.parentNode.removeChild(window.logoScene);
+            window.logoScene.hidden = true;
         }
     }
 };
@@ -18,7 +18,6 @@ function callback() {
     let password = localStorage.password;
     if (username && password) {
         NetworkMgr.requestLogin(username, password, username, undefined, () => {
-            localStorage.playername = username;
             App.showScene("MainScene");
         }, () => {
             App.showScene("LoginScene");

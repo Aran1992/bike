@@ -180,6 +180,14 @@ export default class MyApplication extends Application {
             this.waitLoadList.push([resPathList, onLoadedCallback, onProgressCallback, minLoadTime, count]);
             return;
         }
+
+        let loadNextRes = () => {
+            const next = this.waitLoadList.shift();
+            if (next) {
+                this.loadResources(...next);
+            }
+        };
+
         let start = new Date().getTime();
         resPathList = Array.from(new Set(resPathList));
         resPathList = resPathList.filter(path => resources[path] === undefined && !MusicMgr.hasLoadedAudio(path));
@@ -204,13 +212,6 @@ export default class MyApplication extends Application {
             }
         });
 
-        let loadNextRes = () => {
-            const next = this.waitLoadList.shift();
-            if (next) {
-                this.loadResources(...next);
-            }
-        };
-
         let onLoadedResource = () => {
             if (isMusicLoaded && isCommonLoaded) {
                 this.onLoadEnded();
@@ -224,8 +225,8 @@ export default class MyApplication extends Application {
                         onLoadedCallback();
                         loadNextRes();
                     } else {
-                        onProgressCallback(100);
                         setTimeout(() => {
+                            onProgressCallback(100);
                             onLoadedCallback();
                             loadNextRes();
                         }, remain);
@@ -241,6 +242,9 @@ export default class MyApplication extends Application {
         loader
             .add(commonResPathList)
             .on("progress", (loader, resource) => {
+                if (isCommonLoaded) {
+                    return;
+                }
                 let item = this.loadList.find(item => resource.url === item[0]);
                 if (item) {
                     item[1] = true;
@@ -314,9 +318,13 @@ export default class MyApplication extends Application {
     }
 
     calcLoadProgress(count, loadList) {
-        let f = x => x === 0 ? 0 : (100 - f(x - 1)) / 2 + f(x - 1);
-        let start = f(count);
-        return start + (100 - start) / 2 * loadList.reduce((sum, item) => sum + (item[1] ? 1 : 0), 0) / loadList.length;
+        let sum = 0;
+        for (let i = 1; i <= count; i++) {
+            sum += Math.pow(0.5, i);
+        }
+        const percent = loadList.reduce((sum, item) => sum + (item[1] ? 1 : 0), 0) / loadList.length;
+        sum += Math.pow(0.5, count + 1) * percent;
+        return sum * 100;
     }
 
     onLoadEnded() {

@@ -39,7 +39,7 @@ export function main(callback) {
             MainScene.sceneFilePath,
             GameScene.sceneFilePath,
             ...imageTextPathList
-        ],
+        ].concat(MainScene.resPathList),
         callback,
         (percent) => {
             if (window.addPercent) {

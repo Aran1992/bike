@@ -120,7 +120,6 @@
         if (emptyImgLoaded && fillDivLoaded && !loadingUILoaded) {
             loadingUILoaded = true;
             setPercent(0);
-            addPercent(0.1);
         }
     }
 
@@ -133,7 +132,7 @@
 
     function addPercent(percent) {
         percent /= 100;
-        targetPercent += percent;
+        targetPercent = percent;
         if (loadingUILoaded) {
             if (animationID === undefined) {
                 animationID = requestAnimationFrame(onFrame);
@@ -151,9 +150,6 @@
             animationID = undefined;
         } else {
             animationID = requestAnimationFrame(onFrame);
-        }
-        if (curPercent >= 1) {
-            logoScene.hidden = true;
         }
     }
 
