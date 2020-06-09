@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":16,
-    "selecteID":73,
+    "selectedBox":1,
+    "selecteID":72,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":74,
+    "maxID":96,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -33,7 +33,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"width":1200,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","height":650,"centerY":20,"centerX":0},
+            "props":{"width":1200,"skin":"images/bg-200.png","height":650,"centerY":20,"centerX":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -46,19 +46,35 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":300,"top":-50,"skin":"images/bg-301.png","height":100,"centerX":0},
+                    "props":{"y":50,"x":20,"top":50,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","right":20,"left":20,"bottom":150},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":74,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"width":320,"top":-90,"skin":"images/bg-251.png","height":150,"centerX":0},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":18,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/count.png","scaleY":0.6,"scaleX":0.6,"centerY":0,"centerX":0},
+                            "props":{"skin":"images/english/count.png","centerY":0,"centerX":0},
                             "nodeParent":18,
                             "label":"Image",
                             "isDirectory":false,
@@ -168,7 +184,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"width":650,"top":350,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":50,"height":250},
+                    "props":{"width":650,"top":350,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":-1050,"height":250},
                     "nodeParent":16,
                     "label":"Image",
                     "isOpen":false,
@@ -247,7 +263,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,advertDoubleButton",
-                    "props":{"var":"advertDoubleButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":90,"bottom":190},
+                    "props":{"var":"advertDoubleButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":714,"bottom":32},
                     "nodeParent":16,
                     "label":"advertDoubleButton",
                     "isOpen":false,
@@ -284,6 +300,21 @@
                             "child":[
                                 ]
                         }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,hasDoubleRewardText",
+                    "props":{"var":"hasDoubleRewardText","skin":"images/english/HasDoubleReward.png","right":649,"bottom":42},
+                    "nodeParent":16,
+                    "label":"hasDoubleRewardText",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":73,
+                    "child":[
+                        ]
                 },
                 {
                     "x":30,
@@ -342,24 +373,309 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,hasDoubleRewardText",
-                    "props":{"var":"hasDoubleRewardText","skin":"images/english/HasDoubleReward.png","right":25,"bottom":200},
+                    "searchKey":"Image",
+                    "props":{"top":318,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":-236},
                     "nodeParent":16,
-                    "label":"hasDoubleRewardText",
+                    "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
-                    "compId":73,
+                    "hasChild":true,
+                    "compId":75,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-metre.png","scaleY":0.6,"scaleX":0.6,"left":20,"centerY":-2},
+                            "nodeParent":75,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":78,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"text":"里程奖励","left":80,"fontSize":40,"font":"theme2","color":"#000000","centerY":0},
+                            "nodeParent":75,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":79,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"x":0,"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "nodeParent":75,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":80,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"x":0,"text":"+ 999%","fontSize":30,"font":"theme2","color":"#000000","centerY":0,"centerX":50},
+                            "nodeParent":75,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":81,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"x":0,"skin":"images/bg-441.png","left":222,"centerY":0},
+                            "nodeParent":75,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":94,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
+                                    "nodeParent":94,
+                                    "label":"Image",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":95,
+                                    "child":[
+                                        ]
+                                }]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"top":373,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":-236},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":76,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/levelbg_s.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":0},
+                            "nodeParent":76,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":82,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"text":"经验奖励","left":80,"fontSize":40,"font":"theme2","color":"#000000","centerY":0},
+                            "nodeParent":76,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":83,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"x":0,"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "nodeParent":76,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":84,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"x":0,"text":"+ 999%","fontSize":30,"font":"theme2","color":"#000000","centerY":0,"centerX":50},
+                            "nodeParent":76,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":85,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"x":0,"skin":"images/bg-441.png","left":222,"centerY":0},
+                            "nodeParent":76,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":92,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
+                                    "nodeParent":92,
+                                    "label":"Image",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":93,
+                                    "child":[
+                                        ]
+                                }]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"top":428,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":-236},
+                    "nodeParent":16,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":77,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-coin.png","scaleY":0.3,"scaleX":0.3,"left":20,"centerY":0},
+                            "nodeParent":77,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":86,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"text":"钱币奖励","left":80,"fontSize":40,"font":"theme2","color":"#000000","centerY":0},
+                            "nodeParent":77,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":87,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "nodeParent":77,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":88,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"y":0,"text":"+ 999%","fontSize":30,"font":"theme2","color":"#000000","centerY":0,"centerX":50},
+                            "nodeParent":77,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":89,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-441.png","left":222,"centerY":0},
+                            "nodeParent":77,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":90,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
+                                    "nodeParent":90,
+                                    "label":"Image",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":91,
+                                    "child":[
+                                        ]
+                                }]
+                        }]
                 }]
         },
         {
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"skin":"images/show-31.png","scaleY":0.6,"scaleX":0.6,"right":170,"centerY":-120},
+            "props":{"skin":"images/show-31.png","scaleY":0.6,"scaleX":0.6,"right":157,"centerY":27},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
