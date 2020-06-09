@@ -1156,7 +1156,7 @@ Config.roadSections = {
     "111-1": [
         // 关卡（每个路段为2000像素）
         "Random/Random111-00000101",
-        "Random/Random111-00000101",
+        "Random/Random111-00010101",
     ],
 
     // 固定关卡（Normal）(第1阶段)
@@ -10963,80 +10963,86 @@ Config.lockSystems = {
     // 扭蛋
     drawButton: {
         // 解锁条件
-        condition: [12, 2, 3],
+//        condition: [12, 2, 3],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle1",
         // 解锁描述
         dsc: "SystemUnlockDescribe1",
         // 解锁图片
-        image: "myLaya/laya/assets/images/button-draw-scene.png",
+        image: "myLaya/laya/assets/images/english/NewContent-21.png",
         // 解锁图片缩放
-        imageScale: 2,
+        imageScale: 1,
     },
     // 签到
     signButton: {
         // 解锁条件
-        condition: [12, 2, 5],
+//        condition: [12, 2, 5],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle11",
         // 解锁描述
         dsc: "SystemUnlockDescribe11",
         // 解锁图片
-        image: "myLaya/laya/assets/images/icon-sign.png",
+        image: "myLaya/laya/assets/images/english/NewContent-25.png",
         // 解锁图片缩放
-        imageScale: 2,
+        imageScale: 1,
     },
     // 礼包
     giftButton: {
         // 解锁条件
-        condition: [12, 1, 5],
+//        condition: [12, 1, 5],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle12",
         // 解锁描述
         dsc: "SystemUnlockDescribe12",
         // 解锁图片
-        image: "myLaya/laya/assets/images/icon-gift.png",
+        image: "myLaya/laya/assets/images/english/NewContent-24.png",
         // 解锁图片缩放
-        imageScale: 2,
+        imageScale: 1,
     },
     // 商店（福利）
     shopButton: {
         // 解锁条件
-        condition: [12, 3, 5],
+//        condition: [12, 3, 5],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle13",
         // 解锁描述
         dsc: "SystemUnlockDescribe13",
         // 解锁图片
-        image: "myLaya/laya/assets/images/ButtonShop.png",
+        image: "myLaya/laya/assets/images/english/NewContent-23.png",
         // 解锁图片缩放
-        imageScale: 2,
+        imageScale: 1,
     },
     // 排名竞赛模式
     mapModeButton: {
         // 解锁条件
-        condition: [11, 5],
+//        condition: [11, 5],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle2",
         // 解锁描述
         dsc: "SystemUnlockDescribe2",
         // 解锁图片
-        image: "myLaya/laya/assets/images/button-13.png",
+        image: "myLaya/laya/assets/images/english/NewContent-1.png",
         // 解锁图片缩放
-        imageScale: 1.5,
+        imageScale: 1,
     },
     // 排行榜
     rankButton: {
         // 解锁条件
-        condition: [10, 1],
+//        condition: [10, 1],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle3",
         // 解锁描述
         dsc: "SystemUnlockDescribe3",
         // 解锁图片
-        image: "myLaya/laya/assets/images/ButtonRanking_Orange.png",
+        image: "myLaya/laya/assets/images/english/NewContent-22.png",
         // 解锁图片缩放
-        imageScale: 2,
+        imageScale: 1,
     },
     // 家园
     homeButton: {
@@ -11059,33 +11065,36 @@ Config.lockSystems = {
     // 车库
     bikeButton: {
         // 解锁条件
-        condition: [12, 1, 3],
+//        condition: [12, 1, 3],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle6",
         // 解锁描述
         dsc: "SystemUnlockDescribe6",
         // 解锁图片
-        image: "myLaya/laya/assets/images/button-bike-scene.png",
+        image: "myLaya/laya/assets/images/english/NewContent-11.png",
         // 解锁图片缩放
         imageScale: 1,
     },
     // 无尽模式
     endlessModeButton: {
         // 解锁条件
-        condition: [11, 4],
+//        condition: [11, 4],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle5",
         // 解锁描述
         dsc: "SystemUnlockDescribe5",
         // 解锁图片
-        image: "myLaya/laya/assets/images/button-11.png",
+        image: "myLaya/laya/assets/images/english/NewContent-2.png",
         // 解锁图片缩放
-        imageScale: 1.5,
+        imageScale: 1,
     },
     // 自行车能力
     upgradePanelButton: {
         // 解锁条件
-        condition: [12, 3, 3],
+//        condition: [12, 3, 3],
+        condition: [12, 1, 1],
         // 解锁内容标题
         title: "SystemUnlockTitle7",
         // 解锁描述
@@ -11217,11 +11226,11 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-2-1.scene.json",
+                "myLaya/laya/pages/Map/Map-2-2.scene.json",
+                "myLaya/laya/pages/Map/Map-2-3.scene.json",
+                "myLaya/laya/pages/Map/Map-2-4.scene.json",
+                "myLaya/laya/pages/Map/Map-2-5.scene.json",
             ],
             rewardList: [
                 {coin: 1000, diamond: 20},
@@ -11281,11 +11290,11 @@ Config.gameLevelMode = {
             },
             // 每一关的地图配置
             levelList: [
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
-                "myLaya/laya/pages/Map/Map-1-1.scene.json",
+                "myLaya/laya/pages/Map/Map-3-1.scene.json",
+                "myLaya/laya/pages/Map/Map-3-2.scene.json",
+                "myLaya/laya/pages/Map/Map-3-3.scene.json",
+                "myLaya/laya/pages/Map/Map-3-4.scene.json",
+                "myLaya/laya/pages/Map/Map-3-5.scene.json",
             ],
             rewardList: [
                 {coin: 1000, diamond: 20},
