@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":563,
+    "selecteID":651,
     "searchKey":"Scene",
     "props":{"width":2000,"sceneColor":"#000000","height":1},
     "nodeParent":-1,
-    "maxID":650,
+    "maxID":652,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -42,7 +42,6 @@
             "compId":563,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1440,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -56,7 +55,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1500,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -70,7 +68,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1440,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -84,7 +81,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1500,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -98,7 +94,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1560,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -112,7 +107,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1620,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -126,7 +120,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1560,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -140,7 +133,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1620,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -154,7 +146,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1680,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -168,7 +159,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1740,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -182,7 +172,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1680,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -196,7 +185,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1740,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -210,7 +198,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1320,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -224,7 +211,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1380,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -238,7 +224,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1320,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -252,7 +237,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1380,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -266,7 +250,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1200,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -280,7 +263,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-100,"x":1260,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -294,7 +276,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1200,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},
@@ -308,7 +289,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,EatableItem//立即生效物品//经验//ID:2002",
                     "props":{"y":-40,"x":1260,"skin":"images/logo-3.png","scaleY":1,"scaleX":1,"name":"EatableItem//立即生效物品//经验//ID:2002","anchorY":0.5,"anchorX":0.5},

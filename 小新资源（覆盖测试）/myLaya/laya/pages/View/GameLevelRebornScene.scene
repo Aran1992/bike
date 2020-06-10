@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":16,
+    "selectedBox":16,
+    "selecteID":97,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -61,16 +61,17 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":60,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":0},
+                    "props":{"top":65,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":80,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.6,"scaleX":0.6,"left":20,"centerY":-2},
@@ -85,9 +86,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":0,"text":"当前里程","left":80,"fontSize":40,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"y":0,"text":"当前里程","left":80,"fontSize":40,"color":"#000000","centerY":0},
                             "nodeParent":80,
                             "label":"Label",
                             "isDirectory":false,
@@ -98,6 +100,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -115,16 +118,17 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":115,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":0},
+                    "props":{"top":120,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":94,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/levelbg_s.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":0},
@@ -139,9 +143,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":0,"text":"当前经验","left":80,"fontSize":40,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"y":0,"text":"当前经验","left":80,"fontSize":40,"color":"#000000","centerY":0},
                             "nodeParent":94,
                             "label":"Label",
                             "isDirectory":false,
@@ -152,6 +157,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"y":0,"x":0,"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -169,16 +175,17 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":170,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":0},
+                    "props":{"top":175,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","centerX":0},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":97,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-coin.png","scaleY":0.3,"scaleX":0.3,"left":20,"centerY":0},
@@ -193,9 +200,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
-                            "props":{"y":0,"text":"当前钱币","left":80,"fontSize":40,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"y":0,"text":"当前钱币","left":80,"fontSize":40,"color":"#000000","centerY":0},
                             "nodeParent":97,
                             "label":"Label",
                             "isDirectory":false,
@@ -206,6 +214,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
