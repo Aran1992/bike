@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":77,
-    "selecteID":88,
+    "selectedBox":28,
+    "selecteID":97,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":96,
+    "maxID":98,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -27,7 +27,7 @@
             "hasChild":false,
             "compId":68,
             "child":[
-            ]
+                ]
         },
         {
             "x":15,
@@ -55,7 +55,7 @@
                     "hasChild":false,
                     "compId":74,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "x":30,
@@ -81,7 +81,7 @@
                             "hasChild":false,
                             "compId":71,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -91,13 +91,14 @@
                     "props":{"width":700,"top":70,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":50,"height":200},
                     "nodeParent":16,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":28,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"width":150,"skin":"images/bottom-num-15.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":50,"height":150,"centerY":0},
@@ -110,9 +111,10 @@
                             "compId":58,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,star0",
-                                    "props":{"var":"star0","skin":"images/balance_centerx4.png","scaleY":3.5,"scaleX":3.5,"centerY":0,"centerX":0},
+                                    "props":{"var":"star0","skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
                                     "nodeParent":58,
                                     "label":"star0",
                                     "isOpen":true,
@@ -121,10 +123,11 @@
                                     "hasChild":false,
                                     "compId":59,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"x":0,"width":150,"skin":"images/bottom-num-15.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":150,"centerY":0,"centerX":0},
@@ -137,21 +140,23 @@
                             "compId":60,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "searchKey":"Image,star1",
-                                    "props":{"var":"star1","skin":"images/balance_centerx4.png","scaleY":3.5,"scaleX":3.5,"centerY":0,"centerX":0},
+                                    "searchKey":"Image",
+                                    "props":{"y":0,"x":0,"skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
                                     "nodeParent":60,
-                                    "label":"star1",
+                                    "label":"Image",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
-                                    "compId":61,
+                                    "compId":96,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"y":0,"width":150,"skin":"images/bottom-num-15.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"height":150,"centerY":0},
@@ -164,18 +169,19 @@
                             "compId":62,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
-                                    "searchKey":"Image,star2",
-                                    "props":{"var":"star2","skin":"images/balance_centerx4.png","scaleY":3.5,"scaleX":3.5,"centerY":0,"centerX":0},
+                                    "searchKey":"Image",
+                                    "props":{"y":0,"x":0,"skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
                                     "nodeParent":62,
-                                    "label":"star2",
+                                    "label":"Image",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
-                                    "compId":63,
+                                    "compId":97,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         }]
                 },
@@ -227,7 +233,7 @@
                                             "hasChild":false,
                                             "compId":35,
                                             "child":[
-                                            ]
+                                                ]
                                         },
                                         {
                                             "type":"Label",
@@ -240,7 +246,7 @@
                                             "hasChild":false,
                                             "compId":36,
                                             "child":[
-                                            ]
+                                                ]
                                         },
                                         {
                                             "type":"Label",
@@ -253,7 +259,7 @@
                                             "hasChild":false,
                                             "compId":37,
                                             "child":[
-                                            ]
+                                                ]
                                         }]
                                 }]
                         }]
@@ -283,7 +289,7 @@
                             "hasChild":false,
                             "compId":66,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -297,7 +303,7 @@
                             "hasChild":false,
                             "compId":69,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -313,7 +319,7 @@
                     "hasChild":false,
                     "compId":73,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "x":30,
@@ -339,7 +345,7 @@
                             "hasChild":false,
                             "compId":51,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -366,7 +372,7 @@
                             "hasChild":false,
                             "compId":52,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -395,7 +401,7 @@
                             "hasChild":false,
                             "compId":78,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -409,7 +415,7 @@
                             "hasChild":false,
                             "compId":79,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -423,7 +429,7 @@
                             "hasChild":false,
                             "compId":80,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -437,7 +443,7 @@
                             "hasChild":false,
                             "compId":81,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -465,7 +471,7 @@
                                     "hasChild":false,
                                     "compId":95,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         }]
                 },
@@ -495,7 +501,7 @@
                             "hasChild":false,
                             "compId":82,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -509,7 +515,7 @@
                             "hasChild":false,
                             "compId":83,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -523,7 +529,7 @@
                             "hasChild":false,
                             "compId":84,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -537,7 +543,7 @@
                             "hasChild":false,
                             "compId":85,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -565,7 +571,7 @@
                                     "hasChild":false,
                                     "compId":93,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         }]
                 },
@@ -595,7 +601,7 @@
                             "hasChild":false,
                             "compId":86,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -609,7 +615,7 @@
                             "hasChild":false,
                             "compId":87,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -623,7 +629,7 @@
                             "hasChild":false,
                             "compId":88,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -637,7 +643,7 @@
                             "hasChild":false,
                             "compId":89,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -665,7 +671,7 @@
                                     "hasChild":false,
                                     "compId":91,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         }]
                 }]
@@ -683,7 +689,7 @@
             "hasChild":false,
             "compId":72,
             "child":[
-            ]
+                ]
         }],
     "animations":[
         {
@@ -700,7 +706,7 @@
                                 "key":"x",
                                 "index":0,
                                 "functions":[
-                                ]
+                                    ]
                             },
                             {
                                 "value":754,
