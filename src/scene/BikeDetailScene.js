@@ -15,7 +15,7 @@ export default class BikeDetailScene extends Scene {
 
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
 
-        let detailPanel = this.ui.detailPanel.children[0];
+        let detailPanel = this.ui.bikeSpritePanel;
         this.bikeSprite = new BikeSprite(detailPanel);
         this.bikeSprite.setPosition(detailPanel.mywidth / 2, Config.drawScene.bikeSprite.y);
     }
