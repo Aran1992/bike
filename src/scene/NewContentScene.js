@@ -13,9 +13,10 @@ export default class NewContentScene extends Scene {
     }
 
     onShow(info, closeCallback) {
+        this.closeCallback = closeCallback;
+
         this.parent.setChildIndex(this, this.parent.children.length - 1);
 
-        this.closeCallback = closeCallback;
         this.ui.title.text = App.getText(info.title);
         this.ui.image.removeChildren();
         let sprite = Sprite.from(info.image);

@@ -158,6 +158,9 @@ export default class GameScene extends Scene {
     }
 
     onShow() {
+        App.getScene("MainScene").curPlayerLevel = DataMgr.getPlayerLevel().level;
+        App.getScene("MainScene").gameLevelFirstWin = false;
+
         this.guideMgr.clear();
         this.guideMgr.setControlAll(false);
 

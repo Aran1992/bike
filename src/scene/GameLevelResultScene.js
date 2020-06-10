@@ -16,12 +16,12 @@ export default class GameLevelResultScene extends Scene {
     }
 
     onClickMainButton() {
-        this.onClose();
         App.hideScene("GameLevelResultScene");
         App.getScene("LevelGameScene").pauseGame();
         App.getScene("LevelGameScene").settle();
         App.destroyScene("LevelGameScene");
         App.showScene("MainScene");
+        this.onClose();
     }
 
     onCreate() {

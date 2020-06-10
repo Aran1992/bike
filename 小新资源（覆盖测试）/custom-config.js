@@ -2539,7 +2539,7 @@ Config.endlessMode.rewardRoad = {
     roadPath: [
         "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
         "myLaya/laya/pages/RoadSection/Special/Special111-00000111.scene.json",
-		],
+    ],
     // 吃满多少能够进入奖励路段
     maxValue: 100,
     // 结束时的无敌时间（秒）
@@ -12593,5 +12593,12 @@ Config.addExtraScoreAnimation = {
     // 结束移动的时候的位置
     endMoveX: 0,
 };
+
+// 玩家升级奖励 第一项代表1级升到2级 以此类推
+Config.levelUpReward = [
+    {bike: 1, coin: 1000, diamond: 20},
+    {bike: 1, coin: 1000, diamond: 20},
+    {bike: 1, coin: 1000, diamond: 20},
+];
 
 export default Config;

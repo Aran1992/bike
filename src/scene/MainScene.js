@@ -111,7 +111,6 @@ export default class MainScene extends Scene {
         window.PlatformHelper.closeLogoScene();
 
         this.refreshLockStatus();
-        this.checkWaitShowNotice();
         this.updatePoint();
 
         if (RunOption.forceShowBeginnerGuide === 0) {
@@ -281,11 +280,7 @@ export default class MainScene extends Scene {
 
     onUnlockSystem(lockInfo) {
         this.refreshLockStatus();
-        if (this.isShowed() && this.waitShowNotice.length === 0) {
-            this.showUnlockNotice(lockInfo);
-        } else {
-            this.waitShowNotice.push(lockInfo);
-        }
+        this.waitShowNotice.push(lockInfo);
     }
 
     showUnlockNotice(unlockInfo) {
@@ -297,6 +292,8 @@ export default class MainScene extends Scene {
     checkWaitShowNotice() {
         if (this.waitShowNotice.length) {
             this.showUnlockNotice(this.waitShowNotice.shift());
+        } else {
+            this.showNextGameLevel();
         }
     }
 
@@ -401,7 +398,39 @@ export default class MainScene extends Scene {
             check() && (this.lockableButtons.indexOf(name) === -1 || !GameUtils.isSystemLocked(name))));
     }
 
-    onGameEnded(){
+    onGameEnded() {
+        const newLevel = DataMgr.getPlayerLevel().level;
+        if (this.curPlayerLevel < newLevel) {
+            this.curPlayerLevel++;
+            this.showLevelUp(newLevel);
+        } else {
+            this.checkWaitShowNotice();
+        }
+    }
+
+    showLevelUp(newLevel) {
+        const reward = Config.levelUpReward[this.curPlayerLevel - 2];
+        if (reward) {
+            App.showScene("LevelUpScene", this.curPlayerLevel, () => {
+                if (reward.bike) {
+                    let {levelUp, highestLevel} = DataMgr.plusBike(reward.bike);
+                    App.showScene("BikeDetailScene", reward.bike, levelUp, highestLevel, () => {
+                        this.onGameEnded(newLevel);
+                    });
+                } else {
+                    this.onGameEnded(newLevel);
+                }
+            });
+        } else {
+            this.onGameEnded(newLevel);
+        }
+    }
+
+    showNextGameLevel() {
+        const scene = App.getScene("GameLevelScene");
+        if (scene) {
+            scene.onGameEnded(this.gameLevelFirstWin);
+        }
     }
 }
 
