@@ -16,6 +16,7 @@ export default class PauseScene extends Scene {
                 App.destroyScene(this.args.gameSceneName);
                 App.hideScene("PauseScene");
                 App.showScene("MainScene");
+                App.getScene("MainScene").onGameEnded();
             },
             cancelCallback: () => {
             }

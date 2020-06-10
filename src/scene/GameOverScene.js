@@ -12,6 +12,7 @@ export default class GameOverScene extends Scene {
         App.hideScene("GameOverScene");
         App.destroyScene("EndlessGameScene");
         App.showScene("MainScene");
+        App.getScene("MainScene").onGameEnded();
     }
 
     static onClickRestartButton() {

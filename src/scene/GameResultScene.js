@@ -14,6 +14,7 @@ export default class GameResultScene extends Scene {
         App.getScene("MapGameScene").settle();
         App.destroyScene("MapGameScene");
         App.showScene("MainScene");
+        App.getScene("MainScene").onGameEnded();
     }
 
     onCreate() {

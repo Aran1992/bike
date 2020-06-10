@@ -14,6 +14,7 @@ export default class GameLevelFailedScene extends Scene {
         App.getScene("LevelGameScene").settle();
         App.destroyScene("LevelGameScene");
         App.showScene("MainScene");
+        App.getScene("MainScene").onGameEnded();
     }
 
     static onClickRestartButton() {
