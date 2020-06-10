@@ -29,7 +29,8 @@ export default class GameLevelResultScene extends Scene {
             if (success) {
                 this.args.gameScene.doubleReward = true;
                 window.TDGA && TDGA.onEvent("广告闯关模式双倍");
-                this.onClickMask();
+                App.showMask(this.onClickMask.bind(this));
+                this.playDoubleAnimation(() => this.onClickMask());
             }
         });
     }
@@ -51,7 +52,11 @@ export default class GameLevelResultScene extends Scene {
         this.typeList.forEach(data => {
             const originValue = this.args.gameScene[data.type];
             const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
-            data.valueText.text = Math.floor(originValue * typePercent);
+            let value = Math.floor(originValue * typePercent);
+            if (this.args.gameScene.doubleReward) {
+                value *= 2;
+            }
+            data.valueText.text = value;
             data.doubleIcon.visible = this.args.gameScene.doubleReward;
         });
 
@@ -75,13 +80,6 @@ export default class GameLevelResultScene extends Scene {
         this.onClick(this.ui.restartButton, GameLevelResultScene.onClickRestartButton);
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
-        for (let i = 0; i < Config.starCount; i++) {
-            const star = this.ui[`star${i}`].children[0];
-            star.anchor.set(0.5, 0.5);
-            star.position.set(star.x + star.width / 2, star.y + star.height / 2);
-            star.originScale = star.scale.x;
-        }
-
         this.typeList = [];
         const typeList = [
             "distance",
@@ -97,7 +95,20 @@ export default class GameLevelResultScene extends Scene {
             });
         });
 
+        this.typeList.forEach(data => this.initAnimationObject(data.doubleIcon));
+        this.initAnimationObject(this.ui.hasDoubleRewardText);
+        for (let i = 0; i < Config.starCount; i++) {
+            this.initAnimationObject(this.ui[`star${i}`]);
+        }
+
         this.animations = [];
+    }
+
+    initAnimationObject(obj) {
+        obj = obj.children[0];
+        obj.originScale = obj.scale.x;
+        obj.anchor.set(0.5, 0.5);
+        obj.position.set(obj.x + obj.width / 2, obj.y + obj.height / 2);
     }
 
     onShow(args) {
@@ -149,7 +160,7 @@ export default class GameLevelResultScene extends Scene {
             if (this.starIndex < starCount) {
                 const star = this.ui[`star${this.starIndex}`];
                 star.visible = true;
-                this.playStarAnimation(star, () => {
+                this.playStarAnimation(star, Config.resolveAnimation.starAnimation, () => {
                     this.starIndex++;
                     loop();
                 });
@@ -160,16 +171,16 @@ export default class GameLevelResultScene extends Scene {
         loop();
     }
 
-    playStarAnimation(target, callback) {
+    playStarAnimation(target, animationConfig, callback) {
         target = target.children[0];
         const os = target.originScale;
-        const s = os * Config.getStarAnimation.startScale;
-        const a = Config.getStarAnimation.startAlpha;
+        const s = os * animationConfig.startScale;
+        const a = animationConfig.startAlpha;
         target.scale.set(s, s);
         target.alpha = a;
         const obj = {scale: s, alpha: a};
         const animation = new TWEEN.Tween(obj)
-            .to({scale: os, alpha: 1}, Config.getStarAnimation.duration)
+            .to({scale: os, alpha: 1}, animationConfig.duration)
             .easing(TWEEN.Easing.Bounce.Out)
             .onUpdate(() => {
                 target.scale.set(obj.scale, obj.scale);
@@ -186,13 +197,58 @@ export default class GameLevelResultScene extends Scene {
     playNumberAnimation(callback) {
         const obj = {percent: 0};
         const animation = new TWEEN.Tween(obj)
-            .to({percent: 1}, 5000)
+            .to({percent: 1}, Config.resolveAnimation.numberAnimation.duration)
             .onUpdate(() => {
                 this.typeList.forEach(data => {
                     const originValue = this.args.gameScene[data.type];
                     const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
                     data.valueText.text = Math.floor(originValue * typePercent * obj.percent);
                 });
+            })
+            .onComplete(() => {
+                Utils.removeItemFromArray(this.animations, animation);
+                callback && callback();
+            })
+            .start(performance.now());
+        this.animations.push(animation);
+    }
+
+    playDoubleAnimation(callback) {
+        this.ui.advertDoubleButton.visible = false;
+        this.typeList.forEach(data => data.doubleIcon.visible = false);
+        let index = 0;
+        const loop = () => {
+            if (index < this.typeList.length) {
+                const icon = this.typeList[index].doubleIcon;
+                icon.visible = true;
+                this.playStarAnimation(icon, Config.resolveAnimation.doubleIconAnimation, () => {
+                    this.playAdvertNumberAnimation(index, () => {
+                        index++;
+                        loop();
+                    });
+                });
+            } else if (index === this.typeList.length) {
+                this.ui.hasDoubleRewardText.visible = true;
+                this.playStarAnimation(this.ui.hasDoubleRewardText, Config.resolveAnimation.getIconAnimation, () => {
+                    index++;
+                    loop();
+                });
+            } else {
+                callback && callback();
+            }
+        };
+        loop();
+    }
+
+    playAdvertNumberAnimation(index, callback) {
+        const obj = {percent: 1};
+        const animation = new TWEEN.Tween(obj)
+            .to({percent: 2}, Config.resolveAnimation.numberAnimation.duration)
+            .onUpdate(() => {
+                const data = this.typeList[index];
+                const originValue = this.args.gameScene[data.type];
+                const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
+                data.valueText.text = Math.floor(originValue * typePercent * obj.percent);
             })
             .onComplete(() => {
                 Utils.removeItemFromArray(this.animations, animation);
