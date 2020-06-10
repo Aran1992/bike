@@ -9,21 +9,20 @@ import MusicMgr from "../mgr/MusicMgr";
 import TWEEN from "@tweenjs/tween.js";
 
 export default class GameLevelResultScene extends Scene {
-    static onClickMainButton() {
-        App.hideScene("GameLevelResultScene");
-        App.getScene("LevelGameScene").pauseGame();
-        App.getScene("LevelGameScene").settle();
-        App.destroyScene("LevelGameScene");
-        App.showScene("MainScene");
-    }
-
     static onClickRestartButton() {
         App.getScene("LevelGameScene").settle();
         App.hideScene("GameLevelResultScene");
         EventMgr.dispatchEvent("Restart");
     }
 
-    // 播放一个动画 还是要有刷新的功能 万一她要快速结束的话
+    onClickMainButton() {
+        this.onClose();
+        App.hideScene("GameLevelResultScene");
+        App.getScene("LevelGameScene").pauseGame();
+        App.getScene("LevelGameScene").settle();
+        App.destroyScene("LevelGameScene");
+        App.showScene("MainScene");
+    }
 
     onCreate() {
         let mask = new Graphics()
@@ -32,7 +31,7 @@ export default class GameLevelResultScene extends Scene {
             .endFill();
         this.addChildAt(mask, 0);
 
-        this.onClick(this.ui.mainButton, GameLevelResultScene.onClickMainButton);
+        this.onClick(this.ui.mainButton, this.onClickMainButton.bind(this));
         this.onClick(this.ui.restartButton, GameLevelResultScene.onClickRestartButton);
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
@@ -56,25 +55,8 @@ export default class GameLevelResultScene extends Scene {
 
         this.refresh();
 
-        const hasGotAllStar = this.args.gameScene.star === Config.starCount
+        this.firstGotAllStars = this.args.gameScene.star === Config.starCount
             && DataMgr.getGameLevelStarCount(this.args.gameScene.mapIndex, this.args.gameScene.levelIndex) !== Config.starCount;
-        if (hasGotAllStar) {
-            const reward = Config.gameLevelMode.mapList[this.args.gameScene.mapIndex].rewardList[this.args.gameScene.levelIndex];
-            let list = [];
-            if (reward.coin) {
-                list.push({rewardCoin: reward.coin});
-            }
-            if (reward.diamond) {
-                list.push({rewardDiamond: reward.diamond});
-            }
-            if (reward.exp) {
-                list.push({rewardExp: reward.exp});
-            }
-            if (reward.bike) {
-                list.push({rewardBike: reward.bike});
-            }
-            App.showScene("PrizeScene", list);
-        }
 
         App.getScene("LevelGameScene").stopSounds();
         MusicMgr.pauseBGM();
@@ -163,6 +145,50 @@ export default class GameLevelResultScene extends Scene {
                 callback && callback();
             })
             .start(performance.now());
+    }
+
+    onClose() {
+        if (this.firstGotAllStars) {
+            this.showFirstPrize();
+        } else {
+            App.getScene("MainScene").onGameEnded();
+        }
+    }
+
+    showFirstPrize() {
+        const reward = Config.gameLevelMode.mapList[this.args.gameScene.mapIndex].rewardList[this.args.gameScene.levelIndex];
+        let commonPrizeList = [];
+        if (reward.coin) {
+            commonPrizeList.push({rewardCoin: reward.coin});
+        }
+        if (reward.diamond) {
+            commonPrizeList.push({rewardDiamond: reward.diamond});
+        }
+        if (reward.exp) {
+            commonPrizeList.push({rewardExp: reward.exp});
+        }
+        this.showCommonPrize(commonPrizeList, () => {
+            this.showBikePrize(reward.bike, () => {
+                App.getScene("MainScene").onGameEnded();
+            });
+        });
+    }
+
+    showCommonPrize(prizeList, callback) {
+        if (prizeList.length === 0) {
+            callback && callback();
+        } else {
+            App.showScene("PrizeScene", prizeList, callback);
+        }
+    }
+
+    showBikePrize(bike, callback) {
+        if (bike === undefined) {
+            callback && callback();
+        } else {
+            let {levelUp, highestLevel} = DataMgr.plusBike(bike);
+            App.showScene("BikeDetailScene", bike, levelUp, highestLevel, callback);
+        }
     }
 }
 

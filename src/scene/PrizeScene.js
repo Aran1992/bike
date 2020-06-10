@@ -30,7 +30,9 @@ export default class PrizeScene extends Scene {
         });
     }
 
-    onShow(rewards) {
+    onShow(rewards, closeCallback) {
+        this.closeCallback = closeCallback;
+
         this.parent.setChildIndex(this, this.parent.children.length - 1);
 
         rewards.forEach(reward => {
@@ -100,7 +102,14 @@ export default class PrizeScene extends Scene {
     }
 
     onClickReturnButton() {
+        this.onClose();
         App.hideScene("PrizeScene");
+    }
+
+    onClose() {
+        if (this.closeCallback) {
+            this.closeCallback();
+        }
     }
 }
 

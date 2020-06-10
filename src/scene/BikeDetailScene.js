@@ -20,7 +20,9 @@ export default class BikeDetailScene extends Scene {
         this.bikeSprite.setPosition(detailPanel.mywidth / 2, Config.drawScene.bikeSprite.y);
     }
 
-    onShow(id, levelUp, highestLevel) {
+    onShow(id, levelUp, highestLevel, closeCallback) {
+        this.closeCallback = closeCallback;
+
         this.parent.setChildIndex(this, this.parent.children.length - 1);
 
         this.bikeSprite.setBikeID(id);
@@ -44,8 +46,15 @@ ${bonusDsc}`;
     }
 
     onClickReturnButton() {
-        App.hideScene("BikeDetailScene");
+        this.onClose();
         this.bikeSprite.stop();
+        App.hideScene("BikeDetailScene");
+    }
+
+    onClose() {
+        if (this.closeCallback) {
+            this.closeCallback();
+        }
     }
 }
 

@@ -400,6 +400,9 @@ export default class MainScene extends Scene {
         ].forEach(([name, check]) => GameUtils.showRedPoint(this.ui[name],
             check() && (this.lockableButtons.indexOf(name) === -1 || !GameUtils.isSystemLocked(name))));
     }
+
+    onGameEnded(){
+    }
 }
 
 MainScene.sceneFilePath = "myLaya/laya/pages/View/MainScene.scene.json";
