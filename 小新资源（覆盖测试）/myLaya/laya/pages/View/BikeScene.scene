@@ -1,14 +1,14 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":53,
+    "selectedBox":65,
+    "selecteID":281,
     "searchKey":"Scene",
     "referenceLines":[
         ],
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":306,
+    "maxID":355,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -33,82 +33,8 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,returnButton",
-            "props":{"var":"returnButton","top":25,"skin":"images/ButtonBack_Blue.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","left":25},
-            "nodeParent":1,
-            "label":"returnButton",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":14,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,selectBikeButton",
-            "props":{"width":200,"var":"selectBikeButton","top":5,"skin":"images/button-41.png","runtime":"../laya/assets/sounds/shinchan_141.mp3","right":56,"height":82},
-            "nodeParent":1,
-            "label":"selectBikeButton",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":53,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"skin":"images/english/Enable.png","centerY":-3,"centerX":0},
-                    "nodeParent":53,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":272,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "searchKey":"Image,unlockBikeImage",
-            "props":{"width":200,"visible":false,"var":"unlockBikeImage","top":5,"skin":"images/button-42.png","right":56,"height":82},
-            "nodeParent":1,
-            "label":"unlockBikeImage",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":55,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"skin":"images/english/Unlocked.png","centerY":-3,"centerX":0},
-                    "nodeParent":55,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":271,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
             "searchKey":"Image",
-            "props":{"width":650,"skin":"images/bg-201.png","sizeGrid":"50,0,50,0","right":20,"height":620,"bottom":10},
+            "props":{"top":10,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","right":20,"left":20,"bottom":5},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -124,7 +50,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,list",
-            "props":{"width":600,"var":"list","right":47,"height":590,"bottom":27},
+            "props":{"width":600,"var":"list","right":75,"height":590,"bottom":100},
             "nodeParent":1,
             "label":"list",
             "isOpen":false,
@@ -308,10 +234,10 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,leftArrow",
-            "props":{"var":"leftArrow","skin":"images/button-lastBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":625,"bottom":290},
+            "props":{"var":"leftArrow","skin":"images/button-lastBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":660,"bottom":355},
             "nodeParent":1,
             "label":"leftArrow",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -324,7 +250,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,rightArrow",
-            "props":{"var":"rightArrow","skin":"images/button-nextBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":28,"bottom":290},
+            "props":{"var":"rightArrow","skin":"images/button-nextBtn-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":45,"bottom":355},
             "nodeParent":1,
             "label":"rightArrow",
             "isOpen":true,
@@ -339,28 +265,28 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image,upgradePanel",
-            "props":{"width":650,"visible":false,"var":"upgradePanel","skin":"images/bg-201.png","sizeGrid":"50,0,50,0","right":20,"height":620,"bottom":10},
+            "searchKey":"Image,upgradePanelButton",
+            "props":{"var":"upgradePanelButton","top":24,"skin":"images/english/button-skill-1.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":78},
             "nodeParent":1,
-            "label":"upgradePanel",
+            "label":"upgradePanelButton",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":68,
+            "compId":65,
             "child":[
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"top":60,"skin":"images/bg-231.png","sizeGrid":"50,0,50,0","right":25,"left":25,"bottom":60},
-                    "nodeParent":68,
-                    "label":"Image",
+                    "searchKey":"Image,lockedImage",
+                    "props":{"top":-24,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":59},
+                    "nodeParent":65,
+                    "label":"lockedImage",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":292,
+                    "compId":281,
                     "child":[
                         ],
                     "$HIDDEN":false
@@ -368,27 +294,112 @@
                 {
                     "x":30,
                     "type":"Image",
+                    "searchKey":"Image,redPoint",
+                    "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-27,"name":"redPoint"},
+                    "nodeParent":65,
+                    "label":"redPoint",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":285,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"skin":"images/bg-461.png","left":65,"bottom":28},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":21,
+            "child":[
+                {
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":40,"text":"角色名称","leading":5,"fontSize":30,"color":"#000000","centerX":0},
+                    "nodeParent":21,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":307,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"text":"角色形象介绍说明","leading":5,"fontSize":30,"color":"#000000","centerX":0,"bottom":40},
+                    "nodeParent":21,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":354,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":-55,"skin":"images/bg-251.png","scaleY":0.5,"scaleX":0.5,"left":-50},
-                    "nodeParent":68,
+                    "props":{"width":430,"top":100,"skin":"images/bg-431.png","left":20},
+                    "nodeParent":21,
                     "label":"Image",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":293,
+                    "compId":308,
                     "child":[
                         {
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/english/skillup.png","centerY":0,"centerX":0},
-                            "nodeParent":293,
+                            "props":{"skin":"images/icon-speed.png","left":20,"centerY":0},
+                            "nodeParent":308,
                             "label":"Image",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":294,
+                            "compId":310,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/speed-21.png","left":70,"centerY":0},
+                            "nodeParent":308,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":311,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"skin":"images/skill-star-1.png","right":20,"centerY":0},
+                            "nodeParent":308,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":312,
                             "child":[
                                 ],
                             "$HIDDEN":false
@@ -396,10 +407,527 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":155,"skin":"images/bg-431.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":313,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-jump.png","left":20,"centerY":0},
+                            "nodeParent":313,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":314,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/jump-21.png","left":70,"centerY":0},
+                            "nodeParent":313,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":315,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"skin":"images/skill-star-1.png","right":20,"centerY":0},
+                            "nodeParent":313,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":316,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":210,"skin":"images/bg-432.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":317,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-skill.png","left":20,"centerY":0},
+                            "nodeParent":317,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":318,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/skill-21.png","left":70,"centerY":0},
+                            "nodeParent":317,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":319,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"skin":"images/icon-skill.png","left":230,"centerY":0},
+                            "nodeParent":317,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":351,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"skin":"images/icon-skill.png","left":300,"centerY":0},
+                            "nodeParent":317,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":352,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"y":0,"skin":"images/icon-skill.png","left":370,"centerY":0},
+                            "nodeParent":317,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":353,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":265,"skin":"images/bg-432.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":321,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-level.png","scaleY":0.65,"scaleX":0.65,"left":16,"centerY":0},
+                            "nodeParent":321,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":322,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/level-21.png","left":70,"centerY":0},
+                            "nodeParent":321,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":323,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
+                            "nodeParent":321,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":324,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"text":"999","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "nodeParent":324,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":329,
+                                    "child":[
+                                        ]
+                                }],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":320,"skin":"images/bg-432.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":325,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-metre.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":0},
+                            "nodeParent":325,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":326,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/distance-21.png","left":70,"centerY":0},
+                            "nodeParent":325,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":327,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
+                            "nodeParent":325,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":328,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "nodeParent":328,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":330,
+                                    "child":[
+                                        ]
+                                }],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":375,"skin":"images/bg-432.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":336,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/levelbg_s.png","scaleY":0.4,"scaleX":0.4,"left":20,"centerY":0},
+                            "nodeParent":336,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":337,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/exp-21.png","left":70,"centerY":0},
+                            "nodeParent":336,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":338,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
+                            "nodeParent":336,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":339,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "nodeParent":339,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":340,
+                                    "child":[
+                                        ]
+                                }],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":430,"skin":"images/bg-432.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":341,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-coin.png","scaleY":0.25,"scaleX":0.25,"left":20,"centerY":0},
+                            "nodeParent":341,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":342,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/coin-21.png","left":70,"centerY":0},
+                            "nodeParent":341,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":343,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
+                            "nodeParent":341,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":344,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "nodeParent":344,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":345,
+                                    "child":[
+                                        ]
+                                }],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"x":0,"width":430,"top":485,"skin":"images/bg-432.png","left":20},
+                    "nodeParent":21,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":346,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/icon-mark.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":0},
+                            "nodeParent":346,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":347,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/english/totalScore-21.png","left":70,"centerY":0},
+                            "nodeParent":346,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":348,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
+                            "nodeParent":346,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":349,
+                            "child":[
+                                {
+                                    "type":"Label",
+                                    "searchKey":"Label",
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "nodeParent":349,
+                                    "label":"Label",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":350,
+                                    "child":[
+                                        ]
+                                }],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,upgradePanel",
+            "props":{"visible":true,"var":"upgradePanel","skin":"images/bg-461.png","left":65,"bottom":28},
+            "nodeParent":1,
+            "label":"upgradePanel",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":68,
+            "child":[
+                {
                     "type":"Panel",
                     "searchKey":"Panel,upgradeList",
-                    "props":{"width":570,"var":"upgradeList","height":480,"centerY":0,"centerX":0},
+                    "props":{"width":570,"var":"upgradeList","top":10,"scaleY":0.79,"scaleX":0.79,"left":10,"height":480},
                     "nodeParent":68,
                     "label":"upgradeList",
                     "isOpen":true,
@@ -409,13 +937,12 @@
                     "compId":277,
                     "child":[
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel",
                             "props":{"width":570,"height":120},
                             "nodeParent":277,
                             "label":"Panel",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -427,7 +954,7 @@
                                     "props":{"width":570,"skin":"images/bg-241.png","sizeGrid":"50,50,50,50","height":115,"centerY":0,"centerX":0},
                                     "nodeParent":278,
                                     "label":"Image",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":true,
                                     "hasChild":true,
@@ -950,10 +1477,9 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,lvLimitPanel",
-                    "props":{"width":360,"visible":false,"var":"lvLimitPanel","top":20,"skin":"images/button-42.png","sizeGrid":"50,50,50,50","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-500,"height":85},
+                    "props":{"width":360,"visible":false,"var":"lvLimitPanel","top":496,"skin":"images/button-42.png","sizeGrid":"50,50,50,50","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":55,"height":85},
                     "nodeParent":68,
                     "label":"lvLimitPanel",
                     "isOpen":false,
@@ -979,20 +1505,18 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,upgradeButton",
-                    "props":{"width":220,"var":"upgradeButton","top":20,"skin":"images/button-41.png","sizeGrid":"50,50,50,50","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-430,"height":120},
+                    "props":{"width":220,"var":"upgradeButton","top":496,"skin":"images/button-41.png","sizeGrid":"50,50,50,50","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":125,"height":120},
                     "nodeParent":68,
                     "label":"upgradeButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":160,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"x":57,"width":170,"skin":"images/bg-371.png","height":45,"centerX":0,"bottom":15},
@@ -1005,7 +1529,6 @@
                             "compId":305,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,upgradeCostPanel",
                                     "props":{"width":170,"var":"upgradeCostPanel","height":45,"centerY":0,"centerX":0},
@@ -1018,7 +1541,6 @@
                                     "compId":79,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"Image",
                                             "searchKey":"Image",
                                             "props":{"skin":"images/icon-coin.png","scaleY":0.25,"scaleX":0.25,"left":5,"centerY":0},
@@ -1033,7 +1555,6 @@
                                                 ]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "searchKey":"Label,upgradeCostLabel",
                                             "props":{"var":"upgradeCostLabel","text":"9999999","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":20},
@@ -1051,7 +1572,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":15,"skin":"images/english/LevelUp.png","centerX":0},
@@ -1068,10 +1588,9 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,upgradeTimesLabel",
-                    "props":{"var":"upgradeTimesLabel","top":-40,"text":"已升级99次","strokeColor":"#000000","stroke":5,"left":-415,"fontSize":40,"color":"#ffffff"},
+                    "props":{"var":"upgradeTimesLabel","top":436,"text":"已升级99次","strokeColor":"#000000","stroke":5,"left":133,"fontSize":40,"color":"#ffffff"},
                     "nodeParent":68,
                     "label":"upgradeTimesLabel",
                     "isDirectory":false,
@@ -1087,200 +1606,145 @@
         {
             "x":15,
             "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":260,"x":20,"width":550,"skin":"images/bg-201.png","left":20,"height":450,"bottom":10},
+            "searchKey":"Image,selectBikeButton",
+            "props":{"width":200,"var":"selectBikeButton","skin":"images/button-41.png","runtime":"../laya/assets/sounds/shinchan_141.mp3","right":275,"bottom":20},
             "nodeParent":1,
-            "label":"Image",
+            "label":"selectBikeButton",
             "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":21,
+            "compId":53,
             "child":[
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"top":30,"skin":"images/bg-211.png","sizeGrid":"0,0,0,0","right":30,"left":30,"bottom":30},
-                    "nodeParent":21,
+                    "props":{"skin":"images/english/Enable.png","centerY":-3,"centerX":0},
+                    "nodeParent":53,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":289,
+                    "compId":272,
                     "child":[
-                        ],
-                    "$HIDDEN":false
-                },
+                        ]
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,unlockBikeImage",
+            "props":{"width":200,"visible":false,"var":"unlockBikeImage","skin":"images/button-42.png","right":275,"bottom":20},
+            "nodeParent":1,
+            "label":"unlockBikeImage",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":55,
+            "child":[
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":250,"x":111,"skin":"images/bg-331.png","sizeGrid":"0,0,0,0"},
-                    "nodeParent":21,
+                    "props":{"skin":"images/english/Unlocked.png","centerY":-3,"centerX":0},
+                    "nodeParent":55,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":295,
+                    "compId":271,
                     "child":[
-                        ],
-                    "$HIDDEN":false
-                },
+                        ]
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,returnButton",
+            "props":{"var":"returnButton","top":0,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":0,"left":1208},
+            "nodeParent":1,
+            "label":"returnButton",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":14,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,drawButton",
+            "props":{"y":1065,"x":65,"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":65,"height":101,"bottom":-426},
+            "nodeParent":1,
+            "label":"drawButton",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":22,
+            "child":[
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"y":250,"x":334,"skin":"images/bg-331.png","sizeGrid":"0,0,0,0"},
-                    "nodeParent":21,
+                    "props":{"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":-40},
+                    "nodeParent":22,
                     "label":"Image",
-                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":297,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"y":91,"x":237,"skin":"images/bg-331.png","sizeGrid":"0,0,0,0"},
-                    "nodeParent":21,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":296,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "type":"Image",
-                    "searchKey":"Image,drawButton",
-                    "props":{"width":101,"var":"drawButton","skin":"images/button-draw-scene.png","scaleY":0.8,"scaleX":0.8,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101,"bottom":-1062},
-                    "nodeParent":21,
-                    "label":"drawButton",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":22,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/draw.png","centerX":0,"bottom":-40},
-                            "nodeParent":22,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":60,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,lockedImage",
-                            "props":{"y":0,"x":35,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
-                            "nodeParent":22,
-                            "label":"lockedImage",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":166,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,redPoint",
-                            "props":{"x":0,"top":-10,"skin":"images/redPoint.png","scaleY":1.2,"scaleX":1.2,"right":-20,"name":"redPoint"},
-                            "nodeParent":22,
-                            "label":"redPoint",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":286,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        }],
-                    "$HIDDEN":false
-                },
-                {
-                    "type":"Label",
-                    "searchKey":"Label,bikeDscText",
-                    "props":{"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#000000","centerY":10,"centerX":30},
-                    "nodeParent":21,
-                    "label":"bikeDscText",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":51,
+                    "compId":60,
                     "child":[
                         ]
                 },
                 {
                     "type":"Image",
-                    "searchKey":"Image,upgradePanelButton",
-                    "props":{"width":101,"var":"upgradePanelButton","top":60,"skin":"images/button-skill.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":45,"height":101},
-                    "nodeParent":21,
-                    "label":"upgradePanelButton",
-                    "isOpen":false,
-                    "isDirectory":true,
+                    "searchKey":"Image,lockedImage",
+                    "props":{"y":0,"x":35,"top":0,"skin":"images/key_lock.png","scaleY":1,"scaleX":1,"name":"lockedImage","centerX":0},
+                    "nodeParent":22,
+                    "label":"lockedImage",
+                    "isOpen":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
-                    "compId":65,
+                    "hasChild":false,
+                    "compId":166,
                     "child":[
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"x":0,"skin":"images/english/skill.png","scaleY":0.6,"scaleX":0.6,"centerX":0,"bottom":-10},
-                            "nodeParent":65,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":279,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,lockedImage",
-                            "props":{"x":35,"top":-20,"skin":"images/key_lock-2.png","scaleY":0.6,"scaleX":0.6,"name":"lockedImage","centerX":0},
-                            "nodeParent":65,
-                            "label":"lockedImage",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":281,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,redPoint",
-                            "props":{"top":-5,"skin":"images/redPoint.png","scaleY":1.5,"scaleX":1.5,"right":-5,"name":"redPoint"},
-                            "nodeParent":65,
-                            "label":"redPoint",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":285,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        }]
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image,redPoint",
+                    "props":{"x":0,"top":-10,"skin":"images/redPoint.png","scaleY":1.2,"scaleX":1.2,"right":-20,"name":"redPoint"},
+                    "nodeParent":22,
+                    "label":"redPoint",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":286,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,bikeDscText",
+            "props":{"y":1100,"x":-55,"var":"bikeDscText","text":"12345678901234567890","leading":5,"fontSize":25,"color":"#000000","centerX":-556,"bottom":-410},
+            "nodeParent":1,
+            "label":"bikeDscText",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":51,
+            "child":[
+                ]
         }],
     "animations":[
         {
