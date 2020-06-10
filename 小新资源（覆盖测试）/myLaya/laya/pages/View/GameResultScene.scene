@@ -1,7 +1,8 @@
 {
+    "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":64,
+    "selectedBox":71,
+    "selecteID":78,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -14,6 +15,7 @@
     "compId":1,
     "child":[
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"skin":"images/bg-311.png","right":0,"left":0,"bottom":0},
@@ -28,6 +30,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,panel",
             "props":{"width":1070,"var":"panel","skin":"images/bg-200.png","height":650,"centerX":3,"bottom":0},
@@ -40,6 +43,7 @@
             "compId":2,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":50,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","right":20,"left":20,"bottom":150},
@@ -54,6 +58,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":320,"top":-72,"skin":"images/bg-251.png","scaleY":0.95,"scaleX":0.95,"height":150,"centerX":0},
@@ -80,6 +85,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":96,"left":-716},
@@ -106,6 +112,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":650,"top":153,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":-1041,"height":150},
@@ -184,6 +191,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":650,"top":320,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","left":-1050,"height":300},
@@ -288,6 +296,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,advertDoubleButton",
                     "props":{"var":"advertDoubleButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","left":135,"bottom":35},
@@ -329,6 +338,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,hasDoubleRewardText",
                     "props":{"var":"hasDoubleRewardText","skin":"images/english/HasDoubleReward.png","left":60,"bottom":50},
@@ -343,6 +353,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mainButton",
                     "props":{"var":"mainButton","skin":"images/bg-352.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":25},
@@ -369,6 +380,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":750,"top":64,"skin":"images/bg-231.png","sizeGrid":"50,50,50,50","left":35,"height":145},
@@ -381,18 +393,20 @@
                     "compId":92,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":15,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","right":20,"left":20},
                             "nodeParent":92,
                             "label":"Image",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":72,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-mark.png","scaleY":0.7,"scaleX":0.7,"left":20,"centerY":0},
@@ -407,6 +421,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"积分奖励","left":80,"fontSize":40,"color":"#000000","centerY":0},
@@ -420,6 +435,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -433,6 +449,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"+ 999%","left":350,"fontSize":30,"color":"#000000","centerY":0},
@@ -446,46 +463,36 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"y":0,"skin":"images/bg-441.png","left":250,"centerY":0},
+                                    "props":{"y":0,"skin":"images/english/bg-441.png","left":250,"centerY":0},
                                     "nodeParent":72,
                                     "label":"Image",
                                     "isOpen":true,
-                                    "isDirectory":true,
+                                    "isDirectory":false,
                                     "isAniNode":true,
-                                    "hasChild":true,
+                                    "hasChild":false,
                                     "compId":84,
                                     "child":[
-                                        {
-                                            "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
-                                            "nodeParent":84,
-                                            "label":"Image",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":85,
-                                            "child":[
-                                                ]
-                                        }]
+                                        ]
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":70,"skin":"images/bg-432.png","sizeGrid":"20,20,20,20","right":20,"left":20},
                             "nodeParent":92,
                             "label":"Image",
-                            "isOpen":false,
+                            "isOpen":true,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":71,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/icon-metre.png","scaleY":0.6,"scaleX":0.6,"left":20,"centerY":-2},
@@ -500,6 +507,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"里程奖励","left":80,"fontSize":40,"color":"#000000","centerY":0},
@@ -513,6 +521,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
@@ -526,6 +535,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"+ 999%","left":350,"fontSize":30,"color":"#000000","centerY":0},
@@ -539,35 +549,24 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"y":0,"skin":"images/bg-441.png","left":250,"centerY":0},
+                                    "props":{"y":0,"skin":"images/english/bg-441.png","left":250,"centerY":0},
                                     "nodeParent":71,
                                     "label":"Image",
                                     "isOpen":true,
-                                    "isDirectory":true,
+                                    "isDirectory":false,
                                     "isAniNode":true,
-                                    "hasChild":true,
+                                    "hasChild":false,
                                     "compId":78,
                                     "child":[
-                                        {
-                                            "type":"Image",
-                                            "searchKey":"Image",
-                                            "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
-                                            "nodeParent":78,
-                                            "label":"Image",
-                                            "isOpen":true,
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":79,
-                                            "child":[
-                                                ]
-                                        }]
+                                        ]
                                 }]
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":750,"top":212,"skin":"images/bg-231.png","sizeGrid":"50,50,50,50","left":35,"height":275},
@@ -580,6 +579,7 @@
                     "compId":93,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":20,"skin":"images/bg-451.png","right":20,"left":20,"height":60},
@@ -592,6 +592,7 @@
                             "compId":114,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/star-1.png","scaleY":0.7,"scaleX":0.7,"left":25,"centerY":0},
@@ -606,6 +607,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/list-1.png","scaleY":0.7,"scaleX":0.7,"left":35,"centerY":0},
@@ -620,6 +622,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":0,"skin":"images/icon-mark.png","scaleY":0.7,"scaleX":0.7,"right":130,"centerY":0},
@@ -634,6 +637,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"9999","strokeColor":"#000000","stroke":5,"right":20,"fontSize":40,"color":"#ffffff","centerY":0,"align":"right"},
@@ -647,6 +651,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,userImage",
                                     "props":{"width":80,"skin":"images/UserIconDefault.png","scaleY":0.7,"scaleX":0.7,"name":"userImage","left":165,"height":80,"centerY":0},
@@ -661,6 +666,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"玩家名","strokeColor":"#3e1400","stroke":1,"left":246,"fontSize":40,"color":"#3e1400","centerY":-2,"align":"left"},
@@ -675,6 +681,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":80,"skin":"images/bg-452.png","right":20,"left":20,"height":60},
@@ -687,6 +694,7 @@
                             "compId":116,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/star-2.png","scaleY":0.7,"scaleX":0.7,"left":25,"centerY":0},
@@ -701,6 +709,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/list-2.png","scaleY":0.7,"scaleX":0.7,"left":30,"centerY":0},
@@ -715,6 +724,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":0,"skin":"images/icon-mark.png","scaleY":0.7,"scaleX":0.7,"right":130,"centerY":0},
@@ -729,6 +739,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"9999","strokeColor":"#000000","stroke":5,"right":20,"fontSize":40,"color":"#ffffff","centerY":0,"align":"right"},
@@ -742,6 +753,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,userImage",
                                     "props":{"y":0,"x":0,"width":80,"skin":"images/UserIconDefault.png","scaleY":0.7,"scaleX":0.7,"name":"userImage","left":165,"height":80,"centerY":0},
@@ -756,6 +768,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"玩家名","strokeColor":"#3e1400","stroke":1,"left":246,"fontSize":40,"color":"#3e1400","centerY":-2,"align":"left"},
@@ -770,6 +783,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":140,"skin":"images/bg-453.png","right":20,"left":20,"height":60},
@@ -782,6 +796,7 @@
                             "compId":119,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/star-3.png","scaleY":0.7,"scaleX":0.7,"left":25,"centerY":0},
@@ -796,6 +811,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/list-3.png","scaleY":0.7,"scaleX":0.7,"left":30,"centerY":0},
@@ -810,6 +826,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":0,"skin":"images/icon-mark.png","scaleY":0.7,"scaleX":0.7,"right":130,"centerY":0},
@@ -824,6 +841,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"9999","strokeColor":"#000000","stroke":5,"right":20,"fontSize":40,"color":"#ffffff","centerY":0,"align":"right"},
@@ -837,6 +855,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,userImage",
                                     "props":{"y":0,"x":0,"width":80,"skin":"images/UserIconDefault.png","scaleY":0.7,"scaleX":0.7,"name":"userImage","left":165,"height":80,"centerY":0},
@@ -851,6 +870,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"玩家名","strokeColor":"#3e1400","stroke":1,"left":246,"fontSize":40,"color":"#3e1400","centerY":-2,"align":"left"},
@@ -865,6 +885,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":200,"skin":"images/bg-454.png","right":20,"left":20,"height":60},
@@ -877,6 +898,7 @@
                             "compId":120,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/list-4.png","scaleY":0.7,"scaleX":0.7,"left":30,"centerY":0},
@@ -891,6 +913,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"y":0,"skin":"images/icon-mark.png","scaleY":0.7,"scaleX":0.7,"right":130,"centerY":0},
@@ -905,6 +928,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"9999","strokeColor":"#000000","stroke":5,"right":20,"fontSize":40,"color":"#ffffff","centerY":0,"align":"right"},
@@ -918,6 +942,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,userImage",
                                     "props":{"y":0,"x":0,"width":80,"skin":"images/UserIconDefault.png","scaleY":0.7,"scaleX":0.7,"name":"userImage","left":165,"height":80,"centerY":0},
@@ -932,6 +957,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"x":0,"text":"玩家名","strokeColor":"#3e1400","stroke":1,"left":246,"fontSize":40,"color":"#3e1400","centerY":-2,"align":"left"},
@@ -947,6 +973,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/show-41.png","scaleY":0.7,"scaleX":0.7,"right":30,"centerY":-25},

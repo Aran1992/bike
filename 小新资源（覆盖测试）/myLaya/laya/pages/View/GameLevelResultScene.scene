@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":77,
-    "selecteID":88,
+    "selectedBox":16,
+    "selecteID":73,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -27,7 +27,7 @@
             "hasChild":false,
             "compId":68,
             "child":[
-            ]
+                ]
         },
         {
             "x":15,
@@ -55,7 +55,7 @@
                     "hasChild":false,
                     "compId":74,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "x":30,
@@ -81,7 +81,7 @@
                             "hasChild":false,
                             "compId":71,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -121,7 +121,7 @@
                                     "hasChild":false,
                                     "compId":59,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
@@ -148,7 +148,7 @@
                                     "hasChild":false,
                                     "compId":61,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         },
                         {
@@ -175,7 +175,7 @@
                                     "hasChild":false,
                                     "compId":63,
                                     "child":[
-                                    ]
+                                        ]
                                 }]
                         }]
                 },
@@ -227,7 +227,7 @@
                                             "hasChild":false,
                                             "compId":35,
                                             "child":[
-                                            ]
+                                                ]
                                         },
                                         {
                                             "type":"Label",
@@ -240,7 +240,7 @@
                                             "hasChild":false,
                                             "compId":36,
                                             "child":[
-                                            ]
+                                                ]
                                         },
                                         {
                                             "type":"Label",
@@ -253,7 +253,7 @@
                                             "hasChild":false,
                                             "compId":37,
                                             "child":[
-                                            ]
+                                                ]
                                         }]
                                 }]
                         }]
@@ -283,7 +283,7 @@
                             "hasChild":false,
                             "compId":66,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "type":"Image",
@@ -297,14 +297,14 @@
                             "hasChild":false,
                             "compId":69,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image,hasDoubleRewardText",
-                    "props":{"var":"hasDoubleRewardText","skin":"images/english/HasDoubleReward.png","left":60,"bottom":50},
+                    "props":{"y":492,"x":60,"var":"hasDoubleRewardText","skin":"images/english/HasDoubleReward.png"},
                     "nodeParent":16,
                     "label":"hasDoubleRewardText",
                     "isOpen":true,
@@ -313,7 +313,7 @@
                     "hasChild":false,
                     "compId":73,
                     "child":[
-                    ]
+                        ]
                 },
                 {
                     "x":30,
@@ -339,7 +339,7 @@
                             "hasChild":false,
                             "compId":51,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -366,7 +366,7 @@
                             "hasChild":false,
                             "compId":52,
                             "child":[
-                            ]
+                                ]
                         }]
                 },
                 {
@@ -395,7 +395,7 @@
                             "hasChild":false,
                             "compId":78,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -409,7 +409,7 @@
                             "hasChild":false,
                             "compId":79,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -423,7 +423,7 @@
                             "hasChild":false,
                             "compId":80,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -437,36 +437,22 @@
                             "hasChild":false,
                             "compId":81,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,distanceDoubleIcon",
-                            "props":{"y":0,"var":"distanceDoubleIcon","skin":"images/bg-441.png","left":250,"centerY":0},
+                            "props":{"y":0,"var":"distanceDoubleIcon","skin":"images/english/bg-441.png","left":250,"centerY":0},
                             "nodeParent":75,
                             "label":"distanceDoubleIcon",
                             "isOpen":true,
-                            "isDirectory":true,
+                            "isDirectory":false,
                             "isAniNode":true,
-                            "hasChild":true,
+                            "hasChild":false,
                             "compId":94,
                             "child":[
-                                {
-                                    "x":60,
-                                    "type":"Image",
-                                    "searchKey":"Image",
-                                    "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
-                                    "nodeParent":94,
-                                    "label":"Image",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":95,
-                                    "child":[
-                                    ]
-                                }]
+                                ]
                         }]
                 },
                 {
@@ -495,7 +481,7 @@
                             "hasChild":false,
                             "compId":82,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -509,7 +495,7 @@
                             "hasChild":false,
                             "compId":83,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -523,7 +509,7 @@
                             "hasChild":false,
                             "compId":84,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -537,36 +523,22 @@
                             "hasChild":false,
                             "compId":85,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,expDoubleIcon",
-                            "props":{"y":0,"var":"expDoubleIcon","skin":"images/bg-441.png","left":250,"centerY":0},
+                            "props":{"y":0,"var":"expDoubleIcon","skin":"images/english/bg-441.png","left":250,"centerY":0},
                             "nodeParent":76,
                             "label":"expDoubleIcon",
                             "isOpen":true,
-                            "isDirectory":true,
+                            "isDirectory":false,
                             "isAniNode":true,
-                            "hasChild":true,
+                            "hasChild":false,
                             "compId":92,
                             "child":[
-                                {
-                                    "x":60,
-                                    "type":"Image",
-                                    "searchKey":"Image",
-                                    "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
-                                    "nodeParent":92,
-                                    "label":"Image",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":93,
-                                    "child":[
-                                    ]
-                                }]
+                                ]
                         }]
                 },
                 {
@@ -595,7 +567,7 @@
                             "hasChild":false,
                             "compId":86,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -609,7 +581,7 @@
                             "hasChild":false,
                             "compId":87,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -623,7 +595,7 @@
                             "hasChild":false,
                             "compId":88,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
@@ -637,36 +609,22 @@
                             "hasChild":false,
                             "compId":89,
                             "child":[
-                            ]
+                                ]
                         },
                         {
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image,coinDoubleIcon",
-                            "props":{"var":"coinDoubleIcon","skin":"images/bg-441.png","left":250,"centerY":0},
+                            "props":{"var":"coinDoubleIcon","skin":"images/english/bg-441.png","left":250,"centerY":0},
                             "nodeParent":77,
                             "label":"coinDoubleIcon",
                             "isOpen":true,
-                            "isDirectory":true,
+                            "isDirectory":false,
                             "isAniNode":true,
-                            "hasChild":true,
+                            "hasChild":false,
                             "compId":90,
                             "child":[
-                                {
-                                    "x":60,
-                                    "type":"Image",
-                                    "searchKey":"Image",
-                                    "props":{"skin":"images/english/double-2.png","centerY":-2,"centerX":0},
-                                    "nodeParent":90,
-                                    "label":"Image",
-                                    "isOpen":true,
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":91,
-                                    "child":[
-                                    ]
-                                }]
+                                ]
                         }]
                 }]
         },
@@ -683,7 +641,7 @@
             "hasChild":false,
             "compId":72,
             "child":[
-            ]
+                ]
         }],
     "animations":[
         {
@@ -700,7 +658,7 @@
                                 "key":"x",
                                 "index":0,
                                 "functions":[
-                                ]
+                                    ]
                             },
                             {
                                 "value":754,

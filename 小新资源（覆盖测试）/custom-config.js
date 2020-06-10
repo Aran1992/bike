@@ -2539,7 +2539,7 @@ Config.endlessMode.rewardRoad = {
     roadPath: [
         "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
         "myLaya/laya/pages/RoadSection/Special/Special111-00000111.scene.json",
-		],
+    ],
     // 吃满多少能够进入奖励路段
     maxValue: 100,
     // 结束时的无敌时间（秒）
@@ -12596,6 +12596,7 @@ Config.getStarAnimation = {
     duration: 1000,
 };
 
+// 警告动画
 Config.warningAnimation = {
     // 提示图片路径
     warnSpritePath: "myLaya/laya/assets/images/warn-1.png",
@@ -12607,6 +12608,7 @@ Config.warningAnimation = {
     warningMinVelocity: 29,
 };
 
+// 额外分数动画
 Config.addExtraScoreAnimation = {
     // 移动过程时长（毫秒）
     appearDuration: 250,
@@ -12618,6 +12620,42 @@ Config.addExtraScoreAnimation = {
     startMoveX: -200,
     // 结束移动的时候的位置
     endMoveX: 0,
+};
+
+// 结算动画
+Config.resolveAnimation = {
+    // 星星动画
+    starAnimation: {
+        // 开始动画时的缩放倍数
+        startScale: 5,
+        // 开始动画时的透明度（0-1，0是透明）
+        startAlpha: 0.5,
+        // 持续时间(毫秒)
+        duration: 1000,
+    },
+    // 数字跳动动画
+    numberAnimation: {
+        // 时长（单位：毫秒）
+        duration: 1000
+    },
+    // 广告双倍图标动画
+    doubleIconAnimation: {
+        // 开始动画时的缩放倍数
+        startScale: 5,
+        // 开始动画时的透明度（0-1，0是透明）
+        startAlpha: 0.5,
+        // 持续时间(毫秒)
+        duration: 1000,
+    },
+    // 广告已获得图标动画
+    getIconAnimation: {
+        // 开始动画时的缩放倍数
+        startScale: 5,
+        // 开始动画时的透明度（0-1，0是透明）
+        startAlpha: 0.5,
+        // 持续时间(毫秒)
+        duration: 1000,
+    },
 };
 
 // 玩家升级奖励 第一项代表1级升到2级 以此类推
