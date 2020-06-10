@@ -2539,7 +2539,7 @@ Config.endlessMode.rewardRoad = {
     roadPath: [
         "myLaya/laya/pages/RoadSection/Special/Special111-00000101.scene.json",
         "myLaya/laya/pages/RoadSection/Special/Special111-00000111.scene.json",
-    ],
+		],
     // 吃满多少能够进入奖励路段
     maxValue: 100,
     // 结束时的无敌时间（秒）
@@ -12229,6 +12229,24 @@ Config.imageText = {
             ".": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_11.png",
             "x": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_12.png",
             "+": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_13.png",
+        },
+    },
+    font_303: {
+        charWidth: 30,
+        charHeight: 26,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/font_303/font_303_0.png",
+            "1": "myLaya/laya/assets/images/image-text/font_303/font_303_1.png",
+            "2": "myLaya/laya/assets/images/image-text/font_303/font_303_2.png",
+            "3": "myLaya/laya/assets/images/image-text/font_303/font_303_3.png",
+            "4": "myLaya/laya/assets/images/image-text/font_303/font_303_4.png",
+            "5": "myLaya/laya/assets/images/image-text/font_303/font_303_5.png",
+            "6": "myLaya/laya/assets/images/image-text/font_303/font_303_6.png",
+            "7": "myLaya/laya/assets/images/image-text/font_303/font_303_7.png",
+            "8": "myLaya/laya/assets/images/image-text/font_303/font_303_8.png",
+            "9": "myLaya/laya/assets/images/image-text/font_303/font_303_9.png",
+            "%": "myLaya/laya/assets/images/image-text/font_303/font_303_32.png",
+            ">": "myLaya/laya/assets/images/image-text/font_303/font_303_40.png",
         },
     },
     theme: {

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":65,
-    "selecteID":281,
+    "selectedBox":349,
+    "selecteID":350,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -315,13 +315,14 @@
             "props":{"skin":"images/bg-461.png","left":65,"bottom":28},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"top":40,"text":"角色名称","leading":5,"fontSize":30,"color":"#000000","centerX":0},
@@ -335,6 +336,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"text":"角色形象介绍说明","leading":5,"fontSize":30,"color":"#000000","centerX":0,"bottom":40},
@@ -348,6 +350,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":430,"top":100,"skin":"images/bg-431.png","left":20},
@@ -407,6 +410,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":155,"skin":"images/bg-431.png","left":20},
@@ -466,6 +470,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":210,"skin":"images/bg-432.png","left":20},
@@ -555,18 +560,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":265,"skin":"images/bg-432.png","left":20},
                     "nodeParent":21,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":321,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-level.png","scaleY":0.65,"scaleX":0.65,"left":16,"centerY":0},
@@ -582,6 +589,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/level-21.png","left":70,"centerY":0},
@@ -597,6 +605,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
@@ -609,9 +618,10 @@
                             "compId":324,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"text":"999","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "props":{"text":"999","leading":5,"fontSize":30,"font":"font_303","color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":324,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -626,18 +636,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":320,"skin":"images/bg-432.png","left":20},
                     "nodeParent":21,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":325,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":0},
@@ -653,6 +665,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/distance-21.png","left":70,"centerY":0},
@@ -668,6 +681,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
@@ -680,9 +694,10 @@
                             "compId":328,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"font":"font_303","color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":328,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -697,18 +712,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":375,"skin":"images/bg-432.png","left":20},
                     "nodeParent":21,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":336,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/levelbg_s.png","scaleY":0.4,"scaleX":0.4,"left":20,"centerY":0},
@@ -724,6 +741,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/exp-21.png","left":70,"centerY":0},
@@ -739,6 +757,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
@@ -751,9 +770,10 @@
                             "compId":339,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"font":"font_303","color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":339,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -768,18 +788,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":430,"skin":"images/bg-432.png","left":20},
                     "nodeParent":21,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":341,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-coin.png","scaleY":0.25,"scaleX":0.25,"left":20,"centerY":0},
@@ -795,6 +817,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/coin-21.png","left":70,"centerY":0},
@@ -810,6 +833,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
@@ -822,9 +846,10 @@
                             "compId":344,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"font":"font_303","color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":344,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -839,18 +864,20 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":0,"width":430,"top":485,"skin":"images/bg-432.png","left":20},
                     "nodeParent":21,
                     "label":"Image",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":346,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-mark.png","scaleY":0.5,"scaleX":0.5,"left":20,"centerY":0},
@@ -866,6 +893,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/totalScore-21.png","left":70,"centerY":0},
@@ -881,6 +909,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/bg-372.png","right":20,"centerY":1},
@@ -893,9 +922,10 @@
                             "compId":349,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
-                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                                    "props":{"y":0,"x":0,"text":"999% > 999%","leading":5,"fontSize":30,"font":"font_303","color":"#000000","centerY":0,"centerX":0},
                                     "nodeParent":349,
                                     "label":"Label",
                                     "isDirectory":false,
