@@ -49,6 +49,11 @@ export default class LevelUpScene extends Scene {
             rewards.push({rewardExp: reward.exp});
         }
 
+        const bulletTimeMaxValueDiff = Config.bulletTime.maxValue[newLevel - 1] - Config.bulletTime.maxValue[newLevel - 2];
+        if (bulletTimeMaxValueDiff > 0) {
+            rewards.push({rewardBulletTimeMaxValue: bulletTimeMaxValueDiff});
+        }
+
         rewards.forEach(reward => {
             if (reward.rewardCoin) {
                 DataMgr.add(DataMgr.coin, reward.rewardCoin);
@@ -75,6 +80,7 @@ export default class LevelUpScene extends Scene {
             item.visible = true;
             let itemIcon = item.itemIcon;
             let numberText = item.numberText;
+            itemIcon.scale.set(1, 1);
             if (reward.rewardCoin) {
                 itemIcon.visible = true;
                 numberText.visible = true;
@@ -90,6 +96,12 @@ export default class LevelUpScene extends Scene {
                 numberText.visible = true;
                 itemIcon.texture = Texture.from("myLaya/laya/assets/images/icon-exp.png");
                 numberText.text = reward.rewardExp;
+            } else if (reward.rewardBulletTimeMaxValue) {
+                itemIcon.visible = true;
+                numberText.visible = true;
+                itemIcon.texture = Texture.from("myLaya/laya/assets/images/bullet-time-slot.png");
+                itemIcon.scale.set(Config.levelUpScene.bulletTimeMaxValueAddIcon.scale, Config.levelUpScene.bulletTimeMaxValueAddIcon.scale,);
+                numberText.text = reward.rewardBulletTimeMaxValue;
             } else if (reward.rewardBike) {
                 item.bikePanel.visible = true;
                 item.bikeSprite.setBikeID(reward.rewardBike);

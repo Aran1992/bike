@@ -5842,6 +5842,14 @@ Config.gameScene = {
         },
     ]
 };
+// 升级界面
+Config.levelUpScene = {
+    // 子弹时间最大值图标
+    bulletTimeMaxValueAddIcon: {
+        // 缩放
+        scale: 0.8,
+    }
+};
 
 // 商店游戏币配置（目前关闭了不用）
 Config.moneyList = [
