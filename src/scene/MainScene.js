@@ -83,7 +83,7 @@ export default class MainScene extends Scene {
             "coin",
             "exp",
             "score",
-        ].forEach(type=>{
+        ].forEach(type => {
             this.ui[`${type}PercentText`].text = `x${Math.floor(GameUtils.getBikeConfig(`${type}Percent`) * 100)}%`;
         });
         this.ui.bulletMaxValueAddText.text = DataMgr.getBulletTimeMaxValue();

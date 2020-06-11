@@ -3,6 +3,7 @@ import SceneHelper from "../mgr/SceneHelper";
 import GameUtils from "../mgr/GameUtils";
 import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
+import Config from "../config";
 
 export default class UIGuidePanel {
     constructor(data, mgr, panelContainer) {
@@ -32,7 +33,7 @@ export default class UIGuidePanel {
                     this.guideMask.beginHole();
                     const bounds = targetButton.getBounds();
                     const {x, y} = App.trans2GlobalPosition(bounds);
-                    this.guideMask.drawRect(x, y, bounds.width, bounds.height);
+                    this.guideMask.drawRoundedRect(x, y, bounds.width, bounds.height, Math.min(bounds.width, bounds.height) * Config.guideRectCornerRadius);
                     this.guideMask.endHole();
                     this.guideMask.endFill();
                 }

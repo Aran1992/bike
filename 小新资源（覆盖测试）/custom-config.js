@@ -11203,8 +11203,8 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
-                {coin: 1000, diamond: 20},
-                {coin: 1000, diamond: 20},
+                {bike: 1, coin: 1000, diamond: 20},
+                {bike: 1, coin: 1000, diamond: 20},
                 {bike: 1, diamond: 20},
                 {coin: 1000, diamond: 20},
                 {bike: 4, diamond: 20},
@@ -12941,5 +12941,8 @@ Config.levelIconTable = {
     3: "myLaya/laya/assets/images/skill-star-4.png",
     4: "myLaya/laya/assets/images/skill-star-5.png",
 };
+
+// 引导矩形圆角大小（相对于这个矩形最小边的百分比）
+Config.guideRectCornerRadius = 0.25;
 
 export default Config;

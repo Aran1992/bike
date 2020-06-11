@@ -3,6 +3,7 @@ import SceneHelper from "../mgr/SceneHelper";
 import GameUtils from "../mgr/GameUtils";
 import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
+import Config from "../config";
 
 export default class GuidePanel {
     constructor(mgr, gameMgr, panelContainer, data) {
@@ -57,7 +58,7 @@ export default class GuidePanel {
                 const targetButton = this.gameMgr.ui[`portableItemButton${this.guidePanelItemIndex}`];
                 const bounds = targetButton.getBounds();
                 const {x, y} = App.trans2GlobalPosition(bounds);
-                this.guideMask.drawRect(x, y, bounds.width, bounds.height);
+                this.guideMask.drawRoundedRect(x, y, bounds.width, bounds.height, Math.min(bounds.width, bounds.height) * Config.guideRectCornerRadius);
                 this.guideMask.endHole();
                 this.guideMask.endFill();
                 UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
@@ -72,7 +73,7 @@ export default class GuidePanel {
                 const targetButton = this.gameMgr.ui.bulletTimeBtn;
                 const bounds = targetButton.getBounds();
                 const {x, y} = App.trans2GlobalPosition(bounds);
-                this.guideMask.drawRect(x, y, bounds.width, bounds.height);
+                this.guideMask.drawRoundedRect(x, y, bounds.width, bounds.height, Math.min(bounds.width, bounds.height) * Config.guideRectCornerRadius);
                 this.guideMask.endHole();
                 this.guideMask.endFill();
                 UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
