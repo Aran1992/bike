@@ -2597,11 +2597,31 @@ Config.rebornFloatFrame = 300;
 // 复活气泡漂浮速度
 Config.rebornFloatVelocity = 10;
 
+// 自行车速度和等级对应关系
+// 小于等于第一位就是等级一
+// 大于第一位且小于等于第二位就是等级二
+// 。。。
+// 大于最后一位就是等级五
+// 所以五个等级只要配置四个点就可以
+Config.bikeVelocityLevel = [0.75, 1, 1.25, 1.5,];
+
+// 自行车密度（跳跃力）和等级对应关系
+// 和速度相反 是数值越小 级别越高
+// 大于等于第一位就是等级一
+// 小于第一位且大于等于第二位就是等级二
+// 。。。
+// 小于最后一位就是等级五
+// 所以五个等级只要配置四个点就可以
+Config.bikeJumpLevel = [1.4, 1.3, 1.2, 1.1];
+
+
 // 自行车列表 自行车在列表里面的排序就是在界面上显示的顺序
 Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 0,
+        // 自行车品质（0是最低，1是中等，2是最高）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -12912,6 +12932,14 @@ Config.resolveAnimation = {
         // 持续时间(毫秒)
         duration: 500,
     },
+};
+
+Config.levelIconTable = {
+    0: "myLaya/laya/assets/images/skill-star-1.png",
+    1: "myLaya/laya/assets/images/skill-star-2.png",
+    2: "myLaya/laya/assets/images/skill-star-3.png",
+    3: "myLaya/laya/assets/images/skill-star-4.png",
+    4: "myLaya/laya/assets/images/skill-star-5.png",
 };
 
 export default Config;
