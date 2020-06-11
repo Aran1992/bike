@@ -211,9 +211,7 @@ export default class EndlessGameScene extends GameScene {
         super.onDead();
         this.deadCompleteTimer = setTimeout(() => {
             this.pauseGame();
-            App.showScene("GameOverScene", {
-                distance: Math.floor(this.distance),
-                coin: this.coin,
+            App.showScene("GameOverRebornScene", {
                 gameScene: this
             });
         }, Config.bike.deadCompleteTime);

@@ -47,6 +47,7 @@ import GameLevelScene from "../scene/GameLevelScene";
 import TWEEN from "@tweenjs/tween.js";
 import GuideGameScene from "../scene/GuideGameScene";
 import LevelUpScene from "../scene/LevelUpScene";
+import GameOverRebornScene from "../scene/GameOverRebornScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -129,6 +130,7 @@ export default class MyApplication extends Application {
             "GameLevelFailedScene": GameLevelFailedScene,
             "GameLevelResultScene": GameLevelResultScene,
             "GameLevelScene": GameLevelScene,
+            "GameOverRebornScene": GameOverRebornScene,
         };
 
         this.sceneTable = {};
