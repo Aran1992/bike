@@ -49,6 +49,7 @@ import GuideGameScene from "../scene/GuideGameScene";
 import LevelUpScene from "../scene/LevelUpScene";
 import GameOverRebornScene from "../scene/GameOverRebornScene";
 import InfoScene from "../scene/InfoScene";
+import GameLevelRebornScene from "../scene/GameLevelRebornScene";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -133,6 +134,7 @@ export default class MyApplication extends Application {
             "GameLevelScene": GameLevelScene,
             "GameOverRebornScene": GameOverRebornScene,
             "InfoScene": InfoScene,
+            "GameLevelRebornScene": GameLevelRebornScene,
         };
 
         this.sceneTable = {};

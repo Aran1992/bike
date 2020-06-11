@@ -83,7 +83,7 @@ export default class LevelGameScene extends StaticGameScene {
         super.onDead();
         this.deadCompleteTimer = setTimeout(() => {
             this.pauseGame();
-            App.showScene("GameLevelFailedScene", {
+            App.showScene("GameLevelRebornScene", {
                 gameScene: this,
                 distance: this.distance,
                 playerRate: (this.deadPos.x - this.bikeStartX) / this.totalDistance,
