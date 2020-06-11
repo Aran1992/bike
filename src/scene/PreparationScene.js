@@ -19,6 +19,9 @@ export default class PreparationScene extends Scene {
             this.onClick(this.ui[`advertButton${i}`], () => {
                 this.onClickAdvertButton(i);
             });
+            this.onClick(this.ui[`item${i}`], () => {
+                this.onClickItem(i);
+            });
         }
         this.onClick(this.ui.startButton, this.onClickStartButton.bind(this));
         this.bikeSprite = new BikeSprite(this.ui.itemIcon3, 0);
@@ -207,6 +210,10 @@ export default class PreparationScene extends Scene {
         } else {
             this.ui.firstTimePanel.visible = false;
         }
+    }
+
+    onClickItem(i) {
+        App.showScene("InfoScene", this.rewards[i - 1]);
     }
 }
 
