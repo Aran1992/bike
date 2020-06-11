@@ -9,7 +9,7 @@ export default class Radio {
             buttonDistance = this.button.mywidth;
         }
         this.buttonList = infoList.map((info, index) => {
-            let button = UIHelper.uiClone(this.button);
+            let button = UIHelper.uiClone(this.button, undefined, this.root);
             initItemFunc(button, info, index);
             this.root.addChild(button);
             button.x = index * buttonDistance;

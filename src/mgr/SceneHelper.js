@@ -230,39 +230,7 @@ function createScale9Image(child, parent) {
 
 function createImageText(child, parent) {
     let data = child.props;
-    const imageText = new ImageText(data);
-
-    if (data.left !== undefined) {
-        imageText.setHAlign("left", data.left);
-    } else if (data.right !== undefined) {
-        imageText.setHAlign("right", parent.mywidth - data.right);
-    } else if (data.centerX !== undefined) {
-        imageText.setHAlign("center", parent.mywidth / 2);
-    } else if (data.x !== undefined) {
-        imageText.setHAlign("left", data.x);
-    }
-
-    if (data.top !== undefined) {
-        imageText.setVAlign("top", data.top);
-    } else if (data.bottom !== undefined) {
-        imageText.setVAlign("bottom", parent.myheight - data.bottom);
-    } else if (data.centerY !== undefined) {
-        imageText.setVAlign("center", parent.myheight / 2);
-    } else if (data.y !== undefined) {
-        imageText.setVAlign("top", data.y);
-    }
-
-    if (data.scaleX !== undefined) {
-        imageText.scale.x = data.scaleX;
-    }
-
-    if (data.scaleY !== undefined) {
-        imageText.scale.y = data.scaleY;
-    }
-
-    imageText.text = data.text;
-
-    return imageText;
+    return new ImageText(data, parent);
 }
 
 function createLabel(child, parent) {

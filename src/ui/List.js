@@ -80,7 +80,7 @@ export default class List {
     createItem() {
         let item = this.cacheItemList.pop();
         if (item === undefined) {
-            item = UIHelper.uiClone(this.item);
+            item = UIHelper.uiClone(this.item, undefined, this.container);
             this.container.addChild(item);
             if (this.initItem) {
                 this.initItem(item);

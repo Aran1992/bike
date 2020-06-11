@@ -2,12 +2,13 @@ import {Container, NineSlicePlane, Sprite, Text} from "../libs/pixi-wrapper";
 import Config from "../config";
 import Utils from "../mgr/Utils";
 import MusicMgr from "../mgr/MusicMgr";
+import ImageText from "./ImageText";
 
 let clickPredicate = () => true;
 
 export default class UIHelper {
-    static uiClone(displayObject, root) {
-        let displayObject_ = UIHelper.copy(displayObject);
+    static uiClone(displayObject, root, parent) {
+        let displayObject_ = UIHelper.copy(displayObject, parent);
         if (root === undefined) {
             root = displayObject_;
             root.ui = {};
@@ -15,9 +16,11 @@ export default class UIHelper {
         if (displayObject_.uiname) {
             root.ui[displayObject_.uiname] = displayObject_;
         }
-        displayObject.children.forEach(child => {
-            displayObject_.addChild(UIHelper.uiClone(child, root));
-        });
+        if (!(displayObject instanceof ImageText)) {
+            displayObject.children.forEach(child => {
+                displayObject_.addChild(UIHelper.uiClone(child, root, displayObject_));
+            });
+        }
         return displayObject_;
     }
 
@@ -40,9 +43,11 @@ export default class UIHelper {
         return displayObject_;
     }
 
-    static copy(displayObject) {
+    static copy(displayObject, parent) {
         let item;
-        if (displayObject instanceof Text) {
+        if (displayObject instanceof ImageText) {
+            item = UIHelper.copyImageText(displayObject, parent);
+        } else if (displayObject instanceof Text) {
             item = UIHelper.copyText(displayObject);
         } else if (displayObject instanceof Sprite) {
             item = UIHelper.copySprite(displayObject);
@@ -109,6 +114,22 @@ export default class UIHelper {
         return dst;
     }
 
+    static copyImageText(src, parent) {
+        const dst = new ImageText(src.data, parent);
+        dst.alpha = src.alpha;
+        dst.buttonMode = src.buttonMode;
+        dst.interactive = src.interactive;
+        dst.rotation = src.rotation;
+        dst.visible = src.visible;
+        dst.x = src.x;
+        dst.y = src.y;
+        dst.width = src.width;
+        dst.height = src.height;
+        dst.mywidth = src.mywidth;
+        dst.myheight = src.myheight;
+        return dst;
+    }
+
     static copyNineSlicePlane(src) {
         let dst = new NineSlicePlane(src.texture, src.leftWidth, src.topHeight, src.rightWidth, src.bottomHeight);
         dst.alpha = src.alpha;
@@ -144,7 +165,7 @@ export default class UIHelper {
             }
         });
         button.on("pointerup", (event) => {
-            if (!params.noControl &&!clickPredicate(button)) {
+            if (!params.noControl && !clickPredicate(button)) {
                 return;
             }
             if (this.controlClickCallback) {
@@ -175,7 +196,7 @@ export default class UIHelper {
             }
         });
         button.on("pointerupoutside", () => {
-            if (!params.noControl &&!clickPredicate(button)) {
+            if (!params.noControl && !clickPredicate(button)) {
                 return;
             }
             if (button.clickPoint) {

@@ -2,7 +2,7 @@ import {Container, Sprite} from "../libs/pixi-wrapper";
 import Config from "../config";
 
 export default class ImageText extends Sprite {
-    constructor(data) {
+    constructor(data, parent) {
         super();
         this.data = data;
         this.fontFamily = this.data.font;
@@ -13,6 +13,36 @@ export default class ImageText extends Sprite {
         this.mycontainer.myheight = this.config.charHeight;
         this.updateHAlign("left");
         this.updateVAlign("top");
+
+        if (data.left !== undefined) {
+            this.setHAlign("left", data.left);
+        } else if (data.right !== undefined) {
+            this.setHAlign("right", parent.mywidth - data.right);
+        } else if (data.centerX !== undefined) {
+            this.setHAlign("center", parent.mywidth / 2);
+        } else if (data.x !== undefined) {
+            this.setHAlign("left", data.x);
+        }
+
+        if (data.top !== undefined) {
+            this.setVAlign("top", data.top);
+        } else if (data.bottom !== undefined) {
+            this.setVAlign("bottom", parent.myheight - data.bottom);
+        } else if (data.centerY !== undefined) {
+            this.setVAlign("center", parent.myheight / 2);
+        } else if (data.y !== undefined) {
+            this.setVAlign("top", data.y);
+        }
+
+        if (data.scaleX !== undefined) {
+            this.scale.x = data.scaleX;
+        }
+
+        if (data.scaleY !== undefined) {
+            this.scale.y = data.scaleY;
+        }
+
+        this.text = data.text;
     }
 
     set text(text) {
