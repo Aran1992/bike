@@ -2,13 +2,13 @@
     "x":0,
     "type":"Scene",
     "selectedBox":167,
-    "selecteID":180,
+    "selecteID":276,
     "searchKey":"Scene",
     "referenceLines":[
         ],
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
-    "maxID":276,
+    "maxID":277,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -1565,6 +1565,21 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":179,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/levelbg_s.png","left":-52,"centerY":-10},
+                    "nodeParent":167,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":276,
                     "child":[
                         ]
                 }],
