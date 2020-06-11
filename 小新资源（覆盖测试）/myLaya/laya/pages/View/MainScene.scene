@@ -1,14 +1,14 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":167,
-    "selecteID":276,
+    "selectedBox":231,
+    "selecteID":297,
     "searchKey":"Scene",
     "referenceLines":[
         ],
     "props":{"width":1280,"sceneColor":"#ffffff","height":720},
     "nodeParent":-1,
-    "maxID":277,
+    "maxID":299,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -53,13 +53,14 @@
             "props":{"width":770,"skin":"images/bg-201.png","left":60,"height":415,"bottom":70},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":231,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":425,"skin":"images/bg-202.png","left":25,"height":265,"bottom":25},
@@ -88,12 +89,13 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,bikeButton",
                     "props":{"width":294,"var":"bikeButton","runtime":"../laya/assets/sounds/shinchan_097b.mp3","right":25,"height":274,"bottom":25},
                     "nodeParent":231,
                     "label":"bikeButton",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -155,9 +157,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,addtionText",
-                    "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":1,"scaleY":1.2,"scaleX":1.2,"left":50,"fontSize":20,"color":"#000000","align":"left"},
+                    "props":{"var":"addtionText","top":30,"text":"123456","strokeColor":"#000000","stroke":1,"scaleY":1.2,"scaleX":1.2,"left":-600,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
                     "label":"addtionText",
                     "isDirectory":false,
@@ -168,12 +171,13 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":290,"top":40,"skin":"images/bg-231.png","sizeGrid":"20,20,20,20","right":25,"height":57},
                     "nodeParent":231,
                     "label":"Image",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -193,6 +197,151 @@
                                 ]
                         }],
                     "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":30,"text":"里程总加成","strokeColor":"#000000","stroke":1,"left":45,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":277,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":30,"text":"+999%","strokeColor":"#000000","stroke":1,"left":155,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":278,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":60,"text":"经验总加成","strokeColor":"#000000","stroke":1,"left":45,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":279,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":60,"text":"+999%","strokeColor":"#000000","stroke":1,"left":155,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":280,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":90,"text":"子弹时间上限","strokeColor":"#000000","stroke":1,"left":45,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":293,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":90,"text":"+9999","strokeColor":"#000000","stroke":1,"left":190,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":294,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":30,"text":"积分总加成","strokeColor":"#000000","stroke":1,"left":240,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":295,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":30,"text":"+999%","strokeColor":"#000000","stroke":1,"left":350,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":296,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":60,"text":"钱币总加成","strokeColor":"#000000","stroke":1,"left":240,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":297,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label",
+                    "props":{"top":60,"text":"+999%","strokeColor":"#000000","stroke":1,"left":350,"fontSize":20,"color":"#000000","align":"left"},
+                    "nodeParent":231,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":298,
+                    "child":[
+                        ]
                 }],
             "$HIDDEN":false
         },
@@ -238,7 +387,7 @@
                         {
                             "type":"Label",
                             "searchKey":"Label,diamondText",
-                            "props":{"var":"diamondText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"var":"diamondText","text":"123456","right":60,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
                             "nodeParent":3,
                             "label":"diamondText",
                             "isDirectory":false,
@@ -251,7 +400,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,addDiamondButton",
-                            "props":{"var":"addDiamondButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
+                            "props":{"var":"addDiamondButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"centerY":0},
                             "nodeParent":3,
                             "label":"addDiamondButton",
                             "isOpen":true,
@@ -292,7 +441,7 @@
                         {
                             "type":"Label",
                             "searchKey":"Label,coinText",
-                            "props":{"var":"coinText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"var":"coinText","text":"123456","right":60,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
                             "nodeParent":4,
                             "label":"coinText",
                             "isDirectory":false,
@@ -305,7 +454,7 @@
                         {
                             "type":"Image",
                             "searchKey":"Image,addCoinButton",
-                            "props":{"var":"addCoinButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":5,"centerY":0},
+                            "props":{"var":"addCoinButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"centerY":0},
                             "nodeParent":4,
                             "label":"addCoinButton",
                             "isOpen":true,
@@ -346,7 +495,7 @@
                         {
                             "type":"Label",
                             "searchKey":"Label,distanceText",
-                            "props":{"var":"distanceText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"var":"distanceText","text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
                             "nodeParent":2,
                             "label":"distanceText",
                             "isDirectory":false,
@@ -386,7 +535,7 @@
                         {
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
-                            "props":{"var":"totalScoreText","text":"123456","left":70,"fontSize":30,"font":"theme2","color":"#000000","centerY":0},
+                            "props":{"var":"totalScoreText","text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
                             "nodeParent":10,
                             "label":"totalScoreText",
                             "isDirectory":false,
@@ -404,24 +553,12 @@
                     "nodeParent":15,
                     "label":"userImage",
                     "isOpen":true,
-                    "isDirectory":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
+                    "hasChild":false,
                     "compId":60,
                     "child":[
-                        {
-                            "type":"Label",
-                            "searchKey":"Label,levelText",
-                            "props":{"var":"levelText","text":"${LevelDsc}","strokeColor":"#ffffff","stroke":5,"fontSize":30,"color":"#000000","centerX":0,"bottom":0},
-                            "nodeParent":60,
-                            "label":"levelText",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":166,
-                            "child":[
-                                ]
-                        }]
+                        ]
                 }],
             "$HIDDEN":false
         },
@@ -432,14 +569,13 @@
             "props":{"width":330,"top":120,"right":50,"height":600},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":21,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeButton",
                     "props":{"var":"endlessModeButton","top":10,"skin":"images/button-11.png","runtime":"../laya/assets/sounds/shinchan_168.mp3","right":10},
@@ -480,7 +616,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelModeButton",
                     "props":{"var":"gamelevelModeButton","top":180,"skin":"images/button-12.png","runtime":"../laya/assets/sounds/shinchan_168.mp3","right":10},
@@ -507,7 +642,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeButton",
                     "props":{"var":"mapModeButton","top":400,"skin":"images/button-13.png","runtime":"../laya/assets/sounds/shinchan_168.mp3","right":10},
@@ -548,7 +682,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessHelpButton",
                     "props":{"var":"endlessHelpButton","top":0,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-8},
@@ -563,7 +696,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,gamelevelHelpButton",
                     "props":{"var":"gamelevelHelpButton","top":210,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-4},
@@ -578,7 +710,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapHelpButton",
                     "props":{"var":"mapHelpButton","top":410,"skin":"images/btn_setting_help.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":0},
@@ -1576,12 +1707,25 @@
                     "nodeParent":167,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":276,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label,levelText",
+                            "props":{"var":"levelText","text":"${LevelDsc}","scaleY":0.5,"scaleX":0.5,"fontSize":30,"font":"rank","color":"#ffffff","centerY":0,"centerX":0},
+                            "nodeParent":276,
+                            "label":"levelText",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":166,
+                            "child":[
+                                ]
+                        }]
                 }],
             "$HIDDEN":false
         },
@@ -1592,14 +1736,13 @@
             "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"GuideList","height":720},
             "nodeParent":1,
             "label":"GuideList",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":267,
             "child":[
                 {
-                    "x":30,
                     "type":"Panel",
                     "searchKey":"Panel,Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0",
                     "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0","height":720},
@@ -1612,7 +1755,6 @@
                     "compId":268,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"width":520,"top":150,"skin":"images/bg-192.png","height":226,"centerX":0},
@@ -1625,7 +1767,6 @@
                             "compId":271,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${Guide-1-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
@@ -1640,7 +1781,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"top":160,"skin":"images/show-191.png","centerX":-280},
@@ -1655,7 +1795,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,手指点击动画",
                             "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"name":"手指点击动画","centerY":145,"centerX":570},
