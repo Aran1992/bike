@@ -78,18 +78,15 @@ export default class MainScene extends Scene {
         this.expProgress.setMax(totalExp);
         this.expProgress.setValue(curExp);
         this.ui.expRate.text = `${curExp}/${totalExp}`;
-        const table = {
-            Coin: "coinPercent",
-            Distance: "distancePercent",
-            Score: "scorePercent",
-            Exp: "expPercent",
-        };
-        for (const key in table) {
-            if (table.hasOwnProperty(key)) {
-                table[key] = Math.floor(GameUtils.getBikeConfig(table[key]) * 100) + "%";
-            }
-        }
-        this.ui.addtionText.text = App.getText("主页加成", table);
+        [
+            "distance",
+            "coin",
+            "exp",
+            "score",
+        ].forEach(type=>{
+            this.ui[`${type}PercentText`].text = `x${Math.floor(GameUtils.getBikeConfig(`${type}Percent`) * 100)}%`;
+        });
+        this.ui.bulletMaxValueAddText.text = DataMgr.getBulletTimeMaxValue();
     }
 
     onShow() {

@@ -534,6 +534,9 @@ class DataMgr_ {
     }
 
     getBulletTimeMaxValue(level) {
+        if (level === undefined) {
+            level = this.getPlayerLevel().level;
+        }
         const list = Config.bulletTime.maxValue;
         const max = Utils.getLast(list);
         const cur = list[level - 1];

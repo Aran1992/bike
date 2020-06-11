@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":231,
-    "selecteID":297,
+    "selecteID":294,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -168,7 +168,8 @@
                     "hasChild":false,
                     "compId":245,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -216,10 +217,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"top":30,"text":"+999%","strokeColor":"#000000","stroke":1,"left":155,"fontSize":20,"color":"#000000","align":"left"},
+                    "searchKey":"Label,distancePercentText",
+                    "props":{"var":"distancePercentText","top":30,"text":"+999%","strokeColor":"#000000","stroke":1,"left":155,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
-                    "label":"Label",
+                    "label":"distancePercentText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -245,10 +246,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"top":60,"text":"+999%","strokeColor":"#000000","stroke":1,"left":155,"fontSize":20,"color":"#000000","align":"left"},
+                    "searchKey":"Label,expPercentText",
+                    "props":{"var":"expPercentText","top":60,"text":"+999%","strokeColor":"#000000","stroke":1,"left":155,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
-                    "label":"Label",
+                    "label":"expPercentText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -274,10 +275,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"top":90,"text":"+9999","strokeColor":"#000000","stroke":1,"left":190,"fontSize":20,"color":"#000000","align":"left"},
+                    "searchKey":"Label,bulletMaxValueAddText",
+                    "props":{"var":"bulletMaxValueAddText","top":90,"text":"+9999","strokeColor":"#000000","stroke":1,"left":190,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
-                    "label":"Label",
+                    "label":"bulletMaxValueAddText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -303,10 +304,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"top":30,"text":"+999%","strokeColor":"#000000","stroke":1,"left":350,"fontSize":20,"color":"#000000","align":"left"},
+                    "searchKey":"Label,scorePercentText",
+                    "props":{"var":"scorePercentText","top":30,"text":"+999%","strokeColor":"#000000","stroke":1,"left":350,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
-                    "label":"Label",
+                    "label":"scorePercentText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -332,10 +333,10 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "searchKey":"Label",
-                    "props":{"top":60,"text":"+999%","strokeColor":"#000000","stroke":1,"left":350,"fontSize":20,"color":"#000000","align":"left"},
+                    "searchKey":"Label,coinPercentText",
+                    "props":{"var":"coinPercentText","top":60,"text":"+999%","strokeColor":"#000000","stroke":1,"left":350,"fontSize":20,"color":"#000000","align":"left"},
                     "nodeParent":231,
-                    "label":"Label",
+                    "label":"coinPercentText",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -1812,7 +1813,7 @@
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
-            "$HIDDEN":false
+            "$HIDDEN":true
         }],
     "animations":[
         {
