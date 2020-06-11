@@ -1,8 +1,9 @@
 import Scene from "./Scene";
-import {Graphics} from "../libs/pixi-wrapper";
+import {Graphics, resources} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
 import Config from "../config";
 import DataMgr from "../mgr/DataMgr";
+import Utils from "../mgr/Utils";
 import GameUtils from "../mgr/GameUtils";
 
 export default class BikeDetailScene extends Scene {
@@ -31,18 +32,35 @@ export default class BikeDetailScene extends Scene {
         this.ui.unlockIcon.visible = !levelUp;
         this.ui.levelUpIcon.visible = levelUp;
 
-        let level = DataMgr.get(DataMgr.bikeLevelMap, {})[id];
         let config = Config.bikeList.find(item => item.id === id);
-        let bonusDsc = App.getText("BonusDsc", {
-            coin: Math.floor(GameUtils.getBikeConfig("coinPercent", id, level,) * 100) + "%",
-            distance: Math.floor(GameUtils.getBikeConfig("distancePercent", id, level,) * 100) + "%",
-            score: Math.floor(GameUtils.getBikeConfig("scorePercent", id, level,) * 100) + "%",
-            exp: Math.floor(GameUtils.getBikeConfig("expPercent", id, level,) * 100) + "%",
-        });
-        let levelDsc = App.getText("LevelDsc2", {level: `${level + 1} ${highestLevel ? App.getText("Highest Level") : ""}`});
-        this.ui.bikeDsc.text = `${GameUtils.getBikeDsc(config)}
-${levelDsc}
-${bonusDsc}`;
+
+        this.ui.bikeNameText.text = App.getText(config.name);
+        this.ui.bikeDscText.text = App.getText(config.dsc);
+        const vLevel = DataMgr.getBikeVelocityLevel(id);
+        this.ui.velocityLevelIcon.children[0].texture = resources[Config.levelIconTable[vLevel]].texture;
+        const jLevel = DataMgr.getBikeJumpLevel(id);
+        this.ui.jumpLevelIcon.children[0].texture = resources[Config.levelIconTable[jLevel]].texture;
+        for (let i = 0; i < 3; i++) {
+            this.ui[`specialIcon${i}`].visible = i <= config.quality;
+        }
+        const level = DataMgr.get(DataMgr.bikeLevelMap, {})[id];
+        this.ui.levelText.text = level + 1;
+        [
+            "distance",
+            "exp",
+            "coin",
+            "score",
+        ].forEach(type => this.setPercentText(type, levelUp, id, level));
+    }
+
+    setPercentText(type, levelUp, id, level) {
+        let str;
+        if (levelUp) {
+            str = `${Math.floor(GameUtils.getBikeConfig(`${type}Percent`, id, level - 1,) * 100)}% > ${Math.floor(GameUtils.getBikeConfig(`${type}Percent`, id, level,) * 100)}%`;
+        } else {
+            str = `${Math.floor(GameUtils.getBikeConfig(`${type}Percent`, id, level,) * 100)}%`;
+        }
+        this.ui[`${type}PercentText`].text = str;
     }
 
     onClickReturnButton() {
@@ -59,3 +77,4 @@ ${bonusDsc}`;
 }
 
 BikeDetailScene.sceneFilePath = "myLaya/laya/pages/View/BikeDetailScene.scene.json";
+BikeDetailScene.resPathList = Utils.values(Config.levelIconTable);

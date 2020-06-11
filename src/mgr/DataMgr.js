@@ -562,6 +562,32 @@ class DataMgr_ {
             DataMgr.set(DataMgr.showedGuide, data);
         }
     }
+
+    getBikeVelocityLevel(id) {
+        const config = Config.bikeList.find(bike => bike.id === id);
+        let level = 0;
+        for (let i = 0; i < Config.bikeVelocityLevel; i++) {
+            if (config.velocityPercent <= Config.bikeVelocityLevel[i]) {
+                return level;
+            } else {
+                level++;
+            }
+        }
+        return level;
+    }
+
+    getBikeJumpLevel(id) {
+        const config = Config.bikeList.find(bike => bike.id === id);
+        let level = 0;
+        for (let i = 0; i < Config.bikeJumpLevel; i++) {
+            if (config.velocityPercent >= Config.bikeJumpLevel[i]) {
+                return level;
+            } else {
+                level++;
+            }
+        }
+        return level;
+    }
 }
 
 const DataMgr = new DataMgr_();
