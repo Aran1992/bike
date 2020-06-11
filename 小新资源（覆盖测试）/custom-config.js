@@ -12393,21 +12393,20 @@ Config.imageText = {
             "m": "myLaya/laya/assets/images/image-text/theme-2/theme-2_milesunit_jp.png",
         },
     },
-    ui_fvr_gauge: {
-        charWidth: 20,
-        charHeight: 22,
+    rank: {
+        charWidth: 52,
+        charHeight: 62,
         charImgPathTable: {
-            "0": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_0.png",
-            "1": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_1.png",
-            "2": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_2.png",
-            "3": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_3.png",
-            "4": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_4.png",
-            "5": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_5.png",
-            "6": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_6.png",
-            "7": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_7.png",
-            "8": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_8.png",
-            "9": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_9.png",
-            "%": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_10.png",
+            "0": "myLaya/laya/assets/images/image-text/rank/rank_number_02_0.png",
+            "1": "myLaya/laya/assets/images/image-text/rank/rank_number_02_1.png",
+            "2": "myLaya/laya/assets/images/image-text/rank/rank_number_02_2.png",
+            "3": "myLaya/laya/assets/images/image-text/rank/rank_number_02_3.png",
+            "4": "myLaya/laya/assets/images/image-text/rank/rank_number_02_4.png",
+            "5": "myLaya/laya/assets/images/image-text/rank/rank_number_02_5.png",
+            "6": "myLaya/laya/assets/images/image-text/rank/rank_number_02_6.png",
+            "7": "myLaya/laya/assets/images/image-text/rank/rank_number_02_7.png",
+            "8": "myLaya/laya/assets/images/image-text/rank/rank_number_02_8.png",
+            "9": "myLaya/laya/assets/images/image-text/rank/rank_number_02_9.png",
         },
     },
     ranking: {
@@ -12446,7 +12445,139 @@ Config.imageText = {
             "?": "myLaya/laya/assets/images/image-text/score/score_number_02_14.png",
         },
     },
+    ui_fvr_gauge: {
+        charWidth: 20,
+        charHeight: 22,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_9.png",
+            "%": "myLaya/laya/assets/images/image-text/ui_fvr_gauge/ui_fvr_gauge_number_01_10.png",
+        },
+    },
 };
+
+// 玩家升级奖励 第一项代表1级升到2级 以此类推（也可以奖励角色{bike: 1, coin: 1000, diamond: 20},）
+Config.levelUpReward = [
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+    {coin: 1000, diamond: 20},
+
+];
 
 // 进入子弹时间之后，自行车期望的移动速度（只能够近似，不能够完全等于）
 Config.bulletTimeTargetVelocity = 10;
@@ -12457,7 +12588,7 @@ Config.stepTimesEachFrame = 10;
 
 // 子弹时间相关配置
 Config.bulletTime = {
-    // 最大值
+    // 最大值（玩家升级奖励 第一项代表1级 以此类推）
     maxValue: [
         700, 710, 720, 730, 740,
         750, 760, 770, 780, 790,
@@ -12773,15 +12904,8 @@ Config.resolveAnimation = {
         // 开始动画时的透明度（0-1，0是透明）
         startAlpha: 0.5,
         // 持续时间(毫秒)
-        duration: 1000,
+        duration: 500,
     },
 };
-
-// 玩家升级奖励 第一项代表1级升到2级 以此类推
-Config.levelUpReward = [
-    {bike: 1, coin: 1000, diamond: 20},
-    {bike: 1, coin: 1000, diamond: 20},
-    {bike: 1, coin: 1000, diamond: 20},
-];
 
 export default Config;

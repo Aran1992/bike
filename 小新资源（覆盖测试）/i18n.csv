@@ -11,7 +11,7 @@ LV,,BikeScene.scene.json,等级,LV,レベル
 UpgradeItemDsc,,BikeScene.scene.json,${cur}秒/${max}秒,,
 已升级${times}次,,BikeScene.scene.json,已升级${times}次,,
 Exp,,,经验,Exp,
-LevelDsc,,,等级${level},Lv. ${level},
+LevelDsc,,,${level},Lv. ${level},
 Count,,,• 结算 •,Count,
 Unlock,,DrawScene.scene.json,• 恭喜玩家大人解锁新造型 •,Unlock,アンロックしていました。
 LvUp,,DrawScene.scene.json,• 恭喜玩家大人等级提升 •,LV UP,レベル　アップ
