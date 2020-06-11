@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":16,
-    "selecteID":265,
+    "selecteID":250,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -102,10 +102,10 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,1",
-                    "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50,","name":"1","left":30,"height":370},
+                    "searchKey":"Image,item1",
+                    "props":{"width":200,"var":"item1","top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50,","left":30,"height":370},
                     "nodeParent":16,
-                    "label":"1",
+                    "label":"item1",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -255,10 +255,10 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,2",
-                    "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","name":"2","height":370,"centerX":0},
+                    "searchKey":"Image,item2",
+                    "props":{"width":200,"var":"item2","top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","height":370,"centerX":0},
                     "nodeParent":16,
-                    "label":"2",
+                    "label":"item2",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -404,10 +404,10 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "searchKey":"Image,3",
-                    "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","right":30,"name":"3","height":370},
+                    "searchKey":"Image,item3",
+                    "props":{"width":200,"var":"item3","top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","right":30,"height":370},
                     "nodeParent":16,
-                    "label":"3",
+                    "label":"item3",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -985,7 +985,7 @@
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
-            "$HIDDEN":false
+            "$HIDDEN":true
         }],
     "animations":[
         {
