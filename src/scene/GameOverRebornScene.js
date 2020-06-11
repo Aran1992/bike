@@ -40,6 +40,7 @@ export default class GameOverRebornScene extends Scene {
         this.args = args;
 
         this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.ui.distanceRecord.text = DataMgr.get(DataMgr.distanceRecord, 0);
 
         this.typeList.forEach(data => {
             data.valueText.text = 0;
