@@ -1,10 +1,10 @@
-import EventMgr from "../mgr/EventMgr";
 import Scene from "./Scene";
 import {Graphics} from "../libs/pixi-wrapper";
 import DataMgr from "../mgr/DataMgr";
 import Config from "../config";
 import GameUtils from "../mgr/GameUtils";
-import ResultList from "../ui/ResultList";
+import TWEEN from "@tweenjs/tween.js";
+import Utils from "../mgr/Utils";
 
 export default class GameOverScene extends Scene {
     static onClickMainButton() {
@@ -15,12 +15,6 @@ export default class GameOverScene extends Scene {
         App.getScene("MainScene").onGameEnded();
     }
 
-    static onClickRestartButton() {
-        App.getScene("EndlessGameScene").settle();
-        App.hideScene("GameOverScene");
-        EventMgr.dispatchEvent("Restart");
-    }
-
     onCreate() {
         let mask = new Graphics()
             .beginFill(0x000000, 0.5)
@@ -29,14 +23,37 @@ export default class GameOverScene extends Scene {
         this.addChildAt(mask, 0);
 
         this.onClick(this.ui.mainButton, GameOverScene.onClickMainButton);
-        this.onClick(this.ui.restartButton, GameOverScene.onClickRestartButton);
-        this.onClick(this.ui.advertRebornButton, this.onClickAdvertRebornButton.bind(this));
-        this.onClick(this.ui.diamondRebornButton, this.onClickDiamondRebornButton.bind(this));
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
-        this.ui.diamondRebornCostText.text = Config.diamondRebornCost;
+        this.typeList = [
+            "distance",
+            "exp",
+            "coin",
+        ].map(type => ({
+            type: type,
+            doubleIcon: this.ui[`${type}DoubleIcon`],
+            percentText: this.ui[`${type}PercentText`],
+            valueText: this.ui[`${type}ValueText`],
+        }));
 
-        this.resultList = new ResultList(this.ui.resultList);
+        this.typeList.forEach(data => this.initAnimationObject(data.doubleIcon));
+        this.initAnimationObject(this.ui.hasDoubleRewardText);
+        this.initAnimationObject(this.ui.newRecordIcon);
+
+        this.animations = [];
+    }
+
+    initAnimationObject(obj) {
+        obj = obj.children[0];
+        obj.originScale = obj.scale.x;
+        obj.anchor.set(0.5, 0.5);
+        obj.position.set(obj.x + obj.width / 2, obj.y + obj.height / 2);
+    }
+
+    recoverAnimationObject(obj) {
+        obj = obj.children[0];
+        obj.alpha = 1;
+        obj.scale.set(obj.originScale, obj.originScale);
     }
 
     onShow(args) {
@@ -44,110 +61,183 @@ export default class GameOverScene extends Scene {
 
         this.args = args;
 
-        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
+        this.distanceRecord = DataMgr.get(DataMgr.distanceRecord, 0);
+        this.ui.distanceRecordText.text = this.distanceRecord;
 
-        this.refresh();
-    }
-
-    onClickDiamondRebornButton() {
-        let diamond = DataMgr.get(DataMgr.diamond, 0);
-        if (diamond >= Config.diamondRebornCost) {
-            diamond -= Config.diamondRebornCost;
-            DataMgr.set(DataMgr.diamond, diamond);
-            this.reborn();
-        } else {
-            App.showNotice(App.getText("DiamondIsNotEnough"));
-        }
-    }
-
-    onClickAdvertRebornButton() {
-        window.PlatformHelper.showAd(success => {
-            if (success) {
-                this.reborn();
-                window.TDGA && TDGA.onEvent("广告无尽模式复活");
+        this.typeList.forEach(data => {
+            data.doubleIcon.visible = false;
+            const percent = GameUtils.getBikeConfig(`${data.type}Percent`);
+            if (percent > 1) {
+                data.percentText.visible = true;
+                data.percentText.text = `+${Math.floor(percent * 100)}%`;
+            } else {
+                data.percentText.visible = false;
             }
+            data.valueText.text = 0;
         });
+
+        this.ui.advertDoubleButton.visible = true;
+        this.ui.hasDoubleRewardText.visible = false;
+
+        this.ui.newRecordIcon.visible = false;
+
+        App.showMask(this.onClickMask.bind(this));
+
+        this.playNumberAnimation(() => this.onResolveAnimationEnded());
+    }
+
+    playNumberAnimation(callback) {
+        const obj = {percent: 0};
+        const animation = new TWEEN.Tween(obj)
+            .to({percent: 1}, Config.resolveAnimation.numberAnimation.duration)
+            .onUpdate(() => {
+                this.typeList.forEach(data => {
+                    const originValue = this.args.gameScene[data.type];
+                    const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
+                    data.valueText.text = Math.floor(originValue * typePercent * obj.percent);
+                });
+            })
+            .onComplete(() => {
+                Utils.removeItemFromArray(this.animations, animation);
+                callback && callback();
+            })
+            .start(performance.now());
+        this.animations.push(animation);
+    }
+
+    playDoubleAnimation(callback) {
+        this.ui.advertDoubleButton.visible = false;
+        this.typeList.forEach(data => data.doubleIcon.visible = false);
+        let index = 0;
+        const loop = () => {
+            if (index < this.typeList.length) {
+                const icon = this.typeList[index].doubleIcon;
+                icon.visible = true;
+                this.playStarAnimation(icon, Config.resolveAnimation.doubleIconAnimation, () => {
+                    this.playAdvertNumberAnimation(index, () => {
+                        index++;
+                        loop();
+                    });
+                });
+            } else if (index === this.typeList.length) {
+                this.ui.hasDoubleRewardText.visible = true;
+                this.playStarAnimation(this.ui.hasDoubleRewardText, Config.resolveAnimation.getIconAnimation, () => {
+                    index++;
+                    loop();
+                });
+            } else {
+                callback && callback();
+            }
+        };
+        loop();
+    }
+
+    playStarAnimation(target, animationConfig, callback) {
+        target = target.children[0];
+        const os = target.originScale;
+        const s = os * animationConfig.startScale;
+        const a = animationConfig.startAlpha;
+        target.scale.set(s, s);
+        target.alpha = a;
+        const obj = {scale: s, alpha: a};
+        const animation = new TWEEN.Tween(obj)
+            .to({scale: os, alpha: 1}, animationConfig.duration)
+            .easing(TWEEN.Easing.Bounce.Out)
+            .onUpdate(() => {
+                target.scale.set(obj.scale, obj.scale);
+                target.alpha = obj.alpha;
+            })
+            .onComplete(() => {
+                Utils.removeItemFromArray(this.animations, animation);
+                callback && callback();
+            })
+            .start(performance.now());
+        this.animations.push(animation);
+    }
+
+    playAdvertNumberAnimation(index, callback) {
+        const obj = {percent: 1};
+        const animation = new TWEEN.Tween(obj)
+            .to({percent: 2}, Config.resolveAnimation.numberAnimation.duration)
+            .onUpdate(() => {
+                const data = this.typeList[index];
+                const originValue = this.args.gameScene[data.type];
+                const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
+                data.valueText.text = Math.floor(originValue * typePercent * obj.percent);
+            })
+            .onComplete(() => {
+                Utils.removeItemFromArray(this.animations, animation);
+                callback && callback();
+            })
+            .start(performance.now());
+        this.animations.push(animation);
     }
 
     onClickAdvertDoubleButton() {
         window.PlatformHelper.showAd(success => {
             if (success) {
                 this.args.gameScene.doubleReward = true;
-                this.refresh();
                 window.TDGA && TDGA.onEvent("广告无尽模式双倍");
+                App.showMask(this.onClickMask.bind(this));
+                this.playDoubleAnimation(() => this.onResolveAnimationEnded());
             }
         });
     }
 
-    refresh() {
-        let record = DataMgr.get(DataMgr.rankDistanceRecord, 0);
-        let finalDistance = Math.floor(this.args.distance * GameUtils.getBikeConfig("distancePercent"));
-        if (this.args.gameScene.doubleReward) {
-            finalDistance *= 2;
-        }
-        if (finalDistance === record) {
-            this.ui.recordText.text = App.getText("${player} Record: ${record}m", {
-                player: DataMgr.getPlayerName(),
-                record: record
+    onResolveAnimationEnded() {
+        if (this.getDistance() > this.distanceRecord && !this.ui.newRecordIcon.visible) {
+            this.ui.newRecordIcon.visible = true;
+            this.playStarAnimation(this.ui.newRecordIcon, Config.resolveAnimation.newRecordAnimation, () => {
+                this.onClickMask();
             });
-            this.ui.beyondText.text = "";
-        } else if (finalDistance > record) {
-            this.ui.recordText.text = App.getText("${player} New Record: ${distance}m", {
-                player: DataMgr.getPlayerName(),
-                distance: finalDistance
-            });
-            this.ui.beyondText.text = "";
-            DataMgr.set(DataMgr.rankDistanceRecord, finalDistance);
         } else {
-            this.ui.recordText.text = App.getText("${player} Record: ${record}m", {
-                player: DataMgr.getPlayerName(),
-                record: record
-            });
-            this.ui.beyondText.text = App.getText("${diff} meters more to go beyond yourself", {
-                player: DataMgr.getPlayerName(),
-                diff: record - finalDistance
-            });
+            this.onClickMask();
         }
-        let distanceRecord = DataMgr.get(DataMgr.distanceRecord, 0);
-        if (finalDistance > distanceRecord) {
-            DataMgr.set(DataMgr.distanceRecord, finalDistance);
-        }
-
-        this.resultList.update([
-            {
-                name: "Distance",
-                originValue: Math.floor(this.args.distance),
-                multiple: GameUtils.getBikeConfig("distancePercent"),
-                doubleReward: this.args.gameScene.doubleReward,
-            },
-            {
-                name: "Coin",
-                originValue: this.args.coin,
-                multiple: GameUtils.getBikeConfig("coinPercent"),
-                doubleReward: this.args.gameScene.doubleReward,
-            },
-            {
-                name: "Exp",
-                originValue: this.args.gameScene.exp,
-                multiple: GameUtils.getBikeConfig("expPercent"),
-                doubleReward: this.args.gameScene.doubleReward,
-            },
-        ]);
-
-        this.ui.hasDoubleRewardText.visible = !!this.args.gameScene.doubleReward;
-        this.ui.advertDoubleButton.visible = !this.args.gameScene.doubleReward;
-
-        let a = this.args.gameScene.rebornTimes < Config.endlessMode.rebornTimes;
-        this.ui.advertRebornButton.visible = a;
-        this.ui.diamondRebornButton.visible = a;
-        this.ui.hasNoRebornTimesText.visible = !a;
     }
 
-    reborn() {
-        this.args.gameScene.rebornTimes++;
-        App.hideScene("GameOverScene");
-        EventMgr.dispatchEvent("Reborn");
-        window.TDGA && TDGA.onEvent("无尽模式复活");
+    onClickMask() {
+        App.hideMask();
+
+        this.animations.forEach(animation => animation.stop());
+        this.animations = [];
+
+        this.typeList.forEach(data => {
+            const originValue = this.args.gameScene[data.type];
+            const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
+            let value = Math.floor(originValue * typePercent);
+            if (this.args.gameScene.doubleReward) {
+                value *= 2;
+            }
+            data.valueText.text = value;
+            data.doubleIcon.visible = this.args.gameScene.doubleReward;
+            this.recoverAnimationObject(data.doubleIcon);
+        });
+
+        if (this.args.gameScene.doubleReward) {
+            this.ui.advertDoubleButton.visible = false;
+            this.ui.hasDoubleRewardText.visible = true;
+        } else {
+            this.ui.advertDoubleButton.visible = true;
+            this.ui.hasDoubleRewardText.visible = false;
+        }
+        this.recoverAnimationObject(this.ui.hasDoubleRewardText);
+
+        const value = this.getDistance();
+        if (value > this.distanceRecord) {
+            this.ui.newRecordIcon.visible = true;
+            DataMgr.set(DataMgr.distanceRecord, value);
+        }
+        this.recoverAnimationObject(this.ui.newRecordIcon);
+    }
+
+    getDistance() {
+        const originValue = this.args.gameScene.distance;
+        const typePercent = GameUtils.getBikeConfig("distancePercent");
+        let value = Math.floor(originValue * typePercent);
+        if (this.args.gameScene.doubleReward) {
+            value *= 2;
+        }
+        return value;
     }
 }
 

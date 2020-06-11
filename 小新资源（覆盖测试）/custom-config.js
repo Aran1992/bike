@@ -12656,6 +12656,15 @@ Config.resolveAnimation = {
         // 持续时间(毫秒)
         duration: 1000,
     },
+    // 新纪录图标动画
+    newRecordAnimation: {
+        // 开始动画时的缩放倍数
+        startScale: 5,
+        // 开始动画时的透明度（0-1，0是透明）
+        startAlpha: 0.5,
+        // 持续时间(毫秒)
+        duration: 1000,
+    },
 };
 
 // 玩家升级奖励 第一项代表1级升到2级 以此类推

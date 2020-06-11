@@ -1,11 +1,10 @@
 import Scene from "./Scene";
 import MatchRacetrack from "../ui/MatchRacetrack";
 import {Graphics} from "../libs/pixi-wrapper";
-import ResultList from "../ui/ResultList";
 import GameUtils from "../mgr/GameUtils";
 import Config from "../config";
-import DataMgr from "../mgr/DataMgr";
-import EventMgr from "../mgr/EventMgr";
+import TWEEN from "@tweenjs/tween.js";
+import Utils from "../mgr/Utils";
 
 export default class GameLevelFailedScene extends Scene {
     static onClickMainButton() {
@@ -17,12 +16,6 @@ export default class GameLevelFailedScene extends Scene {
         App.getScene("MainScene").onGameEnded();
     }
 
-    static onClickRestartButton() {
-        App.getScene("LevelGameScene").settle();
-        App.hideScene("GameLevelFailedScene");
-        EventMgr.dispatchEvent("Restart");
-    }
-
     onCreate() {
         let mask = new Graphics()
             .beginFill(0x000000, 0.5)
@@ -31,14 +24,21 @@ export default class GameLevelFailedScene extends Scene {
         this.addChildAt(mask, 0);
 
         this.onClick(this.ui.mainButton, GameLevelFailedScene.onClickMainButton);
-        this.onClick(this.ui.restartButton, GameLevelFailedScene.onClickRestartButton);
-        this.onClick(this.ui.advertRebornButton, this.onClickAdvertRebornButton.bind(this));
-        this.onClick(this.ui.diamondRebornButton, this.onClickDiamondRebornButton.bind(this));
-
-        this.ui.diamondRebornCostText.text = Config.diamondRebornCost;
 
         this.matchRacetrack = new MatchRacetrack(this.ui.matchRacetrack);
-        this.resultList = new ResultList(this.ui.resultList);
+
+        this.typeList = [
+            "distance",
+            "exp",
+            "coin",
+        ].map(type => ({
+            type: type,
+            doubleIcon: this.ui[`${type}DoubleIcon`],
+            percentText: this.ui[`${type}PercentText`],
+            valueText: this.ui[`${type}ValueText`],
+        }));
+
+        this.animations = [];
     }
 
     onShow(args) {
@@ -46,67 +46,57 @@ export default class GameLevelFailedScene extends Scene {
 
         this.args = args;
 
-        this.ui.diamondText.text = DataMgr.get(DataMgr.diamond, 0);
-
         this.matchRacetrack.create(0);
         this.matchRacetrack.update(this.args.playerRate);
 
-        this.refresh();
-    }
-
-    onClickDiamondRebornButton() {
-        let diamond = DataMgr.get(DataMgr.diamond, 0);
-        if (diamond >= Config.diamondRebornCost) {
-            diamond -= Config.diamondRebornCost;
-            DataMgr.set(DataMgr.diamond, diamond);
-            this.reborn();
-        } else {
-            App.showNotice(App.getText("DiamondIsNotEnough"));
-        }
-    }
-
-    onClickAdvertRebornButton() {
-        window.PlatformHelper.showAd(success => {
-            if (success) {
-                this.reborn();
-                window.TDGA && TDGA.onEvent("广告闯关模式复活");
+        this.typeList.forEach(data => {
+            const percent = GameUtils.getBikeConfig(`${data.type}Percent`);
+            if (percent > 1) {
+                data.percentText.visible = true;
+                data.percentText.text = `+${Math.floor(percent * 100)}%`;
+            } else {
+                data.percentText.visible = false;
             }
+            data.valueText.text = 0;
+        });
+
+        App.showMask(this.onClickMask.bind(this));
+
+        this.playNumberAnimation(() => {
+            this.onClickMask();
         });
     }
 
-    refresh() {
-        this.resultList.update([
-            {
-                name: "Distance",
-                originValue: Math.floor(this.args.gameScene.distance),
-                multiple: GameUtils.getBikeConfig("distancePercent"),
-                doubleReward: this.args.gameScene.doubleReward,
-            },
-            {
-                name: "Coin",
-                originValue: this.args.gameScene.coin,
-                multiple: GameUtils.getBikeConfig("coinPercent"),
-                doubleReward: this.args.gameScene.doubleReward,
-            },
-            {
-                name: "Exp",
-                originValue: this.args.gameScene.exp,
-                multiple: GameUtils.getBikeConfig("expPercent"),
-                doubleReward: this.args.gameScene.doubleReward,
-            },
-        ]);
-
-        let a = this.args.gameScene.rebornTimes < Config.gameLevelMode.rebornTimes;
-        this.ui.advertRebornButton.visible = a;
-        this.ui.diamondRebornButton.visible = a;
-        this.ui.hasNoRebornTimesText.visible = !a;
+    playNumberAnimation(callback) {
+        const obj = {percent: 0};
+        const animation = new TWEEN.Tween(obj)
+            .to({percent: 1}, Config.resolveAnimation.numberAnimation.duration)
+            .onUpdate(() => {
+                this.typeList.forEach(data => {
+                    const originValue = this.args.gameScene[data.type];
+                    const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
+                    data.valueText.text = Math.floor(originValue * typePercent * obj.percent);
+                });
+            })
+            .onComplete(() => {
+                Utils.removeItemFromArray(this.animations, animation);
+                callback && callback();
+            })
+            .start(performance.now());
+        this.animations.push(animation);
     }
 
-    reborn() {
-        this.args.gameScene.rebornTimes++;
-        App.hideScene("GameLevelFailedScene");
-        EventMgr.dispatchEvent("Reborn");
-        window.TDGA && TDGA.onEvent("闯关模式复活");
+    onClickMask() {
+        App.hideMask();
+
+        this.animations.forEach(animation => animation.stop());
+        this.animations = [];
+
+        this.typeList.forEach(data => {
+            const originValue = this.args.gameScene[data.type];
+            const typePercent = GameUtils.getBikeConfig(`${data.type}Percent`);
+            data.valueText.text = Math.floor(originValue * typePercent);
+        });
     }
 }
 

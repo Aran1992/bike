@@ -44,9 +44,7 @@ export default class GameLevelResultScene extends Scene {
         for (let i = 0; i < Config.starCount; i++) {
             let star = this.ui[`star${i}`];
             star.visible = i < this.args.gameScene.star;
-            star = star.children[0];
-            star.alpha = 1;
-            star.scale.set(star.originScale, star.originScale);
+            this.recoverAnimationObject(star);
         }
 
         this.typeList.forEach(data => {
@@ -58,6 +56,7 @@ export default class GameLevelResultScene extends Scene {
             }
             data.valueText.text = value;
             data.doubleIcon.visible = this.args.gameScene.doubleReward;
+            this.recoverAnimationObject(data.doubleIcon);
         });
 
         if (this.args.gameScene.doubleReward) {
@@ -67,6 +66,7 @@ export default class GameLevelResultScene extends Scene {
             this.ui.advertDoubleButton.visible = true;
             this.ui.hasDoubleRewardText.visible = false;
         }
+        this.recoverAnimationObject(this.ui.hasDoubleRewardText);
     }
 
     onCreate() {
@@ -80,20 +80,16 @@ export default class GameLevelResultScene extends Scene {
         this.onClick(this.ui.restartButton, GameLevelResultScene.onClickRestartButton);
         this.onClick(this.ui.advertDoubleButton, this.onClickAdvertDoubleButton.bind(this));
 
-        this.typeList = [];
-        const typeList = [
+        this.typeList = [
             "distance",
             "exp",
             "coin",
-        ];
-        typeList.forEach(type => {
-            this.typeList.push({
-                type: type,
-                doubleIcon: this.ui[`${type}DoubleIcon`],
-                percentText: this.ui[`${type}PercentText`],
-                valueText: this.ui[`${type}ValueText`],
-            });
-        });
+        ].map(type => ({
+            type: type,
+            doubleIcon: this.ui[`${type}DoubleIcon`],
+            percentText: this.ui[`${type}PercentText`],
+            valueText: this.ui[`${type}ValueText`],
+        }));
 
         this.typeList.forEach(data => this.initAnimationObject(data.doubleIcon));
         this.initAnimationObject(this.ui.hasDoubleRewardText);
@@ -109,6 +105,12 @@ export default class GameLevelResultScene extends Scene {
         obj.originScale = obj.scale.x;
         obj.anchor.set(0.5, 0.5);
         obj.position.set(obj.x + obj.width / 2, obj.y + obj.height / 2);
+    }
+
+    recoverAnimationObject(obj) {
+        obj = obj.children[0];
+        obj.alpha = 1;
+        obj.scale.set(obj.originScale, obj.originScale);
     }
 
     onShow(args) {
