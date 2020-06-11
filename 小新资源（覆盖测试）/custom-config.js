@@ -12211,6 +12211,24 @@ Config.gameLevelScene = {
 
 // 图形化字库
 Config.imageText = {
+    bonus: {
+        charWidth: 24,
+        charHeight: 28,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_9.png",
+            "+": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_11.png",
+            "%": "myLaya/laya/assets/images/image-text/bonus/bonus_number_01_13.png",
+        },
+    },
     bonuspt: {
         charWidth: 25,
         charHeight: 40,
@@ -12231,6 +12249,43 @@ Config.imageText = {
             "+": "myLaya/laya/assets/images/image-text/bonuspt/bonuspt_number_02_13.png",
         },
     },
+    bonuspt3: {
+        charWidth: 34,
+        charHeight: 36,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_0.png",
+            "1": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_1.png",
+            "2": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_2.png",
+            "3": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_3.png",
+            "4": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_4.png",
+            "5": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_5.png",
+            "6": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_6.png",
+            "7": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_7.png",
+            "8": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_8.png",
+            "9": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_9.png",
+            ",": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_10.png",
+            ".": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_11.png",
+            "x": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_12.png",
+            "+": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+        },
+    },
+    exp: {
+        charWidth: 24,
+        charHeight: 28,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/exp/exp_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/exp/exp_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/exp/exp_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/exp/exp_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/exp/exp_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/exp/exp_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/exp/exp_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/exp/exp_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/exp/exp_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/exp/exp_number_01_9.png",
+            ",": "myLaya/laya/assets/images/image-text/exp/exp_number_01_10.png",
+        },
+    },
     font_303: {
         charWidth: 30,
         charHeight: 26,
@@ -12247,6 +12302,61 @@ Config.imageText = {
             "9": "myLaya/laya/assets/images/image-text/font_303/font_303_9.png",
             "%": "myLaya/laya/assets/images/image-text/font_303/font_303_32.png",
             ">": "myLaya/laya/assets/images/image-text/font_303/font_303_40.png",
+        },
+    },
+    medal: {
+        charWidth: 24,
+        charHeight: 28,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/medal/medal_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/medal/medal_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/medal/medal_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/medal/medal_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/medal/medal_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/medal/medal_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/medal/medal_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/medal/medal_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/medal/medal_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/medal/medal_number_01_9.png",
+            ",": "myLaya/laya/assets/images/image-text/medal/medal_number_01_10.png",
+        },
+    },
+    meter: {
+        charWidth: 24,
+        charHeight: 28,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/meter/meter_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/meter/meter_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/meter/meter_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/meter/meter_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/meter/meter_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/meter/meter_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/meter/meter_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/meter/meter_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/meter/meter_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/meter/meter_number_01_9.png",
+            ",": "myLaya/laya/assets/images/image-text/meter/meter_number_01_10.png",
+            ".": "myLaya/laya/assets/images/image-text/meter/meter_number_01_12.png",
+        },
+    },
+    plus: {
+        charWidth: 24,
+        charHeight: 28,
+        charImgPathTable: {
+            "0": "myLaya/laya/assets/images/image-text/plus/plus_number_01_0.png",
+            "1": "myLaya/laya/assets/images/image-text/plus/plus_number_01_1.png",
+            "2": "myLaya/laya/assets/images/image-text/plus/plus_number_01_2.png",
+            "3": "myLaya/laya/assets/images/image-text/plus/plus_number_01_3.png",
+            "4": "myLaya/laya/assets/images/image-text/plus/plus_number_01_4.png",
+            "5": "myLaya/laya/assets/images/image-text/plus/plus_number_01_5.png",
+            "6": "myLaya/laya/assets/images/image-text/plus/plus_number_01_6.png",
+            "7": "myLaya/laya/assets/images/image-text/plus/plus_number_01_7.png",
+            "8": "myLaya/laya/assets/images/image-text/plus/plus_number_01_8.png",
+            "9": "myLaya/laya/assets/images/image-text/plus/plus_number_01_9.png",
+            ",": "myLaya/laya/assets/images/image-text/plus/plus_number_01_10.png",
+            "+": "myLaya/laya/assets/images/image-text/plus/plus_number_01_11.png",
+            "(": "myLaya/laya/assets/images/image-text/plus/plus_number_01_13.png",
+            ")": "myLaya/laya/assets/images/image-text/plus/plus_number_01_14.png",
         },
     },
     theme: {
@@ -12627,34 +12737,34 @@ Config.resolveAnimation = {
     // 星星动画
     starAnimation: {
         // 开始动画时的缩放倍数
-        startScale: 5,
+        startScale: 3,
         // 开始动画时的透明度（0-1，0是透明）
         startAlpha: 0.5,
         // 持续时间(毫秒)
-        duration: 1000,
+        duration: 500,
     },
     // 数字跳动动画
     numberAnimation: {
         // 时长（单位：毫秒）
-        duration: 1000
+        duration: 500
     },
     // 广告双倍图标动画
     doubleIconAnimation: {
         // 开始动画时的缩放倍数
-        startScale: 5,
+        startScale: 3,
         // 开始动画时的透明度（0-1，0是透明）
         startAlpha: 0.5,
         // 持续时间(毫秒)
-        duration: 1000,
+        duration: 500,
     },
     // 广告已获得图标动画
     getIconAnimation: {
         // 开始动画时的缩放倍数
-        startScale: 5,
+        startScale: 3,
         // 开始动画时的透明度（0-1，0是透明）
         startAlpha: 0.5,
         // 持续时间(毫秒)
-        duration: 1000,
+        duration: 500,
     },
     // 新纪录图标动画
     newRecordAnimation: {
