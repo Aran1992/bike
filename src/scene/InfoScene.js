@@ -17,6 +17,7 @@ export default class InfoScene extends Scene {
     }
 
     onShow(data) {
+        this.parent.setChildIndex(this, this.parent.children.length - 1);
         if (data.bike !== undefined) {
             this.ui.bikePanel.visible = true;
             this.ui.itemIcon.visible = false;
