@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":77,
-    "selecteID":90,
+    "selectedBox":62,
+    "selecteID":97,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -27,7 +27,7 @@
             "hasChild":false,
             "compId":68,
             "child":[
-                ]
+            ]
         },
         {
             "x":15,
@@ -55,7 +55,7 @@
                     "hasChild":false,
                     "compId":74,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "x":30,
@@ -81,7 +81,7 @@
                             "hasChild":false,
                             "compId":71,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -123,7 +123,7 @@
                                     "hasChild":false,
                                     "compId":59,
                                     "child":[
-                                        ]
+                                    ]
                                 }]
                         },
                         {
@@ -142,17 +142,17 @@
                                 {
                                     "x":60,
                                     "type":"Image",
-                                    "searchKey":"Image",
-                                    "props":{"y":0,"x":0,"skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
+                                    "searchKey":"Image,star1",
+                                    "props":{"y":0,"x":0,"var":"star1","skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
                                     "nodeParent":60,
-                                    "label":"Image",
+                                    "label":"star1",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
                                     "compId":96,
                                     "child":[
-                                        ]
+                                    ]
                                 }]
                         },
                         {
@@ -171,17 +171,17 @@
                                 {
                                     "x":60,
                                     "type":"Image",
-                                    "searchKey":"Image",
-                                    "props":{"y":0,"x":0,"skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
+                                    "searchKey":"Image,star2",
+                                    "props":{"y":0,"x":0,"var":"star2","skin":"images/balance_centerx4-2.png","scaleY":0.8,"scaleX":0.8,"centerY":-7,"centerX":0},
                                     "nodeParent":62,
-                                    "label":"Image",
+                                    "label":"star2",
                                     "isOpen":true,
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
                                     "compId":97,
                                     "child":[
-                                        ]
+                                    ]
                                 }]
                         }]
                 },
@@ -233,7 +233,7 @@
                                             "hasChild":false,
                                             "compId":35,
                                             "child":[
-                                                ]
+                                            ]
                                         },
                                         {
                                             "type":"Label",
@@ -246,7 +246,7 @@
                                             "hasChild":false,
                                             "compId":36,
                                             "child":[
-                                                ]
+                                            ]
                                         },
                                         {
                                             "type":"Label",
@@ -259,7 +259,7 @@
                                             "hasChild":false,
                                             "compId":37,
                                             "child":[
-                                                ]
+                                            ]
                                         }]
                                 }]
                         }]
@@ -289,7 +289,7 @@
                             "hasChild":false,
                             "compId":66,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "type":"Image",
@@ -303,7 +303,7 @@
                             "hasChild":false,
                             "compId":69,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -319,7 +319,7 @@
                     "hasChild":false,
                     "compId":73,
                     "child":[
-                        ]
+                    ]
                 },
                 {
                     "x":30,
@@ -345,7 +345,7 @@
                             "hasChild":false,
                             "compId":51,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -372,7 +372,7 @@
                             "hasChild":false,
                             "compId":52,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -401,7 +401,7 @@
                             "hasChild":false,
                             "compId":78,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -415,7 +415,7 @@
                             "hasChild":false,
                             "compId":79,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -429,7 +429,7 @@
                             "hasChild":false,
                             "compId":80,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -443,7 +443,7 @@
                             "hasChild":false,
                             "compId":81,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -458,7 +458,7 @@
                             "hasChild":false,
                             "compId":94,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -487,7 +487,7 @@
                             "hasChild":false,
                             "compId":82,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -501,7 +501,7 @@
                             "hasChild":false,
                             "compId":83,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -515,7 +515,7 @@
                             "hasChild":false,
                             "compId":84,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -529,7 +529,7 @@
                             "hasChild":false,
                             "compId":85,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -544,7 +544,7 @@
                             "hasChild":false,
                             "compId":92,
                             "child":[
-                                ]
+                            ]
                         }]
                 },
                 {
@@ -573,7 +573,7 @@
                             "hasChild":false,
                             "compId":86,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -587,7 +587,7 @@
                             "hasChild":false,
                             "compId":87,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -601,7 +601,7 @@
                             "hasChild":false,
                             "compId":88,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -615,7 +615,7 @@
                             "hasChild":false,
                             "compId":89,
                             "child":[
-                                ]
+                            ]
                         },
                         {
                             "x":45,
@@ -630,7 +630,7 @@
                             "hasChild":false,
                             "compId":90,
                             "child":[
-                                ]
+                            ]
                         }]
                 }]
         },
@@ -647,7 +647,7 @@
             "hasChild":false,
             "compId":72,
             "child":[
-                ]
+            ]
         }],
     "animations":[
         {
@@ -664,7 +664,7 @@
                                 "key":"x",
                                 "index":0,
                                 "functions":[
-                                    ]
+                                ]
                             },
                             {
                                 "value":754,
