@@ -2818,6 +2818,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 1,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -2918,6 +2920,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 4,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3012,6 +3016,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 11,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3106,6 +3112,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 13,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3200,6 +3208,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 15,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3294,6 +3304,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 2,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3388,6 +3400,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 5,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3482,6 +3496,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 6,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3576,6 +3592,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 20,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3670,6 +3688,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 8,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3764,6 +3784,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 41,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3858,6 +3880,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 21,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -3952,6 +3976,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 22,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4046,6 +4072,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 23,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4140,6 +4168,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 7,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4234,6 +4264,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 42,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4328,6 +4360,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 43,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4422,6 +4456,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 51,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4516,6 +4552,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 53,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4610,6 +4648,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 54,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4704,6 +4744,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 19,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4798,6 +4840,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 10,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4892,6 +4936,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 12,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -4986,6 +5032,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 9,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5080,6 +5128,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 24,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5174,6 +5224,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 18,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5268,6 +5320,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 14,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 0,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5362,6 +5416,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 16,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 1,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5456,6 +5512,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 17,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 2,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5550,6 +5608,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 3,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 3,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5644,6 +5704,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 52,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 3,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
@@ -5738,6 +5800,8 @@ Config.bikeList = [
     {
         // 自行车ID 必须要和别的自行车不一样
         "id": 25,
+        // 自行车品质（0是n，1是r，2是sr，3是ssr）
+        "quality": 3,
         // 覆盖其上的图片路径
         "imagePath": "",
         // 缩放倍数
