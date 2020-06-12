@@ -11203,8 +11203,8 @@ Config.gameLevelMode = {
                 "myLaya/laya/pages/Map/Map-1-5.scene.json",
             ],
             rewardList: [
-                {bike: 1, coin: 1000, diamond: 20},
-                {bike: 1, coin: 1000, diamond: 20},
+                {coin: 1000, diamond: 20},
+                {coin: 1000, diamond: 20},
                 {bike: 1, diamond: 20},
                 {coin: 1000, diamond: 20},
                 {bike: 4, diamond: 20},
