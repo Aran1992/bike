@@ -2702,7 +2702,7 @@ Config.bikeList = [
         // 自行车名
         "name": "Select Bike1",
         // 自行车描述
-        "dsc": "Select Bike1",
+        "dsc": "Info-bike-1",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -2897,6 +2897,8 @@ Config.bikeList = [
         "index": 2,
         // 自行车名
         "name": "Select Bike2",
+        // 自行车描述
+        "dsc": "Info-bike-2",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -2989,6 +2991,8 @@ Config.bikeList = [
         "index": 3,
         // 自行车名
         "name": "Select Bike3",
+        // 自行车描述
+        "dsc": "Info-bike-3",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3081,6 +3085,8 @@ Config.bikeList = [
         "index": 4,
         // 自行车名
         "name": "Select Bike4",
+        // 自行车描述
+        "dsc": "Info-bike-4",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3173,6 +3179,8 @@ Config.bikeList = [
         "index": 5,
         // 自行车名
         "name": "Select Bike5",
+        // 自行车描述
+        "dsc": "Info-bike-5",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3265,6 +3273,8 @@ Config.bikeList = [
         "index": 6,
         // 自行车名
         "name": "Select Bike6",
+        // 自行车描述
+        "dsc": "Info-bike-6",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3357,6 +3367,8 @@ Config.bikeList = [
         "index": 7,
         // 自行车名
         "name": "Select Bike7",
+        // 自行车描述
+        "dsc": "Info-bike-7",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3449,6 +3461,8 @@ Config.bikeList = [
         "index": 8,
         // 自行车名
         "name": "Select Bike8",
+        // 自行车描述
+        "dsc": "Info-bike-8",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3541,6 +3555,8 @@ Config.bikeList = [
         "index": 9,
         // 自行车名
         "name": "Select Bike9",
+        // 自行车描述
+        "dsc": "Info-bike-9",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3633,6 +3649,8 @@ Config.bikeList = [
         "index": 10,
         // 自行车名
         "name": "Select Bike10",
+        // 自行车描述
+        "dsc": "Info-bike-10",
         "highJump": "Normal",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3725,6 +3743,8 @@ Config.bikeList = [
         "index": 11,
         // 自行车名
         "name": "Select Bike11",
+        // 自行车描述
+        "dsc": "Info-bike-11",
         "highJump": "Normal",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3817,6 +3837,8 @@ Config.bikeList = [
         "index": 12,
         // 自行车名
         "name": "Select Bike12",
+        // 自行车描述
+        "dsc": "Info-bike-12",
         "highJump": "Normal",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -3909,6 +3931,8 @@ Config.bikeList = [
         "index": 13,
         // 自行车名
         "name": "Select Bike13",
+        // 自行车描述
+        "dsc": "Info-bike-13",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4001,6 +4025,8 @@ Config.bikeList = [
         "index": 14,
         // 自行车名
         "name": "Select Bike14",
+        // 自行车描述
+        "dsc": "Info-bike-14",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4093,6 +4119,8 @@ Config.bikeList = [
         "index": 15,
         // 自行车名
         "name": "Select Bike15",
+        // 自行车描述
+        "dsc": "Info-bike-15",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4185,6 +4213,8 @@ Config.bikeList = [
         "index": 16,
         // 自行车名
         "name": "Select Bike16",
+        // 自行车描述
+        "dsc": "Info-bike-16",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4277,6 +4307,8 @@ Config.bikeList = [
         "index": 17,
         // 自行车名
         "name": "Select Bike17",
+        // 自行车描述
+        "dsc": "Info-bike-17",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4369,6 +4401,8 @@ Config.bikeList = [
         "index": 18,
         // 自行车名
         "name": "Select Bike18",
+        // 自行车描述
+        "dsc": "Info-bike-18",
         "highJump": "Easy",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4461,6 +4495,8 @@ Config.bikeList = [
         "index": 19,
         // 自行车名
         "name": "Select Bike19",
+        // 自行车描述
+        "dsc": "Info-bike-19",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4553,6 +4589,8 @@ Config.bikeList = [
         "index": 20,
         // 自行车名
         "name": "Select Bike20",
+        // 自行车描述
+        "dsc": "Info-bike-20",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4645,6 +4683,8 @@ Config.bikeList = [
         "index": 21,
         // 自行车名
         "name": "Select Bike21",
+        // 自行车描述
+        "dsc": "Info-bike-21",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4737,6 +4777,8 @@ Config.bikeList = [
         "index": 22,
         // 自行车名
         "name": "Select Bike22",
+        // 自行车描述
+        "dsc": "Info-bike-22",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4829,6 +4871,8 @@ Config.bikeList = [
         "index": 23,
         // 自行车名
         "name": "Select Bike23",
+        // 自行车描述
+        "dsc": "Info-bike-23",
         "highJump": "Easy",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -4921,6 +4965,8 @@ Config.bikeList = [
         "index": 24,
         // 自行车名
         "name": "Select Bike24",
+        // 自行车描述
+        "dsc": "Info-bike-24",
         "highJump": "Easy",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5013,6 +5059,8 @@ Config.bikeList = [
         "index": 25,
         // 自行车名
         "name": "Select Bike25",
+        // 自行车描述
+        "dsc": "Info-bike-25",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5105,6 +5153,8 @@ Config.bikeList = [
         "index": 26,
         // 自行车名
         "name": "Select Bike26",
+        // 自行车描述
+        "dsc": "Info-bike-26",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5197,6 +5247,8 @@ Config.bikeList = [
         "index": 27,
         // 自行车名
         "name": "Select Bike27",
+        // 自行车描述
+        "dsc": "Info-bike-27",
         "highJump": "Hard",
         "size": "Middle",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5289,6 +5341,8 @@ Config.bikeList = [
         "index": 28,
         // 自行车名
         "name": "Select Bike28",
+        // 自行车描述
+        "dsc": "Info-bike-28",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5381,6 +5435,8 @@ Config.bikeList = [
         "index": 29,
         // 自行车名
         "name": "Select Bike29",
+        // 自行车描述
+        "dsc": "Info-bike-29",
         "highJump": "Normal",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5473,6 +5529,8 @@ Config.bikeList = [
         "index": 30,
         // 自行车名
         "name": "Select Bike30",
+        // 自行车描述
+        "dsc": "Info-bike-30",
         "highJump": "Normal",
         "size": "Small",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5565,6 +5623,8 @@ Config.bikeList = [
         "index": 31,
         // 自行车名
         "name": "Select Bike31",
+        // 自行车描述
+        "dsc": "Info-bike-31",
         "highJump": "Hard",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5657,6 +5717,8 @@ Config.bikeList = [
         "index": 32,
         // 自行车名
         "name": "Select Bike32",
+        // 自行车描述
+        "dsc": "Info-bike-32",
         "highJump": "Hard",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -5749,6 +5811,8 @@ Config.bikeList = [
         "index": 33,
         // 自行车名
         "name": "Select Bike33",
+        // 自行车描述
+        "dsc": "Info-bike-33",
         "highJump": "Hard",
         "size": "Big",
         // 自行车的速度倍率（普通速度和加速速度都会乘于这个值）（范围区间：快 ~ 慢 ：2 ~ 0.8）
@@ -8174,9 +8238,9 @@ Config.effect = {
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0001.mp3",
         // 名称
-        name: "减速",
+        name: "Select Item1",
         // 描述
-        dsc: "减速",
+        dsc: "Info-item-1",
     },
     // 削弱跳跃（可做：害人削弱跳跃道具、削弱跳跃物件区域）
     WeakenJump: {
@@ -8202,6 +8266,10 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff0060.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0006.mp3",
+        // 名称
+        name: "Select Item2",
+        // 描述
+        dsc: "Info-item-2",
     },
     // 遮挡视线（可做：害人遮挡视线道具、遮挡视线物件区域）
     BlockSight: {
@@ -8225,6 +8293,10 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff0210.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0021.mp3",
+        // 名称
+        name: "Select Item3",
+        // 描述
+        dsc: "Info-item-3",
     },
     // 束缚（可做：害人束缚道具、束缚物件区域）
     SpiderWeb: {
@@ -8250,6 +8322,10 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff0260.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0026.mp3",
+        // 名称
+        name: "Select Item4",
+        // 描述
+        dsc: "Info-item-4",
     },
     // 封印
     Seal: {
@@ -8273,6 +8349,10 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff1031.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0031.mp3",
+        // 名称
+        name: "Select Item5",
+        // 描述
+        dsc: "Info-item-5",
     },
     // 落雷
     Thunder: {
@@ -8290,6 +8370,10 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff1036.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0036.mp3",
+        // 名称
+        name: "Select Item6",
+        // 描述
+        dsc: "Info-item-6",
     },
     // 加速（可做：增益加速道具、加速物件区域、加速带）
     Accelerate: {
@@ -8307,6 +8391,10 @@ Config.effect = {
         bearerBuffEffectPath: "myLaya/laya/assets/prefabs/eff_speedup.prefab.json",
         // 持续效果ICON路径
         buffIconImagePath: "myLaya/laya/assets/images/crystal_jet_00.png",
+        // 名称
+        name: "Select Item101",
+        // 描述
+        dsc: "Info-item-101",
     },
     // 强化跳跃（可做：增益强化跳跃道具、强化跳跃物件区域）
     PowerJump: {
@@ -8326,6 +8414,10 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_drill_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0106.mp3",
+        // 名称
+        name: "Select Item102",
+        // 描述
+        dsc: "Info-item-102",
     },
     // 无限跳跃（可做：增益无限跳跃道具、无限跳跃物件区域）
     UnlimitedJump: {
@@ -8343,6 +8435,10 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_wing_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0111.mp3",
+        // 名称
+        name: "Select Item103",
+        // 描述
+        dsc: "Info-item-103",
     },
     // 磁铁（排名竞赛用会当机）（可做：增益磁铁道具、磁铁物件区域）
     Magnet: {
@@ -8362,6 +8458,10 @@ Config.effect = {
         buffIconImagePath: "myLaya/laya/assets/images/crystal_dragon_00.png",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
+        // 名称
+        name: "Select Item104",
+        // 描述
+        dsc: "Info-item-104",
     },
     // 香蕉皮炸弹
     BananaPeel: {
@@ -8377,6 +8477,10 @@ Config.effect = {
         useSound: "myLaya/laya/assets/sounds/Buff1041.mp3",
         // 受击音效（获得此BUFF）（地图上吃到、使用道具获得）
         sufferSound: "myLaya/laya/assets/sounds/Buff0041.mp3",
+        // 名称
+        name: "Select Item7",
+        // 描述
+        dsc: "Info-item-7",
     },
     // 无敌
     Invincible: {
@@ -8400,6 +8504,10 @@ Config.effect = {
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
         // 结束时的无敌时间（秒）
         endInvincibleDuration: 2,
+        // 名称
+        name: "Select Item105",
+        // 描述
+        dsc: "Info-item-105",
     },
     // 超级无敌冲刺
     Sprint: {
@@ -8421,6 +8529,10 @@ Config.effect = {
         sufferSound: "myLaya/laya/assets/sounds/Buff0121.mp3",
         // 结束时的无敌时间（秒）
         endInvincibleDuration: 2,
+        // 名称
+        name: "Select Item106",
+        // 描述
+        dsc: "Info-item-106",
     },
 };
 

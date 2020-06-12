@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":276,
-    "selecteID":166,
+    "selectedBox":4,
+    "selecteID":85,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -353,13 +353,14 @@
             "props":{"top":0,"right":0,"left":0,"height":110},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":10,"height":64},
@@ -372,6 +373,7 @@
                     "compId":3,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -386,9 +388,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,diamondText",
-                            "props":{"var":"diamondText","text":"123456","right":60,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
+                            "props":{"var":"diamondText","text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
                             "nodeParent":3,
                             "label":"diamondText",
                             "isDirectory":false,
@@ -399,9 +402,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addDiamondButton",
-                            "props":{"var":"addDiamondButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"centerY":0},
+                            "props":{"var":"addDiamondButton","top":-17,"skin":"images/plus.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":-9},
                             "nodeParent":3,
                             "label":"addDiamondButton",
                             "isOpen":true,
@@ -414,6 +418,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":290,"height":64},
@@ -426,6 +431,7 @@
                     "compId":4,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-coin.png","scaleY":0.3,"scaleX":0.3,"left":10,"centerY":0},
@@ -440,9 +446,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,coinText",
-                            "props":{"var":"coinText","text":"123456","right":60,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
+                            "props":{"var":"coinText","text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
                             "nodeParent":4,
                             "label":"coinText",
                             "isDirectory":false,
@@ -453,9 +460,10 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,addCoinButton",
-                            "props":{"var":"addCoinButton","skin":"images/plus.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":0,"centerY":0},
+                            "props":{"var":"addCoinButton","top":-17,"skin":"images/plus.png","scaleY":0.7,"scaleX":0.7,"runtime":"../laya/assets/sounds/SoundSE001.mp3","right":-9},
                             "nodeParent":4,
                             "label":"addCoinButton",
                             "isOpen":true,
@@ -468,6 +476,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":850,"height":64},
@@ -480,6 +489,7 @@
                     "compId":2,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-metre.png","scaleY":0.8,"scaleX":0.8,"left":3,"centerY":-9},
@@ -494,6 +504,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,distanceText",
                             "props":{"var":"distanceText","text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
@@ -508,6 +519,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":270,"top":19,"skin":"images/bottom-num-101.png","sizeGrid":"0,20,0,20","right":570,"height":64},
@@ -520,6 +532,7 @@
                     "compId":10,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/icon-mark.png","scaleY":0.8,"scaleX":0.8,"left":10,"centerY":0},
@@ -534,6 +547,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "searchKey":"Label,totalScoreText",
                             "props":{"var":"totalScoreText","text":"123456","right":20,"fontSize":30,"font":"theme2","color":"#000000","centerY":0,"align":"right"},
@@ -548,6 +562,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,userImage",
                     "props":{"width":110,"var":"userImage","top":19,"skin":"images/UserIconDefault.png","left":17,"height":110},
