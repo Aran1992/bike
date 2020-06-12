@@ -8,6 +8,7 @@ import Utils from "../mgr/Utils";
 import MusicMgr from "../mgr/MusicMgr";
 import LockableButton from "../ui/LockableButton";
 import EventMgr from "../mgr/EventMgr";
+import {resources, Texture} from "../libs/pixi-wrapper";
 
 export default class BikeScene extends Scene {
     onCreate() {
@@ -44,7 +45,6 @@ export default class BikeScene extends Scene {
         this.updatePoint();
         this.onClickItem({index: 0});
         this.ui.upgradePanel.visible = false;
-        this.ui.list.visible = true;
         this.onScroll();
     }
 
@@ -56,9 +56,9 @@ export default class BikeScene extends Scene {
     }
 
     initItem(item) {
-        item.bikeSprite = new BikeSprite(item.ui.bikePanel, 2);
+        item.bikeSprite = new BikeSprite(item.ui.bikePanel);
         item.bikeSprite.setPosition(item.ui.bikePanel.mywidth / 2, item.ui.bikePanel.myheight / 2 + 20);
-        this.onClick(item, this.onClickItem.bind(this));
+        this.onClick(item, this.onClickItem.bind(this), true);
     }
 
     updateItem(item, index) {
@@ -69,10 +69,8 @@ export default class BikeScene extends Scene {
         item.bikeSprite.setGray(lock);
         if (this.selectedIndex === index) {
             item.bikeSprite.play();
-            item.ui.selectedImage.visible = true;
         } else {
             item.bikeSprite.stop();
-            item.ui.selectedImage.visible = false;
         }
         item.ui.lostMaskImage.visible = lock;
         item.ui.lockedImage.visible = lock;
@@ -84,6 +82,13 @@ export default class BikeScene extends Scene {
         item.ui.upgradeLevelIcon.visible = upgradeLevel !== 0;
         item.ui.upgradeLevelText.text = upgradeLevel !== 0 ? `${upgradeLevel}` : "";
         GameUtils.showRedPoint(item, DataMgr.isBikeUpgradable(config.id));
+        if (config.quality === undefined) {
+            config.quality = Math.floor(Math.random() * 4);
+        }
+        for (let i = 0; i < 4; i++) {
+            item.ui[`common${i}`].visible = config.quality === i && this.selectedIndex !== index;
+            item.ui[`selected${i}`].visible = config.quality === i && this.selectedIndex === index;
+        }
     }
 
     updateUpgradeItem(item, index) {
@@ -115,42 +120,46 @@ export default class BikeScene extends Scene {
         this.selectedIndex = item.index;
         this.list.refresh();
         let config = Config.bikeList[item.index];
-        let level = DataMgr.get(DataMgr.bikeLevelMap, {})[config.id];
-        let isHighestLevel = (config.coinPercent || Config.bike.coinPercent)[level + 1] === undefined;
-        let dsc = GameUtils.getBikeDsc(config);
-        let coin, distance, score, exp;
-        if (DataMgr.hasOwnedBike(config.id)) {
-            let get = (config, key, level) => {
-                let list = config[key] || Config.bike[key];
-                let curValue = list[level];
-                let nextValue = list[level + 1];
-                return `${Math.floor(curValue * 100)}%` + (nextValue !== undefined ? ` -> ${Math.floor(nextValue * 100)}%` : "");
-            };
-            dsc += "\n" + App.getText("LevelDsc2", {level: `${level + 1} ${isHighestLevel ? App.getText("Highest Level") : `-> ${level + 2}`}`});
-            coin = get(config, "coinPercent", level);
-            distance = get(config, "distancePercent", level);
-            score = get(config, "scorePercent", level);
-            exp = get(config, "expPercent", level);
-        } else {
-            let get = (config, key, level) => {
-                let list = config[key] || Config.bike[key];
-                let curValue = list[level];
-                return `${Math.floor(curValue * 100)}%`;
-            };
-            level = 0;
-            dsc += "\n" + App.getText("LevelDsc2", {level: level + 1});
-            coin = get(config, "coinPercent", level);
-            distance = get(config, "distancePercent", level);
-            score = get(config, "scorePercent", level);
-            exp = get(config, "expPercent", level);
-        }
-        dsc += "\n" + App.getText("BonusDsc", {coin, distance, score, exp});
-        this.ui.bikeDscText.text = dsc;
 
         let hasOwned = DataMgr.hasOwnedBike(config.id);
         this.ui.selectBikeButton.visible = hasOwned && DataMgr.get(DataMgr.selectedBike, 0) !== config.id;
         this.ui.unlockBikeImage.visible = !hasOwned;
         this.refreshUpgradePanelButtonLockStatus(hasOwned);
+
+        this.updatePropPanel();
+        this.updateUpgradePanel();
+    }
+
+    updatePropPanel() {
+        let config = Config.bikeList[this.selectedIndex];
+        let id = config.id;
+
+        this.ui.bikeNameText.text = App.getText(config.name);
+        this.ui.bikeDscText.text = App.getText(config.dsc);
+        const vLevel = DataMgr.getBikeVelocityLevel(id);
+        this.ui.velocityLevelIcon.children[0].texture = Texture.from(Config.levelIconTable[vLevel]);
+        const jLevel = DataMgr.getBikeJumpLevel(id);
+        this.ui.jumpLevelIcon.children[0].texture = Texture.from(Config.levelIconTable[jLevel]);
+        for (let i = 0; i < 3; i++) {
+            this.ui[`specialIcon${i}`].visible = i < config.quality;
+        }
+        const level = DataMgr.get(DataMgr.bikeLevelMap, {})[id]||0;
+        this.ui.levelText.text = level + 1;
+        [
+            "distance",
+            "exp",
+            "coin",
+            "score",
+        ].forEach(type => this.setPercentText(type, id, level));
+    }
+
+    setPercentText(type, id, level) {
+        this.ui[`${type}PercentText`].text = `${Math.floor(GameUtils.getBikeConfig(`${type}Percent`, id, level,) * 100)}%`;
+    }
+
+    updateUpgradePanel() {
+        this.refreshUpgradeInfo();
+        this.upgradeList.refresh();
     }
 
     refreshUpgradePanelButtonLockStatus(hasOwned) {
@@ -175,11 +184,6 @@ export default class BikeScene extends Scene {
             return App.showNotice("该自行车未解锁");
         }
         this.ui.upgradePanel.visible = !this.ui.upgradePanel.visible;
-        this.ui.list.visible = !this.ui.list.visible;
-        if (this.ui.upgradePanel.visible) {
-            this.refreshUpgradeInfo();
-            this.upgradeList.refresh();
-        }
     }
 
     onClickUpgradeButton() {

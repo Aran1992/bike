@@ -41,7 +41,7 @@ export default class BikeDetailScene extends Scene {
         const jLevel = DataMgr.getBikeJumpLevel(id);
         this.ui.jumpLevelIcon.children[0].texture = resources[Config.levelIconTable[jLevel]].texture;
         for (let i = 0; i < 3; i++) {
-            this.ui[`specialIcon${i}`].visible = i <= config.quality;
+            this.ui[`specialIcon${i}`].visible = i < config.quality;
         }
         const level = DataMgr.get(DataMgr.bikeLevelMap, {})[id];
         this.ui.levelText.text = level + 1;

@@ -566,7 +566,7 @@ class DataMgr_ {
     getBikeVelocityLevel(id) {
         const config = Config.bikeList.find(bike => bike.id === id);
         let level = 0;
-        for (let i = 0; i < Config.bikeVelocityLevel; i++) {
+        for (let i = 0; i < Config.bikeVelocityLevel.length; i++) {
             if (config.velocityPercent <= Config.bikeVelocityLevel[i]) {
                 return level;
             } else {
@@ -579,7 +579,7 @@ class DataMgr_ {
     getBikeJumpLevel(id) {
         const config = Config.bikeList.find(bike => bike.id === id);
         let level = 0;
-        for (let i = 0; i < Config.bikeJumpLevel; i++) {
+        for (let i = 0; i < Config.bikeJumpLevel.length; i++) {
             if (config.velocityPercent >= Config.bikeJumpLevel[i]) {
                 return level;
             } else {

@@ -58,7 +58,7 @@ export default class RankScene extends Scene {
     }
 
     initListItem(item) {
-        this.onClick(item, this.onClickItem.bind(this));
+        // this.onClick(item, this.onClickItem.bind(this));
     }
 
     updateListItem(item, index) {
