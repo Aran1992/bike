@@ -580,7 +580,7 @@ class DataMgr_ {
         const config = Config.bikeList.find(bike => bike.id === id);
         let level = 0;
         for (let i = 0; i < Config.bikeJumpLevel.length; i++) {
-            if (config.velocityPercent >= Config.bikeJumpLevel[i]) {
+            if (config.densityPercent >= Config.bikeJumpLevel[i]) {
                 return level;
             } else {
                 level++;
