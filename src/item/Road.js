@@ -125,7 +125,7 @@ export default class Road {
 
         let body = world.createBody();
         this.body = body;
-        body.setUserData({type: "Road"});
+        body.setUserData({type: "Road", obj: this});
         for (let i = 0; i <= pathInPhysics.length - 4; i += 2) {
             let sp = {
                     x: pathInPhysics[i],

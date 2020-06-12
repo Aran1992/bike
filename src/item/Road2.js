@@ -97,7 +97,7 @@ export default class Road2 {
 
     createBody() {
         this.body = this.world.createBody();
-        this.body.setUserData({type: "Road2"});
+        this.body.setUserData({type: "Road2", obj: this});
         let path = this.config.path.map((value, i) => {
             if (i % 2 === 1) {
                 value = Config.designHeight - value;

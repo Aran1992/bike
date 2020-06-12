@@ -241,6 +241,10 @@ export default class GameScene extends Scene {
             this.addExtraScoreAnimation.stop();
             delete this.addExtraScoreAnimation;
         }
+
+        this.contactRoadList = [];
+        this.contactRoad2List = [];
+        this.contactUpdownPlatformList = [];
     }
 
     getBikeID() {
@@ -387,6 +391,7 @@ export default class GameScene extends Scene {
         this.world = new World({gravity: Vec2(0, this.gravity)});
 
         this.world.on("begin-contact", this.onBeginContact.bind(this));
+        this.world.on("end-contact", this.onEndContact.bind(this));
         this.world.on("pre-solve", this.onPreSolve.bind(this));
 
         this.createBg();
@@ -457,6 +462,7 @@ export default class GameScene extends Scene {
                         let {p1, p2} = anotherFixture.getUserData();
                         if (Utils.getDistanceFromPointToLine(this.bikeBody.getPosition(), p1, p2) < Config.bikeRadius - Config.pixel2meter) {
                             contact.setEnabled(false);
+                            anotherFixture.getBody().getUserData().obj.isPlayerInside = true;
                         }
                     }
                     let ud = anotherFixture.getBody().getUserData();
@@ -466,6 +472,13 @@ export default class GameScene extends Scene {
                 },
                 beginContact(contact, anotherFixture,) {
                     let item = anotherFixture.getBody().getUserData();
+                    if (item.type === "Road") {
+                        this.contactRoadList.push(anotherFixture);
+                    } else if (item.type === "Road2") {
+                        this.contactRoad2List.push(anotherFixture);
+                    } else if (item instanceof UpDownPlatform) {
+                        this.contactUpdownPlatformList.push(anotherFixture);
+                    }
                     if (item && item instanceof BananaPeel && item.thrower === this) {
                         return;
                     }
@@ -603,6 +616,37 @@ export default class GameScene extends Scene {
                     break;
                 }
             }
+        }
+    }
+
+    onEndContact(contact) {
+        let another, anotherFixture;
+        let bike = this.getBikeFromFixture(contact.getFixtureA());
+        if (bike) {
+            anotherFixture = contact.getFixtureB();
+            another = anotherFixture.getBody().getUserData();
+        } else {
+            bike = this.getBikeFromFixture(contact.getFixtureB());
+            if (bike) {
+                anotherFixture = contact.getFixtureA();
+                another = anotherFixture.getBody().getUserData();
+            }
+        }
+        if (bike && another) {
+            if (another.type === "Road") {
+                Utils.removeItemFromArray(this.contactRoadList, anotherFixture);
+            } else if (another.type === "Road2") {
+                Utils.removeItemFromArray(this.contactRoad2List, anotherFixture);
+            } else if (another instanceof UpDownPlatform) {
+                Utils.removeItemFromArray(this.contactUpdownPlatformList, anotherFixture);
+            }
+        }
+    }
+
+    getBikeFromFixture(fixture) {
+        const obj = fixture.getBody().getUserData();
+        if (obj instanceof GameScene) {
+            return obj;
         }
     }
 
@@ -1291,8 +1335,12 @@ export default class GameScene extends Scene {
 
     syncBikeSprite(velocity, bikePhysicsPos) {
         if (this.followAnimation) {
-            this.followAnimation.visible = false;
+            this.followAnimation.visible = this.contactRoadList.length !== 0
+                || this.contactRoad2List.some(fixture => !fixture.getBody().getUserData().obj.isPlayerInside)
+                || this.contactUpdownPlatformList.some(fixture => this.bikeBody.getPosition().y > fixture.getBody().getPosition().y);
         }
+        this.contactRoad2List.forEach(fixture => fixture.getBody().getUserData().obj.isPlayerInside = false);
+
         let bikeRenderPos = GameUtils.physicsPos2renderPos(bikePhysicsPos);
         this.bikeOutterContainer.position.set(bikeRenderPos.x, bikeRenderPos.y);
         if (this.gameStatus === "end") {
@@ -1327,9 +1375,6 @@ export default class GameScene extends Scene {
                 this.bikeAnimSprite.position.set(...animationConfig.pos);
             } else if (this.isJacking) {
             } else {
-                if (this.followAnimation) {
-                    this.followAnimation.visible = true;
-                }
                 if (Config.bikeRotateByMoveDirection) {
                     this.bikeSelfContainer.rotation = -Math.atan(velocity.y / velocity.x);
                 }
