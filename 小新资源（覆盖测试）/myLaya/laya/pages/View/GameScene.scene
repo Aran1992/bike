@@ -499,7 +499,7 @@
                                     "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"skin":"images/levelbg_s.png","scaleY":0.7,"scaleX":0.7,"centerY":1,"centerX":-1},
+                                    "props":{"skin":"images/levelbg_s.png","scaleY":0.35,"scaleX":0.35,"centerY":1,"centerX":-1},
                                     "nodeParent":110,
                                     "label":"Image",
                                     "isOpen":true,

@@ -12947,8 +12947,8 @@ Config.guideRectCornerRadius = 0.25;
 
 // 移动背景的移动速度
 Config.movingBackground = {
-    x: 1,
-    y: 1,
+    x: 0.3,
+    y: 0.3,
 };
 
 export default Config;

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":367,
-    "selecteID":370,
+    "selectedBox":391,
+    "selecteID":392,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -841,7 +841,7 @@
                             "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"skin":"images/levelbg_s.png","scaleY":0.4,"scaleX":0.4,"left":20,"centerY":0},
+                            "props":{"skin":"images/levelbg_s.png","scaleY":0.2,"scaleX":0.2,"left":20,"centerY":0},
                             "nodeParent":391,
                             "label":"Image",
                             "isOpen":true,

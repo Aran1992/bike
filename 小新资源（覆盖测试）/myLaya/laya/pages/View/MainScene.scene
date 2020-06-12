@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":1,
-    "selecteID":19,
+    "selectedBox":276,
+    "selecteID":166,
     "searchKey":"Scene",
     "referenceLines":[
         ],
@@ -1704,7 +1704,7 @@
                     "x":30,
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/levelbg_s.png","left":-52,"centerY":-10},
+                    "props":{"skin":"images/levelbg_s.png","scaleY":0.5,"scaleX":0.5,"left":-52,"centerY":-10},
                     "nodeParent":167,
                     "label":"Image",
                     "isOpen":true,
@@ -1717,7 +1717,7 @@
                             "x":45,
                             "type":"Label",
                             "searchKey":"Label,levelText",
-                            "props":{"var":"levelText","text":"${LevelDsc}","scaleY":0.5,"scaleX":0.5,"fontSize":30,"font":"rank","color":"#ffffff","centerY":0,"centerX":0},
+                            "props":{"var":"levelText","text":"${LevelDsc}","fontSize":30,"font":"rank","color":"#ffffff","centerY":0,"centerX":0},
                             "nodeParent":276,
                             "label":"levelText",
                             "isDirectory":false,
