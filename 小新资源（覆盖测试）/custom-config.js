@@ -12945,4 +12945,10 @@ Config.levelIconTable = {
 // 引导矩形圆角大小（相对于这个矩形最小边的百分比）
 Config.guideRectCornerRadius = 0.25;
 
+// 移动背景的移动速度
+Config.movingBackground = {
+    x: 1,
+    y: 1,
+};
+
 export default Config;

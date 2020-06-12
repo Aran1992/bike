@@ -5,6 +5,7 @@ import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
 import UIGuidePanel from "../item/UIGuidePanel";
 import DataMgr from "../mgr/DataMgr";
+import MovingBackground from "../ui/MovingBackground";
 
 export default class Scene extends Container {
     create(createCallback) {
@@ -26,6 +27,9 @@ export default class Scene extends Container {
 
     show(...args) {
         this.visible = true;
+        if (this._movingBackground) {
+            this._movingBackground.start();
+        }
         this.onShow(...args);
         this.stopNormalAnimation();
         this.playAnimation("in", () => {
@@ -38,6 +42,9 @@ export default class Scene extends Container {
         this.stopNormalAnimation();
         this.playAnimation("out", () => {
             this.visible = false;
+            if (this._movingBackground) {
+                this._movingBackground.stop();
+            }
             this.onHide();
         });
     }
@@ -57,6 +64,9 @@ export default class Scene extends Container {
 
     internalOnCreate() {
         this.onCreate();
+        if (this.ui._movingBackground) {
+            this._movingBackground = new MovingBackground(this.ui._movingBackground, this);
+        }
         this.createCallback();
         this.createCallback = undefined;
     }

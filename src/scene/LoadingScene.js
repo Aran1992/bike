@@ -1,16 +1,11 @@
 import Scene from "./Scene";
-import {Graphics, resources} from "../libs/pixi-wrapper";
+import {Graphics} from "../libs/pixi-wrapper";
 import BikeSprite from "../item/BikeSprite";
 import Utils from "../mgr/Utils";
 import Config from "../config";
 
 export default class LoadingScene extends Scene {
     onCreate() {
-        let mask = new Graphics()
-            .beginFill(parseInt(`0x${resources[LoadingScene.sceneFilePath].data.props.sceneColor.substring(1)}`), 1)
-            .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
-            .endFill();
-        this.addChildAt(mask, 0);
         this.curPercent = 0;
         this.goToPercent(0);
         this.bikeSprite = new BikeSprite(this);
