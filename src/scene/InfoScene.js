@@ -1,5 +1,5 @@
 import Scene from "./Scene";
-import {Graphics, Texture} from "../libs/pixi-wrapper";
+import {Graphics, Rectangle, Texture} from "../libs/pixi-wrapper";
 import Config from "../config";
 import BikeSprite from "../item/BikeSprite";
 
@@ -11,7 +11,8 @@ export default class InfoScene extends Scene {
             .endFill();
         this.addChildAt(mask, 0);
 
-        this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
+        this.hitArea = new Rectangle(0, 0, App.sceneWidth, App.sceneHeight);
+        this.onClick(this, this.onClickReturnButton.bind(this), true);
 
         this.bikeSprite = new BikeSprite(this.ui.bikePanel, 0);
     }
