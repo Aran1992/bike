@@ -2698,18 +2698,18 @@ export default class GameScene extends Scene {
         switch (type) {
             case "GoldCoin": {
                 this.updateCoin(this.coin + value);
-                this.playAddExtraScore(App.getText("Coin"), value);
+                this.playAddExtraScore(App.getText("ExtraCoin", {value}));
                 break;
             }
             case "Exp": {
                 this.updateExp(this.exp + value);
-                this.playAddExtraScore(App.getText("Exp"), value);
+                this.playAddExtraScore(App.getText("ExtraExp", {value}));
                 break;
             }
         }
     }
 
-    playAddExtraScore(name, value) {
+    playAddExtraScore(text) {
         // todo 过程管理
         if (this.addExtraScoreAnimation) {
             this.addExtraScoreAnimation.stop();
@@ -2717,7 +2717,7 @@ export default class GameScene extends Scene {
         }
         this.ui.addExtraScoreLabel.x = Config.addExtraScoreAnimation.startMoveX;
         this.ui.addExtraScoreLabel.alpha = 1;
-        this.ui.addExtraScoreLabel.text = `${name}+${value}`;
+        this.ui.addExtraScoreLabel.text = text;
         this.addExtraScoreAnimation = new TWEEN.Tween(this.ui.addExtraScoreLabel)
             .to({x: Config.addExtraScoreAnimation.endMoveX}, Config.addExtraScoreAnimation.appearDuration)
             .onComplete(() => {
