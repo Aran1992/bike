@@ -12307,6 +12307,12 @@ Config.imageText = {
             ".": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_11.png",
             "x": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_12.png",
             "+": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            "额": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            "外": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            "经": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            "验": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            "钱": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            "币": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
         },
     },
     exp: {

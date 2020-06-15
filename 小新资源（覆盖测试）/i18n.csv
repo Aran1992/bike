@@ -1,7 +1,7 @@
 ﻿ID,备注【排版要把字体改为黑体】,对应界面（策划内部看的）,简中,英语,日语
 id,comments,scene,sc,en,jp
 ExtraExp,,,额外经验,,
-ExtraCoin,,,额外金币,,
+ExtraCoin,,,额外钱币,,
 NetworkBusy,,,网络繁忙，请稍后重试。,The network is busy. Please try again later.,ネットワークがビジー状態で、少し時間をおいて再度お試しください。
 Unlocked,,"BikeScene.scene.json
 HomeScene.scene.json",未解锁,Unlocked,アンロックしていません。
