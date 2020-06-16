@@ -15,6 +15,9 @@ export default class GuidePanel {
     }
 
     destroy() {
+        if (this.showTimer) {
+            clearTimeout(this.showTimer);
+        }
         UIHelper.freeClick();
         if (this.animation) {
             this.animation.stop();
@@ -33,6 +36,12 @@ export default class GuidePanel {
                 .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
                 .endFill();
             panel.addChildAt(this.guideMask, 0);
+        }
+        const showDuration = parseInt(GameUtils.getItemProp(data, "显示时间"));
+        if (showDuration) {
+            this.showTimer = setTimeout(() => {
+                this.onClickGuidePanel();
+            }, showDuration * 1000);
         }
         if (GameUtils.getItemProp(data, "暂停直到用户点击") === "1") {
             this.gameMgr.pauseGame();
