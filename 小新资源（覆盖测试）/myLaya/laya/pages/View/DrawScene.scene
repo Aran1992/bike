@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":1,
-    "selecteID":156,
+    "selecteID":163,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
-    "maxID":160,
+    "maxID":174,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -254,14 +254,13 @@
             "props":{"width":318,"var":"drawButton","skin":"images/button-51.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"height":102,"bottom":100},
             "nodeParent":1,
             "label":"drawButton",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":11,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/draw-2.png","scaleY":1.5,"scaleX":1.5,"centerY":0,"centerX":0},
@@ -283,14 +282,13 @@
             "props":{"visible":false,"var":"advertButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","right":50,"bottom":100},
             "nodeParent":1,
             "label":"advertButton",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":44,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/advert.png","left":30,"centerY":-8},
@@ -305,7 +303,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/english/free.png","right":30,"centerY":-8},
@@ -318,8 +315,7 @@
                     "compId":115,
                     "child":[
                         ]
-                }],
-            "$HIDDEN":false
+                }]
         },
         {
             "x":15,
@@ -343,14 +339,13 @@
             "props":{"width":150,"var":"costDiamondPanel","right":130,"height":60,"bottom":220},
             "nodeParent":1,
             "label":"costDiamondPanel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":39,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/icon-diamond.png","scaleY":0.3,"scaleX":0.3,"centerY":0,"centerX":-40},
@@ -364,7 +359,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,costDiamondText",
                     "props":{"var":"costDiamondText","text":"99","strokeColor":"#000000","stroke":5,"fontSize":35,"color":"#ffffff","centerY":0,"centerX":20},
@@ -384,7 +378,22 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image",
-            "props":{"top":0,"scaleY":1,"scaleX":1,"right":0,"left":0,"bottom":0},
+            "props":{"top":507,"skin":"images/bg-draw-sceme-11.png","centerX":0},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":135,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"top":650,"scaleY":1,"scaleX":1,"centerX":0},
             "nodeParent":1,
             "label":"Image",
             "isOpen":false,
@@ -393,20 +402,6 @@
             "hasChild":true,
             "compId":134,
             "child":[
-                {
-                    "type":"Image",
-                    "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-11.png","centerX":0,"bottom":10},
-                    "nodeParent":134,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":135,
-                    "child":[
-                        ]
-                },
                 {
                     "type":"Image",
                     "searchKey":"Image",
@@ -425,128 +420,245 @@
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-21.png","centerX":63,"bottom":294},
+                    "props":{"width":72,"height":72,"centerX":81,"bottom":296},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
-                    "compId":145,
+                    "hasChild":true,
+                    "compId":146,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-21.png","centerY":-36,"centerX":-36},
+                            "nodeParent":146,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":145,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-25.png","centerX":91,"bottom":263},
+                    "props":{"width":83,"height":103,"centerX":113,"bottom":268},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":144,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-25.png","centerX":-42,"bottom":1},
+                            "nodeParent":144,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":147,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-26.png","centerX":47,"bottom":287},
+                    "props":{"width":48,"height":70,"centerX":56,"bottom":294},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":143,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-26.png","centerX":-24,"bottom":1},
+                            "nodeParent":143,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":148,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-22.png","centerX":-65,"bottom":329},
+                    "props":{"width":50,"height":45,"centerX":-38,"bottom":333},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":142,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-22.png","centerX":-25,"bottom":0},
+                            "nodeParent":142,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":149,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-29.png","centerX":38,"bottom":276},
+                    "props":{"width":79,"height":65,"centerX":68,"bottom":291},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":137,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-29.png","centerX":-40,"bottom":1},
+                            "nodeParent":137,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":150,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-27.png","centerX":113,"bottom":204},
+                    "props":{"width":95,"height":101,"centerX":155,"bottom":213},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":136,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-27.png","centerX":-48,"bottom":1},
+                            "nodeParent":136,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":151,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-28.png","centerX":-82,"bottom":220},
+                    "props":{"width":69,"height":121,"centerX":-54,"bottom":228},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":141,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-28.png","centerX":-35,"bottom":1},
+                            "nodeParent":141,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":152,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-23.png","centerX":-123,"bottom":246},
+                    "props":{"width":72,"height":67,"centerX":-88,"bottom":257},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":140,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-23.png","centerX":-36,"bottom":0},
+                            "nodeParent":140,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":153,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
                     "searchKey":"Image",
-                    "props":{"skin":"images/bg-draw-sceme-24.png","centerX":-45,"bottom":279},
+                    "props":{"width":37,"height":40,"centerX":-37,"bottom":288},
                     "nodeParent":134,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":138,
                     "child":[
-                        ]
+                        {
+                            "type":"Image",
+                            "searchKey":"Image",
+                            "props":{"skin":"images/bg-draw-sceme-24.png","centerX":-19,"bottom":0},
+                            "nodeParent":138,
+                            "label":"Image",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":154,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "type":"Image",
@@ -567,7 +679,7 @@
             "x":15,
             "type":"Image",
             "searchKey":"Image,ballImage",
-            "props":{"var":"ballImage","skin":"images/icon-draw-ball.png","scaleY":1.2,"scaleX":1.2,"centerY":-72,"centerX":5},
+            "props":{"var":"ballImage","skin":"images/icon-draw-ball.png","scaleY":1.2,"scaleX":1.2,"centerY":-72,"centerX":1005},
             "nodeParent":1,
             "label":"ballImage",
             "isDirectory":false,
@@ -580,6 +692,63 @@
         },
         {
             "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"centerY":0,"centerX":0,"alpha":0},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":155,
+            "child":[
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/bg-481.png","centerY":0,"centerX":0},
+                    "nodeParent":155,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":156,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/show-41.png","centerY":0,"centerX":0},
+                    "nodeParent":155,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":157,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image",
+            "props":{"top":0,"skin":"images/bg-312.png","right":0,"left":0,"bottom":0,"alpha":0},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":158,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
             "type":"Panel",
             "searchKey":"Panel,Guide0",
             "props":{"y":0,"x":0,"visible":true,"var":"Guide0","top":0,"right":0,"left":0,"bottom":0},
@@ -589,30 +758,30 @@
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":146,
+            "compId":161,
             "child":[
                 {
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":520,"top":150,"skin":"images/bg-192.png","height":226,"centerX":0},
-                    "nodeParent":146,
+                    "nodeParent":161,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":147,
+                    "compId":164,
                     "child":[
                         {
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"“抽奖”系统解锁啦","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
-                            "nodeParent":147,
+                            "nodeParent":164,
                             "label":"Label",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":148,
+                            "compId":165,
                             "child":[
                                 ]
                         }]
@@ -621,13 +790,13 @@
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":160,"skin":"images/show-181.png","centerX":300},
-                    "nodeParent":146,
+                    "nodeParent":161,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":149,
+                    "compId":166,
                     "child":[
                         ]
                 },
@@ -635,13 +804,13 @@
                     "type":"Image",
                     "searchKey":"Image,手指点击动画",
                     "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"name":"手指点击动画","centerY":274,"centerX":488},
-                    "nodeParent":146,
+                    "nodeParent":161,
                     "label":"手指点击动画",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":150,
+                    "compId":167,
                     "child":[
                         ]
                 }],
@@ -659,30 +828,30 @@
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":151,
+            "compId":162,
             "child":[
                 {
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":520,"skin":"images/bg-192.png","height":226,"centerX":0,"bottom":100},
-                    "nodeParent":151,
+                    "nodeParent":162,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":152,
+                    "compId":168,
                     "child":[
                         {
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"正在抽奖中，请稍等","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
-                            "nodeParent":152,
+                            "nodeParent":168,
                             "label":"Label",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":153,
+                            "compId":169,
                             "child":[
                                 ]
                         }]
@@ -691,13 +860,13 @@
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/show-181.png","centerX":300,"bottom":150},
-                    "nodeParent":151,
+                    "nodeParent":162,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":154,
+                    "compId":170,
                     "child":[
                         ]
                 }],
@@ -711,52 +880,49 @@
             "props":{"y":0,"x":0,"visible":true,"var":"Guide2","top":0,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
             "label":"Guide2",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":156,
+            "compId":163,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":520,"skin":"images/bg-192.png","height":226,"centerX":0,"bottom":100},
-                    "nodeParent":156,
+                    "nodeParent":163,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":157,
+                    "compId":171,
                     "child":[
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"text":"抽出来一个很牛逼的东西啦","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
-                            "nodeParent":157,
+                            "nodeParent":171,
                             "label":"Label",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":158,
+                            "compId":172,
                             "child":[
                                 ]
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"skin":"images/show-181.png","centerX":300,"bottom":150},
-                    "nodeParent":156,
+                    "nodeParent":163,
                     "label":"Image",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":159,
+                    "compId":173,
                     "child":[
                         ]
                 }],
@@ -767,242 +933,826 @@
         {
             "nodes":[
                 {
-                    "target":134,
+                    "target":136,
                     "keyframes":{
-                        "scaleY":[
+                        "rotation":[
                             {
-                                "value":1,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":134,
-                                "key":"scaleY",
-                                "index":0
+                                "target":136,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
                             },
                             {
-                                "value":1,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":134,
-                                "key":"scaleY",
+                                "target":136,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":136,
+                                "key":"rotation",
+                                "index":8,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-12,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":136,
+                                "key":"rotation",
+                                "index":11,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":136,
+                                "key":"rotation",
+                                "index":14,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-20,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":136,
+                                "key":"rotation",
+                                "index":17,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":136,
+                                "key":"rotation",
                                 "index":20,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.9,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":134,
-                                "key":"scaleY",
-                                "index":23,
+                                "target":136,
+                                "key":"rotation",
+                                "index":22,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":1,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":134,
-                                "key":"scaleY",
-                                "index":25,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0.9,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleY",
-                                "index":28
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleY",
-                                "index":30,
-                                "functions":[
-                                    ]
-                            }],
-                        "scaleX":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleX",
-                                "index":0
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleX",
-                                "index":20,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0.9,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleX",
-                                "index":23,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleX",
-                                "index":25,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0.9,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":134,
-                                "key":"scaleX",
-                                "index":28,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":134,
-                                "key":"scaleX",
-                                "index":30,
+                                "target":136,
+                                "key":"rotation",
+                                "index":37,
                                 "functions":[
                                     ]
                             }]
                     }
                 },
                 {
-                    "target":37,
+                    "target":137,
                     "keyframes":{
-                        "scaleY":[
+                        "rotation":[
                             {
-                                "value":0.3,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleY",
-                                "index":0
-                            },
-                            {
-                                "value":0.3,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":37,
-                                "key":"scaleY",
-                                "index":50,
+                                "target":137,
+                                "key":"rotation",
+                                "index":0,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.2,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleY",
-                                "index":53,
+                                "target":137,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":137,
+                                "key":"rotation",
+                                "index":7,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.3,
+                                "value":-12,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleY",
-                                "index":55,
+                                "target":137,
+                                "key":"rotation",
+                                "index":10,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.2,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleY",
-                                "index":58,
+                                "target":137,
+                                "key":"rotation",
+                                "index":13
+                            },
+                            {
+                                "value":-12,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":137,
+                                "key":"rotation",
+                                "index":16,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.3,
+                                "value":5,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleY",
-                                "index":60,
-                                "functions":[
-                                    ]
-                            }],
-                        "scaleX":[
-                            {
-                                "value":0.3,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":37,
-                                "key":"scaleX",
-                                "index":0
-                            },
-                            {
-                                "value":0.3,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":37,
-                                "key":"scaleX",
-                                "index":50,
+                                "target":137,
+                                "key":"rotation",
+                                "index":19,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.2,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleX",
-                                "index":53,
+                                "target":137,
+                                "key":"rotation",
+                                "index":21,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.3,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleX",
-                                "index":55,
+                                "target":137,
+                                "key":"rotation",
+                                "index":37,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                },
+                {
+                    "target":140,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":0,
                                 "functions":[
                                     ]
                             },
                             {
-                                "value":0.2,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleX",
-                                "index":58
+                                "target":140,
+                                "key":"rotation",
+                                "index":5
                             },
                             {
-                                "value":0.3,
+                                "value":2,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
-                                "target":37,
-                                "key":"scaleX",
-                                "index":60
+                                "target":140,
+                                "key":"rotation",
+                                "index":6,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-20,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":9,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":12,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-20,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":15,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":18,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":20,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":140,
+                                "key":"rotation",
+                                "index":37
+                            }]
+                    }
+                },
+                {
+                    "target":138,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":-2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":8,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":20,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":11,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":14,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":20,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":17,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":20,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":22,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":138,
+                                "key":"rotation",
+                                "index":37
+                            }]
+                    }
+                },
+                {
+                    "target":144,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":6,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":15,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":9,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":12,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":15,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":15,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":18,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":20,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":144,
+                                "key":"rotation",
+                                "index":37
+                            }]
+                    }
+                },
+                {
+                    "target":141,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":-2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":7,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":15,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":10
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":12
+                            },
+                            {
+                                "value":20,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":14,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":21
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":22
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":141,
+                                "key":"rotation",
+                                "index":37
+                            }]
+                    }
+                },
+                {
+                    "target":142,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":8,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":11,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":14,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":17,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":20
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":22
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":142,
+                                "key":"rotation",
+                                "index":37
+                            }]
+                    }
+                },
+                {
+                    "target":146,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":7,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":13,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":-5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":16,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":19,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":21,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":146,
+                                "key":"rotation",
+                                "index":37
+                            }]
+                    }
+                },
+                {
+                    "target":143,
+                    "keyframes":{
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":5
+                            },
+                            {
+                                "value":-2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":7
+                            },
+                            {
+                                "value":10,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":12,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":15,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":15,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":17
+                            },
+                            {
+                                "value":15,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":19
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":21,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":143,
+                                "key":"rotation",
+                                "index":37,
+                                "functions":[
+                                    ]
                             }]
                     }
                 }],
@@ -1018,7 +1768,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":500,
+                                "value":1150,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":134,
@@ -1028,7 +1778,7 @@
                                     ]
                             },
                             {
-                                "value":0,
+                                "value":650,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":134,
@@ -1060,6 +1810,28 @@
                                 "index":5,
                                 "functions":[
                                     ]
+                            }]
+                    }
+                },
+                {
+                    "target":135,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":1007,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":135,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":507,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":135,
+                                "key":"y",
+                                "index":5
                             }]
                     }
                 }],
@@ -1075,7 +1847,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":0,
+                                "value":650,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":134,
@@ -1085,7 +1857,7 @@
                                     ]
                             },
                             {
-                                "value":500,
+                                "value":1150,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":134,
@@ -1119,10 +1891,390 @@
                                     ]
                             }]
                     }
+                },
+                {
+                    "target":135,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":507,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":135,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":1007,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":135,
+                                "key":"y",
+                                "index":5
+                            }]
+                    }
                 }],
             "name":"out",
             "id":2,
             "frameRate":24,
             "action":1
+        },
+        {
+            "nodes":[
+                {
+                    "target":134,
+                    "keyframes":{
+                        "scaleY":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":0
+                            },
+                            {
+                                "value":0.7,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":5,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1.3,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":10,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":15
+                            },
+                            {
+                                "value":0.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":20
+                            },
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":25
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleY",
+                                "index":30
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1.3,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":5,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":10
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":15,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":20
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":25
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":134,
+                                "key":"scaleX",
+                                "index":30
+                            }]
+                    }
+                },
+                {
+                    "target":155,
+                    "keyframes":{
+                        "scaleY":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":155,
+                                "key":"scaleY",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleY",
+                                "index":28,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleY",
+                                "index":32
+                            },
+                            {
+                                "value":1.2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleY",
+                                "index":42
+                            },
+                            {
+                                "value":1.08,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleY",
+                                "index":55
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":155,
+                                "key":"scaleX",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleX",
+                                "index":28,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleX",
+                                "index":32,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1.2,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleX",
+                                "index":42
+                            },
+                            {
+                                "value":1.08,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"scaleX",
+                                "index":55
+                            }],
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":155,
+                                "key":"alpha",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":155,
+                                "key":"alpha",
+                                "index":28
+                            }]
+                    }
+                },
+                {
+                    "target":158,
+                    "keyframes":{
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":158,
+                                "key":"alpha",
+                                "index":0
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":158,
+                                "key":"alpha",
+                                "index":37,
+                                "functions":[
+                                    ]
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":158,
+                                "key":"alpha",
+                                "index":55,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                },
+                {
+                    "target":39,
+                    "keyframes":{
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":39,
+                                "key":"alpha",
+                                "index":0,
+                                "functions":[
+                                    ]
+                            }]
+                    }
+                },
+                {
+                    "target":13,
+                    "keyframes":{
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":13,
+                                "key":"alpha",
+                                "index":0
+                            }]
+                    }
+                },
+                {
+                    "target":44,
+                    "keyframes":{
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":44,
+                                "key":"alpha",
+                                "index":0
+                            }]
+                    }
+                },
+                {
+                    "target":11,
+                    "keyframes":{
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":11,
+                                "key":"alpha",
+                                "index":0
+                            }]
+                    }
+                },
+                {
+                    "target":7,
+                    "keyframes":{
+                        "alpha":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":7,
+                                "key":"alpha",
+                                "index":0
+                            }]
+                    }
+                }],
+            "name":"special_draw",
+            "id":3,
+            "frameRate":24,
+            "action":0
         }]
 }
