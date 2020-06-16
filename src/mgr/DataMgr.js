@@ -6,7 +6,6 @@ import EventMgr from "./EventMgr";
 import TimeMgr from "./TimeMgr";
 import GameUtils from "./GameUtils";
 import RunOption from "../../run-option";
-import UIGuideMgr from "./UIGuideMgr";
 
 class DataMgr_ {
     constructor() {
@@ -46,6 +45,11 @@ class DataMgr_ {
 
     init(dataTable, periodIdx, createTime) {
         this.dataTable = dataTable;
+        // if (localStorage["mydata"]) {
+        //     this.dataTable = JSON.parse(localStorage["mydata"]);
+        // } else {
+        //     this.dataTable = {};
+        // }
         if (typeof this.dataTable[DataMgr.coin] !== "number") {
             this.dataTable[DataMgr.coin] = 0;
         }
@@ -116,6 +120,7 @@ class DataMgr_ {
 
     set(key, value) {
         this.dataTable[key] = value;
+        // localStorage["mydata"] = JSON.stringify(this.dataTable);
         clearTimeout(this.timer);
         this.timer = setTimeout(() => NetworkMgr.requestSaveData(this.dataTable), 100);
         if (key === DataMgr.unlockAllEndlessScene

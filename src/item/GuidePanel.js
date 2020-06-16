@@ -4,12 +4,14 @@ import GameUtils from "../mgr/GameUtils";
 import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
 import Config from "../config";
+import DataMgr from "../mgr/DataMgr";
 
 export default class GuidePanel {
     constructor(mgr, gameMgr, panelContainer, data) {
         this.mgr = mgr;
         this.gameMgr = gameMgr;
         this.panelContainer = panelContainer;
+        this.data = data;
         this.guidePanel = this.createGuidePanel(data);
         this.playAnimation(data.animations);
     }
@@ -105,6 +107,10 @@ export default class GuidePanel {
     }
 
     onClickGuidePanel() {
+        const guideName = GameUtils.getItemProp(this.data, "引导名称");
+        if (guideName) {
+            DataMgr.completeGuide(guideName);
+        }
         this.gameMgr.resumeGame();
         this.mgr.destroyGuidePanel();
     }
