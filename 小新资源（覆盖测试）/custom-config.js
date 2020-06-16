@@ -2710,8 +2710,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ],
+        "bikeJumpExtraCountdown": [],
         // 结算金币倍率（不填的话就使用默认值）
         "coinPercent": [
             1,
@@ -3085,8 +3084,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3358,8 +3356,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3631,8 +3628,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.3,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -3904,8 +3900,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -4177,8 +4172,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -4450,8 +4444,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -4723,8 +4716,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.4,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -4996,8 +4988,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.2,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -5269,8 +5260,7 @@ Config.bikeList = [
         // 自行车的密度倍率（密度越大，车子越重，跳起来的高度越低）（范围区间：高 ~ 低 ：0.8 ~ 1.2）(小新：基准1.2、最低1.4、最高1)
         "densityPercent": 1.4,
         // 自行车每次额外跳跃距离上次跳跃的帧数限制（不填的话就是用默认的配置）
-        "bikeJumpExtraCountdown": [
-        ]
+        "bikeJumpExtraCountdown": []
     },
     {
         // 自行车ID 必须要和别的自行车不一样
@@ -12307,12 +12297,12 @@ Config.imageText = {
             ".": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_11.png",
             "x": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_12.png",
             "+": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
-            "额": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
-            "外": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
-            "经": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
-            "验": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
-            "钱": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
-            "币": "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            ["额"]: "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            ["外"]: "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            ["经"]: "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            ["验"]: "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            ["钱"]: "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
+            ["币"]: "myLaya/laya/assets/images/image-text/bonuspt-3/bonuspt_number_03_13.png",
         },
     },
     exp: {
