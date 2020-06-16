@@ -18,14 +18,19 @@ export default class UIGuideMgr {
 
     destroyUIGuidePanel() {
         this.uiGuidePanel.destroy();
+        const lastData = this.config.guidePanelList[this.index];
         this.index++;
         const data = this.config.guidePanelList[this.index];
         if (data) {
-            App.showMask();
-            App.registerOnSceneShowOnTop(data.scene, () => {
-                App.hideMask();
+            if (data.scene === lastData.scene) {
                 this.uiGuidePanel = new UIGuidePanel(data, this, App.uiGuidePanelContainer);
-            });
+            } else {
+                App.showMask();
+                App.registerOnSceneShowOnTop(data.scene, () => {
+                    App.hideMask();
+                    this.uiGuidePanel = new UIGuidePanel(data, this, App.uiGuidePanelContainer);
+                });
+            }
         } else {
             DataMgr.completeGuide(this.guideKey);
         }
