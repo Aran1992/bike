@@ -3,12 +3,11 @@ import EventMgr from "../mgr/EventMgr";
 import SceneHelper from "../mgr/SceneHelper";
 import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
-import UIGuidePanel from "../item/UIGuidePanel";
-import DataMgr from "../mgr/DataMgr";
 import MovingBackground from "../ui/MovingBackground";
 
 export default class Scene extends Container {
-    create(createCallback) {
+    create(sceneName, createCallback) {
+        this.sceneName = sceneName;
         this.eventTable = {};
         this.createCallback = createCallback;
 
@@ -20,9 +19,9 @@ export default class Scene extends Container {
         }
     }
 
-    destroy() {
+    destroy(...args) {
         this.onDestroy();
-        super.destroy();
+        super.destroy(...args);
     }
 
     show(...args) {
@@ -34,7 +33,7 @@ export default class Scene extends Container {
         this.stopNormalAnimation();
         this.playAnimation("in", () => {
             this.createNormalAnimation();
-            this.initGuide();
+            App.onSceneShowOnTop(this.sceneName);
         });
     }
 
@@ -149,32 +148,11 @@ export default class Scene extends Container {
         }
     }
 
-    initGuide() {
-        if (this.sceneFilePath && resources[this.sceneFilePath] && resources[this.sceneFilePath].data) {
-            this.uiGuideList = resources[this.sceneFilePath].data.child.find(child => child.label.startsWith("GuideList"));
-            if (this.uiGuideList) {
-                this.uiGuideList = this.uiGuideList.child;
-                this.showGuide();
-            }
+    getGuidePanelData(guidePanelName) {
+        if (this.sceneFilePath
+            && resources[this.sceneFilePath]
+            && resources[this.sceneFilePath].data) {
+            return resources[this.sceneFilePath].data.child.find(child => child.props.var === guidePanelName);
         }
-    }
-
-    showGuide() {
-        this.uiGuide = this.uiGuideList.pop();
-        if (this.uiGuide) {
-            this.uiGuide.animations = resources[this.sceneFilePath].data.animations;
-            if (!DataMgr.hasShowedGuide(this.uiGuide)) {
-                this.uiGuidePanel = new UIGuidePanel(this.uiGuide, this, this);
-            }
-        }
-    }
-
-    destroyUIGuidePanel() {
-        if (this.uiGuidePanel) {
-            this.uiGuidePanel.destroy();
-            delete this.uiGuidePanel;
-            DataMgr.recordGuide(this.uiGuide);
-        }
-        this.showGuide();
     }
 }

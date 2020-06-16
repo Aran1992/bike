@@ -1,6 +1,7 @@
 {
+    "x":0,
     "type":"Scene",
-    "selectedBox":1,
+    "selectedBox":299,
     "selecteID":303,
     "searchKey":"Scene",
     "referenceLines":[
@@ -16,6 +17,7 @@
     "compId":1,
     "child":[
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,_movingBackground",
             "props":{"var":"_movingBackground","top":0,"skin":"images/bg-main-scene.png","right":0,"left":0,"bottom":0},
@@ -29,76 +31,7 @@
                 ]
         },
         {
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":337,"x":96,"skin":"images/show-small-1.png","rotation":-35,"alpha":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":299,
-            "child":[
-                ]
-        },
-        {
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":260,"x":708,"width":122,"skin":"images/show-small-11.png","rotation":36,"height":174,"alpha":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":300,
-            "child":[
-                ]
-        },
-        {
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":732,"x":813,"width":105,"skin":"images/show-small-21.png","rotation":0,"height":155,"alpha":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":301,
-            "child":[
-                ]
-        },
-        {
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":295,"x":1300,"skin":"images/show-small-31.png","rotation":-35,"alpha":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":302,
-            "child":[
-                ]
-        },
-        {
-            "type":"Image",
-            "searchKey":"Image",
-            "props":{"y":598,"x":1300,"skin":"images/show-small-41.png","rotation":-35,"alpha":0},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":303,
-            "child":[
-                ]
-        },
-        {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,sceneImage",
             "props":{"var":"sceneImage","skin":"images/MainMenuItemStage01Taurus.png","scaleY":0.6,"scaleX":0.6,"centerY":1045,"centerX":0},
@@ -114,6 +47,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"width":770,"skin":"images/bg-201.png","left":60,"height":415,"bottom":70},
@@ -399,6 +333,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"top":0,"right":0,"left":0,"height":110},
@@ -615,6 +550,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image",
             "props":{"width":330,"top":120,"right":50,"height":600},
@@ -777,6 +713,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,playerinfoButton",
             "props":{"y":130,"width":101,"visible":false,"skin":"images/ButtonPlayerInfo.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","name":"playerinfoButton","left":-350,"centerY":0},
@@ -816,6 +753,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,rankButton",
             "props":{"width":101,"var":"rankButton","top":110,"runtime":"../laya/assets/sounds/shinchan_240.mp3","left":480,"height":101},
@@ -869,6 +807,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,homeButton",
             "props":{"width":101,"var":"homeButton","top":110,"runtime":"../laya/assets/sounds/SoundSE001.mp3","left":-350,"height":101},
@@ -938,6 +877,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,systemButton",
             "props":{"width":101,"var":"systemButton","top":110,"runtime":"../laya/assets/sounds/shinchan_099b.mp3","left":590,"height":101},
@@ -977,6 +917,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,drawButton",
             "props":{"width":101,"var":"drawButton","top":110,"runtime":"../laya/assets/sounds/shinchan_240.mp3","left":700,"height":101},
@@ -1045,6 +986,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,shopButton",
             "props":{"width":101,"var":"shopButton","top":110,"runtime":"../laya/assets/sounds/shinchan_240.mp3","left":370,"height":101},
@@ -1112,6 +1054,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,signButton",
             "props":{"width":101,"var":"signButton","top":110,"skin":"images/icon-sign.png","runtime":"../laya/assets/sounds/shinchan_240.mp3","left":150,"height":101},
@@ -1166,6 +1109,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,giftButton",
             "props":{"width":101,"var":"giftButton","top":110,"skin":"images/icon-gift.png","runtime":"../laya/assets/sounds/shinchan_240.mp3","left":260,"height":101},
@@ -1234,6 +1178,7 @@
                 }]
         },
         {
+            "x":15,
             "type":"Panel",
             "searchKey":"Panel,gameLevelPanel",
             "props":{"width":700,"var":"gameLevelPanel","top":1150,"height":500,"centerX":0},
@@ -1699,6 +1644,7 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Image",
             "searchKey":"Image,exp",
             "props":{"skin":"images/loading-1.png","name":"exp","left":96,"bottom":10},
@@ -1767,88 +1713,151 @@
             "$HIDDEN":false
         },
         {
+            "x":15,
             "type":"Panel",
-            "searchKey":"Panel,GuideList",
-            "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"GuideList","height":720},
+            "searchKey":"Panel,Guide0",
+            "props":{"visible":true,"var":"Guide0","top":0,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
-            "label":"GuideList",
+            "label":"Guide0",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":267,
+            "compId":268,
             "child":[
                 {
-                    "type":"Panel",
-                    "searchKey":"Panel,Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0",
-                    "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0","height":720},
-                    "nodeParent":267,
-                    "label":"Guide//归属引导:首次闯关模式//结束引导:0//蒙版:1//显示直到用户点击:0//显示直到点击控件:gamelevelModeButton//显示时长:0",
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"width":520,"top":150,"skin":"images/bg-192.png","height":226,"centerX":0},
+                    "nodeParent":268,
+                    "label":"Image",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":271,
+                    "child":[
+                        {
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"text":"${Guide-1-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                            "nodeParent":271,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":272,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"top":160,"skin":"images/show-191.png","centerX":-280},
+                    "nodeParent":268,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":273,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,手指点击动画",
+                    "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"name":"手指点击动画","centerY":145,"centerX":570},
+                    "nodeParent":268,
+                    "label":"手指点击动画",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":275,
+                    "child":[
+                        ]
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "searchKey":"Panel,Guide1",
+            "props":{"y":0,"x":0,"visible":true,"var":"Guide1","top":0,"right":0,"left":0,"bottom":0},
+            "nodeParent":1,
+            "label":"Guide1",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":299,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"width":520,"skin":"images/bg-192.png","height":226,"centerX":0,"bottom":100},
+                    "nodeParent":299,
+                    "label":"Image",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":268,
+                    "compId":300,
                     "child":[
                         {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"width":520,"top":150,"skin":"images/bg-192.png","height":226,"centerX":0},
-                            "nodeParent":268,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":271,
-                            "child":[
-                                {
-                                    "type":"Label",
-                                    "searchKey":"Label",
-                                    "props":{"text":"${Guide-1-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
-                                    "nodeParent":271,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":272,
-                                    "child":[
-                                        ]
-                                }]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"top":160,"skin":"images/show-191.png","centerX":-280},
-                            "nodeParent":268,
-                            "label":"Image",
-                            "isOpen":true,
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"text":"“抽奖”系统解锁啦","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                            "nodeParent":300,
+                            "label":"Label",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":273,
+                            "compId":301,
                             "child":[
                                 ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image,手指点击动画",
-                            "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"name":"手指点击动画","centerY":145,"centerX":570},
-                            "nodeParent":268,
-                            "label":"手指点击动画",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":275,
-                            "child":[
-                                ]
-                        }],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/show-191.png","centerX":-280,"bottom":180},
+                    "nodeParent":299,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":302,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,手指点击动画",
+                    "props":{"top":150,"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"name":"手指点击动画","centerX":176},
+                    "nodeParent":299,
+                    "label":"手指点击动画",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":303,
+                    "child":[
+                        ]
                 }],
             "$LOCKED":false,
-            "$HIDDEN":true
+            "$HIDDEN":false
         }],
     "animations":[
         {
@@ -1905,578 +1914,6 @@
                                 "target":275,
                                 "key":"scaleX",
                                 "index":10
-                            }]
-                    }
-                },
-                {
-                    "target":299,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":337,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":299,
-                                "key":"y",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":337,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"y",
-                                "index":30
-                            },
-                            {
-                                "value":199,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"y",
-                                "index":45
-                            },
-                            {
-                                "value":337,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"y",
-                                "index":60
-                            }],
-                        "x":[
-                            {
-                                "value":96,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":299,
-                                "key":"x",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":96,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"x",
-                                "index":30,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":-15,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"x",
-                                "index":45,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":96,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"x",
-                                "index":60
-                            }],
-                        "alpha":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":299,
-                                "key":"alpha",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"alpha",
-                                "index":30,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"alpha",
-                                "index":45
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":299,
-                                "key":"alpha",
-                                "index":60
-                            }]
-                    }
-                },
-                {
-                    "target":300,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":260,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":300,
-                                "key":"y",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":260,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "key":"y",
-                                "index":90
-                            },
-                            {
-                                "value":124,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "key":"y",
-                                "index":105
-                            },
-                            {
-                                "value":260,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "label":null,
-                                "key":"y",
-                                "index":120
-                            }],
-                        "x":[
-                            {
-                                "value":708,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":300,
-                                "key":"x",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":708,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "key":"x",
-                                "index":90,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":830,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "key":"x",
-                                "index":105
-                            },
-                            {
-                                "value":708,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "label":null,
-                                "key":"x",
-                                "index":120
-                            }],
-                        "alpha":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":300,
-                                "key":"alpha",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "key":"alpha",
-                                "index":90
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "key":"alpha",
-                                "index":105
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":300,
-                                "label":null,
-                                "key":"alpha",
-                                "index":120
-                            }]
-                    }
-                },
-                {
-                    "target":301,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":610,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":301,
-                                "key":"y",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":732,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "key":"y",
-                                "index":150
-                            },
-                            {
-                                "value":598,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "key":"y",
-                                "index":165
-                            },
-                            {
-                                "value":732,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "label":null,
-                                "key":"y",
-                                "index":180
-                            }],
-                        "x":[
-                            {
-                                "value":813,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":301,
-                                "key":"x",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":813,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "key":"x",
-                                "index":150
-                            },
-                            {
-                                "value":815,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "key":"x",
-                                "index":165
-                            },
-                            {
-                                "value":813,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "label":null,
-                                "key":"x",
-                                "index":180
-                            }],
-                        "alpha":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":301,
-                                "key":"alpha",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "key":"alpha",
-                                "index":150,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "key":"alpha",
-                                "index":165
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":301,
-                                "label":null,
-                                "key":"alpha",
-                                "index":180
-                            }]
-                    }
-                },
-                {
-                    "target":302,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":295,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":302,
-                                "key":"y",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":295,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "key":"y",
-                                "index":210
-                            },
-                            {
-                                "value":134,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "key":"y",
-                                "index":225
-                            },
-                            {
-                                "value":295,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "label":null,
-                                "key":"y",
-                                "index":240
-                            }],
-                        "x":[
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":302,
-                                "key":"x",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "key":"x",
-                                "index":210
-                            },
-                            {
-                                "value":1152,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "key":"x",
-                                "index":225
-                            },
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "label":null,
-                                "key":"x",
-                                "index":240
-                            }],
-                        "alpha":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":302,
-                                "key":"alpha",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "key":"alpha",
-                                "index":210
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "key":"alpha",
-                                "index":225
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":302,
-                                "label":null,
-                                "key":"alpha",
-                                "index":240
-                            }]
-                    }
-                },
-                {
-                    "target":303,
-                    "keyframes":{
-                        "y":[
-                            {
-                                "value":598,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":303,
-                                "key":"y",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":598,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "key":"y",
-                                "index":270
-                            },
-                            {
-                                "value":471,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "key":"y",
-                                "index":285
-                            },
-                            {
-                                "value":598,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "label":null,
-                                "key":"y",
-                                "index":300
-                            }],
-                        "x":[
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":303,
-                                "key":"x",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "key":"x",
-                                "index":270
-                            },
-                            {
-                                "value":1158,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "key":"x",
-                                "index":285
-                            },
-                            {
-                                "value":1300,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "label":null,
-                                "key":"x",
-                                "index":300
-                            }],
-                        "alpha":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":303,
-                                "key":"alpha",
-                                "index":0,
-                                "functions":[
-                                    ]
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "key":"alpha",
-                                "index":270
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "key":"alpha",
-                                "index":285
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":303,
-                                "label":null,
-                                "key":"alpha",
-                                "index":300
                             }]
                     }
                 }],

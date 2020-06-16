@@ -11,6 +11,7 @@ import GameUtils from "../mgr/GameUtils";
 import LockableButton from "../ui/LockableButton";
 import RunOption from "../../run-option";
 import Progress from "../ui/Progress";
+import UIGuideMgr from "../mgr/UIGuideMgr";
 
 export default class MainScene extends Scene {
     onCreate() {
@@ -110,12 +111,13 @@ export default class MainScene extends Scene {
         this.refreshLockStatus();
         this.updatePoint();
 
-        if (RunOption.forceShowBeginnerGuide === 0) {
-            if (!DataMgr.get(DataMgr.throughGuide, false)) {
-                App.showScene("GuideGameScene");
-            }
-        } else if (RunOption.forceShowBeginnerGuide === 1) {
+        if ((RunOption.forceShowBeginnerGuide === 0 && !DataMgr.get(DataMgr.throughGuide, false))
+            || RunOption.forceShowBeginnerGuide === 1) {
             App.showScene("GuideGameScene");
+        } else {
+            if (!DataMgr.hasCompletedFirstGameGuide()) {
+                this.showFirstGameGuide();
+            }
         }
     }
 
@@ -280,17 +282,17 @@ export default class MainScene extends Scene {
         this.waitShowNotice.push(lockInfo);
     }
 
-    showUnlockNotice(unlockInfo) {
-        App.showScene("NewContentScene", unlockInfo, () => {
-            this.checkWaitShowNotice();
+    showUnlockNotice(unlockSystem) {
+        App.showScene("NewContentScene", unlockSystem, () => {
+            this.checkWaitShowNotice(unlockSystem);
         });
     }
 
-    checkWaitShowNotice() {
+    checkWaitShowNotice(unlockSystem) {
         if (this.waitShowNotice.length) {
             this.showUnlockNotice(this.waitShowNotice.shift());
         } else {
-            this.showNextGameLevel();
+            this.showNextGameLevel(unlockSystem);
         }
     }
 
@@ -423,10 +425,35 @@ export default class MainScene extends Scene {
         }
     }
 
-    showNextGameLevel() {
+    showNextGameLevel(unlockSystem) {
         const scene = App.getScene("GameLevelScene");
         if (scene) {
-            scene.onGameEnded(this.gameLevelFirstWin);
+            if (unlockSystem) {
+                for (let key in Config.UIGuide) {
+                    if (Config.UIGuide.hasOwnProperty(key)) {
+                        const config = Config.UIGuide[key];
+                        if (config.startInUnlockSystem === unlockSystem) {
+                            new UIGuideMgr(key);
+                            break;
+                        }
+                    }
+                }
+                scene.show();
+            } else {
+                scene.onGameEnded(this.gameLevelFirstWin);
+            }
+        }
+    }
+
+    showFirstGameGuide() {
+        for (let key in Config.UIGuide) {
+            if (Config.UIGuide.hasOwnProperty(key)) {
+                const config = Config.UIGuide[key];
+                if (config.startInFirstTimeShowMainScene) {
+                    new UIGuideMgr(key);
+                    break;
+                }
+            }
         }
     }
 }

@@ -50,6 +50,7 @@ import LevelUpScene from "../scene/LevelUpScene";
 import GameOverRebornScene from "../scene/GameOverRebornScene";
 import InfoScene from "../scene/InfoScene";
 import GameLevelRebornScene from "../scene/GameLevelRebornScene";
+import Utils from "./Utils";
 
 export default class MyApplication extends Application {
     constructor(args) {
@@ -90,6 +91,8 @@ export default class MyApplication extends Application {
 
         this.scenesContainer = new Container();
         this.root.addChild(this.scenesContainer);
+
+        this.uiGuidePanelContainer = this.root.addChild(new Container());
 
         this.maskShowCount = 0;
         this.mask = this.root.addChild(new Container());
@@ -144,6 +147,8 @@ export default class MyApplication extends Application {
         this.waitLoadList = [];
 
         this.ticker.add(this.onTick.bind(this));
+
+        this.sceneShowCallbackTable = {};
     }
 
     showScene(sceneName, ...args) {
@@ -151,7 +156,7 @@ export default class MyApplication extends Application {
             let sceneClass = this.sceneNameClassMap[sceneName];
             this.sceneTable[sceneName] = new sceneClass();
             this.scenesContainer.addChild(this.sceneTable[sceneName]);
-            this.sceneTable[sceneName].create(() => {
+            this.sceneTable[sceneName].create(sceneName, () => {
                 this.sceneTable[sceneName].show(...args);
             });
         } else {
@@ -453,5 +458,21 @@ export default class MyApplication extends Application {
 
     onTick() {
         TWEEN.update(performance.now());
+    }
+
+    registerOnSceneShowOnTop(sceneName, callback) {
+        let cbList = this.sceneShowCallbackTable[sceneName];
+        if (cbList === undefined) {
+            cbList = [];
+            this.sceneShowCallbackTable[sceneName] = cbList;
+        }
+        cbList.push(callback);
+    }
+
+    onSceneShowOnTop(sceneName) {
+        if (this.sceneShowCallbackTable[sceneName]) {
+            this.sceneShowCallbackTable[sceneName].forEach(callback => callback());
+            this.sceneShowCallbackTable[sceneName] = [];
+        }
     }
 }

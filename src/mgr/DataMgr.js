@@ -6,6 +6,7 @@ import EventMgr from "./EventMgr";
 import TimeMgr from "./TimeMgr";
 import GameUtils from "./GameUtils";
 import RunOption from "../../run-option";
+import UIGuideMgr from "./UIGuideMgr";
 
 class DataMgr_ {
     constructor() {
@@ -207,7 +208,7 @@ class DataMgr_ {
                         list.push(system);
                         DataMgr.set(DataMgr.unlockSystems, list);
                         if (Config.lockSystems[system].title) {
-                            EventMgr.dispatchEvent("UnlockSystem", Config.lockSystems[system]);
+                            EventMgr.dispatchEvent("UnlockSystem", system);
                         }
                     }
                 }
@@ -543,10 +544,21 @@ class DataMgr_ {
         return cur === undefined ? max : cur;
     }
 
-    hasShowedGuide(guideData) {
+    hasCompletedFirstGameGuide() {
+        for (let key in Config.UIGuide) {
+            if (Config.UIGuide.hasOwnProperty(key)) {
+                const guide = Config.UIGuide[key];
+                if (guide.startInFirstTimeShowMainScene) {
+                    return DataMgr.hasCompletedGuide(key);
+                }
+            }
+        }
+    }
+
+    hasCompletedGuide(guideKey) {
         if (RunOption.forceShowUIGuide === 0) {
             const data = DataMgr.get(DataMgr.showedGuide);
-            return data.indexOf(GameUtils.getItemProp(guideData, "归属引导")) !== -1;
+            return data.indexOf(guideKey) !== -1;
         } else if (RunOption.forceShowUIGuide === 1) {
             return false;
         } else if (RunOption.forceShowUIGuide === 2) {
@@ -554,13 +566,10 @@ class DataMgr_ {
         }
     }
 
-    recordGuide(guideData) {
-        const endGuide = GameUtils.getItemProp(guideData, "结束引导");
-        if (endGuide && endGuide === "1") {
-            const data = DataMgr.get(DataMgr.showedGuide);
-            data.push(GameUtils.getItemProp(guideData, "归属引导"));
-            DataMgr.set(DataMgr.showedGuide, data);
-        }
+    completeGuide(guideKey) {
+        const data = DataMgr.get(DataMgr.showedGuide);
+        data.push(guideKey);
+        DataMgr.set(DataMgr.showedGuide, data);
     }
 
     getBikeVelocityLevel(id) {

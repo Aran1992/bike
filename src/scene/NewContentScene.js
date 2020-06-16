@@ -1,5 +1,6 @@
 import Scene from "./Scene";
 import {Graphics, Sprite} from "../libs/pixi-wrapper";
+import Config from "../config";
 
 export default class NewContentScene extends Scene {
     onCreate() {
@@ -12,7 +13,8 @@ export default class NewContentScene extends Scene {
         this.onClick(this.ui.returnButton, this.onClickReturnButton.bind(this));
     }
 
-    onShow(info, closeCallback) {
+    onShow(system, closeCallback) {
+        const info = Config.lockSystems[system];
         this.closeCallback = closeCallback;
 
         this.parent.setChildIndex(this, this.parent.children.length - 1);

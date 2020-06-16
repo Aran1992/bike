@@ -1,53 +1,57 @@
 import {Container, Graphics} from "../libs/pixi-wrapper";
 import SceneHelper from "../mgr/SceneHelper";
-import GameUtils from "../mgr/GameUtils";
 import UIHelper from "../ui/UIHelper";
 import Animation from "../ui/Animation";
 import Config from "../config";
 
 export default class UIGuidePanel {
-    constructor(data, mgr, panelContainer) {
+    constructor(guideData, mgr, parent) {
         this.mgr = mgr;
+        const scene = App.getScene(guideData.scene);
         const panel = new Container();
-        SceneHelper.createSceneByData(data, panel, true);
-        panelContainer.addChild(panel);
-        if (GameUtils.getItemProp(data, "蒙版") === "1") {
+        SceneHelper.createSceneByData(scene.getGuidePanelData(guideData.panel), panel, true);
+        parent.addChild(panel);
+        if (guideData.showMask) {
             this.guideMask = new Graphics()
                 .beginFill(0x000000, 0.5)
                 .drawRect(0, 0, App.sceneWidth, App.sceneHeight)
                 .endFill();
             panel.addChildAt(this.guideMask, 0);
         }
-        if (GameUtils.getItemProp(data, "显示直到用户点击") === "1") {
+        if (guideData.showUtilClick === "guidePanel") {
             UIHelper.onClick(panel, this.onClickGuidePanel.bind(this), true);
             UIHelper.controlClick((button) => button === panel);
-        }
-        const controlID = GameUtils.getItemProp(data, "显示直到点击控件");
-        if (controlID !== undefined) {
-            const targetButton = mgr.ui && mgr.ui[controlID];
-            if (targetButton) {
-                if (this.guideMask) {
-                    this.guideMask.clear();
-                    this.guideMask.beginFill(0x000000, 0.5);
-                    this.guideMask.drawRect(0, 0, App.sceneWidth, App.sceneHeight);
-                    this.guideMask.beginHole();
-                    const bounds = targetButton.getBounds();
-                    const {x, y} = App.trans2GlobalPosition(bounds);
-                    this.guideMask.drawRoundedRect(x, y, bounds.width, bounds.height, Math.min(bounds.width, bounds.height) * Config.guideRectCornerRadius);
-                    this.guideMask.endHole();
-                    this.guideMask.endFill();
+        } else if (guideData.showUtilClick !== "") {
+            const controlID = guideData.showUtilClick;
+            if (controlID !== undefined) {
+                const targetButton = scene.ui[controlID];
+                if (targetButton) {
+                    if (this.guideMask) {
+                        this.guideMask.clear();
+                        this.guideMask.beginFill(0x000000, 0.5);
+                        this.guideMask.drawRect(0, 0, App.sceneWidth, App.sceneHeight);
+                        this.guideMask.beginHole();
+                        const bounds = targetButton.getBounds();
+                        const {x, y} = App.trans2GlobalPosition(bounds);
+                        this.guideMask.drawRoundedRect(x, y, bounds.width, bounds.height, Math.min(bounds.width, bounds.height) * Config.guideRectCornerRadius);
+                        this.guideMask.endHole();
+                        this.guideMask.endFill();
+                    }
+                    UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
+                } else {
+                    alert(`引导界面不存在要点击的控件：${controlID}`);
                 }
-                UIHelper.controlClick((button) => targetButton === button, this.onClickGuidePanel.bind(this));
-            } else {
-                alert(`引导界面不存在要点击的控件：${controlID}`);
             }
         }
-        const remainTime = parseFloat(GameUtils.getItemProp(data, "显示时长"));
+        const remainTime = guideData.showDuration;
         if (remainTime) {
-            this.timer = setTimeout(this.onTimeout, remainTime * 1000);
+            this.timer = setTimeout(this.onTimeout.bind(this), remainTime * 1000);
         }
         this.guidePanel = panel;
-        this.playAnimation(data.animations);
+        const animation = scene.getAnimationConfig("normal");
+        if (animation) {
+            this.playAnimation(animation);
+        }
     }
 
     destroy() {
@@ -62,13 +66,8 @@ export default class UIGuidePanel {
         this.guidePanel.destroy();
     }
 
-    playAnimation(animations) {
-        if (animations) {
-            const animation = animations.find(animation => animation.name === "normal");
-            if (animation) {
-                this.animation = new Animation(this.getChildByID.bind(this), animation, () => this.playAnimation(animations));
-            }
-        }
+    playAnimation(animation) {
+        this.animation = new Animation(this.getChildByID.bind(this), animation, () => this.playAnimation(animation));
     }
 
     getChildByID(id) {

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":250,
-    "selecteID":325,
+    "selectedBox":1,
+    "selecteID":316,
     "searchKey":"Scene",
     "props":{"width":1280,"sceneColor":"#000000","height":720},
     "nodeParent":-1,
@@ -36,14 +36,13 @@
             "props":{"width":750,"skin":"images/bg-201.png","sizeGrid":"50,50,50,50","name":"Panel","height":660,"centerY":30,"centerX":0},
             "nodeParent":1,
             "label":"Panel",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":16,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"top":140,"skin":"images/bg-211.png","sizeGrid":"50,50,50,50","right":20,"left":20,"bottom":130},
@@ -58,7 +57,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,returnButton",
                     "props":{"var":"returnButton","top":-25,"skin":"images/ButtonClose_Gray.png","runtime":"../laya/assets/sounds/SoundSE002.mp3","right":-25},
@@ -72,7 +70,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"x":106,"top":-50,"skin":"images/bg-301.png","scaleY":0.7,"scaleX":0.7,"centerX":0},
@@ -100,7 +97,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50,","left":30,"height":370},
@@ -113,7 +109,6 @@
                     "compId":231,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"width":160,"top":25,"height":40,"centerX":0},
@@ -126,7 +121,6 @@
                             "compId":233,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationItem1}","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -142,7 +136,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item1",
                             "props":{"width":175,"var":"item1","top":70,"height":175,"centerX":0},
@@ -170,7 +163,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"top":230,"text":"${PreparationItemContent1}","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0},
@@ -184,7 +176,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,receivedText1",
                             "props":{"width":167,"var":"receivedText1","top":300,"skin":"images/button-start-3.png","height":50,"centerX":0},
@@ -197,7 +188,6 @@
                             "compId":259,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":25,"color":"#ffffff","centerY":-5,"centerX":0},
@@ -215,7 +205,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,advertButton1",
                             "props":{"width":167,"var":"advertButton1","top":300,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerX":0},
@@ -228,7 +217,6 @@
                             "compId":238,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":10,"centerY":-5},
@@ -243,7 +231,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${FreeCollection}","left":50,"fontSize":25,"color":"#ffffff","centerY":-5},
@@ -262,7 +249,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","height":370,"centerX":0},
@@ -275,7 +261,6 @@
                     "compId":241,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"width":160,"top":25,"height":40,"centerX":0},
@@ -288,7 +273,6 @@
                             "compId":242,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationItem2}","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -304,7 +288,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item2",
                             "props":{"y":70,"x":13,"width":175,"var":"item2","top":70,"height":175,"centerX":0},
@@ -317,7 +300,6 @@
                             "compId":324,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image,itemIcon2",
                                     "props":{"y":28,"x":28,"var":"itemIcon2","skin":"images/Bird01.png","scaleY":1.5,"scaleX":1.5,"centerY":0,"centerX":0},
@@ -333,7 +315,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"top":230,"text":"${PreparationItemContent2}","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0},
@@ -347,7 +328,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,receivedText2",
                             "props":{"width":167,"var":"receivedText2","top":300,"skin":"images/button-start-3.png","height":50,"centerX":0},
@@ -360,7 +340,6 @@
                             "compId":261,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":25,"color":"#ffffff","centerY":-5,"centerX":0},
@@ -376,7 +355,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,advertButton2",
                             "props":{"width":167,"var":"advertButton2","top":300,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerX":0},
@@ -389,7 +367,6 @@
                             "compId":247,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":10,"centerY":-5},
@@ -404,7 +381,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${FreeCollection}","left":50,"fontSize":25,"color":"#ffffff","centerY":-5},
@@ -421,7 +397,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image",
                     "props":{"width":200,"top":150,"skin":"images/bg-221.png","sizeGrid":"50,50,50,50","right":30,"height":370},
@@ -434,7 +409,6 @@
                     "compId":250,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"width":160,"top":25,"height":40,"centerX":0},
@@ -447,7 +421,6 @@
                             "compId":251,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"y":0,"text":"${PreparationItem3}","strokeColor":"#000000","stroke":5,"fontSize":30,"color":"#ffffff","centerY":0,"centerX":0},
@@ -463,7 +436,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Panel",
                             "searchKey":"Panel,item3",
                             "props":{"y":70,"x":13,"width":175,"var":"item3","top":70,"height":175,"centerX":0},
@@ -476,7 +448,6 @@
                             "compId":325,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Panel",
                                     "searchKey":"Panel,itemIcon3",
                                     "props":{"y":108,"x":98,"width":0,"var":"itemIcon3","height":0,"centerY":20,"centerX":10},
@@ -491,7 +462,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Label",
                             "searchKey":"Label",
                             "props":{"top":230,"text":"${PreparationItemContent3}","strokeColor":"#000000","stroke":5,"fontSize":25,"color":"#ffffff","centerX":0},
@@ -505,7 +475,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,receivedText3",
                             "props":{"width":167,"var":"receivedText3","top":300,"skin":"images/button-start-3.png","height":50,"centerX":0},
@@ -518,7 +487,6 @@
                             "compId":263,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${PreparationDone}","strokeColor":"#ffffff","fontSize":25,"color":"#ffffff","centerY":-5,"centerX":0},
@@ -534,7 +502,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image,advertButton3",
                             "props":{"width":167,"var":"advertButton3","top":300,"skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":50,"centerX":0},
@@ -547,7 +514,6 @@
                             "compId":256,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "searchKey":"Image",
                                     "props":{"skin":"images/advert.png","scaleY":0.5,"scaleX":0.5,"left":10,"centerY":-5},
@@ -562,7 +528,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
                                     "searchKey":"Label",
                                     "props":{"text":"${FreeCollection}","left":50,"fontSize":25,"color":"#ffffff","centerY":-5},
@@ -579,7 +544,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,coinPanel",
                     "props":{"var":"coinPanel","centerX":-1190,"bottom":85},
@@ -646,7 +610,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,startButton",
                     "props":{"width":254,"var":"startButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/shinchan_049.mp3","height":81,"centerX":0,"bottom":45},
@@ -659,7 +622,6 @@
                     "compId":265,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
                             "props":{"skin":"images/english/START.png","centerY":-5,"centerX":0},
@@ -674,7 +636,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapAdButton",
                     "props":{"width":254,"var":"mapAdButton","skin":"images/button-start-2.png","runtime":"../laya/assets/sounds/SoundSE001.mp3","height":81,"centerX":0,"bottom":45},
@@ -716,7 +677,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,endlessModeImage",
                     "props":{"x":0,"var":"endlessModeImage","top":70,"skin":"images/english/Endless-3.png","centerX":0},
@@ -731,7 +691,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,mapModeImage",
                     "props":{"x":0,"var":"mapModeImage","top":70,"skin":"images/english/Match-3.png","centerX":0},
@@ -747,7 +706,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label,gameLevelTitle",
                     "props":{"var":"gameLevelTitle","top":70,"text":"闯关模式地图名","strokeColor":"#000000","stroke":5,"fontSize":40,"color":"#ffffff","centerX":0},
@@ -762,7 +720,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,firstTimePanel",
                     "props":{"width":250,"var":"firstTimePanel","skin":"images/bg-201.png","sizeGrid":"50,50,50,50","left":-250,"height":580,"bottom":0},
@@ -929,92 +886,76 @@
         {
             "x":15,
             "type":"Panel",
-            "searchKey":"Panel,GuideList",
-            "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"GuideList","height":720},
+            "searchKey":"Panel,Guide0",
+            "props":{"visible":true,"var":"Guide0","top":0,"right":0,"left":0,"bottom":0},
             "nodeParent":1,
-            "label":"GuideList",
+            "label":"Guide0",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":310,
+            "compId":316,
             "child":[
                 {
                     "x":30,
-                    "type":"Panel",
-                    "searchKey":"Panel,Guide//归属引导:首次闯关模式//结束引导:1//蒙版:1//显示直到用户点击:0//显示直到点击控件:startButton//显示时长:0",
-                    "props":{"y":0,"x":0,"width":1280,"visible":true,"name":"Guide//归属引导:首次闯关模式//结束引导:1//蒙版:1//显示直到用户点击:0//显示直到点击控件:startButton//显示时长:0","height":720},
-                    "nodeParent":310,
-                    "label":"Guide//归属引导:首次闯关模式//结束引导:1//蒙版:1//显示直到用户点击:0//显示直到点击控件:startButton//显示时长:0",
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"width":520,"skin":"images/bg-192.png","height":226,"centerY":0,"centerX":0},
+                    "nodeParent":316,
+                    "label":"Image",
                     "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":316,
+                    "compId":319,
                     "child":[
                         {
                             "x":45,
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"width":520,"skin":"images/bg-192.png","height":226,"centerY":0,"centerX":0},
-                            "nodeParent":316,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":319,
-                            "child":[
-                                {
-                                    "x":60,
-                                    "type":"Label",
-                                    "searchKey":"Label",
-                                    "props":{"x":0,"text":"${Guide-3-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
-                                    "nodeParent":319,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":320,
-                                    "child":[
-                                        ]
-                                }]
-                        },
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"skin":"images/show-171.png","centerY":0,"centerX":-300},
-                            "nodeParent":316,
-                            "label":"Image",
-                            "isOpen":true,
+                            "type":"Label",
+                            "searchKey":"Label",
+                            "props":{"x":0,"text":"${Guide-3-1}","strokeColor":"#000000","stroke":1,"fontSize":30,"color":"#000000","centerY":0,"centerX":0},
+                            "nodeParent":319,
+                            "label":"Label",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":321,
+                            "compId":320,
                             "child":[
                                 ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Image",
-                            "searchKey":"Image,手指点击动画",
-                            "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"rotation":-45,"name":"手指点击动画","centerY":340,"centerX":180},
-                            "nodeParent":316,
-                            "label":"手指点击动画",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":322,
-                            "child":[
-                                ]
-                        }],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image",
+                    "props":{"skin":"images/show-171.png","centerY":0,"centerX":-300},
+                    "nodeParent":316,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":321,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,手指点击动画",
+                    "props":{"skin":"images/tutrial_hand.png","scaleY":1,"scaleX":1,"rotation":-45,"name":"手指点击动画","centerY":340,"centerX":180},
+                    "nodeParent":316,
+                    "label":"手指点击动画",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":322,
+                    "child":[
+                        ]
                 }],
             "$LOCKED":false,
-            "$HIDDEN":true
+            "$HIDDEN":false
         }],
     "animations":[
         {
