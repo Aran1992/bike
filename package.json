@@ -22,7 +22,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "mime": "^2.4.3",
     "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.3.12",
     "xlsx": "^0.14.2"
   },
   "dependencies": {
